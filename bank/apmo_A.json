@@ -1,0 +1,286 @@
+{
+ "competition": "APMO",
+ "set": "A",
+ "variants": [
+  {
+   "position": 1,
+   "source": "1989 APMO Problem 1",
+   "question": "Let $x_1$, $x_2$, $\\cdots$, $x_n$ be positive real numbers, and let\n$$ S = x_1 + x_2 + \\cdots + x_n. $$\nProve that\n$$ (1 + x_1)(1 + x_2) \\cdots (1 + x_n) \\leq 1 + S + \\frac{S^2}{2!} + \\frac{S^3}{3!} + \\cdots + \\frac{S^n}{n!} $$",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "",
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "1990 APMO Problem 1",
+   "question": "Let .I be the intersection of\" AG and EF.\nLet 6 = AI.IG - FI.IE. Then\nAI:ADlz, IG:ADl6, FI:BCl4:IE. (1)\nFur\"ther, applying the cosine rule to triangles ABD, ACD we get\ni AB2 : BC2I4 + AD2 _ AD.BC.cos LBDA,\n'''.. ACz : aC2l+ + AD2 + AD.BC.cos IBDA,\nf ,.*j;-\\, so ADz : (Or, + AC2 - BCr 12) 12.\n-H\"rr\"\"\n6 - (or, + ACz - zBC2) lz4\n: (+ea.eC.cos LBAC - AB2 - AC') .\nd.] Now AEFG is a cyclic quadrilateral if and only if 6 : 0, i.e. if and only if\ncos LBAC _ (Or, + ABr) I $.AB.AC)\n: (AB IAC + AC IAB) 14.\nEI\nEI\n-sB\nEI Now AB/A C + AC IAB > 2. Hence cos LBAC > Llz and so LBAC S 60'.\nFor LBAC > 60o there is no triangle with the required property.\nFor LBAC:60o there exists, within similarity, precisely one triangle (which is equilateral) having the required property.\nFor LBAC < 60o there exists, within similaritS again precisely one triangle having the\nrequired property (even though for fixed median AE there arq two, but one arises from\nthe other by interchanging point B with point C, thus proving them to be similar)",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2001 APMO Problem 1",
+   "question": "For any positive integer $n$, let $S(n)$ be the sum of digits in the decimal representation of $n$. Any positive integer obtained by removing one or more digits from the right end of the decimal representation of $n$ is called a stump of $n$. Let $T(n)$ be the sum of all stumps of $n$. Prove that $n = S(n) + 9T(n)$. (For example, if $n = 238$, we have $S(n) = 2+3+8 = 13$, and stumps $2$ and $23$, so $T(n) = 2+23 = 25$. We verify that $238 = 13 + 9(25)$.)",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2016 APMO Problem 1",
+   "question": "We say that a triangle $ABC$ is great if [[the]] following holds: for any point $D$ on the side $BC$, if $P$ and $Q$ are the feet of the perpendiculars from $D$ to the lines $AB$ and $AC$, respectively, then the reflection of $D$ in the line $PQ$ lies on the circumcircle of the triangle $ABC$. Prove that triangle $ABC$ is great if and only if $\\angle A = 90^{\\circ}$ and $AB = AC$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "",
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2023 APMO Problem 1",
+   "question": "Let $n\\ge 5$ be an integer. Consider $n$ squares with side lengths $1, 2, \\dots , n$,\nrespectively. The squares are arranged in the plane with their sides parallel to the $x$ and\n$y$ axes. Suppose that no two squares touch, except possibly at their vertices.\nShow that it is possible to arrange these squares in a way such that every square touches\nexactly two other squares.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "https://youtu.be/xkIm0k1FE-8",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "1989 APMO Problem 2",
+   "question": "Prove that the equation$$ 6(6a^2 + 3b^2 + c^2) = 5n^2  $$has no solutions in integers except $a = b = c = n = 0$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "We barybash",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "1990 APMO Problem 2",
+   "question": "Let $a_1,a_2,\\cdots,a_n$ be positive real numbers, and let $S_k$ be the sum of products of $a_1,a_2,\\cdots,a_n$ taken $k$ at a time.\nShow that \n$$S_k S_{n-k} \\geq {n \\choose k}^2 a_1 a_2 \\cdots a_n.$$",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Let, \n\\begin{align*}\nS_k & = \\sum_{i=1}^{n\\choose k}t_i \\\\\nS_{n-k} & = \\left(\\prod_{m=1}^{n}a_m \\right)\\left(\\sum_{i=1}^{n\\choose k}\\dfrac{1}{t_i}\\right)\n\\end{align*}\nThus, \n\\begin{align*}\nS_k S_{n-k} &=\\left(\\sum_{i=1}^{n\\choose k}t_i\\right)\\left(\\prod_{m=1}^{n}a_m \\right)\\left(\\sum_{i=1}^{n\\choose k}\\dfrac{1}{t_i}\\right)\\\\\n&=\\left(\\prod_{m=1}^{n}a_m \\right)\\left[\\sum_{i=1}^{n\\choose k}1+{\\sum_{i=1}^{n\\choose k}\\sum_{j=1}^{n\\choose k}}_{i \\neq j}\\dfrac{t_i}{t_j}\\right]\\\\\n&=\\left(\\prod_{m=1}^{n}a_m \\right)\\left[{n \\choose k} + \\sum_{i,j}\\left(\\dfrac{t_i}{t_j}+\\dfrac{t_j}{t_i}\\right)\\right]\\\\\n& \\geq \\left(\\prod_{m=1}^{n}a_m \\right)\\left[{n \\choose k}+2\\cdot\\dfrac{{n \\choose k}^2-{n \\choose k}}{2}\\right]\\\\\n&= {n\\choose k}^2 \\prod_{m=1}^{n}a_m\n\\square\n\\end{align*}\n\nIn the fourth line, we used the AM-GM inequality and used the fact that there are $\\dfrac{1}{2}\\left({n \\choose k}^2-{n \\choose k}\\right)$ terms in the sum of third line.",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "1991 APMO Problem 2",
+   "question": "Suppose there are $997$ points given in a plane. If every two points are joined by a line segment with its midpoint colored in red, show that there are at least $1991$ red points in the plane. Can you find a special case with exactly $1991$ red points?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "For the number of red points to be minimum, the number of red points that coincide must be maximum. Therefore, set all points as $(0, 0), (0, 1), \\ldots, (0, 996)$. Notice that possible red points will be $(0, 0.5), (0, 1), (0, 1.5), \\ldots, (0, 995.5)$. Counting, there are $\\frac{995.5}{0.5} = 1991$ red dots.\n\n~MaPhyCom",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "1997 APMO Problem 2",
+   "question": "Find an integer in the range $100 \\leq n \\leq 1997$ such that $\\frac{2^n+2}{n}$ is an integer.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "We proceed by contradiction. Assume there exists an odd integer n > 1 such that\nn | (2n + 2).\nSince n is odd, gcd(n, 2) = 1. We can factor out a 2 from the expression and divide\nit out without altering the divisibility condition:\nn | 2(2n−1 + 1) =⇒ n | (2n−1 + 1)\nLet p be any prime factor of n. It follows that p | (2n−1 + 1), which yields the congruence:\n2\nn−1 ≡ −1 (mod p)\nSquaring both sides gives 22(n−1) ≡ 1 (mod p).\nBecause n is an odd number, n − 1 is even. Let us extract the highest power of 2\ndividing n − 1. Let\nn − 1 = 2s\n· m\nwhere m is an odd integer and s ≥ 1. Thus, 2s\nis the exact highest power of 2 dividing\nn − 1.\nLet d be the multiplicative order of 2 modulo p. We know that:\n1. d must divide 2(n − 1) = 2s+1m (since 22(n−1) ≡ 1 (mod p)).\n2. d cannot divide n − 1 = 2sm (since 2n−1 ≡ −1 (mod p) ̸≡ 1 (mod p)).\nThe only way d divides 2s+1m but fails to divide 2sm is if 2s+1 strictly divides d. Therefore,\n2\ns+1 | d.\nBy Fermat’s Little Theorem, the order d must divide p − 1. Consequently:\n2\ns+1 | (p − 1) =⇒ p ≡ 1 (mod 2s+1)\nThis condition must hold for every prime factor p of n. The product of primes that are\nall congruent to 1 modulo 2s+1 will also be congruent to 1 modulo 2s+1. Therefore, the\nproduct itself, n, satisfies:\nn ≡ 1 (mod 2s+1)\nThis implies 2s+1 | (n − 1), which contradicts our initial definition that 2s\nis the highest\npower of 2 dividing n − 1.\nThus, our assumption is false. No odd integer n > 1 can satisfy the condition. The\ninteger n must be even.\nPart 2: Constructing an Even Solution\nSince n must be even, let n = 2k. Substituting this into our divisibility condition gives:\n2k | (22k + 2) =⇒ k | (22k−1 + 1)\nBecause 22k−1 + 1 is an odd number, k must necessarily be an odd integer.\nWe search for a solution where k is the product of two distinct odd primes, p and q.\nThus, k = pq. We require:\npq | (22pq−1 + 1)\nThis requires the expression to be divisible by both p and q.\nStep 2.1: Bounding Modulo p\nBy Fermat’s Little Theorem, 2p−1 ≡ 1 (mod p). We reduce the exponent 2pq −1 modulo\np − 1:\n2pq − 1 = 2q(p − 1) + 2q − 1 ≡ 2q − 1 (mod p − 1)\nTo satisfy the congruence modulo p, we need:\n2\n2q−1 ≡ −1 (mod p)\nLet us test the prime p = 11, which gives p − 1 = 10. We need 22q−1 ≡ −1 (mod 11).\nSince 25 = 32 ≡ −1 (mod 11), we can fulfill this if the exponent is congruent to 5 modulo\n10:\n2q − 1 ≡ 5 (mod 10) =⇒ 2q ≡ 6 (mod 10) =⇒ q ≡ 3 (mod 5)\nStep 2.2: Bounding Modulo q\nSubstituting p = 11 into the original exponent gives 22q − 1. We reduce this modulo\nq − 1:\n22q − 1 = 22(q − 1) + 21 ≡ 21 (mod q − 1)\nWe now need divisibility by q:\n2\n21 ≡ −1 (mod q) =⇒ q | (221 + 1)\nUsing the sum of cubes factorization, we factor 221 + 1:\n2\n21 + 1 = (27\n)\n3 + 1\n= (128 + 1)(1282 − 128 + 1)\n= 129 × 16257\n= 3 × 43 × 16257\nWe require a prime factor q that satisfies the condition q ≡ 3 (mod 5). Testing the prime\nfactor q = 43, we see that 43 ≡ 3 (mod 5) holds perfectly\nConclusion\nWe have found two primes p = 11 and q = 43 that satisfy all necessary modular arithmetic\nconstraints.\nk = p × q = 11 × 43 = 473\nn = 2k = 2 × 473 = 946\nWe check this against the bounds of the problem statement (100 ≤ n ≤ 1997). The\nvalue 946 lies strictly within this range. By our construction, 473 | (2945 + 1), which\nrigorously guarantees that 946 | (2946 + 2).\nFinal Answer: The integer n is 946\n                                                                                 -Krishnendu sir (Vedantu Olympiad School)",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "1998 APMO Problem 2",
+   "question": "Show that for any positive integers $a$ and $b$, $(36a + b)(36b + a)$ cannot be a power of $2$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "First, assume that $(36a + b)(36b + a)$ is a power of $2$. \nLet $36a + b = 2^m = p$ and $36b + a = 2^n = q$.\nThen $$\\frac{1}{36} < \\frac{p}{q} = \\frac{2^m}{2^n} = 2^{m-n} < 36$$\n$$-6 < m - n < 6$$\n\nConsider $4^m - 4^n = p^2 - q^2$. Factoring out $4^n$ gives \n$$4^n(4^{m-n}-1) = p^2 - q^2 = 1295(a^2 - b^2)$$\n\nBecause $1295(a^2 - b^2)$ contains odd factors and $1295$ divides $37$, $4^{m-n}-1$ must also divide $37$, so \n$4^{m-n} \\equiv  1\\mod 37$.\n\n\nTesting values shows that $m-n$ divides 18. It can be easily shown that $m-n \\neq 0$, so the least possible value of $m-n$ is 18. But since $-6 < m - n < 6$, we reach a contradiction.",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2001 APMO Problem 2",
+   "question": "Find the largest positive integer $N$ so that the number of integers in the set $\\{1,2,\\dots,N\\}$ which are divisible by 3 is equal to the number of integers which are divisible by 5 or 7 (or both).",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "The equation\n$$\\left\\lfloor\\frac{N}{3}\\right\\rfloor=\\left\\lfloor\\frac{N}{5}\\right\\rfloor+ \\left\\lfloor\\frac{N}{7}\\right\\rfloor-\\left\\lfloor\\frac{N}{35}\\right\\rfloor$$\nis equivalent to the problem statement. The period (of remainders of $N$) is the least common multiple of all denominators, which is $105$. We perform casework on an easier bound, namely $35$. Listing all lesser multiples of $3,5,7$:\n$$3,5,6,7,9,10,12,14,15,18,20,21,24,25,27,28,30,33,35$$\nNext, we number each of these values with a positive integer that describes by how much the left-hand side of the above equation is greater than the right-hand side:\n$$1,0,1,0,1,0,1,0,0,1,0,0,1,0,1,0,0,1,0$$\nNotice that $35$ counts only once (since it is one number), but $15,21,$ and $30$ all count twice (since they are on different sides of the equation, they cancel out).\n\nNext, we list out until $70$:\n$$36,39,40,42,45,48,49,50,51,54,55,56,57,60,63,65,66,69,70$$\nand we number the values again (initially $0$, since that is what we ended with):\n$$1,2,1,1,1,2,1,0,1,2,1,0,1,1,1,0,1,2,1$$\nFinally, we list out until $105$:\n$$72,75,77,78,80,81,84,85,87,90,91,93,95,96,98,99,100,102,105$$\nand we number the values:\n$$2,2,1,2,1,2,2,1,2,2,1,2,1,2,1,2,1,2,2$$\n(All of the above really make sense if you manipulate the equation such that it is equal to zero and set it to $y$ in a Desmos graph.)\n\nThe difference should then repeat from $n=1$ but will start instead at $2$. Thus, it will never equate again (since the difference in the first cycle is never negative). As a result, the largest $N$ such that the two sides are equal is $\\boxed{65}$ from our data above.\n\n~ [https://artofproblemsolving.com/wiki/index.php/User:Eevee9406 eevee9406]",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2016 APMO Problem 2",
+   "question": "A positive integer is called fancy if it can be expressed in the form$$2^{a_1}+2^{a_2}+ \\cdots+ 2^{a_{100}},$$where $a_1,a_2, \\cdots, a_{100}$ are non-negative integers that are not necessarily distinct. Find the smallest positive integer $n$ such that no multiple of $n$ is a fancy number.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2023 APMO Problem 2",
+   "question": "Find all integers $n$ satisfying $n \\ge 2$ and $\\frac{\\sigma(n)}{p(n)-1}=n$, in which $\\sigma(n)$ denotes the sum of all positive divisors of $n$, and $p(n)$ denotes the largest prime divisor of $n$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Answer: $n=6$.\n\n\n\nRearrange the equation to the form $p(n)-1=\\frac{\\sigma(n)}{n}$, then do case work on the values of $p(n)$. \n\nAs $p(n)$ grows large, we can see that the right hand side becomes always smaller than the left hand side. We can use the geometric series sum fomula to show this inequality.\n\n\n\nFor example, if $p(n)=5$, $n=2^a3^b5^c$.\n\n$p(n)-1=4$, $\\frac{\\sigma(n)}{n}=\\frac{\\sigma(2^a)}{2^a}\\frac{\\sigma(3^b)}{3^b}\\frac{\\sigma(5^c)}{5^c}\\leq2\\times{\\frac{3}{2}}\\times{\\frac{5}{4}}=3.75$. The left hand side is always greater.\n\n\n\nIf $p(n)=7$, $n=2^a3^b5^c7^d$.\n\n$p(n)-1=6$, $\\frac{\\sigma(n)}{n}=\\frac{\\sigma(2^a)}{2^a}\\frac{\\sigma(3^b)}{3^b}\\frac{\\sigma(5^c)}{5^c}\\frac{\\sigma(7^d)}{7^d}\\leq2\\times{\\frac{3}{2}}\\times{\\frac{5}{4}}\\times{\\frac{7}{6}}=4.375$. The left hand side is always greater.\n\n\n\nIn general, if $p(n)\\geq{7}$,\n\n$\\frac{\\sigma(n)}{n}=\\frac{\\sigma(2^a)}{2^a}\\frac{\\sigma(3^b)}{3^b}\\frac{\\sigma(5^c)}{5^c}\\frac{\\sigma(7^d)}{7^d}......$\n$\\leq2\\times{\\frac{3}{2}}\\times{\\frac{5}{4}}\\times{\\frac{7}{6}}\\times{......}\\times{\\frac{p(n)}{p(n)-1}}$   Notice that this product can telescope if some more fractions are multiplied.\n\n$\\leq2\\times{\\frac{3}{2}}\\times{\\frac{4}{3}}\\times{\\frac{5}{4}}\\times{\\frac{6}{5}}\\times{\\frac{7}{6}}\\times{......}\\times{\\frac{p(n)}{p(n)-1}}\\div{{\\frac{4}{3}}}$ Such a very loose bound is enough.\n$\\leq p(n)\\div{{\\frac{4}{3}}}$\n\n\n\nWe now have that $p(n)-1\\leq p(n)\\div{{\\frac{4}{3}}}$, or $\\frac{p(n)}{4}\\leq{1}$. This is impossible for any $p(n)\\geq{7}$.\n\nAs a result, we only need to consider the cases of $p(n)=2$ and $p(n)=3$.\n\n\n\nThe case of $p(n)=2$ is simple. $p(n)-1=1$, but $\\sigma(n)$ includes both $1$ and $n$ itself. $\\frac{\\sigma(n)}{n}\\geq \\frac{1}{n}+\\frac{n}{n} >1$. The right hand side is always greater.\n\n\n\nFor $p(n)=3$,  $n=2^a3^b$.\n\n$p(n)-1=2$, $\\frac{\\sigma(n)}{n}=\\frac{\\sigma(2^a)}{2^a}\\frac{\\sigma(3^b)}{3^b}$\n$=\\frac{1-(\\frac{1}{2})^{a+1}}{1-\\frac{1}{2}}\\frac{1-(\\frac{1}{3})^{b+1}}{1-\\frac{1}{3}}$\n\nFirst prove that having both $a\\geq{2}$ and $b\\geq{2}$ makes the right hand side greater than $2$. When we have both $a\\geq{2}$ and $b\\geq{2}$, the right hand side $\\geq \\frac{1-(\\frac{1}{2})^{3}}{1-\\frac{1}{2}}\\frac{1-(\\frac{1}{3})^{3}}{1-\\frac{1}{3}}=\\frac{91}{36}>2$.\n\nThan list the cases $a=0$, $a=1$ and $b=1$. After solving the eqautions\n\n$2=\\frac{1-(\\frac{1}{3})^{b+1}}{1-\\frac{1}{3}}$,\n\n$2=\\frac{1-(\\frac{1}{2})^{2}}{1-\\frac{1}{2}}\\frac{1-(\\frac{1}{3})^{b+1}}{1-\\frac{1}{3}}$, and\n\n$2=\\frac{1-(\\frac{1}{2})^{a+1}}{1-\\frac{1}{2}}\\frac{1-(\\frac{1}{3})^{2}}{1-\\frac{1}{3}}$,\n\nwe will discover that $a=1$ and $b=1$ is the only solution to the equation.\n\n\n\nThe only answer to the problem is $n=2\\times{3}=6$. The fact that $n=6$ does satisfy the equation can be checked easily.\n\n\n~G2JFForever",
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "1989 APMO Problem 3",
+   "question": "Let $A_1$, $A_2$, $A_3$ be three points in the plane, and for convenience, let $A_4= A_1$, $A_5 = A_2$. For $n = 1$, $2$, and $3$, suppose that $B_n$ is the midpoint of $A_n A_{n+1}$, and suppose that $C_n$ is the midpoint of $A_n B_n$. Suppose that $A_n C_{n+1}$ and $B_n A_{n+2}$ meet at $D_n$, and that $A_n B_{n+1}$ and $C_n A_{n+2}$ meet at $E_n$.\nCalculate the ratio of the area of triangle $D_1 D_2 D_3$ to the area of triangle $E_1 E_2 E_3$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "",
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "1990 APMO Problem 3",
+   "question": "Consider all the triangles $ABC$ which have a fixed base $AB$ and whose altitude from $C$ is a constant $h$. For which of these triangles is the product of its altitudes a maximum?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "1991 APMO Problem 3",
+   "question": "Let $a_1$, $a_2$, $\\cdots$, $a_n$, $b_1$, $b_2$, $\\cdots$, $b_n$ be positive real numbers such that $a_1 + a_2 + \\cdots + a_n = b_1 + b_2 + \\cdots + b_n$.  Show that \n$$ \\frac{a_1^2}{a_1 + b_1} + \\frac{a_2^2}{a_2 + b_2} + \\cdots + \\frac{a_n^2}{a_n + b_n} \\geq \\frac{a_1 + a_2 + \\cdots + a_n}{2} $$",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "By Cauchy-Schwarz, $\\left(\\sum \\dfrac{a_i^2}{a_i+b_i}\\right)\\left(\\sum a_i+b_i\\right)\\geq \\left(\\sum a_i\\right) ^2$. Since $\\sum a_i=\\sum b_i$, we get$\\sum \\dfrac{a_i^2}{a_i+b_i}\\geq \\dfrac{\\left(\\sum a_i\\right) ^2}{\\sum (a_i+b_i)}=\\dfrac{\\sum a_i}{2}$.",
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "1998 APMO Problem 3",
+   "question": "Let $a, b, c$ be positive real numbers. Prove that $(1+\\frac{a}{b})(1+\\frac{b}{c})(1+\\frac{c}{a}) \\geq 2(1+\\frac{a+b+c}{\\sqrt[\\leftroot{-2}\\uproot{2}3]{abc}})$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "WLOG, assume $abc = 1$. Then\n$$(a+b+c)(ab+ac+bc-2)-abc \\geq 2$$\n$$(a+b+c)(ab+ac+bc-2) \\geq 3$$\n\nThen by AM-GM, \n$$\\frac{a+b+c}{3} \\geq \\sqrt[\\leftroot{-2}\\uproot{2}3]{abc}$$\n$$a+b+c \\geq 3$$\nand\n$$ab+ac+bc \\geq 3$$\nso \n$$ab+ac+bc-2 \\geq 1$$\n\nAnd so $(a+b+c)(ab+ac+bc-2) \\geq 3$.",
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "1999 APMO Problem 3",
+   "question": "Let $\\Gamma_1$ and $\\Gamma_2$ be two circles intersecting at $P$ and $Q$. The common tangent, closer to $P$, of $\\Gamma_1$ and $\\Gamma_2$ touches $\\Gamma_1$ at $A$ and $\\Gamma_2$ at $B$. The tangent of $\\Gamma_1$ at $P$ meets $\\Gamma_2$ at $C$, which is different from $P$, and the extension of $AP$ meets $BC$ at $R$.\nProve that the circumcircle of triangle $PQR$ is tangent to $BP$ and $BR$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2016 APMO Problem 3",
+   "question": "Let $AB$ and $AC$ be two distinct rays not lying on the same line, and let $\\omega$ be a circle with center $O$ that is tangent to ray $AC$ at $E$ and ray $AB$ at $F$. Let $R$ be a point on segment $EF$. The line through $O$ parallel to $EF$ intersects line $AB$ at $P$. Let $N$ be the intersection of lines $PR$ and $AC$, and let $M$ be the intersection of line $AB$ and the line through $R$ parallel to $AC$. Prove that line $MN$ is tangent to $\\omega$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "",
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2023 APMO Problem 3",
+   "question": "Let $ABCD$ be a parallelogram. Let $W$, $X$, $Y$ , and $Z$ be points on sides $AB$, $BC$, $CD$, and\n$DA$, respectively, such that the incenters of triangles $AWZ$, $BXW$, $CYX$ and $DZY$ form a\nparallelogram. Prove that $WXYZ$ is a parallelogram.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "1989 APMO Problem 4",
+   "question": "Let $S$ be a set consisting of $m$ pairs $(a,b)$ of positive integers with the property that $1 \\leq a < b \\leq n$. Show that there are at least\n$$ 4m \\cdot \\dfrac{(m - \\dfrac{n^2}{4})}{3n} $$\ntriples $(a,b,c)$ such that $(a,b)$, $(a,c)$, and $(b,c)$ belong to $S$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "",
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "1998 APMO Problem 4",
+   "question": "(''Răzvan Gelca'')\nLet $ABC$ be a triangle and $D$ the foot of the altitude from $A$.  Let $E$ and $F$ be on a line through $D$ such that $AE$ is perpendicular to $BE$, $AF$ is perpendicular to $CF$, and $E$ and $F$ are different from $D$.  Let $M$ and $N$ be the midpoints of the line segments $BC$ and $EF$, respectively.  Prove that $AN$ is perpendicular to $NM$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "We use directed angles mod $\\pi$.\n\n<asy>\nsize(200);\ndefaultpen(1);\n\npair B=(0,0), A=(1,3), C=(4,0), X=(4,4);\npair D=foot(A,B,C);\npath O1=circumcircle(A,B,D), O2=circumcircle(A,C,D);\npair E=IntersectionPoint(O1,D--X,1), F=IntersectionPoint(O2,D--X,0);\npair M=(B+C)/2;\npair N=(E+F)/2;\n\ndraw(C--F--A--B--C--A);\ndraw(B--E--A--D--E--F);\ndraw(A--N--M--A,dotted);\n\nlabel(\"$A$\",A,NW);\nlabel(\"$B$\",B,SW);\nlabel(\"$C$\",C,SE);\nlabel(\"$D$\",D,S);\nlabel(\"$E$\",E,SSE);\nlabel(\"$F$\",F,E);\nlabel(\"$M$\",M,S);\nlabel(\"$N$\",N,ESE);\n</asy>\n\nSince $\\angle ADB$ and $\\angle AEB$ are both right angles, points $ABDE$ are concyclic.  It follows that\n$$ \\angle CBA \\equiv \\angle DBA \\equiv \\angle DEA \\equiv \\angle FEA . $$\nSimilarly, the quadrilateral $ACDF$ is cyclic, so\n$$ \\angle ACB \\equiv \\angle ACD \\equiv \\angle AFD \\equiv \\angle AFE. $$\nThus $ACB$ and $AFE$ are similar triangles, so $AFEN$ and $ACBM$ are similar figures.  It follows that\n$$ \\angle AND \\equiv \\angle ANE \\equiv \\angle AMB \\equiv \\angle AMD, $$\nso points $AMND$ are concyclic.  Since $ADM$ is a right angle, it then follows that $ANM$ is a right angle, as desired.  $\\blacksquare$\n\n\n{{alternate solutions}}",
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2016 APMO Problem 4",
+   "question": "The country Dreamland consists of $2016$ cities. The airline Starways wants to establish some one-way flights between pairs of cities in such a way that each city has exactly one flight out of it. Find the smallest positive integer $k$ such that no matter how Starways establishes its flights, the cities can always be partitioned into $k$ groups so that from any city it is not possible to reach another city in the same group by using at most $28$ flights.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "",
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "1989 APMO Problem 5",
+   "question": "Determine all functions $f$ from the reals to the reals for which\n\n(1) $f(x)$ is strictly increasing and (2) $f(x) + g(x) = 2x$ for all real $x$,\n\nwhere $g(x)$ is the composition inverse function to $f(x)$. (Note: $f$ and $g$ are said to be composition inverses if $f(g(x)) = x$ and $g(f(x)) = x$ for all real $x$.)",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "",
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "1990 APMO Problem 5",
+   "question": "Not a perfect solution, but I think it works.\n\\\\\nThe construction would obviously depend on the parity of n, let's denote m to be $ceiling((n-1)/2)$, so either $n=2*m+2$ or $n=2*m+1$.\n\\\\\nBy the condition, we know that $m>=2$, then we construct some rectangles with side lengths $m$ and $\\sqrt{m^2-1}$.\nWe can observe an obvious fact that these rectangles can be dissected into exactly $2*m$ small triangles with side length $1,\\sqrt{m^2-1},m$. One simply cut those into 1 by stuff small rectangles and then cut each small rectangle with a diagnonal.\n\\\\\nNow we do a small trick. For those even $n$, we add two of those $1,\\sqrt{m^2-1},m$ to the top and bottom of the rectangle with side length $m$ so that the longest side of the triangle coincide with the longer edge of the rectangle. Adding each triangle now adds a vertex so we have six vertices, a hexagon.\n\\\\\nWe can verify the hexagon is convex this way because at the four vertices that was vertices of the rectangle, we are adding an acute angle to a right angle while in the two added vertices we just have two right angles.\n\\\\\nIt is slightly trickier with the odd $n$ case. We add one instead of two $1,\\sqrt{m^2-1},m$ triangle to the top of the rectangle. This would make a pentagon instead of hexagon.\n\\\\\nWLOG we can make the right angle vertex of the newly added triangle pointing left, and at the same time we make sure the rightmost small rectangle gets an upperright-lowerleft diagonal to get a small triangle sitting on the lower right corner that only shares a vertex with the newly added triangle. We now flip it across the perpendicular bisector of its longest edge. \n\\\\\nWe again can verify that this creates a hexagon, since in order to travel from the lower left vertex of the upper right vertex of the original rectangle one now have to pass three edges instead of two. We can also verify it is a convex hexagon. \n\\\\\nLet's denote the two acute angles of the small triangle as $x,y$ and assume $x>y$. The angle of the vertices can be thus calculated to be $90, 90+x,90,90+2y, 90,90+x$. Since we know that both $x,y$ are acute both angles $90+x$ are less than 180, while $x+y=90>2y$, so the angle $90+2y$ is also less than 180.\n\\\\\nQ.E.D\n\\\\\nNote 1: Someone please try to read this and add some pictures. This gets very very absurd just by reading.\n\\\\\nNote 2: I don't know why starting with 6 because from this construction 5 also seems doable from this exact construction. It's just unfortunate we cannot use this construction to get 4, but we can just generate a regular 100-gon and cut it into 100 isosceles pieces containing two adjacent vertices, pick four adjacent triangles and they make a perfect convex hexagon.\n[Solution by krosa1910]",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "1991 APMO Problem 5",
+   "question": "Given are two tangent circles and a point $P$ on their common tangent perpendicular to the lines joining their centres. Construct with ruler and compass all the circles that are tangent to these two circles and pass through the point $P$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2013 APMO Problem 5",
+   "question": "Let $ABCD$ be a quadrilateral inscribed in a circle $\\omega$, and let $P$ be a point on the extension of $AC$ such that $PB$ and $PD$ are tangent to $\\omega$. The tangent at $C$ intersects $PD$ at $Q$ and the line $AD$ at $R$. Let $E$ be the second point of intersection between $AQ$ and $\\omega$. Prove that $B$, $E$, $R$ are collinear.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "",
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2016 APMO Problem 5",
+   "question": "Find all functions $f: \\mathbb{R}^+ \\to \\mathbb{R}^+$ such that\n$$(z + 1)f(x + y) = f(xf(z) + y) + f(yf(z) + x),$$for all positive real numbers $x, y, z$.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "We claim that $f(x)=x$ is the only solution. It is easy to check that it works. Now, we will break things down in several claims. Let $P(x.y,z)$ be the assertion to the Functional Equation.\n\n<b>Claim 1:</b> $f$ is injective.\n\n<i>Proof:</i> Assume $f(a)=f(b)$ for some $a,b \\in \\mathbb{R}^+$. Now, from $P(x,y,a)$ and $P(x,y,b)$ we have:\n\n\n$$(a+1)f(x+y)=f(xf(a)+y)+f(yf(a)+x)$$\n$$(b+1)f(x+y)=f(xf(b)+y)+f(yf(b)+x)$$\n\nNow comparing, we have $a=b$ as desired. $\\square$\n\n\nThis gives us the power to compute $f(1)$. From $P(1,1,1)$ we get $f(f(1)+1)=f(2)$ and injectivity gives $f(1)=1$. Showing that $f$ is unbounded above is also easy as we can fix $(x,y)$ and let $z$ blow up to $\\infty$ in the original Functional equation..\n\n\n<b>Claim 2:</b> $f$ is surjective.\n\n<i>Proof:</i> $P(x,x,z)$ gives\n$$(z+1)f(2x)=2f(x+xf(z)) \\iff \\frac{(z+1)f(2x)}{2}=f(x+xf(z))$$\n\nThis gives that $\\text{Im}(f) \\in \\left(\\frac{f(2x)}{2},\\infty\\right)$. Putting $x=\\frac{1}{2}$, we get  $\\text{Im}(f) \\in \\left(\\frac{1}{2},\\infty\\right)$. By induction, surjectivity is proved as $\\lim_{m \\to \\infty}\\frac{1}{2^m}=0$ and we are essentially done. $\\square$\n\n\nNow, we have claim that if $a+b=c+d$ for some $a,b,c,d \\in \\mathbb{R}^+$, then $f(a)+f(b)=f(c)+f(d)$. This can be achieved by putting $a=xf(z)+y$, $b=yf(z)+x$, $c=x'f(z)+y'$ and $d=y'f(z)+x'$. Let us calculate $f(a)+f(b)$\n\n$$f(a)+f(b)=(z+1)f(x+y)=(z+1)f\\left(\\frac{a+b}{f(z)+1}\\right)=(z+1)f\\left(\\frac{c+d}{f(z)+1}\\right)=(z+1)f(x'+y')=f(c)+f(d)$$\n\nEverything is fine, but we would have show that such numbers $x,y,x',y' \\in \\mathbb{R}^+$ do exist. We will show this in the next lemma.\n\n\n<b>Lemma 1:</b> There exits $x,y,x',y',a,b,c,d \\in \\mathbb{R}^+$ such that\n$$\\begin{align*}\na=xf(z)+y \\\\\nb=yf(z)+x \\\\\nc=x'f(z)+y' \\\\\nd=y'f(z)+x'\n\\end{align*}$$\n<i>Proof:</i> Notice that $f$ is surjective. So, we will solve for $x,y,x',y'$ in the system of linear equation. For convinience, let $f(z)=k$ for $k \\in \\mathbb{R}^+$ as $f$ is surjective. Solving we get:\n$$\\begin{align*}\nx=\\frac{ka-b}{k^2-1}\\\\\ny=\\frac{kb-a}{k^2-1} \\\\\nx'=\\frac{kc-d}{k^2-1} \\\\\ny'=\\frac{kd-c}{k^2-1}\n\\end{align*}$$\nNow, you can chose $z$ such that $f(z)\\ne 1$ and $x,y,x',y'$ is positive. This finishes the proof to the lemma. $\\square$\n\n<b>Claim 3:</b> $f$ obeys Jensen's Functional Equation,i.e.,\n$$\\frac{f(x)+f(y)}{2}=f\\left(\\frac{x+y}{2}\\right)$$\n<i>Proof:</i>",
+   "has_diagram": false
+  }
+ ]
+}

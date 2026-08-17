@@ -1,0 +1,956 @@
+{
+ "competition": "MATHCOUNTS",
+ "set": "A",
+ "variants": [
+  {
+   "position": 1,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 1",
+   "question": "What is the value of (7 × 2) − (3 × 4 + 2)?",
+   "choices": null,
+   "answer": "0",
+   "type": "integer_answer",
+   "solution": "Answer: 0 6.. (7 × 2) − (3 × 4 + 2) = (14) − (12 + 2) = 14 − 14 = 𝟎𝟎.",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 2",
+   "question": "Stefani went to the store to buy 3 chocolates for each of her 5 classmates. While shopping, she decided instead to buy 5 chocolates for each classmate. How many additional chocolates does she need to buy compared to her initial plan?",
+   "choices": null,
+   "answer": "10",
+   "type": "integer_answer",
+   "solution": "Answer: 10chocolates 7.. 5 chocmate× 5 mate − 3 chocmate× 5 mate = (5 − 3)5 choc = (2)5 choc = 𝟏𝟏𝟎𝟎 choc.",
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 3",
+   "question": "What is the least perfect square whose digits are all prime?",
+   "choices": null,
+   "answer": "25",
+   "type": "integer_answer",
+   "solution": "Answer: 25 8.. All digits must be 2, 3, 5, or 7. A 1-digit perfect square cannot be prime, so the number must have at least 2 digits and value in 20s or higher. There is one such perfect square in the 20s: 52 = 𝟐𝟐𝟐𝟐.",
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 4",
+   "question": "Triangle ABC, shown, is a right triangle with side AC y extended. What is the value of x + y?",
+   "choices": null,
+   "answer": "150",
+   "type": "integer_answer",
+   "solution": "Answer: 150 degrees 35 14.. The two acute angles of a right triangle are complementary, so 𝑦𝑦 = 90° − 60° = 30°. The two adjacent angles, one measuring 60° and the other measuring 𝑥𝑥 , along and on the same side of ray AC�����⃑ are supplementary, so 𝑥𝑥 = 180° − 60° = 120°. Therefore, 𝑥𝑥 + 𝑦𝑦 = 120° + 30° = 𝟏𝟏𝟐𝟐𝟎𝟎°.",
+   "has_diagram": true
+  },
+  {
+   "position": 5,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 5",
+   "question": "How many lines of symmetry of a regular octagon go through at least one of its vertices?",
+   "choices": null,
+   "answer": "4",
+   "type": "integer_answer",
+   "solution": "Answer: 4lines 15.. Lines of symmetry for a regular polygon must pass through the circumcenter and incenter (which coincide) of the polygon. For regular polygons with an even number of vertices, which includes octagons due to having 8 vertices, any line passing through a vertex and the incenter must pass through the diametrically opposite vertex. Thus, the vertices work as pairs to form lines of symmetry. For the octagon, the 8 vertices form 82 = 𝟒𝟒 such distinct pairs and lines of symmetry.",
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 6",
+   "question": "If x # y = 2x + 3y, then 4 # 1 = 2(4) + 3(1) = 11. What is 2 # 3?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "2 # 3 = 2(2) + 3(3) = 4 + 9 =13.",
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 7",
+   "question": "The area of a rectangle is twice the area of a square with side length 8 cm. If one of the side lengths of the rectangle is 4 cm, what is the perimeter of the rectangle?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "The area relationship of the two figures is (4 cm)𝑤𝑤 = 2(8 cm)2 = 128 cm2 , so 𝑤𝑤 = 128 cm24 cm= 32 cm. Therefore, the perimeter of the rectangle is 2(4 cm + 𝑤𝑤 ) = 2(4 cm + 32 cm) = 2(36 cm) = 𝟕𝟕𝟐𝟐 cm.",
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 8",
+   "question": "Janelle writes the positive integers less than or equal to 26 on a white board. What is the sum of the multiples of 3 that she wrote?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "The sum of the relevant multiples of 3 is the arithmetic series 3 + 6 + 9 + 12 + 15 + 18 + 21 + 24, which has 8 terms whose average is the average of the first and last terms, thus (3+24)2 = 272. Therefore, the desired sum is 8×272 = 4 × 27 = 𝟏𝟏𝟎𝟎𝟏𝟏.",
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 9",
+   "question": "A right triangle has side lengths 2 , 6 and 3 inches. What is its area? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "6",
+   "type": "integer_answer",
+   "solution": "Answer: 6 in2. Given the three side lengths of a right triangle, the area is ½ of the product of the two shortest sides. Now, 10 = 20 < 21 = 7< 29 , so the area is 1 �10 in� �7 in� = �5� �7� in2 = 𝟑𝟑𝟐𝟐 in2 . 3 6 6 2 6 2 3 2 3 2 𝟔𝟔",
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 10",
+   "question": "In the diagram shown, the larger circle has a diameter of 10 feet and the smaller circle has a diameter of 6 feet. What is the area, in square feet, of the shaded region? Express your answer in terms of π.",
+   "choices": null,
+   "answer": "16",
+   "type": "integer_answer",
+   "solution": "Answer: 16πft2. The area enclosed by a circle of radius 𝑟𝑟 is π𝑟𝑟 2 . Read the question carefully to observe that we are not given the radius but the diameter, which is 2 times the radius. Thus, the outer circle has radius 10 ft = 5 ft and the inner circle has radius 6 ft = 3 ft. Therefore, the shaded area is the area enclosed 2 2 by the outer circle minus the area enclosed by the inner circle, thus π(5 ft)2 − π(3 ft)2 = (25 − 9)π ft2 = 𝟏𝟏𝟔𝟔π ft2 . 2026 CHAPTER COMPETITION Solutions",
+   "has_diagram": true
+  },
+  {
+   "position": 11,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 11",
+   "question": "Addison is 31 years old, and her daughter Madison is 6 years old. In how many years will Madison’s age be half of Addison’s age?",
+   "choices": null,
+   "answer": "19",
+   "type": "integer_answer",
+   "solution": "Answer: 19years. Addison’s age is 31 − 6 = 25 greater than Madison’s, so the 2:1 ratio will occur when Addison is 2 × 25 = 50 and Madison is 25, which is 25 − 6 = 𝟏𝟏𝟏𝟏 years away.",
+   "has_diagram": false
+  },
+  {
+   "position": 12,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 12",
+   "question": "If x − 15 is 80% of x, what percent of x is x + 15?",
+   "choices": null,
+   "answer": "120",
+   "type": "integer_answer",
+   "solution": "Answer: 120%. A loss of 15 from 𝑥𝑥 corresponds to a relative loss of 100 % − 80 % = 20 %, so a gain of 15 above 𝑥𝑥 must be a relative gain of 20 %, so 𝑥𝑥 + 15 = 𝟏𝟏𝟐𝟐𝟎𝟎 % ⋅ 𝑥𝑥 .",
+   "has_diagram": false
+  },
+  {
+   "position": 13,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 13",
+   "question": "pays $250 dollars a week no matter what. Bertha’s Burritos pays $20 an hour. Carl’s Cantaloupes pays $15 an hour for the first 10 hours and $25 an hour beyond that. Charlene’s desired number of hours per week would pay her the same at Al’s and at Carl’s. How much would she make per week if she took the job at Bertha’s?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Pay at Al’s is a fixed $250; to earn the same amount at Carl’s requires 10 h to reach $150 and then $100 = 4 h to get the remaining $100 at $25/h. Therefore, Charlene wishes to work 14 h each week, $25/h resulting in pay of $20h × 14 h = $𝟐𝟐𝟏𝟏𝟎𝟎 𝑜𝑜𝑟𝑟 $𝟐𝟐𝟏𝟏𝟎𝟎. 𝟎𝟎𝟎𝟎 at Bertha’s.",
+   "has_diagram": false
+  },
+  {
+   "position": 14,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 14",
+   "question": "Amy and Bob each own a square plot of land. Amy's plot measures 75 meters on each side, while Bob's measures 25 meters on each side. What is the ratio of the area of Bob’s land to the area of Amy’s land? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "𝐵𝐵 )2 2 = 𝟏𝟏 𝐴𝐴 = (25 m(75 m)2= �13� 𝟏𝟏 .",
+   "has_diagram": false
+  },
+  {
+   "position": 15,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 15",
+   "question": "Carson is pushing a broken shopping cart in a series of straight-line segments. After every meter he pushes it, a wheel locks, causing an instantaneous 15-degree turn to the right before it continues forward. Eventually, he finds himself back where he started for the first time. How far, in meters, has he pushed the cart? 1 m 1 m 1 m 1 m",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "To go around one full cycle requires accumulating 360° of turns. At 15° per turn, one cycle requires 360° = 24 turns. A segment for each turn having length 1 m requires pushing 𝟐𝟐𝟒𝟒 m. 15°/turn",
+   "has_diagram": false
+  },
+  {
+   "position": 16,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 16",
+   "question": "Jamie has a small business selling pies and cakes. He sells pies for $10.00 each and cakes for $12.00 each. His revenue from selling cakes is the same as his revenue from selling pies. If he sells 240 pies in a month, how many cakes does he sell that month?",
+   "choices": null,
+   "answer": "200",
+   "type": "integer_answer",
+   "solution": "Answer: 200cakes 21.. The revenue for each cake is $12$10 = 1.2 times as much as that for each pie. For equal revenue, the number of pies sold [240] must be 1.2 times the number of cakes sold, so the number of cakes is 240 = 240×10 = 20 × 10 = 𝟐𝟐𝟎𝟎𝟎𝟎. 1.2 12",
+   "has_diagram": false
+  },
+  {
+   "position": 17,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 17",
+   "question": "A rectangle has perimeter 26 units, and two of its side lengths sum to 20 units. What is the area of the rectangle?",
+   "choices": null,
+   "answer": "30",
+   "type": "integer_answer",
+   "solution": "Answer: 30units2 per second. The given sum of two side lengths is 20, which is greater than 12 the perimeter, so the sides measured must be the two longest [opposite] sides, so each of the two shortest sides must have length 26−202 = 3, while each long est side must be 202= 10. Therefore, the area of the rectangle is 10 × 3 = 𝟑𝟑𝟎𝟎.",
+   "has_diagram": false
+  },
+  {
+   "position": 18,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 18",
+   "question": "How many three-digit positive integers have three digits whose product is 18?",
+   "choices": null,
+   "answer": "15",
+   "type": "integer_answer",
+   "solution": "Answer: 15integers 28.. For a product of 3 digits to be 18, the digits must be 1,2,9 with 3! = 6 permutations, 1,3,6 with 6 permutations, and 2,3,3 with 3!1! 2! = 3 permutations. That yields 6 + 6 + 3 = 𝟏𝟏𝟐𝟐 qualifying integers.",
+   "has_diagram": false
+  },
+  {
+   "position": 19,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 19",
+   "question": "The first and twenty-first terms of an arithmetic progression are 26 and −4, terms respectively. How many positive terms does the progression have?",
+   "choices": null,
+   "answer": "18",
+   "type": "integer_answer",
+   "solution": "Answer: 18positive. The first term is 𝑎𝑎 + 0𝑑𝑑 = 26 and the twenty-first term is 𝑎𝑎 + 20𝑑𝑑 = −4, so 20 𝑑𝑑 = −4 − 26 = −30. Thus, 𝑑𝑑 = − 32. We want the greatest integer 𝑛𝑛 such that 𝑎𝑎 + (𝑛𝑛 − 1)𝑑𝑑 > 0, thus 26 − 32(𝑛𝑛 − 1) = 55 − 3 𝑛𝑛 > 0. Then 55 > 3𝑛𝑛 and 𝑛𝑛 < 18 1. The greatest such integer 𝑛𝑛 is 𝟏𝟏𝟏𝟏. 2 2 3",
+   "has_diagram": false
+  },
+  {
+   "position": 20,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 20",
+   "question": "A rhombus with area 60 in2 has a diagonal of length 6 inches. How many inches long is a side of this rhombus? Express your answer in simplest radical form.",
+   "choices": null,
+   "answer": "109",
+   "type": "integer_answer",
+   "solution": "Answer: 109inches25.. 2 + �𝑑𝑑22 𝐴𝐴 = 𝑑𝑑1𝑑𝑑22, so 𝑑𝑑2 = 2𝐴𝐴𝑑𝑑1= 2×60 in26 in= 20 in. The length of a side is ��𝑑𝑑12�2�= �(3 in)2 + (10 in)2= √9 + 100 in = √𝟏𝟏𝟎𝟎𝟏𝟏 in. 2026 CHAPTER COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 21,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 21",
+   "question": "Haley tosses a fair coin five times. What is the probability that at least two consecutive tosses show the same result? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "There are 25 = 32 distinct sequences of toss results for 5 tosses. We do not want sequences with two or more consecutive tosses having the same result. In other words, we do not want sequences with results alternating back and forth through the sequence, thus not HTHTH nor THTHT. All 30 remaining distinct sequences meet the success criteria, so the desired probability is 30 = 𝟏𝟏𝟐𝟐 . 32 𝟏𝟏𝟔𝟔",
+   "has_diagram": false
+  },
+  {
+   "position": 22,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 22",
+   "question": "An elevator in a high-rise apartment building takes some fixed amount of time per second to start moving at the beginning of each trip. After starting up, it travels at a constant speed until reaching its destination. A ride from the 20th floor to the 26th floor takes 15 seconds, while a ride from the 2nd floor to the 35th floor takes exactly 1 minute. What is the speed of the elevator when the elevator is moving, in floors per second? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "5",
+   "type": "integer_answer",
+   "solution": "Answer: 5f loors. The only difference between the two scenarios is one elevator taking 15 s to go 26 fl − 20 fl = 6 fl versus the second elevator taking 1 min = 60 s, which is 60 s − 15 s = 45 s longer to go 35 fl − 2 fl = 33 fl, which is 33 fl − 6 fl = 27 fl greater distance. The elevator speed when moving is, therefore, 27 fl45 s = 𝟑𝟑𝟐𝟐 fls . [The author of these solutions saw in one competition scoring room many answers of 53, the reciprocal of the correct answer. Diligent use and algebraic handl ing of units of measurement with the numbers, as done throughout these solutions, catches most such errors. ☺]",
+   "has_diagram": false
+  },
+  {
+   "position": 23,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 23",
+   "question": "After placing a delivery order for pizza, five friends realize they’ve run out of soda. They decide that some will go buy more soda while the rest wait for the pizza, with at least one person assigned to each task. In how many ways can the five friends divide themselves between the two tasks?",
+   "choices": null,
+   "answer": "30",
+   "type": "integer_answer",
+   "solution": "Answer: 30ways. There are C5 𝑘𝑘 arrangements of 5 people with 𝑘𝑘 staying and 5 − 𝑘𝑘 going, and we want to sum over 1 ≤ 𝑘𝑘 ≤ 4; this is equal to the even easier 25 − C5 0 − C5 5 = 32 − 1 − 1 = 𝟑𝟑𝟎𝟎.",
+   "has_diagram": false
+  },
+  {
+   "position": 24,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 24",
+   "question": "If a and b are positive integers such that 1 + 1 = 2 , what is the sum of the two distinct possible values of ab? a b 3",
+   "choices": null,
+   "answer": "21",
+   "type": "integer_answer",
+   "solution": "Answer: 21. The sum of the 2 values 1 and 1 is given to be 2 , so the mean of the 2 values is 2 3⁄ = 1 . Thus, one of 1 𝑎𝑎 𝑏𝑏 3 2 3 𝑎𝑎 and 1𝑏𝑏 must be at least 13 and the other must be at most 13 , with both being given as positive. In other words, one of 𝑎𝑎 and 𝑏𝑏 must be at most 3 and the other must be at least 3. Because [1] we want products of 𝑎𝑎 and 𝑏𝑏 and multiplication of integers is commutative, 𝑎𝑎𝑎𝑎 = 𝑎𝑎𝑎𝑎 and we want distinct values of the product and [2] the given expression 1𝑎𝑎 + 1𝑏𝑏 is symmetric in 𝑎𝑎 and 𝑏𝑏, we can restrict consideration to 0 < 𝑎𝑎 ≤ 3 ≤𝑎𝑎. Right there we have 𝑎𝑎 =𝑎𝑎= 3 as a solution without even try ing yet. We are given that there are two solutions, only one remains to be found and the only options left are integers 𝑎𝑎 satisfying 0 < 𝑎𝑎 < 3, so 𝑎𝑎 must be one of the two values 1 or 2. For that simple situation, there is no need to try to speed things up by taking the trouble to isolate 𝑏𝑏 in terms of 𝑎𝑎 — just plug and grind at most two values. Since we know 3 works, let’s work our way down from 3 toward 0. For 𝑎𝑎 = 2, 1𝑏𝑏= 23− 12= 4−36= 16 so 𝑎𝑎 = 6 works with 𝑎𝑎 = 2. We now have two solutions, so none remain—no need to try 𝑎𝑎 = 1. The sum of the solution products is 3 × 3 + 2 × 6 = 𝟐𝟐𝟏𝟏.",
+   "has_diagram": false
+  },
+  {
+   "position": 25,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 25",
+   "question": "Half of the students in Dr. Papanikolas’s class play the piano, and a third of them play the cello. If there are three students in the class who play both instruments, and twenty who play neither instrument, how many total students are there in Dr. Papanikolas’s class?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Let 𝑁𝑁 be the total number of students. Then 12𝑁𝑁 play piano and 13 𝑁𝑁 play cello; because 3 students play both, we must subtract 3 to avoid double counting, and then the 20 who play neither need to be added to the total count, so 𝑁𝑁 = 12 𝑁𝑁 + 23𝑁𝑁 − 3 + 20 = 56𝑁𝑁 + 17. Therefore, 16𝑁𝑁 = 17, so 𝑁𝑁 = 6 × 17 = 102.",
+   "has_diagram": false
+  },
+  {
+   "position": 26,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 26",
+   "question": "The equation 6x2 + 11x – 10 = 0 has two solutions, x = a and x = b. What is the value of a + b – ab? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "6",
+   "type": "integer_answer",
+   "solution": "Answer: 6. For the quadratic equation 𝑐𝑐 2 𝑥𝑥 2 + 𝑐𝑐1 𝑥𝑥 + 𝑐𝑐0 = 0 with roots 𝑎𝑎 and 𝑏𝑏, Viète’s formulas tell us that 𝑎𝑎 +𝑎𝑎= − 𝑐𝑐1𝑐𝑐2 and 𝑎𝑎𝑎𝑎 = 𝑐𝑐0𝑐𝑐2, so 𝑎𝑎 +𝑎𝑎− 𝑎𝑎𝑎𝑎 = −𝑐𝑐1𝑐𝑐2− 𝑐𝑐0𝑐𝑐2= −𝑐𝑐1−𝑐𝑐0𝑐𝑐2 . For this problem, 𝑐𝑐0 = −10, 𝑐𝑐1 = 11, and 𝑐𝑐2 = 6, so 𝑎𝑎 +𝑎𝑎− 𝑎𝑎𝑎𝑎 = −11+106= − 𝟏𝟏𝟔𝟔 . 2026 CHAPTER COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 27,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 27",
+   "question": "Oddie the frog wants to hop from (1, 1) to (11, 11). On each hop, Oddie can jump either one unit upward or one unit to the right, but only to a location having at least one odd coordinate. How many different paths can Oddie take to reach his destination? x (1, 1)",
+   "choices": null,
+   "answer": "252",
+   "type": "integer_answer",
+   "solution": "Answer: 252paths. The frog starts at (1; 1), a point of the form (o; o) [o for odd], and there are only 2 possible steps— to (o+1; o) and (o; o+1), both acceptable with 1 odd and 1 even coordinate. If the frog then switches direction, then 1 is added to the component with value o—except that unacceptably results in both coordinates being even, so we must continue in the same direction, thus adding 1 to o+1 to get both coordinates odd, so we are back to the starting condition. In essence, being at (o; o) requires us to go either (o; o)→(o+1; o)→(o+2; o) or (o; o)→(o; o+1)→(o; o+2), thus only 2 choices for a pair of steps together starting at (o; o). In essence, instead of having freedom to go 10 single steps up and 10 single steps right in any order, the second step must be in the same direction as the first; the third step can be either direction, but the fourth must match the third, and so on, so that we are making only 5 double steps up and 5 double steps right. Thus, we have altogether 5 indistinguishable UU steps and 5 indistinguishable RR steps in any order. How many distinct orders? (5+5)! = 10×9×8×7×6 = 2 × 3 × 7 × 6 = 𝟐𝟐𝟐𝟐𝟐𝟐. 5! 5! 5×4×3×2×1",
+   "has_diagram": false
+  },
+  {
+   "position": 28,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 28",
+   "question": "In the drawing below, equilateral triangles are erected on the outside of a square, with shared edges of the square and each triangle coinciding exactly. The total area of the shaded region shown is 100 3 units2. What is the total unshaded area inside ABCD? AB",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Let 𝑆𝑆 be the area of the shaded region, equal to 100√3, and 𝑈𝑈 be the area of the unshaded region within square ABCD. Let 𝐿𝐿 be the length of a side of square ABCD and 𝑙𝑙 be the length of a side of the inner square and of the shaded triangles. 𝑈𝑈 = 𝐿𝐿2 − 𝑆𝑆. Because the four shaded triangles are congruent and equilateral, each shaded triangle has area expressible as 𝑆𝑆4 and √34 𝑙𝑙2 , so 100√3 = 𝑆𝑆 = √3𝑙𝑙2 , so 𝑙𝑙2 = 100 and 𝑙𝑙 = 10. Now, 𝐿𝐿2 = 12(AC)2 , where AC is twice the altitude of a shaded triangle plus 𝑙𝑙, thus, AC = 2 × 1√3𝑙𝑙 + 𝑙𝑙 = �√3+ 1�𝑙𝑙 = 10�√3+ 1�, so 𝐿𝐿2 = 1�10�√3+ 1��2 = 2 = 50�4 + 2√32 2 50�√3 + 1� � = 200 + 100√3. Thus, 𝑈𝑈 = 𝐿𝐿2 − 𝑆𝑆 = �200 + 100√3� − 100√3= 𝟐𝟐𝟎𝟎𝟎𝟎.",
+   "has_diagram": true
+  },
+  {
+   "position": 29,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 29",
+   "question": "digit d in a positive integer is dominant if at least half of the digits in the integer are the digit d. How many positive integers less than or equal to 2026 have at least one dominant digit?",
+   "choices": null,
+   "answer": "867",
+   "type": "integer_answer",
+   "solution": "Answer: 867integers. Consider four categories of integers in the span 1 .. 2026: 1. 1 .. 99: Any one digit in any of these values corresponds to at least half of the digits in the value, so is dominant. All 99 such values qualify as having a dominant digit. 2. 100 .. 999: If any two of the three digits in a value match, the value qualifies, but counting these involves multiple subcategories. The non-qualifying values are equivalent to those values that have all digits being different—no matches —which are very easy to count: There are 9 option s (1 .. 9, as 0 does not work for a 3-digit number) for the 100s digit, 9 options left (bringing in 0 but dropping the 100s digit) for the 10s digit, and 8 options left for the 1s digit. Thus, 9 × 9 × 8 = 648 of the 999 − 99 = 900 candidates fail to qualify, so 900 − 648 = 252 qualify. 3. 1000 .. 1999: Like category 2, having any two digits match makes that digit value dominant, so we will again count all of the values in the span that that have all digits being different. The 1000s digit has only the 1 option (1), so there are 9 options left (all other than 1) for the 100s digit, 8 options left for the 10s digit, and 7 options left for the 1s digit. Thus, 1 × 9 × 8 × 7 = 504 of the 1999 − 999 = 1000 possibilities fail to qualify, leaving 1000 − 504 = 496 to qualify. 4. 2000 .. 2026: At least half of the digits in each of 2000 .. 2010 are 0, making 0 the dominant digit and qualifying these 11 values. Then 2011 and 2012 have half 1s and half 2s, respectively, for 2 more qualifying values. At least half of the digits in each of 2020 .. 2026 are 2, making 2 the dominant digit and qualifying these 7 values, so 11 + 2 + 7 = 20 values in this category qualify. In total, there are 99 + 252 + 496 + 20 =𝟏𝟏𝟔𝟔𝟕𝟕 qualifying values. 2026 CHAPTER COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 30,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 30",
+   "question": "If the real number x satisfies the equation xx22/g14/g14xx/g16/g322 , what is the value of 8x? Express your answer in simplest radical form.",
+   "choices": null,
+   "answer": "16",
+   "type": "integer_answer",
+   "solution": "Answer: 16+5 or. Square both sides of �𝑥𝑥 2 + √𝑥𝑥 + �𝑥𝑥 2 − √𝑥𝑥 = 2: 𝑥𝑥 2 + √𝑥𝑥+ 𝑥𝑥 2 − √𝑥𝑥+ 2√𝑥𝑥 4 − 𝑥𝑥= 4, which simplifies to 2𝑥𝑥 2 + 2√𝑥𝑥 4 − 𝑥𝑥= 4. Now divide both sides by 2 and shift the resulting 𝑥𝑥 2 term to the right side: √𝑥𝑥 4 − 𝑥𝑥 = 2 − 𝑥𝑥 2 . Square both sides again: 𝑥𝑥 4 − 𝑥𝑥 = 4 − 4𝑥𝑥 2 + 𝑥𝑥 4 . Shift everything to the left side and cancel the quartic terms, leaving the quadratic equation 4𝑥𝑥 2 − 𝑥𝑥 − 4 = 0, which can be solved using the quadratic formula: 𝑥𝑥 = −(−1)±�(−1)2−4(4)(−4)2(4) = 1±√658 . Having squared both sides twice provides opportunity for extraneous roots. The form of the potential answers as the sum of a rational part and an irrational part makes for a challenge to verify versus disqualify the candidates as valid roots by substituting the candidates into the given equation with a pair of nested square roots in a Sprint Round with no calculator support. However, we can readily assess the qualitative behavior of the left side of the given equation adequately to accept one candidate root and reject the other. The two occurrences of √𝑥𝑥 in the given equation forces 𝑥𝑥 ≥ 0. Because √65 > 8 > 1, we have 1−√658< 0, thus disqualifying that candidate. We see also that 1+√658> 1. If we substitute 1 for 𝑥𝑥 on the left side of the equation, we get √1 + 1 + √1 − 1= √2 + 0 = √2, which is less than the 2 on the right side. We can also see that as we increase 𝑥𝑥 above 1, the two main square roots on the left side, and thus their sum, keep increasing arbitrarily large, and thus, must pass through 2. Thus, there must be a root, and the only remaining candidate is 1+√658 , so 𝑥𝑥 = 1+√658 is the one and only solution. Therefore, 8𝑥𝑥 = 𝟏𝟏 + √𝟔𝟔𝟐𝟐, which may be expressed instead as √𝟔𝟔𝟐𝟐 + 𝟏𝟏— either answer is acceptable.",
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2026 MATHCOUNTS Chapter Target Problem 1",
+   "question": "Eli buys a copy of the new board game Exploiting Mittens. Later, the game goes on sale for 20% off, so he buys another copy of it and gifts it to his friend Ramya. If the total amount of money he spends on the two copies of the game was $27, how much does one copy of the game cost (without the 20% discount)?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Answer: $15 or 15.00 3.. Let 𝑝𝑝 be the regular price of the game. The payment was 1𝑝𝑝 + (1 − 0. 20)𝑝𝑝 = 1. 8𝑝𝑝 = $27. Therefore, 𝑝𝑝 = $271.8= $𝟏𝟏𝟐𝟐 or $𝟏𝟏𝟐𝟐. 𝟎𝟎𝟎𝟎—either answer is acceptable. Target 2 6 𝐶𝐶 There are 24 children, of whom 6 + 3 + 5 = 14 have been accounted for in the chocolate only, strawberry only, and vanilla only regions. The other children 𝑝𝑝 𝑥𝑥 𝑟𝑟 are in the regions notated by the variables 𝑝𝑝 , 𝑞𝑞, 𝑟𝑟, and 𝑥𝑥 . We seek the value of 3 𝑞𝑞 5 𝑥𝑥, the count of those who like all three flavors, that is those who are elements 𝑆𝑆 𝑉𝑉 of 𝐶𝐶 ∩ 𝑆𝑆 ∩ 𝑉𝑉. We are given: [1] 𝑝𝑝 + 𝑥𝑥 = 5; 𝑞𝑞 + 𝑥𝑥 = 4; 𝑟𝑟 + 𝑥𝑥 = 7. Given in question. [2] 𝑝𝑝 + 𝑞𝑞 + 𝑟𝑟 + 𝑥𝑥 = 24 − 14 = 10. Children unaccounted for. Adding the three equations in [1] yields [3] 𝑝𝑝 + 𝑞𝑞 + 𝑟𝑟 + 3𝑥𝑥 = 16. Subtracting [3] − [2] yields: 2𝑥𝑥 = 6, so 𝑥𝑥 = 𝟑𝟑.",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2026 MATHCOUNTS Chapter Target Problem 2",
+   "question": "At a local preschool, 24 children were surveyed about their preferences of three ice cream flavors: chocolate, strawberry and vanilla. The survey found that 6 children enjoy only chocolate, 3 enjoy only strawberry and 5 enjoy only vanilla. Meanwhile, 5 enjoy both chocolate and strawberry ice cream; 7 enjoy both chocolate and vanilla ice cream; 4 enjoy both strawberry and vanilla ice cream; and children who enjoy all three flavors are included in these counts. If each child enjoys at least one of the three flavors, how many of the children surveyed enjoy all three flavors? Chocolate 6",
+   "choices": null,
+   "answer": "3",
+   "type": "integer_answer",
+   "solution": "Answer: 3children 4.. ",
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2026 MATHCOUNTS Chapter Target Problem 3",
+   "question": "fraction of the rectangle DEAR, shown below, is shaded? Express your answer as a common fraction. E 8A 2",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "The area of rectangle is 10 × (2 + 4) = 60. There are five shaded triangles whose bases are on AE���� and have a total width of 8, and the height of each is 2, so the total area of the shaded triangles is 1 × 8 × 2 = 8. Therefore, the fraction of DEAR that is shaded is 8/4 = 𝟐𝟐 . 2 60/4 𝟏𝟏𝟐𝟐 2026 CHAPTER COMPETITION Solutions",
+   "has_diagram": true
+  },
+  {
+   "position": 4,
+   "source": "2026 MATHCOUNTS Chapter Target Problem 4",
+   "question": "is painting the four walls of her room. She has red, green and blue paint, each in sufficient quantity to cover two walls. If each wall must be painted a single color and the walls are distinguishable, how many different ways can Elle paint the room?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "If the amount of paint was unlimited, but still restricted to 3 colors, then each of the 4 walls could be any of the 3 colors yielding 34 = 81 distinct configurations, each in 1 of 4 categories: 1. All 4 walls of the same color; 2. 3 walls of one color and 1 wall of a second color; 3. 2 walls of one color and 2 walls of a second color; 4. 2 walls of one color, 1 of a second color, and 1 of a third color. However, we do have restrictions on amount of paint, so that no configuration in categories 1 and 2 is achievable, whereas every configuration in categories 3 and 4 is achievable. Counting configurations in categories 1 and 2 is very easy, whereas having two colors each covering the same nonzero count of walls as in configurations 3 and 4 gets a bit trickier and more prone to mistake. Therefore, let’s use the complement approach and subtract the configuration counts in the two unachievable categories [1 and 2] from the total count of 81. For category 1, all walls are of any 1 of the 3 colors for 3 configurations. For category 2, any 1 of the 4 walls may be painted any 1 of the 3 colors, and all 3 remaining walls are painted a second color, of which 2 choices remain, yielding 4 × 3 × 2 = 24 configurations. Therefore, 81 − 3 − 24 =𝟐𝟐𝟒𝟒 configurations are achievable.",
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2026 MATHCOUNTS Chapter Target Problem 5",
+   "question": "rolls three fair 8-sided dice, with numbers 1 through 8 on their faces. If she rolls one die at a time, how many ways are there for Marta to roll a sum of 20? One such example to include is shown. 84 8++=20 1st roll2nd roll3rd rollsum",
+   "choices": null,
+   "answer": "15",
+   "type": "integer_answer",
+   "solution": "Answer: 15ways 7.. The possible configurations satisfying the stated criteria are: 1. 8-8-4, with 3!2! 1!= 3 permutations; 2. 8-7-5, with 3!1! 1! 1!= 6 permutations; 3. 8-6-6, with 3!1! 2!= 3 permutations; 4. 7-7-6, with 3!2! 1!= 3 permutations. Each permutation is a qualifying configuration, so the total number of configurations is 3 + 6 + 3 + 3⁠ ⁠= 15.⁠",
+   "has_diagram": true
+  },
+  {
+   "position": 6,
+   "source": "2026 MATHCOUNTS Chapter Target Problem 6",
+   "question": "ABCD has perimeter 4 inches. If the length AC is twice the length BD, what is the area of rhombus ABCD? Express your answer as a common fraction. BC",
+   "choices": null,
+   "answer": "5",
+   "type": "integer_answer",
+   "solution": "Answer: 5 in2 8.. The perimeter 4 in consists of 4 congruent sides, so each side has length 4 in4 = 1 in. Let E be the point of intersection of the two diagonals; E is the right-angle vertex for each of four congruent triangles. Thus, AE = EC = 12 AC = BD = 2 BE = 2 ED; for △ABE, we have BE : AE : AB = 1 : 2 : √5. Because AB = 1 in, we thus have BE = 1 in√5 , AE = 2 in√5 , so the desired area is given by Area(ABCD) = 4 Area(ABE) = 4 × 12 AE ⋅ BE = 2 AE ⋅ BE = 2 × 1 in√5× 2 in√5= 𝟒𝟒𝟐𝟐 in2 .",
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2026 MATHCOUNTS Chapter Target Problem 7",
+   "question": "Michael is driving from Las Vegas to Reno for a weekend of fun! The trip per second is 740 kilometers each way, and Michael takes 8.5 hours to get there. When coming back, he hits heavy traffic and takes 10 hours to get back to Las Vegas. What is Michael’s average speed, in meters per second, during this trip? Express your answer as a decimal to the nearest tenth.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Let 𝑣𝑣̅ be the average speed over the trip. We must be careful to remember that average speed of a trip composed of segments of equal distance is not the arithmetic mean of the segment speeds but rather the harmonic mean of the segment speeds (i.e. the quotient of the total distance divided by the total time). Therefore, 𝑣𝑣̅ = 740 km+740 km8.5 h+ 10 h= 1480 km18.5 h= 80 kmh . However, the question states that the answer is to be expressed in terms of ms (i.e., the coherent SI unit of speed). The kilometer and hour that we are given are defined in terms of the desired meter and second, respectively, as km = 1000 m and h = 3600 s, so 𝑣𝑣̅ = 80 kmh= 80 × 1000 m3600 s= 22. 222… ms , which rounds, as instructed, to the nearest 0.1 ms as 𝟐𝟐𝟐𝟐. 𝟐𝟐 ms . 2026 CHAPTER COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2026 MATHCOUNTS Chapter Target Problem 8",
+   "question": "The MATHCOUNTS Question Writing Committee is meeting to finalize the problems for competition year 2026. They are seated around a circular table where the seat of the committee chair, Greg, has already been determined in advance. The remaining six members must sit such that exactly one of the following pairs of writers must be seated next to each other: Thinula and Matthew, Ryoko and Michelle, or Rachel and Liam. In how many ways can the members be seated around the table?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Let’s number the seats from 1 to 6 in clockwise order around the table with Greg sitting between 6 and 1. Let’s consider 3 cases: 1. The together pair are in seats 1 and 2, or the equivalent mirror-image situation of seats 5 and 6—work out the 1 & 2 case, then multiply by 2 to handle that case and the 5 & 6 case. Any of the 6 members other than Greg can go in seat 1 and then the 1 pair-partner must be in seat 2. Any of the remaining 4 can go in seat 3; either of the 2 in the only not-yet-used pair can go in seat 4, then the 1 remaining member of pair 2 can go in seat 5, and the 1 remaining person can go in seat 6. This case provides 2 × 6 × 1 × 4 × 2 × 1 × 1 = 96 seating layouts. 2. The together pair are in seats 2 and 3, or the equivalent mirror-image situation of seats 4 and 5—work out the 2 & 3 case, then multiply by 2 to handle that case and the 4 & 5 case. Any of the 6 members other than Greg can go in seat 2 and then the 1 pair-partner must be in seat 3. Any of the remaining 4 can go in seat 1, with the 1 partner going to seat 5 in order to split the third pair is seats 4 & 6, with 2 choices for seat 4 and the 1 remaining having to go in seat 6.This case provides 2 × 6 × 1 × 4 × 1 × 2 × 1 = 96 seating layouts. 3. The together pair are in seats 3 and 4. There is not any equivalent mirror-image situation. Any of the 6 members other than Greg can go in seat 3 and then the 1 pair-partner must be in seat 4. Any of the remaining 4can go in seat 1, and either of the 2 from the only not-yet-used pair can go in seat 2. Finally, either of the remaining 2 can go in seat 5 and the remaining 1 in seat 6. This case provides 6 × 1 × 4 × 2 × 2× 1 = 96 seating layouts. Therefore, the total number of qualifying seating arrangements is 96 + 96 + 96 = 288.",
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 1",
+   "question": "The value of one US dollar varies between a low of 1.33 and a high of dollars 1.39 Canadian dollars during a certain week. Michelle exchanges 1500 US dollars for Canadian dollars. What is the range of the possible amount of Canadian dollars she will receive after the exchange?",
+   "choices": null,
+   "answer": "31",
+   "type": "integer_answer",
+   "solution": "Answer: 31 21.. [The official currency exchange symbols for the American dollar and Canadian dollar are USD and CAD, respectively.] The range is the maximum value minus the minimum value; therefore, 1500 USD × 1.39 CADUSD − 1500 USD × 1.33 CADUSD = 1500(1.39 − 1.33) CAD = 1500 × 0.06 CAD = 15 × 6 CAD = 90 CAD.",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 2",
+   "question": "The degree measures of the interior angles of a convex pentagon are x + 15, 2x + 25, 3x − 20, 4x + 30, and 5x + 10. These five angles sum to 540 degrees. What is the degree measure of the largest angle of the pentagon?",
+   "choices": null,
+   "answer": "6",
+   "type": "integer_answer",
+   "solution": "Answer: 6 22.. 540° = (𝑥𝑥 + 15°) + (2𝑥𝑥 + 25°) + (3𝑥𝑥 − 20°) + (4𝑥𝑥 + 30°) + (5𝑥𝑥 + 10°) = 15𝑥𝑥 + 60°, so 15𝑥𝑥 = 540° − 60° = 480°. Thus, 𝑥𝑥 = 480°15= 32°. Now, 𝑥𝑥 < 2𝑥𝑥 < 4𝑥𝑥 and 15° < 25° < 30°, so 𝑥𝑥 + 15° < 2𝑥𝑥 + 25° < 4𝑥𝑥 + 30°. Then 3𝑥𝑥 < 4𝑥𝑥 and −20° < 30°, so 3𝑥𝑥 − 20° < 4𝑥𝑥 + 30°. Thus, the maximum is either 4 𝑥𝑥 + 30° or 5𝑥𝑥 + 10°—the former is 4 × 32° + 30° = 158°, and the latter is 5 × 32° + 10° = 170°. Therefore, the greatest angle is 170 °.",
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 3",
+   "question": "Two right circular cylinders, X and Y, are such that cylinder Y has a height three times that of cylinder X and a base radius one-half that of cylinder X. What is the ratio of the volume of cylinder X to the volume of cylinder Y? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "276",
+   "type": "integer_answer",
+   "solution": "Answer: 276 23.. 𝑉𝑉X 2ℎX 2 �ℎX 𝑉𝑉Y = 𝜋𝜋𝑟𝑟X𝜋𝜋𝑟𝑟Y2ℎY= �𝑟𝑟X𝑟𝑟Y� ℎY�. Now, ℎY = 3ℎ X and 𝑟𝑟Y = 12𝑟𝑟X , so 𝑟𝑟X𝑟𝑟Y= 2 and ℎXℎY= 13 , so 𝑉𝑉X𝑉𝑉Y= 22 × 13= 𝟒𝟒𝟑𝟑 . 2026 CHAPTER COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 4",
+   "question": "If five standard, fair six-sided dice are rolled, in how many ways can the sum of the rolls be at least 26, if the order of the rolls matters?",
+   "choices": null,
+   "answer": "54",
+   "type": "integer_answer",
+   "solution": "Answer: 54 (in2) 24.. Case Number of p ermutations 6-6-6-6-6 1 ×5! = 1 5! 6-6-6-6-(2,3,4,5) 4 ×5! = 20 4! 1! 6-6-6-5-5 1 ×5! = 10 3! 2! 6-6-6-5-(3,4) 2 × 5! = 40 3! 1! 1! 6-6-6-4-4 1 ×5! = 10 3! 2! 6-6-5-5-5 1 ×5! = 10 2! 3! 6-6-5-5-4 1 × 5! = 30 2! 2! 1! 6-5-5-5-5 1 ×5! = 5 1! 4! Total = 𝟏𝟏𝟐𝟐𝟔𝟔",
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 6",
+   "question": "Farmer Julie is planning on increasing the length and width of her rectangular wheat field, each by the same percentage. The crop yield per acre will not change, and neither will the water required for each acre. To account for this, Julie must double the capacity of her farm’s water reservoir. By what percent is Julie planning on increasing each dimension of her wheat field? Express your answer as a decimal to the nearest tenth.",
+   "choices": null,
+   "answer": "66",
+   "type": "integer_answer",
+   "solution": "Answer: 66 26.. Water needs multiplying by 2 with water usage per acre unchanged means that the acreage (land area) is being multiplied by the same factor of 2. Thus, land area 𝐴𝐴 = 𝑙𝑙𝑤𝑤 goes to 2𝑙𝑙 𝑤𝑤 = (𝑘𝑘𝑙𝑙)(𝑘𝑘𝑤𝑤) = 𝑘𝑘 2𝑙𝑙𝑤𝑤, which means 𝑘𝑘 2 = 2, so the each of the length and width are multiplied by √2 = 1.414 21…. Therefore, the relative increase in each of the length and width of the field is 1.414 21… − 1 = 0.414 21… × 100 % = 41. 421… %, which rounds to the nearest 0.1 % as 41.4 %.",
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 7",
+   "question": "Noah is mixing chocolate chips and peanuts, in equal parts by weight, to create a two-pound bag of snack mix he will sell. The chocolate chips cost him $12 for 3 pounds, while the peanuts cost $18 for 6 pounds. He wants his cost to be 80% of his selling price. At what price should he sell a two-pound bag of the mixture?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Answer: 1999 27.. A 2 lb bag of mix contains 1 lb of chocolate, which costs $123 lb × 1 lb = $4, and 1 lb of peanuts, which costs $186 lb × 1 lb = $3. Thus, the total ingredient cost for a bag is $4 + $3 = $7 = 0.8𝑝𝑝, where 𝑝𝑝 is the desired selling price for each bag of mix. Therefore, 𝑝𝑝 = $70.8 = $8.75.",
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 8",
+   "question": "On any given school day, Hill Valley Middle School teacher Leilani Goodwin wears jeans to school with probability 20%, and each day is independent of all other days. What is the probability that in a five-day school week, Ms. Goodwin wears jeans on exactly two days? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "100",
+   "type": "integer_answer",
+   "solution": "Answer: 100 28.. For 2 days, each independently at 20 % = 20/20100/20 = 15 for jeans means 5 d − 2 d = 3 d, each independently at 1 − 15 = 45 for non-jeans. This is a binomial distribution, so the requested 2 �4 3 = (5×4)×(1)×(4×4×4) 𝟐𝟐𝟏𝟏 probability is 5!2! 3! �15� 5� (2)×(5×5)×(5×5×5) = 2×4354 = 𝟏𝟏𝟔𝟔𝟐𝟐𝟐𝟐 . 2026 CHAPTER COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 9",
+   "question": "A sequence is said to be non-decreasing when each term is greater than or equal quences to the term before it. For example, 4,4,4,5,6 is non-decreasing, but 4,4,4,3,5,6 is not because 3 is less than 4, and 3 comes after 4 in the sequence. How many non-decreasing sequences of positive integers with length 2026 terms start with 1 and end with 3?",
+   "choices": null,
+   "answer": "210",
+   "type": "integer_answer",
+   "solution": "Answer: 210 29.. We have a finite sequence consisting of a 1 followed by a subsequence of a nonnegative integer 𝑛𝑛 count of terms each of which is a 1 , followed by a subsequence of a nonnegative integer 𝑚𝑚 count of terms each of which is a 2, followed by a subsequence of a nonnegative integer 2024 − 𝑛𝑛 − 𝑚𝑚 count of terms each of which is a 3, followed by a 3. Thus, 0 ≤ min(𝑚𝑚, 𝑛𝑛) ≤ max(𝑚𝑚, 𝑛𝑛) ≤ 𝑛𝑛 + 𝑚𝑚 ≤ 2024 in order to be meaningful and totals 1 + 𝑛𝑛 + 𝑚𝑚 + (2024 − 𝑛𝑛 − 𝑚𝑚 ) + 1 = 2026 terms in the sequence, as required by the question. We now focus on the middle 2024 terms because those are the only ones that can change to produce a different sequence—the term at each end is fixed in value. Let’s put a vertical boundary bar immediately to the right of the latest term with value 1 in the full 2026- term sequence and another such bar immediately to the left of the earlie st term with value 3. The two bars will be contiguous if there are no terms with value 2. A bar will be at the far left end of the subsequence of the middle 2024 terms if there are no 1s in the full sequence except the fixed initial 1, and, similarly, a bar will be at the far righ t end of the subsequence of the middle 2024 terms if there are no 3s in the full sequence except the fixed initial 3. Moving a bar to another location means the sequence has changed, which counts as a distinct sequence. In essence, we have 2024 slots for numbers (not counting the fixed number values at each end) and 2 slots for boundary bars—with all 1s to the left of the leftmost bar, all 2s between the two bars, and all 3s to the right of the rightmost bar. One boundary bar can go in any of the 2026 slots and the other boundary bar can go in any of the remaining 2025 slots; however, swapping the two bars does not change the sequence, so we are double- counting, which we need to remedy. Therefore, the count of distinct sequences is 2026 × 20252 = 𝟐𝟐 𝟎𝟎𝟐𝟐𝟏𝟏 𝟑𝟑𝟐𝟐𝟐𝟐.",
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 10",
+   "question": "Three unit circles are externally tangent to one another, as shown. From each circle’s center, there are two lines that pass through the center and are tangent to exactly one of the other circles. These six lines form a hexagon. What is the area inside this hexagon but outside the three circles? Express your answer as a decimal to the nearest hundredth.",
+   "choices": null,
+   "answer": "56",
+   "type": "integer_answer",
+   "solution": "Answer: 56 (percent) 30.. The figure shows that opposite sides of the hexagon are separated by the same distance as the diameter of the circles, which is 2. For a regular hexagon, like ours, this separation is also equal to √3𝑠𝑠, where 𝑠𝑠 is the length of each side of the hexagon. Thus, we have 𝑠𝑠 = 2√3—do not waste time and effort “normalizing” or “simplifying” radicals out of denominators in intermediate calculations as such actions are often counterproductive, like here. The area of a hexagon is 6 × √34 𝑠𝑠2 = 6 × √34× 43= 2√3. The hexagon cuts out a sector of 120° arc from each circle (because each interior angle of a regular hexagon has measure 120°, and the center of each circle is at the center of a circle). Thus, the sectors from the three circles combine to form one full circle of radius 1, so the interior of that circle has area π. Therefore, the shaded area is 2√3 − π = 0.3225…, which rounds to the nearest hundredth as 0.32 or .32. [The explicit 0 for the integer part is considered good practice—often even required—by numerous organizations . MATHCOUNTS uses the explicit 0 in all printed materials but does not require it in a Mathlete’s answers. The Texas UIL Number Sense Competition takes the contrary approach of forbidding explicitly writing an integer part that is 0.]",
+   "has_diagram": true
+  },
+  {
+   "position": 1,
+   "source": "2026 MATHCOUNTS State Sprint Problem 1",
+   "question": "Ms. Souza’s fourth grade class is going to start a garden project. The field of land the class has to work with is 75 feet by 40 feet. They plan to break the field into 2 foot by 3 foot plots, with no plots overlapping. What is the maximum number of plots of these dimensions that they will be able to create out of the field?",
+   "choices": null,
+   "answer": "500",
+   "type": "integer_answer",
+   "solution": "Answer: 500plots 6.. We see that 40 is even, thus divisible by 2, and that the sum of the digits of 75 is 7 + 5 = 12, which is divisible by 3, so 75 is likewise divisible by 3, enabling us to use the entire field for plots in a very simple manner. A lign the 3 ft sides of the plots parallel to the 75 ft sides of the field and the 2 ft sides of the plots parallel to the 40 ft sides of the fieldso as to have 75 ft = 25 plots lengthwise and 40 ft= 20 plots widthwise, for a total of 25 × 20= 500plots. 3 ft 2 ft",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2026 MATHCOUNTS State Sprint Problem 2",
+   "question": "Maxwell is signing up for three afterschool clubs on different school days of the week. If Maxwell is signing up for the math and chess clubs, then how many clubs can Maxwell select from as his third club? Afterschool Clubs Monday Tu esdayW ednesday Thursday Friday Robotics Coding Spanish Journalism Olympiad Debate Wr iting Math Fitness Baking Drama Reading Photography Music/Band Poetry Chess History Culinary Fashion Astronomy Film French Baseball Gardening Business",
+   "choices": null,
+   "answer": "14",
+   "type": "integer_answer",
+   "solution": "Answer: 14clubs. Maxwell has Tuesday, Thursday, and Friday available, thus 6 + 3 + 5 = 14 clubs to choose from.",
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2026 MATHCOUNTS State Sprint Problem 3",
+   "question": "What is the sum of the three distinct prime numbers that are divisors of 29 2 − 17 2?",
+   "choices": null,
+   "answer": "28",
+   "type": "integer_answer",
+   "solution": "Answer: 28. 292 − 172 = (29 + 17)(29 − 17) = 46 × 12 = (2 × 23)(22 × 3), with 2, 3, and 23 as the distinct prime divisors, summing to 2 + 3 + 23 = 28.",
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2026 MATHCOUNTS State Sprint Problem 4",
+   "question": "Sally ate 2 of her candies and gave half of the leftover candies to her friend. If she has 24 candies left, how many candies did she originally have?",
+   "choices": null,
+   "answer": "50",
+   "type": "integer_answer",
+   "solution": "Answer: 50candies. Sally at the end kept half of the remaining candies after eating 2, leaving 24 candies for herself, and the friend had the other half, thus 24 candies. Thus, Sally had 48 candies after eating 2 but before dividing them with her friend; adding the 2 that she ate means that Sally started with 50 candies.",
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2026 MATHCOUNTS State Sprint Problem 5",
+   "question": "If x + y = 5 and x 2 − y 2 = 15, what is the value of x?",
+   "choices": null,
+   "answer": "4",
+   "type": "integer_answer",
+   "solution": "Answer: 4 10.. 15 = 𝑥𝑥 2 − 𝑦𝑦 2 = (𝑥𝑥 + 𝑦𝑦)(𝑥𝑥 − 𝑦𝑦) = 5(𝑥𝑥 − 𝑦𝑦), so (𝑥𝑥 − 𝑦𝑦) = 15/5 = 3. Adding 𝑥𝑥 + 𝑦𝑦 = 5 and 𝑥𝑥 − 𝑦𝑦 = 3 yields 2𝑥𝑥 = 8, so 𝑥𝑥 = 𝟒𝟒.",
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2026 MATHCOUNTS State Sprint Problem 6",
+   "question": "The sum of two different positive integers is 8 more than the absolute difference between the two integers. What is the least possible value of the sum of the two integers?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Let 𝑎𝑎 and 𝑏𝑏 be the two distinct positive integers; let 𝑚𝑚 = max(𝑎𝑎; 𝑏𝑏) and 𝑛𝑛 = min(𝑎𝑎; 𝑏𝑏), so 𝑚𝑚 + 𝑛𝑛 = 𝑎𝑎 + 𝑏𝑏 and 𝑚𝑚 > 𝑛𝑛. Then 𝑚𝑚 + 𝑛𝑛 = 𝑚𝑚 − 𝑛𝑛 + 8, which means 2𝑛𝑛 = 8, so 𝑛𝑛 = 4. The desired sum is 𝑚𝑚 + 𝑛𝑛 = 𝑚𝑚 + 4, which is minimized when 𝑚𝑚 is minimized. Because 𝑚𝑚 is an integer satisfying 𝑚𝑚 > 𝑛𝑛 = 4, the minimum allowed value of 𝑚𝑚 is 5, so the minimum sum is 5 + 4 = 9.",
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2026 MATHCOUNTS State Sprint Problem 7",
+   "question": "Max is driving at a constant rate of 55 miles per hour. How many miles does Max travel in three minutes? Express your answer as a decimal to the nearest hundredth.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Answer: 2.75mi 12.. The distance 𝑑𝑑, speed [rate] 𝑟𝑟, and time duration 𝑡𝑡 are related by 𝑑𝑑 = 𝑟𝑟𝑟𝑟. Here 𝑟𝑟 = 55 mih and 𝑟𝑟 = 3 min = 3� 160 h� = 120 h, so 𝑑𝑑 = �55 mih� � 120 h� = 114 mi = 2.75 mi.",
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2026 MATHCOUNTS State Sprint Problem 8",
+   "question": "Yaretzy is baking cookies that have the same thickness. She notices that 10 ounces of dough will be exactly enough to make a round cookie that is 10 inches in diameter. How many ounces of dough does she need to make a round cookie that is 16 inches in diameter, with the same thickness as the 10-inch cookie? Express your answer as a decimal to the nearest tenth.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Answer: 25.6oz. [NOTE: The word “weight” is used in this answer in conformance with its standard meaning in the context of commerce (the context of the problem) and law, matching the use of “mass” in the context of physics and engineering, where “weight” is used contrarily as a gravitation-based force.] These cookies are modeled as right circular cylinders, with the weight 𝑊𝑊 being the product of the cylinder’s volume π(𝐷𝐷 /2)2 ℎ, where 𝐷𝐷 is the diameter and ℎ is the height (here thickness), times the 2 ℎ𝜌𝜌 = π density 𝜌𝜌 of the cookie dough. Thus, 𝑊𝑊 = π�𝐷𝐷2� 4ℎ𝜌𝜌𝐷𝐷 2 . We can set up a proportion for the πℎ𝜌𝜌𝐷𝐷 2 weight 𝑊𝑊 𝑊𝑊 10 of a 10 in cookie: 𝑊𝑊16 = 4 . Because we are given that the 16 of a 16 in cookie and 𝑊𝑊10 πℎ𝜌𝜌𝐷𝐷 2 4 thickness ℎ has the same value regardless of diameter and the dough is identical for both cookies, thus the same density, the factor π4 ℎ𝜌𝜌 is a fixed value independent of diameter, and its presence in 16 2 )2 both the numerator and denominator cancels out. Thus, 𝑊𝑊𝑊𝑊 = 𝐷𝐷16𝐷𝐷102= (16 in(10 in)2= 256100= 2. 56. Therefore, 10 𝑊𝑊16 = 2. 56𝑊𝑊10 = 2.56 × 10 oz = 25.6 oz. 2026 STATE COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2026 MATHCOUNTS State Sprint Problem 9",
+   "question": "Jonathon lists out the first 10 Fibonacci numbers: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55. What is the sum of the mean, median and mode of these numbers? Express your answer as a decimal to the nearest tenth.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Answer: 21.8. For the mean, we need 1/10 of the sum of terms 1 through 10 of the Fibonacci sequence. The sum of terms 𝑚𝑚 through 𝑛𝑛 of the Fibonacci sequence is given by the value of term ( 𝑛𝑛 + 2) minus the value of term (𝑚𝑚 + 1). Term 12 is the sum of term 9 plus twice term 10, thus 34 + 2 × 55 = 144, and term 2 is 1; the difference is 144 − 1 = 143, which divided by the term count 10 yields 14.3 for the mean. The median of 10 terms in increasing order is the average of term 5 and term 6, thus 5+82 = 132 = 6.5. The only value that occurs more than once is 1, in the first two terms, so the mode is 1. The sum of these three parameters is 14.3 + 6.5 + 1 = 21.8.",
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2026 MATHCOUNTS State Sprint Problem 10",
+   "question": "How many two-digit positive integers are 36 more than the sum of their digits?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Let 𝑡𝑡 be the tens digit of a positive 2-digit integer (so 𝑡𝑡 is an integer satisfying 1 ≤ 𝑟𝑟 ≤ 9) and 𝑢𝑢 be the ones [units] digit of that same integer (so 𝑢𝑢 is an integer satisfying 0 ≤ 𝑢𝑢 ≤ 9) . Then the integer under consideration is 10 𝑟𝑟 + 𝑢𝑢, which is 36 greater than 𝑟𝑟 + 𝑢𝑢. Thus, 10 𝑟𝑟 + 𝑢𝑢 = 𝑟𝑟 + 𝑢𝑢 + 36, so 9𝑟𝑟 = 36 and 𝑟𝑟 = 4, with no additional constraints on 𝑢𝑢 . This means that any integer in the closed interval 40 .. 49, but no other value, works, yielding 10 qualifying values.",
+   "has_diagram": false
+  },
+  {
+   "position": 11,
+   "source": "2026 MATHCOUNTS State Sprint Problem 11",
+   "question": "What is the remainder when 2323 is divided by 5?",
+   "choices": null,
+   "answer": "2",
+   "type": "integer_answer",
+   "solution": "Answer: 2. The remainder upon dividing a nonnegative integer by 5 [just as with dividing by 2 or 10] depends only on the ones digit of the given integer. The ones digit of a power with positive integer exponent depends only on the exponent and the ones digit of the base. Thus, the ones digit of 2323 is the same as the ones digit of 323 . For any digit 𝑑𝑑 and any positive exponent 𝑛𝑛, the ones digit of 𝑑𝑑 𝑛𝑛 is the same as the ones digit of 𝑑𝑑 𝑛𝑛+4 . This means that we can divide 𝑛𝑛 by 4, throwing away the quotient and keeping only the remainder 𝑟𝑟 , and if 𝑟𝑟 = 0 then change 𝑟𝑟 to 4. Then the ones digit of 𝑑𝑑 𝑛𝑛 is the same as the ones digit of 𝑑𝑑 𝑟𝑟 . [NOTE: The cycle of 4 works for all digits, but the actual period is 1 when 𝑑𝑑 is 0, 1, 5, or 6, is 2 when 𝑑𝑑 is 4 or 9, and is 4 when 𝑑𝑑 is 2, 3, 7, or 8. Some students prefer to memorize and keep straight these details of special cases in the heat of competition, whereas other students prefer to keep the rule simple by always using a cycle of 4 and potentially doing a small amount of extra work.] For 3 23 , dividing 23 by 4 leaves a remainder of 3. Finally, 33 = 27, whose ones digit is 7, which upon division by 5 leaves a remainder of 2.",
+   "has_diagram": false
+  },
+  {
+   "position": 12,
+   "source": "2026 MATHCOUNTS State Sprint Problem 12",
+   "question": "If x + x + x + x = 30, what is the value of x? 2 22 23",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "30 = �1 + 12+ 14+ 18� 𝑥𝑥 = 8+4+2+18𝑥𝑥 = 158𝑥𝑥 , which means 𝑥𝑥 = 8×3015= 8 × 2 = 𝟏𝟏𝟏𝟏.",
+   "has_diagram": false
+  },
+  {
+   "position": 13,
+   "source": "2026 MATHCOUNTS State Sprint Problem 13",
+   "question": "Using the equation 6 = 2m + b, all ordered pairs (m, b) are plotted in the mb-plane, forming a line. What is the area of the triangle formed by this line, the line m = 0 and the line b = 0? m",
+   "choices": null,
+   "answer": "9",
+   "type": "integer_answer",
+   "solution": "Answer: 9. Divide the equation by the constant coefficient 6 to get the two-intercept equation of the line: 1 = 13𝑚𝑚 + 16𝑏𝑏 ; the 𝑚𝑚 -intercept and the 𝑏𝑏-intercept are the reciprocals of coefficient of 𝑚𝑚 and 𝑏𝑏, thus, 3 and 6, respectively. The vertices of the triangle are at O(0; 0) where the 𝑚𝑚 - and 𝑏𝑏-axes intersect, M(3; 0) as the 𝑚𝑚 -intercept of the given slant line, and B(0; 6) as the 𝑏𝑏 -intercept of the given slant line. OM����� ⊥ OB����, so the area of the triangle is 12 OM ⋅ OB = 12 × 3 × 6 = 9.",
+   "has_diagram": false
+  },
+  {
+   "position": 14,
+   "source": "2026 MATHCOUNTS State Sprint Problem 14",
+   "question": "For how many positive integers n is there no positive integer strictly between one-half of n and three-fifths of n?",
+   "choices": null,
+   "answer": "8",
+   "type": "integer_answer",
+   "solution": "Answer: 8integers. There are two categories of solution: [1] more analysis effort, less plug and grind number crunching; [2] no analysis effort, just plug and grind number crunching. With 10 intervals to assess, the overall effort is similar for the two approaches. 2026 STATE COMPETITION Solutions Approach [1]: The interval considered is 0.5 𝑛𝑛 < 𝑖𝑖 < 0.6𝑛𝑛. The easiest case is even 𝑛𝑛 , meaning there is an integer 𝑘𝑘 = 0.5𝑛𝑛 such that 𝑛𝑛 = 2𝑘𝑘 . Then 𝑘𝑘 < 𝑖𝑖 < 𝑘𝑘 + 0.2𝑘𝑘. Because of the strict inequality and because consecutive integers are separated by 1, we need, in order for such an 𝑖𝑖 to exist, 0.2𝑘𝑘 > 1, so 𝑘𝑘 > 5, so 𝑛𝑛 = 2𝑘𝑘 > 10. However, we want the complementary case that 𝑛𝑛 is positive, even, and 𝑛𝑛 ≤ 10, so 𝑛𝑛 ∈ {2; 4; 6; 8; 10}. For odd integers 𝑛𝑛 , there is an integer 𝑘𝑘 = 0.5(𝑛𝑛 − 1) such that 𝑛𝑛 = 2𝑘𝑘 + 1 and the interval is 𝑘𝑘 + 0.5 < 𝑖𝑖 < 𝑘𝑘 + (0.2𝑘𝑘 + 0.6). Because of the strict inequality and because consecutive integers are separated by 1, we need, in order for such an 𝑖𝑖 to exist, 0.2 𝑘𝑘 + 0.6 > 1, so 𝑘𝑘 > 2, so 𝑛𝑛 = 2𝑘𝑘 + 1 > 5. However, we want the complementary case that 𝑛𝑛 is positive, odd, and 𝑛𝑛 ≤ 5, so 𝑛𝑛 ∈ {1; 3; 5}. Putting the two cases together, we have 𝑛𝑛 ∈ {1; 2; 3; 4; 5; 6; 8; 10}, thus 8 qualifying values. Approach [2]: Integers are spaced 1 apart, so 35 𝑛𝑛 − 12𝑛𝑛 = 110𝑛𝑛 > 1 implies that for 𝑛𝑛 > 10 there will be at least one integer in that interval. Let’s rewrite the bounds as 0.5 𝑛𝑛 < 𝑖𝑖 < 0.6𝑛𝑛 and look for positive integers at most 10 for 𝑛𝑛 such that no such integer 𝑖𝑖 exists: 𝑛𝑛 = 1: 0.5 < 𝑖𝑖 < 0.6 ✔; 𝑛𝑛 = 2: 1.0 < 𝑖𝑖 < 1.2 ✔; 𝑛𝑛 = 3: 1.5 < 𝑖𝑖 < 1.8 ✔; 𝑛𝑛 = 4: 2.0 < 𝑖𝑖 < 2.4 ✔; 𝑛𝑛 = 5: 2.5 < 𝑖𝑖 < 3.0 ✔; 𝑛𝑛 = 6: 3.0 < 𝑖𝑖 < 3.6 ✔; 𝑛𝑛 = 7: 3.5 < 𝑖𝑖 < 4.2 ❌; 𝑛𝑛 = 8: 4.0 < 𝑖𝑖 < 4.8 ✔; 𝑛𝑛 = 9: 4.5 < 𝑖𝑖 < 5.4 ❌; 𝑛𝑛 = 10: 5.0 < 𝑖𝑖 < 6.0 ✔. There are 8 qualifying cases.",
+   "has_diagram": false
+  },
+  {
+   "position": 15,
+   "source": "2026 MATHCOUNTS State Sprint Problem 15",
+   "question": "2 Andrew sells Mia a rectangular plot of land with an area of 60 square feet and all sides measuring a whole number of feet. Mia extends the width of the plot by 4 feet, while shortening the length by 2 feet. What is the greatest possible area of Mia’s new plot of land?",
+   "choices": null,
+   "answer": "290",
+   "type": "integer_answer",
+   "solution": "Answer: 290ft2. 𝐴𝐴old = 𝑙𝑙𝑙𝑙 = 60 ft 2 . 𝐴𝐴new = (𝑙𝑙 − 2 ft)(𝑙𝑙 + 4 ft) = 𝑙𝑙𝑙𝑙 + 4 ft 𝑙𝑙 − 2 ft 𝑙𝑙 − 8 ft 2 = 60 ft 2 + 4 ft 𝑙𝑙 − 2 ft 60 ft 2𝑙𝑙 − 8 ft 2 = 52 ft 2 + 4 ft 𝑙𝑙 − 2 ft 60 ft 2𝑙𝑙 , which we wish to maximize over 𝑙𝑙 . As 𝑙𝑙 increases, the first term remains unchanged, the amount added in the second term increases, and the amount subtracted by the third term decreases—so that the value of the full expression is guaranteed to increase. Thus, the goal is to maximize 𝑙𝑙, which means to minimize 𝑙𝑙. Each of 𝑙𝑙 and 𝑙𝑙 = 60 ft 2𝑤𝑤 is specified to be a positive integer number of feet, for which the least of the qualifying values for 𝑙𝑙 is 1 ft, so 𝑙𝑙 = 60 ft. Therefore, max(𝐴𝐴new) = (60 ft − 2 ft)(1 ft + 4 ft) = 58 ft × 5 ft = 290 ft 2 .",
+   "has_diagram": false
+  },
+  {
+   "position": 16,
+   "source": "2026 MATHCOUNTS State Sprint Problem 16",
+   "question": "An isosceles triangle has two side lengths of 20 and 26. What is the sum of the squares of the possible lengths of the altitude to the side of the triangle whose length is different from those of the other two sides?",
+   "choices": null,
+   "answer": "807",
+   "type": "integer_answer",
+   "solution": "Answer: 807 21.. For a triangle to be isosceles, at least two of the three sides must be congruent (same length). We are given two distinct lengths, 20 and 26, so the third length must be one of those two values. Thus, there are two qualifying triangles: 20-20-26 and 26-26-20 [hyphen-separated numbers representing side lengths]. The desired squares of the altitudes are the difference of the square of the first number minus the square of half the third number, thus 20 2 − 132 = 400 − 169 = 231 and 262 − 102 = 676 − 100 = 576 [with these computations being based on the desired altitude sitting on the axis of symmetry of the respective triangle so that it divides that triangle into two congruent right triangles, for which the Pythagorean theorem applies]. The sum of these two values is 231 + 576 = 807. 2026 STATE COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 17,
+   "source": "2026 MATHCOUNTS State Sprint Problem 17",
+   "question": "Fry and Amy are playing ping-pong. They take turns serving, starting with Fry. When Fry serves, there is a 50% chance he will score a point and a 50% chance Amy will score a point. When Amy serves, there is a 70% chance she will score a point and a 30% chance Fry will score a point. They keep playing until one of them scores 4 points. What is the probability Fry serves at most 3 times? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "400",
+   "type": "integer_answer",
+   "solution": "Answer: 400 27.. Fry does the odd-numbered serves; Amy do es the even-numbered serves. Thus, serve #7 would be Fry’s fourth serve, so, to meet the criterion on number of serves by Fry, a game must be complete within 6 serves. There is only one way to violate that—at the end of 6 serves, the score must be tied 3- 3, and the game will finish 4-3 on the serve #7. The easiest solution involves calculating the probability of getting through 6 rounds with a 3-3 tie (the complement event) and subtracting that probability from 1. That situation is complicated by the probability of a particular player winning a point depending on who served. The odds are different for Fry getting 3 points out of 6 for the cases: [1] Fry wins the point on all 3 of his serves but none of Amy’s serves; [2] Fry wins the point on 2 of his serves and 1 of Amy’s serves; [3] Fry wins the point on 1 of his serves and 2 of Amy’s serves; [4] Fry wins the point on all 3 of Amy’s serves but none of his serves. The number of arrangements of Fry winning the point on 𝑓𝑓 of his 3 serves is ₃C𝑓𝑓 and of Fry winning on 𝑎𝑎 of Amy’s 3 serves is ₃C𝑎𝑎, so combined is ₃ C𝑓𝑓 ⋅ ₃C𝑎𝑎—and, in our scenario, 𝑓𝑓 + 𝑎𝑎 = 3; the probability of any one such arrangement is 0. 53 × 0. 3𝑎𝑎 × 0. 73−𝑎𝑎 , with the 0.5 being for each of Fry’s 3 serves having probability on 0.5 regardless of outcome, the 0.3 for the probability for each of Amy’s 𝑎𝑎 serves that Fry won the point, and the 0.7 for the probability of each of Amy’s 3 − 𝑎𝑎 serves that Amy won the point. Thus, the probabilities are: [1] ₃C₃ × ₃C₀ × 0. 53 × 0. 33 × 0. 70 = 1 × 1 × 18 × 271000 × 1 = 278000 ; [2] ₃C₂ × ₃C₁ × 0. 53 × 0. 32 × 0. 71 = 3 × 3 × 18 × 9100 × 710 = 5678000 ; [3] ₃C₁ × ₃C₂ × 0. 53 × 0. 31 × 0. 72 = 3 × 3 × 18 × 310 × 49100 = 13238000 ; [4] ₃C₀ × ₃C₃ × 0. 53 × 0. 30 × 0. 73 = 1 × 1 × 18 × 1 × 3431000 = 3438000 . The sum of the probabilities for these 4 disjoint cases is 27 + 567 + 1323 + 3438000 = 22608000 = 113400 . However, this is the probability of the complement of our desired event, so we need to subtract this value from 1, thus 400−113400 = 𝟐𝟐𝟐𝟐𝟐𝟐𝟒𝟒𝟒𝟒𝟒𝟒 .",
+   "has_diagram": false
+  },
+  {
+   "position": 18,
+   "source": "2026 MATHCOUNTS State Sprint Problem 18",
+   "question": "If 36 x + 1 = 68, what is the value of x ?",
+   "choices": null,
+   "answer": "3",
+   "type": "integer_answer",
+   "solution": "Answer: 3 142. 68 = 36 𝑥𝑥+1 = 62(𝑥𝑥+1) . Now, 6 𝑦𝑦 = 6 𝑧𝑧 implies 𝑦𝑦 = 𝑧𝑧, so 8 = 2(𝑥𝑥 + 1) = 2𝑥𝑥 + 2, and 𝑥𝑥 = 8 − 22 = 3.",
+   "has_diagram": false
+  },
+  {
+   "position": 19,
+   "source": "2026 MATHCOUNTS State Sprint Problem 19",
+   "question": "Regular hexagon ABCDEF has side length 2. Let P, Q and R be the midpoints of segments AB, CD and EF, respectively. What percent of the area of ABCDEF is the area of PQR? Express your answer to the nearest whole percent.",
+   "choices": null,
+   "answer": "38",
+   "type": "integer_answer",
+   "solution": "Answer: 38%. This problem can be solved using proportions with no need to determine any E D areas. Given DE = 2 in regular hexagon ABCDEF implies FC = 2 ED = 4. Q and R R Q being midpoints of EF���� and CD���� means that QR���� is the median of trapezoid DEFC, so F C QR is the mean of DE = 2 and FC = 4, thus QR = 3. Thus, triangle PQR is an equilateral triangle with side length 3. Now, hexagon ABCDEF can be subdivided A P B into six congruent equilateral triangles of side length 2, which is equivalent in area to one equilateral triangle of side length 2√6. Thus, the ratio of the side length of triangle PQR to the side length of an equilateral triangle equivalent in area of the hexagon is 32√6 . Squaring this 2 = 9 ratio yields the ratio of the area of PQR to the area of ABCDEF, thus � 32√6� 24 = 38= 37.5 %, which rounds to 38 %. [When two candidate rounded values are equally close— here 37 and 38— MATHCOUNTS rounds away from 0, unless explicitly specified otherwise.] 2026 STATE COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 20,
+   "source": "2026 MATHCOUNTS State Sprint Problem 20",
+   "question": "How many distinct arrangements of the letters in the word PROBABILITY rangements contain the sub-arrangement PRO, whose letters must appear consecutively and in that order anywhere in the arrangement?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Answer: 90,720ar-. The tokens (with count) being considered for rearrangement are A (1), B (2), I (2), L (1), PRO (1), T (1), Y (1)—total of 1 + 2 + 2 + 1 + 1 + 1 + 1 = 9. Therefore, the number of distinct arrangements of these tokens is 9!1! ⋅ 2! ⋅ 2! ⋅ 1! ⋅ 1! ⋅ 1! ⋅ 1! = 362 8804 = 90 720.",
+   "has_diagram": false
+  },
+  {
+   "position": 21,
+   "source": "2026 MATHCOUNTS State Sprint Problem 21",
+   "question": "Six students are seated in a single row of seats with an aisle at each end. The students leave their seats one at a time in random order. What is the probability that each student is able to move to one of the aisles without having to cross over another seated student? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "When there are 𝑛𝑛 ≥ 2 students in the row, the end 2 out of total 𝑛𝑛 can so leave, and when 𝑛𝑛 = 1, that 1 remaining student can so leave. Therefore, 2 × 2× 2× 2×2×1 = 1× 2× 1 = 𝟐𝟐 . 6 5 4 3 2 1 3 5 3 𝟒𝟒𝟒𝟒",
+   "has_diagram": false
+  },
+  {
+   "position": 22,
+   "source": "2026 MATHCOUNTS State Sprint Problem 22",
+   "question": "The four-digit integer 2018 is composed of four distinct digits whose sum is 11. Including 2018, how many positive four-digit integers are composed of four distinct digits whose sum is 11?",
+   "choices": null,
+   "answer": "11",
+   "type": "integer_answer",
+   "solution": "Answer: 11 4integers. There are two cases: [1] one digit is 0, which cannot be the thousands digit due to requiring 4- digit integers; [2] none of the digits is 0, so no restriction on digit order. When we have chosen 4 distinct digits that sum to 11, in case [1] the 0 has 3 options for placement and the remaining 3 digits have 3! arrangements for the remaining 3 slots for a total of 3 × 3! = 18 arrangements of the 4 digits, and in case [2] all 4 digits can go in any of the 4 slots for a total of 4! = 24 arrangements of the 4 digits. The required sum of 11 is achieved for case [1] with the 18 permutations of each of (in increasing order) 1028, 1037, 1046, 2036, 2045 for 5 × 18 = 90 distinct values. For case [2] the only possibility is the 24 permutations of 1235. Therefore, there are 90 + 24 = 114 qualifying integers.",
+   "has_diagram": false
+  },
+  {
+   "position": 23,
+   "source": "2026 MATHCOUNTS State Sprint Problem 23",
+   "question": "Let f (x) be the periodic function shown, such that f (x) = f (x + 7) for all sections real values of x and let g(x) = f (x 2). How many intersections of the graphs of y = g(x) and y = 2 occur in the interval 20 ≤ x ≤ 22? 4 2",
+   "choices": null,
+   "answer": "48",
+   "type": "integer_answer",
+   "solution": "Answer: 48 inter- 28.. For 𝑥𝑥 = 20, 𝑔𝑔(𝑥𝑥) = 𝑓𝑓(𝑥𝑥 2 ) = 𝑓𝑓(400) = 𝑓𝑓( 1 + 5 7 × 7) = 𝑓𝑓(1); For 𝑥𝑥 = 22, 𝑔𝑔(𝑥𝑥) = 𝑓𝑓(𝑥𝑥 2 ) = 𝑓𝑓(484) = 𝑓𝑓(85 + 57 × 7) = 𝑓𝑓(85), and similarly for every value of 𝑥𝑥 in between [namely 20 < 𝑥𝑥 < 22]: 𝑔𝑔(𝑥𝑥) = 𝑓𝑓(𝑥𝑥 2 ) = 𝑓𝑓((𝑥𝑥 2 − 399) + 57 × 7) = 𝑓𝑓(𝑥𝑥 2 − 399). Therefore, we can work with 𝑓𝑓 (𝑥𝑥) in the interval 1 ≤ 𝑥𝑥 ≤ 85 instead of 400 ≤ 𝑥𝑥 ≤ 484. With 𝑓𝑓 having period 7, we can consider period 1 to be 1 ≤ 𝑥𝑥 < 8, period 2 to be 8 ≤ 𝑥𝑥 < 15, and so on [period 𝑘𝑘 to be 7𝑘𝑘 − 6 ≤ 𝑥𝑥 < 7𝑘𝑘 + 1] to period 12 being 78 ≤ 𝑥𝑥 < 85. However, we still need to handle 𝑥𝑥 = 85, which, due to the strict inequality on the upper end of our intervals, has been left out so far. Thus, we need to handle 𝑥𝑥 = 85 as the one and only point participating in period 13. To avoid double counting points, assign each point to one and only one specific period [thus the “≤ 𝑥𝑥 <” pattern for the bounds of each period]. This means that it suffices to process points in only the first period and count each qualifying point 12 times, unless it is the first point in the period, in which case count it 13 times. We see from the graph that 𝑓𝑓 (𝑥𝑥) = 2 in the interval 1 ≤ 𝑥𝑥 < 8 at 𝑥𝑥 ∈ {1⅖ ; 3; 4⅓; 5⅓}. That is 4 points, each occurring in 12 periods [1, as the only value occurring in 13 periods, is not in the set], for a total of 4 × 12 = 48 points.",
+   "has_diagram": true
+  },
+  {
+   "position": 24,
+   "source": "2026 MATHCOUNTS State Sprint Problem 24",
+   "question": "In a certain sequence, a = 20 and a = ()an /g16 /g1421 for any positive integer n. 0 n 1 What is the value of a500?",
+   "choices": null,
+   "answer": "30",
+   "type": "integer_answer",
+   "solution": "Answer: 30. The pattern is 𝑎𝑎 𝑛𝑛 = √400 + 𝑛𝑛 because 𝑎𝑎𝑛𝑛+1 = �𝑎𝑎𝑛𝑛2 + 1= √400 + 𝑛𝑛 + 1, so 𝑎𝑎 500 = √900= 𝟑𝟑𝟒𝟒.",
+   "has_diagram": false
+  },
+  {
+   "position": 25,
+   "source": "2026 MATHCOUNTS State Sprint Problem 25",
+   "question": "Andrea has a deck of 50 cards consisting of ten cards, numbered 1 through 10, nations in each of five distinct colors. She randomly draws five cards from this deck and, without looking, shows all five cards to Oscar. Oscar then tells Andrea that exactly three of the five cards are blue, and exactly two of the five cards show the number 5. How many distinct unordered combinations of five cards drawn from the deck, consistent with Oscar ’s statements, do not contain the blue 5?",
+   "choices": null,
+   "answer": "504",
+   "type": "integer_answer",
+   "solution": "Answer: 504combi-. There are 5 cards, 3 of which are blue, 2 of which are “5”s, with no overlap of the two categories [because none of the cards is a blue “5”], so all 5 cards are accounted for. There are 9 blue cards other than the blue “5”, of which Andrea has 3, thus ₉C₃ = 9 × 8 × 7/(3 × 2 × 1) = 3 × 4 × 7 = 84 combinations. Andrea has 2 of the 4 non- blue “5” cards, thus ₄C₂ = 4 × 3/(2 × 1) = 6 combinations. The two categories are independent, so altogether there are 84 × 6 = 504 combinations. 2026 STATE COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 26,
+   "source": "2026 MATHCOUNTS State Sprint Problem 26",
+   "question": "Square ABCD with side length 4 inches is inscribed in a circle. Let M and N be the midpoints of minor arcs AB and CD, respectively. What is the value of AM × AN? Express your answer in simplest radical form. D C N",
+   "choices": null,
+   "answer": "82",
+   "type": "integer_answer",
+   "solution": "Answer: 82in2. AB = 4 in, X is the midpoint of AB���� so AX = 2 in, AC = 4√2 in is a diameter of the circle, AX���� ⊥ MN�����. 2 M Thus, 𝐴𝐴𝐴𝐴 = √AX 2 + XM 2= �(2 in)2 + ��2√2− 2� in�= �4 + �8 + 4 − 8√2� in A B = �16 − 8√2 in. X Similarly, AN = √AX 2 + XN 2= �(2 in)2 + ��2√2+ 2� in�2= �16 + 8√2 in. Y Thus, AM ⋅ AN = ��16 − 8√2��16 + 8√2� in2 = �162 − �8√2�2 in2 = √128 in2 D C N = 𝟐𝟐√𝟐𝟐 in2 .",
+   "has_diagram": false
+  },
+  {
+   "position": 27,
+   "source": "2026 MATHCOUNTS State Sprint Problem 27",
+   "question": "If x is a positive real number satisfying x x = 3, what is x ?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "𝑥𝑥 𝑥𝑥 𝑥𝑥+1 = 𝑥𝑥 (𝑥𝑥 𝑥𝑥 )𝑥𝑥 = 𝑥𝑥 3𝑥𝑥 = (𝑥𝑥 𝑥𝑥 )3 = 33 = 𝟐𝟐𝟐𝟐.",
+   "has_diagram": false
+  },
+  {
+   "position": 28,
+   "source": "2026 MATHCOUNTS State Sprint Problem 28",
+   "question": "What is the sum of all prime factors of 249 − 2 that can be written in the form 2n + 1 for some integer n?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Making heavy use of 𝑎𝑎2 − 𝑏𝑏 2 = (𝑎𝑎 + 𝑏𝑏 )(𝑎𝑎 − 𝑏𝑏 ) and 𝑎𝑎3 + 𝑏𝑏 3 = (𝑎𝑎 + 𝑏𝑏 )(𝑎𝑎 2 − 𝑎𝑎𝑏𝑏 + 𝑏𝑏 2 ): 249 − 2 = 2(248 − 1) = 2(224 + 1)(224 − 1) = 2(28 + 1)(216 − 28 + 1)(212 + 1)(212 − 1) = 2(28 + 1)(216 − 28 + 1)(24 + 1)(28 − 24 + 1)(26 + 1)(26 − 1) = 2(28 + 1)(216 − 28 + 1)(24 + 1)(28 − 24 + 1)(22 + 1)(24 − 22 + 1)(23 + 1)(23 − 1) = 2(28 + 1)(216 − 28 + 1)(24 + 1)(28 − 24 + 1)(22 + 1)(24 − 22 + 1)(21 + 1)(22 − 1)(7) [NOTE: This is not a complete prime factorization, as 2 16 − 28 + 1 = 97 × 673; however, it is adequate for answering the question.] We see explicitly factors of the form 2𝑛𝑛 + 1: 28 + 1 = 257, which is prime (checked by attempting division by 2, 3, 5, 7, 11, 13); 24 + 1 = 17, which is prime; 22 + 1 = 5, which is prime; 21 + 1 = 3, which is prime. However, we must be careful as there is one other qualifying value that is not explicitly in the form 2𝑛𝑛 + 1, and that is the prime number 2 = 20 + 1. The sum of all of these values is 257 + 17 + 5 + 3 + 2 = 284.",
+   "has_diagram": false
+  },
+  {
+   "position": 29,
+   "source": "2026 MATHCOUNTS State Sprint Problem 29",
+   "question": "Vasudha picks up a stick of length 20 inches. She breaks it at a point exactly 3 inches from an endpoint and puts the smaller piece down. She then selects two random points on the larger piece and breaks the piece at those two points. What is the probability that the four pieces she creates can form the side lengths of a quadrilateral? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "289",
+   "type": "integer_answer",
+   "solution": "Answer: 289. Similar to the triangle inequality for triangles, the sum of the lengths of the three shortest sides of a quadrilateral must be greater than the longest side. Thus, f or a 20 in stick after the three cuts, the longest piece must be at least 5 in and less than 10 in long. The initial 3 in piece must be one of the three shortest sides. There are two cuts to be made in the remaining 17 in piece. Designate one end of that piece as position 0 in, the other end as position 17 in, 𝑐𝑐₁ as the position of the first cut, and 𝑐𝑐 ₂ as the position of the second cut, with the restrictions: 0 in < 𝑐𝑐₁ < 17 in, 0 in < 𝑐𝑐₂ < 17 in, 𝑐𝑐₁ ≠ 𝑐𝑐₂, so that we end up with four pieces having lengths: 3 in, min(𝑐𝑐₁, 𝑐𝑐₂), 𝑐𝑐₂/in max(𝑐𝑐₁, 𝑐𝑐₂) − min(𝑐𝑐₁, 𝑐𝑐₂), 17 in − max(𝑐𝑐₁, 𝑐𝑐₂). To keep all three pieces 20 from the last two cuts less than 10 in long, we must avoid these cases: 15 [1] max(𝑐𝑐₁, 𝑐𝑐₂) ≤ 7 in [the piece from the 17 in end is at least 10 in long]; 10 [2] min(𝑐𝑐₁, 𝑐𝑐₂) ≥ 10 in [the piece from the 0 in end is at least 10 in long]; 5 [3] |𝑐𝑐₁ − 𝑐𝑐₂| ≥ 10 in [the middle piece is at least 10 in long]. 0 𝑐𝑐₁/in The gray shaded region is the qualified area, which is the total shaded 0 5 10 15 20 area (17 in)2 = 289 in2 minus the area shaded other than gray. The blue and green squares are (7 in)2 = 49 in2 each and the gold triangles together constitute another square of area 49 in2 , leaving 289 in2 − 3 × 49 in2 = 142 in2 . Therefore, the desired probability is the ratio of the gray 2 𝟒𝟒𝟐𝟐 shaded area to the total shaded area, 142 in289 in2 = 𝟏𝟏𝟐𝟐𝟐𝟐𝟐𝟐 . 2026 STATE COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 30,
+   "source": "2026 MATHCOUNTS State Sprint Problem 30",
+   "question": "Ford has an unfair random number generator that generates positive integers. When the generator is run, each positive integer n comes up with probability 1 . For example, the probability of generating an 8 is 1 . Ford calls a nn()+1 72 positive integer “interdimensional” if it is one less than a triangular number. (The first few interdimensional numbers are 2, 5, 9, 14, …) What is the probability that Ford’s random number generator shows an interdimensional number when run? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "9",
+   "type": "integer_answer",
+   "solution": "Answer: 9. [NOTE: Modern axioms of probability prevent choosing from an infinite set of integers in an equally likely manner, thus the “unusual” distribution.] The 𝑘𝑘th interdimensional number is 1 less than the (𝑘𝑘 + 1)th triangular number, thus (𝑘𝑘+1)(𝑘𝑘+2) − 1 = 𝑘𝑘(𝑘𝑘+3) , which is the 𝑛𝑛 in the probability expression; 𝑛𝑛 + 1 is (𝑘𝑘+1)(𝑘𝑘+2) . Thus, the 2 2 2 probability to pick 𝑛𝑛 = 𝑘𝑘 (𝑘𝑘+3)2 is 1𝑛𝑛(𝑛𝑛+1)= 4𝑘𝑘 (𝑘𝑘+1)(𝑘𝑘+2)(𝑘𝑘+3) . The probability of picking a positive integer and having it be interdimensional is the sum of this expression over all positive integer values of 𝑘𝑘—an infinite serie s. A commonly useful technique to handle such expressions is telescoping, which involves turning each term into a subtraction of two terms. Try having the first term of the subtraction to be the above single fraction but drop the last factor in the denominator and the second term be the above fraction but drop the first factor: 4 − 4= 4[(𝑘𝑘+3)−𝑘𝑘 ]= 4×3 , which is 3 times our probability 𝑘𝑘(𝑘𝑘+1)(𝑘𝑘+2) (𝑘𝑘+1)(𝑘𝑘+2)(𝑘𝑘+3) 𝑘𝑘 (𝑘𝑘+1)(𝑘𝑘+2)(𝑘𝑘+3) 𝑘𝑘(𝑘𝑘+1)(𝑘𝑘+2)(𝑘𝑘+3) fraction above, so we have 4𝑘𝑘 (𝑘𝑘+1)(𝑘𝑘+2)(𝑘𝑘+3)= 13� 4𝑘𝑘(𝑘𝑘+1)(𝑘𝑘+2)− 4(𝑘𝑘+1)(𝑘𝑘+2)(𝑘𝑘+3)�. Let’s write the first 3 terms [𝑘𝑘 being successively 1, 2, 3]: �13 �46� − 13� 424�� + �13� 424� − 13� 460�� + �13� 460� − 13� 4120�� + ⋯. Note how the third term cancels the second and the fifth term cancels the fourth. This cancelation continues on forever, leaving only the first term, so the answer is 13 �46� = 𝟐𝟐𝟐𝟐 .",
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2026 MATHCOUNTS State Target Problem 1",
+   "question": "Coolsville is 100 miles away from Amity Bay. To get to Coolsville, one can take the Amity Express Train 30 miles due east to Barkimore, and then ride the Barkimore County Bus due north the rest of the way. How many miles is just the bus ride? Express 100 mi your answer as a decimal to the nearest tenth. Amity Bay Barkimore 30 mi",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "Answer: 95.4mi 3.. The bus ride is the vertical leg of the right triangle, so, by Pythagoras, �(100 mi)2 − (30 mi)2 = �(10 000 − 900) mi2 = √9100 mi = 95.3939… mi, which rounds to the nearest 0.1 mi as 95.4 mi.",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2026 MATHCOUNTS State Target Problem 2",
+   "question": "A circle with area 25π is inscribed in a rhombus with area 120. What is the perimeter of the rhombus?",
+   "choices": null,
+   "answer": "48",
+   "type": "integer_answer",
+   "solution": "Answer: 48 4.. The figure shown here is drawn to scale (which is not required to be the case for handbook and competition materials and is not the case for the text of this problem). The area 𝐴𝐴 of any parallelogram and, therefore, any rhombus is the product 𝑏𝑏 ℎ, where 𝑏𝑏 is the base and ℎ is the height, which must be perpendicular to one another. In this case, 𝑏𝑏 is the length of a horizontal side of the rhombus and ℎ is the vertical diameter of the circle, indicated by the blue line. We are given that the area π𝑟𝑟 2 enclosed by the circle is 25π, so 𝑟𝑟 2 = 25 and 𝑟𝑟 > 0, making the radius 5 and the diameter double that, thus 10. Therefore, 𝑏𝑏 = 𝐴𝐴ℎ = 12010= 12. In a rhombus, all 4 sides are congruent, so the perimeter is 4 × 12 = 𝟒𝟒𝟐𝟐.",
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2026 MATHCOUNTS State Target Problem 3",
+   "question": "In the expression a b + c d, the tuple (a, b, c, d ) is some permutation of (2, 0, 2, 6). What is the greatest possible value of the expression?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "The 6 is by far most effectively used as an exponent applied to a base of 2, leaving 0 and 2, for which 2 should be the base and 0 the exponent. Therefore, 2 6 + 20 = 64 + 1 = 𝟏𝟏𝟒𝟒.",
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2026 MATHCOUNTS State Target Problem 4",
+   "question": "Alexis has a fair, standard six-sided die and the 36 cards numbered 2 through 10 from a standard deck of 52 cards. After shuffling the cards, she deals herself 2 cards, without replacement, and rolls the die. What is the probability that the sum of the numbers on the die and the two cards will be 6? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "The least card values that can be chosen are 2 and 2 for a sum of 4, for which the die must be 2—the count of such events is 4 × 32 × 1 = 6. The next level up for cards is 2 and 3 for a sum of 5, for which the die must be 1—the count of such events is 8 × 42 × 1 = 16. Any higher sum on the cards added to any die value exceeds the desired sum of 6. That is a total of 6 + 16 = 22 winning combinations. The total number of combinations 36 × 352 × 6 = 3780. Therefore, the desired probability is 223780= 𝟏𝟏𝟏𝟏𝟏𝟏𝟐𝟐𝟐𝟐𝟒𝟒 . 2026 STATE COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2026 MATHCOUNTS State Target Problem 5",
+   "question": "For every positive integer n, let Q(n) be the sum of the greatest integers less than or equal to the square roots of the integers 1, 2, 3, …, n. For example, Q(3) = 1 + 1 + 1 = 3 and Q(10) = 1 + 1 + 1 + 2 + 2 + 2 + 2 + 2 + 3 + 3 = 19. What is the least positive integer n for which Q(1) + Q(2) + Q(3) + … + Q(n) ≥ 2026?",
+   "choices": null,
+   "answer": "37",
+   "type": "integer_answer",
+   "solution": "Answer: 37 7.. 𝑄𝑄(𝑛𝑛) is the sum of the first 𝑛𝑛 terms of the underlying divergent infinite series ∑ �√𝑘𝑘∞ � 𝑘𝑘=1 , which can be expressed also as 1 + 1 + 1 + 2 + 2 + 2 + 2 + 2 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 4 + ⋯, with 3 copies of 1 summed with 5 copies of 2, 7 copies of 3, and generally 2𝑘𝑘 + 1 copies of each positive integer 𝑘𝑘. The table below shows the progression of evaluations that lead to the answer of the given problem: Column 1 is the band of 𝑘𝑘 values for which the floor of the square root of 𝑘𝑘 that is given in Column 2. Because the terms in the underlying series above are piecewise constant, the sequence of values 𝑄𝑄(1), 𝑄𝑄(2), 𝑄𝑄(3), 𝑄𝑄(4), 𝑄𝑄(5), … [1, 2, 3, 5, 7, …] is piecewise linear as seen in Column 3 (which is provided for additional insight but is not needed to reach the answer]—more specifically piecewise arithmetic as seen in Column 4 that gives the initial value of the respective arithmetic sequence piece, the common difference 𝑑𝑑 between consecutive terms of that arithmetic sequence piece, and the final value of the arithmetic sequence piece. Column 5 gives the familiar calculation of the sum of a finite arithmetic series. Column 6 gives the cumulative sum of the desired 𝑄𝑄 (1) + ⋯ + 𝑄𝑄(𝑘𝑘max). 𝑘𝑘min .. 𝑘𝑘max ⌊√𝑘𝑘⌋ 𝑄𝑄(𝑘𝑘) 𝑄𝑄(𝑘𝑘min) [𝑑𝑑] 𝑄𝑄(𝑘𝑘max) 𝑄𝑄(𝑘𝑘min) + ⋯ + 𝑄𝑄(𝑘𝑘max) 𝑄𝑄(1) + ⋯ + 𝑄𝑄(𝑘𝑘max) 1 .. 3 1𝑘𝑘 1 [1]3 3 × 1 + 3 = 6 6 2 4 .. 8 2 2𝑘𝑘 − 3 5 [2] 13 5 × 5 + 13 = 45 6 + 45 = 51 2 9 .. 15 3 3𝑘𝑘 − 11 16 [3] 34 7 × 16 + 34 = 175 51 + 175 = 226 2 16 .. 24 4 4𝑘𝑘 − 26 38 [4] 70 9 × 38 + 70 = 486 262 + 486 = 712 2 25 .. 35 5 5𝑘𝑘 − 50 75 [5] 125 11 × 75 + 125 = 1100 712 + 1100 = 1812 2 36 .. 48 6 6𝑘𝑘 − 85 131 [6] 203 13 × 131 + 203 = 2171 1812 + 2171 = 3983 2 The sum through 𝑄𝑄(35) is short of 2026 by 214. 𝑄𝑄 (36) = 131, which makes up a little over half of the shortfall, so 𝑄𝑄 (37) = 137 should finish it off: [(𝑄𝑄(1) + ⋯ + 𝑄𝑄(35)] + 𝑄𝑄(36) + 𝑄𝑄(37) = 1812 + 131 + 137 = 2080 ≥ 2026, so, indeed, 𝑛𝑛 = 37.",
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2026 MATHCOUNTS State Target Problem 6",
+   "question": "Three regular polygons of side length 1 are externally glued together so that each shares a side with the other two, and all three share a common vertex. For example, this could be done with a square and two regular octagons, or with three regular hexagons. What is the greatest possible number of sides one of the three regular polygons could have?",
+   "choices": null,
+   "answer": "42",
+   "type": "integer_answer",
+   "solution": "Answer: 42sides 8.. Let the number of sides for the three regular polygons be 𝑛𝑛 1 , 𝑛𝑛2 , and 𝑛𝑛 3 in decreasing order. For those polygons to share sides with a common vertex, the combined interior angle measures around that vertex is 360°. The interior angle measures of regular polygon of 𝑛𝑛 sides is 180° − 360°𝑛𝑛 , so 360° = �180° − 360°𝑛𝑛1 � + �180° − 360°𝑛𝑛2� + �180° − 360°𝑛𝑛3� = 540° − �360°𝑛𝑛1+ 360°𝑛𝑛2+ 360°𝑛𝑛3�, and 360° + 360° + 360° = 180°. Dividing both sides by 360° yields 1 + 1+ 1= 1 . We have 1= 1= 1 𝑛𝑛1 𝑛𝑛2 𝑛𝑛3 𝑛𝑛1 𝑛𝑛2 𝑛𝑛3 2 𝑛𝑛1 𝑛𝑛2 𝑛𝑛3 if 𝑛𝑛1 = 𝑛𝑛2 = 𝑛𝑛3 = 6 (and one of the figures given in the problem corresponds to this case); otherwise, min(𝑛𝑛1 , 𝑛𝑛2 , 𝑛𝑛3 ) < 6 and max(𝑛𝑛1 , 𝑛𝑛2 , 𝑛𝑛3 ) > 6. Polygon 3 is the polygon with the fewe st sides, so 3 ≤ 𝑛𝑛₃ ≤ 5. Letting 𝑛𝑛₃ = 3: 1𝑛𝑛1 + 1𝑛𝑛2+ 13= 12 , so 1𝑛𝑛1+ 1𝑛𝑛2= 16 , which, in turn, means 𝑛𝑛1 = 6𝑛𝑛2𝑛𝑛2 −6= 6 + 36𝑛𝑛2 −6 , with 𝑛𝑛 ₁ ≥ 𝑛𝑛₂ ≥ 7. Min imize 𝑛𝑛₂ to maximize 𝑛𝑛₁, so try 𝑛𝑛 ₂ = 7: 𝑛𝑛1 = 6 + 367−6= 6 + 36 = 42, which is an integer. Thus, (𝑛𝑛1 , 𝑛𝑛2 , 𝑛𝑛3 ) = (42; 7; 3) yields the maximum count of sides to be 42 so far. Tr y 𝑛𝑛₃ = 4 next: 1𝑛𝑛1 + 1𝑛𝑛2+ 14= 12 , so 1𝑛𝑛1+ 1𝑛𝑛2= 14 , so 𝑛𝑛 1 = 4𝑛𝑛2𝑛𝑛2 −4= 4 + 16𝑛𝑛2 −4 , so 𝑛𝑛₁ ≥ 𝑛𝑛₂ ≥ 5. The optimum case 𝑛𝑛 ₂ = 5 yields 𝑛𝑛1 = 4 + 165−4= 4 + 16 = 20, which does not beat our maximum of 42. Lastly, 𝑛𝑛₃ = 5: 1𝑛𝑛1 + 1𝑛𝑛2+ 15= 12 , so 1𝑛𝑛1+ 1𝑛𝑛2= 310 , so 𝑛𝑛1 = 10𝑛𝑛23𝑛𝑛2 −10 , so 𝑛𝑛₁ ≥ 𝑛𝑛₂ ≥ 𝑛𝑛₃ = 5; however, 𝑛𝑛₂ = 5 yields 𝑛𝑛₁ = 10—also short . Therefore, the maximum count of sides is 42 . 2026 STATE COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2026 MATHCOUNTS State Target Problem 7",
+   "question": "The number of cubic feet in the sum of the volumes of a sphere with radius r feet, and a cone with radius r feet and height 2 r feet, is equal to the number of square feet in the surface area of a cylinder with radius 3r feet and height 4r feet. How many square feet are in the surface area of a cube with side length r feet?",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": "𝑉𝑉sph +𝑉𝑉 4π(𝑟𝑟 ft)3 +1𝜋𝜋(𝑟𝑟 ft)2 (2𝑟𝑟 ft) con = 3 3 = 4π𝑟𝑟 3 + 2π𝑟𝑟 3 = 2π 𝑟𝑟 3 is the number of cubic feet in the stated sum; ft 3 ft3 3 3 𝐴𝐴cyl= 2π(3𝑟𝑟 ft)2 +2𝜋𝜋(3𝑟𝑟 ft)(4𝑟𝑟 ft)= 18π𝑟𝑟 2 + 24π𝑟𝑟 2 = 42π𝑟𝑟 2 is the number of square feet in the stated ft 2 ft2 area. The equality of these two values 2π 𝑟𝑟 2 𝑟𝑟 = 21 × 2π 𝑟𝑟 2 means that 2π 𝑟𝑟 2 (𝑟𝑟 − 21) = 0, so 𝑟𝑟 2 = 0 or 𝑟𝑟 − 21 = 0. Now, 𝑟𝑟 2 = 0 means 𝑟𝑟 = 0, so that each shape is a single point and, thus, degenerate, not qualifying as truly of the specified shape. Therefore, 𝑟𝑟 = 21 and 𝐴𝐴cubft 2 = 6𝑟𝑟 ² = 6 × 21² = 2646 is the number of square feet in the cube’s surface area. Target 8 T T This answer is unusually long due to few students having › H₀ H₁₀ T H₁₁ T H₁₂ T H₁₃ the depth of experience with H expected values needed for H H H H this problem. The state diagram to the right shows what is going on and how the parts fit together. Each of the six states is labeled as H for head with one or two subscripts. The H₂ first or only subscript indicates how many heads we currently have credit for; when that subscript is 1, there is a second subscript indicating how many of the 4 allowed attempts to get a second H have been taken but T resulted. State H₀ indicates a status of not having any credit for a head (H). That is the starting state, and it is returned to whenever we get 4 consecutive tails (TTTT), requiring starting over from scratch in trying to get 2 heads within 5 flips—except that we do not get to reset our flip count back to 0. We stay there as long as we keep getting T flips, leaving only once we flip H, in which case we move to state H₁₀ and get 4 chances to flip another H . We get just one flip at H₁₀, moving to the final state H₂ if that one flip is H , or to state H₁₁ for a second chance if that one flip is T . Once we get to H₂, that round of the game ends and the number of flips to get to the end is recorded. States H₁₁ and H₁₂ work similarly to H₁₀. If we get to H₁₃, that means we have made 3 attempts to get a second H, and all 3 attempts yielded T —you have one last attempt, for which an H gets you to the desired H₂ just as would happen in the three previous attempts, but if you get one more T , you go back to H₀, losing credit that that one H. Each transition showing an H has probability 23 of occurring, and each transition showing a T has probability 13 . The idea of this problem is, after many rounds have been played, what is the average number of flips to finish a round? We can calculate the expected value 𝐸𝐸 for the number of flips in a round. Because the probability of any one flip being an H at state H₀ is an unchanging 23 no matter have many failed flips (T) we have had so far, the expected value of the average number of flips needed to get to H₁₀ is the reciprocal of the probability of it happening of your first try, thus 12/3 = 32 ; however, the remaining expected value calculations are more involved. The probability of flipping H at state H₁₀ is 23 and involves only 1 flip to get to H₂, so the HH path to H₂ contributes expected value 2 × 1 = 2 . The probability of flipping T at state H₁₀ is 1 and H at H₁₁ is 2 and involves 2 flips to get to 3 3 3 3 H₂, so the HTH path to H₂ contributes expected value 13 × 23× 2 = 49 . The probability of flipping T at state H₁₀ is 13 , T at H₁₁ is 13 , and H at H₁₂ is 23 and involves 3 flips to get to H₂, so the HTTH path to H₂ contributes expected value 13 × 13× 23× 3 = 29 . The probability of flipping T at state H₁₀ is 13 , T at H₁₁ 2026 STATE COMPETITION Solutions is 13 , T at H₁₂ is 13 , and H at H₁₃ is 23 and involves 4 flips to get to H₂, so the HTTTH path to H₂ contributes expected value 13 × 13× 13× 23× 4 = 881 . Finally, the start-all-over-again move involves the probability of flipping T being 13 at each of H₁₀, H₁₁, H₁₂, and H₁₃, and requiring 4 flips that must be counted even though wasted, and on top of all of that, we are not at H₂, but starting over again at H₀, which adds another 𝐸𝐸 (with a still unknown value) flips, for an expected value contribution of 1 × 1× 1× 1× (4 + 𝐸𝐸 ) = 4+ 1𝐸𝐸 . All combined: 𝐸𝐸 = 3+ 2+ 4+ 2+ 8+ 4+ 1𝐸𝐸 = 483+ 1𝐸𝐸 , so 3 3 3 3 81 81 2 3 9 9 81 81 81 162 81 80 𝐸𝐸 = 483 and 𝐸𝐸 = 81× 483= 𝟒𝟒𝟐𝟐𝟑𝟑 . 81 162 80 2 × 81 𝟏𝟏𝟏𝟏𝟒𝟒",
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2026 MATHCOUNTS State Target Problem 8",
+   "question": "Lorenz has an unfair coin that comes up heads with probability 2 and tails with 1 . He flips this coin until 2 of the 5 most recent flips are heads. If 3 probability 3 he gets 2 heads before he flips the coin 5 times, then he stops immediately after getting the second head. What is the expected number of times Lorenz flips the coin? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": null,
+   "type": "proof",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2026 MATHCOUNTS State Team Problem 1",
+   "question": "What is the least positive integer whose digits have a product of 100?",
+   "choices": null,
+   "answer": "120",
+   "type": "integer_answer",
+   "solution": "Answer: 120 (degrees) 21.. The only digits that divide 100 evenly are 1, 2, 4, and 5. The most important goal to achieve the answer to the problem is to minimize the number of digits: 1 accomplishes nothing to get to a product of 100 but adds to the digit count; 4 and 2 × 2 contribute identically to a product but 4 uses one less digit. 100 = 4 × 5 × 5 minimizes the digit count. Next in importance is to sequence the digits in increasing order from left to right to achieve the desired goal, thus 455.",
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2026 MATHCOUNTS State Team Problem 2",
+   "question": "On Planet Mathian, the Mathinian folk measure time on an 8 “hour” 8 clock with 90 “minutes” per “hour”. How many degrees are in the measure of the smaller angle formed by the hands of this clock when the time is 2:24? 4",
+   "choices": null,
+   "answer": "5",
+   "type": "integer_answer",
+   "solution": "Answer: 5 22.. In 1 h = 90 min, the minute hand moves one full turn of 360°, for a rate of 360°/(90 min) = 4°/min. In 8 h, the hour hand moves one full turn of 360° , for a rate of 360°/(8 h) = 45°/h = 45°/(90 min) = 0.5°/min. Assuming 0° is straight up toward the “8” with angle increasing clockwise, at 2:00 the hour hand is at 2 h × 45°/h = 90° while the minute hand is at 0°; Then 24 min later, the hour hand is at 90° + 24 min × 0.5°/min = 102°, and the minute hand is at 24 min × 4°/min = 96°. Thus, the angular separation between the hands is |102° − 96°| = 6°.",
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2026 MATHCOUNTS State Team Problem 3",
+   "question": "If A, I, M and S are distinct digits such that I × AM = SAM and S is nonzero, what is the greatest possible value of the 4-digit number AIMS?",
+   "choices": null,
+   "answer": "343",
+   "type": "integer_answer",
+   "solution": "Answer: 343 23.. S ≠ 0 implies I ≥ 2. Any odd I multiplied by 50 yields an integer ending in 50. Any integer I leaving a remainder of 1 when divided by 4 can be multiplied by 25 or 75 to yield an integer ending with 25 or 75, respectively. Then 6 times any even digit ends with that same digit, so 6 can be multiplied by 20, 40, 60, or 80 yielding a value that has the same last two digits as the number being multiplied by 6. Those are all the candidates. To maximize AIMS, we want the maximum A , which is 8 from 6 × 80 = 480, so M = 0, I = 6, and S = 4, resulting in AIMS = 8604.",
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2026 MATHCOUNTS State Team Problem 4",
+   "question": "When List B is created by appending the numbers 17 and 23 to List A, the mean decreases by p and the median increases by q. What is the value of p + q? Express your answer as a decimal to the nearest tenth. List A: 11, 13, 104, 23, 11, 23 List B: 11, 13, 104, 23, 11, 23, 17, 23",
+   "choices": null,
+   "answer": "4",
+   "type": "integer_answer",
+   "solution": "Answer: 4 (integers) 24.. Reorganizing List A in increasing order yields the 6 values: 11, 1 1, 13, 23, 23, 104. The median of these 6 values is the mean of the third and fourth values, thus 13+232 = 18. The added values 17 and 23 in List B can be inserted right after the 13 as the new fourth and fifth values, the mean of which is the median of 8 values, thus 17+232 = 20, so the median increases by 𝑞𝑞 = 20 − 18 = 2. The mean of List A is 11+11+13+23+23+1046 = 1856 . For the mean of List B and the amount of decrease from List A, 𝑝𝑝 = 1856 − 185+17+236+2= 1856− 2258= 2. 708…. Finally, we add 𝑝𝑝 + 𝑞𝑞 = 2.708… + 2 = 4.708… and round to the nearest tenth to obtain the answer 4.7 . 2026 STATE COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2026 MATHCOUNTS State Team Problem 5",
+   "question": "Let M, A, T and H have the following coordinates: M(0, 7), A(0, 12), T(3, 2), and H(10, 8). Point P is chosen at random on segment TH. What is the probability that the area of triangle MAP is greater than or equal to 15? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "7",
+   "type": "integer_answer",
+   "solution": "Answer: 7 25.. Let MA = 12 − 7 = 5 along the 𝑦𝑦 -axis be the base of △MAP. Then to have an area of at least 15 for △MAP, a height of at least 6 is required, meaning the absolute value of the 𝑥𝑥 -coordinate of P must be at least 6. Because P lies on TH����, with T at (3; 2) and H at (10; 8) , choosing a point randomly on TH���� is equivalent to choosing randomly an 𝑥𝑥 -coordinate in the interval 3 ≤ 𝑥𝑥 ≤ 10, with total length of 10 − 3 = 7 but only 6 ≤ 𝑥𝑥 ≤ 10, with length 10 − 6 = 4, satisfies the triangle area requirements, so the probability of such is 𝟒𝟒𝟐𝟐 .",
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2026 MATHCOUNTS State Team Problem 6",
+   "question": "Mrs. Gemma Tree has a window in her house in the shape of an equilateral triangle. The height of the window is 48 inches. She has a window shade that rises from the bottom of the window upward. When the height of the shade is h inches, the total area covered by the shade is given by the formula A = ( ph 2 + qh) square inches, for h ranging from 0 to 48. h What is the value of pq?",
+   "choices": null,
+   "answer": "45",
+   "type": "integer_answer",
+   "solution": "Answer: 45 26.. The altitude being 48 in means each side is 2√3 × 48 in = 32√3 in and the area of the window is 768√3 in². When 0 < ℎ < 48, the shaded region is a trapezoid of height ℎ in, lower base length 32√3 in, and upper base length 32√3 �1 − ℎ48� in (based on taking advantage of proportions of similar shapes and of complementarity). The area of a trapezoid is the product of the height and the average of the base lengths, thus 32√3�1 − ℎ96� ℎ in²= �− √33 ℎ 2 + 32√3� in2 , so 𝑝𝑝 = − √33 , 𝑞𝑞 = 32√3, and 𝑝𝑝𝑞𝑞 = −32.",
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2026 MATHCOUNTS State Team Problem 7",
+   "question": "A positive integer n has 18 positive integer divisors. What is the greatest possible number of positive integer divisors that n2 could have?",
+   "choices": null,
+   "answer": "14",
+   "type": "integer_answer",
+   "solution": "Answer: 14 27.. The prime factorization of 18 is 2 × 3 × 3, so a positive integer with exactly 18 positive divisors must have 1, 2, or 3 distinct prime divisors in a total of 4 forms: 𝑝𝑝¹⁷ whose square is 𝑝𝑝³⁴ that has 34 + 1 = 35 divisors; 𝑝𝑝⁸𝑞𝑞 whose square is 𝑝𝑝¹⁶𝑞𝑞² that has (16 + 1)(2 + 1) = 51 divisors; 𝑝𝑝⁵𝑞𝑞² whose square is 𝑝𝑝¹⁰𝑞𝑞⁴ that has (10 + 1)(4 + 1) = 55 divisors; 𝑝𝑝²𝑞𝑞²𝑟𝑟 whose square is 𝑝𝑝⁴𝑞𝑞⁴𝑟𝑟² that has (4 + 1)(4 + 1) (2 + 1) = 75divisors. The greatest count of factors is 75.",
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2026 MATHCOUNTS State Team Problem 8",
+   "question": "A circle is centered at point C with coordinates (11, 4) and passes through point D with coordinates (17, 10). The line y = x − 1 splits the circle into two regions. What is the area of the smaller region? Express your answer as a decimal to the nearest tenth.",
+   "choices": null,
+   "answer": "5",
+   "type": "integer_answer",
+   "solution": "Answer: 5 (packs) 28.. The figure shows the given points C and D as well the portion, notated as KM�����, of the M given line that is on or interior to the circle. A circle with center C (11; 4) passing L D through D(17; 10) has radius �(17 − 11)2 + (10 − 4)2 = √62 + 62= 6√2. There is K C no further need of D. Let L be the point on the given line that is closest to C; CL���� ⊥ KM�����. The shortest distance between the circle center and the line 𝑥𝑥 − 𝑦𝑦 − 1 = 0 is given by CL = � 11−4−1�12 +(−1)2� = 6√2= 3√2, with L being at (−3; 3) relative to C, thus at L (8; 7). CKL and CML are congruent right triangles with common leg CL being ½ of the length of the respective hypotenuses CK and CM (both of which are radii of circle C). That means that the sides of both triangles CKL and CML have length ratios in increasing order of 1: √3: 2, which means angle measures of 30° -60°-90°, so m∠KCM = m∠KCL + m∠LCD = 60° + 60° = 120°. That means that the area of sector KCM is 1/3 the area of the whole circle, which, in turn, means the desired area, the area of the smaller segment of circle C formed by line segment KM, is the area of the sector KCM minus the area of triangle KCM. The area enclosed by the circle is π �6√2�2 = 72π, 1/3 of which is 24π. We know that CL = 3√2, KL = LM = √3 CL = 3√6, and KM = KL + LM = 6√6, so the area of KCM is �3√2��6√6� = 9√12 = 2 18√3. Therefore, the desired area is 24π − 18√3 = 44.221…, which rounds to the nearest tenth as 44.2. 2026 STATE COMPETITION Solutions",
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2026 MATHCOUNTS State Team Problem 9",
+   "question": "A random number generator repeatedly picks one of the numbers 20 or 26 with equal probability, each pick independent of the others. What is the expected value of the sum of the chosen numbers when the sum is greater than or equal to 100 for the first time? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "12",
+   "type": "integer_answer",
+   "solution": "Answer: 12 (cm) 29.. The table below itemizes cases based on number of 20s and 26s in the sum. The “p robability per arrangement” is 1/2 raised to the number of terms in the sum. The “number of a rrangements” is how many distinct orders the terms in the sum can be arrang ed—be careful, because nominally the second row should hav e 5 arrangements, but the 20 must not be the last term becaus e the first 4 terms being 26 already exceed 100 so is covered by the first row. The “ probability of case” is the product of the probability per arrangement times the number of arrangements. The expected value is the product of the sum and the probability of case. The “Total” row gives for each meaningful column the sum, over the cases, of the values in that column ; “—” is used where a sum is not use ful. Case Sum Probability per Number of Probability Expected Arrangement Arrangements of Case Value 26 + 26 + 26 + 26 104 1/16 1 1/16 104/16 20 + 26 + 26 + 26 + 26 124 1/32 4 2/16 248/16 20 + 20 + 26 + 26 + 26 118 1/32 10 5/16 590/16 20 + 20 + 20 + 26 + 26 112 1/32 10 5/16 560/16 20 + 20 + 20 + 20 + 26 106 1/32 5 5/32 265/16 20 + 20 + 20 + 20 + 20 100 1/32 1 1/32 50/16 Total — — — 1 1817/16 The desired answer is in the cell at the lower right corner of the table: 𝟏𝟏𝟐𝟐𝟏𝟏𝟐𝟐 . 𝟏𝟏𝟏𝟏",
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2026 MATHCOUNTS State Team Problem 10",
+   "question": "How many ordered pairs of two-digit positive integers (a, b) are there such that pairs gcd(30, a, b) × lcm(30, a, b) = 30ab?",
+   "choices": null,
+   "answer": "388",
+   "type": "integer_answer",
+   "solution": "Answer: 388 (integers) 30.. For all positive integers 𝑚𝑚 and 𝑛𝑛, gcd(𝑚𝑚, 𝑛𝑛) ⋅ lcm(𝑚𝑚, 𝑛𝑛) = 𝑚𝑚𝑛𝑛 , so it i s reasonable to ask if the same concept works upon bring ing in a third positive integer 𝑙𝑙 : gcd(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) ⋅ lcm(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) = 𝑙𝑙𝑚𝑚𝑛𝑛 ? No, that typically does not work—let’s see why not, and what is the most general case that will work for three input values. Let’s focus on a n arbitrary prime factor 𝑝𝑝 , and say that 𝑙𝑙 has 𝑥𝑥 factors of 𝑝𝑝 (that is, 𝑝𝑝 𝑥𝑥 divides 𝑙𝑙 but 𝑝𝑝 𝑥𝑥+1 does not), 𝑚𝑚 has 𝑦𝑦 factors of 𝑝𝑝 , and 𝑛𝑛 has 𝑧𝑧 factors of 𝑝𝑝, with 𝑥𝑥 , 𝑦𝑦, and 𝑧𝑧 being nonnegative integers. Then gcd(𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝 min( 𝑦𝑦, 𝑧𝑧) and lcm(𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝max(𝑦𝑦, 𝑧𝑧) , so the product of the gcd and lcm has min(𝑦𝑦, 𝑧𝑧) + max(𝑦𝑦, 𝑧𝑧) = 𝑦𝑦 + 𝑧𝑧 factors of 𝑝𝑝, which is the number of factors of 𝑝𝑝 in 𝑚𝑚𝑛𝑛—this always works when two values are being processed. Going to three values, gcd(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝 min( 𝑥𝑥, 𝑦𝑦, 𝑧𝑧) and lcm(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝 max(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) , so the product of the gcd and lcm has min(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) + max(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) factors of 𝑝𝑝, while the product 𝑙𝑙 𝑚𝑚𝑛𝑛 has 𝑥𝑥 + 𝑦𝑦 + 𝑧𝑧 factors of 𝑝𝑝—for the two sums to be equal , the middle value 𝑥𝑥 + 𝑦𝑦 + 𝑧𝑧 − (min(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) + max(𝑥𝑥, 𝑦𝑦, 𝑧𝑧)) must be 0, which then requires the minimum value to be 0; in other words, at most one of 𝑥𝑥 , 𝑦𝑦, and 𝑧𝑧 can be nonzero, so 𝑝𝑝 can divide at most one of 𝑙𝑙 , 𝑚𝑚, and 𝑛𝑛—then, and only then, the formula given by the problem can work. Thus, for the given problem with the three values 30 , 𝑎𝑎, and 𝑏𝑏 , no two of those values can have a common divisor greater than 1, thus gcd(30, 𝑎𝑎) = gcd(30, 𝑏𝑏) = gcd(𝑎𝑎, 𝑏𝑏) = 1, which is referred to mathematically as “30, 𝑎𝑎 , and 𝑏𝑏 are mutually relatively prime”. Because 30 = 2 × 3 × 5, 𝑎𝑎 and 𝑏𝑏 must not have any of 2, 3, or 5 as factors. Now, 10 ≤ 𝑎𝑎 ≤ 99 and 10 ≤ 𝑏𝑏 ≤ 99 are given as restrictions. Thus, 𝑎𝑎 and 𝑏𝑏 are required to be [1] distinct 2 -digit primes or [2] the product of primes with the product having two digits. In c ase [1], there are 21 two-digit primes (25 primes under 100 minus 4 primes under 10), so 𝑎𝑎 can be any one of those 21 primes and 𝑏𝑏 can be any of the 20 remaining primes, so 21 × 20 = 420 choices. Case [2] must involve the square of a one- digit prime (other than 2, 3, or 5—meaning 7) or the product of a one-digit prime and a small two - digit prime, leaving only 7² = 49, 7 × 11 = 77, and 7 × 13 = 91 for one of 𝑎𝑎 and 𝑏𝑏, with one of the remaining two-digit primes for the other, thus another 2 × (21 + 20 + 20) = 122 choices. Therefore, the total count of choices is 420 + 122 = 542.",
+   "has_diagram": false
+  }
+ ]
+}

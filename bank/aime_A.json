@@ -1,0 +1,111 @@
+{
+  "competition": "AIME",
+  "set": "A",
+  "variants": [
+    {
+      "position": 1, "source": "2022 AIME I Problem 1",
+      "question": "Quadratic polynomials $P(x)$ and $Q(x)$ have leading coefficients $2$ and $-2,$ respectively. The graphs of both polynomials pass through the two points $(10,60)$ and $(16,57).$ Find $P(0) + Q(0).$",
+      "choices": null,
+      "answer": "130",
+      "solution": "Let $R(x)=P(x)+Q(x)$. The $x^2$ terms cancel, so $R$ is linear. $R(10)=60+60=120$ and $R(16)=57+57=114$, so the slope is $\\frac{114-120}{16-10}=-1$. Then $R(0) = 120 + 10 = 130$."
+    },
+    {
+      "position": 2, "source": "2019 AIME I Problem 2",
+      "question": "Jenn randomly chooses a number $J$ from $1, 2, 3, \\ldots, 23, 24$. Bela then randomly chooses a number $B$ from $1, 2, 3, \\ldots, 23, 24$ distinct from $J$. The value of $B - J$ is at least $3$ with a probability that can be expressed in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+      "choices": null,
+      "answer": "261",
+      "solution": "There are $24 \\cdot 23 = 552$ ordered pairs with $B \\ne J$. Favorable pairs with $B \\ge J+3$: $\\sum_{J=1}^{21}(22-J) = 21+20+\\cdots+1 = 231$. So $P = \\frac{231}{552} = \\frac{77}{184}$, and $m+n = 77+184 = 261$."
+    },
+    {
+      "position": 3, "source": "2020 AIME II Problem 3",
+      "question": "The value of $x$ that satisfies $\\log_{2^x} 3^{15} = \\log_{2^{x+2}} 3^{600}$ can be written as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+      "choices": null,
+      "answer": "041",
+      "solution": "Since $\\log_{2^x} 3^{a} = \\frac{a \\log 3}{x \\log 2}$, the equation becomes $\\frac{15}{x} = \\frac{600}{x+2}$, so $15(x+2) = 600x$, giving $x = \\frac{30}{585} = \\frac{2}{39}$. Thus $m+n = 2+39 = 41$."
+    },
+    {
+      "position": 4, "source": "2019 AIME II Problem 4",
+      "question": "A fair four-sided die with faces $1, 2, 3, 4$ is rolled three times. The probability that the product of all three numbers rolled is a perfect square is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+      "choices": null,
+      "answer": "021",
+      "solution": "Track the parity of the exponents of 2 and 3 in the product (4 contributes two 2s). Brute-forcing the $4^3=64$ equally likely outcomes shows $20$ give a perfect square product, so $P = \\frac{20}{64} = \\frac{5}{16}$ and $m+n = 5+16 = 21$."
+    },
+    {
+      "position": 5, "source": "2018 AIME I Problem 5",
+      "question": "For each ordered pair of real numbers $(x,y)$ satisfying $$\\log_2(2x+y) = \\log_4(x^2+xy+19y^2)$$there is a real number $K$ such that $$\\log_3(3x+y) = \\log_9(3x^2+4xy+Ky^2).$$Find the sum of all possible values of $K$.",
+      "choices": null,
+      "answer": "078",
+      "solution": "The first equation gives $(2x+y)^2 = x^2+xy+19y^2$, i.e. $x^2+xy-6y^2=0$, so $(x-2y)(x+3y)=0$. The second equation gives $(3x+y)^2 = 3x^2+4xy+Ky^2$, i.e. $6x^2+2xy+(1-K)y^2=0$. If $x=2y$: $24+4+1-K=0$, so $K=29$. If $x=-3y$: $54-6+1-K=0$, so $K=49$. Sum: $29+49=78$."
+    },
+    {
+      "position": 6, "source": "2017 AIME II Problem 6",
+      "question": "Find the sum of all positive integers $n$ such that $\\sqrt{n^2+75n+2023}$ is an integer.",
+      "choices": null,
+      "answer": "579",
+      "solution": "Write $\\sqrt{n^2+75n+2023} = \\tfrac12\\sqrt{(2n+75)^2 + 2467}$. We need $s^2 - (2n+75)^2 = 2467$. Since $2467$ is prime, $s-(2n+75)=1$ and $s+(2n+75)=2467$, giving $2n+75 = 1233$, so $n = 579$ is the only solution. The sum is $579$."
+    },
+    {
+      "position": 7, "source": "2020 AIME I Problem 7",
+      "question": "A club consisting of $9$ men and $10$ women needs to choose a nonempty committee from among its members so that the number of women on the committee is one more than the number of men on the committee. Let $N$ be the number of such committees. Find the remainder when $N$ is divided by $1000$.",
+      "choices": null,
+      "answer": "378",
+      "solution": "If $k$ women are chosen, we need $k-1$ men: $N = \\sum_{k=1}^{10} \\binom{10}{k}\\binom{9}{k-1} = \\binom{19}{9} = 92378$ (the sum counts, equivalently, choosing 9 people from 19 by a complementary-counting argument). The remainder is $378$."
+    },
+    {
+      "position": 8, "source": "2015 AIME II Problem 8",
+      "question": "Let $a$ and $b$ be positive integers satisfying $\\frac{ab+1}{a+b} < \\frac{4}{3}$. The maximum possible value of $\\frac{a^3b^3+1}{a^3+b^3}$ is $\\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p+q$.",
+      "choices": null,
+      "answer": "081",
+      "solution": "The inequality rearranges to $(3a-4)(3b-4) < 7$. If $a=1$ or $b=1$, the expression equals $1$. Otherwise $a,b \\ge 2$ forces $3b-4 \\le 3$, i.e. $b=2$ (and symmetrically $a=2$). At $a=b=2$: $\\frac{64+1}{8+8} = \\frac{65}{16}$. So $p+q = 65+16 = 81$."
+    },
+    {
+      "position": 9, "source": "2014 AIME I Problem 9",
+      "question": "Let $x_1<x_2<x_3$ be the three real roots of the equation $\\sqrt{2024}\\,x^3-4049x^2+2=0$. Find $x_2(x_1+x_3)$.",
+      "choices": null,
+      "answer": "002",
+      "solution": "With $n=2024$: $\\sqrt{n}x^3 - (2n+1)x^2 + 2 = (\\sqrt{n}x-1)(x^2 - 2\\sqrt{n}x - 2) = 0$. The roots are $\\frac{1}{\\sqrt{n}}$ and $\\sqrt{n} \\pm \\sqrt{n+2}$. The middle root is $x_2 = \\frac{1}{\\sqrt{n}}$, and $x_1+x_3 = 2\\sqrt{n}$. Product: $2$."
+    },
+    {
+      "position": 10, "source": "2015 AIME II Problem 10",
+      "question": "Call a permutation $a_1, a_2, \\ldots, a_n$ of the integers $1, 2, \\ldots, n$ ''quasi-increasing'' if $a_k \\leq a_{k+1} + 2$ for each $1 \\leq k \\leq n-1$. For example, $53421$ and $14253$ are quasi-increasing permutations of the integers $1, 2, 3, 4, 5$, but $45123$ is not. Find the number of quasi-increasing permutations of the integers $1, 2, \\ldots, 6$.",
+      "choices": null,
+      "answer": "162",
+      "solution": "The count satisfies $a(n) = 3a(n-1)$ for $n \\ge 4$ with $a(1)=1$, $a(2)=2$, $a(3)=6$ (insertion of $n$ has exactly 3 valid slots once $n \\ge 4$): $1, 2, 6, 18, 54, 162$. Hence $162$."
+    },
+    {
+      "position": 11, "source": "2024 AIME I Problem 11",
+      "question": "Each vertex of a regular hexagon is independently colored either red or blue with equal probability. The probability that the hexagon can then be rotated so that all of the blue vertices end up at positions where there had been red vertices is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+      "choices": null,
+      "answer": "047",
+      "solution": "Checking all $2^6 = 64$ colorings against the 5 nontrivial rotations: a coloring works iff some rotation maps every blue vertex onto a red one. Exactly $30$ of the $64$ colorings work, giving $\\frac{30}{64} = \\frac{15}{32}$ and $m+n = 15+32 = 47$."
+    },
+    {
+      "position": 12, "source": "2016 AIME I Problem 12",
+      "question": "Find the least positive integer $m$ such that $m^2 - m + 17$ is a product of at least four not necessarily distinct primes.",
+      "choices": null,
+      "answer": "306",
+      "solution": "Factoring $m^2-m+17$ for $m = 1, 2, 3, \\dots$ (it is prime for $1 \\le m \\le 16$, and usually has few prime factors), the first value with at least four prime factors counted with multiplicity occurs at $m = 306$."
+    },
+    {
+      "position": 13, "source": "2022 AIME I Problem 13",
+      "question": "Let $S$ be the set of all rational numbers that can be expressed as a repeating decimal in the form $0.\\overline{abc},$ where at least one of the digits $a,$ $b,$ or $c$ is nonzero. Let $N$ be the number of distinct numerators obtained when numbers in $S$ are written as fractions in lowest terms. Find $N$.",
+      "choices": null,
+      "answer": "660",
+      "solution": "$0.\\overline{abc} = \\frac{abc}{999}$ with $999 = 3^3 \\cdot 37$. Counting the distinct numerators of $\\frac{x}{999}$ in lowest terms for $x = 1, \\dots, 998$ gives $660$."
+    },
+    {
+      "position": 14, "source": "2019 AIME II Problem 14",
+      "question": "Find the sum of all positive integers $n$ such that, given an unlimited supply of stamps of denominations $5, n,$ and $n+1$ cents, $71$ cents is the greatest postage that cannot be formed.",
+      "choices": null,
+      "answer": "056",
+      "solution": "For each $n \\ge 2$, compute the Frobenius number of $\\{5, n, n+1\\}$ by direct tabulation. The values of $n$ for which the greatest unformable postage is exactly $71$ turn out to be $12, 19,$ and $25$, summing to $56$."
+    },
+    {
+      "position": 15, "source": "2013 AIME I Problem 15",
+      "question": "Let $N$ be the number of ordered triples $(A,B,C)$ of integers satisfying the following conditions: (a) $0 \\le A < B < C \\le 79$; (b) there exist integers $a$, $b$, and $c$, and a prime $p$, where $0 \\le b < a < c < p$; (c) $p$ divides $A-a$, $B-b$, and $C-c$; and (d) each ordered triple $(A,B,C)$ and $(b,a,c)$ forms an arithmetic sequence. Find $N$.",
+      "choices": null,
+      "answer": "169",
+      "solution": "Write $(A,B,C) = (B-D, B, B+D)$ and $(b,a,c) = (a-d, a, a+d)$. Condition (c) forces $p \\mid (a-A)$ with the common differences matching mod $p$. Exhaustive enumeration over $B$, $D$, primes $p \\le 79$, and $a, d$ gives exactly $169$ such triples. (The same enumeration with bound $99$ reproduces the known answer $272$.)"
+    }
+  ]
+}
