@@ -1,0 +1,356 @@
+{
+  "competition": "AMC 10",
+  "set": "B",
+  "variants": [
+    {
+      "position": 1,
+      "source": "2010 AMC 10B Problem 1",
+      "question": "What is $50(50-4)-(50\\cdot 50-4)$?",
+      "choices": {
+        "A": "$-196$",
+        "B": "$-204$",
+        "C": "$-96$",
+        "D": "$-4$",
+        "E": "$0$"
+      },
+      "answer": "A",
+      "solution": "Compute each piece: $50(50-4)=50\\cdot 46=2300$ and $50\\cdot 50-4=2500-4=2496$. Therefore the value is $2300-2496=-196$."
+    },
+    {
+      "position": 2,
+      "source": "2011 AMC 10A Problem 2",
+      "question": "A small tube of sunscreen can hold $40$ milliliters of sunscreen, whereas a large bottle can hold $750$ milliliters of sunscreen. Elena wants to buy the minimum number of small tubes necessary to completely fill a large bottle. How many tubes must she buy?",
+      "choices": {
+        "A": "$15$",
+        "B": "$16$",
+        "C": "$17$",
+        "D": "$18$",
+        "E": "$19$"
+      },
+      "answer": "E",
+      "solution": "With $18$ tubes Elena gets $18\\cdot 40=720$ milliliters, which is less than $750$. With $19$ tubes she gets $19\\cdot 40=760\\geq 750$ milliliters. So she must buy $19$ tubes."
+    },
+    {
+      "position": 3,
+      "source": "2012 AMC 10A Problem 3",
+      "question": "A bug crawls along a number line, starting at $3$. It crawls to $-5$, then turns around and crawls to $7$. How many units does the bug crawl altogether?",
+      "choices": {
+        "A": "$18$",
+        "B": "$20$",
+        "C": "$22$",
+        "D": "$24$",
+        "E": "$25$"
+      },
+      "answer": "B",
+      "solution": "From $3$ to $-5$ the bug crawls $|3-(-5)|=8$ units, and from $-5$ to $7$ it crawls $|-5-7|=12$ units. Altogether it crawls $8+12=20$ units."
+    },
+    {
+      "position": 4,
+      "source": "2013 AMC 10B Problem 4",
+      "question": "When counting from $5$ to $303$, $77$ is the $73^{\\text{rd}}$ number counted. When counting backwards from $303$ to $5$, $77$ is the $n^{\\text{th}}$ number counted. What is $n$?",
+      "choices": {
+        "A": "$224$",
+        "B": "$225$",
+        "C": "$226$",
+        "D": "$227$",
+        "E": "$228$"
+      },
+      "answer": "D",
+      "solution": "There are $303-5+1=299$ numbers from $5$ to $303$. If $77$ is the $73^{\\text{rd}}$ number counting forward, then $299-73=226$ numbers come after it, so counting backwards it is the $226+1=227^{\\text{th}}$ number. Thus $n=227$."
+    },
+    {
+      "position": 5,
+      "source": "2014 AMC 10A Problem 5",
+      "question": "On an algebra quiz, $10\\%$ of the students scored $60$ points, $30\\%$ scored $80$ points, $40\\%$ scored $90$ points, and the rest scored $100$ points. What is the difference between the mean and median score of the students' scores on this quiz?",
+      "choices": {
+        "A": "$2$",
+        "B": "$3$",
+        "C": "$4$",
+        "D": "$5$",
+        "E": "$6$"
+      },
+      "answer": "C",
+      "solution": "The mean score is $0.10(60)+0.30(80)+0.40(90)+0.20(100)=6+24+36+20=86$. Since $10\\%$ scored $60$ and $40\\%$ scored $80$ or less, while $80\\%$ scored $90$ or less, the middle student scored $90$, so the median is $90$. The difference is $90-86=4$."
+    },
+    {
+      "position": 6,
+      "source": "2024 AMC 10B Problem 6",
+      "question": "A rectangle has integer side lengths and an area of $1050$. What is the least possible perimeter of the rectangle?",
+      "choices": {
+        "A": "$124$",
+        "B": "$130$",
+        "C": "$134$",
+        "D": "$142$",
+        "E": "$170$"
+      },
+      "answer": "B",
+      "solution": "For a fixed area, the perimeter is minimized when the sides are as close as possible. Since $\\sqrt{1050}\\approx 32.4$, look at factor pairs of $1050$ near $32$: the pair $30\\times 35$ works, giving perimeter $2(30+35)=130$. Other nearby pairs give more: $25\\times 42\\to 134$, $21\\times 50\\to 142$. The least possible perimeter is $130$."
+    },
+    {
+      "position": 7,
+      "source": "2016 AMC 10A Problem 7",
+      "question": "The mean, median, and mode of the $7$ data values $20, 150, x, 50, 70, 110, 80$ are all equal to $x$. What is the value of $x$?",
+      "choices": {
+        "A": "$50$",
+        "B": "$60$",
+        "C": "$70$",
+        "D": "$75$",
+        "E": "$80$"
+      },
+      "answer": "E",
+      "solution": "The six known values sum to $20+150+50+70+110+80=480$. Setting the mean equal to $x$ gives $\\frac{480+x}{7}=x$, so $480=6x$ and $x=80$. Check: the sorted list $20,50,70,80,80,110,150$ has median $80$, and $80$ is the only repeated value, so the mode is $80$ as well."
+    },
+    {
+      "position": 8,
+      "source": "2017 AMC 10A Problem 8",
+      "question": "At a gathering of $40$ people, there are $25$ people who all know each other and $15$ people who know no one. People who know each other hug, and people who do not know each other shake hands. How many handshakes occur within the group?",
+      "choices": {
+        "A": "$480$",
+        "B": "$375$",
+        "C": "$420$",
+        "D": "$450$",
+        "E": "$510$"
+      },
+      "answer": "A",
+      "solution": "There are $\\binom{40}{2}=780$ pairs of people altogether. The only pairs who know each other (and hence hug) are the $\\binom{25}{2}=300$ pairs within the group of $25$ mutual acquaintances. Every other pair shakes hands, giving $780-300=480$ handshakes."
+    },
+    {
+      "position": 9,
+      "source": "2020 AMC 10B Problem 9",
+      "question": "How many ordered pairs of integers $(x, y)$ satisfy the equation $$x^{2024}+y^2=2y?$$",
+      "choices": {
+        "A": "$1$",
+        "B": "$2$",
+        "C": "$3$",
+        "D": "$4$",
+        "E": "$\\text{infinitely many}$"
+      },
+      "answer": "D",
+      "solution": "Rewrite as $(y-1)^2=1-x^{2024}$. Since the left side is nonnegative, $x^{2024}\\leq 1$, so $x\\in\\{-1,0,1\\}$. If $x=0$, then $(y-1)^2=1$, giving $y=0$ or $y=2$. If $x=\\pm 1$, then $(y-1)^2=0$, giving $y=1$. The pairs are $(0,0),(0,2),(1,1),(-1,1)$: a total of $4$."
+    },
+    {
+      "position": 10,
+      "source": "2019 AMC 10A Problem 10",
+      "question": "A rectangular floor that is $12$ feet wide and $19$ feet long is tiled with $228$ one-foot square tiles. A bug walks from one corner to the opposite corner in a straight line. Including the first and the last tile, how many tiles does the bug visit?",
+      "choices": {
+        "A": "$28$",
+        "B": "$29$",
+        "C": "$30$",
+        "D": "$31$",
+        "E": "$32$"
+      },
+      "answer": "C",
+      "solution": "The bug starts in one tile and enters a new tile each time it crosses an interior grid line. It crosses $18$ interior vertical lines and $11$ interior horizontal lines. Since $\\gcd(12,19)=1$, the diagonal never passes through an interior lattice point, so no two crossings coincide. The number of tiles visited is $1+18+11=30$."
+    },
+    {
+      "position": 11,
+      "source": "2020 AMC 10A Problem 11",
+      "question": "What is the median of the following list of $2000$ numbers$?$\n$$1, 2, 3, \\ldots, 1000, 1^2, 2^2, 3^2, \\ldots, 1000^2$$",
+      "choices": {
+        "A": "$968.5$",
+        "B": "$969.5$",
+        "C": "$970.5$",
+        "D": "$971.5$",
+        "E": "$972.5$"
+      },
+      "answer": "B",
+      "solution": "For $1\\leq k\\leq 1000$, the number of list entries that are at most $k$ equals $k+\\lfloor\\sqrt{k}\\rfloor$: the entries $1,2,\\dots,k$ plus the $\\lfloor\\sqrt{k}\\rfloor$ perfect squares not exceeding $k$. For $961\\leq k\\leq 1000$ we have $\\lfloor\\sqrt{k}\\rfloor=31$. At $k=968$ the count is $968+31=999$; at $k=969$ it is $1000$; at $k=970$ it is $1001$. So the $1000^{\\text{th}}$ and $1001^{\\text{st}}$ smallest entries are $969$ and $970$, and the median is $\\frac{969+970}{2}=969.5$."
+    },
+    {
+      "position": 12,
+      "source": "2021 AMC 10B Problem 12",
+      "question": "Let $N = 14 \\cdot 14 \\cdot 33 \\cdot 60$. What is the ratio of the sum of the odd divisors of $N$ to the sum of the even divisors of $N$?",
+      "choices": {
+        "A": "$\\text{1 : 14}$",
+        "B": "$\\text{1 : 16}$",
+        "C": "$\\text{1 : 24}$",
+        "D": "$\\text{1 : 28}$",
+        "E": "$\\text{1 : 30}$"
+      },
+      "answer": "E",
+      "solution": "Factor: $N=14^2\\cdot 33\\cdot 60=2^4\\cdot 3^2\\cdot 5\\cdot 7^2\\cdot 11$. Write $N=2^4 m$ with $m$ odd. Every divisor of $N$ has the form $2^j d$ with $d\\mid m$ and $0\\leq j\\leq 4$. The odd divisors ($j=0$) sum to $\\sigma(m)$, while the even divisors ($j=1,2,3,4$) sum to $(2+4+8+16)\\sigma(m)=30\\,\\sigma(m)$. The ratio is $1:30$."
+    },
+    {
+      "position": 13,
+      "source": "2022 AMC 10B Problem 13",
+      "question": "The positive difference between a pair of primes is equal to $2$, and the positive difference between the cubes of the two primes is $10586$. What is the sum of the digits of the least prime that is greater than those two primes?",
+      "choices": {
+        "A": "$11$",
+        "B": "$8$",
+        "C": "$10$",
+        "D": "$13$",
+        "E": "$16$"
+      },
+      "answer": "A",
+      "solution": "Let the primes be $p$ and $p+2$. Then $(p+2)^3-p^3=6p^2+12p+8=10586$, so $p^2+2p=1763$, giving $p=41$ (since $41^2+2\\cdot 41=1681+82=1763$). Indeed $41$ and $43$ are both prime. The least prime greater than $43$ is $47$, whose digit sum is $4+7=11$."
+    },
+    {
+      "position": 14,
+      "source": "2023 AMC 10B Problem 14",
+      "question": "How many ordered pairs of integers $(m, n)$ satisfy the equation $m^2-mn+n^2 = m^2n^2$?",
+      "choices": {
+        "A": "$0$",
+        "B": "$1$",
+        "C": "$2$",
+        "D": "$3$",
+        "E": "$4$"
+      },
+      "answer": "D",
+      "solution": "If $|m|\\geq 2$ and $|n|\\geq 2$, then $m^2n^2\\geq 2(m^2+n^2)>m^2-mn+n^2$ (the last inequality is $m^2+mn+n^2=(m+\\tfrac{n}{2})^2+\\tfrac{3n^2}{4}>0$), so no solutions exist there. Thus one of $|m|,|n|$ is at most $1$. Checking $m=0$ gives $n^2=0$, so $n=0$; $m=1$ gives $1-n+n^2=n^2$, so $n=1$; $m=-1$ gives $1+n+n^2=n^2$, so $n=-1$. The solutions are $(0,0)$, $(1,1)$, and $(-1,-1)$: a total of $3$ ordered pairs."
+    },
+    {
+      "position": 15,
+      "source": "2024 AMC 10A Problem 15",
+      "question": "Let $M$ be the greatest integer such that both $M+1117$ and $M+3357$ are perfect squares. What is the units digit of $M$?",
+      "choices": {
+        "A": "$1$",
+        "B": "$2$",
+        "C": "$4$",
+        "D": "$6$",
+        "E": "$8$"
+      },
+      "answer": "C",
+      "solution": "Write $M+1117=t^2$ and $M+3357=s^2$ with $s>t\\geq 0$. Then $s^2-t^2=2240$, i.e. $(s-t)(s+t)=2240$. Both factors have the same parity, and since their product is even, both are even. To maximize $M$ we maximize $t$, which means making $s+t$ as large as possible: $s-t=2$ and $s+t=1120$, giving $t=559$ and $s=561$. Then $M=559^2-1117=312481-1117=311364$, whose units digit is $4$."
+    },
+    {
+      "position": 16,
+      "source": "2010 AMC 10A Problem 16",
+      "question": "Nondegenerate $\\triangle ABC$ has integer side lengths, $\\overline{BD}$ is an angle bisector, $AD = 4$, and $DC=9$. What is the smallest possible value of the perimeter?",
+      "choices": {
+        "A": "$39$",
+        "B": "$36$",
+        "C": "$40$",
+        "D": "$42$",
+        "E": "$45$"
+      },
+      "answer": "A",
+      "solution": "Here $AC=AD+DC=13$. By the Angle Bisector Theorem, $\\frac{AB}{BC}=\\frac{AD}{DC}=\\frac{4}{9}$, so write $AB=4k$ and $BC=9k$. Since $\\gcd(4,9)=1$, requiring $4k$ and $9k$ to be integers forces $k$ to be a positive integer. The triangle inequality $AB+AC>BC$ gives $4k+13>9k$, so $k<\\frac{13}{5}$, i.e. $k\\leq 2$; also $AB+BC>AC$ gives $13k>13$, so $k>1$ ($k=1$ gives the degenerate triple $4,9,13$). Hence $k=2$, the sides are $8, 18, 13$, and the perimeter is $8+18+13=39$."
+    },
+    {
+      "position": 17,
+      "source": "2013 AMC 10A Problem 17",
+      "question": "Daphne is visited periodically by her three best friends: Anna, Bella, and Cora. Anna visits every third day, Bella visits every fourth day, and Cora visits every seventh day. All three friends visited Daphne yesterday. How many days of the next $365$-day period will exactly two friends visit her?",
+      "choices": {
+        "A": "$36$",
+        "B": "$40$",
+        "C": "$44$",
+        "D": "$46$",
+        "E": "$48$"
+      },
+      "answer": "E",
+      "solution": "Anna and Bella both visit on multiples of $\\mathrm{lcm}(3,4)=12$: $\\lfloor 365/12\\rfloor=30$ days. Anna and Cora both visit on multiples of $21$: $17$ days. Bella and Cora both visit on multiples of $28$: $13$ days. All three visit together on multiples of $\\mathrm{lcm}(3,4,7)=84$: $\\lfloor 365/84\\rfloor=4$ days, and these days are counted in each pair total. The number of days with exactly two visitors is $(30-4)+(17-4)+(13-4)=26+13+9=48$."
+    },
+    {
+      "position": 18,
+      "source": "2014 AMC 10B Problem 18",
+      "question": "A list of $11$ positive integers has a mean of $9$, a median of $8$, and a unique mode of $7$. What is the largest possible value of an integer in the list?",
+      "choices": {
+        "A": "$29$",
+        "B": "$30$",
+        "C": "$31$",
+        "D": "$32$",
+        "E": "$33$"
+      },
+      "answer": "D",
+      "solution": "The numbers sum to $11\\cdot 9=99$. In sorted order $a_1\\leq\\cdots\\leq a_{11}$ we need $a_6=8$. To maximize $a_{11}$, minimize the other ten entries. Make $7$ the unique mode by using three $7$'s; then no other value may appear three times. The smallest choice for the five entries below the median is $1,1,7,7,7$ (sum $23$), and $a_6=8$. For $a_7,a_8,a_9,a_{10}$ (each at least $8$), we may use $8$ at most once more and any other value at most twice, so the minimum is $8,9,9,10$ (sum $36$). Then $a_{11}=99-23-8-36=32$, achieved by $1,1,7,7,7,8,8,9,9,10,32$. (Using only two $7$'s forces everything else to appear at most once, giving a smaller maximum of $29$.)"
+    },
+    {
+      "position": 19,
+      "source": "2011 AMC 10B Problem 19",
+      "question": "What is the product of all the roots of the equation $$\\sqrt{4 | x | + 15} = \\sqrt{x^2 - 30}?$$",
+      "choices": {
+        "A": "$-45$",
+        "B": "$-81$",
+        "C": "$-16$",
+        "D": "$81$",
+        "E": "$6561$"
+      },
+      "answer": "B",
+      "solution": "Squaring both sides gives $4|x|+15=x^2-30$, so $x^2-4|x|-45=0$. Factoring in $|x|$: $(|x|-9)(|x|+5)=0$, so $|x|=9$ (the root $|x|=-5$ is impossible). Both $x=9$ and $x=-9$ satisfy the original equation, and the product of all roots is $9\\cdot(-9)=-81$."
+    },
+    {
+      "position": 20,
+      "source": "2018 AMC 10B Problem 20",
+      "question": "A function $f$ is defined recursively by $f(1)=f(2)=1$ and $$f(n)=f(n-1)-f(n-2)+n$$for all integers $n \\geq 3$. What is $f(2024)$?",
+      "choices": {
+        "A": "$2021$",
+        "B": "$2022$",
+        "C": "$2023$",
+        "D": "$2024$",
+        "E": "$2025$"
+      },
+      "answer": "C",
+      "solution": "From the recursion, $f(n)-f(n-1)+f(n-2)=n$, and shifting indices, $f(n-1)-f(n-2)+f(n-3)=n-1$. Adding these gives $f(n)+f(n-3)=2n-1$. Applying the same identity at $n+3$ and subtracting yields $f(n+3)-f(n-3)=6$, so every $6$ steps the values increase by $6$. Since $2024=6\\cdot 337+2$, we get $f(2024)=f(2)+6\\cdot 337=1+2022=2023$."
+    },
+    {
+      "position": 21,
+      "source": "2017 AMC 10B Problem 21",
+      "question": "In $\\triangle ABC$, $AB=9$, $AC=12$, $BC=15$, and $D$ is the midpoint of $\\overline{BC}$. What is the sum of the radii of the circles inscribed in $\\triangle ADB$ and $\\triangle ADC$?",
+      "choices": {
+        "A": "$3$",
+        "B": "$\\frac{7}{2}$",
+        "C": "$\\frac{15}{4}$",
+        "D": "$4$",
+        "E": "$\\frac{17}{4}$"
+      },
+      "answer": "E",
+      "solution": "Since $9^2+12^2=225=15^2$, the right angle is at $A$, and the midpoint $D$ of the hypotenuse satisfies $AD=BD=CD=\\tfrac{15}{2}$. Triangle $ADB$ has sides $9,\\tfrac{15}{2},\\tfrac{15}{2}$: its height to base $9$ is $\\sqrt{(15/2)^2-(9/2)^2}=6$, so its area is $\\tfrac12\\cdot 9\\cdot 6=27$ and its semiperimeter is $12$, giving inradius $\\tfrac{27}{12}=\\tfrac94$. Triangle $ADC$ has sides $12,\\tfrac{15}{2},\\tfrac{15}{2}$: its height to base $12$ is $\\sqrt{(15/2)^2-6^2}=\\tfrac92$, so its area is $27$ and its semiperimeter is $\\tfrac{27}{2}$, giving inradius $2$. The sum is $\\tfrac94+2=\\tfrac{17}{4}$."
+    },
+    {
+      "position": 22,
+      "source": "2012 AMC 10B Problem 22",
+      "question": "Let $(a_1, a_2, \\ldots, a_{9})$ be a list of the first $9$ positive integers such that for each $2\\le i \\le 9$ either $a_i+1$ or $a_i-1$ or both appear somewhere before $a_i$ in the list. How many such lists are there?",
+      "choices": {
+        "A": "$72$",
+        "B": "$128$",
+        "C": "$192$",
+        "D": "$256$",
+        "E": "$512$"
+      },
+      "answer": "D",
+      "solution": "The condition means that after each step, the values used so far form a block of consecutive integers: each new term must extend the current range by exactly $1$, either one below the current minimum or one above the current maximum. If $a_1=j$, then among the remaining $8$ terms exactly $j-1$ must be new minima and $9-j$ must be new maxima, and any interleaving works, giving $\\binom{8}{j-1}$ lists. Summing over $j=1,\\dots,9$: $\\sum_{j=1}^{9}\\binom{8}{j-1}=2^8=256$."
+    },
+    {
+      "position": 23,
+      "source": "2015 AMC 10A Problem 23",
+      "question": "The zeroes of the function $f(x)=x^2-ax+3a$ are integers. What is the sum of the possible values of $a?$",
+      "choices": {
+        "A": "$24$",
+        "B": "$20$",
+        "C": "$18$",
+        "D": "$26$",
+        "E": "$28$"
+      },
+      "answer": "A",
+      "solution": "Let the integer roots be $r$ and $s$. Then $r+s=a$ and $rs=3a=3(r+s)$, so $rs-3r-3s=0$, i.e. $(r-3)(s-3)=9$. The factorizations of $9$ (up to order) are $1\\cdot 9$, $3\\cdot 3$, $(-1)(-9)$, and $(-3)(-3)$, giving $(r,s)=(4,12),(6,6),(2,-6),(0,0)$. The corresponding values of $a=r+s$ are $16, 12, -4, 0$, whose sum is $24$."
+    },
+    {
+      "position": 24,
+      "source": "2016 AMC 10B Problem 24",
+      "question": "How many four-digit integers $abcd$, with $a \\neq 0$, have the property that the three two-digit integers $ab>bc>cd$ form a decreasing arithmetic sequence? One such number is $6418$, where $a=6$, $b=4$, $c=1$, and $d=8$.",
+      "choices": {
+        "A": "$16$",
+        "B": "$22$",
+        "C": "$24$",
+        "D": "$26$",
+        "E": "$28$"
+      },
+      "answer": "B",
+      "solution": "The arithmetic sequence condition $2\\cdot\\overline{bc}=\\overline{ab}+\\overline{cd}$ becomes $2(10b+c)=(10a+b)+(10c+d)$, or $19b=10a+8c+d$, and the decreasing condition is $10a>9b+c$ and $10b>9c+d$. Working through the possible values of $b$ from $0$ to $9$, solving $19b=10a+8c+d$ with $a\\in\\{1,\\dots,9\\}$ and $c,d\\in\\{0,\\dots,9\\}$, and keeping only those with $\\overline{ab}>\\overline{bc}>\\overline{cd}$, yields exactly $22$ four-digit numbers (for example, $1109$, $3208$, $4319$, $5432$, $6418$, $9753$, and $9876$ all work)."
+    },
+    {
+      "position": 25,
+      "source": "2019 AMC 10B Problem 25",
+      "question": "How many sequences of $0$s and $1$s of length $17$ are there that begin with a $0$, end with a $0$, contain no two consecutive $0$s, and contain no three consecutive $1$s?",
+      "choices": {
+        "A": "$29$",
+        "B": "$33$",
+        "C": "$37$",
+        "D": "$41$",
+        "E": "$45$"
+      },
+      "answer": "C",
+      "solution": "Suppose the sequence contains $k$ zeros. Since no two zeros are adjacent and the sequence begins and ends with $0$, the zeros create exactly $k-1$ gaps, each filled with a block of one or two $1$s (no three consecutive $1$s). If $j$ of these blocks have size $2$, then the number of $1$s is $(k-1)+j=17-k$, so $j=18-2k$. We need $0\\leq j\\leq k-1$, which forces $k\\in\\{7,8,9\\}$. Counting arrangements of the blocks: $k=7$ gives $\\binom{6}{4}=15$; $k=8$ gives $\\binom{7}{2}=21$; $k=9$ gives $\\binom{8}{0}=1$. The total is $15+21+1=37$."
+    }
+  ]
+}

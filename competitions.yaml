@@ -1,0 +1,93 @@
+# MockTest Maker — competition registry
+# status: done | pending | downloading | blocked_needs_session | needs_source | unavailable
+# adapter: aops_wiki | official_pdf | external_web | none
+
+categories:
+  international_olympiads:
+    label: 🏅 International & National Olympiads / 国际与国家数学奥林匹克
+    competitions:
+      - {slug: imo,      name: International Mathematical Olympiad, zh: 国际数学奥林匹克, adapter: aops_wiki, status: pending, aops_index: "IMO Problems and Solutions"}
+      - {slug: egmo,     name: European Girls' Mathematical Olympiad, zh: 欧洲女子数学奥林匹克, adapter: aops_wiki, status: pending, aops_index: "EGMO Problems and Solutions"}
+      - {slug: apmo,     name: Asian Pacific Mathematics Olympiad, zh: 亚太数学奥林匹克, adapter: aops_wiki, status: pending, aops_index: "APMO Problems and Solutions"}
+      - {slug: tot,      name: Tournament of the Towns, zh: 城镇锦标赛（全球中学生）, adapter: aops_wiki, status: pending, aops_index: "Tournament of Towns Problems and Solutions"}
+      - {slug: imc_univ, name: International Mathematics Competition for University Students, zh: 国际大学生数学竞赛, adapter: aops_wiki, status: pending, aops_index: "IMC Problems and Solutions"}
+      - {slug: cgmo,     name: China Girls Mathematical Olympiad, zh: 中国女子数学奥林匹克, adapter: aops_wiki, status: pending, aops_index: "CGMO Problems and Solutions"}
+      - {slug: usamo,    name: USA Mathematical Olympiad, zh: 美国数学奥林匹克, adapter: aops_wiki, status: pending, aops_index: "USAMO Problems and Solutions"}
+      - {slug: usajmo,   name: USA Junior Mathematical Olympiad, zh: 美国初级数学奥林匹克, adapter: aops_wiki, status: pending, aops_index: "USAJMO Problems and Solutions"}
+      - {slug: usemo,    name: US Ersatz Math Olympiad, zh: 美国模拟数学奥林匹克, adapter: aops_wiki, status: pending, aops_index: "USEMO Problems and Solutions"}
+      - {slug: emc,      name: European Mathematical Cup, zh: 欧洲数学杯, adapter: aops_wiki, status: pending, aops_index: "European Mathematical Cup Problems and Solutions"}
+      - {slug: mpfg_olympiad, name: Math Prize for Girls Olympiad, zh: 女子数学奖奥林匹克, adapter: aops_wiki, status: pending, aops_index: "Math Prize for Girls Olympiad Problems and Solutions"}
+      - {slug: manhattan_mo, name: Manhattan Mathematical Olympiad, zh: 曼哈顿数学奥林匹克, adapter: aops_wiki, status: pending, aops_index: "Manhattan Mathematical Olympiad Problems and Solutions"}
+
+  admissions_tests:
+    label: 🎓 College Admissions & Placement Tests / 大学入学与升学数学考试
+    competitions:
+      - {slug: sat_math,        name: SAT Math, zh: 美国大学入学考试数学部分, adapter: official_pdf, status: needs_source}
+      - {slug: act_math,        name: ACT Math, zh: 美国大学入学考试数学部分, adapter: official_pdf, status: needs_source}
+      - {slug: ap_calculus,     name: AP Calculus AB & BC, zh: 美国大学先修课程微积分考试, adapter: official_pdf, status: needs_source}
+      - {slug: alevel_math,     name: A-Level Mathematics, zh: 英国A-Level数学, adapter: official_pdf, status: needs_source}
+      - {slug: ib_math,         name: IB Mathematics (AA & AI), zh: IB数学（AA/AI）, adapter: official_pdf, status: needs_source}
+      - {slug: tmua,            name: TMUA, zh: 英国大学数学入学测试, adapter: official_pdf, status: needs_source}
+      - {slug: step,            name: STEP (Sixth Term Examination Papers), zh: 剑桥数学入学笔试, adapter: official_pdf, status: needs_source}
+      - {slug: mat_oxford,      name: MAT (Mathematics Admissions Test), zh: 牛津大学数学入学考试, adapter: official_pdf, status: needs_source}
+      - {slug: aea,             name: Advanced Extension Award, zh: 英国高阶数学考试, adapter: official_pdf, status: needs_source}
+      - {slug: sat_subject_math, name: SAT Subject Test Math 1 & 2 (discontinued), zh: SAT学科测试数学（已取消）, adapter: official_pdf, status: needs_source}
+      - {slug: gre_math,        name: GRE Mathematics Subject Test, zh: 美国研究生数学专项考试, adapter: official_pdf, status: needs_source}
+      - {slug: gsi_uist,        name: GSI/UIST (math camp admissions), zh: 顶尖数学夏令营选拔考试, adapter: external_web, status: needs_source}
+      - {slug: placement_tests, name: Math Placement Tests (ALEKS, ACCUPLACER), zh: 美国大学数学分级考试, adapter: external_web, status: needs_source}
+
+  popular_competitions:
+    label: 🧠 Popular Math Competitions / 知名数学竞赛
+    competitions:
+      - {slug: amc8,   name: AMC 8,  zh: 美国数学竞赛8年级, adapter: aops_wiki, status: done}
+      - {slug: amc10,  name: AMC 10, zh: 美国数学竞赛10年级, adapter: aops_wiki, status: done}
+      - {slug: amc12,  name: AMC 12, zh: 美国数学竞赛12年级, adapter: aops_wiki, status: done}
+      - {slug: aime,   name: AIME,   zh: 美国数学邀请赛, adapter: aops_wiki, status: done}
+      - {slug: ahsme,  name: AHSME (predecessor of AMC 12), zh: 美国高中数学考试（AMC12前身）, adapter: aops_wiki, status: pending, aops_index: "AHSME Problems and Solutions"}
+      - {slug: ajhsme, name: AJHSME (predecessor of AMC 8), zh: 美国初中数学考试（AMC8前身）, adapter: aops_wiki, status: pending, aops_index: "AJHSME Problems and Solutions"}
+      - {slug: math_kangaroo, name: Mathematical Kangaroo, zh: 袋鼠数学竞赛, adapter: external_web, status: needs_source}
+      - {slug: mathcounts, name: MATHCOUNTS, zh: 美国中学数学竞赛, adapter: official_pdf, status: needs_source, notes: "past competitions at mathcounts.org/resources/past-competitions"}
+      - {slug: purple_comet, name: Purple Comet! Math Meet, zh: 紫色彗星在线团队赛, adapter: external_web, status: needs_source}
+      - {slug: hmmt,   name: Harvard-MIT Mathematics Tournament, zh: 哈佛-麻省理工数学锦标赛, adapter: aops_wiki, status: pending, aops_index: "HMMT Problems and Solutions"}
+      - {slug: smt,    name: Stanford Math Tournament, zh: 斯坦福数学竞赛, adapter: aops_wiki, status: pending, aops_index: "SMT Problems and Solutions"}
+      - {slug: pumac,  name: Princeton University Mathematics Competition, zh: 普林斯顿数学竞赛, adapter: aops_wiki, status: pending, aops_index: "PUMaC Problems and Solutions"}
+      - {slug: bmt,    name: Berkeley Math Tournament, zh: 伯克利数学竞赛（高中）, adapter: aops_wiki, status: pending, aops_index: "BMT Problems and Solutions"}
+      - {slug: bmmt,   name: Berkeley mini Math Tournament, zh: 伯克利迷你数学竞赛（初中）, adapter: external_web, status: needs_source}
+      - {slug: cmimc,  name: Carnegie Mellon Informatics and Mathematics Competition, zh: 卡内基梅隆信息与数学竞赛, adapter: aops_wiki, status: pending, aops_index: "CMIMC Problems and Solutions"}
+      - {slug: dmm,    name: Duke Math Meet, zh: 杜克大学数学竞赛, adapter: aops_wiki, status: pending, aops_index: "Duke Math Meet Problems and Solutions"}
+      - {slug: jhmt,   name: Johns Hopkins Math Tournament, zh: 约翰霍普金斯数学思维挑战, adapter: aops_wiki, status: pending, aops_index: "JHMT Problems and Solutions"}
+      - {slug: comc,   name: Canadian Open Mathematics Challenge, zh: 加拿大公开数学挑战赛, adapter: aops_wiki, status: pending, aops_index: "COMC Problems and Solutions"}
+      - {slug: gauss,  name: Gauss Mathematics Contest (CEMC), zh: 滑铁卢高斯数学竞赛, adapter: aops_wiki, status: pending, aops_index: "Gauss Contest Problems and Solutions"}
+      - {slug: euclid, name: Euclid Math Contest (CEMC), zh: 滑铁卢欧几里得数学竞赛, adapter: aops_wiki, status: pending, aops_index: "Euclid Contest Problems and Solutions"}
+      - {slug: arml,   name: American Regions Math League, zh: 美国区域数学联赛, adapter: aops_wiki, status: pending, aops_index: "ARML Problems and Solutions"}
+      - {slug: cemc_pascal, name: Pascal Contest (CEMC), zh: 滑铁卢帕斯卡竞赛, adapter: aops_wiki, status: pending, aops_index: "Pascal Contest Problems and Solutions"}
+      - {slug: cemc_cayley, name: Cayley Contest (CEMC), zh: 滑铁卢凯莱竞赛, adapter: aops_wiki, status: pending, aops_index: "Cayley Contest Problems and Solutions"}
+      - {slug: cemc_fermat, name: Fermat Contest (CEMC), zh: 滑铁卢费马竞赛, adapter: aops_wiki, status: pending, aops_index: "Fermat Contest Problems and Solutions"}
+
+  graduate_professional:
+    label: 🏫 Graduate & Professional Level / 研究生与专业水平考试
+    competitions:
+      - {slug: putnam, name: Putnam Competition, zh: 普特南数学竞赛, adapter: aops_wiki, status: pending, aops_index: "Putnam Problems and Solutions"}
+      - {slug: phd_qualifying, name: PhD Qualifying Exams, zh: 博士资格考试, adapter: external_web, status: needs_source, notes: "university-specific; collect per-school PDFs later"}
+
+  curriculum_standardized:
+    label: 📚 Curriculum-Based & Standardized Assessments / 课程结业与标准化评估
+    competitions:
+      - {slug: gcse_math, name: GCSE Mathematics, zh: 英国GCSE数学, adapter: official_pdf, status: needs_source}
+      - {slug: staar, name: STAAR (Texas), zh: 德州学术评估, adapter: official_pdf, status: needs_source, notes: "released tests at tea.texas.gov"}
+      - {slug: sbac,  name: SBAC, zh: 美国多州标准评估, adapter: official_pdf, status: needs_source}
+      - {slug: mcas,  name: MCAS (Massachusetts), zh: 麻省综合评估, adapter: official_pdf, status: needs_source, notes: "released items at doe.mass.edu"}
+      - {slug: timss, name: TIMSS, zh: 国际数学与科学趋势研究, adapter: official_pdf, status: needs_source, notes: "released items at timss.bc.edu"}
+      - {slug: naep,  name: NAEP Mathematics, zh: 美国国家教育进展评估, adapter: official_pdf, status: needs_source, notes: "released items at nationsreportcard.gov"}
+
+  other:
+    label: 🧩 Other Notable / 其他值得关注的竞赛
+    competitions:
+      - {slug: mit_integration_bee, name: MIT Integration Bee, zh: MIT积分竞赛, adapter: external_web, status: needs_source}
+      - {slug: mop,   name: Mathematical Olympiad Program (MOP), zh: 美国数学奥林匹克夏令营, adapter: aops_wiki, status: pending, aops_index: "MOP Problems and Solutions"}
+      - {slug: mcm,   name: Mathematical Contest in Modeling, zh: 美国大学生数学建模竞赛, adapter: official_pdf, status: needs_source, notes: "problem statements only (open-ended)"}
+      - {slug: himcm, name: High School Mathematical Contest in Modeling, zh: 美国高中数学建模竞赛, adapter: official_pdf, status: needs_source, notes: "problem statements only (open-ended)"}
+      - {slug: mosp,  name: IMO Selection Process (MOSP/USA TST), zh: 美国IMO选拔, adapter: aops_wiki, status: pending, aops_index: "USA TST Problems and Solutions"}
+      - {slug: beestar_bnc, name: Beestar National Competition, zh: Beestar全国竞赛, adapter: external_web, status: needs_source}
+      - {slug: cantor_dust, name: Cantor Dust Math Tournament, zh: Cantor Dust数学竞赛, adapter: external_web, status: needs_source}
+      - {slug: pmwc,  name: Primary Mathematics World Contest, zh: 国际小学数学世界竞赛, adapter: aops_wiki, status: pending, aops_index: "PMWC Problems and Solutions"}

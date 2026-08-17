@@ -1,0 +1,1 @@
+"{\"status\":200,\"n\":2,\"sample\":\"==Problem==\\n\\nLet <imath>\\\\mathbb{Z}</imath> be the set of integers. Determine all functions <imath>f : \\\\mathbb{Z} \\\\to \\\\mathbb{Z}</imath> such that, for all\\nintegers <imath>a</imath> and <imath>b</imath>, <cmath>f(2a) + 2f(b) = f(f(a + b)).</cmath>\\n\\n==Solution 1==\\nThe only solutions are <imath>f(x)=0,\"}"

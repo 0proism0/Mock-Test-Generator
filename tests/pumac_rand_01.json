@@ -1,0 +1,99 @@
+{
+ "id": "pumac_rand_01",
+ "competition": "PUMaC",
+ "title": "PUMaC — Random Mock #1",
+ "instructions": "10 questions · 60 minutes · No calculator. 1 point per correct answer, no penalty for wrong answers.",
+ "time_limit_min": 60,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2017 PUMaC Number Theory (A) Problem 1",
+   "question": "Shaq sees the numbers 1 through 2017 written on a chalkboard. He repeatedly chooses three numbers, erases them, and writes one plus their median. (For instance, if he erased −2,−1, 0 he would replace them with 0.) If M is the maximum possible ﬁnal value remaining on the board, and if m is the minimum, compute M− m.",
+   "choices": null,
+   "answer": null,
+   "solution": "Claim: M = 2017,m = 3. m≥ 1+min{1, 2,..., 2017} = 2. However, for m = 2, then it comes from a triple with median 1, which requires another element less than or equal to 1, which cannot occur. Instead, we can explicitly describe a process to construct m = 3; for the ﬁrst 1007 iterations, only choose from {3, 4,..., 2017}. Then simply choose the three remaining values: 1, 2 and a value greater than",
+   "type": "proof"
+  },
+  {
+   "n": 2,
+   "source": "2008 PUMaC Geometry Problem 2",
+   "question": "(2 points) What is the area of a circle with a circumference of 8?",
+   "choices": null,
+   "answer": null,
+   "solution": "Thus we can check angles by checking dot products. This veriﬁcation is left to the reader. CB: JP)",
+   "type": "proof"
+  },
+  {
+   "n": 3,
+   "source": "2023 PUMaC Algebra (A) Problem 3",
+   "question": "Let P (x) be a polynomial with integer coefficients satisfying (x2 + 1)P (x− 1) = (x2− 10x + 26)P (x) for all real numbersx. Find the sum of all possible values ofP (0) between 1 and 5000, inclusive.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 4,
+   "source": "2010 PUMaC Combinatorics Problem 4",
+   "question": "Sterling draws 6 circles on the plane, which divide the plane into regions (including the un- bounded region). What is the maximum number of resulting regions?",
+   "choices": null,
+   "answer": null,
+   "solution": "Answer: 18 Solution: In each square, we write th. Erick stands in the square in the 2nd row and 2nd column of a 5 by 5 chessboard. There are $1 bills in the top left and bottom right squares, and there are $5 bills in the top right and bottom left squares, as shown below. $1 $5 E $5 $1 Every second, Erick randomly chooses a square adjacent to the one he currently stands in (that is, a square sharing an edge with the one he currently stands in) and moves to that square. When Erick reaches a square with money on it, he takes it and quits. The expected value of 2 Erick’s winnings in dollars is m/n, where m and n are relatively prime positive integers. Find m + n. Answer: 18 Solution: In each square, we write the expected value of Erick’s winnings starting from that square. From any square in the middle column, Erick has an equal probability of ending in the top left and top right squares, and an equal probability of ending in the bottom left and bottom right squares, by symmetry. Therefore, the total probability of Erick ending in a $1 square is the same as the total probability of Erick ending in a $5 square, so both probabilities are 1/2, and therefore Erick’s expected winnings from any square in the middle column are $3. By an analogous argument, Erick’s expected winnings from any square in the middle row is $3. Let x be the expected value of Erick’s winnings starting from the 2nd row and 2nd column, and let y be the expected value of Erick’s winnings starting from either the 1st row and 2nd column, or the 2nd row and 1st column, since these expected values are the same by symmetry. $1 y $3 $5 y x $3 $3 $3 $3 $3 $3 $3 $5 $3 $1 Then we have a system of equations: x = 1 2· y + 1 2· 3 y = 1 3· x + 1 3· 1 + 1 3· 3 Solving yields x = 13/5, so the answer is 18 .",
+   "type": "proof"
+  },
+  {
+   "n": 5,
+   "source": "2024 PUMaC Number Theory (B) Problem 5",
+   "question": "Let σ be a permutation of the set S :={1, 2,..., 100}, such that σ(a +b)≡ σ(a) + σ(b) (mod 100) whenever a,b,a +b∈ S. Denote by f(s) the sum of the distinct values σ(s) can take over all possible σs satisfying the given condition. What is the nonnegative difference between the maximum and minimum value f takes on when ranging over all s∈S?",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 6,
+   "source": "2007 PUMaC Number Theory Problem 6",
+   "question": "Find the number of ordered triplets of nonnegative integers ( m, n, p) such that m+3 n+5 p≤ 600.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 7,
+   "source": "2019 PUMaC Algebra (B) Problem 7",
+   "question": "Let ω =e 2πi 2017 and ζ =e 2πi 2019 . Let S ={(a,b )∈ Z| 0≤a≤ 2016, 0≤b≤ 2018, (a,b )⁄= (0, 0)}. Compute ∏ (a,b)∈S (ωa−ζ b).",
+   "choices": null,
+   "answer": null,
+   "solution": "Answer: 4072323 Proposed by: Frank Lu First, ﬁxa. Let ω =e 2πi 2017 and ζ =e 2πi 2019 . Let S ={(a,b )∈ Z| 0≤a≤ 2016, 0≤b≤ 2018, (a,b )⁄= (0, 0)}. Compute ∏ (a,b)∈S (ωa−ζ b). Answer: 4072323 Proposed by: Frank Lu First, ﬁxa. Note that 2018∏ b=0 (x−ζ b) =x2019− 1. Hence, if a⁄= 0, 2018∏ b=0 (ωa−ζ b) =ω2019a− 1. For a = 0, we have that this is 2018∏ b=1 (1−ζ b) = 2019, since 2018∏ b=1 (x−ζ b) = 2018∏ b=0 (x−ζ b)/(x−1) = 2018∑ b=0 xb. Thus, our product becomes 2016∏ a=1 (ω2019a−1)∗2019. But note that this then becomes 2017∗2019, 2 since the ω2019a are just a permutation of the 2017th roots of unity besides 1 (as 2017 and 2019 are relatively prime), which is then just 4072323 .",
+   "type": "proof"
+  },
+  {
+   "n": 8,
+   "source": "2023 PUMaC Algebra (A) Problem 8",
+   "question": "Given a positive integer m, define the polynomial Pm(z) =z4− 2m2 m2 + 1z3 + 3m2− 2 m2 + 1z2− 2m2 m2 + 1z + 1. LetS be the set of roots of the polynomial P5(z)·P7(z)·P8(z)·P18(z). Let w be the point in the complex plane which minimizes P z∈S |z−w|. The value of P z∈S |z−w|2 equals a b for relatively prime positive integers a and b. Compute a +b. Name: T eam: W rite answers in table below: Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 1",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 9,
+   "source": "2022 PUMaC Team Problem 9",
+   "question": "In the complex plane, let z1,z 2,z 3 be the roots of the polynomial p(x) = x3−ax2 +bx−ab. Find the number of integers n between 1 and 500 inclusive that are expressible as z4 1 +z4 2 +z4 3 for some choice of positive integers a,b .",
+   "choices": null,
+   "answer": null,
+   "solution": "Answer: 51 For allj∈{ 1, 2, 3}, we havez3 j =az2. In the complex plane, let z1,z 2,z 3 be the roots of the polynomial p(x) = x3−ax2 +bx−ab. Find the number of integers n between 1 and 500 inclusive that are expressible as z4 1 +z4 2 +z4 3 for some choice of positive integers a,b . Proposed by Sunay Joshi Answer: 51 For allj∈{ 1, 2, 3}, we havez3 j =az2 j−bzj+ab. Multiplying byzj, we findz4 j = (a2−b)z2 j +a2b. Summing over j and using the fact that Pz2 j = a2− 2b, we find Pz4 j = a4 + 2b2. In other words, it suffices to find the number of n∈ [1, 500] of the form a4 + 2b2 for a,b≥ 1. We first count the total number of pairs (a,b ) satisfying the condition. a = 1: this implies 2b2≤ 500− 14, hence b≤ 15. This yields 15 solutions. a = 2: this implies 2b2≤ 500− 24, hence b≤ 15. This yields 15 solutions. a = 3: this implies 2b2≤ 500− 34, hence b≤ 14. This yields 14 solutions. a = 4: this implies 2b2≤ 500− 44, hence b≤ 11. This yields 11 solutions. Next, we eliminate duplicates. Note that if a4 + 2b2 =c4 + 2d2, then a≡b (mod 2). Hence it suffices to check the cases (a,c ) = (1, 3) and (a,c ) = (2, 4). If (a,c ) = (1, 3), then 1 4 + 2b2 = 34 + 2d2, implying b2−d2 = 40. Thus the pair (b−d,b +d) can either be (2, 20) or (4, 10). These yield b = 11 and b = 7 respectively, which correspond to the duplicate solutions n = 243 and n = 99. If (a,c ) = (2, 4), then 2 4 + 2b2 = 44 + 2d2, implying b2−d2 = 24. Thus the pair (b−d,b +d) can either be (2, 12) or (4, 6). These yield b = 7 and b = 5 respectively, which correspond to the duplicate solutions n = 114 and n = 66. Subtracting the 4 duplicates from our original count of 55 = 15 + 15 + 14 + 11, we find our answer of 51.",
+   "type": "proof"
+  },
+  {
+   "n": 10,
+   "source": "2008 PUMaC Combinatorics Problem 10",
+   "question": "(7 points) How many spanning trees does the following graph (with 6 vertices and 9 edges) have? (A spanning tree is a subset of edges that spans all of the vertices of the original graph, but does not contain any cycles.) A B C DE F 2",
+   "choices": null,
+   "answer": null,
+   "solution": "Joe makes two cubes of sidelengths 9 and 10 from 1729 randomly oriented and randomly arranged unit cubes, which are initially unpainted. These cubes are dipped into white paint. Then two cubes of sidelengths 1 and 12 are formed from the same unit cubes, again randomly oriented and randomly arranged, and these cubes are dipped into paint remover. Joe continues to alternately dip cubes of sides 9 and 10 into paint and cubes of sides 1 and 12 into paint remover ad nauseam. What is the limit of the expected number of painted unit cube faces immediately after dipping in paint remover? Cube painting question (ANS: 2974267296 537409 Let a be the number of faces painted on the paint stage. Let b be the number of faces erased at the paint remover stage. Let X be the limit of the expected number of painted faces after the paint stage. Let Y be the limit of the expected number of painted faces after the paint remover stage. Then we have the following system of equations: Y = 6· 1729− b 6· 1729 XX = a + 6· 1729− a 6· 1729 Y (1) We wish to ﬁnd Y . Solving these, we ﬁnd 10374 10374−b Y = a + 10374−a 10374 Y . Thus 103742Y = a(10374− b)10374 + (10374− a)(10374− b)Y . Simplifying, we have: Y = 10374a(10374− b) 10374(a + b)− ab (2) 5 Combinatorics Now we calculate a = 6∗ (92 + 102) = 1086 and b = 6∗ (12 + 122) = 870. Substituting this into our equation for Y , we ﬁnd: Y = 2974267296 537409 (3) as claimed. CB: JVP)",
+   "type": "proof"
+  }
+ ]
+}

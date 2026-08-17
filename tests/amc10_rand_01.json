@@ -1,0 +1,359 @@
+{
+ "id": "amc10_rand_01",
+ "competition": "AMC 10",
+ "title": "AMC 10 — Random Mock #1",
+ "instructions": "25 questions · 75 minutes · No calculator. 1 point per correct answer, no penalty for wrong answers.",
+ "time_limit_min": 75,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2025 AMC 10A Problem 1",
+   "question": "Anna leaves town on her bicycle at $1{:}30$ PM, traveling due north at $12$ km/h. Ben leaves the same town at $2{:}00$ PM, biking due north at $16$ km/h along the same road. How many minutes after Ben starts does he catch up with Anna?",
+   "choices": {
+    "A": "60",
+    "B": "75",
+    "C": "90",
+    "D": "105",
+    "E": "120"
+   },
+   "answer": "C",
+   "solution": "Anna has a $12 \\times 0.5 = 6$ km head start. Ben gains $16-12=4$ km per hour, so he closes 6 km in $\\frac{6}{4}=1.5$ hours $= 90$ minutes."
+  },
+  {
+   "n": 2,
+   "source": "2025 AMC 10B Problem 2",
+   "question": "Jerry wrote down the ones digit of each of the first $100$ positive squares: $1, 4, 9, 6, 5, 6, \\dots$. What is the sum of these $100$ digits?",
+   "choices": {
+    "A": "400",
+    "B": "405",
+    "C": "420",
+    "D": "445",
+    "E": "450"
+   },
+   "answer": "E",
+   "solution": "The ones digits of squares repeat every 10: $1,4,9,6,5,6,9,4,1,0$, summing to $45$. Ten complete cycles give $45 \\times 10 = 450$."
+  },
+  {
+   "n": 3,
+   "source": "2024 AMC 10A Problem 3",
+   "question": "What is the least prime number that can be written as the sum of $4$ distinct prime numbers?",
+   "choices": {
+    "A": "17",
+    "B": "15",
+    "C": "19",
+    "D": "21",
+    "E": "23"
+   },
+   "answer": "A",
+   "solution": "The smallest possible sum of 4 distinct primes is $2+3+5+7=17$, which is itself prime. So the answer is $17$."
+  },
+  {
+   "n": 4,
+   "source": "2024 AMC 10B Problem 4",
+   "question": "Balls numbered $1, 2, 3, \\dots$ are deposited into $5$ bins labeled A, B, C, D, E following the bouncing pattern $$A, B, C, D, E, D, C, B, A, B, C, D, E, D, C, B, A, \\dots$$ (one ball per bin, in numerical order). Which bin receives ball number $51$?",
+   "choices": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D",
+    "E": "E"
+   },
+   "answer": "C",
+   "solution": "The pattern has period $8$: $A,B,C,D,E,D,C,B$. Since $51 = 6\\cdot 8 + 3$, ball 51 lands in the 3rd position of the cycle, which is bin $C$."
+  },
+  {
+   "n": 5,
+   "source": "2014 AMC 10A Problem 5",
+   "question": "On an algebra quiz, $10\\%$ of the students scored $60$ points, $30\\%$ scored $80$ points, $40\\%$ scored $90$ points, and the rest scored $100$ points. What is the difference between the mean and median score of the students' scores on this quiz?",
+   "choices": {
+    "A": "$2$",
+    "B": "$3$",
+    "C": "$4$",
+    "D": "$5$",
+    "E": "$6$"
+   },
+   "answer": "C",
+   "solution": "The mean score is $0.10(60)+0.30(80)+0.40(90)+0.20(100)=6+24+36+20=86$. Since $10\\%$ scored $60$ and $40\\%$ scored $80$ or less, while $80\\%$ scored $90$ or less, the middle student scored $90$, so the median is $90$. The difference is $90-86=4$."
+  },
+  {
+   "n": 6,
+   "source": "2024 AMC 10B Problem 6",
+   "question": "A rectangle has integer side lengths and an area of $1050$. What is the least possible perimeter of the rectangle?",
+   "choices": {
+    "A": "$124$",
+    "B": "$130$",
+    "C": "$134$",
+    "D": "$142$",
+    "E": "$170$"
+   },
+   "answer": "B",
+   "solution": "For a fixed area, the perimeter is minimized when the sides are as close as possible. Since $\\sqrt{1050}\\approx 32.4$, look at factor pairs of $1050$ near $32$: the pair $30\\times 35$ works, giving perimeter $2(30+35)=130$. Other nearby pairs give more: $25\\times 42\\to 134$, $21\\times 50\\to 142$. The least possible perimeter is $130$."
+  },
+  {
+   "n": 7,
+   "source": "2016 AMC 10A Problem 7",
+   "question": "The mean, median, and mode of the $7$ data values $20, 150, x, 50, 70, 110, 80$ are all equal to $x$. What is the value of $x$?",
+   "choices": {
+    "A": "$50$",
+    "B": "$60$",
+    "C": "$70$",
+    "D": "$75$",
+    "E": "$80$"
+   },
+   "answer": "E",
+   "solution": "The six known values sum to $20+150+50+70+110+80=480$. Setting the mean equal to $x$ gives $\\frac{480+x}{7}=x$, so $480=6x$ and $x=80$. Check: the sorted list $20,50,70,80,80,110,150$ has median $80$, and $80$ is the only repeated value, so the mode is $80$ as well."
+  },
+  {
+   "n": 8,
+   "source": "2017 AMC 10A Problem 8",
+   "question": "At a gathering of $40$ people, there are $25$ people who all know each other and $15$ people who know no one. People who know each other hug, and people who do not know each other shake hands. How many handshakes occur within the group?",
+   "choices": {
+    "A": "$480$",
+    "B": "$375$",
+    "C": "$420$",
+    "D": "$450$",
+    "E": "$510$"
+   },
+   "answer": "A",
+   "solution": "There are $\\binom{40}{2}=780$ pairs of people altogether. The only pairs who know each other (and hence hug) are the $\\binom{25}{2}=300$ pairs within the group of $25$ mutual acquaintances. Every other pair shakes hands, giving $780-300=480$ handshakes."
+  },
+  {
+   "n": 9,
+   "source": "2021 AMC 10A Problem 9",
+   "question": "What is the least possible value of $(xy-2)^2+(x+y)^2$ for real numbers $x$ and $y$?",
+   "choices": {
+    "A": "2",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "8"
+   },
+   "answer": "B",
+   "solution": "Let $u=xy$ and $v=x+y$; real $x,y$ require $v^2 \\geq 4u$. On the boundary $v^2=4u$: $(u-2)^2+4u = u^2+4 \\geq 4$, with equality at $u=v=0$ (i.e. $x=y=0$). The minimum is $4$."
+  },
+  {
+   "n": 10,
+   "source": "2019 AMC 10A Problem 10",
+   "question": "A rectangular floor that is $12$ feet wide and $19$ feet long is tiled with $228$ one-foot square tiles. A bug walks from one corner to the opposite corner in a straight line. Including the first and the last tile, how many tiles does the bug visit?",
+   "choices": {
+    "A": "$28$",
+    "B": "$29$",
+    "C": "$30$",
+    "D": "$31$",
+    "E": "$32$"
+   },
+   "answer": "C",
+   "solution": "The bug starts in one tile and enters a new tile each time it crosses an interior grid line. It crosses $18$ interior vertical lines and $11$ interior horizontal lines. Since $\\gcd(12,19)=1$, the diagonal never passes through an interior lattice point, so no two crossings coincide. The number of tiles visited is $1+18+11=30$."
+  },
+  {
+   "n": 11,
+   "source": "2020 AMC 10A Problem 11",
+   "question": "What is the median of the following list of $2000$ numbers$?$\n$$1, 2, 3, \\ldots, 1000, 1^2, 2^2, 3^2, \\ldots, 1000^2$$",
+   "choices": {
+    "A": "$968.5$",
+    "B": "$969.5$",
+    "C": "$970.5$",
+    "D": "$971.5$",
+    "E": "$972.5$"
+   },
+   "answer": "B",
+   "solution": "For $1\\leq k\\leq 1000$, the number of list entries that are at most $k$ equals $k+\\lfloor\\sqrt{k}\\rfloor$: the entries $1,2,\\dots,k$ plus the $\\lfloor\\sqrt{k}\\rfloor$ perfect squares not exceeding $k$. For $961\\leq k\\leq 1000$ we have $\\lfloor\\sqrt{k}\\rfloor=31$. At $k=968$ the count is $968+31=999$; at $k=969$ it is $1000$; at $k=970$ it is $1001$. So the $1000^{\\text{th}}$ and $1001^{\\text{st}}$ smallest entries are $969$ and $970$, and the median is $\\frac{969+970}{2}=969.5$."
+  },
+  {
+   "n": 12,
+   "source": "2020 AMC 10B Problem 12",
+   "question": "The decimal representation of $\\dfrac{1}{2^{10} \\cdot 5^{25}}$ consists of a string of zeros after the decimal point, followed by the first nonzero digit. How many zeros are in that string?",
+   "choices": {
+    "A": "10",
+    "B": "15",
+    "C": "18",
+    "D": "20",
+    "E": "25"
+   },
+   "answer": "D",
+   "solution": "$\\dfrac{1}{2^{10}5^{25}} = \\dfrac{2^{15}}{10^{25}} = \\dfrac{32768}{10^{25}}$. Since $32768$ has 5 digits, there are $25-5=20$ zeros before the first nonzero digit."
+  },
+  {
+   "n": 13,
+   "source": "2022 AMC 10B Problem 13",
+   "question": "The positive difference between a pair of primes is equal to $2$, and the positive difference between the cubes of the two primes is $10586$. What is the sum of the digits of the least prime that is greater than those two primes?",
+   "choices": {
+    "A": "$11$",
+    "B": "$8$",
+    "C": "$10$",
+    "D": "$13$",
+    "E": "$16$"
+   },
+   "answer": "A",
+   "solution": "Let the primes be $p$ and $p+2$. Then $(p+2)^3-p^3=6p^2+12p+8=10586$, so $p^2+2p=1763$, giving $p=41$ (since $41^2+2\\cdot 41=1681+82=1763$). Indeed $41$ and $43$ are both prime. The least prime greater than $43$ is $47$, whose digit sum is $4+7=11$."
+  },
+  {
+   "n": 14,
+   "source": "2019 AMC 10B Problem 14",
+   "question": "What is the sum of the digits of the base-ten representation of $15!$?",
+   "choices": {
+    "A": "27",
+    "B": "36",
+    "C": "40",
+    "D": "42",
+    "E": "45"
+   },
+   "answer": "E",
+   "solution": "$15! = 1{,}307{,}674{,}368{,}000$. Its nonzero digits sum to $1+3+0+7+6+7+4+3+6+8 = 45$."
+  },
+  {
+   "n": 15,
+   "source": "2024 AMC 10A Problem 15",
+   "question": "Let $M$ be the greatest integer such that both $M+1117$ and $M+3357$ are perfect squares. What is the units digit of $M$?",
+   "choices": {
+    "A": "$1$",
+    "B": "$2$",
+    "C": "$4$",
+    "D": "$6$",
+    "E": "$8$"
+   },
+   "answer": "C",
+   "solution": "Write $M+1117=t^2$ and $M+3357=s^2$ with $s>t\\geq 0$. Then $s^2-t^2=2240$, i.e. $(s-t)(s+t)=2240$. Both factors have the same parity, and since their product is even, both are even. To maximize $M$ we maximize $t$, which means making $s+t$ as large as possible: $s-t=2$ and $s+t=1120$, giving $t=559$ and $s=561$. Then $M=559^2-1117=312481-1117=311364$, whose units digit is $4$."
+  },
+  {
+   "n": 16,
+   "source": "2018 AMC 10B Problem 16",
+   "question": "Let $a_1 < a_2 < \\cdots < a_{10}$ be a strictly increasing sequence of positive integers with $a_1+a_2+\\cdots+a_{10}=100$. What is the greatest possible value of $a_{10}$?",
+   "choices": {
+    "A": "55",
+    "B": "45",
+    "C": "50",
+    "D": "60",
+    "E": "65"
+   },
+   "answer": "A",
+   "solution": "To maximize $a_{10}$, minimize the rest: $a_1,\\dots,a_9 \\geq 1,2,\\dots,9$, summing to $45$. Then $a_{10} = 100-45 = 55$, and $55 > 9$ keeps the sequence increasing. ✓"
+  },
+  {
+   "n": 17,
+   "source": "2017 AMC 10A Problem 17",
+   "question": "How many points with integer coordinates lie on the circle $x^2+y^2=50$?",
+   "choices": {
+    "A": "8",
+    "B": "10",
+    "C": "11",
+    "D": "12",
+    "E": "16"
+   },
+   "answer": "D",
+   "solution": "$a^2+b^2=50$ has solutions $(\\pm1,\\pm7)$, $(\\pm7,\\pm1)$ (8 points) and $(\\pm5,\\pm5)$ (4 points) — $12$ points in total."
+  },
+  {
+   "n": 18,
+   "source": "2014 AMC 10B Problem 18",
+   "question": "A list of $11$ positive integers has a mean of $9$, a median of $8$, and a unique mode of $7$. What is the largest possible value of an integer in the list?",
+   "choices": {
+    "A": "$29$",
+    "B": "$30$",
+    "C": "$31$",
+    "D": "$32$",
+    "E": "$33$"
+   },
+   "answer": "D",
+   "solution": "The numbers sum to $11\\cdot 9=99$. In sorted order $a_1\\leq\\cdots\\leq a_{11}$ we need $a_6=8$. To maximize $a_{11}$, minimize the other ten entries. Make $7$ the unique mode by using three $7$'s; then no other value may appear three times. The smallest choice for the five entries below the median is $1,1,7,7,7$ (sum $23$), and $a_6=8$. For $a_7,a_8,a_9,a_{10}$ (each at least $8$), we may use $8$ at most once more and any other value at most twice, so the minimum is $8,9,9,10$ (sum $36$). Then $a_{11}=99-23-8-36=32$, achieved by $1,1,7,7,7,8,8,9,9,10,32$. (Using only two $7$'s forces everything else to appear at most once, giving a smaller maximum of $29$.)"
+  },
+  {
+   "n": 19,
+   "source": "2011 AMC 10B Problem 19",
+   "question": "What is the product of all the roots of the equation $$\\sqrt{4 | x | + 15} = \\sqrt{x^2 - 30}?$$",
+   "choices": {
+    "A": "$-45$",
+    "B": "$-81$",
+    "C": "$-16$",
+    "D": "$81$",
+    "E": "$6561$"
+   },
+   "answer": "B",
+   "solution": "Squaring both sides gives $4|x|+15=x^2-30$, so $x^2-4|x|-45=0$. Factoring in $|x|$: $(|x|-9)(|x|+5)=0$, so $|x|=9$ (the root $|x|=-5$ is impossible). Both $x=9$ and $x=-9$ satisfy the original equation, and the product of all roots is $9\\cdot(-9)=-81$."
+  },
+  {
+   "n": 20,
+   "source": "2018 AMC 10B Problem 20",
+   "question": "A function $f$ is defined recursively by $f(1)=f(2)=1$ and $$f(n)=f(n-1)-f(n-2)+n$$for all integers $n \\geq 3$. What is $f(2024)$?",
+   "choices": {
+    "A": "$2021$",
+    "B": "$2022$",
+    "C": "$2023$",
+    "D": "$2024$",
+    "E": "$2025$"
+   },
+   "answer": "C",
+   "solution": "From the recursion, $f(n)-f(n-1)+f(n-2)=n$, and shifting indices, $f(n-1)-f(n-2)+f(n-3)=n-1$. Adding these gives $f(n)+f(n-3)=2n-1$. Applying the same identity at $n+3$ and subtracting yields $f(n+3)-f(n-3)=6$, so every $6$ steps the values increase by $6$. Since $2024=6\\cdot 337+2$, we get $f(2024)=f(2)+6\\cdot 337=1+2022=2023$."
+  },
+  {
+   "n": 21,
+   "source": "2015 AMC 10A Problem 21",
+   "question": "A tetrahedron has three mutually perpendicular edges of lengths $3$, $4$, and $5$ meeting at one vertex. What is its volume?",
+   "choices": {
+    "A": "12",
+    "B": "15",
+    "C": "20",
+    "D": "10",
+    "E": "30"
+   },
+   "answer": "D",
+   "solution": "Place the vertex at the origin with edges along the axes: $V = \\frac16 \\cdot 3 \\cdot 4 \\cdot 5 = 10$."
+  },
+  {
+   "n": 22,
+   "source": "2015 AMC 10B Problem 22",
+   "question": "A regular hexagon has side length $2$. What is the sum of the lengths of all of its diagonals?",
+   "choices": {
+    "A": "$12+6\\sqrt3$",
+    "B": "$18+6\\sqrt3$",
+    "C": "$12+12\\sqrt3$",
+    "D": "$24$",
+    "E": "$12+18\\sqrt3$"
+   },
+   "answer": "C",
+   "solution": "A regular hexagon has $6$ short diagonals (spanning two sides) of length $2\\sqrt3$ and $3$ long diagonals (diameters) of length $4$. Sum $= 6\\cdot 2\\sqrt3 + 3\\cdot 4 = 12\\sqrt3+12$."
+  },
+  {
+   "n": 23,
+   "source": "2015 AMC 10A Problem 23",
+   "question": "The zeroes of the function $f(x)=x^2-ax+3a$ are integers. What is the sum of the possible values of $a?$",
+   "choices": {
+    "A": "$24$",
+    "B": "$20$",
+    "C": "$18$",
+    "D": "$26$",
+    "E": "$28$"
+   },
+   "answer": "A",
+   "solution": "Let the integer roots be $r$ and $s$. Then $r+s=a$ and $rs=3a=3(r+s)$, so $rs-3r-3s=0$, i.e. $(r-3)(s-3)=9$. The factorizations of $9$ (up to order) are $1\\cdot 9$, $3\\cdot 3$, $(-1)(-9)$, and $(-3)(-3)$, giving $(r,s)=(4,12),(6,6),(2,-6),(0,0)$. The corresponding values of $a=r+s$ are $16, 12, -4, 0$, whose sum is $24$."
+  },
+  {
+   "n": 24,
+   "source": "2014 AMC 10B Problem 24",
+   "question": "Four people — two of them named Ann and Ben — sit down at a round table with $4$ seats. Seatings that differ only by a rotation are considered the same. In how many distinguishable seatings do Ann and Ben $\\textbf{not}$ sit next to each other?",
+   "choices": {
+    "A": "1",
+    "B": "3",
+    "C": "4",
+    "D": "6",
+    "E": "2"
+   },
+   "answer": "E",
+   "solution": "Fix Ann's seat (rotations identified). Of the other 3 seats, 2 are adjacent to Ann and 1 is opposite; Ben must take the opposite seat. The remaining 2 people fill the last 2 seats in $2$ ways: $1 \\cdot 2 = 2$ seatings."
+  },
+  {
+   "n": 25,
+   "source": "2013 AMC 10A Problem 25",
+   "question": "In how many ways can a $2 \\times 10$ rectangle be completely tiled by $1 \\times 2$ dominoes (which may be rotated)?",
+   "choices": {
+    "A": "89",
+    "B": "55",
+    "C": "76",
+    "D": "123",
+    "E": "144"
+   },
+   "answer": "A",
+   "solution": "The number of tilings $T(n)$ of a $2\\times n$ board satisfies $T(n)=T(n-1)+T(n-2)$ with $T(1)=1$, $T(2)=2$: $1,2,3,5,8,13,21,34,55,89$. Hence $T(10)=89$."
+  }
+ ]
+}

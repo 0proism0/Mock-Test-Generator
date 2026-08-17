@@ -1,0 +1,3174 @@
+{
+ "competition": "UKMT",
+ "set": "A",
+ "variants": [
+  {
+   "position": 1,
+   "source": "2026 UKMT JMC Problem 1",
+   "question": "Which of the following calculations gives the largest result?",
+   "choices": {
+    "A": "2× 0+ 26",
+    "B": "2+ 0+ 2× 6",
+    "C": "20+ 26",
+    "D": "20× 2− 6",
+    "E": "20+ 2× 6"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2026 UKMT JMC Problem 3",
+   "question": "What is the value of 4− 3− 2− 1 8− 7− 6− 5 ?",
+   "choices": {
+    "A": "0",
+    "B": "1 5",
+    "C": "1 4",
+    "D": "1 3",
+    "E": "1 2"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2026 UKMT JMC Problem 4",
+   "question": "Barry thinks of a number. Half of the number, plus a third of the number, plus a quarter of the number is 52. What number is Barry thinking of?",
+   "choices": {
+    "A": "24",
+    "B": "30",
+    "C": "36",
+    "D": "42",
+    "E": "48"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2026 UKMT JMC Problem 5",
+   "question": "The Salisbury Cathedral clock is thought to be the world’s oldest working clock, dating from about 1386. It was restored in 1956. Since its restoration, the clock strikes once on the hour every hour. Which of these is the best approximation for the number of times it has struck since its restoration?",
+   "choices": {
+    "A": "25 000",
+    "B": "200 000",
+    "C": "300 000",
+    "D": "600 000",
+    "E": "1 200 000"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2026 UKMT JMC Problem 6",
+   "question": "Ada likes adding numbers! On Monday she added all the three-digit numbers each of whose digits is either 0 or 1. On Tuesday she added all the two-digit numbers each of whose digits is either 2 or 3. On Wednesday she added her answers from Monday and Tuesday. What was the result of Ada’s final addition?",
+   "choices": {
+    "A": "310",
+    "B": "421",
+    "C": "532",
+    "D": "643",
+    "E": "754"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2026 UKMT JMC Problem 7",
+   "question": "Sam is asked to write 2026 as the sum of a list of five different primes. How many possibilities are there for the smallest prime in Sam’s list ?",
+   "choices": {
+    "A": "one",
+    "B": "two",
+    "C": "three",
+    "D": "four",
+    "E": "more than four"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2026 UKMT JMC Problem 8",
+   "question": "Rectangle𝑃𝑄𝑅𝑆 has perimeter 30cm. The area of square𝑃𝑈𝑇𝑋 is 9cm2. What is the perimeter of rectangle𝑇𝑉𝑅𝑊 ?",
+   "choices": {
+    "A": "12 cm",
+    "B": "15 cm",
+    "C": "18 cm",
+    "D": "21 cm",
+    "E": "24 cm P X S U T W Q V R"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2026 UKMT JMC Problem 9",
+   "question": "Carl counts in a curious way! He starts at 1, but then always misses out multiples of three and multiples of five. What number would Carl say last when he counts 15 items?",
+   "choices": {
+    "A": "22",
+    "B": "23",
+    "C": "26",
+    "D": "28",
+    "E": "29 © UK Mathematics Trust 2026 www.ukmt.org.uk Junior Mathematical Challenge Wednesday 29 April 2026"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 11,
+   "source": "2026 UKMT JMC Problem 11",
+   "question": "In how many ways can all the digits1, 2, 3, 4, 5, 6, 7, 8 and 9 be placed in a3× 3 grid so that the sum of the numbers in each row is even and the sum of the numbers in each column is odd?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "more than 3"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 13,
+   "source": "2026 UKMT JMC Problem 13",
+   "question": "The letters𝑝,𝑞 and𝑟 represent digits. The sum of the two-digit numbers‘𝑝𝑞’and‘𝑝𝑟’is 75. What is the value of𝑝+𝑞+𝑟?",
+   "choices": {
+    "A": "12",
+    "B": "14",
+    "C": "15",
+    "D": "16",
+    "E": "18"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 17,
+   "source": "2026 UKMT JMC Problem 17",
+   "question": "Hanlin writes down three 1s and three 0s, according to the following rule: while writing down the numbers, he must always have written at least as many 1s as he has written 0s. How many such numbers can he form from the six digits ?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8 © UK Mathematics Trust 2026 www.ukmt.org.uk Junior Mathematical Challenge Wednesday 29 April 2026"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 18,
+   "source": "2026 UKMT JMC Problem 18",
+   "question": "Five children, Amy, Bob, Cat, Dan and Eve each make a statement about the number of pencils they have in their pencil case. Amy: \"I have more than Bob.\" Bob: \"I have more than Cat and more than Dan.\" Cat: \"I have more than Dan.\" Dan: \"I have more than Eve and more than Amy.\" Eve: \"I have more than Amy.\" What is the largest number of these statements that can be true?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 19,
+   "source": "2026 UKMT JMC Problem 19",
+   "question": "In the triangle𝑄𝑃𝑅, ∠𝑄𝑃𝑅 = 100°,𝑄𝑃 =𝑄𝑆 and𝑅𝑃 =𝑅𝑇. What is the size of∠𝑇𝑃𝑆?",
+   "choices": {
+    "A": "30°",
+    "B": "35°",
+    "C": "40°",
+    "D": "45°",
+    "E": "it depends on the size of∠𝑅𝑄𝑃. P Q T S R"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 20,
+   "source": "2026 UKMT JMC Problem 20",
+   "question": "In Kush’s Cake shop, there are chocolate cakes, cherry cakes, cream cakes and coffee cakes. For every seven chocolate cakes, there are six cherry cakes. For every five cherry cakes, there are four cream cakes. For every three cream cakes, there are two coffee cakes. Which of these could be the total number of cakes in Kush’s shop?",
+   "choices": {
+    "A": "60",
+    "B": "150",
+    "C": "240",
+    "D": "330",
+    "E": "420"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 21,
+   "source": "2026 UKMT JMC Problem 21",
+   "question": "Whatisthesmallestnumberofrectangles,eachmeasuring5 cmby30 cm,whichcanbefittedtogether without gaps or overlapping to form a rectangle whose side-lengths are in the ratio4 : 5?",
+   "choices": {
+    "A": "15",
+    "B": "30",
+    "C": "45",
+    "D": "60",
+    "E": "75"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 22,
+   "source": "2026 UKMT JMC Problem 22",
+   "question": "In Poppy’s pond there are frogs and snakes. Four-fifths of the frogs are green frogs and six-sevenths of the snakes are black snakes. Which of the following couldnot be the total number of creatures in Poppy’s pond?",
+   "choices": {
+    "A": "22",
+    "B": "23",
+    "C": "24",
+    "D": "26",
+    "E": "27"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 23,
+   "source": "2026 UKMT JMC Problem 23",
+   "question": "Five different numbers are written in ascending order. The mean of the first four numbers is 5. The mean of the last four numbers is 7. What is the range of the numbers?",
+   "choices": {
+    "A": "2",
+    "B": "4",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 25,
+   "source": "2026 UKMT JMC Problem 25",
+   "question": "Four runners entered a race. We are told that at most two tied at the finish line (and were therefore given the same finishing position). How many possible finishing orders were there for the race?",
+   "choices": {
+    "A": "30",
+    "B": "60",
+    "C": "75",
+    "D": "81",
+    "E": "84 © UK Mathematics Trust 2026 www.ukmt.org.uk"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2025 UKMT JMC Problem 1",
+   "question": "What is1 2 of 10% of 20?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "5",
+    "D": "10",
+    "E": "20"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2025 UKMT JMC Problem 2",
+   "question": "What is the value of4444+ 5555 1111+ 2222 ?",
+   "choices": {
+    "A": "3",
+    "B": "6.5",
+    "C": "33",
+    "D": "333",
+    "E": "3333"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2025 UKMT JMC Problem 3",
+   "question": "How many of the following are factors of 2025? 15 25 45 75 225",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2025 UKMT JMC Problem 4",
+   "question": "In March 2024, the British runner, Jasmin Paris, became the first woman ever to finish the 100-mile ‘Barkley Marathons’ in Tennessee. Her finishing time of 59 hours, 58 minutes and 21 seconds meant that she narrowly beat the cut-off time of 60 hours for the event. By how many seconds did Jasmin beat this cut-off time?",
+   "choices": {
+    "A": "99",
+    "B": "109",
+    "C": "119",
+    "D": "129",
+    "E": "139"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2025 UKMT JMC Problem 6",
+   "question": "Carol and Sandra swim at their local 25mpool. Sandra always swims 4 lengths in the same amount of time as Carol swims 3 lengths. One Monday morning, Carol swims 36 lengths. How far would Sandra swim in the same time?",
+   "choices": {
+    "A": "600 m",
+    "B": "675 m",
+    "C": "900 m",
+    "D": "1200 m",
+    "E": "1350 m"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2025 UKMT JMC Problem 7",
+   "question": "What is the difference between the smallest four-digit multiple of 3 and the largest three-digit multiple of 4?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2025 UKMT JMC Problem 8",
+   "question": "The country which, on average, eats the most chocolate per person is Switzerland, with the average person consuming 8.8kgeach year. How many 100gchocolate bars would this be?",
+   "choices": {
+    "A": "8.8",
+    "B": "88",
+    "C": "880",
+    "D": "8800",
+    "E": "88 000"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2025 UKMT JMC Problem 9",
+   "question": "All four digits of 2 two-digit numbers are different. What is the smallest possible sum of the two numbers?",
+   "choices": {
+    "A": "30",
+    "B": "33",
+    "C": "37",
+    "D": "40",
+    "E": "42"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2025 UKMT JMC Problem 10",
+   "question": "The length of a turtle is 60cmplus a third of its length. How long is the turtle?",
+   "choices": {
+    "A": "70 cm",
+    "B": "75 cm",
+    "C": "85 cm",
+    "D": "90 cm",
+    "E": "120 cm"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 11,
+   "source": "2025 UKMT JMC Problem 11",
+   "question": "Three consecutive one-digit positive integers are a square, a cube and a prime (not necessarily in that order). What is the product of the three integers?",
+   "choices": {
+    "A": "0",
+    "B": "6",
+    "C": "60",
+    "D": "210",
+    "E": "504 © UK Mathematics Trust 2025 www.ukmt.org.uk Junior Mathematical Challenge Thursday 1 May 2025"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 13,
+   "source": "2025 UKMT JMC Problem 13",
+   "question": "In a sequence of rectangles, the first has height 10cm and width 13cm. Each of the following rectangles is 2cm higher and 1cm wider than the previous rectangle in the sequence. How many rectangles in this sequence are also squares?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "4",
+    "E": "an infinite number"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 14,
+   "source": "2025 UKMT JMC Problem 14",
+   "question": "Which of these is equal to33+ 43+ 53?",
+   "choices": {
+    "A": "63",
+    "B": "83",
+    "C": "103",
+    "D": "123",
+    "E": "129"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 15,
+   "source": "2025 UKMT JMC Problem 15",
+   "question": "Gill has had a baby girl! Weighing the baby at the clinic was not as much of a problem as when Gill was small, but the only available scales measured in imperial units. Baby weighed 8 pounds 13 ounces. Given that there are 16 ounces in a pound and 1 ounce is equivalent to approximately 28.35 grams, what was the approximate weight, in kilograms, of Gill’s baby ?",
+   "choices": {
+    "A": "3 kg",
+    "B": "4 kg",
+    "C": "5 kg",
+    "D": "6 kg",
+    "E": "7 kg"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 16,
+   "source": "2025 UKMT JMC Problem 16",
+   "question": "What is the sum of20% of 40% of 60and 40% of 60% of 80?",
+   "choices": {
+    "A": "20",
+    "B": "20.4",
+    "C": "24",
+    "D": "24.4",
+    "E": "28"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 18,
+   "source": "2025 UKMT JMC Problem 18",
+   "question": "A particular number has exactly nine factors, including 1 and itself. The number has 9 and 12 as factors. What is the number?",
+   "choices": {
+    "A": "24",
+    "B": "36",
+    "C": "48",
+    "D": "72",
+    "E": "144"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 19,
+   "source": "2025 UKMT JMC Problem 19",
+   "question": "Ibraheem has 10 cards. Four display the letter P; three display Q; two display R and one displays S. He also has 10 counters. One shows the number 3; two show 1; three show 4 and four show 2. He places one counter on the top of each card so that every pairing is different. Which one of these pairings does henot make?",
+   "choices": {
+    "A": "P2",
+    "B": "R4",
+    "C": "Q1",
+    "D": "R2",
+    "E": "S4 © UK Mathematics Trust 2025 www.ukmt.org.uk Junior Mathematical Challenge Thursday 1 May 2025"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 20,
+   "source": "2025 UKMT JMC Problem 20",
+   "question": "𝑃,𝑄,𝑅 and𝑆 are four points in that order on a straight line;𝑃𝑅 = 6 cm, 𝑄𝑆 = 4 cm and𝑅 is 1cm nearer to𝑆 than it is to𝑄. What is the length of𝑃𝑆?",
+   "choices": {
+    "A": "7 cm",
+    "B": "7.5 cm",
+    "C": "8 cm",
+    "D": "8.5 cm",
+    "E": "9 cm"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 22,
+   "source": "2025 UKMT JMC Problem 22",
+   "question": "Idil has 12 bags of sweets. Some bags contain 3 mints, 4 toffees and a fudge; some bags contain 4 mints, 5 toffees and 2 fudges; the remaining bags contain 6 mints and 3 fudges. The bags contain 31 toffees in total. In total, how many fudges do the bags contain?",
+   "choices": {
+    "A": "22",
+    "B": "23",
+    "C": "24",
+    "D": "25",
+    "E": "26"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 24,
+   "source": "2025 UKMT JMC Problem 24",
+   "question": "When 180 is divided by a positive integer𝑁, the remainder is 5. For how many values of𝑁 is this true?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 25,
+   "source": "2025 UKMT JMC Problem 25",
+   "question": "Given a cube, how many equilateral triangles are there whose vertices are three vertices of the cube?",
+   "choices": {
+    "A": "1",
+    "B": "3",
+    "C": "6",
+    "D": "8",
+    "E": "24 © UK Mathematics Trust 2025 www.ukmt.org.uk"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2024 UKMT JMC Problem 1",
+   "question": "When the ﬁve expressions below are simpliﬁed, how many diﬀerent values are obtained? 2 + 2 2 × 2 2 − 2 2 ÷ 2 2 2",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2024 UKMT JMC Problem 2",
+   "question": "Which of the following could have a capacity of 10 litres?",
+   "choices": {
+    "A": "An aeroplane",
+    "B": "A bucket",
+    "C": "A cup",
+    "D": "A dustpan",
+    "E": "An egg"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2024 UKMT JMC Problem 3",
+   "question": "Gill is 36 this year. In which year will her age next be a square?",
+   "choices": {
+    "A": "2025",
+    "B": "2037",
+    "C": "2047",
+    "D": "2052",
+    "E": "2060"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2024 UKMT JMC Problem 4",
+   "question": "A drink is made by mixing one part of cordial with four parts of water. What percentage of the drink is cordial?",
+   "choices": {
+    "A": "20",
+    "B": "25",
+    "C": "40",
+    "D": "75",
+    "E": "80"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2024 UKMT JMC Problem 5",
+   "question": "What is the value of 1 + 2 − 3 × 4 ÷ 5 ?",
+   "choices": {
+    "A": "0.2",
+    "B": "0.3",
+    "C": "0.4",
+    "D": "0.5",
+    "E": "0.6"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2024 UKMT JMC Problem 6",
+   "question": "Which of the following has the same remainder when divided by 3 as it does when divided by 4?",
+   "choices": {
+    "A": "7",
+    "B": "11",
+    "C": "17",
+    "D": "19",
+    "E": "25"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2024 UKMT JMC Problem 8",
+   "question": "Skye has half as many pens as Ishaa. Ana has twice as many pens as Skye. What fraction of all their pens does Skye have?",
+   "choices": {
+    "A": "1 3",
+    "B": "1 4",
+    "C": "1 5",
+    "D": "1 6",
+    "E": "1 8"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2024 UKMT JMC Problem 10",
+   "question": "In Fred’s ﬁeld there are some humans and some horses. There are 25 heads in total and 60 legs in total. What is the diﬀerence between the number of humans and the number of horses?",
+   "choices": {
+    "A": "3",
+    "B": "7",
+    "C": "9",
+    "D": "11",
+    "E": "15"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 13,
+   "source": "2024 UKMT JMC Problem 13",
+   "question": "In the triangle /u1D443/u1D444/u1D445 , the point /u1D446 is on the edge /u1D444/u1D445 . ∠/u1D444/u1D443/u1D446 = ∠/u1D446/u1D443/u1D445, /u1D443/u1D444 = /u1D443/u1D446 = /u1D446/u1D445 and ∠/u1D443/u1D445/u1D444 = /u1D465 ◦. What is the value of /u1D465 ?",
+   "choices": {
+    "A": "30",
+    "B": "33",
+    "C": "36",
+    "D": "40",
+    "E": "45 x◦ P Q R S"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 14,
+   "source": "2024 UKMT JMC Problem 14",
+   "question": "÷ + = The digits 1, 2, 3, 5 and 8 are to be placed in the grid above, one to a cell, to make a correct mathematical statement. Which number should come immediately after the division sign?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "5",
+    "E": "8"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 16,
+   "source": "2024 UKMT JMC Problem 16",
+   "question": "The world’s smallest vertebrate is much shorter than its name! Discovered in 2022, the frog paedophryne amauensis is only 7.7 mm long. Approximately how many of these frogs, placed end to end, would be needed to make a line 1 metre long?",
+   "choices": {
+    "A": "100",
+    "B": "130",
+    "C": "260",
+    "D": "390",
+    "E": "520"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 17,
+   "source": "2024 UKMT JMC Problem 17",
+   "question": "/u1D443/u1D444/u1D445/u1D446 is a square with area 100 cm2. The point /u1D447 is inside the square. /u1D444/u1D445/u1D447 is a triangle with area 24 cm2. What is the area, in cm2, of the triangle /u1D443/u1D447 /u1D446 ?",
+   "choices": {
+    "A": "24",
+    "B": "25",
+    "C": "26",
+    "D": "27",
+    "E": "28 R SP Q T"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 18,
+   "source": "2024 UKMT JMC Problem 18",
+   "question": "Goldilocks eats three equal-sized bowls of porridge, one after the other. When she has eaten 3 7 of the total amount of porridge, what fraction of the porridge in the second bowl has she eaten?",
+   "choices": {
+    "A": "2 63",
+    "B": "1 7",
+    "C": "1 3",
+    "D": "2 7",
+    "E": "1 2 © UK Mathematics Trust 2024 www.ukmt.org.uk Junior Mathematical Challenge Thursday 25 April 2024"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 19,
+   "source": "2024 UKMT JMC Problem 19",
+   "question": "Jokers always lie. Clowns always tell the truth.",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 20,
+   "source": "2024 UKMT JMC Problem 20",
+   "question": "When you cut a regular hexagon into two pieces with a single straight cut, you get two polygons. Which of these shapes cannot be obtained?",
+   "choices": {
+    "A": "A triangle",
+    "B": "A quadrilateral",
+    "C": "A pentagon",
+    "D": "A heptagon",
+    "E": "An octagon"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 22,
+   "source": "2024 UKMT JMC Problem 22",
+   "question": "Forty furry ferrets weigh the same as ﬁfty ﬁt ferrets. Forty-ﬁve ﬁt ferrets weigh the same as ﬁfty-four friendly ferrets. How many friendly ferrets weigh the same as ﬁfty furry ferrets?",
+   "choices": {
+    "A": "40",
+    "B": "55",
+    "C": "60",
+    "D": "75",
+    "E": "80"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 23,
+   "source": "2024 UKMT JMC Problem 23",
+   "question": "The area of a square is six times the area of a rectangle with a length half that of the square and a width 6 cm less than the width of the square. What is the perimeter of the square?",
+   "choices": {
+    "A": "24 cm",
+    "B": "28 cm",
+    "C": "32 cm",
+    "D": "36 cm",
+    "E": "40 cm"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 25,
+   "source": "2024 UKMT JMC Problem 25",
+   "question": "In a school, one ﬁfth of the students have blue eyes. One tenth of the left-handed students have blue eyes. One quarter of the right-handed students have blue eyes. What fraction of the students are left-handed?",
+   "choices": {
+    "A": "1 3",
+    "B": "1 4",
+    "C": "1 5",
+    "D": "1 8",
+    "E": "1 10 © UK Mathematics Trust 2024 www.ukmt.org.uk"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2023 UKMT JMC Problem 1",
+   "question": "What is the value of 3202 − 2023?",
+   "choices": {
+    "A": "821",
+    "B": "1001",
+    "C": "1179",
+    "D": "1221",
+    "E": "1279"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2023 UKMT JMC Problem 2",
+   "question": "A square Which of these could be the sum of the four digits in the crossnumber?",
+   "choices": {
+    "A": "17",
+    "B": "16",
+    "C": "15",
+    "D": "14",
+    "E": "13 1 2"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2023 UKMT JMC Problem 3",
+   "question": "What is the value of 1 + 2 + 3 + 4 + 5 6 + 7 + 8 + 9 + 10 ?",
+   "choices": {
+    "A": "1 2",
+    "B": "3 8",
+    "C": "7 16",
+    "D": "9 20",
+    "E": "1 3"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2023 UKMT JMC Problem 4",
+   "question": "One of these is the largest two-digit positive integer that is divisible by the product of its digits. Which is it?",
+   "choices": {
+    "A": "12",
+    "B": "24",
+    "C": "36",
+    "D": "72",
+    "E": "96"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2023 UKMT JMC Problem 5",
+   "question": "The record for travelling 100m on a skateboard by a dog is 19.65 seconds. This was achieved by Jumpy in 2013. What was Jumpy’s approximate average speed?",
+   "choices": {
+    "A": "0.2 m/s",
+    "B": "0.5 m/s",
+    "C": "2 m/s",
+    "D": "2.5 m/s",
+    "E": "5 m/s"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2023 UKMT JMC Problem 6",
+   "question": "When this prime number square is completed, the eight circles contain eight diﬀerent primes, and each of the four sides has total 43. What is the sum of the ﬁve missing primes?",
+   "choices": {
+    "A": "51",
+    "B": "53",
+    "C": "55",
+    "D": "57",
+    "E": "59 29 23 13"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2023 UKMT JMC Problem 7",
+   "question": "What is the diﬀerence between the largest two-digit multiple of 2 and the smallest three-digit multiple of 3?",
+   "choices": {
+    "A": "5",
+    "B": "4",
+    "C": "3",
+    "D": "2",
+    "E": "1"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2023 UKMT JMC Problem 8",
+   "question": "How many of these six numbers are prime? 02 + 12 12 + 22 22 + 32 32 + 42 42 + 52 52 + 62",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2023 UKMT JMC Problem 9",
+   "question": "Triangle /u1D43F /u1D440 /u1D441 is isosceles with /u1D43F /u1D440 = /u1D43F/u1D441 . What is the value of /u1D466 ?",
+   "choices": {
+    "A": "15",
+    "B": "17",
+    "C": "19",
+    "D": "21",
+    "E": "23 /u1D440 /u1D441 /u1D43F (2/u1D465+8)◦ (3/u1D465−20)◦ (4/u1D466−8)◦ © 2023 UK Mathematics Trust www.ukmt.org.uk Junior Mathematical Challenge Wednesday 26 April 2023"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 11,
+   "source": "2023 UKMT JMC Problem 11",
+   "question": "To save money, Scrooge is reusing tea bags. After a ﬁrst ‘decent’ cup of tea, he dries the bag and uses two such dried bags to make a new ‘decent’ cup of tea. These bags are then dried again and four such bags now make a ‘decent’ cup of tea. After that they are put on the compost heap. How many ‘decent’ cups of tea can Scrooge get out of a new box of 120 tea bags?",
+   "choices": {
+    "A": "480",
+    "B": "240",
+    "C": "210",
+    "D": "195",
+    "E": "180"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 12,
+   "source": "2023 UKMT JMC Problem 12",
+   "question": "One afternoon, Brian the snail went for a slither at a constant speed. By 1:50 pm he had slithered 150 centimetres. By 2:10 pm he had slithered 210 centimetres. When did Brian start his slither?",
+   "choices": {
+    "A": "Noon",
+    "B": "12:20 pm",
+    "C": "12:30 pm",
+    "D": "12:45 pm",
+    "E": "1 pm"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 15,
+   "source": "2023 UKMT JMC Problem 15",
+   "question": "My train was scheduled to leave at 17:48 and to arrive at my destination at 18:25. However, it started four minutes late, and the journey took twice as long as scheduled. When did I arrive?",
+   "choices": {
+    "A": "19:39",
+    "B": "19:06",
+    "C": "19:02",
+    "D": "18:29",
+    "E": "17:52"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 16,
+   "source": "2023 UKMT JMC Problem 16",
+   "question": "Amrita needs to select a new PIN. She decides it will be made up of four non-zero digits with the following properties: i) The ﬁrst two digits and the last two digits each make up a two-digit number which is a multiple of 11. ii) The sum of all the digits is a multiple of 11. How many diﬀerent possibilities are there for Amrita’s PIN?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "4",
+    "D": "8",
+    "E": "16"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 17,
+   "source": "2023 UKMT JMC Problem 17",
+   "question": "T wo numbers/u1D45D and /u1D45E are such that 0 < /u1D45D < /u1D45E < 1. Which is the largest of these expressions?",
+   "choices": {
+    "A": "/u1D45E − /u1D45D",
+    "B": "/u1D45D − /u1D45E",
+    "C": "/u1D45D + /u1D45E 2",
+    "D": "/u1D45D /u1D45E",
+    "E": "/u1D45E /u1D45D © 2023 UK Mathematics Trust www.ukmt.org.uk Junior Mathematical Challenge Wednesday 26 April 2023"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 19,
+   "source": "2023 UKMT JMC Problem 19",
+   "question": "In a football match, Rangers beat Rovers 5 – 4. The only time Rangers were ahead was after they scored the ﬁnal goal. How many possible half-time scores were there?",
+   "choices": {
+    "A": "9",
+    "B": "10",
+    "C": "15",
+    "D": "16",
+    "E": "25"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 21,
+   "source": "2023 UKMT JMC Problem 21",
+   "question": "Eleanor’s Elephant Emporium has four types of elephant. There are twice as many grey elephants as pygmy elephants, three times as many white elephants as grey elephants and four times as many pink elephants as white elephants. There are 20 more white elephants than pygmy elephants. How many elephants are in Eleanor’s Emporium?",
+   "choices": {
+    "A": "123",
+    "B": "132",
+    "C": "213",
+    "D": "231",
+    "E": "312"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 23,
+   "source": "2023 UKMT JMC Problem 23",
+   "question": "Regular pentagon /u1D443/u1D444/u1D445/u1D446/u1D447 has centre /u1D442 . Lines /u1D443/u1D43B , /u1D439 /u1D43C and /u1D43A/u1D43D go through /u1D442 . The six angles at /u1D442 are equal. What is the size of angle /u1D447/u1D43A/u1D442 ?",
+   "choices": {
+    "A": "60◦",
+    "B": "72◦",
+    "C": "75◦",
+    "D": "76◦",
+    "E": "78◦ /u1D443 /u1D43B /u1D447 /u1D446/u1D445 /u1D444 /u1D43D /u1D439 /u1D43C /u1D43A/u1D442"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 24,
+   "source": "2023 UKMT JMC Problem 24",
+   "question": "Beatrix was born in this century. On her birthday this year, her age was equal to the sum of the digits of the year in which she was born. In which of these years will her age on her birthday be twice the sum of the digits of that year?",
+   "choices": {
+    "A": "2027",
+    "B": "2029",
+    "C": "2031",
+    "D": "2033",
+    "E": "2035"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 25,
+   "source": "2023 UKMT JMC Problem 25",
+   "question": "Granny gave away her entire collection of antique spoons to three people. Her daughter received 8 more than a third of the total; her son received 8 more than a third of what was then left; ﬁnally her neighbour received 8 more than a third of what was then left. What is the sum of the digits of the number of spoons which were in Granny’s collection?",
+   "choices": {
+    "A": "14",
+    "B": "12",
+    "C": "10",
+    "D": "8",
+    "E": "6 © 2023 UK Mathematics Trust www.ukmt.org.uk"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2026 UKMT IMC Problem 1",
+   "question": "Which of these has the largest value?",
+   "choices": {
+    "A": "1+ 2 2",
+    "B": "1+ 2+ 3 3",
+    "C": "1+ 2+ 3+ 4 4",
+    "D": "1+ 2+ 3+ 4+ 5 5",
+    "E": "1+ 2+ 3+ 4+ 5+ 6 6"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2026 UKMT IMC Problem 2",
+   "question": "What time will it be 2026 minutes after 20:26 on Monday?",
+   "choices": {
+    "A": "06:12 on Tuesday",
+    "B": "16:12 on Tuesday",
+    "C": "20:12 on Tuesday",
+    "D": "06:12 on Wednesday",
+    "E": "20:12 on Wednesday"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2026 UKMT IMC Problem 3",
+   "question": "Acuboidhasside-lengths,in cm,whicharethreeconsecutivepositiveintegers. Ithasvolume 120 cm3. What is the area, incm2, of its largest face?",
+   "choices": {
+    "A": "15",
+    "B": "20",
+    "C": "24",
+    "D": "30",
+    "E": "41"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2026 UKMT IMC Problem 4",
+   "question": "When 35 is shared in the ratio1 : 1 2 : 1 4, what is the smallest part?",
+   "choices": {
+    "A": "4",
+    "B": "41 4",
+    "C": "41 2",
+    "D": "43 4",
+    "E": "5"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2026 UKMT IMC Problem 6",
+   "question": "The𝑛th term of a sequence is𝑛 𝑛+ 1. What is the first term of the sequence whose value is greater than 0.92?",
+   "choices": {
+    "A": "9 10",
+    "B": "10 11",
+    "C": "11 12",
+    "D": "12 13",
+    "E": "13 14"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2026 UKMT IMC Problem 7",
+   "question": "The five numbers 95, 96, 97, 98, 99 are each paired with one of the five numbers 1, 3, 5, 7, 9 (each number used once). The larger number of each pair is then divided by the smaller, giving five integer answers. What is the difference between the smallest and the largest of the five integer answers?",
+   "choices": {
+    "A": "96",
+    "B": "86",
+    "C": "76",
+    "D": "66",
+    "E": "56"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2026 UKMT IMC Problem 9",
+   "question": "How many of the following expressions are divisible by 24? 52− 1 7 2− 1 9 2− 1 11 2− 1 13 2− 1",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5 © UK Mathematics Trust 2026 www.ukmt.org.uk Intermediate Mathematical Challenge Wednesday 28 January 2026"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2026 UKMT IMC Problem 10",
+   "question": "A triangle has sides in the ratio5 : 5 : 6 and area 108cm2. What is the length, incm, of the longest side of the triangle?",
+   "choices": {
+    "A": "15",
+    "B": "18",
+    "C": "21",
+    "D": "24",
+    "E": "27"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 13,
+   "source": "2026 UKMT IMC Problem 13",
+   "question": "Noah writes down the numbers 1, 2, 4 and 13. He then adds a fifth integer𝑥 which then becomes the mean, median or mode of the five numbers. How many possible choices for𝑥 are there?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 14,
+   "source": "2026 UKMT IMC Problem 14",
+   "question": "𝑃𝑄𝑅 is an acute-angled triangle. Each of its angles, in degrees, is a triangular number. What is the smallest angle in the triangle?",
+   "choices": {
+    "A": "21°",
+    "B": "28°",
+    "C": "36°",
+    "D": "45°",
+    "E": "55°"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 16,
+   "source": "2026 UKMT IMC Problem 16",
+   "question": "Kerry and Karen are driving to meet each other. They both leave home at mid-day and both drive at the same constant speed. At 1 pm they are 200kmapart by road. At 2:15 pm they are 100kmapart. How far apart by road do Karen and Kerry live?",
+   "choices": {
+    "A": "360 km",
+    "B": "320 km",
+    "C": "280 km",
+    "D": "260 km",
+    "E": "240 km"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 19,
+   "source": "2026 UKMT IMC Problem 19",
+   "question": "For what value of𝑥 does 1+ 16 1+ 1 1+ 1 𝑥 = 11?",
+   "choices": {
+    "A": "1 2",
+    "B": "3 5",
+    "C": "2 3",
+    "D": "3 2",
+    "E": "5 3"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 21,
+   "source": "2026 UKMT IMC Problem 21",
+   "question": "The numbers𝑥 and𝑦 satisfy the equations𝑥+𝑦 = 6 and𝑥3+𝑦3 = 198. What is the value of𝑥𝑦?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 23,
+   "source": "2026 UKMT IMC Problem 23",
+   "question": "Oliver asked a group of people whether they liked Maths. Exactly 99% answered yes. Teresa asked a different group of people whether they liked Maths and combined her results with Oliver’s. Now exactly 98% of the people had answered yes. What is the smallest number of people who could have answered no to Teresa?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 25,
+   "source": "2026 UKMT IMC Problem 25",
+   "question": "Zoe has an unusual method of choosing when to go swimming. At the beginning of the year she randomly chooses three different days of the week, then always has a swim on those days only. Using this method, what is the probability her schedule will include at least three days in a row without a swim?",
+   "choices": {
+    "A": "2 5",
+    "B": "1 2",
+    "C": "3 5",
+    "D": "7 10",
+    "E": "4 5 © UK Mathematics Trust 2026 www.ukmt.org.uk"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2025 UKMT IMC Problem 1",
+   "question": "Which one of the following expressions has a value closest to 0?",
+   "choices": {
+    "A": "2 × 5 − 8 × 3",
+    "B": "3 × 4 − 7 × 4",
+    "C": "4 × 3 − 6 × 5",
+    "D": "5 × 2 − 5 × 6",
+    "E": "6 × 1 − 4 × 7"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2025 UKMT IMC Problem 2",
+   "question": "What is the remainder when 2 652 134 is divided by 13?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2025 UKMT IMC Problem 4",
+   "question": "All Felix’s cats are normal cats. Together, they have 12 more legs than they have tails. In total, how many ears do they have?",
+   "choices": {
+    "A": "2",
+    "B": "4",
+    "C": "6",
+    "D": "8",
+    "E": "10"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2025 UKMT IMC Problem 5",
+   "question": "What is 5 ÷ ((( 5 ÷ 5) ÷ ( 5 ÷ 5)) ÷ 5)?",
+   "choices": {
+    "A": "1 25",
+    "B": "1 5",
+    "C": "1",
+    "D": "5",
+    "E": "25"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2025 UKMT IMC Problem 6",
+   "question": "Owen chooses a positive integer /u1D45B so that 3/u1D45B + 7 is an even integer. Which of these is an odd integer?",
+   "choices": {
+    "A": "/u1D45B − 1",
+    "B": "/u1D45B + 3",
+    "C": "3/u1D45B + 2",
+    "D": "4/u1D45B",
+    "E": "5/u1D45B + 3"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2025 UKMT IMC Problem 7",
+   "question": "\"I can swim faster than you,\" said the dolphin to the shark. \"That is not true,\" said the shark to the dolphin. \"Y ou are both wrong,\" said the octopus to the dolphin and the shark. \"Y ou are right,\" said the starﬁsh to the octopus. How many of the dolphin, shark, octopus and starﬁsh were telling the truth?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2025 UKMT IMC Problem 8",
+   "question": "What is the value of 34 1 7 ÷ 17 1 14?",
+   "choices": {
+    "A": "2",
+    "B": "2 1 17",
+    "C": "2 1 14",
+    "D": "2 1 7",
+    "E": "2 1 2"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2025 UKMT IMC Problem 10",
+   "question": "What is the value of √ 20252 − 2024 − 2025 ?",
+   "choices": {
+    "A": "2022",
+    "B": "2023",
+    "C": "2024",
+    "D": "2025",
+    "E": "2026"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 11,
+   "source": "2025 UKMT IMC Problem 11",
+   "question": "Emily multiplied two integers together. Her answer was 360. Finley increased each of Emily’s integers by one and then multiplied the two new integers together. His answer was 400. What was the sum of Emily’s two integers?",
+   "choices": {
+    "A": "39",
+    "B": "40",
+    "C": "42",
+    "D": "45",
+    "E": "48 © UK Mathematics Trust 2025 www.ukmt.org.uk Intermediate Mathematical Challenge Wednesday 29 January 2025"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 12,
+   "source": "2025 UKMT IMC Problem 12",
+   "question": "Jane’s farm is home to many cats and dogs. At the start of the week the ratio of cats to dogs was 3 : 5 . Then 32 cats, but no dogs, arrived and the ratio became 5 : 3 . How many dogs are there on Jane’s farm?",
+   "choices": {
+    "A": "12",
+    "B": "18",
+    "C": "24",
+    "D": "25",
+    "E": "30"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 13,
+   "source": "2025 UKMT IMC Problem 13",
+   "question": "The product of the ﬁrst three numbers in the box below is equal to the product of the last three numbers. What is the value of /u1D465 ? /u1D465 120 496 360 48",
+   "choices": {
+    "A": "72",
+    "B": "84",
+    "C": "96",
+    "D": "128",
+    "E": "144"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 14,
+   "source": "2025 UKMT IMC Problem 14",
+   "question": "What is the sum of the recurring decimals 0. /dotacc1 + 0. /dotacc2 + 0. /dotacc3 + 0. /dotacc4?",
+   "choices": {
+    "A": "1. /dotacc1",
+    "B": "1. /dotacc1/dotacc0",
+    "C": "1.1",
+    "D": "1. /dotacc0/dotacc1",
+    "E": "1"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 15,
+   "source": "2025 UKMT IMC Problem 15",
+   "question": "What is the value of 36 − 34 29 − 23 ?",
+   "choices": {
+    "A": "9 32",
+    "B": "9 16",
+    "C": "9 12",
+    "D": "9 7",
+    "E": "9 5"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 16,
+   "source": "2025 UKMT IMC Problem 16",
+   "question": "David likes books. He only ever pays 99p or £1.99 for an electronic book. In the last few months he has spent £56.56 on electronic books. How many electronic books costing £1.99 has he bought in that time?",
+   "choices": {
+    "A": "8",
+    "B": "13",
+    "C": "15",
+    "D": "17",
+    "E": "23"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 17,
+   "source": "2025 UKMT IMC Problem 17",
+   "question": "Dark green paint is made by mixing blue and yellow paint such that 60% is blue. Light green paint is made by mixing blue and yellow paint such that 60% is yellow. Pablo mixes dark and light green paint such that 60% of the mixture is dark paint. What is the ratio of blue to yellow in Pablo’s paint?",
+   "choices": {
+    "A": "2 : 3",
+    "B": "12 : 13",
+    "C": "1 : 1",
+    "D": "13 : 12",
+    "E": "3 : 2"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 19,
+   "source": "2025 UKMT IMC Problem 19",
+   "question": "Rob, Rog and Roy all painted some fence posts one day. Rob painted 45, Rog painted 51 and Roy painted 48. One of them painted twice as many posts in the morning as he did in the afternoon, a second one painted three times as many in the morning as in the afternoon and the third one painted four times as many in the morning as in the afternoon. Who painted the most fence posts in the morning?",
+   "choices": {
+    "A": "Rob",
+    "B": "Rog",
+    "C": "Roy",
+    "D": "Rob and Roy, who painted the same number",
+    "E": "Rob, Rog and Roy, who all painted the same number © UK Mathematics Trust 2025 www.ukmt.org.uk Intermediate Mathematical Challenge Wednesday 29 January 2025"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 21,
+   "source": "2025 UKMT IMC Problem 21",
+   "question": "What is the remainder when 88 is divided by 5?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 22,
+   "source": "2025 UKMT IMC Problem 22",
+   "question": "A sphere of radius 4 cm and a sphere of radius 16 cm are placed on a horizontal surface so that they touch. What is the distance, in cm, between the points where the spheres touch the surface?",
+   "choices": {
+    "A": "12",
+    "B": "14",
+    "C": "√ 240",
+    "D": "16",
+    "E": "20"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 23,
+   "source": "2025 UKMT IMC Problem 23",
+   "question": "The point /u1D443 is inside a rectangle. The distance from /u1D443 to one corner of the rectangle is 5 cm and its distance from the opposite corner is 14 cm. The distance from /u1D443 to a third corner is 10 cm. What is the distance, in cm, from /u1D443 to the fourth corner?",
+   "choices": {
+    "A": "√ 29",
+    "B": "9",
+    "C": "10",
+    "D": "11",
+    "E": "√ 171"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 24,
+   "source": "2025 UKMT IMC Problem 24",
+   "question": "T wo white roses and a yellow rose costs £5. T wo white roses and three red roses cost £10.50. Three yellow roses and two red roses cost £11. What would be the total cost of one red rose, one white rose and one yellow rose?",
+   "choices": {
+    "A": "£5",
+    "B": "£5.50",
+    "C": "£6",
+    "D": "£6.50",
+    "E": "£7"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2024 UKMT IMC Problem 1",
+   "question": "What is the value of 20 + 24 20 − 24?",
+   "choices": {
+    "A": "8",
+    "B": "− 9",
+    "C": "10",
+    "D": "− 11",
+    "E": "12"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2024 UKMT IMC Problem 2",
+   "question": "What is the diﬀerence between the smallest two-digit prime and the largest two-digit prime?",
+   "choices": {
+    "A": "86",
+    "B": "84",
+    "C": "82",
+    "D": "80",
+    "E": "78"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 12,
+   "source": "2024 UKMT IMC Problem 12",
+   "question": "What is the length of the line segment marked /u1D465 ? 1 1 1 1 1 1 1 1 1 x",
+   "choices": {
+    "A": "√ 2",
+    "B": "2",
+    "C": "2 √ 2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2024 UKMT IMC Problem 5",
+   "question": "The ages of Grannie’s seven grandchildren are consecutive positive integers. The youngest three grandchildren have a mean age of 6. What is the mean age of the oldest three grandchildren?",
+   "choices": {
+    "A": "8",
+    "B": "9",
+    "C": "10",
+    "D": "11",
+    "E": "12"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2024 UKMT IMC Problem 6",
+   "question": "Four of these points lie on a circle. Which of the points does not lie on that circle?",
+   "choices": {
+    "A": "(5, 0)",
+    "B": "(4, 3)",
+    "C": "(2, 2)",
+    "D": "(3, 4)",
+    "E": "(0, 5)"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2024 UKMT IMC Problem 7",
+   "question": "The ’Penny’s Puddings’ company uses one tonne of rice to make twenty-ﬁve thousand cans of rice pudding. Each tonne of rice contains approximately ﬁfty million grains of rice. Approximately how many grains of rice are there in a can of Penny’s rice pudding?",
+   "choices": {
+    "A": "200",
+    "B": "2000",
+    "C": "5000",
+    "D": "50 000",
+    "E": "1 250 000"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2024 UKMT IMC Problem 8",
+   "question": "What is the value of 999 × 999 + 999 ?",
+   "choices": {
+    "A": "10 800",
+    "B": "100 800",
+    "C": "999 000",
+    "D": "999 999",
+    "E": "1 000 998"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2024 UKMT IMC Problem 10",
+   "question": "Which of the following is equal to 20 24 + 20 25?",
+   "choices": {
+    "A": "40 600",
+    "B": "49 30",
+    "C": "30 49",
+    "D": "40 49",
+    "E": "49 40"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 11,
+   "source": "2024 UKMT IMC Problem 11",
+   "question": "A picture, together with its frame, makes a square of side-length 80 cm. The frame is 4 cm wide. What percentage of the area of the square is covered by the frame? 80 cm 4 cm",
+   "choices": {
+    "A": "15%",
+    "B": "18%",
+    "C": "19%",
+    "D": "20%",
+    "E": "24%"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 13,
+   "source": "2024 UKMT IMC Problem 13",
+   "question": "When I increase a certain number by 20%, I get twice as much as when I decrease 20 less than the number by 20%. What is that number?",
+   "choices": {
+    "A": "40",
+    "B": "60",
+    "C": "80",
+    "D": "100",
+    "E": "120"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 14,
+   "source": "2024 UKMT IMC Problem 14",
+   "question": "Going clockwise around a quadrilateral, its interior angles are in the ratio 6 : 7 : 8 : 9 . Which of the following is a true statement about the quadrilateral?",
+   "choices": {
+    "A": "It has a right angle",
+    "B": "It is a trapezium",
+    "C": "It is a parallelogram",
+    "D": "It is a kite",
+    "E": "It is cyclic"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 15,
+   "source": "2024 UKMT IMC Problem 15",
+   "question": "Carrie the cat and Barrie the bat together weigh 4000 g more than Rollie the rat. Barrie and Rollie together weigh 2000 g less than Carrie. Carrie and Rollie together weigh 3000 g more than Barrie. What is the weight, in grams, of Rollie the rat?",
+   "choices": {
+    "A": "250",
+    "B": "500",
+    "C": "750",
+    "D": "1000",
+    "E": "1250"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 16,
+   "source": "2024 UKMT IMC Problem 16",
+   "question": "Factorial /u1D45B , written /u1D45B !, is deﬁned by: /u1D45B ! = 1 × 2 × 3 × · · · × /u1D45B . What is the remainder when 1! + 2! + 3! + 4! + 5! + 6! + 7! + 8! + 9! + 10! is divided by 5?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 17,
+   "source": "2024 UKMT IMC Problem 17",
+   "question": "What is 4( 32) divided by ( 43) 2?",
+   "choices": {
+    "A": "1",
+    "B": "6",
+    "C": "16",
+    "D": "32",
+    "E": "64 © UK Mathematics Trust 2024 www.ukmt.org.uk Intermediate Mathematical Challenge Wednesday 31 January 2024"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 18,
+   "source": "2024 UKMT IMC Problem 18",
+   "question": "The point /u1D443 (− 1,4) is reﬂected in the /u1D466 -axis to become /u1D444 . The point /u1D444 is reﬂected in the line /u1D466 = /u1D465 to become /u1D445 . The point /u1D445 is reﬂected in the /u1D465 -axis to become /u1D446 . What is the area of quadrilateral /u1D443/u1D444/u1D445/u1D446 ?",
+   "choices": {
+    "A": "4",
+    "B": "4 √ 2 + 2",
+    "C": "6",
+    "D": "4 + 2 √ 2",
+    "E": "8"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 20,
+   "source": "2024 UKMT IMC Problem 20",
+   "question": "A shop sign says, “T-shirts. Three for the price of two. Equivalent to a saving of £5.50 on each T-shirt.” Using this special oﬀer, what is the cost of three T-shirts?",
+   "choices": {
+    "A": "£16.50",
+    "B": "£22",
+    "C": "£31",
+    "D": "£33",
+    "E": "£49.50"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 22,
+   "source": "2024 UKMT IMC Problem 22",
+   "question": "When a cube is cut into two pieces with a single plane cut, two polyhedra are obtained. Which of these polyhedra cannot be obtained in this way?",
+   "choices": {
+    "A": "A polyhedron with 4 faces",
+    "B": "A polyhedron with 5 faces",
+    "C": "A polyhedron with 6 faces",
+    "D": "A polyhedron with 7 faces",
+    "E": "A polyhedron with 8 faces"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 23,
+   "source": "2024 UKMT IMC Problem 23",
+   "question": "A circle is inscribed in a semicircle with centre /u1D442 and diameter /u1D434/u1D435 . The centre of the circle is the point /u1D443 , where /u1D443 /u1D434 = /u1D443/u1D442 . What is the ratio of the radius of the circle to the radius of the semicircle?",
+   "choices": {
+    "A": "4 : 9",
+    "B": "3 : 8",
+    "C": "3 : 7",
+    "D": "2 : 5",
+    "E": "1 : 2"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 25,
+   "source": "2024 UKMT IMC Problem 25",
+   "question": "A gold coin is worth /u1D465 % more than a silver coin. The silver coin is worth /u1D466 % less than the gold coin. Both /u1D465 and /u1D466 are positive integers. How many possible values for /u1D465 are there?",
+   "choices": {
+    "A": "0",
+    "B": "3",
+    "C": "6",
+    "D": "9",
+    "E": "12 © UK Mathematics Trust 2024 www.ukmt.org.uk"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2023 UKMT IMC Problem 1",
+   "question": "Which of these numbers is neither a multiple of 3, nor a multiple of 4?",
+   "choices": {
+    "A": "16",
+    "B": "21",
+    "C": "28",
+    "D": "34",
+    "E": "45"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2023 UKMT IMC Problem 2",
+   "question": "A power of 4 1 2 Eight of the digits from 0 to 9 inclusive are used to ﬁll the cells of the crossnumber. What is the sum of the two digits which are not used?",
+   "choices": {
+    "A": "12",
+    "B": "13",
+    "C": "14",
+    "D": "15",
+    "E": "16 © UK Mathematics Trust 2023 www.ukmt.org.uk Intermediate Mathematical Challenge Wednesday 1 February 2023"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2023 UKMT IMC Problem 3",
+   "question": "What is the value of 1 − ( 2 − ( 3 − 4 − ( 5 − 6))) ?",
+   "choices": {
+    "A": "−2",
+    "B": "−1",
+    "C": "0",
+    "D": "1",
+    "E": "2"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2023 UKMT IMC Problem 5",
+   "question": "We know that 1 + 2 + 3 + 4 = 10. It is also true that 13 + 23 + 33 + 43 = 10/u1D45B for some integer /u1D45B. What is this integer?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2023 UKMT IMC Problem 7",
+   "question": "What is 0.015% of 60 million?",
+   "choices": {
+    "A": "900",
+    "B": "9000",
+    "C": "90 000",
+    "D": "900 000",
+    "E": "9 000 000"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2023 UKMT IMC Problem 8",
+   "question": "√ √/u1D465 = 3. What is the value of /u1D465?",
+   "choices": {
+    "A": "√ √ 3",
+    "B": "√ 3",
+    "C": "9",
+    "D": "12",
+    "E": "81"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2023 UKMT IMC Problem 9",
+   "question": "Merryn wrote down the numbers 2, 0, 2, 3 and one further number. What was the median of her ﬁve numbers?",
+   "choices": {
+    "A": "0",
+    "B": "2",
+    "C": "2.5",
+    "D": "3",
+    "E": "more information required"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 11,
+   "source": "2023 UKMT IMC Problem 11",
+   "question": "Jill was given a large jar of jam. She gave one sixth of the jam to Jan. Jill then gave one thirteenth of the remaining jam to Jas. Jill was left with 1 kg of jam. What was the weight, in kg, of the jam in Jill’s jar at the start?",
+   "choices": {
+    "A": "1.2",
+    "B": "1.3",
+    "C": "1.4",
+    "D": "1.6",
+    "E": "1.9"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 13,
+   "source": "2023 UKMT IMC Problem 13",
+   "question": "The mean of /u1D45D and /u1D45E is 13; the mean of /u1D45E and /u1D45F is 16; the mean of /u1D45F and /u1D45D is 7. What is the mean of /u1D45D, /u1D45E and /u1D45F?",
+   "choices": {
+    "A": "12",
+    "B": "13",
+    "C": "14",
+    "D": "15",
+    "E": "16"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 14,
+   "source": "2023 UKMT IMC Problem 14",
+   "question": "A regular octagon /u1D443/u1D444/u1D445/u1D446/u1D447/u1D448/u1D449/u1D44A has sides of length 2 cm. When I shade the rectangles /u1D443/u1D444/u1D447/u1D448 and /u1D445/u1D446/u1D449/u1D44A , four small triangles inside the octagon remain unshaded. What is the total area, in cm2, of these four triangles?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "4",
+    "D": "6",
+    "E": "8"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 15,
+   "source": "2023 UKMT IMC Problem 15",
+   "question": "How many of the following polygons could exist?",
+   "choices": {
+    "A": "only the pentagon",
+    "B": "only the quadrilateral",
+    "C": "the quadrilateral and the pentagon",
+    "D": "all three",
+    "E": "none of them"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 16,
+   "source": "2023 UKMT IMC Problem 16",
+   "question": "The sum of the lengths of the three sides of a right-angled triangle is 16 cm. The sum of the squares of the lengths of the three sides of the triangle is 98 cm2. What is the area, in cm2, of the triangle?",
+   "choices": {
+    "A": "8",
+    "B": "10",
+    "C": "12",
+    "D": "14",
+    "E": "16"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 18,
+   "source": "2023 UKMT IMC Problem 18",
+   "question": "How many squares are exactly four greater than a prime?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4 © UK Mathematics Trust 2023 www.ukmt.org.uk Intermediate Mathematical Challenge Wednesday 1 February 2023"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 20,
+   "source": "2023 UKMT IMC Problem 20",
+   "question": "I roll two standard six-sided fair dice. At least one of the scores obtained on the dice is 3. What is the probability that both of the scores on the dice are 3?",
+   "choices": {
+    "A": "1 12",
+    "B": "1 11",
+    "C": "1 6",
+    "D": "1 3",
+    "E": "1 4"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 22,
+   "source": "2023 UKMT IMC Problem 22",
+   "question": "The numbers /u1D465 and /u1D466 satisfy both of the equations 23/u1D465 + 977/u1D466 = 2023 and 977/u1D465 + 23/u1D466 = 2977. What is the value of ? − ??",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 23,
+   "source": "2023 UKMT IMC Problem 23",
+   "question": "It is possible to choose, in two diﬀerent ways, six diﬀerent integers from 1 to 9 inclusive such that their product is a square. Let the two squares so obtained be ? and ?, where /u1D45D and /u1D45E are both positive. What is the value of /u1D45D + /u1D45E?",
+   "choices": {
+    "A": "72",
+    "B": "84",
+    "C": "96",
+    "D": "108",
+    "E": "120"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2025 UKMT SMC Problem 1",
+   "question": "Pablo has 100 identical small cubes. He uses some of them to build the largest possible solid cube. How many of the small cubes are left over?",
+   "choices": {
+    "A": "16",
+    "B": "27",
+    "C": "36",
+    "D": "73",
+    "E": "92"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2025 UKMT SMC Problem 3",
+   "question": "What is252− 242− 232+ 222?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2025 UKMT SMC Problem 4",
+   "question": "Sonia writes down three 2-digit numbers whose sum is 46. The first number is prime, the second is square and the third is even. What is the even number?",
+   "choices": {
+    "A": "10",
+    "B": "12",
+    "C": "14",
+    "D": "16",
+    "E": "18"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2025 UKMT SMC Problem 6",
+   "question": "For what value of𝑥 is q ( p (√𝑥+ 1)+ 1)+ 1 = 3?",
+   "choices": {
+    "A": "4096",
+    "B": "64",
+    "C": "8",
+    "D": "3",
+    "E": "0"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2025 UKMT SMC Problem 7",
+   "question": "What is the 100th term of the sequence 1, 5, 7, 11, 13, 17, 19, 23, ... whose terms are consecutive odd numbers but with all the multiples of 3 removed?",
+   "choices": {
+    "A": "201",
+    "B": "203",
+    "C": "247",
+    "D": "299",
+    "E": "301"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2025 UKMT SMC Problem 9",
+   "question": "Fifty squares are drawn side by side in a line. The first and last squares are shaded. Other squares in the line must be shaded such that both these rules apply: (a) no two adjacent squares are shaded and (b) there are no more than three consecutive unshaded squares. What is the difference between the smallest and largest number of squares that can be shaded?",
+   "choices": {
+    "A": "8",
+    "B": "10",
+    "C": "11",
+    "D": "13",
+    "E": "15"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2025 UKMT SMC Problem 10",
+   "question": "How many different squares are factors of 2025?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "6 © UK Mathematics Trust 2025 www.ukmt.org.uk Senior Mathematical Challenge Thursday 9 October 2025"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 12,
+   "source": "2025 UKMT SMC Problem 12",
+   "question": "Ayain writes down all the 3-digit numbers consisting of three different odd digits. How many of Ayain’s numbers are divisible by 3?",
+   "choices": {
+    "A": "42",
+    "B": "36",
+    "C": "30",
+    "D": "24",
+    "E": "18"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 14,
+   "source": "2025 UKMT SMC Problem 14",
+   "question": "The simultaneous equations𝑥+ 1 𝑦 = 2and𝑦+ 1 𝑥 = 9 4 have two pairs of real solutions. What is the difference between the possible values of𝑥?",
+   "choices": {
+    "A": "1 3",
+    "B": "2 3",
+    "C": "3 4",
+    "D": "1",
+    "E": "3 2"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 15,
+   "source": "2025 UKMT SMC Problem 15",
+   "question": "Theinteger 𝑛issuchthat 1<𝑛< 99. 𝑃 isthedifferencebetween1and 𝑛,𝑄 isthedifferencebetween 99 and𝑛, and𝑅 is the difference between𝑃 and𝑄. For how many values of𝑛 is𝑅 a prime number?",
+   "choices": {
+    "A": "0",
+    "B": "2",
+    "C": "4",
+    "D": "8",
+    "E": "99"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 18,
+   "source": "2025 UKMT SMC Problem 18",
+   "question": "The positive integer𝑁 has 2025 digits. The first digit is a 3. Every two consecutive digits of𝑁 form a number that is divisible by either 17 or 23. The units digit of𝑁 could either be𝑝 or𝑞. What is the value of𝑝+𝑞?",
+   "choices": {
+    "A": "3",
+    "B": "6",
+    "C": "7",
+    "D": "9",
+    "E": "10 © UK Mathematics Trust 2025 www.ukmt.org.uk Senior Mathematical Challenge Thursday 9 October 2025"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 19,
+   "source": "2025 UKMT SMC Problem 19",
+   "question": "A ‘complete’ football kit consists of a shirt, a pair of shorts and a pair of socks. Three pairs of shorts and one pair of socks together cost the same as two shirts. Seven pairs of shorts and four pairs of socks together cost the same as five shirts. Eden has exactly the right amount of money to buy nine shirts. How many ‘complete’ football kits could be bought for the same amount of money?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 20,
+   "source": "2025 UKMT SMC Problem 20",
+   "question": "When 1 𝑥− 1 𝑦 = 2025, what is the value of𝑥+ 2026𝑥𝑦−𝑦 2𝑦− 2025𝑥𝑦− 2𝑥?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "1 2",
+    "D": "2026",
+    "E": "1 2025"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 21,
+   "source": "2025 UKMT SMC Problem 21",
+   "question": "A regular hexagon𝑃𝑄𝑅𝑆𝑇𝑈 is inscribed in a circle of radius 5.",
+   "choices": {
+    "A": "150",
+    "B": "216",
+    "C": "256",
+    "D": "300",
+    "E": "360 P Q R S T U"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 22,
+   "source": "2025 UKMT SMC Problem 22",
+   "question": "Together,𝑛 aardvarks and 12 anteaters eat𝑛2+ 20𝑛+ 25 ants. Each animal eats the same whole number of ants. How many ants does each animal eat?",
+   "choices": {
+    "A": "61",
+    "B": "66",
+    "C": "71",
+    "D": "74",
+    "E": "79"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 23,
+   "source": "2025 UKMT SMC Problem 23",
+   "question": "Jemima took a series of𝑛 tests each with the same maximum mark. After(𝑛− 2) tests her average score was𝑚. She scored full marks in the(𝑛− 1)th test, and so raised her average score by 4 marks. In the𝑛th test when she again scored full marks, she increased her average score by 3 marks. How many tests did Jemima take?",
+   "choices": {
+    "A": "6",
+    "B": "7",
+    "C": "8",
+    "D": "9",
+    "E": "10"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 24,
+   "source": "2025 UKMT SMC Problem 24",
+   "question": "The output of the function𝐹(𝑥) when applied to a real number𝑥 is the greatest integer less than or equal to𝑥. For example,𝐹(3) = 3,𝐹(4.7) = 4,𝐹(−2.3) =−3. Which of the following is the graph of𝑦 =𝑥𝐹(𝑥) for non-zero values of𝑥 in the interval−2<𝑥 < 2?",
+   "choices": {
+    "A": "y x",
+    "B": "y x",
+    "C": "y x",
+    "D": "y x",
+    "E": "y x"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2024 UKMT SMC Problem 1",
+   "question": "What is two-ﬁfths of the recurring decimal 0./dotacc2/dotacc5?",
+   "choices": {
+    "A": "0./dotacc1",
+    "B": "0.0/dotacc1",
+    "C": "0./dotacc0/dotacc1",
+    "D": "0.10",
+    "E": "0./dotacc1/dotacc0"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2024 UKMT SMC Problem 2",
+   "question": "A multiple of 13 and of 19",
+   "choices": {
+    "A": "9",
+    "B": "8",
+    "C": "5",
+    "D": "3",
+    "E": "2"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2024 UKMT SMC Problem 3",
+   "question": "What is the perimeter of the hat tile?",
+   "choices": {
+    "A": "8 + 12 √ 3",
+    "B": "16 + 6 √ 3",
+    "C": "8 + 8 √ 3",
+    "D": "6 + 8 √ 3",
+    "E": "8 + 6 √ 3"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2024 UKMT SMC Problem 4",
+   "question": "The sizes of the three angles in a triangle, in degrees, are /u1D465, 7?nd?. What is the size of the largest angle?",
+   "choices": {
+    "A": "10 °",
+    "B": "18 °",
+    "C": "100 °",
+    "D": "120 °",
+    "E": "121 °"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 5,
+   "source": "2024 UKMT SMC Problem 5",
+   "question": "When 45 × 54 is correctly calculated, how many digits are there in the answer?",
+   "choices": {
+    "A": "4",
+    "B": "6",
+    "C": "10",
+    "D": "16",
+    "E": "20"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2024 UKMT SMC Problem 6",
+   "question": "One face of a solid polyhedron is an octagon. What is the smallest possible number of edges the solid could have?",
+   "choices": {
+    "A": "9",
+    "B": "10",
+    "C": "12",
+    "D": "16",
+    "E": "24"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2024 UKMT SMC Problem 7",
+   "question": "Which is the largest prime factor of 38 − 1?",
+   "choices": {
+    "A": "41",
+    "B": "37",
+    "C": "31",
+    "D": "29",
+    "E": "23"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2024 UKMT SMC Problem 8",
+   "question": "In the following expressions,/u1D465is non-zero. When one of these expressions is removed, the mean of the remaining four is 11/u1D465. Which expression is removed?",
+   "choices": {
+    "A": "4/u1D465",
+    "B": "8/u1D465",
+    "C": "12/u1D465",
+    "D": "16/u1D465",
+    "E": "20/u1D465"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2024 UKMT SMC Problem 9",
+   "question": "A palindromic number is one where the digits read the same forwards as backwards, such as 123 321. What is the hundreds digit of the largest six-digit palindromic number that is divisible by 18?",
+   "choices": {
+    "A": "9",
+    "B": "7",
+    "C": "5",
+    "D": "3",
+    "E": "1"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2024 UKMT SMC Problem 10",
+   "question": "The prime factorization of 2024 is 23 × 11 × 23. How many two-digit numbers are factors of 2024?",
+   "choices": {
+    "A": "2",
+    "B": "4",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 11,
+   "source": "2024 UKMT SMC Problem 11",
+   "question": "Which one of the following expressions is a square number for each positive integer /u1D45B?",
+   "choices": {
+    "A": "/u1D45B+ 1",
+    "B": "/u1D45B(/u1D45B+ 1) + 1",
+    "C": "/u1D45B(/u1D45B+ 1) (/u1D45B+ 2) + 1",
+    "D": "/u1D45B(/u1D45B+ 1) (/u1D45B+ 2) (/u1D45B+ 3) + 1",
+    "E": "/u1D45B(/u1D45B+ 1) (/u1D45B+ 2) (/u1D45B+ 3) (/u1D45B+ 4) + 1 © UK Mathematics Trust 2024 www.ukmt.org.uk Senior Mathematical Challenge Tuesday 1 October 2024"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 12,
+   "source": "2024 UKMT SMC Problem 12",
+   "question": "/u1D45D,/u1D45E,?nd/u1D460 are two-digit primes which between them use all the non-zero digits except 5. What is the value of /u1D45D+/u1D45E+/u1D45F+/u1D460?",
+   "choices": {
+    "A": "220",
+    "B": "210",
+    "C": "200",
+    "D": "190",
+    "E": "more information needed"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 14,
+   "source": "2024 UKMT SMC Problem 14",
+   "question": "/u1D443,/u1D444 ,/u1D445,/u1D446 and/u1D447 are the digits 1, 2, 3, 4 and 5 in some order. ‘ /u1D443/u1D445/u1D447’ and ‘/u1D444/u1D445/u1D446’ are both three-digit primes. Which digit is /u1D445?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 19,
+   "source": "2024 UKMT SMC Problem 19",
+   "question": "Five friends are dealt two cards each from a set of twelve cards. The cards are numbered 1 to 12 inclusive. In turn, the friends declare the sum of the values of their two cards. Paolo scores 4, Quinn scores 11, Romy scores 16, Stephen scores 19 and Thomas scores 20. Which of the following statements is true?",
+   "choices": {
+    "A": "Paolo has card 2",
+    "B": "Quinn has card 3",
+    "C": "Romy has card 5",
+    "D": "Stephen has card 7",
+    "E": "Thomas has card 11"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 20,
+   "source": "2024 UKMT SMC Problem 20",
+   "question": "What is the maximum possible value of /u1D466?",
+   "choices": {
+    "A": "40",
+    "B": "60",
+    "C": "240",
+    "D": "420",
+    "E": "480"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 24,
+   "source": "2024 UKMT SMC Problem 24",
+   "question": "A function f satisﬁes the equation /u1D453(/u1D465) + /u1D453 ( 1 1 −/u1D465 ) = 24?or all real values of ?xcept/u1D465= 0 and /u1D465= 1. What is the value of /u1D453(3)?",
+   "choices": {
+    "A": "40",
+    "B": "42",
+    "C": "45",
+    "D": "48",
+    "E": "50"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 1,
+   "source": "2023 UKMT SMC Problem 1",
+   "question": "What is the value of √ 2023 2 + 0 + 2 + 3?",
+   "choices": {
+    "A": "13",
+    "B": "15",
+    "C": "17",
+    "D": "19",
+    "E": "21"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 2,
+   "source": "2023 UKMT SMC Problem 2",
+   "question": "What is the area of the trapezium?",
+   "choices": {
+    "A": "9",
+    "B": "8",
+    "C": "4 √ 5",
+    "D": "4 √ 3",
+    "E": "4 √ 2"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 3,
+   "source": "2023 UKMT SMC Problem 3",
+   "question": "What is the length of /u1D444 /u1D44B ?",
+   "choices": {
+    "A": "√ 3",
+    "B": "2 − √ 3",
+    "C": "2 √ 3 − 1",
+    "D": "1 + √ 3",
+    "E": "2 √ 3 P Q R O X"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 4,
+   "source": "2023 UKMT SMC Problem 4",
+   "question": "In 2016, the world record for completing a 5000m three-legged race was 19 minutes and 6 seconds. It was set by Damian Thacker and Luke Symonds in Sheﬃeld. What was their approximate average speed in km/h?",
+   "choices": {
+    "A": "10",
+    "B": "12",
+    "C": "15",
+    "D": "18",
+    "E": "25"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 6,
+   "source": "2023 UKMT SMC Problem 6",
+   "question": "How many lines of three adjacent cells can be chosen from this grid, horizontally, vertically or diagonally, such that the sum of the numbers in the three cells is a multiple of three?",
+   "choices": {
+    "A": "30",
+    "B": "24",
+    "C": "18",
+    "D": "12",
+    "E": "6 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 7,
+   "source": "2023 UKMT SMC Problem 7",
+   "question": "A sequence begins 2023, 2022, 1, . . . . After the ﬁrst two terms, each term is the positive diﬀerence between the previous two terms. What is the value of the 25 th term?",
+   "choices": {
+    "A": "2010",
+    "B": "2009",
+    "C": "2008",
+    "D": "2007",
+    "E": "2006"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 8,
+   "source": "2023 UKMT SMC Problem 8",
+   "question": "What is the value of 99(0. /dotacc4/dotacc9 − 0. /dotacc4)?",
+   "choices": {
+    "A": "5",
+    "B": "4",
+    "C": "3",
+    "D": "2",
+    "E": "1"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 9,
+   "source": "2023 UKMT SMC Problem 9",
+   "question": "When completed correctly, the cross number is ﬁlled with four three-digit numbers. What digit is *?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "4",
+    "E": "6 1 2 3 *Across"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 10,
+   "source": "2023 UKMT SMC Problem 10",
+   "question": "How many of the numbers 6, 7, 8, 9, 10 are factors of the sum 22024 + 22023 + 22022?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 11,
+   "source": "2023 UKMT SMC Problem 11",
+   "question": "Wenlu, Xander, Y asser and Zoe make the following statements: Wenlu: “Xander is lying.” Xander: “ Y asser is lying.” Y asser: “Zoe is telling the truth.” Zoe: “Wenlu is telling the truth.” What are the possible numbers of people telling the truth?",
+   "choices": {
+    "A": "1 or 2",
+    "B": "1 or 3",
+    "C": "2",
+    "D": "2 or 3",
+    "E": "3"
+   },
+   "answer": "B",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 12,
+   "source": "2023 UKMT SMC Problem 12",
+   "question": "The greatest power of 7 which is a factor of 50! is 7/u1D458 (/u1D45B ! = 1 × 2 × 3 × 4 × . . . × ( /u1D45B − 1) × /u1D45B ). What is /u1D458 ?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 13,
+   "source": "2023 UKMT SMC Problem 13",
+   "question": "/u1D443/u1D444/u1D445/u1D446/u1D447 is a regular pentagon. The point /u1D448 lies on /u1D446/u1D447 such that ∠/u1D444/u1D443/u1D448 is a right angle. What is the ratio of the interior angles in triangle /u1D443/u1D448/u1D447 ?",
+   "choices": {
+    "A": "1 : 3 : 6",
+    "B": "1 : 2 : 4",
+    "C": "2 : 3 : 4",
+    "D": "1 : 4 : 8",
+    "E": "1 : 3 : 5"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 14,
+   "source": "2023 UKMT SMC Problem 14",
+   "question": "The points /u1D443 (/u1D451, −/u1D451 ) and /u1D444 (12 − /u1D451, 2/u1D451 − 6) both lie on the circumference of the same circle whose centre is the origin. What is the sum of the two possible values of /u1D451 ?",
+   "choices": {
+    "A": "−16",
+    "B": "−4",
+    "C": "4",
+    "D": "8",
+    "E": "16"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 15,
+   "source": "2023 UKMT SMC Problem 15",
+   "question": "In Bethany’s class of 30 students, twice as many people played basketball as played football. T wice as many played football as played neither. Which of the following options could have been the number of people who played both?",
+   "choices": {
+    "A": "19",
+    "B": "14",
+    "C": "9",
+    "D": "5",
+    "E": "0"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 17,
+   "source": "2023 UKMT SMC Problem 17",
+   "question": "The number /u1D440 = 124563987 is the smallest number which uses all the non-zero digits once each and which has the property that none of the pairs of its consecutive digits makes a prime number. For example, the 5th and 6th digits of /u1D440 make the number 63 which is not prime. /u1D441 is the largest number which uses all the non-zero digits once each and which has the property that none of the pairs of its consecutive digits makes a prime number. What are the 5th and 6th digits of /u1D441 ?",
+   "choices": {
+    "A": "6 and 3",
+    "B": "5 and 4",
+    "C": "5 and 2",
+    "D": "4 and 8",
+    "E": "3 and 5 © UK Mathematics Trust 2023 www.ukmt.org.uk Senior Mathematical Challenge Tuesday 3 October 2023"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 18,
+   "source": "2023 UKMT SMC Problem 18",
+   "question": "How many solutions are there of the equation 1 + 2 sin /u1D44B − 4 sin2 /u1D44B − 8 sin3 /u1D44B = 0 with 0° < /u1D44B < 360°?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "4",
+    "D": "6",
+    "E": "8"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 19,
+   "source": "2023 UKMT SMC Problem 19",
+   "question": "The expression 7/u1D45B + 12 2/u1D45B + 3 takes integer values for certain integer values of /u1D45B . What is the sum of all such integer values of the expression?",
+   "choices": {
+    "A": "4",
+    "B": "8",
+    "C": "10",
+    "D": "12",
+    "E": "14"
+   },
+   "answer": "E",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 20,
+   "source": "2023 UKMT SMC Problem 20",
+   "question": "Triangle /u1D43F /u1D440 /u1D441 represents a right-angled ﬁeld with /u1D43F /u1D440 = /u1D45F , /u1D43F /u1D44B = /u1D45D and /u1D44B /u1D441 = /u1D45E . Jenny and Vicky walk at the same speed in opposite directions along the edge of the ﬁeld, starting at /u1D44B at the same time. Their ﬁrst meeting is at /u1D440 . Which of these expressions gives /u1D45E in terms of /u1D45D and /u1D45F ? M X N L r p q",
+   "choices": {
+    "A": "/u1D45D 2 + /u1D45F",
+    "B": "√ /u1D45D 2 + /u1D45F 2 + /u1D45D 2",
+    "C": "/u1D45D/u1D45F 2/u1D45D + /u1D45F",
+    "D": "/u1D45D 2",
+    "E": "1"
+   },
+   "answer": "C",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 23,
+   "source": "2023 UKMT SMC Problem 23",
+   "question": "The length of a rectangular piece of paper is three times its width. The paper is folded so that one vertex lies on top of the opposite vertex, thus forming a pentagonal shape. What is the area of the pentagon as a fraction of the area of the original rectangle?",
+   "choices": {
+    "A": "2 3",
+    "B": "11 16",
+    "C": "12 17",
+    "D": "13 18",
+    "E": "14 19"
+   },
+   "answer": "D",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  },
+  {
+   "position": 25,
+   "source": "2023 UKMT SMC Problem 25",
+   "question": "What is the area of the part of the /u1D465/u1D466 -plane within which /u1D465 3/u1D466 2 − /u1D465 2/u1D466 2 − /u1D465/u1D466 4 + /u1D465/u1D466 3 ≥ 0 and 0 ≤ /u1D465 ≤ /u1D466 ?",
+   "choices": {
+    "A": "1 4",
+    "B": "1 2",
+    "C": "1",
+    "D": "2",
+    "E": "4 © UK Mathematics Trust 2023 www.ukmt.org.uk"
+   },
+   "answer": "A",
+   "type": "multiple_choice",
+   "solution": null,
+   "has_diagram": false
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "id": "comc_rand_01",
+ "competition": "COMC",
+ "title": "COMC — Random Mock #1",
+ "instructions": "8 questions · 150 minutes · No calculator. Proof-based problems: write full solutions, then compare with the official solutions.",
+ "time_limit_min": 150,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2011 COMC Problem C1",
+   "question": "ABC is a triangle with coordinates A = (2, 6), B = (0, 0), and C = (14, 0). B(0, 0) A(2, 6) C(14, 0) (a) Let P be the midpoint of AB. Determine the equation of the line perpendicular to AB passing through P . (b) Let Q be the point on line BC for which P Q is perpendicular to AB. Determine the length of AQ. (c) There is a (unique) circle passing through the points A, B, and C. Determine the radius of this circle. Solution: (a) The answer is y = −1/3 ·x + 10/3 or x + 3y = 10. The midpoint of AB is P = ( 0 + 2 2 , 0 + 6 2 ) = (1, 3). The slope of AB is 6 /2 = 3. Therefore, the slope of the line perpendicular to AB is −1/3. Hence, the equation of the line perpendicular to AB passing through P is y − 3 = −1 3 (x − 1). This is equivalent to y = −1 3 x + 10 3 . Rewriting this yields x + 3y = 10. (b) The answer is 10. Solution 1: The line BC is the line y = 0. Since Q lies on BC , the y-coordinate of Q is 0. Since Q also lies on the line passing through P perpendicular to AB and the equation of this line is x + 3y = 10, we substitute y = 0 into x + 3y = 10 to yield x = 10. Hence, Q = (10, 0). Since A = (2, 6), by the Pythagorean Theorem, AQ = √ (10 − 2)2 + (0 − 6)2 = √ 82 + 62 = 10. 16 COMC 2011 17 Solution 2: As in Solution 1, Q = (10, 0). Since Q lies on the perpendicular bisector of AB, QA = QB. Since Q = (10, 0) and B = (0, 0), QA = QB = 10. (c) The answer is 5 √ 2 or √",
+   "choices": null,
+   "answer": null,
+   "solution": "ABC is a triangle with coordinates A = (2, 6), B = (0, 0), and C = (14, 0). B(0, 0) A(2, 6) C(14, 0) (a) Let P be the midpoint of AB. Determine the equation of the line perpendicular to AB passing through P . (b) Let Q be the point on line BC for which P Q is perpendicular to AB. Determine the length of AQ. (c) There is a (unique) circle passing through the points A, B, and C. Determine the radius of this circle. Solution: (a) The answer is y = −1/3 ·x + 10/3 or x + 3y = 10. The midpoint of AB is P = ( 0 + 2 2 , 0 + 6 2 ) = (1, 3). The slope of AB is 6 /2 = 3. Therefore, the slope of the line perpendicular to AB is −1/3. Hence, the equation of the line perpendicular to AB passing through P is y − 3 = −1 3 (x − 1). This is equivalent to y = −1 3 x + 10 3 . Rewriting this yields x + 3y = 10. (b) The answer is 10. Solution 1: The line BC is the line y = 0. Since Q lies on BC , the y-coordinate of Q is 0. Since Q also lies on the line passing through P perpendicular to AB and the equation of this line is x + 3y = 10, we substitute y = 0 into x + 3y = 10 to yield x = 10. Hence, Q = (10, 0). Since A = (2, 6), by the Pythagorean Theorem, AQ = √ (10 − 2)2 + (0 − 6)2 = √ 82 + 62 = 10. 16 COMC 2011 17 Solution 2: As in Solution 1, Q = (10, 0). Since Q lies on the perpendicular bisector of AB, QA = QB. Since Q = (10, 0) and B = (0, 0), QA = QB = 10. (c) The answer is 5 √ 2 or √",
+   "type": "proof"
+  },
+  {
+   "n": 2,
+   "source": "2017 COMC Problem 2",
+   "question": "F (x +π) = cos(sin(x +π)) = cos(− sin(x)) = cos(sin(x)) =F (x). To prove thatT =π is the smallest positive number consider for example x = 0. Then F (0) = 1. Now, we need F (0 +T ) = cos(sin(T )) = 1. Thus, sin T = 0, and so the smallest positive T =π. The answers are 2 π and π . Page 12 c© 2017, 2018 Canadian Mathematical Society COMC 2017 http://comc.math.ca/ Oﬃcial Solutions",
+   "choices": null,
+   "answer": null,
+   "solution": "F (x +π) = cos(sin(x +π)) = cos(− sin(x)) = cos(sin(x)) =F (x). To prove thatT =π is the smallest positive number consider for example x = 0. Then F (0) = 1. Now, we need F (0 +T ) = cos(sin(T )) = 1. Thus, sin T = 0, and so the smallest positive T =π. The answers are 2 π and π . Page 12 c© 2017, 2018 Canadian Mathematical Society COMC 2017 http://comc.math.ca/ Oﬃcial Solutions",
+   "type": "proof"
+  },
+  {
+   "n": 3,
+   "source": "2013 COMC Problem 3",
+   "question": "Therefore, a≥ 4. But if a≥ 5, then b,c≥ 5. Consequently, 25 84 = 1 a + 1 ab + 1 abc≤ 1 5 + 1 52 + 1 53 = 52 + 5 + 1 53 = 31 125 < 1 4 < 25 84, which is a contradiction. Therefore, a⁄≥ 5. Hence, a = 4. Substituting this into the equation given in the problem yields 25 84 = 1 4 + 1 4b + 1 4bc. Multiplying both sides by 4 and rearranging yields 4 21 = 1 b + 1 bc. (1) Note that 1 6 < 4 21 < 1",
+   "choices": null,
+   "answer": null,
+   "solution": "Therefore, a≥ 4. But if a≥ 5, then b,c≥ 5. Consequently, 25 84 = 1 a + 1 ab + 1 abc≤ 1 5 + 1 52 + 1 53 = 52 + 5 + 1 53 = 31 125 < 1 4 < 25 84, which is a contradiction. Therefore, a⁄≥ 5. Hence, a = 4. Substituting this into the equation given in the problem yields 25 84 = 1 4 + 1 4b + 1 4bc. Multiplying both sides by 4 and rearranging yields 4 21 = 1 b + 1 bc. (1) Note that 1 6 < 4 21 < 1",
+   "type": "proof"
+  },
+  {
+   "n": 4,
+   "source": "2021 COMC Problem C4",
+   "question": "We call (F,c ) a good pair if the following three conditions are satisfied: (1) F (x) =a0 +a1x +··· amxm, (m≥ 1) is a non-constant polynomial with integer coefficients. (2) c is a real number that is not an integer. (3) F (c) is an integer. For example, both (6x, 1",
+   "choices": null,
+   "answer": null,
+   "solution": "We call (F,c ) a good pair if the following three conditions are satisfied: (1) F (x) =a0 +a1x +··· amxm, (m≥ 1) is a non-constant polynomial with integer coefficients. (2) c is a real number that is not an integer. (3) F (c) is an integer. For example, both (6x, 1",
+   "type": "proof"
+  },
+  {
+   "n": 5,
+   "source": "2013 COMC Problem 5",
+   "question": "Therefore, b≥ 6. If b≥ 7, then c≥ 7. Hence, 4 21 = 1 b + 1 bc≤ 1 7 + 1 72 = 7 + 1 72 = 8 49 < 1 6 < 4 21, which is a contradiction. Therefore, b⁄≥ 7. Consequently, b = 6. Substituting this into (1) yields 4 21 = 1 6 + 1 6c. Multiplying both sides by 6 and rearranging yields 1 7 = 1 c. Therefore, c = 7. Hence, (a,b,c) = (4 , 6, 7), which yields a +b +c = 17. Page 6 c© 2013, 2014 Canadian Mathematical Society COMC 2013 http://comc.math.ca/ Oﬃcial Solutions B3 Teams A and B are playing soccer until someone scores 29 goals. Throughout the game the score is shown on a board displaying two numbers – the number of goals scored by A and the number of goals scored by B. A mathematical soccer fan noticed that several times throughout the game, the sum of all the digits displayed on the board was 10. (For example, a score of 12 : 7 is one such possible occasion). What is the maximum number of times throughout the game that this could happen? Solution 1 When the sum of all the digits on the scoreboard is 10, the sum of the scores must be 1 more than a multiple of 9. The highest possible sum of the scores is 29 + 28 = 57. The numbers less than 57 that are 1 more than a multiple of 9 are 1, 10, 19, 28, 37, 46, and 55. If the sum of the scores is 1, then the sum of the digits is 1, not 10. If the sum of the scores is 55, then the scores are 26 and 29 or 27 and 28, both of which have a digit sum of 19. Thus, we cannot have this happen more than 5 times. We see that the scores (5,5), (5, 14), (14, 14), (23, 14), (23, 23) each have a digit sum of 10, and can all be acheived in the same game. Thus, the maximum number of times is 5. Solution 2 Denote by (a1a2,b 1b2) the score displayed on the board wherea1,a 2,b 1,b 2 are digits (we allow a1 andb1 to be 0), and a1a2,b1b2 are the numbers of goals scored by the two teams. We will call a score good if a1 +a2 +b1 +b2 = 10. Lemma: Suppose scores (x,y ) and (z,t) occurred throughout the game. Then at most one of x>z and y <t can hold. Proof: Suppose that x>z . Then the ﬁrst team scored x goals after it scored z goals, so the score (x,y ) occurred later in the game than the score ( z,t). Therefore y≥t, and the result follows. We now show that we cannot have two good scores occurring throughout the game of the form (a 1a2,a 1b2) and (a 1a′ 2,a 1b′ 2). Suppose the scores did occur; then a2 +b2 = a′ 2 +b′",
+   "choices": null,
+   "answer": null,
+   "solution": "Therefore, b≥ 6. If b≥ 7, then c≥ 7. Hence, 4 21 = 1 b + 1 bc≤ 1 7 + 1 72 = 7 + 1 72 = 8 49 < 1 6 < 4 21, which is a contradiction. Therefore, b⁄≥ 7. Consequently, b = 6. Substituting this into (1) yields 4 21 = 1 6 + 1 6c. Multiplying both sides by 6 and rearranging yields 1 7 = 1 c. Therefore, c = 7. Hence, (a,b,c) = (4 , 6, 7), which yields a +b +c = 17. Page 6 c© 2013, 2014 Canadian Mathematical Society COMC 2013 http://comc.math.ca/ Oﬃcial Solutions B3 Teams A and B are playing soccer until someone scores 29 goals. Throughout the game the score is shown on a board displaying two numbers – the number of goals scored by A and the number of goals scored by B. A mathematical soccer fan noticed that several times throughout the game, the sum of all the digits displayed on the board was 10. (For example, a score of 12 : 7 is one such possible occasion). What is the maximum number of times throughout the game that this could happen? Solution 1 When the sum of all the digits on the scoreboard is 10, the sum of the scores must be 1 more than a multiple of 9. The highest possible sum of the scores is 29 + 28 = 57. The numbers less than 57 that are 1 more than a multiple of 9 are 1, 10, 19, 28, 37, 46, and 55. If the sum of the scores is 1, then the sum of the digits is 1, not 10. If the sum of the scores is 55, then the scores are 26 and 29 or 27 and 28, both of which have a digit sum of 19. Thus, we cannot have this happen more than 5 times. We see that the scores (5,5), (5, 14), (14, 14), (23, 14), (23, 23) each have a digit sum of 10, and can all be acheived in the same game. Thus, the maximum number of times is 5. Solution 2 Denote by (a1a2,b 1b2) the score displayed on the board wherea1,a 2,b 1,b 2 are digits (we allow a1 andb1 to be 0), and a1a2,b1b2 are the numbers of goals scored by the two teams. We will call a score good if a1 +a2 +b1 +b2 = 10. Lemma: Suppose scores (x,y ) and (z,t) occurred throughout the game. Then at most one of x>z and y <t can hold. Proof: Suppose that x>z . Then the ﬁrst team scored x goals after it scored z goals, so the score (x,y ) occurred later in the game than the score ( z,t). Therefore y≥t, and the result follows. We now show that we cannot have two good scores occurring throughout the game of the form (a 1a2,a 1b2) and (a 1a′ 2,a 1b′ 2). Suppose the scores did occur; then a2 +b2 = a′ 2 +b′",
+   "type": "proof"
+  },
+  {
+   "n": 6,
+   "source": "2020 COMC Problem 6",
+   "question": "If x≥ 0,y≤ 0 and x≤−y then x−x−y−y≤ 2 so y≥− 1. This gives a triangle with vertices (0, 0), (0,−1), (1,−1). The area is 0 .5. page 8 © 2020, 2020 Canadian Mathematical Society COMC 2020 http://comc.math.ca/ Oﬃcial Solutions Consequently, the six triangles form a hexagon with vertices (±1, 0), (0,±1) and (−1, 1), (1,−1), which has area 3. Scaling by a linear factor of 1010 gives an area of 3(1010) 2 = 3060300. Alternatively, without re-scaling, area of each triangle will be 1010 2/2 = 505× 1010 = 510050. The six triangles give 510050× 6 = 3060300 . Alternative solution C1(c) : This area is fully contained within the square { |x|≤ 1010 |y|≤ 1010 . What parts of the square (|x|≤ 1010 &|y|≤ 1010) are in|x| +|y| +|x +y|≤ 2020? The complement is|x|≤ 1010,|y|≤ 1010 and|x +y|> 1010. That is, we subtract 2 triangles of area 1 2(1010)2 (a total of 1010 2) from a big square of area 2020 2. This is, 10102(4− 1) = 1020100× 3 = 3060300 . © 2020, 2020 Canadian Mathematical Society page 9 Oﬃcial Solutions http://comc.math.ca/ COMC 2020",
+   "choices": null,
+   "answer": null,
+   "solution": "If x≥ 0,y≤ 0 and x≤−y then x−x−y−y≤ 2 so y≥− 1. This gives a triangle with vertices (0, 0), (0,−1), (1,−1). The area is 0 .5. page 8 © 2020, 2020 Canadian Mathematical Society COMC 2020 http://comc.math.ca/ Oﬃcial Solutions Consequently, the six triangles form a hexagon with vertices (±1, 0), (0,±1) and (−1, 1), (1,−1), which has area 3. Scaling by a linear factor of 1010 gives an area of 3(1010) 2 = 3060300. Alternatively, without re-scaling, area of each triangle will be 1010 2/2 = 505× 1010 = 510050. The six triangles give 510050× 6 = 3060300 . Alternative solution C1(c) : This area is fully contained within the square { |x|≤ 1010 |y|≤ 1010 . What parts of the square (|x|≤ 1010 &|y|≤ 1010) are in|x| +|y| +|x +y|≤ 2020? The complement is|x|≤ 1010,|y|≤ 1010 and|x +y|> 1010. That is, we subtract 2 triangles of area 1 2(1010)2 (a total of 1010 2) from a big square of area 2020 2. This is, 10102(4− 1) = 1020100× 3 = 3060300 . © 2020, 2020 Canadian Mathematical Society page 9 Oﬃcial Solutions http://comc.math.ca/ COMC 2020",
+   "type": "proof"
+  },
+  {
+   "n": 7,
+   "source": "2018 COMC Problem 7",
+   "question": "x y P (0, 0) Q(a, b) R(a, 0) Solution 2: The answer is 3 √ 7 . The diameter of the circle is equal to the distance from P to Q, that is, √ (3 √ 7)2 + (7 √ 3)2 = √ 210. The radius of the circle is equal √ 210/2. The centre of the circle is at (3 √ 7/2, 7 √ 3/2), therefore the equation of the circle is ( x− 3 √ 7/2)2 + (y− 7 √ 3/2)2 = 210/4. To ﬁnd the x-intercepts we set y = 0 and obtain x = 0 and x = 3 √",
+   "choices": null,
+   "answer": null,
+   "solution": "x y P (0, 0) Q(a, b) R(a, 0) Solution 2: The answer is 3 √ 7 . The diameter of the circle is equal to the distance from P to Q, that is, √ (3 √ 7)2 + (7 √ 3)2 = √ 210. The radius of the circle is equal √ 210/2. The centre of the circle is at (3 √ 7/2, 7 √ 3/2), therefore the equation of the circle is ( x− 3 √ 7/2)2 + (y− 7 √ 3/2)2 = 210/4. To ﬁnd the x-intercepts we set y = 0 and obtain x = 0 and x = 3 √",
+   "type": "proof"
+  },
+  {
+   "n": 8,
+   "source": "2019 COMC Problem 8",
+   "question": "The diﬀerence of areas then is (900 /8− 100/8)π = 100π. Answer: 100 π . c© 2019, 2020 Canadian Mathematical Society page 5 Oﬃcial Solutions http://comc.math.ca/ COMC 2019",
+   "choices": null,
+   "answer": null,
+   "solution": "The diﬀerence of areas then is (900 /8− 100/8)π = 100π. Answer: 100 π . c© 2019, 2020 Canadian Mathematical Society page 5 Oﬃcial Solutions http://comc.math.ca/ COMC 2019",
+   "type": "proof"
+  }
+ ]
+}

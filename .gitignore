@@ -1,0 +1,13 @@
+raw/
+data/
+bank_real/
+.venv/
+.playwright-mcp/
+results.jsonl
+*.png
+scraper/aops_session.json
+__pycache__/
+.DS_Store
+scraper/state.json
+scraper/download.log
+scraper/verification/

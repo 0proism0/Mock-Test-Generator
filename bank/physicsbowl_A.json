@@ -1,0 +1,111 @@
+{
+  "competition": "Physics Bowl",
+  "set": "A",
+  "variants": [
+    {
+      "position": 1, "source": "Modified from 2025 Physics Bowl Problem 1",
+      "question": "Your brother is $40\\,\\mathrm{m}$ ahead of you and walking away at $1.5\\,\\mathrm{m/s}$. You run after him at $3.5\\,\\mathrm{m/s}$. How long does it take you to catch up to him?",
+      "choices": {"A": "$15\\,\\mathrm{s}$", "B": "$18\\,\\mathrm{s}$", "C": "$20\\,\\mathrm{s}$", "D": "$22\\,\\mathrm{s}$", "E": "$25\\,\\mathrm{s}$"},
+      "answer": "C",
+      "solution": "Your closing speed is $3.5 - 1.5 = 2\\,\\mathrm{m/s}$, so the catch-up time is $40/2 = 20\\,\\mathrm{s}$."
+    },
+    {
+      "position": 2, "source": "Modified from 2025 Physics Bowl Problem 2",
+      "question": "Two identical balls roll off the edges of two identical horizontal tabletops at the same time, one at $3\\,\\mathrm{m/s}$ and the other at $5\\,\\mathrm{m/s}$. The faster ball lands $2\\,\\mathrm{m}$ farther from the table's base than the slower one. How high are the tables? (Use $g = 10\\,\\mathrm{m/s^2}$.)",
+      "choices": {"A": "$2.5\\,\\mathrm{m}$", "B": "$4\\,\\mathrm{m}$", "C": "$6\\,\\mathrm{m}$", "D": "$7.5\\,\\mathrm{m}$", "E": "$5\\,\\mathrm{m}$"},
+      "answer": "E",
+      "solution": "The extra range of $2\\,\\mathrm{m}$ comes from the speed difference: $t = 2/(5-3) = 1\\,\\mathrm{s}$. Then $h = \\frac12 g t^2 = 5\\,\\mathrm{m}$."
+    },
+    {
+      "position": 3, "source": "Modified from 2025 Physics Bowl Problem 3",
+      "question": "An object starts moving at $4\\,\\mathrm{m/s}$ and decelerates uniformly to rest in $8\\,\\mathrm{s}$. Which expression gives its velocity $v(t)$ (in $\\mathrm{m/s}$) as a function of time $t$ (in $\\mathrm{s}$)?",
+      "choices": {"A": "$v(t) = 4 - t$", "B": "$v(t) = 4 - 0.5t$", "C": "$v(t) = 4 + 0.5t$", "D": "$v(t) = 8 - 2t$", "E": "$v(t) = 4 - 2t$"},
+      "answer": "B",
+      "solution": "The deceleration is $4/8 = 0.5\\,\\mathrm{m/s^2}$, so $v(t) = 4 - 0.5t$."
+    },
+    {
+      "position": 4, "source": "Modified from 2025 Physics Bowl Problem 4",
+      "question": "NASA launched Apollo 11 in July 1969. What was unique about this mission?",
+      "choices": {"A": "It was the first mission to orbit the Moon without a crew", "B": "It was the first mission to bring samples from Mars back to Earth", "C": "It was the first crewed mission to land humans on the Moon", "D": "It was the first mission to reach the International Space Station", "E": "It was the longest crewed spaceflight in history"},
+      "answer": "C",
+      "solution": "Apollo 11 (July 1969) was the first mission to land humans on the Moon: Neil Armstrong and Buzz Aldrin walked on the surface."
+    },
+    {
+      "position": 5, "source": "Modified from 2025 Physics Bowl Problem 5",
+      "question": "A simple pendulum hangs from the ceiling of a train car and is observed to hang at $15^{\\circ}$ from vertical. What is the train's acceleration? (Use $g = 10\\,\\mathrm{m/s^2}$, $\\tan 15^{\\circ} \\approx 0.27$.)",
+      "choices": {"A": "$2.7\\,\\mathrm{m/s^2}$", "B": "$2.0\\,\\mathrm{m/s^2}$", "C": "$3.5\\,\\mathrm{m/s^2}$", "D": "$4.2\\,\\mathrm{m/s^2}$", "E": "$5.0\\,\\mathrm{m/s^2}$"},
+      "answer": "A",
+      "solution": "In the train's frame, $\\tan\\theta = a/g$, so $a = g\\tan 15^{\\circ} \\approx 10 \\times 0.27 = 2.7\\,\\mathrm{m/s^2}$."
+    },
+    {
+      "position": 6, "source": "Modified from 2025 Physics Bowl Problem 6",
+      "question": "Which of the following pairs of quantities have the same dimensions?",
+      "choices": {"A": "Power and moment of inertia", "B": "Work and angular displacement", "C": "Force and momentum", "D": "Work and torque", "E": "Energy and power"},
+      "answer": "D",
+      "solution": "Work and torque are both measured in newton-meters ($\\mathrm{N\\cdot m}$)."
+    },
+    {
+      "position": 7, "source": "Modified from 2025 Physics Bowl Problem 7",
+      "question": "A researcher measures distance $d = 8.0\\,\\mathrm{m} \\pm 0.2\\,\\mathrm{m}$ and time $t = 4.0\\,\\mathrm{s} \\pm 0.2\\,\\mathrm{s}$. What is the percent uncertainty in the computed average speed $v = d/t$?",
+      "choices": {"A": "$2.5\\%$", "B": "$5\\%$", "C": "$10\\%$", "D": "$12.5\\%$", "E": "$7.5\\%$"},
+      "answer": "E",
+      "solution": "Relative uncertainties add: $\\frac{0.2}{8.0} + \\frac{0.2}{4.0} = 2.5\\% + 5\\% = 7.5\\%$."
+    },
+    {
+      "position": 8, "source": "Modified from 2025 Physics Bowl Problem 8",
+      "question": "A swimmer's speed in still water is $2\\,\\mathrm{m/s}$, and the stream flows at $1\\,\\mathrm{m/s}$. What is her maximum possible speed relative to the shore?",
+      "choices": {"A": "$1\\,\\mathrm{m/s}$", "B": "$2\\,\\mathrm{m/s}$", "C": "$2.5\\,\\mathrm{m/s}$", "D": "$3\\,\\mathrm{m/s}$", "E": "$3.5\\,\\mathrm{m/s}$"},
+      "answer": "D",
+      "solution": "Swimming downstream, her speeds add: $2 + 1 = 3\\,\\mathrm{m/s}$."
+    },
+    {
+      "position": 9, "source": "Modified from 2025 Physics Bowl Problem 9",
+      "question": "A $1000\\,\\mathrm{kg}$ car moving at $20\\,\\mathrm{m/s}$ brakes uniformly to rest over $50\\,\\mathrm{m}$. What is the average braking force?",
+      "choices": {"A": "$4000\\,\\mathrm{N}$", "B": "$2000\\,\\mathrm{N}$", "C": "$3000\\,\\mathrm{N}$", "D": "$5000\\,\\mathrm{N}$", "E": "$6000\\,\\mathrm{N}$"},
+      "answer": "A",
+      "solution": "$v^2 = 2as$ gives $a = 20^2/(2\\cdot 50) = 4\\,\\mathrm{m/s^2}$, so $F = ma = 4000\\,\\mathrm{N}$."
+    },
+    {
+      "position": 10, "source": "Modified from 2025 Physics Bowl Problem 10",
+      "question": "An impulse of $15\\,\\mathrm{N\\cdot s}$ acts on a $3\\,\\mathrm{kg}$ object initially at rest. What is the object's final speed?",
+      "choices": {"A": "$3\\,\\mathrm{m/s}$", "B": "$5\\,\\mathrm{m/s}$", "C": "$7.5\\,\\mathrm{m/s}$", "D": "$10\\,\\mathrm{m/s}$", "E": "$15\\,\\mathrm{m/s}$"},
+      "answer": "B",
+      "solution": "Impulse equals change in momentum: $v = J/m = 15/3 = 5\\,\\mathrm{m/s}$."
+    },
+    {
+      "position": 11, "source": "Modified from 2025 Physics Bowl Problem 11",
+      "question": "A solid disk is released from rest and rolls without slipping down a $10\\,\\mathrm{m}$ long incline at $30^{\\circ}$ to the horizontal. What is its speed at the bottom? (Use $g = 10\\,\\mathrm{m/s^2}$; for a solid disk $I = \\frac12 mR^2$.)",
+      "choices": {"A": "$6.3\\,\\mathrm{m/s}$", "B": "$7.1\\,\\mathrm{m/s}$", "C": "$8.2\\,\\mathrm{m/s}$", "D": "$10\\,\\mathrm{m/s}$", "E": "$11.5\\,\\mathrm{m/s}$"},
+      "answer": "C",
+      "solution": "The drop is $h = 10\\sin 30^{\\circ} = 5\\,\\mathrm{m}$. Energy: $mgh = \\frac12 mv^2 + \\frac12 I\\omega^2 = \\frac34 mv^2$, so $v = \\sqrt{4gh/3} = \\sqrt{200/3} \\approx 8.2\\,\\mathrm{m/s}$."
+    },
+    {
+      "position": 12, "source": "Modified from 2025 Physics Bowl Problem 12",
+      "question": "A simple pendulum has a massless string of length $2.5\\,\\mathrm{m}$. What is its period for small oscillations? (Use $g = 10\\,\\mathrm{m/s^2}$.)",
+      "choices": {"A": "$1.57\\,\\mathrm{s}$", "B": "$2.5\\,\\mathrm{s}$", "C": "$5\\,\\mathrm{s}$", "D": "$6.28\\,\\mathrm{s}$", "E": "$3.14\\,\\mathrm{s}$"},
+      "answer": "E",
+      "solution": "$T = 2\\pi\\sqrt{L/g} = 2\\pi\\sqrt{2.5/10} = 2\\pi \\cdot 0.5 = \\pi \\approx 3.14\\,\\mathrm{s}$."
+    },
+    {
+      "position": 13, "source": "Modified from 2025 Physics Bowl Problem 13",
+      "question": "A box slides along a horizontal surface with initial speed $12\\,\\mathrm{m/s}$ and comes to rest after $8\\,\\mathrm{m}$. What is the coefficient of kinetic friction? (Use $g = 10\\,\\mathrm{m/s^2}$.)",
+      "choices": {"A": "$0.9$", "B": "$0.6$", "C": "$0.75$", "D": "$1.1$", "E": "$1.25$"},
+      "answer": "A",
+      "solution": "$a = v^2/(2s) = 144/16 = 9\\,\\mathrm{m/s^2}$, and $\\mu = a/g = 0.9$."
+    },
+    {
+      "position": 14, "source": "Modified from 2025 Physics Bowl Problem 14",
+      "question": "Which scientist is credited with first introducing the concept that energy is quantized, laying the foundation for quantum mechanics?",
+      "choices": {"A": "Albert Einstein", "B": "Max Planck", "C": "Niels Bohr", "D": "Erwin Schrödinger", "E": "Werner Heisenberg"},
+      "answer": "B",
+      "solution": "Max Planck introduced the quantum of energy in 1900 to explain blackbody radiation."
+    },
+    {
+      "position": 15, "source": "Modified from 2025 Physics Bowl Problem 16",
+      "question": "A $60\\,\\mathrm{kg}$ person stands on a bathroom scale inside an elevator. The scale reads $720\\,\\mathrm{N}$. Which describes the elevator's motion? (Use $g = 10\\,\\mathrm{m/s^2}$.)",
+      "choices": {"A": "Accelerating upward at $2\\,\\mathrm{m/s^2}$", "B": "Accelerating downward at $2\\,\\mathrm{m/s^2}$", "C": "Accelerating upward at $6\\,\\mathrm{m/s^2}$", "D": "Accelerating downward at $6\\,\\mathrm{m/s^2}$", "E": "Moving at constant velocity"},
+      "answer": "A",
+      "solution": "$N = m(g+a)$ gives $a = 720/60 - 10 = 2\\,\\mathrm{m/s^2}$ upward."
+    }
+  ]
+}
