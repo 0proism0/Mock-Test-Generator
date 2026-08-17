@@ -138,27 +138,78 @@ function fmtTime(s) {
 
 async function home() {
   clearInterval(state.timerId);
+  showFamilies();
+}
+
+async function showFamilies() {
   const banks = await (await fetch('/api/banks')).json();
+  state.banks = banks;
   const catOrder = ['Math', 'Physics', 'Chemistry', 'Biology', 'Informatics', 'Astronomy & Earth', 'Economics', 'Linguistics', 'Other'];
-  const cats = {};
-  for (const b of banks) (cats[b.category] ??= []).push(b);
+  // group by category -> family
+  const fams = {};
+  for (const b of banks) {
+    (fams[b.category] ??= {});
+    (fams[b.category][b.family] ??= []).push(b);
+  }
   let html = '';
-  for (const cat of catOrder.filter(c => cats[c])) {
+  for (const cat of catOrder.filter(c => fams[c])) {
     html += `<h2 class="section-title">${catIcon(cat)} ${cat}</h2><div class="gen-grid">`;
-    html += cats[cat].map(b => `
-    <div class="card compact test-item">
-      <div>
-        <h3>${b.name} — random variant mock</h3>
-        <div class="meta">${b.n_questions} questions · ${b.time_limit_min} min · ${b.total_variants} real problems with various modified questions</div>
-      </div>
-      ${b.ready
-        ? `<button class="btn" onclick="generate('${b.slug}'${b.round ? `,'${b.round}'` : ''})">Generate →</button>`
-        : `<span class="meta">bank building…</span>`}
-    </div>`).join('');
+    for (const [fam, subs] of Object.entries(fams[cat])) {
+      const n_probs = subs.reduce((s, b) => s + b.total_variants, 0);
+      html += `
+      <div class="card compact test-item" onclick="showSubtests('${fam}')">
+        <div>
+          <h3>${fam}</h3>
+          <div class="meta">${subs.length} test${subs.length > 1 ? 's' : ''} · ${n_probs} real problems with various modified questions</div>
+        </div>
+        <button class="btn">›</button>
+      </div>`;
+    }
     html += '</div>';
   }
   html += '<div class="card compact" style="font-size:13px;color:#666;line-height:1.6"><b>Disclaimer:</b> For <b>AMC 8, AMC 10, AMC 12, AIME, and Math Kangaroo</b>, we use <b>modified questions</b> — real problems with numbers changed and answers recomputed (marked <i>Modified from …</i>). For <b>all other competitions</b>, mock tests use the <b>original official past problems</b> (marked <i>Real problem · …</i>), which their organizers publish free for practice.</div>';
   app.innerHTML = html;
+}
+
+function showSubtests(fam) {
+  const subs = state.banks.filter(b => b.family === fam);
+  const cat = subs[0]?.category || '';
+  let html = `<div class="card compact" style="cursor:pointer" onclick="showFamilies()">‹ Back to all competitions</div>
+    <h2 class="section-title">${catIcon(cat)} ${fam}</h2><div class="gen-grid">`;
+  for (const b of subs) {
+    html += `
+    <div class="card compact test-item" onclick="showDetail('${b.slug}'${b.round ? `,'${b.round}'` : ''})">
+      <div>
+        <h3>${b.name}</h3>
+        <div class="meta">${b.n_questions} questions · ${b.time_limit_min} min · ${b.total_variants} real problems</div>
+      </div>
+      <button class="btn">›</button>
+    </div>`;
+  }
+  html += '</div>';
+  app.innerHTML = html;
+}
+
+function showDetail(slug, round) {
+  const b = state.banks.find(x => x.slug === slug && x.round === (round || null));
+  if (!b) return;
+  const types = b.total_variants >= 300 ? 'Original official past problems (Real problem ·)' : 'Variants of real problems, numbers modified (Modified from)';
+  app.innerHTML = `
+    <div class="card compact" style="cursor:pointer" onclick="showSubtests('${b.family}')">‹ Back to ${b.family}</div>
+    <div class="card">
+      <h2>${b.name}</h2>
+      <table class="stats" style="margin-top:12px">
+        <tr><th>Category</th><td>${b.category}</td></tr>
+        <tr><th>Questions</th><td>${b.n_questions}</td></tr>
+        <tr><th>Time limit</th><td>${b.time_limit_min} minutes</td></tr>
+        <tr><th>Problem bank</th><td>${b.total_variants} real problems with various modified questions</td></tr>
+        <tr><th>Sources</th><td>Mixed years — each Problem N comes from a real Problem N of a different year; never repeated across your tests</td></tr>
+        <tr><th>Content</th><td>${types}</td></tr>
+      </table>
+      <div style="margin-top:18px;display:flex;gap:10px">
+        <button class="btn" style="font-size:16px;padding:12px 28px" onclick="generate('${b.slug}'${b.round ? `,'${b.round}'` : ''})">Generate →</button>
+      </div>
+    </div>`;
 }
 
 function catIcon(cat) {
