@@ -68,6 +68,9 @@
   .tabs .container { display: flex; gap: 4px; padding: 0; }
   .tab { padding: 10px 18px; color: #b8c4d0; cursor: pointer; font-size: 14px;
          border-bottom: 3px solid transparent; }
+  .lang-toggle { margin-left: auto; display: flex; border: 1px solid #4a5a6a; border-radius: 6px; overflow: hidden; }
+  .lang-toggle span { padding: 6px 12px; cursor: pointer; font-size: 13px; color: #b8c4d0; }
+  .lang-toggle span.on { background: #2b6cb0; color: #fff; }
   .tab:hover { color: #fff; }
   .tab.active { color: #fff; border-bottom-color: #5ea3f7; font-weight: 600; }
   table.stats { width: 100%; border-collapse: collapse; font-size: 14px; }
@@ -84,15 +87,90 @@
   <p>Mock exams built from real competition 真题 — numbers modified, difficulty preserved</p>
 </div></header>
 <nav class="tabs"><div class="container">
-  <div class="tab active" data-tab="new" onclick="showTab('new')">🎲 New Test</div>
-  <div class="tab" data-tab="tests" onclick="showTab('tests')">📋 My Tests <span id="testCount"></span></div>
-  <div class="tab" data-tab="stats" onclick="showTab('stats')">📊 Stats</div>
+  <div class="tab active" data-tab="new" onclick="showTab('new')" id="tabNew">🎲 New Test</div>
+  <div class="tab" data-tab="tests" onclick="showTab('tests')" id="tabTests">📋 My Tests <span id="testCount"></span></div>
+  <div class="tab" data-tab="stats" onclick="showTab('stats')" id="tabStats">📊 Stats</div>
+  <div class="lang-toggle"><span id="langEN" onclick="setLang('en')">EN</span><span id="langZH" onclick="setLang('zh')">中文</span></div>
 </div></nav>
 <div class="leave-warn" id="leaveWarn">⚠ You left the test! It will close in <span id="leaveCount">30</span>s — come back now to keep it.</div>
 <div class="container" id="app">Loading…</div>
 
 <script>
 const app = document.getElementById('app');
+const I18N = {
+  en: {
+    tabNew: '🎲 New Test', tabTests: '📋 My Tests', tabStats: '📊 Stats',
+    tests: 'tests', problems: 'real problems', problemsModified: 'real problems with various modified questions',
+    questions: 'questions', minutes: 'minutes', min: 'min',
+    backAll: '‹ Back to all competitions', back: '‹ Back to',
+    category: 'Category', timeLimit: 'Time limit', bank: 'Problem bank',
+    content: 'Content', generate: 'Generate →', start: 'Start →', retake: 'Retake →',
+    currentTests: '📄 Current Tests', pastTests: '📝 Past Tests',
+    noTests: 'No tests yet — generate one from the New Test tab.',
+    noAttempts: 'No attempts yet.',
+    submitted: 'submitted', answered: 'answered', proof: 'proof',
+    problem: 'Problem', easy: 'Easy', medium: 'Medium', hard: 'Hard',
+    modifiedFrom: 'Modified from', realProblem: 'Real problem ·',
+    showSolution: 'Show solution', answer: 'Answer', noSolution: 'No solution available yet — see the source link on AoPS.',
+    submit: 'Submit', exit: 'Exit', score: 'Score', solutionsRevealed: 'Solutions revealed',
+    savedOk: '✓ saved to My Tests', savedFail: '⚠ save failed',
+    testsTaken: 'tests taken', questionsAnswered: 'questions answered', averageScore: 'average score',
+    byCompetition: 'By competition', competition: 'Competition', attempts: 'Attempts', average: 'Average', best: 'Best',
+    leaveWarn1: '⚠ You left the test! It will close in', leaveWarn2: 's — click here to go back to your test.',
+    closedWarn: '⚠ Test closed because you were away for 30 seconds. Your answers were discarded.',
+    disclaimer: '<b>Disclaimer:</b> For <b>AMC 8, AMC 10, AMC 12, AIME, and Math Kangaroo</b>, we use <b>modified questions</b> — real problems with numbers changed and answers recomputed (marked <i>Modified from …</i>). For <b>all other competitions</b>, mock tests use the <b>original official past problems</b> (marked <i>Real problem · …</i>), which their organizers publish free for practice.',
+  },
+  zh: {
+    tabNew: '🎲 生成新试卷', tabTests: '📋 我的试卷', tabStats: '📊 统计',
+    tests: '套测试', problems: '道真题', problemsModified: '道真题（含改编题）',
+    questions: '题', minutes: '分钟', min: '分钟',
+    backAll: '‹ 返回全部竞赛', back: '‹ 返回',
+    category: '科目类别', timeLimit: '时间限制', bank: '题库',
+    content: '内容', generate: '生成 →', start: '开始 →', retake: '重做 →',
+    currentTests: '📄 当前试卷', pastTests: '📝 历史试卷',
+    noTests: '还没有试卷 — 去“生成新试卷”页生成一套吧。',
+    noAttempts: '还没有答题记录。',
+    submitted: '提交于', answered: '已作答', proof: '证明题',
+    problem: '第', easy: '简单', medium: '中等', hard: '困难',
+    modifiedFrom: '改编自', realProblem: '真题 ·',
+    showSolution: '显示解答', answer: '答案', noSolution: '暂无解答 — 请查看 AoPS 源链接。',
+    submit: '提交', exit: '退出', score: '得分', solutionsRevealed: '已显示解答',
+    savedOk: '✓ 已保存到“我的试卷”', savedFail: '⚠ 保存失败',
+    testsTaken: '已测套数', questionsAnswered: '已答题数', averageScore: '平均得分',
+    byCompetition: '按竞赛统计', competition: '竞赛', attempts: '次数', average: '平均分', best: '最高分',
+    leaveWarn1: '⚠ 你离开了试卷！将在', leaveWarn2: '秒后关闭 — 点此返回试卷。',
+    closedWarn: '⚠ 试卷已关闭：你离开了 30 秒，作答已被丢弃。',
+    disclaimer: '<b>声明：</b>对于 <b>AMC 8、AMC 10、AMC 12、AIME 和袋鼠数学</b>，我们使用<b>改编题</b> — 修改数字并重算答案的真题（标记为 <i>Modified from …</i>）。对于<b>其他所有竞赛</b>，模拟卷使用<b>官方原始真题</b>（标记为 <i>Real problem · …</i>），这些真题由主办方免费公开发布。',
+  },
+};
+let LANG = localStorage.getItem('mt_lang') || 'en';
+const t = k => (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k;
+
+function setLang(l) {
+  LANG = l;
+  localStorage.setItem('mt_lang', l);
+  document.getElementById('langEN').classList.toggle('on', l === 'en');
+  document.getElementById('langZH').classList.toggle('on', l === 'zh');
+  document.getElementById('tabNew').innerHTML = t('tabNew');
+  document.getElementById('tabTests').innerHTML = t('tabTests') + ' <span id="testCount"></span>';
+  document.getElementById('tabStats').innerHTML = t('tabStats');
+  // re-render current view
+  if (state.test && document.querySelector('.sticky-bar')) {
+    renderTest();
+    for (const [n, v] of Object.entries(state.answers)) {
+      const c = document.querySelector(`.choice[data-q="${n}"][data-l="${v}"]`);
+      if (c) c.classList.add('selected');
+      const inp = document.getElementById('int' + n);
+      if (inp) inp.value = v;
+    }
+    if (state.submitted) {
+      // re-apply grading visuals is complex; simplest: re-submit visually
+      document.querySelectorAll('.card.submitted').forEach(c => c.classList.remove('submitted'));
+    }
+  } else {
+    doShowTab(state.tab || 'new');
+  }
+}
 let state = { test: null, answers: {}, submitted: false, deadline: null, timerId: null, startedAt: null, tab: 'new' };
 
 function showTab(tab) {
@@ -123,14 +201,14 @@ function renderMath(el) {
 }
 function difficulty(n, total) {
   if (total <= 6) {  // olympiad day format (IMO): P1 easy, P2-4 medium, P5-6 hard
-    if (n <= 1) return ['easy', 'Easy'];
-    if (n <= 4) return ['mid', 'Medium'];
-    return ['hard', 'Hard'];
+    if (n <= 1) return ['easy', t('easy')];
+    if (n <= 4) return ['mid', t('medium')];
+    return ['hard', t('hard')];
   }
   const r = n / total;
-  if (r <= 0.4) return ['easy', 'Easy'];
-  if (r <= 0.75) return ['mid', 'Medium'];
-  return ['hard', 'Hard'];
+  if (r <= 0.4) return ['easy', t('easy')];
+  if (r <= 0.75) return ['mid', t('medium')];
+  return ['hard', t('hard')];
 }
 function fmtTime(s) {
   return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
@@ -160,28 +238,28 @@ async function showFamilies() {
       <div class="card compact test-item" onclick="showSubtests('${fam}')">
         <div>
           <h3>${fam}</h3>
-          <div class="meta">${subs.length} test${subs.length > 1 ? 's' : ''} · ${n_probs} real problems with various modified questions</div>
+          <div class="meta">${subs.length} ${t('tests')} · ${n_probs} ${t('problemsModified')}</div>
         </div>
         <button class="btn">›</button>
       </div>`;
     }
     html += '</div>';
   }
-  html += '<div class="card compact" style="font-size:13px;color:#666;line-height:1.6"><b>Disclaimer:</b> For <b>AMC 8, AMC 10, AMC 12, AIME, and Math Kangaroo</b>, we use <b>modified questions</b> — real problems with numbers changed and answers recomputed (marked <i>Modified from …</i>). For <b>all other competitions</b>, mock tests use the <b>original official past problems</b> (marked <i>Real problem · …</i>), which their organizers publish free for practice.</div>';
+  html += '<div class="card compact" style="font-size:13px;color:#666;line-height:1.6">' + t('disclaimer') + '</div>';
   app.innerHTML = html;
 }
 
 function showSubtests(fam) {
   const subs = state.banks.filter(b => b.family === fam);
   const cat = subs[0]?.category || '';
-  let html = `<div class="card compact" style="cursor:pointer" onclick="showFamilies()">‹ Back to all competitions</div>
+  let html = `<div class="card compact" style="cursor:pointer" onclick="showFamilies()">${t('backAll')}</div>
     <h2 class="section-title">${catIcon(cat)} ${fam}</h2><div class="gen-grid">`;
   for (const b of subs) {
     html += `
     <div class="card compact test-item" onclick="showDetail('${b.slug}'${b.round ? `,'${b.round}'` : ''})">
       <div>
         <h3>${b.name}</h3>
-        <div class="meta">${b.n_questions} questions · ${b.time_limit_min} min · ${b.total_variants} real problems</div>
+        <div class="meta">${b.n_questions} ${t('questions')} · ${b.time_limit_min} ${t('min')} · ${b.total_variants} ${t('problems')}</div>
       </div>
       <button class="btn">›</button>
     </div>`;
@@ -193,20 +271,20 @@ function showSubtests(fam) {
 function showDetail(slug, round) {
   const b = state.banks.find(x => x.slug === slug && x.round === (round || null));
   if (!b) return;
-  const types = b.total_variants >= 300 ? 'Original official past problems (Real problem ·)' : 'Variants of real problems, numbers modified (Modified from)';
+  const types = b.total_variants >= 300 ? t('realProblem') : t('modifiedFrom');
   app.innerHTML = `
-    <div class="card compact" style="cursor:pointer" onclick="showSubtests('${b.family}')">‹ Back to ${b.family}</div>
+    <div class="card compact" style="cursor:pointer" onclick="showSubtests('${b.family}')">${t('back')} ${b.family}</div>
     <div class="card">
       <h2>${b.name}</h2>
       <table class="stats" style="margin-top:12px">
-        <tr><th>Category</th><td>${b.category}</td></tr>
-        <tr><th>Questions</th><td>${b.n_questions}</td></tr>
-        <tr><th>Time limit</th><td>${b.time_limit_min} minutes</td></tr>
-        <tr><th>Problem bank</th><td>${b.total_variants} real problems with various modified questions</td></tr>
-        <tr><th>Content</th><td>${types}</td></tr>
+        <tr><th>${t('category')}</th><td>${b.category}</td></tr>
+        <tr><th>${t('questions')}</th><td>${b.n_questions}</td></tr>
+        <tr><th>${t('timeLimit')}</th><td>${b.time_limit_min} ${t('minutes')}</td></tr>
+        <tr><th>${t('bank')}</th><td>${b.total_variants} ${t('problemsModified')}</td></tr>
+        <tr><th>${t('content')}</th><td>${types}</td></tr>
       </table>
       <div style="margin-top:18px;display:flex;gap:10px">
-        <button class="btn" style="font-size:16px;padding:12px 28px" onclick="generate('${b.slug}'${b.round ? `,'${b.round}'` : ''})">Generate →</button>
+        <button class="btn" style="font-size:16px;padding:12px 28px" onclick="generate('${b.slug}'${b.round ? `,'${b.round}'` : ''})">${t('generate')}</button>
       </div>
     </div>`;
 }
@@ -238,39 +316,39 @@ function tick() {
 }
 
 function renderTest() {
-  const t = state.test;
-  const total = t.questions.length;
+  const tt = state.test;
+  const total = tt.questions.length;
   app.innerHTML = `
     <div class="sticky-bar">
       <div>
-        <div style="font-weight:700">${t.title}</div>
-        <div class="progress" id="progress">0 / ${total} answered</div>
+        <div style="font-weight:700">${tt.title}</div>
+        <div class="progress" id="progress">0 / ${total} ${t('answered')}</div>
       </div>
       <div style="display:flex;gap:14px;align-items:center">
-        <span class="timer" id="timer">⏱ ${fmtTime(t.time_limit_min*60)}</span>
-        <button class="btn secondary" onclick="exitTest(false)">Exit</button>
-        <button class="btn" onclick="submit()">Submit</button>
+        <span class="timer" id="timer">⏱ ${fmtTime(tt.time_limit_min*60)}</span>
+        <button class="btn secondary" onclick="exitTest(false)">${t('exit')}</button>
+        <button class="btn" onclick="submit()">${t('submit')}</button>
       </div>
     </div>
-    <div class="card" style="font-size:13.5px;color:#555">${t.instructions}</div>
+    <div class="card" style="font-size:13.5px;color:#555">${tt.instructions}</div>
     <div id="qs"></div>`;
   const qs = document.getElementById('qs');
-  t.questions.forEach(q => {
+  tt.questions.forEach(q => {
     const [cls, label] = difficulty(q.n, total);
     const div = document.createElement('div');
     div.className = 'card';
     div.id = 'q' + q.n;
     div.innerHTML = `
       <div class="qhead">
-        <span class="qnum">Problem ${q.n}</span>
+        <span class="qnum">${t('problem')} ${q.n}</span>
         <span style="display:flex;gap:6px">
           <span class="diff ${cls}">${label}</span>
-          <span class="badge">${q.type === 'proof' ? 'Real problem · ' + q.source : 'Modified from ' + q.source}</span>
+          <span class="badge">${q.type === 'proof' ? t('realProblem') + ' ' + q.source : t('modifiedFrom') + ' ' + q.source}</span>
         </span>
       </div>
       <div class="qtext">${q.question}</div>
       ${q.type === 'proof'
-        ? `<button class="btn secondary" onclick="document.getElementById('sol${q.n}').style.display='block'; this.style.display='none'">Show solution</button>`
+        ? `<button class="btn secondary" onclick="document.getElementById('sol${q.n}').style.display='block'; this.style.display='none'">${t('showSolution')}</button>`
         : ''}
       <div class="choices">${q.choices ? Object.entries(q.choices).map(([L, v]) => `
         <div class="choice" data-q="${q.n}" data-l="${L}" onclick="pick(${q.n},'${L}')">
@@ -280,7 +358,7 @@ function renderTest() {
         : `<input class="int-input" id="int${q.n}" type="text" inputmode="numeric" maxlength="3"
                   placeholder="000–999" oninput="typed(${q.n}, this.value)">`}
       </div>
-      <div class="solution" id="sol${q.n}">${q.answer ? `<b>Answer: ${q.answer}.</b> ` : ''}${q.solution || '<i>No solution available yet — see the source link on AoPS.</i>'}</div>`;
+      <div class="solution" id="sol${q.n}">${q.answer ? `<b>${t('answer')}: ${q.answer}.</b> ` : ''}${q.solution || `<i>${t('noSolution')}</i>`}</div>`;
     qs.appendChild(div);
     renderMath(div);
   });
@@ -291,7 +369,7 @@ function typed(n, v) {
   if (v.trim() === '') delete state.answers[n]; else state.answers[n] = v.trim();
   const total = state.test.questions.length;
   document.getElementById('progress').textContent =
-    `${Object.keys(state.answers).length} / ${total} answered`;
+    `${Object.keys(state.answers).length} / ${total} ${t('answered')}`;
 }
 
 function pick(n, L) {
@@ -338,8 +416,8 @@ function submit() {
   const total = state.test.questions.length;
   const bar = document.querySelector('.sticky-bar');
   const scoreText = gradable === 0
-    ? 'Solutions revealed'
-    : `Score: ${score} / ${gradable}${gradable < total ? ` (+${total - gradable} proof)` : ''}`;
+    ? t('solutionsRevealed')
+    : `${t('score')}: ${score} / ${gradable}${gradable < total ? ` (+${total - gradable} ${t('proof')})` : ''}`;
   bar.insertAdjacentHTML('beforeend', `<span class="score">${scoreText}</span><span class="saved-note" id="savedNote">saving…</span>`);
   window.scrollTo({top: 0, behavior: 'smooth'});
   // record the attempt
@@ -351,9 +429,9 @@ function submit() {
       score, total: gradable, answered: Object.keys(state.answers).length, duration_s,
     }),
   }).then(r => {
-    document.getElementById('savedNote').textContent = '✓ saved to My Tests';
+    document.getElementById('savedNote').textContent = t('savedOk');
   }).catch(() => {
-    document.getElementById('savedNote').textContent = '⚠ save failed';
+    document.getElementById('savedNote').textContent = t('savedFail');
   });
 }
 
@@ -365,18 +443,18 @@ async function myTests() {
   ]);
   const results = resultsRaw.reverse();
   document.getElementById('testCount').textContent = tests.length ? `(${tests.length})` : '';
-  let html = '<h2 class="section-title">📄 Current Tests</h2><div class="gen-grid">';
-  html += (tests.map(t => `
-    <div class="card compact test-item" onclick="openTest('${t.id}')">
+  let html = '<h2 class="section-title">' + t('currentTests') + '</h2><div class="gen-grid">';
+  html += (tests.map(tst => `
+    <div class="card compact test-item" onclick="openTest('${tst.id}')">
       <div>
-        <h3>${t.title}</h3>
-        <div class="meta">${t.competition} · ${t.n_questions} questions · ${t.time_limit_min} min</div>
+        <h3>${tst.title}</h3>
+        <div class="meta">${tst.competition} · ${tst.n_questions} ${t('questions')} · ${tst.time_limit_min} ${t('min')}</div>
       </div>
-      <button class="btn">Start →</button>
-    </div>`).join('') || '<div class="card compact">No tests yet — generate one from the New Test tab.</div>');
-  html += '</div><h2 class="section-title">📝 Past Tests</h2>';
+      <button class="btn">${t('start')}</button>
+    </div>`).join('') || '<div class="card compact">' + t('noTests') + '</div>');
+  html += '</div><h2 class="section-title">' + t('pastTests') + '</h2>';
   if (!results.length) {
-    html += '<div class="card compact">No attempts yet.</div>';
+    html += '<div class="card compact">' + t('noAttempts') + '</div>';
   } else {
     html += results.map(r => {
       const pct = r.total ? Math.round(r.score / r.total * 100) : null;
@@ -385,11 +463,11 @@ async function myTests() {
       <div class="card compact test-item">
         <div>
           <h3>${r.title || r.test_id}</h3>
-          <div class="meta">${r.competition} · submitted ${r.submitted_at} · ${r.answered}/${r.total || '?'} answered · ${dur}</div>
+          <div class="meta">${r.competition} · ${t('submitted')} ${r.submitted_at} · ${r.answered}/${r.total || '?'} ${t('answered')} · ${dur}</div>
         </div>
         <div style="display:flex;gap:14px;align-items:center">
-          ${pct !== null ? `<span class="score" style="font-size:18px">${pct}%</span>` : '<span class="meta">proof</span>'}
-          <button class="btn" onclick="openTest('${r.test_id}')">Retake →</button>
+          ${pct !== null ? `<span class="score" style="font-size:18px">${pct}%</span>` : `<span class="meta">${t('proof')}</span>`}
+          <button class="btn" onclick="openTest('${r.test_id}')">${t('retake')}</button>
         </div>
       </div>`;
     }).join('');
@@ -412,16 +490,17 @@ async function stats() {
   }).join('');
   app.innerHTML = `
     <div class="card" style="display:flex;gap:32px;flex-wrap:wrap">
-      <div><div class="score">${s.total_attempts}</div><div class="meta">tests taken</div></div>
-      <div><div class="score">${s.total_questions_answered}</div><div class="meta">questions answered</div></div>
-      <div><div class="score">${s.avg_pct !== null ? s.avg_pct + '%' : '–'}</div><div class="meta">average score</div></div>
+      <div><div class="score">${s.total_attempts}</div><div class="meta">${t('testsTaken')}</div></div>
+      <div><div class="score">${s.total_questions_answered}</div><div class="meta">${t('questionsAnswered')}</div></div>
+      <div><div class="score">${s.avg_pct !== null ? s.avg_pct + '%' : '–'}</div><div class="meta">${t('averageScore')}</div></div>
     </div>
     <div class="card">
-      <h3 style="margin-bottom:10px">By competition</h3>
-      ${rows ? `<table class="stats"><tr><th>Competition</th><th>Attempts</th><th>Average</th><th>Best</th></tr>${rows}</table>` : 'No data yet.'}
+      <h3 style="margin-bottom:10px">${t('byCompetition')}</h3>
+      ${rows ? `<table class="stats"><tr><th>${t('competition')}</th><th>${t('attempts')}</th><th>${t('average')}</th><th>${t('best')}</th></tr>${rows}</table>` : t('noAttempts')}
     </div>`;
 }
 
+setLang(LANG);
 home();
 
 // --- auto-close a test 30s after the student leaves the test view ---
@@ -431,7 +510,7 @@ function startLeaveWatch(pendingTab) {
   if (leaveTimer) return;
   const warn = document.getElementById('leaveWarn');
   warn.style.display = 'block';
-  warn.innerHTML = `⚠ You left the test! It will close in <b><span id="leaveCount">30</span>s</b> — <u style="cursor:pointer" onclick="returnToTest()">click here to go back to your test</u>.`;
+  warn.innerHTML = `${t('leaveWarn1')} <b><span id="leaveCount">30</span>${t('leaveWarn2')}</b> <u style="cursor:pointer" onclick="returnToTest()">↩</u>`;
   let left = 30;
   leaveCountdown = setInterval(() => {
     left--;
@@ -459,7 +538,7 @@ function returnToTest() {
     if (inp) inp.value = v;
   }
   const total = state.test.questions.length;
-  document.getElementById('progress').textContent = `${Object.keys(state.answers).length} / ${total} answered`;
+  document.getElementById('progress').textContent = `${Object.keys(state.answers).length} / ${total} ${t('answered')}`;
 }
 
 function exitTest(fromLeave, pendingTab) {
@@ -471,7 +550,7 @@ function exitTest(fromLeave, pendingTab) {
     const d = document.createElement('div');
     d.className = 'card compact';
     d.style.cssText = 'background:#fde4e4;color:#b02929;font-weight:600';
-    d.textContent = '⚠ Test closed because you were away for 30 seconds. Your answers were discarded.';
+    d.textContent = t('closedWarn');
     document.getElementById('app').prepend(d);
   }
 }

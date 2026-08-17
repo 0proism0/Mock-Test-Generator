@@ -1,0 +1,385 @@
+{
+ "id": "amc8_rand_05",
+ "competition": "AMC 8",
+ "category": "Math",
+ "title": "AMC 8 — Random Mock #5 · 2026-08-17 19:38",
+ "instructions": "25 questions · 40 minutes · No calculator. 1 point per correct answer, no penalty for wrong answers.",
+ "time_limit_min": 40,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2008 AMC 8 Problem 1",
+   "question": "Maya had $60$ dollars to spend at the fair. She spent $14$ dollars on food and twice as much on rides. How many dollars did she have left to spend?",
+   "choices": {
+    "A": "16",
+    "B": "18",
+    "C": "32",
+    "D": "46",
+    "E": "60"
+   },
+   "answer": "B",
+   "solution": "Maya spent $14$ dollars on food and $14 \\times 2 = 28$ dollars on rides, for a total of $14+28=42$ dollars. She had $60-42=\\boxed{18}$ dollars left.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 2,
+   "source": "2002 AMC 8 Problem 2",
+   "question": "How many different combinations of $\\$5$ bills and $\\$2$ bills can be used to make a total of $\\$27$? Order does not matter in this problem.",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "C",
+   "solution": "Since $27$ is odd, the number of $\\$5$ bills must be odd. The possibilities are $1$ five and $11$ twos, $3$ fives and $6$ twos, or $5$ fives and $1$ two. That gives $\\boxed{3}$ combinations.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 3,
+   "source": "2012 AMC 8 Problem 3",
+   "question": "On March 3 the newspaper listed the length of daylight as $9$ hours and $48$ minutes and the sunrise as $7\\!:\\!12 \\textsc{am}$. Both listings were correct, but the printed sunset time was wrong. When did the sun really set?",
+   "choices": {
+    "A": "$4\\!:\\!36 \\textsc{pm}$",
+    "B": "$4\\!:\\!48 \\textsc{pm}$",
+    "C": "$5\\!:\\!00 \\textsc{pm}$",
+    "D": "$5\\!:\\!12 \\textsc{pm}$",
+    "E": "$5\\!:\\!24 \\textsc{pm}$"
+   },
+   "answer": "C",
+   "solution": "Add $9$ hours to $7\\!:\\!12\\textsc{am}$ to get $4\\!:\\!12\\textsc{pm}$, then add $48$ minutes to get $5\\!:\\!00\\textsc{pm}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 4,
+   "source": "2010 AMC 8 Problem 4",
+   "question": "What is the sum of the mean, median, and mode of the numbers $3,4,1,4,2,5,1,4$?",
+   "choices": {
+    "A": "9",
+    "B": "9.5",
+    "C": "10",
+    "D": "10.5",
+    "E": "11"
+   },
+   "answer": "D",
+   "solution": "In numerical order the list is $1,1,2,3,4,4,4,5$. The mode is $4$, the median is $\\frac{3+4}{2}=3.5$, and the mean is $\\frac{24}{8}=3$. Their sum is $4+3.5+3=\\boxed{10.5}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 5,
+   "source": "2014 AMC 8 Problem 5",
+   "question": "Ravi's car can go $35$ miles on a gallon of gas, and gas currently costs $\\$5$ per gallon. How many miles can Ravi drive on $\\$28$ worth of gas?",
+   "choices": {
+    "A": "140",
+    "B": "150",
+    "C": "175",
+    "D": "180",
+    "E": "196"
+   },
+   "answer": "E",
+   "solution": "With $\\$28$ Ravi can buy $\\frac{28}{5}=5.6$ gallons of gas. At $35$ miles per gallon, he can drive $5.6\\cdot35=196$ miles.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 6,
+   "source": "2017 AMC 8 Problem 6",
+   "question": "If the degree measures of the angles of a triangle are in the ratio $2:2:5$, what is the degree measure of the largest angle of the triangle?",
+   "choices": {
+    "A": "20",
+    "B": "40",
+    "C": "80",
+    "D": "100",
+    "E": "120"
+   },
+   "answer": "D",
+   "solution": "The sum of the ratio parts is $2+2+5=9$. Since the angles of a triangle sum to $180^{\\circ}$, each part equals $20^{\\circ}$, and the largest angle is $5 \\cdot 20 = \\boxed{100}$ degrees.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 7,
+   "source": "2016 AMC 8 Problem 7",
+   "question": "Which of the following numbers is not a perfect square?",
+   "choices": {
+    "A": "$3^{100}$",
+    "B": "$5^{42}$",
+    "C": "$7^{2024}$",
+    "D": "$11^{63}$",
+    "E": "$13^{8}$"
+   },
+   "answer": "D",
+   "solution": "A power of a prime is a perfect square exactly when its exponent is even: $3^{100}=(3^{50})^2$, $5^{42}=(5^{21})^2$, $7^{2024}=(7^{1012})^2$, and $13^8=(13^4)^2$. But $11^{63}$ has an odd exponent, so it is not a perfect square.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 8,
+   "source": "2017 AMC 8 Problem 8",
+   "question": "Diego wants to visit Luna after school and knows the street where she lives but doesn't know her house number. She tells him, \"My house number has two digits, and exactly three of the following four statements about it are true.\" (1) It is prime. (2) It is even. (3) It is divisible by $11$. (4) One of its digits is $4$. This information allows Diego to determine Luna's house number. What is its units digit?",
+   "choices": {
+    "A": "4",
+    "B": "2",
+    "C": "6",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "A",
+   "solution": "A two-digit number cannot be both prime and even, so statements (1) and (2) cannot both be true; hence exactly one of them is false and the other three statements are all true. If (1) were true, the number would be a prime divisible by $11$, and the only such number, $11$, has no digit $4$ — impossible. So (1) is false and (2), (3), (4) are true. The two-digit multiples of $11$ are $11,22,\\dots,99$; the only even one containing the digit $4$ is $44$. Its units digit is $4$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 9,
+   "source": "2024 AMC 8 Problem 9",
+   "question": "All the beads in Ana's jar are red, blue, or green. She has twice as many red beads as blue beads, and $3$ more green beads than red beads. She has $28$ beads in all. How many green beads does she have?",
+   "choices": {
+    "A": "13",
+    "B": "10",
+    "C": "11",
+    "D": "12",
+    "E": "15"
+   },
+   "answer": "A",
+   "solution": "Let blue $=x$; then red $=2x$ and green $=2x+3$. So $x+2x+(2x+3)=28$, giving $5x=25$, $x=5$, and green $=2(5)+3=13$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 10,
+   "source": "2024 AMC 8 Problem 10",
+   "question": "In $1985$ a weather station recorded a carbon dioxide level of $340$ ppm. The level increased by exactly $2$ ppm every year. What was the level in $2030$?",
+   "choices": {
+    "A": "410",
+    "B": "420",
+    "C": "425",
+    "D": "430",
+    "E": "440"
+   },
+   "answer": "D",
+   "solution": "$2030-1985=45$ years, so the level is $340+45\\cdot 2=430$ ppm.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 11,
+   "source": "2016 AMC 8 Problem 11",
+   "question": "Determine how many two-digit numbers satisfy the following property: when the number is added to the number obtained by reversing its digits, the sum is $121.$",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "Write the number as $10a+b$. Adding its reversal gives $11a+11b = 121$, so $a+b=11$. The valid digit pairs $(a,b)$ with $a \\ge 1$ are $(2,9),(3,8),(4,7),(5,6),(6,5),(7,4),(8,3),(9,2)$, giving $\\boxed{8}$ numbers.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 12,
+   "source": "2020 AMC 8 Problem 12",
+   "question": "For a positive integer $n$, the factorial notation $n!$ represents the product of the integers from $n$ down to $1$. What value of $N$ satisfies the following equation? $$5!\\cdot 7!=15\\cdot N!$$",
+   "choices": {
+    "A": "6",
+    "B": "7",
+    "C": "9",
+    "D": "10",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "Since $5!=120$ and $120=15\\cdot8$, we have $5!\\cdot7!=15\\cdot8\\cdot7!=15\\cdot8!$. Therefore $N=8$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 13,
+   "source": "2024 AMC 8 Problem 13",
+   "question": "A bunny hops up a staircase of $4$ steps, going up either $1$ step or $2$ steps at a time. In how many different ways can the bunny reach the top?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "6",
+    "D": "8",
+    "E": "5"
+   },
+   "answer": "E",
+   "solution": "Ordered sums of $1$s and $2$s equal to $4$: $1{+}1{+}1{+}1$, $2{+}1{+}1$, $1{+}2{+}1$, $1{+}1{+}2$, $2{+}2$ — $5$ ways.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 14,
+   "source": "2010 AMC 8 Problem 14",
+   "question": "What is the sum of the prime factors of $2002$?",
+   "choices": {
+    "A": "20",
+    "B": "31",
+    "C": "33",
+    "D": "43",
+    "E": "91"
+   },
+   "answer": "C",
+   "solution": "The prime factorization of $2002$ is $2 \\cdot 7 \\cdot 11 \\cdot 13$. Adding these factors gives $2+7+11+13=\\boxed{33}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 15,
+   "source": "2024 AMC 8 Problem 15",
+   "question": "Let $A$ and $B$ be distinct nonzero digits such that the two-digit number $\\underline{A}\\,\\underline{B}$ minus the two-digit number $\\underline{B}\\,\\underline{A}$ equals $45$. How many such two-digit numbers $\\underline{A}\\,\\underline{B}$ are there?",
+   "choices": {
+    "A": "4",
+    "B": "2",
+    "C": "3",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "A",
+   "solution": "$\\underline{A}\\,\\underline{B}-\\underline{B}\\,\\underline{A}=9(A-B)=45$, so $A-B=5$. With $B\\ge 1$: $(A,B)=(6,1),(7,2),(8,3),(9,4)$ — $4$ numbers.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 16,
+   "source": "2012 AMC 8 Problem 16",
+   "question": "Each of the digits $0, 1, 2, 3, 4, 5, 6, 7, 8,$ and $9$ is used only once to make two five-digit numbers so that they have the largest possible sum. Which of the following could be one of the numbers?",
+   "choices": {
+    "A": "76531",
+    "B": "85421",
+    "C": "86420",
+    "D": "86320",
+    "E": "87410"
+   },
+   "answer": "C",
+   "solution": "To maximize the sum, the largest digits must occupy the highest place values: $9$ and $8$ in the ten-thousands places, $7$ and $6$ in the thousands places, $5$ and $4$ in the hundreds places, $3$ and $2$ in the tens places, and $1$ and $0$ in the units places. So a valid number has ten-thousands digit $9$ or $8$, thousands digit $7$ or $6$, hundreds digit $5$ or $4$, tens digit $3$ or $2$, and units digit $1$ or $0$. Only $86420$ satisfies all five conditions (for example, paired with $97531$, whose digits fill the complementary slots).",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 17,
+   "source": "2013 AMC 8 Problem 17",
+   "question": "The sum of six consecutive positive integers is $2025$. What is the largest of these six integers?",
+   "choices": {
+    "A": "335",
+    "B": "338",
+    "C": "340",
+    "D": "342",
+    "E": "345"
+   },
+   "answer": "C",
+   "solution": "The mean of the six integers is $\\frac{2025}{6}=337.5$, so the integers are $335, 336, 337, 338, 339, 340$. The largest is $\\boxed{340}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 18,
+   "source": "2005 AMC 8 Problem 18",
+   "question": "How many three-digit numbers are divisible by $11$?",
+   "choices": {
+    "A": "75",
+    "B": "78",
+    "C": "79",
+    "D": "80",
+    "E": "81"
+   },
+   "answer": "E",
+   "solution": "The three-digit multiples of $11$ are $11 \\cdot 10 = 110$ through $11 \\cdot 90 = 990$. The multiplier ranges from $10$ to $90$, giving $90-10+1=\\boxed{81}$ numbers.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 19,
+   "source": "2016 AMC 8 Problem 19",
+   "question": "The sum of $21$ consecutive even integers is $1008$. What is the largest of these $21$ consecutive integers?",
+   "choices": {
+    "A": "56",
+    "B": "64",
+    "C": "66",
+    "D": "68",
+    "E": "70"
+   },
+   "answer": "D",
+   "solution": "The middle (11th) of the $21$ even integers equals the mean, $\\frac{1008}{21}=48$. The largest is $10$ even steps above the middle: $48 + 2 \\cdot 10 = \\boxed{68}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 20,
+   "source": "2024 AMC 8 Problem 20",
+   "question": "How many triangles can be formed by choosing any three vertices of a regular hexagon?",
+   "choices": {
+    "A": "15",
+    "B": "20",
+    "C": "18",
+    "D": "24",
+    "E": "30"
+   },
+   "answer": "B",
+   "solution": "No three vertices of a regular hexagon are collinear, so any 3 vertices form a triangle: $\\binom{6}{3}=20$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 21,
+   "source": "2019 AMC 8 Problem 21",
+   "question": "What is the area of the triangle formed by the lines $y=7$, $y=2+x$, and $y=2-x$?",
+   "choices": {
+    "A": "25",
+    "B": "30",
+    "C": "35",
+    "D": "40",
+    "E": "50"
+   },
+   "answer": "A",
+   "solution": "The lines $y=2+x$ and $y=2-x$ meet at $(0,2)$. They meet $y=7$ at $(5,7)$ and $(-5,7)$. The triangle has base $10$ (along $y=7$) and height $5$, so its area is $\\frac{1}{2} \\cdot 10 \\cdot 5 = \\boxed{25}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 22,
+   "source": "2024 AMC 8 Problem 22",
+   "question": "A roll of tape has an outer diameter of $6$ inches and is wound around a ring of diameter $2$ inches, so a cross section is an annulus. If the tape is $0.01$ inches thick, how many inches long is the tape? (The length equals the annulus area divided by the thickness.)",
+   "choices": {
+    "A": "$400\\pi$",
+    "B": "$600\\pi$",
+    "C": "$1000\\pi$",
+    "D": "$800\\pi$",
+    "E": "$1200\\pi$"
+   },
+   "answer": "D",
+   "solution": "Annulus area $=\\pi(3^2-1^2)=8\\pi$ square inches. Length $=\\dfrac{8\\pi}{0.01}=800\\pi$ inches.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 23,
+   "source": "2020 AMC 8 Problem 23",
+   "question": "Four different awards are to be given to three students. Each student will receive at least one award. In how many different ways can the awards be distributed?",
+   "choices": {
+    "A": "24",
+    "B": "27",
+    "C": "30",
+    "D": "33",
+    "E": "36"
+   },
+   "answer": "E",
+   "solution": "With four awards and three students, one student must receive exactly $2$ awards and the others $1$ each. Choose the student who gets $2$ awards ($3$ ways), choose which $2$ of the $4$ awards they get ($\\binom{4}{2}=6$ ways), and distribute the remaining $2$ awards to the remaining $2$ students ($2$ ways): $3 \\cdot 6 \\cdot 2 = \\boxed{36}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 24,
+   "source": "2020 AMC 8 Problem 24",
+   "question": "A large square region is paved with $n^2$ gray square tiles, each measuring $s$ inches on a side. A border $d$ inches wide surrounds each tile, so the large square region has side length $ns+(n+1)d$ inches. When $n=9$, the $81$ gray tiles cover $36\\%$ of the area of the large square region. What is the ratio $\\frac{d}{s}$?",
+   "choices": {
+    "A": "$\\frac{3}{5}$",
+    "B": "$\\frac{1}{2}$",
+    "C": "$\\frac{5}{9}$",
+    "D": "$\\frac{2}{3}$",
+    "E": "$\\frac{9}{16}$"
+   },
+   "answer": "A",
+   "solution": "The tiles cover a fraction $\\dfrac{(9s)^2}{(9s+10d)^2}$ of the region. Setting this equal to $36\\%=\\left(\\frac{3}{5}\\right)^2$ gives $\\frac{9s}{9s+10d}=\\frac{3}{5}$. Cross-multiplying: $45s=27s+30d$, so $18s=30d$ and $\\frac{d}{s}=\\frac{18}{30}=\\frac{3}{5}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 25,
+   "source": "2024 AMC 8 Problem 25",
+   "question": "A small van has $2$ rows with $3$ seats each. Three passengers choose seats at random. What is the probability that all three sit in the front row?",
+   "choices": {
+    "A": "$\\frac{1}{30}$",
+    "B": "$\\frac{1}{20}$",
+    "C": "$\\frac{1}{15}$",
+    "D": "$\\frac{1}{10}$",
+    "E": "$\\frac{1}{6}$"
+   },
+   "answer": "B",
+   "solution": "There are $\\binom{6}{3}=20$ equally likely sets of seats, and only $\\binom{3}{3}=1$ puts all three in front: $\\frac{1}{20}$.",
+   "type": "multiple_choice"
+  }
+ ]
+}

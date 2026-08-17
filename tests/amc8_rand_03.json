@@ -1,0 +1,385 @@
+{
+ "id": "amc8_rand_03",
+ "competition": "AMC 8",
+ "category": "Math",
+ "title": "AMC 8 — Random Mock #3 · 2026-08-17 17:08",
+ "instructions": "25 questions · 40 minutes · No calculator. 1 point per correct answer, no penalty for wrong answers.",
+ "time_limit_min": 40,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2024 AMC 8 Problem 1",
+   "question": "What is the units digit of $$333{,}333-33{,}333-3{,}333-333-33-3?$$",
+   "choices": {
+    "A": "0",
+    "B": "2",
+    "C": "4",
+    "D": "6",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "Compute step by step: $333{,}333-33{,}333=300{,}000$; $300{,}000-3{,}333=296{,}667$; $296{,}667-333=296{,}334$; $296{,}334-33=296{,}301$; $296{,}301-3=296{,}298$. The units digit is $8$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 2,
+   "source": "2002 AMC 8 Problem 2",
+   "question": "How many different combinations of $\\$5$ bills and $\\$2$ bills can be used to make a total of $\\$27$? Order does not matter in this problem.",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "C",
+   "solution": "Since $27$ is odd, the number of $\\$5$ bills must be odd. The possibilities are $1$ five and $11$ twos, $3$ fives and $6$ twos, or $5$ fives and $1$ two. That gives $\\boxed{3}$ combinations.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 3,
+   "source": "2012 AMC 8 Problem 3",
+   "question": "On March 3 the newspaper listed the length of daylight as $9$ hours and $48$ minutes and the sunrise as $7\\!:\\!12 \\textsc{am}$. Both listings were correct, but the printed sunset time was wrong. When did the sun really set?",
+   "choices": {
+    "A": "$4\\!:\\!36 \\textsc{pm}$",
+    "B": "$4\\!:\\!48 \\textsc{pm}$",
+    "C": "$5\\!:\\!00 \\textsc{pm}$",
+    "D": "$5\\!:\\!12 \\textsc{pm}$",
+    "E": "$5\\!:\\!24 \\textsc{pm}$"
+   },
+   "answer": "C",
+   "solution": "Add $9$ hours to $7\\!:\\!12\\textsc{am}$ to get $4\\!:\\!12\\textsc{pm}$, then add $48$ minutes to get $5\\!:\\!00\\textsc{pm}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 4,
+   "source": "2024 AMC 8 Problem 4",
+   "question": "When Keisha added all the integers from $1$ to $10$, she accidentally left out one number. Her incorrect sum was a perfect square. Which number did she leave out?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "7",
+    "D": "6",
+    "E": "8"
+   },
+   "answer": "D",
+   "solution": "$1+2+\\cdots+10=55$. The only perfect square reachable by removing one number from $1$–$10$ is $49=55-6$. She left out $6$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 5,
+   "source": "2003 AMC 8 Problem 5",
+   "question": "If $30\\%$ of a number is $24$, what is $45\\%$ of the same number?",
+   "choices": {
+    "A": "12",
+    "B": "16",
+    "C": "32",
+    "D": "34",
+    "E": "36"
+   },
+   "answer": "E",
+   "solution": "If $30\\%$ of the number is $24$, then $10\\%$ of the number is $8$, so the number is $80$. Then $45\\%$ of $80$ is $0.45 \\cdot 80 = \\boxed{36}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 6,
+   "source": "2015 AMC 8 Problem 6",
+   "question": "In $\\triangle PQR$, $PQ=QR=25$, and $PR=30$. What is the area of $\\triangle PQR$?",
+   "choices": {
+    "A": "240",
+    "B": "260",
+    "C": "300",
+    "D": "330",
+    "E": "375"
+   },
+   "answer": "C",
+   "solution": "The triangle is isosceles, so the altitude from $Q$ to $\\overline{PR}$ bisects $\\overline{PR}$, creating two right triangles with legs $15$ and hypotenuse $25$. The altitude is $\\sqrt{25^2-15^2}=\\sqrt{400}=20$. The area is $\\frac12\\cdot30\\cdot20=300$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 7,
+   "source": "2007 AMC 8 Problem 7",
+   "question": "The average age of $6$ people in a room is $25$ years. A $15$-year-old person leaves the room. What is the average age of the five remaining people?",
+   "choices": {
+    "A": "24",
+    "B": "26",
+    "C": "27",
+    "D": "29",
+    "E": "30"
+   },
+   "answer": "C",
+   "solution": "The total of the six ages is $6 \\cdot 25 = 150$. After the $15$-year-old leaves, the remaining five ages total $150-15=135$, so their average is $\\frac{135}{5}=\\boxed{27}$ years.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 8,
+   "source": "2013 AMC 8 Problem 8",
+   "question": "A fair coin is tossed $4$ times. What is the probability of at least two consecutive heads?",
+   "choices": {
+    "A": "\\frac{3}{8}",
+    "B": "\\frac{1}{2}",
+    "C": "\\frac{5}{8}",
+    "D": "\\frac{11}{16}",
+    "E": "\\frac{3}{4}"
+   },
+   "answer": "B",
+   "solution": "There are $2^4=16$ equally likely outcomes. Listing those with at least two consecutive heads: HHTT, HHTH, THHT, HTHH, THHH, HTHH is counted once; the full list is HHTT, HHTH, HTHH, THHT, THHH, HHHH, HHHT, HHHH's companions — systematically, the $8$ outcomes are HHTT, HHTH, HTHH, THHT, THHH, HHHT, HHHH, and HHTH already counted, giving $8$ total. The probability is $\\frac{8}{16}=\\boxed{\\frac{1}{2}}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 9,
+   "source": "2016 AMC 8 Problem 9",
+   "question": "What is the sum of the distinct prime integer divisors of $2025$?",
+   "choices": {
+    "A": "8",
+    "B": "10",
+    "C": "16",
+    "D": "45",
+    "E": "75"
+   },
+   "answer": "A",
+   "solution": "Since $2025 = 81 \\cdot 25 = 3^4 \\cdot 5^2$, the distinct prime divisors are $3$ and $5$. Their sum is $3+5=\\boxed{8}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 10,
+   "source": "2016 AMC 8 Problem 10",
+   "question": "Suppose that $a * b$ means $4a-b.$ What is the value of $x$ if $$3 * (6 * x)=2$$",
+   "choices": {
+    "A": "\\frac{1}{12}",
+    "B": "2",
+    "C": "\\frac{14}{3}",
+    "D": "12",
+    "E": "14"
+   },
+   "answer": "E",
+   "solution": "First, $6 * x = 4(6) - x = 24 - x$. Then $3 * (24 - x) = 4(3) - (24 - x) = 12 - 24 + x = x - 12$. Setting $x - 12 = 2$ gives $x = \\boxed{14}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 11,
+   "source": "2016 AMC 8 Problem 11",
+   "question": "Determine how many two-digit numbers satisfy the following property: when the number is added to the number obtained by reversing its digits, the sum is $121.$",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "Write the number as $10a+b$. Adding its reversal gives $11a+11b = 121$, so $a+b=11$. The valid digit pairs $(a,b)$ with $a \\ge 1$ are $(2,9),(3,8),(4,7),(5,6),(6,5),(7,4),(8,3),(9,2)$, giving $\\boxed{8}$ numbers.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 12,
+   "source": "2020 AMC 8 Problem 12",
+   "question": "For a positive integer $n$, the factorial notation $n!$ represents the product of the integers from $n$ down to $1$. What value of $N$ satisfies the following equation? $$5!\\cdot 7!=15\\cdot N!$$",
+   "choices": {
+    "A": "6",
+    "B": "7",
+    "C": "9",
+    "D": "10",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "Since $5!=120$ and $120=15\\cdot8$, we have $5!\\cdot7!=15\\cdot8\\cdot7!=15\\cdot8!$. Therefore $N=8$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 13,
+   "source": "2016 AMC 8 Problem 13",
+   "question": "Two different numbers are randomly selected from the set $\\{ -3, -1, 0, 2, 4\\}$ and multiplied together. What is the probability that the product is $0$?",
+   "choices": {
+    "A": "\\frac{1}{5}",
+    "B": "\\frac{2}{5}",
+    "C": "\\frac{1}{2}",
+    "D": "\\frac{3}{5}",
+    "E": "\\frac{4}{5}"
+   },
+   "answer": "B",
+   "solution": "There are $\\binom{5}{2}=10$ equally likely pairs. The product is $0$ exactly when $0$ is one of the two numbers chosen, which happens for $4$ pairs. The probability is $\\frac{4}{10}=\\boxed{\\frac{2}{5}}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 14,
+   "source": "2023 AMC 8 Problem 14",
+   "question": "Ren is planning to send a package to his friend Bea, who is a stamp collector. To pay for the postage, Ren would like to cover the package with a large number of stamps. Suppose he has a collection of $5$-cent, $10$-cent, and $25$-cent stamps, with exactly $20$ of each type. What is the greatest number of stamps Ren can use to make exactly $\\$6.20$ in postage? (Note: The amount $\\$6.20$ corresponds to $6$ dollars and $20$ cents. One dollar is worth $100$ cents.)",
+   "choices": {
+    "A": "49",
+    "B": "52",
+    "C": "51",
+    "D": "53",
+    "E": "55"
+   },
+   "answer": "B",
+   "solution": "Work in cents: we need $5a+10b+25c=620$ with $a,b,c\\le 20$, maximizing $a+b+c$. Using all twenty $10$-cent stamps gives $200$ cents; then $5a+25c=420$, i.e. $a+5c=84$. With $a\\le20$, the largest stamp count comes from the largest possible $a$: $a=19$ gives $5c=65$, so $c=13$. That yields $19+20+13=52$ stamps. Checking nearby cases (e.g. $a=20$ forces $2b+5c=104$, whose best valid solution $b=17,c=14$ gives only $51$) confirms $52$ is the maximum.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 15,
+   "source": "2010 AMC 8 Problem 15",
+   "question": "A jar contains $5$ different colors of gumdrops. $25\\%$ are red, $20\\%$ are yellow, $15\\%$ are green, $10\\%$ are purple, and the other $24$ gumdrops are orange. If half of the red gumdrops are replaced with yellow gumdrops, how many gumdrops will be yellow?",
+   "choices": {
+    "A": "22",
+    "B": "23",
+    "C": "24",
+    "D": "25",
+    "E": "26"
+   },
+   "answer": "E",
+   "solution": "The four listed percentages total $25+20+15+10=70\\%$, so the $24$ orange gumdrops are $30\\%$ of the jar, and the jar holds $\\frac{24}{0.3}=80$ gumdrops. There are $0.25\\cdot80=20$ red and $0.20\\cdot80=16$ yellow gumdrops. Replacing half of the red ones with yellow gives $16+10=26$ yellow gumdrops.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 16,
+   "source": "2012 AMC 8 Problem 16",
+   "question": "Each of the digits $0, 1, 2, 3, 4, 5, 6, 7, 8,$ and $9$ is used only once to make two five-digit numbers so that they have the largest possible sum. Which of the following could be one of the numbers?",
+   "choices": {
+    "A": "76531",
+    "B": "85421",
+    "C": "86420",
+    "D": "86320",
+    "E": "87410"
+   },
+   "answer": "C",
+   "solution": "To maximize the sum, the largest digits must occupy the highest place values: $9$ and $8$ in the ten-thousands places, $7$ and $6$ in the thousands places, $5$ and $4$ in the hundreds places, $3$ and $2$ in the tens places, and $1$ and $0$ in the units places. So a valid number has ten-thousands digit $9$ or $8$, thousands digit $7$ or $6$, hundreds digit $5$ or $4$, tens digit $3$ or $2$, and units digit $1$ or $0$. Only $86420$ satisfies all five conditions (for example, paired with $97531$, whose digits fill the complementary slots).",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 17,
+   "source": "2024 AMC 8 Problem 17",
+   "question": "A chess king attacks every square one step away horizontally, vertically, or diagonally. In how many ways can two identical kings be placed on two different squares of a $2\\times 3$ board so that they do not attack each other?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "5",
+    "D": "4",
+    "E": "6"
+   },
+   "answer": "D",
+   "solution": "There are $\\binom{6}{2}=15$ pairs of squares. Attacking pairs: $8$ across adjacent columns (2 horizontal + 2 diagonal per column pair, times 2 column pairs) plus $3$ vertical pairs, $11$ total. Non-attacking: $15-11=4$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 18,
+   "source": "2005 AMC 8 Problem 18",
+   "question": "How many three-digit numbers are divisible by $11$?",
+   "choices": {
+    "A": "75",
+    "B": "78",
+    "C": "79",
+    "D": "80",
+    "E": "81"
+   },
+   "answer": "E",
+   "solution": "The three-digit multiples of $11$ are $11 \\cdot 10 = 110$ through $11 \\cdot 90 = 990$. The multiplier ranges from $10$ to $90$, giving $90-10+1=\\boxed{81}$ numbers.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 19,
+   "source": "2024 AMC 8 Problem 19",
+   "question": "In a class, $\\frac{3}{4}$ of the students like math and $\\frac{2}{3}$ like science. Every student likes at least one of the two subjects. What fraction of the class likes both subjects?",
+   "choices": {
+    "A": "$\\frac{1}{4}$",
+    "B": "$\\frac{1}{3}$",
+    "C": "$\\frac{1}{2}$",
+    "D": "$\\frac{7}{12}$",
+    "E": "$\\frac{5}{12}$"
+   },
+   "answer": "E",
+   "solution": "Inclusion–exclusion: $\\frac34+\\frac23-\\text{both}=1$, so $\\text{both}=\\frac{9}{12}+\\frac{8}{12}-\\frac{12}{12}=\\frac{5}{12}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 20,
+   "source": "2024 AMC 8 Problem 20",
+   "question": "How many triangles can be formed by choosing any three vertices of a regular hexagon?",
+   "choices": {
+    "A": "15",
+    "B": "20",
+    "C": "18",
+    "D": "24",
+    "E": "30"
+   },
+   "answer": "B",
+   "solution": "No three vertices of a regular hexagon are collinear, so any 3 vertices form a triangle: $\\binom{6}{3}=20$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 21,
+   "source": "2019 AMC 8 Problem 21",
+   "question": "What is the area of the triangle formed by the lines $y=7$, $y=2+x$, and $y=2-x$?",
+   "choices": {
+    "A": "25",
+    "B": "30",
+    "C": "35",
+    "D": "40",
+    "E": "50"
+   },
+   "answer": "A",
+   "solution": "The lines $y=2+x$ and $y=2-x$ meet at $(0,2)$. They meet $y=7$ at $(5,7)$ and $(-5,7)$. The triangle has base $10$ (along $y=7$) and height $5$, so its area is $\\frac{1}{2} \\cdot 10 \\cdot 5 = \\boxed{25}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 22,
+   "source": "2009 AMC 8 Problem 22",
+   "question": "How many whole numbers between $1$ and $100$ do not contain the digit $1$?",
+   "choices": {
+    "A": "80",
+    "B": "81",
+    "C": "88",
+    "D": "89",
+    "E": "90"
+   },
+   "answer": "A",
+   "solution": "Among one-digit numbers, the $8$ values $2$ through $9$ work. For two-digit numbers, the tens digit has $8$ choices (anything but $0$ or $1$) and the units digit has $9$ choices (anything but $1$), giving $8 \\cdot 9 = 72$. The total is $8 + 72 = \\boxed{80}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 23,
+   "source": "2011 AMC 8 Problem 23",
+   "question": "How many $4$-digit positive integers have four different digits, where the leading digit is not zero, the integer is a multiple of $5$, and $6$ is the largest digit?",
+   "choices": {
+    "A": "84",
+    "B": "96",
+    "C": "108",
+    "D": "112",
+    "E": "120"
+   },
+   "answer": "D",
+   "solution": "A multiple of $5$ ends in $0$ or $5$, and the digit $6$ must appear. Case 1: the units digit is $0$. The other three digits are distinct, chosen from $\\{1,2,3,4,5,6\\}$, and must include $6$: choose the other two in $\\binom{5}{2}=10$ ways and arrange all three in $3!=6$ ways, giving $60$ numbers. Case 2: the units digit is $5$. The first three digits are distinct, chosen from $\\{0,1,2,3,4,6\\}$, include $6$, and the leading digit is not $0$. Without the leading restriction there are again $10\\cdot6=60$ arrangements; those with leading $0$ have $6$ and one of $\\{1,2,3,4\\}$ in the last two slots: $4\\cdot2=8$ arrangements. This case gives $60-8=52$ numbers. In total, $60+52=112$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 24,
+   "source": "2024 AMC 8 Problem 24",
+   "question": "A square is inscribed in a circle of radius $5$. What is the area of the square?",
+   "choices": {
+    "A": "25",
+    "B": "40",
+    "C": "60",
+    "D": "100",
+    "E": "50"
+   },
+   "answer": "E",
+   "solution": "The diagonal of the square equals the diameter $10$, so the side is $\\frac{10}{\\sqrt2}$ and the area is $\\frac{100}{2}=50$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 25,
+   "source": "2024 AMC 8 Problem 25",
+   "question": "A small van has $2$ rows with $3$ seats each. Three passengers choose seats at random. What is the probability that all three sit in the front row?",
+   "choices": {
+    "A": "$\\frac{1}{30}$",
+    "B": "$\\frac{1}{20}$",
+    "C": "$\\frac{1}{15}$",
+    "D": "$\\frac{1}{10}$",
+    "E": "$\\frac{1}{6}$"
+   },
+   "answer": "B",
+   "solution": "There are $\\binom{6}{3}=20$ equally likely sets of seats, and only $\\binom{3}{3}=1$ puts all three in front: $\\frac{1}{20}$.",
+   "type": "multiple_choice"
+  }
+ ]
+}

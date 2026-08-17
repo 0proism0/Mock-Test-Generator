@@ -1,0 +1,385 @@
+{
+ "id": "amc8_rand_06",
+ "competition": "AMC 8",
+ "category": "Math",
+ "title": "AMC 8 — Random Mock #6 · 2026-08-17 19:40",
+ "instructions": "25 questions · 40 minutes · No calculator. 1 point per correct answer, no penalty for wrong answers.",
+ "time_limit_min": 40,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2008 AMC 8 Problem 1",
+   "question": "Maya had $60$ dollars to spend at the fair. She spent $14$ dollars on food and twice as much on rides. How many dollars did she have left to spend?",
+   "choices": {
+    "A": "16",
+    "B": "18",
+    "C": "32",
+    "D": "46",
+    "E": "60"
+   },
+   "answer": "B",
+   "solution": "Maya spent $14$ dollars on food and $14 \\times 2 = 28$ dollars on rides, for a total of $14+28=42$ dollars. She had $60-42=\\boxed{18}$ dollars left.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 2,
+   "source": "2011 AMC 8 Problem 2",
+   "question": "Pavel's rectangular vegetable garden is $18$ feet by $42$ feet, and Sonia's is $24$ feet by $36$ feet. Whose garden is larger in area, and by how many square feet?",
+   "choices": {
+    "A": "Pavel's, by $108$ square feet",
+    "B": "Sonia's, by $108$ square feet",
+    "C": "Sonia's, by $96$ square feet",
+    "D": "The gardens have the same area",
+    "E": "Pavel's, by $96$ square feet"
+   },
+   "answer": "B",
+   "solution": "Pavel's garden has area $18\\cdot42=756$ square feet, and Sonia's has area $24\\cdot36=864$ square feet. Sonia's garden is larger by $864-756=108$ square feet.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 3,
+   "source": "2012 AMC 8 Problem 3",
+   "question": "On March 3 the newspaper listed the length of daylight as $9$ hours and $48$ minutes and the sunrise as $7\\!:\\!12 \\textsc{am}$. Both listings were correct, but the printed sunset time was wrong. When did the sun really set?",
+   "choices": {
+    "A": "$4\\!:\\!36 \\textsc{pm}$",
+    "B": "$4\\!:\\!48 \\textsc{pm}$",
+    "C": "$5\\!:\\!00 \\textsc{pm}$",
+    "D": "$5\\!:\\!12 \\textsc{pm}$",
+    "E": "$5\\!:\\!24 \\textsc{pm}$"
+   },
+   "answer": "C",
+   "solution": "Add $9$ hours to $7\\!:\\!12\\textsc{am}$ to get $4\\!:\\!12\\textsc{pm}$, then add $48$ minutes to get $5\\!:\\!00\\textsc{pm}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 4,
+   "source": "2010 AMC 8 Problem 4",
+   "question": "What is the sum of the mean, median, and mode of the numbers $3,4,1,4,2,5,1,4$?",
+   "choices": {
+    "A": "9",
+    "B": "9.5",
+    "C": "10",
+    "D": "10.5",
+    "E": "11"
+   },
+   "answer": "D",
+   "solution": "In numerical order the list is $1,1,2,3,4,4,4,5$. The mode is $4$, the median is $\\frac{3+4}{2}=3.5$, and the mean is $\\frac{24}{8}=3$. Their sum is $4+3.5+3=\\boxed{10.5}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 5,
+   "source": "2014 AMC 8 Problem 5",
+   "question": "Ravi's car can go $35$ miles on a gallon of gas, and gas currently costs $\\$5$ per gallon. How many miles can Ravi drive on $\\$28$ worth of gas?",
+   "choices": {
+    "A": "140",
+    "B": "150",
+    "C": "175",
+    "D": "180",
+    "E": "196"
+   },
+   "answer": "E",
+   "solution": "With $\\$28$ Ravi can buy $\\frac{28}{5}=5.6$ gallons of gas. At $35$ miles per gallon, he can drive $5.6\\cdot35=196$ miles.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 6,
+   "source": "2024 AMC 8 Problem 6",
+   "question": "In a race, runner $A$ finished ahead of runner $B$, runner $B$ finished ahead of runner $C$, and runner $D$ finished ahead of runner $A$. Which of the following could be the order in which they finished?",
+   "choices": {
+    "A": "$D,A,B,C$",
+    "B": "$A,B,C,D$",
+    "C": "$D,B,A,C$",
+    "D": "$A,D,B,C$",
+    "E": "$B,D,A,C$"
+   },
+   "answer": "A",
+   "solution": "The conditions force $D$ before $A$, $A$ before $B$, and $B$ before $C$: the only possible order is $D,A,B,C$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 7,
+   "source": "2024 AMC 8 Problem 7",
+   "question": "A $2\\times 5$ rectangle must be completely covered by $1\\times 2$ dominoes (which may be rotated). In how many different ways can this be done?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "8",
+    "D": "7",
+    "E": "10"
+   },
+   "answer": "C",
+   "solution": "Let $T(n)$ be the number of domino tilings of a $2\\times n$ board. The right end is either a vertical domino ($T(n-1)$ ways) or two horizontal dominoes ($T(n-2)$ ways), so $T(n)=T(n-1)+T(n-2)$ with $T(1)=1$, $T(2)=2$: $1,2,3,5,8$. Thus $T(5)=8$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 8,
+   "source": "2013 AMC 8 Problem 8",
+   "question": "A fair coin is tossed $4$ times. What is the probability of at least two consecutive heads?",
+   "choices": {
+    "A": "\\frac{3}{8}",
+    "B": "\\frac{1}{2}",
+    "C": "\\frac{5}{8}",
+    "D": "\\frac{11}{16}",
+    "E": "\\frac{3}{4}"
+   },
+   "answer": "B",
+   "solution": "There are $2^4=16$ equally likely outcomes. Listing those with at least two consecutive heads: HHTT, HHTH, THHT, HTHH, THHH, HTHH is counted once; the full list is HHTT, HHTH, HTHH, THHT, THHH, HHHH, HHHT, HHHH's companions — systematically, the $8$ outcomes are HHTT, HHTH, HTHH, THHT, THHH, HHHT, HHHH, and HHTH already counted, giving $8$ total. The probability is $\\frac{8}{16}=\\boxed{\\frac{1}{2}}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 9,
+   "source": "2018 AMC 8 Problem 9",
+   "question": "Mia is tiling the floor of her $10$-foot by $14$-foot dining room. She plans to place one-foot by one-foot square tiles to form a border along the edges of the room and to fill in the rest of the floor with two-foot by two-foot square tiles. How many tiles will she use?",
+   "choices": {
+    "A": "66",
+    "B": "68",
+    "C": "70",
+    "D": "72",
+    "E": "76"
+   },
+   "answer": "B",
+   "solution": "The one-foot-wide border contains $10\\cdot14-8\\cdot12=140-96=44$ one-foot tiles. The remaining $8$ by $12$ foot interior holds $\\frac{8\\cdot12}{2\\cdot2}=24$ two-foot tiles. In total she uses $44+24=68$ tiles.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 10,
+   "source": "2013 AMC 8 Problem 10",
+   "question": "What is the ratio of the least common multiple of $168$ and $360$ to the greatest common factor of $168$ and $360$?",
+   "choices": {
+    "A": "63",
+    "B": "84",
+    "C": "105",
+    "D": "126",
+    "E": "210"
+   },
+   "answer": "C",
+   "solution": "Factor: $168=2^3\\cdot3\\cdot7$ and $360=2^3\\cdot3^2\\cdot5$. The greatest common factor is $2^3\\cdot3=24$, and the least common multiple is $2^3\\cdot3^2\\cdot5\\cdot7=2520$. The ratio is $\\frac{2520}{24}=105$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 11,
+   "source": "2019 AMC 8 Problem 11",
+   "question": "The seventh grade class at Jefferson Middle School has $84$ students. Each student takes an art class or a music class or both. There are $61$ seventh graders taking an art class, and there are $47$ seventh graders taking a music class. How many seventh graders take only an art class and not a music class?",
+   "choices": {
+    "A": "23",
+    "B": "30",
+    "C": "33",
+    "D": "37",
+    "E": "47"
+   },
+   "answer": "D",
+   "solution": "By inclusion-exclusion, the number taking both classes is $61+47-84=24$. Therefore the number taking only art is $61-24=37$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 12,
+   "source": "2012 AMC 8 Problem 12",
+   "question": "What is the units digit of $13^{2023}$?",
+   "choices": {
+    "A": "1",
+    "B": "3",
+    "C": "5",
+    "D": "7",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "Only the units digit $3$ matters. The units digits of powers of $3$ cycle $3, 9, 7, 1$ with period $4$. Since $2023 = 4 \\cdot 505 + 3$, the units digit of $13^{2023}$ is the third in the cycle, $\\boxed{7}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 13,
+   "source": "2016 AMC 8 Problem 13",
+   "question": "Two different numbers are randomly selected from the set $\\{ -3, -1, 0, 2, 4\\}$ and multiplied together. What is the probability that the product is $0$?",
+   "choices": {
+    "A": "\\frac{1}{5}",
+    "B": "\\frac{2}{5}",
+    "C": "\\frac{1}{2}",
+    "D": "\\frac{3}{5}",
+    "E": "\\frac{4}{5}"
+   },
+   "answer": "B",
+   "solution": "There are $\\binom{5}{2}=10$ equally likely pairs. The product is $0$ exactly when $0$ is one of the two numbers chosen, which happens for $4$ pairs. The probability is $\\frac{4}{10}=\\boxed{\\frac{2}{5}}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 14,
+   "source": "2024 AMC 8 Problem 14",
+   "question": "One-way roads connect towns as follows: $A\\to B$ is $3$ km, $B\\to C$ is $4$ km, $A\\to C$ is $9$ km, $C\\to D$ is $2$ km, and $B\\to D$ is $8$ km. What is the length in km of the shortest route from $A$ to $D$?",
+   "choices": {
+    "A": "8",
+    "B": "9",
+    "C": "10",
+    "D": "11",
+    "E": "12"
+   },
+   "answer": "B",
+   "solution": "Compare the routes: $A\\to B\\to C\\to D=3+4+2=9$; $A\\to C\\to D=9+2=11$; $A\\to B\\to D=3+8=11$. The shortest is $9$ km.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 15,
+   "source": "2020 AMC 8 Problem 15",
+   "question": "Suppose $15\\%$ of $x$ equals $25\\%$ of $y.$ What percentage of $x$ is $y?$",
+   "choices": {
+    "A": "60",
+    "B": "75",
+    "C": "90",
+    "D": "133 \\frac{1}{3}",
+    "E": "300"
+   },
+   "answer": "A",
+   "solution": "Since $25\\% = \\frac{1}{4}$, multiplying both sides of $0.15x = 0.25y$ by $4$ gives $y = 0.60x$. So $y$ is $\\boxed{60}$ percent of $x$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 16,
+   "source": "2009 AMC 8 Problem 16",
+   "question": "How many $3$-digit positive integers have digits whose product equals $12$?",
+   "choices": {
+    "A": "12",
+    "B": "15",
+    "C": "18",
+    "D": "21",
+    "E": "24"
+   },
+   "answer": "B",
+   "solution": "The digit multisets (from least to greatest) with product $12$ are $\\{1,2,6\\}$, $\\{1,3,4\\}$, and $\\{2,2,3\\}$. The first two each give $3! = 6$ arrangements, and the last gives $\\frac{3!}{2!}=3$ arrangements, for a total of $6+6+3=\\boxed{15}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 17,
+   "source": "2019 AMC 8 Problem 17",
+   "question": "What is the value of the product $$\\left(\\frac{1\\cdot3}{2\\cdot2}\\right)\\left(\\frac{2\\cdot4}{3\\cdot3}\\right)\\left(\\frac{3\\cdot5}{4\\cdot4}\\right)\\cdots\\left(\\frac{47\\cdot49}{48\\cdot48}\\right)\\left(\\frac{48\\cdot50}{49\\cdot49}\\right)?$$",
+   "choices": {
+    "A": "$\\frac{1}{49}$",
+    "B": "$\\frac{24}{49}$",
+    "C": "$\\frac{1}{2}$",
+    "D": "$\\frac{25}{49}$",
+    "E": "$\\frac{26}{49}$"
+   },
+   "answer": "D",
+   "solution": "Split each factor: $\\prod_{k=1}^{48}\\frac{k(k+2)}{(k+1)^2}=\\left(\\prod_{k=1}^{48}\\frac{k}{k+1}\\right)\\left(\\prod_{k=1}^{48}\\frac{k+2}{k+1}\\right)$. Both products telescope: the first equals $\\frac{1}{49}$ and the second equals $\\frac{50}{2}=25$. Multiplying gives $\\frac{1}{49}\\cdot25=\\frac{25}{49}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 18,
+   "source": "2024 AMC 8 Problem 18",
+   "question": "Three concentric circles have radii $2$, $3$, and $4$. The area of the ring between the circles of radius $2$ and radius $3$ is what fraction of the area of the largest circle?",
+   "choices": {
+    "A": "$\\frac{1}{4}$",
+    "B": "$\\frac{5}{16}$",
+    "C": "$\\frac{3}{8}$",
+    "D": "$\\frac{7}{16}$",
+    "E": "$\\frac{1}{2}$"
+   },
+   "answer": "B",
+   "solution": "Ring area $=\\pi(3^2-2^2)=5\\pi$; largest circle area $=16\\pi$. The fraction is $\\frac{5\\pi}{16\\pi}=\\frac{5}{16}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 19,
+   "source": "2024 AMC 8 Problem 19",
+   "question": "In a class, $\\frac{3}{4}$ of the students like math and $\\frac{2}{3}$ like science. Every student likes at least one of the two subjects. What fraction of the class likes both subjects?",
+   "choices": {
+    "A": "$\\frac{1}{4}$",
+    "B": "$\\frac{1}{3}$",
+    "C": "$\\frac{1}{2}$",
+    "D": "$\\frac{7}{12}$",
+    "E": "$\\frac{5}{12}$"
+   },
+   "answer": "E",
+   "solution": "Inclusion–exclusion: $\\frac34+\\frac23-\\text{both}=1$, so $\\text{both}=\\frac{9}{12}+\\frac{8}{12}-\\frac{12}{12}=\\frac{5}{12}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 20,
+   "source": "2019 AMC 8 Problem 20",
+   "question": "How many different real numbers $x$ satisfy the equation $$(x^{2}-4)^{2}=25?$$",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "4",
+    "E": "8"
+   },
+   "answer": "C",
+   "solution": "We need $x^2 - 4 = \\pm 5$. If $x^2 - 4 = 5$, then $x^2 = 9$, giving $x = \\pm 3$. If $x^2 - 4 = -5$, then $x^2 = -1$, which has no real solutions. So there are $\\boxed{2}$ real numbers.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 21,
+   "source": "2019 AMC 8 Problem 21",
+   "question": "What is the area of the triangle formed by the lines $y=7$, $y=2+x$, and $y=2-x$?",
+   "choices": {
+    "A": "25",
+    "B": "30",
+    "C": "35",
+    "D": "40",
+    "E": "50"
+   },
+   "answer": "A",
+   "solution": "The lines $y=2+x$ and $y=2-x$ meet at $(0,2)$. They meet $y=7$ at $(5,7)$ and $(-5,7)$. The triangle has base $10$ (along $y=7$) and height $5$, so its area is $\\frac{1}{2} \\cdot 10 \\cdot 5 = \\boxed{25}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 22,
+   "source": "2024 AMC 8 Problem 22",
+   "question": "A roll of tape has an outer diameter of $6$ inches and is wound around a ring of diameter $2$ inches, so a cross section is an annulus. If the tape is $0.01$ inches thick, how many inches long is the tape? (The length equals the annulus area divided by the thickness.)",
+   "choices": {
+    "A": "$400\\pi$",
+    "B": "$600\\pi$",
+    "C": "$1000\\pi$",
+    "D": "$800\\pi$",
+    "E": "$1200\\pi$"
+   },
+   "answer": "D",
+   "solution": "Annulus area $=\\pi(3^2-1^2)=8\\pi$ square inches. Length $=\\dfrac{8\\pi}{0.01}=800\\pi$ inches.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 23,
+   "source": "2024 AMC 8 Problem 23",
+   "question": "On a sheet of graph paper, Leo draws the line segment from $(0,6)$ to $(3,0)$. Through how many unit squares of the grid does the segment pass?",
+   "choices": {
+    "A": "6",
+    "B": "4",
+    "C": "5",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "A",
+   "solution": "A segment between opposite corners of an $a\\times b$ grid passes through $a+b-\\gcd(a,b)$ squares: $3+6-\\gcd(3,6)=3+6-3=6$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 24,
+   "source": "2017 AMC 8 Problem 24",
+   "question": "Mr. Alvarez has three grandchildren, who call him regularly. One calls him every three days, one calls him every four days, and one calls him every seven days. All three called him on December 31, 2018. On how many days during the next year did he not receive a phone call from any of his grandchildren?",
+   "choices": {
+    "A": "150",
+    "B": "157",
+    "C": "160",
+    "D": "163",
+    "E": "170"
+   },
+   "answer": "B",
+   "solution": "The next year has $365$ days. By inclusion-exclusion, the number of days with at least one call is $\\left\\lfloor \\frac{365}{3} \\right\\rfloor + \\left\\lfloor \\frac{365}{4} \\right\\rfloor + \\left\\lfloor \\frac{365}{7} \\right\\rfloor - \\left\\lfloor \\frac{365}{12} \\right\\rfloor - \\left\\lfloor \\frac{365}{21} \\right\\rfloor - \\left\\lfloor \\frac{365}{28} \\right\\rfloor + \\left\\lfloor \\frac{365}{84} \\right\\rfloor = 121+91+52-30-17-13+4 = 208$. So he receives no call on $365-208=\\boxed{157}$ days.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 25,
+   "source": "2022 AMC 8 Problem 25",
+   "question": "A frog randomly hops among $3$ lily pads. On each turn it hops to one of the other $2$ lily pads, each with equal probability. After $4$ hops, what is the probability that the frog is back on the lily pad where it started?",
+   "choices": {
+    "A": "$\\frac{1}{3}$",
+    "B": "$\\frac{3}{8}$",
+    "C": "$\\frac{5}{16}$",
+    "D": "$\\frac{7}{16}$",
+    "E": "$\\frac{1}{2}$"
+   },
+   "answer": "B",
+   "solution": "Let $p_n$ be the probability the frog is on its starting pad after $n$ hops. If it is on the start pad it must hop off, and if it is off the start pad it hops onto it with probability $\\frac12$, so $p_{n+1}=\\frac12(1-p_n)$. Starting from $p_0=1$: $p_1=0$, $p_2=\\frac12$, $p_3=\\frac14$, and $p_4=\\frac12\\cdot\\frac34=\\frac38$. (Equivalently, $6$ of the $2^4=16$ equally likely hop sequences return to the start.)",
+   "type": "multiple_choice"
+  }
+ ]
+}
