@@ -39,6 +39,7 @@ COMP_META = {  # slug -> (display name, n_q, tlim, category, rounds, family)
     "mathkangaroo": ("Math Kangaroo", 10, 45, "Math", None, "Math Kangaroo"),
     "fma": ("F=ma", 15, 45, "Physics", None, "F=ma"),
     "physicsbowl": ("Physics Bowl", 15, 45, "Physics", None, "Physics Bowl"),
+    "usapho": ("USAPhO", 6, 180, "Physics", None, "USAPhO"),
 }
 
 ROUND_PATTERNS = {  # slug -> regex extracting round name from a variant's source string
@@ -159,7 +160,7 @@ def list_banks():
 def generate_test(slug, round_name=None):
     """Assemble a new mock: one variant per position, never reusing a source
     that appeared in any previously generated test."""
-    name, n_q, tlim, category, rounds = COMP_META[slug]
+    name, n_q, tlim, category, rounds, family = COMP_META[slug]
     if rounds:
         if not round_name or round_name not in rounds:
             return None

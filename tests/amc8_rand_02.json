@@ -1,0 +1,385 @@
+{
+ "id": "amc8_rand_02",
+ "competition": "AMC 8",
+ "category": "Math",
+ "title": "AMC 8 — Random Mock #2 · 2026-08-17 16:58",
+ "instructions": "25 questions · 40 minutes · No calculator. 1 point per correct answer, no penalty for wrong answers.",
+ "time_limit_min": 40,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2008 AMC 8 Problem 1",
+   "question": "Maya had $60$ dollars to spend at the fair. She spent $14$ dollars on food and twice as much on rides. How many dollars did she have left to spend?",
+   "choices": {
+    "A": "16",
+    "B": "18",
+    "C": "32",
+    "D": "46",
+    "E": "60"
+   },
+   "answer": "B",
+   "solution": "Maya spent $14$ dollars on food and $14 \\times 2 = 28$ dollars on rides, for a total of $14+28=42$ dollars. She had $60-42=\\boxed{18}$ dollars left.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 2,
+   "source": "2011 AMC 8 Problem 2",
+   "question": "Pavel's rectangular vegetable garden is $18$ feet by $42$ feet, and Sonia's is $24$ feet by $36$ feet. Whose garden is larger in area, and by how many square feet?",
+   "choices": {
+    "A": "Pavel's, by $108$ square feet",
+    "B": "Sonia's, by $108$ square feet",
+    "C": "Sonia's, by $96$ square feet",
+    "D": "The gardens have the same area",
+    "E": "Pavel's, by $96$ square feet"
+   },
+   "answer": "B",
+   "solution": "Pavel's garden has area $18\\cdot42=756$ square feet, and Sonia's has area $24\\cdot36=864$ square feet. Sonia's garden is larger by $864-756=108$ square feet.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 3,
+   "source": "2024 AMC 8 Problem 3",
+   "question": "Four squares with side lengths $2, 5, 6,$ and $9$ are placed side by side in a row so that adjacent squares touch. What is the total width of the row?",
+   "choices": {
+    "A": "18",
+    "B": "22",
+    "C": "20",
+    "D": "21",
+    "E": "24"
+   },
+   "answer": "B",
+   "solution": "The widths add up: $2+5+6+9=22$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 4,
+   "source": "2010 AMC 8 Problem 4",
+   "question": "What is the sum of the mean, median, and mode of the numbers $3,4,1,4,2,5,1,4$?",
+   "choices": {
+    "A": "9",
+    "B": "9.5",
+    "C": "10",
+    "D": "10.5",
+    "E": "11"
+   },
+   "answer": "D",
+   "solution": "In numerical order the list is $1,1,2,3,4,4,4,5$. The mode is $4$, the median is $\\frac{3+4}{2}=3.5$, and the mean is $\\frac{24}{8}=3$. Their sum is $4+3.5+3=\\boxed{10.5}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 5,
+   "source": "2024 AMC 8 Problem 5",
+   "question": "Mateo rolls two standard 6-sided dice. What is the probability that the product of the two numbers rolled is a multiple of $4$?",
+   "choices": {
+    "A": "$\\frac{1}{3}$",
+    "B": "$\\frac{5}{12}$",
+    "C": "$\\frac{1}{2}$",
+    "D": "$\\frac{7}{12}$",
+    "E": "$\\frac{2}{3}$"
+   },
+   "answer": "B",
+   "solution": "Count pairs $(a,b)$ with $4\\mid ab$: $a=1$: $b=4$ (1); $a=2$: $b$ even (3); $a=3$: $b=4$ (1); $a=4$: any $b$ (6); $a=5$: $b=4$ (1); $a=6$: $b$ even (3). Total $15$ of $36$ outcomes, i.e. $\\frac{15}{36}=\\frac{5}{12}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 6,
+   "source": "2017 AMC 8 Problem 6",
+   "question": "If the degree measures of the angles of a triangle are in the ratio $2:2:5$, what is the degree measure of the largest angle of the triangle?",
+   "choices": {
+    "A": "20",
+    "B": "40",
+    "C": "80",
+    "D": "100",
+    "E": "120"
+   },
+   "answer": "D",
+   "solution": "The sum of the ratio parts is $2+2+5=9$. Since the angles of a triangle sum to $180^{\\circ}$, each part equals $20^{\\circ}$, and the largest angle is $5 \\cdot 20 = \\boxed{100}$ degrees.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 7,
+   "source": "2016 AMC 8 Problem 7",
+   "question": "Which of the following numbers is not a perfect square?",
+   "choices": {
+    "A": "$3^{100}$",
+    "B": "$5^{42}$",
+    "C": "$7^{2024}$",
+    "D": "$11^{63}$",
+    "E": "$13^{8}$"
+   },
+   "answer": "D",
+   "solution": "A power of a prime is a perfect square exactly when its exponent is even: $3^{100}=(3^{50})^2$, $5^{42}=(5^{21})^2$, $7^{2024}=(7^{1012})^2$, and $13^8=(13^4)^2$. But $11^{63}$ has an odd exponent, so it is not a perfect square.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 8,
+   "source": "2024 AMC 8 Problem 8",
+   "question": "On Monday, Diego has $\\$1$. Every day, he either gains $\\$2$ or doubles the amount of money he had the previous day. How many different amounts of money could he have after exactly $3$ days?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "B",
+   "solution": "After day 1: $\\{2,3\\}$. Day 2: $\\{4,5,6\\}$. Day 3: from $4$: $6,8$; from $5$: $7,10$; from $6$: $8,12$. The union is $\\{6,7,8,10,12\\}$ — $5$ different amounts.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 9,
+   "source": "2024 AMC 8 Problem 9",
+   "question": "All the beads in Ana's jar are red, blue, or green. She has twice as many red beads as blue beads, and $3$ more green beads than red beads. She has $28$ beads in all. How many green beads does she have?",
+   "choices": {
+    "A": "13",
+    "B": "10",
+    "C": "11",
+    "D": "12",
+    "E": "15"
+   },
+   "answer": "A",
+   "solution": "Let blue $=x$; then red $=2x$ and green $=2x+3$. So $x+2x+(2x+3)=28$, giving $5x=25$, $x=5$, and green $=2(5)+3=13$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 10,
+   "source": "2013 AMC 8 Problem 10",
+   "question": "What is the ratio of the least common multiple of $168$ and $360$ to the greatest common factor of $168$ and $360$?",
+   "choices": {
+    "A": "63",
+    "B": "84",
+    "C": "105",
+    "D": "126",
+    "E": "210"
+   },
+   "answer": "C",
+   "solution": "Factor: $168=2^3\\cdot3\\cdot7$ and $360=2^3\\cdot3^2\\cdot5$. The greatest common factor is $2^3\\cdot3=24$, and the least common multiple is $2^3\\cdot3^2\\cdot5\\cdot7=2520$. The ratio is $\\frac{2520}{24}=105$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 11,
+   "source": "2024 AMC 8 Problem 11",
+   "question": "The vertices of $\\triangle ABC$ are $A(2,3)$, $B(8,3)$, and $C(5,y)$ with $y>3$. The area of $\\triangle ABC$ is $15$. What is $y$?",
+   "choices": {
+    "A": "8",
+    "B": "6",
+    "C": "7",
+    "D": "9",
+    "E": "10"
+   },
+   "answer": "A",
+   "solution": "$AB$ is horizontal with length $8-2=6$. From $\\tfrac12\\cdot 6\\cdot h=15$ the height is $h=5$, so $y=3+5=8$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 12,
+   "source": "2024 AMC 8 Problem 12",
+   "question": "Rosa keeps $66$ fish in $4$ tanks. There is $1$ more fish in the 2nd tank than in the 1st, $2$ more in the 3rd than in the 2nd, and $3$ more in the 4th than in the 3rd. How many fish are in the 4th tank?",
+   "choices": {
+    "A": "17",
+    "B": "18",
+    "C": "19",
+    "D": "22",
+    "E": "20"
+   },
+   "answer": "E",
+   "solution": "The tanks hold $t,\\ t+1,\\ t+3,\\ t+6$ fish. Then $4t+10=66$, so $t=14$, and the 4th tank has $14+6=20$ fish.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 13,
+   "source": "2024 AMC 8 Problem 13",
+   "question": "A bunny hops up a staircase of $4$ steps, going up either $1$ step or $2$ steps at a time. In how many different ways can the bunny reach the top?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "6",
+    "D": "8",
+    "E": "5"
+   },
+   "answer": "E",
+   "solution": "Ordered sums of $1$s and $2$s equal to $4$: $1{+}1{+}1{+}1$, $2{+}1{+}1$, $1{+}2{+}1$, $1{+}1{+}2$, $2{+}2$ — $5$ ways.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 14,
+   "source": "2010 AMC 8 Problem 14",
+   "question": "What is the sum of the prime factors of $2002$?",
+   "choices": {
+    "A": "20",
+    "B": "31",
+    "C": "33",
+    "D": "43",
+    "E": "91"
+   },
+   "answer": "C",
+   "solution": "The prime factorization of $2002$ is $2 \\cdot 7 \\cdot 11 \\cdot 13$. Adding these factors gives $2+7+11+13=\\boxed{33}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 15,
+   "source": "2024 AMC 8 Problem 15",
+   "question": "Let $A$ and $B$ be distinct nonzero digits such that the two-digit number $\\underline{A}\\,\\underline{B}$ minus the two-digit number $\\underline{B}\\,\\underline{A}$ equals $45$. How many such two-digit numbers $\\underline{A}\\,\\underline{B}$ are there?",
+   "choices": {
+    "A": "4",
+    "B": "2",
+    "C": "3",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "A",
+   "solution": "$\\underline{A}\\,\\underline{B}-\\underline{B}\\,\\underline{A}=9(A-B)=45$, so $A-B=5$. With $B\\ge 1$: $(A,B)=(6,1),(7,2),(8,3),(9,4)$ — $4$ numbers.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 16,
+   "source": "2024 AMC 8 Problem 16",
+   "question": "Zoe writes each of the integers from $1$ to $25$ into the cells of a $5\\times 5$ grid, one number per cell, and computes the product of the numbers in each row. What is the greatest possible number of rows whose product is odd?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "C",
+   "solution": "A row product is odd only if every cell in it is odd. There are $13$ odd numbers among $1$–$25$, and each all-odd row needs $5$, so at most $\\lfloor 13/5\\rfloor=2$ rows can work — and $2$ is achievable.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 17,
+   "source": "2013 AMC 8 Problem 17",
+   "question": "The sum of six consecutive positive integers is $2025$. What is the largest of these six integers?",
+   "choices": {
+    "A": "335",
+    "B": "338",
+    "C": "340",
+    "D": "342",
+    "E": "345"
+   },
+   "answer": "C",
+   "solution": "The mean of the six integers is $\\frac{2025}{6}=337.5$, so the integers are $335, 336, 337, 338, 339, 340$. The largest is $\\boxed{340}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 18,
+   "source": "2018 AMC 8 Problem 18",
+   "question": "How many positive factors does $18{,}150$ have?",
+   "choices": {
+    "A": "36",
+    "B": "24",
+    "C": "30",
+    "D": "40",
+    "E": "48"
+   },
+   "answer": "A",
+   "solution": "Factor: $18{,}150=2\\cdot3\\cdot5^2\\cdot11^2$. The number of positive factors is $(1+1)(1+1)(2+1)(2+1)=2\\cdot2\\cdot3\\cdot3=36$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 19,
+   "source": "2016 AMC 8 Problem 19",
+   "question": "The sum of $21$ consecutive even integers is $1008$. What is the largest of these $21$ consecutive integers?",
+   "choices": {
+    "A": "56",
+    "B": "64",
+    "C": "66",
+    "D": "68",
+    "E": "70"
+   },
+   "answer": "D",
+   "solution": "The middle (11th) of the $21$ even integers equals the mean, $\\frac{1008}{21}=48$. The largest is $10$ even steps above the middle: $48 + 2 \\cdot 10 = \\boxed{68}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 20,
+   "source": "2019 AMC 8 Problem 20",
+   "question": "How many different real numbers $x$ satisfy the equation $$(x^{2}-4)^{2}=25?$$",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "4",
+    "E": "8"
+   },
+   "answer": "C",
+   "solution": "We need $x^2 - 4 = \\pm 5$. If $x^2 - 4 = 5$, then $x^2 = 9$, giving $x = \\pm 3$. If $x^2 - 4 = -5$, then $x^2 = -1$, which has no real solutions. So there are $\\boxed{2}$ real numbers.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 21,
+   "source": "2024 AMC 8 Problem 21",
+   "question": "An army of $12$ frogs sits in a tree. Frogs in the shade are green and frogs in the sun are yellow. Right now there are $4$ more green frogs than yellow frogs. How many green frogs are there?",
+   "choices": {
+    "A": "6",
+    "B": "8",
+    "C": "7",
+    "D": "9",
+    "E": "10"
+   },
+   "answer": "B",
+   "solution": "Let yellow $=y$; then green $=y+4$ and $2y+4=12$, so $y=4$ and green $=8$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 22,
+   "source": "2014 AMC 8 Problem 22",
+   "question": "A $2$-digit number is such that the product of its digits plus three times the sum of its digits is equal to the number. What is the units digit of the number?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "6",
+    "E": "5"
+   },
+   "answer": "E",
+   "solution": "Let the number have tens digit $a$ and units digit $b$. Then $10a+b=ab+3(a+b)$, which rearranges to $7a=b(a+2)$, so $b=\\frac{7a}{a+2}$. Since $a+2$ must divide $7a=7(a+2)-14$, we need $a+2\\mid14$, and with $1\\le a\\le9$ the only option is $a+2=7$, giving $a=5$ and $b=5$. Indeed $55=5\\cdot5+3(5+5)=25+30$. The units digit is $5$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 23,
+   "source": "2020 AMC 8 Problem 23",
+   "question": "Four different awards are to be given to three students. Each student will receive at least one award. In how many different ways can the awards be distributed?",
+   "choices": {
+    "A": "24",
+    "B": "27",
+    "C": "30",
+    "D": "33",
+    "E": "36"
+   },
+   "answer": "E",
+   "solution": "With four awards and three students, one student must receive exactly $2$ awards and the others $1$ each. Choose the student who gets $2$ awards ($3$ ways), choose which $2$ of the $4$ awards they get ($\\binom{4}{2}=6$ ways), and distribute the remaining $2$ awards to the remaining $2$ students ($2$ ways): $3 \\cdot 6 \\cdot 2 = \\boxed{36}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 24,
+   "source": "2017 AMC 8 Problem 24",
+   "question": "Mr. Alvarez has three grandchildren, who call him regularly. One calls him every three days, one calls him every four days, and one calls him every seven days. All three called him on December 31, 2018. On how many days during the next year did he not receive a phone call from any of his grandchildren?",
+   "choices": {
+    "A": "150",
+    "B": "157",
+    "C": "160",
+    "D": "163",
+    "E": "170"
+   },
+   "answer": "B",
+   "solution": "The next year has $365$ days. By inclusion-exclusion, the number of days with at least one call is $\\left\\lfloor \\frac{365}{3} \\right\\rfloor + \\left\\lfloor \\frac{365}{4} \\right\\rfloor + \\left\\lfloor \\frac{365}{7} \\right\\rfloor - \\left\\lfloor \\frac{365}{12} \\right\\rfloor - \\left\\lfloor \\frac{365}{21} \\right\\rfloor - \\left\\lfloor \\frac{365}{28} \\right\\rfloor + \\left\\lfloor \\frac{365}{84} \\right\\rfloor = 121+91+52-30-17-13+4 = 208$. So he receives no call on $365-208=\\boxed{157}$ days.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 25,
+   "source": "2022 AMC 8 Problem 25",
+   "question": "A frog randomly hops among $3$ lily pads. On each turn it hops to one of the other $2$ lily pads, each with equal probability. After $4$ hops, what is the probability that the frog is back on the lily pad where it started?",
+   "choices": {
+    "A": "$\\frac{1}{3}$",
+    "B": "$\\frac{3}{8}$",
+    "C": "$\\frac{5}{16}$",
+    "D": "$\\frac{7}{16}$",
+    "E": "$\\frac{1}{2}$"
+   },
+   "answer": "B",
+   "solution": "Let $p_n$ be the probability the frog is on its starting pad after $n$ hops. If it is on the start pad it must hop off, and if it is off the start pad it hops onto it with probability $\\frac12$, so $p_{n+1}=\\frac12(1-p_n)$. Starting from $p_0=1$: $p_1=0$, $p_2=\\frac12$, $p_3=\\frac14$, and $p_4=\\frac12\\cdot\\frac34=\\frac38$. (Equivalently, $6$ of the $2^4=16$ equally likely hop sequences return to the start.)",
+   "type": "multiple_choice"
+  }
+ ]
+}
