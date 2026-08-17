@@ -37,8 +37,8 @@ COMP_META = {  # slug -> (display name, n_q, tlim, category, rounds, family)
     "usamts": ("USAMTS", 5, 240, "Math", None, "USAMTS"),
     "ukmt": ("UKMT", 25, 60, "Math", None, "UKMT"),
     "mathkangaroo": ("Math Kangaroo", 10, 45, "Math", None, "Math Kangaroo"),
-    "fma": ("F=ma", 15, 45, "Physics", None, "F=ma"),
-    "physicsbowl": ("Physics Bowl", 15, 45, "Physics", None, "Physics Bowl"),
+    "fma": ("F=ma", 25, 75, "Physics", None, "F=ma"),
+    "physicsbowl": ("Physics Bowl", 40, 45, "Physics", None, "Physics Bowl"),
     "usapho": ("USAPhO", 6, 180, "Physics", None, "USAPhO"),
 }
 

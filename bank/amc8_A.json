@@ -14,7 +14,9 @@
     "E": "8"
    },
    "answer": "E",
-   "solution": "Compute step by step: $333{,}333-33{,}333=300{,}000$; $300{,}000-3{,}333=296{,}667$; $296{,}667-333=296{,}334$; $296{,}334-33=296{,}301$; $296{,}301-3=296{,}298$. The units digit is $8$."
+   "solution": "Compute step by step: $333{,}333-33{,}333=300{,}000$; $300{,}000-3{,}333=296{,}667$; $296{,}667-333=296{,}334$; $296{,}334-33=296{,}301$; $296{,}301-3=296{,}298$. The units digit is $8$.",
+   "question_zh": "一个数减去另一个数：$$333{,}333-33{,}333-3{,}333-333-33-3$$ 的个位数字是多少？",
+   "solution_zh": "逐步计算：$333{,}333-33{,}333=300{,}000$；$300{,}000-3{,}333=296{,}667$；$296{,}667-333=296{,}334$；$296{,}334-33=296{,}301$；$296{,}301-3=296{,}298$。个位数字是 $8$。"
   },
   {
    "position": 2,
@@ -28,7 +30,9 @@
     "E": "7.55"
    },
    "answer": "C",
-   "solution": "$\\frac{55}{11}=5$, $\\frac{110}{55}=2$, $\\frac{55}{1100}=0.05$. The sum is $5+2+0.05=7.05$."
+   "solution": "$\\frac{55}{11}=5$, $\\frac{110}{55}=2$, $\\frac{55}{1100}=0.05$. The sum is $5+2+0.05=7.05$.",
+   "question_zh": "下面这个表达式的十进制值是多少？$$\\frac{55}{11}+\\frac{110}{55}+\\frac{55}{1100}$$",
+   "solution_zh": "$\\frac{55}{11}=5$，$\\frac{110}{55}=2$，$\\frac{55}{1100}=0.05$。总和为 $5+2+0.05=7.05$。"
   },
   {
    "position": 3,
@@ -42,7 +46,9 @@
     "E": "24"
    },
    "answer": "B",
-   "solution": "The widths add up: $2+5+6+9=22$."
+   "solution": "The widths add up: $2+5+6+9=22$.",
+   "question_zh": "四个边长分别为 $2, 5, 6,$ 和 $9$ 的正方形并排摆成一行，相邻正方形相互接触。这一行的总宽度是多少？",
+   "solution_zh": "宽度直接相加：$2+5+6+9=22$。"
   },
   {
    "position": 4,
@@ -56,7 +62,9 @@
     "E": "8"
    },
    "answer": "D",
-   "solution": "$1+2+\\cdots+10=55$. The only perfect square reachable by removing one number from $1$–$10$ is $49=55-6$. She left out $6$."
+   "solution": "$1+2+\\cdots+10=55$. The only perfect square reachable by removing one number from $1$–$10$ is $49=55-6$. She left out $6$.",
+   "question_zh": "Keisha 把从 $1$ 到 $10$ 的所有整数相加时，不小心漏掉了一个数。她算出的和（漏算后的错误和）恰好是一个完全平方数。她漏掉的是哪个数？",
+   "solution_zh": "$1+2+\\cdots+10=55$。从 $1$–$10$ 中去掉一个数能得到完全平方数，唯一可能是 $49=55-6$。她漏掉的是 $6$。"
   },
   {
    "position": 5,
@@ -70,7 +78,9 @@
     "E": "$\\frac{2}{3}$"
    },
    "answer": "B",
-   "solution": "Count pairs $(a,b)$ with $4\\mid ab$: $a=1$: $b=4$ (1); $a=2$: $b$ even (3); $a=3$: $b=4$ (1); $a=4$: any $b$ (6); $a=5$: $b=4$ (1); $a=6$: $b$ even (3). Total $15$ of $36$ outcomes, i.e. $\\frac{15}{36}=\\frac{5}{12}$."
+   "solution": "Count pairs $(a,b)$ with $4\\mid ab$: $a=1$: $b=4$ (1); $a=2$: $b$ even (3); $a=3$: $b=4$ (1); $a=4$: any $b$ (6); $a=5$: $b=4$ (1); $a=6$: $b$ even (3). Total $15$ of $36$ outcomes, i.e. $\\frac{15}{36}=\\frac{5}{12}$.",
+   "question_zh": "Mateo 掷两个标准六面骰子。掷出的两个数之积是 $4$ 的倍数的概率是多少？",
+   "solution_zh": "枚举满足 $4\\mid ab$ 的 $(a,b)$：$a=1$ 时 $b=4$（1 个）；$a=2$ 时 $b$ 为偶数（3 个）；$a=3$ 时 $b=4$（1 个）；$a=4$ 时任意 $b$（6 个）；$a=5$ 时 $b=4$（1 个）；$a=6$ 时 $b$ 为偶数（3 个）。共 $15$ 种，占 $36$ 种等可能结果中的 $\\frac{15}{36}=\\frac{5}{12}$。"
   },
   {
    "position": 6,
@@ -84,7 +94,9 @@
     "E": "$B,D,A,C$"
    },
    "answer": "A",
-   "solution": "The conditions force $D$ before $A$, $A$ before $B$, and $B$ before $C$: the only possible order is $D,A,B,C$."
+   "solution": "The conditions force $D$ before $A$, $A$ before $B$, and $B$ before $C$: the only possible order is $D,A,B,C$.",
+   "question_zh": "一场赛跑中，选手 $A$ 领先于选手 $B$ 到达终点，选手 $B$ 领先于选手 $C$，选手 $D$ 领先于选手 $A$。下列哪一个可能是他们到达终点的顺序？",
+   "solution_zh": "条件要求 $D$ 在 $A$ 前，$A$ 在 $B$ 前，$B$ 在 $C$ 前：唯一顺序是 $D,A,B,C$。"
   },
   {
    "position": 7,
@@ -98,7 +110,9 @@
     "E": "10"
    },
    "answer": "C",
-   "solution": "Let $T(n)$ be the number of domino tilings of a $2\\times n$ board. The right end is either a vertical domino ($T(n-1)$ ways) or two horizontal dominoes ($T(n-2)$ ways), so $T(n)=T(n-1)+T(n-2)$ with $T(1)=1$, $T(2)=2$: $1,2,3,5,8$. Thus $T(5)=8$."
+   "solution": "Let $T(n)$ be the number of domino tilings of a $2\\times n$ board. The right end is either a vertical domino ($T(n-1)$ ways) or two horizontal dominoes ($T(n-2)$ ways), so $T(n)=T(n-1)+T(n-2)$ with $T(1)=1$, $T(2)=2$: $1,2,3,5,8$. Thus $T(5)=8$.",
+   "question_zh": "一个 $2\\times 5$ 的矩形要用 $1\\times 2$ 的多米诺骨牌（可以旋转）完全覆盖。一共有多少种不同的覆盖方法？",
+   "solution_zh": "设 $T(n)$ 为覆盖 $2\\times n$ 矩形的方法数。右端要么竖放一块骨牌（$T(n-1)$ 种），要么横放两块（$T(n-2)$ 种），故 $T(n)=T(n-1)+T(n-2)$，且 $T(1)=1$，$T(2)=2$：$1,2,3,5,8$。所以 $T(5)=8$。"
   },
   {
    "position": 8,
@@ -112,7 +126,9 @@
     "E": "8"
    },
    "answer": "B",
-   "solution": "After day 1: $\\{2,3\\}$. Day 2: $\\{4,5,6\\}$. Day 3: from $4$: $6,8$; from $5$: $7,10$; from $6$: $8,12$. The union is $\\{6,7,8,10,12\\}$ — $5$ different amounts."
+   "solution": "After day 1: $\\{2,3\\}$. Day 2: $\\{4,5,6\\}$. Day 3: from $4$: $6,8$; from $5$: $7,10$; from $6$: $8,12$. The union is $\\{6,7,8,10,12\\}$ — $5$ different amounts.",
+   "question_zh": "星期一，Diego 有 $\\$1$。每天他要么多挣 $\\$2$，要么把前一天的钱数翻倍。恰好 $3$ 天后，他可能拥有的不同钱数共有多少种？",
+   "solution_zh": "逐日枚举：第 1 天后 $\\{2,3\\}$；第 2 天后 $\\{4,5,6\\}$；第 3 天：由 $4$ 得 $6,8$；由 $5$ 得 $7,10$；由 $6$ 得 $8,12$。集合为 $\\{6,7,8,10,12\\}$ — 共 $5$ 种。"
   },
   {
    "position": 9,
@@ -126,7 +142,9 @@
     "E": "15"
    },
    "answer": "A",
-   "solution": "Let blue $=x$; then red $=2x$ and green $=2x+3$. So $x+2x+(2x+3)=28$, giving $5x=25$, $x=5$, and green $=2(5)+3=13$."
+   "solution": "Let blue $=x$; then red $=2x$ and green $=2x+3$. So $x+2x+(2x+3)=28$, giving $5x=25$, $x=5$, and green $=2(5)+3=13$.",
+   "question_zh": "Ana 的罐子里只有红、蓝、绿三种珠子。红珠子是蓝珠子的两倍，绿珠子比红珠子多 $3$ 颗，一共有 $28$ 颗珠子。绿珠子有多少颗？",
+   "solution_zh": "设蓝珠子为 $x$；红珠子 $=2x$，绿珠子 $=2x+3$。则 $x+2x+(2x+3)=28$，得 $5x=25$，$x=5$，绿珠子 $=13$。"
   },
   {
    "position": 10,
@@ -140,7 +158,9 @@
     "E": "440"
    },
    "answer": "D",
-   "solution": "$2030-1985=45$ years, so the level is $340+45\\cdot 2=430$ ppm."
+   "solution": "$2030-1985=45$ years, so the level is $340+45\\cdot 2=430$ ppm.",
+   "question_zh": "1985 年，某气象站记录的二氧化碳浓度为 $340$ ppm。此后浓度每年恰好增加 $2$ ppm。2030 年的浓度是多少？",
+   "solution_zh": "$2030-1985=45$ 年，浓度为 $340+45\\cdot 2=430$ ppm。"
   },
   {
    "position": 11,
@@ -154,7 +174,9 @@
     "E": "10"
    },
    "answer": "A",
-   "solution": "$AB$ is horizontal with length $8-2=6$. From $\\tfrac12\\cdot 6\\cdot h=15$ the height is $h=5$, so $y=3+5=8$."
+   "solution": "$AB$ is horizontal with length $8-2=6$. From $\\tfrac12\\cdot 6\\cdot h=15$ the height is $h=5$, so $y=3+5=8$.",
+   "question_zh": "三角形 $\\triangle ABC$ 的顶点为 $A(2,3)$、$B(8,3)$、$C(5,y)$，其中 $y>3$。三角形面积为 $15$。求 $y$。",
+   "solution_zh": "$AB$ 水平，长 $8-2=6$。由 $\\tfrac12\\cdot 6\\cdot h=15$ 得高 $h=5$，所以 $y=3+5=8$。"
   },
   {
    "position": 12,
@@ -168,7 +190,9 @@
     "E": "20"
    },
    "answer": "E",
-   "solution": "The tanks hold $t,\\ t+1,\\ t+3,\\ t+6$ fish. Then $4t+10=66$, so $t=14$, and the 4th tank has $14+6=20$ fish."
+   "solution": "The tanks hold $t,\\ t+1,\\ t+3,\\ t+6$ fish. Then $4t+10=66$, so $t=14$, and the 4th tank has $14+6=20$ fish.",
+   "question_zh": "Rosa 把 $66$ 条鱼养在 $4$ 个鱼缸里。第 2 个缸比第 1 个多 $1$ 条，第 3 个比第 2 个多 $2$ 条，第 4 个比第 3 个多 $3$ 条。第 4 个鱼缸里有多少条鱼？",
+   "solution_zh": "四个缸依次为 $t,\\ t+1,\\ t+3,\\ t+6$。则 $4t+10=66$，$t=14$，第 4 缸有 $14+6=20$ 条鱼。"
   },
   {
    "position": 13,
@@ -182,7 +206,9 @@
     "E": "5"
    },
    "answer": "E",
-   "solution": "Ordered sums of $1$s and $2$s equal to $4$: $1{+}1{+}1{+}1$, $2{+}1{+}1$, $1{+}2{+}1$, $1{+}1{+}2$, $2{+}2$ — $5$ ways."
+   "solution": "Ordered sums of $1$s and $2$s equal to $4$: $1{+}1{+}1{+}1$, $2{+}1{+}1$, $1{+}2{+}1$, $1{+}1{+}2$, $2{+}2$ — $5$ ways.",
+   "question_zh": "一只兔子要爬上 $4$ 级台阶，每次可以跳 $1$ 级或 $2$ 级。它到达顶端共有多少种不同的跳法？",
+   "solution_zh": "把 $4$ 写成 $1$ 和 $2$ 的有序和：$1{+}1{+}1{+}1$、$2{+}1{+}1$、$1{+}2{+}1$、$1{+}1{+}2$、$2{+}2$ — 共 $5$ 种。"
   },
   {
    "position": 14,
@@ -196,7 +222,9 @@
     "E": "12"
    },
    "answer": "B",
-   "solution": "Compare the routes: $A\\to B\\to C\\to D=3+4+2=9$; $A\\to C\\to D=9+2=11$; $A\\to B\\to D=3+8=11$. The shortest is $9$ km."
+   "solution": "Compare the routes: $A\\to B\\to C\\to D=3+4+2=9$; $A\\to C\\to D=9+2=11$; $A\\to B\\to D=3+8=11$. The shortest is $9$ km.",
+   "question_zh": "连接各城镇的单行道如下：$A\\to B$ 为 $3$ 公里，$B\\to C$ 为 $4$ 公里，$A\\to C$ 为 $9$ 公里，$C\\to D$ 为 $2$ 公里，$B\\to D$ 为 $8$ 公里。从 $A$ 到 $D$ 的最短路线长多少公里？",
+   "solution_zh": "比较各路线：$A\\to B\\to C\\to D=3+4+2=9$；$A\\to C\\to D=9+2=11$；$A\\to B\\to D=3+8=11$。最短为 $9$ 公里。"
   },
   {
    "position": 15,
@@ -210,7 +238,9 @@
     "E": "6"
    },
    "answer": "A",
-   "solution": "$\\underline{A}\\,\\underline{B}-\\underline{B}\\,\\underline{A}=9(A-B)=45$, so $A-B=5$. With $B\\ge 1$: $(A,B)=(6,1),(7,2),(8,3),(9,4)$ — $4$ numbers."
+   "solution": "$\\underline{A}\\,\\underline{B}-\\underline{B}\\,\\underline{A}=9(A-B)=45$, so $A-B=5$. With $B\\ge 1$: $(A,B)=(6,1),(7,2),(8,3),(9,4)$ — $4$ numbers.",
+   "question_zh": "设 $A$、$B$ 是两个不同的非零数字，使得两位数 $\\underline{A}\\,\\underline{B}$ 减去两位数 $\\underline{B}\\,\\underline{A}$ 等于 $45$。这样的两位数 $\\underline{A}\\,\\underline{B}$ 共有多少个？",
+   "solution_zh": "$\\underline{A}\\,\\underline{B}-\\underline{B}\\,\\underline{A}=9(A-B)=45$，故 $A-B=5$。$B\\ge 1$ 时有 $(6,1),(7,2),(8,3),(9,4)$ — 共 $4$ 个。"
   },
   {
    "position": 16,
@@ -224,7 +254,9 @@
     "E": "4"
    },
    "answer": "C",
-   "solution": "A row product is odd only if every cell in it is odd. There are $13$ odd numbers among $1$–$25$, and each all-odd row needs $5$, so at most $\\lfloor 13/5\\rfloor=2$ rows can work — and $2$ is achievable."
+   "solution": "A row product is odd only if every cell in it is odd. There are $13$ odd numbers among $1$–$25$, and each all-odd row needs $5$, so at most $\\lfloor 13/5\\rfloor=2$ rows can work — and $2$ is achievable.",
+   "question_zh": "Zoe 把 $1$ 到 $25$ 的整数填入 $5\\times 5$ 方格，每格一个数，并计算每一行数的乘积。乘积为奇数的行最多有多少行？",
+   "solution_zh": "一行乘积为奇数，必须全为奇数。$1$–$25$ 中有 $13$ 个奇数，每行需 $5$ 个，所以最多 $\\lfloor 13/5\\rfloor=2$ 行 — 且 $2$ 行可以做到。"
   },
   {
    "position": 17,
@@ -238,7 +270,9 @@
     "E": "6"
    },
    "answer": "D",
-   "solution": "There are $\\binom{6}{2}=15$ pairs of squares. Attacking pairs: $8$ across adjacent columns (2 horizontal + 2 diagonal per column pair, times 2 column pairs) plus $3$ vertical pairs, $11$ total. Non-attacking: $15-11=4$."
+   "solution": "There are $\\binom{6}{2}=15$ pairs of squares. Attacking pairs: $8$ across adjacent columns (2 horizontal + 2 diagonal per column pair, times 2 column pairs) plus $3$ vertical pairs, $11$ total. Non-attacking: $15-11=4$.",
+   "question_zh": "国际象棋中的王可以攻击横、竖、斜相邻一格。把两只相同的王放在 $2\\times 3$ 棋盘的两个不同格子上，使它们互不攻击，共有多少种放法？",
+   "solution_zh": "任选两格共 $\\binom{6}{2}=15$ 对。互相攻击的对：相邻列之间 $8$ 对（每对列间横 $2$、斜 $2$，共 $2\\times2$ 组列）加上竖直 $3$ 对，共 $11$ 对。互不攻击：$15-11=4$。"
   },
   {
    "position": 18,
@@ -252,7 +286,9 @@
     "E": "$\\frac{1}{2}$"
    },
    "answer": "B",
-   "solution": "Ring area $=\\pi(3^2-2^2)=5\\pi$; largest circle area $=16\\pi$. The fraction is $\\frac{5\\pi}{16\\pi}=\\frac{5}{16}$."
+   "solution": "Ring area $=\\pi(3^2-2^2)=5\\pi$; largest circle area $=16\\pi$. The fraction is $\\frac{5\\pi}{16\\pi}=\\frac{5}{16}$.",
+   "question_zh": "三个同心圆的半径分别为 $2$、$3$、$4$。半径为 $2$ 与半径为 $3$ 的圆之间圆环的面积是最大圆面积的几分之几？",
+   "solution_zh": "圆环面积 $=\\pi(3^2-2^2)=5\\pi$；最大圆面积 $=16\\pi$。比值为 $\\frac{5\\pi}{16\\pi}=\\frac{5}{16}$。"
   },
   {
    "position": 19,
@@ -266,7 +302,9 @@
     "E": "$\\frac{5}{12}$"
    },
    "answer": "E",
-   "solution": "Inclusion–exclusion: $\\frac34+\\frac23-\\text{both}=1$, so $\\text{both}=\\frac{9}{12}+\\frac{8}{12}-\\frac{12}{12}=\\frac{5}{12}$."
+   "solution": "Inclusion–exclusion: $\\frac34+\\frac23-\\text{both}=1$, so $\\text{both}=\\frac{9}{12}+\\frac{8}{12}-\\frac{12}{12}=\\frac{5}{12}$.",
+   "question_zh": "某班 $\\frac{3}{4}$ 的学生喜欢数学，$\\frac{2}{3}$ 喜欢科学。每个学生至少喜欢其中一门。两门都喜欢的学生占全班的几分之几？",
+   "solution_zh": "容斥原理：$\\frac34+\\frac23-\\text{两门都喜欢}=1$，所以 $=\\frac{9}{12}+\\frac{8}{12}-\\frac{12}{12}=\\frac{5}{12}$。"
   },
   {
    "position": 20,
@@ -280,7 +318,9 @@
     "E": "30"
    },
    "answer": "B",
-   "solution": "No three vertices of a regular hexagon are collinear, so any 3 vertices form a triangle: $\\binom{6}{3}=20$."
+   "solution": "No three vertices of a regular hexagon are collinear, so any 3 vertices form a triangle: $\\binom{6}{3}=20$.",
+   "question_zh": "从正六边形的顶点中任取 $3$ 个，一共能组成多少个三角形？",
+   "solution_zh": "正六边形没有三点共线，任取 3 个顶点即成三角形：$\\binom{6}{3}=20$。"
   },
   {
    "position": 21,
@@ -294,7 +334,9 @@
     "E": "10"
    },
    "answer": "B",
-   "solution": "Let yellow $=y$; then green $=y+4$ and $2y+4=12$, so $y=4$ and green $=8$."
+   "solution": "Let yellow $=y$; then green $=y+4$ and $2y+4=12$, so $y=4$ and green $=8$.",
+   "question_zh": "一群共 $12$ 只青蛙蹲在树上。阴处的青蛙是绿色的，阳光下的青蛙是黄色的。现在绿青蛙比黄青蛙多 $4$ 只。绿青蛙有多少只？",
+   "solution_zh": "设黄青蛙为 $y$；绿青蛙 $=y+4$，$2y+4=12$，$y=4$，绿青蛙 $=8$。"
   },
   {
    "position": 22,
@@ -308,7 +350,9 @@
     "E": "$1200\\pi$"
    },
    "answer": "D",
-   "solution": "Annulus area $=\\pi(3^2-1^2)=8\\pi$ square inches. Length $=\\dfrac{8\\pi}{0.01}=800\\pi$ inches."
+   "solution": "Annulus area $=\\pi(3^2-1^2)=8\\pi$ square inches. Length $=\\dfrac{8\\pi}{0.01}=800\\pi$ inches.",
+   "question_zh": "一卷胶带外直径为 $6$ 英寸，绕在直径 $2$ 英寸的圆环上，横截面是一个圆环。胶带厚 $0.01$ 英寸，问胶带长多少英寸？（长度 = 圆环面积 ÷ 厚度）",
+   "solution_zh": "圆环面积 $=\\pi(3^2-1^2)=8\\pi$ 平方英寸。长度 $=\\dfrac{8\\pi}{0.01}=800\\pi$ 英寸。"
   },
   {
    "position": 23,
@@ -322,7 +366,9 @@
     "E": "8"
    },
    "answer": "A",
-   "solution": "A segment between opposite corners of an $a\\times b$ grid passes through $a+b-\\gcd(a,b)$ squares: $3+6-\\gcd(3,6)=3+6-3=6$."
+   "solution": "A segment between opposite corners of an $a\\times b$ grid passes through $a+b-\\gcd(a,b)$ squares: $3+6-\\gcd(3,6)=3+6-3=6$.",
+   "question_zh": "在方格纸上，Leo 画出从 $(0,6)$ 到 $(3,0)$ 的线段。这条线段穿过多少个单位正方形？",
+   "solution_zh": "$a\\times b$ 方格的对角线段穿过 $a+b-\\gcd(a,b)$ 个格子：$3+6-\\gcd(3,6)=3+6-3=6$。"
   },
   {
    "position": 24,
@@ -336,7 +382,9 @@
     "E": "50"
    },
    "answer": "E",
-   "solution": "The diagonal of the square equals the diameter $10$, so the side is $\\frac{10}{\\sqrt2}$ and the area is $\\frac{100}{2}=50$."
+   "solution": "The diagonal of the square equals the diameter $10$, so the side is $\\frac{10}{\\sqrt2}$ and the area is $\\frac{100}{2}=50$.",
+   "question_zh": "一个正方形内接于半径为 $5$ 的圆。这个正方形的面积是多少？",
+   "solution_zh": "正方形对角线等于直径 $10$，边长为 $\\frac{10}{\\sqrt2}$，面积为 $\\frac{100}{2}=50$。"
   },
   {
    "position": 25,
@@ -350,7 +398,9 @@
     "E": "$\\frac{1}{6}$"
    },
    "answer": "B",
-   "solution": "There are $\\binom{6}{3}=20$ equally likely sets of seats, and only $\\binom{3}{3}=1$ puts all three in front: $\\frac{1}{20}$."
+   "solution": "There are $\\binom{6}{3}=20$ equally likely sets of seats, and only $\\binom{3}{3}=1$ puts all three in front: $\\frac{1}{20}$.",
+   "question_zh": "一辆小面包车有 $2$ 排座位，每排 $3$ 个。三位乘客随机选座。三人全部坐在前排的概率是多少？",
+   "solution_zh": "等可能座位组合共 $\\binom{6}{3}=20$ 种，三人全在前排只有 $\\binom{3}{3}=1$ 种：概率 $\\frac{1}{20}$。"
   }
  ]
 }

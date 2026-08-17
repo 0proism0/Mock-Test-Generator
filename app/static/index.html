@@ -346,7 +346,7 @@ function renderTest() {
           <span class="badge">${q.type === 'proof' ? t('realProblem') + ' ' + q.source : t('modifiedFrom') + ' ' + q.source}</span>
         </span>
       </div>
-      <div class="qtext">${q.question}</div>
+      <div class="qtext">${(LANG === 'zh' && q.question_zh) ? q.question_zh : q.question}</div>
       ${q.type === 'proof'
         ? `<button class="btn secondary" onclick="document.getElementById('sol${q.n}').style.display='block'; this.style.display='none'">${t('showSolution')}</button>`
         : ''}
@@ -358,7 +358,7 @@ function renderTest() {
         : `<input class="int-input" id="int${q.n}" type="text" inputmode="numeric" maxlength="3"
                   placeholder="000–999" oninput="typed(${q.n}, this.value)">`}
       </div>
-      <div class="solution" id="sol${q.n}">${q.answer ? `<b>${t('answer')}: ${q.answer}.</b> ` : ''}${q.solution || `<i>${t('noSolution')}</i>`}</div>`;
+      <div class="solution" id="sol${q.n}">${q.answer ? `<b>${t('answer')}: ${q.answer}.</b> ` : ''}${((LANG === 'zh' && q.solution_zh) ? q.solution_zh : q.solution) || `<i>${t('noSolution')}</i>`}</div>`;
     qs.appendChild(div);
     renderMath(div);
   });
