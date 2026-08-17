@@ -17,28 +17,28 @@ STATIC = ROOT / "app" / "static"
 RESULTS = ROOT / "results.jsonl"
 PORT = 8000
 
-COMP_META = {  # slug -> (display name, question count, time limit min, category, rounds)
-    "amc8": ("AMC 8", 25, 40, "Math", None),
-    "amc10": ("AMC 10", 25, 75, "Math", None),
-    "amc12": ("AMC 12", 25, 75, "Math", None),
-    "aime": ("AIME", 15, 180, "Math", None),
-    "imo": ("IMO", 6, 270, "Math", None),
-    "usamo": ("USAMO", 6, 270, "Math", None),
-    "putnam": ("Putnam", 12, 360, "Math", None),
-    "apmo": ("APMO", 5, 240, "Math", None),
-    "hmmt": ("HMMT", 10, 50, "Math", {"General": (10, 50), "Theme": (10, 50)}),
-    "mathcounts": ("MATHCOUNTS", 30, 40, "Math", {"Sprint": (30, 40), "Target": (8, 24), "Team": (10, 20)}),
-    "smt": ("SMT", 25, 110, "Math", {"General": (25, 110), "Algebra": (10, 50), "Calculus": (10, 50), "Discrete": (10, 50), "Geometry": (10, 50), "Team": (15, 50)}),
-    "pumac": ("PUMaC", 8, 60, "Math", {"Algebra": (8, 60), "Geometry": (8, 60), "Combinatorics": (8, 60), "Number Theory": (8, 60), "Individual Finals": (4, 60), "Team": (15, 90), "Power": (11, 90)}),
-    "bmt": ("BMT", 25, 90, "Math", {"General": (25, 90), "Algebra": (11, 60), "Calculus": (11, 60), "Discrete": (11, 60), "Geometry": (11, 60), "Guts": (27, 75), "Power": (3, 60)}),
-    "cmimc": ("CMIMC", 10, 60, "Math", {"Algebra": (10, 50), "Combinatorics": (10, 50), "Geometry": (10, 50), "Computer Science": (10, 50), "Team": (10, 30)}),
-    "comc": ("COMC", 8, 150, "Math", None),
-    "cmo": ("CMO", 5, 180, "Math", None),
-    "usamts": ("USAMTS", 5, 240, "Math", None),
-    "ukmt": ("UKMT", 25, 60, "Math", None),
-    "mathkangaroo": ("Math Kangaroo", 10, 45, "Math", None),
-    "fma": ("F=ma", 15, 45, "Physics", None),
-    "physicsbowl": ("Physics Bowl", 15, 45, "Physics", None),
+COMP_META = {  # slug -> (display name, n_q, tlim, category, rounds, family)
+    "amc8": ("AMC 8", 25, 40, "Math", None, "AMC"),
+    "amc10": ("AMC 10", 25, 75, "Math", None, "AMC"),
+    "amc12": ("AMC 12", 25, 75, "Math", None, "AMC"),
+    "aime": ("AIME", 15, 180, "Math", None, "AIME"),
+    "imo": ("IMO", 6, 270, "Math", None, "IMO"),
+    "usamo": ("USAMO", 6, 270, "Math", None, "USAMO"),
+    "putnam": ("Putnam", 12, 360, "Math", None, "Putnam"),
+    "apmo": ("APMO", 5, 240, "Math", None, "APMO"),
+    "hmmt": ("HMMT", 10, 50, "Math", {"General": (10, 50), "Theme": (10, 50)}, "HMMT"),
+    "mathcounts": ("MATHCOUNTS", 30, 40, "Math", {"Sprint": (30, 40), "Target": (8, 24), "Team": (10, 20)}, "MATHCOUNTS"),
+    "smt": ("SMT", 25, 110, "Math", {"General": (25, 110), "Algebra": (10, 50), "Calculus": (10, 50), "Discrete": (10, 50), "Geometry": (10, 50), "Team": (15, 50)}, "SMT"),
+    "pumac": ("PUMaC", 8, 60, "Math", {"Algebra": (8, 60), "Geometry": (8, 60), "Combinatorics": (8, 60), "Number Theory": (8, 60), "Individual Finals": (4, 60), "Team": (15, 90), "Power": (11, 90)}, "PUMaC"),
+    "bmt": ("BMT", 25, 90, "Math", {"General": (25, 90), "Algebra": (11, 60), "Calculus": (11, 60), "Discrete": (11, 60), "Geometry": (11, 60), "Guts": (27, 75), "Power": (3, 60)}, "BMT"),
+    "cmimc": ("CMIMC", 10, 60, "Math", {"Algebra": (10, 50), "Combinatorics": (10, 50), "Geometry": (10, 50), "Computer Science": (10, 50), "Team": (10, 30)}, "CMIMC"),
+    "comc": ("COMC", 8, 150, "Math", None, "COMC"),
+    "cmo": ("CMO", 5, 180, "Math", None, "CMO"),
+    "usamts": ("USAMTS", 5, 240, "Math", None, "USAMTS"),
+    "ukmt": ("UKMT", 25, 60, "Math", None, "UKMT"),
+    "mathkangaroo": ("Math Kangaroo", 10, 45, "Math", None, "Math Kangaroo"),
+    "fma": ("F=ma", 15, 45, "Physics", None, "F=ma"),
+    "physicsbowl": ("Physics Bowl", 15, 45, "Physics", None, "Physics Bowl"),
 }
 
 ROUND_PATTERNS = {  # slug -> regex extracting round name from a variant's source string
@@ -122,7 +122,7 @@ def list_banks():
     for slug, variants in by_slug.items():
         if slug not in COMP_META:
             continue
-        name, n_q, tlim, category, rounds = COMP_META[slug]
+        name, n_q, tlim, category, rounds, family = COMP_META[slug]
         if rounds:
             for rname, (rn_q, rn_tlim) in rounds.items():
                 rv = [v for v in variants if round_of(slug, v.get("source")) == rname]
@@ -135,7 +135,7 @@ def list_banks():
                 min_unused = min((len(s - used) for s in pos_src.values()), default=0)
                 out.append({
                     "slug": slug, "round": rname, "name": f"{name} — {rname}",
-                    "category": category, "n_questions": rn_q, "time_limit_min": rn_tlim,
+                    "category": category, "family": family, "n_questions": rn_q, "time_limit_min": rn_tlim,
                     "ready": ready, "total_variants": len(rv),
                     "positions_covered": len(pos_src), "tests_remaining": min_unused,
                 })
@@ -148,7 +148,7 @@ def list_banks():
             min_src = min(counts, default=0)
             counts_unused = [len(s - used) for p, s in pos_src.items() if p <= n_q]
             out.append({
-                "slug": slug, "round": None, "name": name, "category": category,
+                "slug": slug, "round": None, "name": name, "category": category, "family": family,
                 "n_questions": n_q, "time_limit_min": tlim, "ready": ready,
                 "total_variants": len(variants), "positions_covered": len(pos_src),
                 "tests_remaining": min(counts_unused, default=0), "tests_total": min_src,
