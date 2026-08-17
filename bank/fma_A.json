@@ -1,0 +1,111 @@
+{
+  "competition": "F=ma",
+  "set": "A",
+  "variants": [
+    {
+      "position": 1, "source": "Modified from 2021 F=ma Problem 1",
+      "question": "A ball is thrown straight upward with an initial speed of $20\\,\\mathrm{m/s}$. Neglecting air resistance and using $g = 10\\,\\mathrm{m/s^2}$, how long after being thrown does it take for the ball to return to its launch point?",
+      "choices": {"A": "$1\\,\\mathrm{s}$", "B": "$2\\,\\mathrm{s}$", "C": "$3\\,\\mathrm{s}$", "D": "$4\\,\\mathrm{s}$", "E": "$5\\,\\mathrm{s}$"},
+      "answer": "D",
+      "solution": "The time to reach the top is $v/g = 20/10 = 2\\,\\mathrm{s}$, and the total round trip is twice that: $4\\,\\mathrm{s}$."
+    },
+    {
+      "position": 2, "source": "Modified from 2021 F=ma Problem 2",
+      "question": "A projectile is launched horizontally with speed $15\\,\\mathrm{m/s}$ from the edge of a $45\\,\\mathrm{m}$ high cliff. Using $g = 10\\,\\mathrm{m/s^2}$, how far from the base of the cliff does it land?",
+      "choices": {"A": "$30\\,\\mathrm{m}$", "B": "$40\\,\\mathrm{m}$", "C": "$50\\,\\mathrm{m}$", "D": "$60\\,\\mathrm{m}$", "E": "$45\\,\\mathrm{m}$"},
+      "answer": "E",
+      "solution": "The fall time is $t = \\sqrt{2h/g} = \\sqrt{2\\cdot 45/10} = 3\\,\\mathrm{s}$, so the horizontal range is $15 \\cdot 3 = 45\\,\\mathrm{m}$."
+    },
+    {
+      "position": 3, "source": "Modified from 2021 F=ma Problem 3",
+      "question": "A uniform $6\\,\\mathrm{m}$ rod is pivoted at its left end. A $30\\,\\mathrm{N}$ weight hangs from the rod $4\\,\\mathrm{m}$ from the pivot. What upward force applied at the right end of the rod keeps the system in equilibrium?",
+      "choices": {"A": "$20\\,\\mathrm{N}$", "B": "$10\\,\\mathrm{N}$", "C": "$15\\,\\mathrm{N}$", "D": "$25\\,\\mathrm{N}$", "E": "$30\\,\\mathrm{N}$"},
+      "answer": "A",
+      "solution": "Balancing torques about the pivot: $F \\cdot 6 = 30 \\cdot 4$, so $F = 20\\,\\mathrm{N}$."
+    },
+    {
+      "position": 4, "source": "Modified from 2021 F=ma Problem 4",
+      "question": "Alice and Bethany stand side by side on the Earth's equator. Alice jumps straight up to a small height $h$ and lands a distance $D$ to the west of Bethany, due to the Earth's rotation. If she instead jumps to a height $4h$, how far to the west of Bethany does she land?",
+      "choices": {"A": "$2D$", "B": "$4D$", "C": "$6D$", "D": "$8D$", "E": "$16D$"},
+      "answer": "D",
+      "solution": "The westward deflection scales as $t^3$ with the flight time $t$. Since $t \\propto \\sqrt{h}$, doubling the height twice (h to 4h) doubles $t$, giving $2^3 D = 8D$."
+    },
+    {
+      "position": 5, "source": "Modified from 2021 F=ma Problem 5",
+      "question": "A train travels $6\\,\\mathrm{km}$ between two cities. Its maximal acceleration is $2\\,\\mathrm{m/s^2}$ and its maximal deceleration is $3\\,\\mathrm{m/s^2}$ (in absolute value). What is the shortest time in which the train can make the trip?",
+      "choices": {"A": "$80\\,\\mathrm{s}$", "B": "$90\\,\\mathrm{s}$", "C": "$110\\,\\mathrm{s}$", "D": "$120\\,\\mathrm{s}$", "E": "$100\\,\\mathrm{s}$"},
+      "answer": "E",
+      "solution": "The fastest strategy is to accelerate at $a_1$ to top speed $v$, then immediately brake at $a_2$. From $s = \\frac{v^2}{2a_1} + \\frac{v^2}{2a_2}$ we get $v^2 = \\frac{2sa_1a_2}{a_1+a_2} = 14400$, so $v = 120\\,\\mathrm{m/s}$ and $t = \\frac{v}{a_1} + \\frac{v}{a_2} = 60 + 40 = 100\\,\\mathrm{s}$."
+    },
+    {
+      "position": 6, "source": "Modified from 2021 F=ma Problem 6",
+      "question": "A solid metal cylinder has density $3\\rho$ and is fully submerged in water of density $\\rho$. What fraction of the cylinder's weight is supported by the buoyant force?",
+      "choices": {"A": "$\\frac14$", "B": "$\\frac13$", "C": "$\\frac12$", "D": "$\\frac23$", "E": "$\\frac34$"},
+      "answer": "B",
+      "solution": "The buoyant force equals the weight of displaced water, $\\rho V g$, while the cylinder weighs $3\\rho V g$. The ratio is $\\frac{\\rho}{3\\rho} = \\frac13$."
+    },
+    {
+      "position": 7, "source": "Modified from 2021 F=ma Problem 7",
+      "question": "A point mass slides with speed $4\\,\\mathrm{m/s}$ on a frictionless horizontal surface between two fixed parallel walls $5\\,\\mathrm{m}$ apart. It bounces off the walls perfectly elastically. How long does one round trip between the walls take?",
+      "choices": {"A": "$2.5\\,\\mathrm{s}$", "B": "$1\\,\\mathrm{s}$", "C": "$2\\,\\mathrm{s}$", "D": "$3\\,\\mathrm{s}$", "E": "$4\\,\\mathrm{s}$"},
+      "answer": "A",
+      "solution": "The round trip covers $2 \\times 5 = 10\\,\\mathrm{m}$ at $4\\,\\mathrm{m/s}$: $10/4 = 2.5\\,\\mathrm{s}$."
+    },
+    {
+      "position": 8, "source": "Modified from 2021 F=ma Problem 8",
+      "question": "A mint produces $10{,}000$ coins. The weight of each coin has an independent uncertainty of $2\\%$. What is the percent uncertainty in the total weight of all $10{,}000$ coins?",
+      "choices": {"A": "$0.002\\%$", "B": "$0.2\\%$", "C": "$2\\%$", "D": "$20\\%$", "E": "$0.02\\%$"},
+      "answer": "E",
+      "solution": "Independent uncertainties add in quadrature: the total uncertainty is $\\sigma\\sqrt{N}$, and relative to the total $N\\bar{w}$ this gives $\\frac{2\\%}{\\sqrt{10000}} = 0.02\\%$."
+    },
+    {
+      "position": 9, "source": "Modified from 2021 F=ma Problem 9",
+      "question": "An airplane flies in a parabolic arc with constant downward acceleration $g = 10\\,\\mathrm{m/s^2}$ so that passengers experience weightlessness. The plane stays on the arc for $25\\,\\mathrm{s}$, starting and ending at an altitude of $8000\\,\\mathrm{m}$. What is the peak altitude of the arc?",
+      "choices": {"A": "$8500\\,\\mathrm{m}$", "B": "$8600\\,\\mathrm{m}$", "C": "$8700\\,\\mathrm{m}$", "D": "$8800\\,\\mathrm{m}$", "E": "$8900\\,\\mathrm{m}$"},
+      "answer": "D",
+      "solution": "The plane ascends for half the time, $12.5\\,\\mathrm{s}$, reaching vertical speed $g \\cdot 12.5 = 125\\,\\mathrm{m/s}$ at entry. Height gained: $\\frac{v^2}{2g} = 781.25\\,\\mathrm{m}$, so the peak is $8000 + 781.25 \\approx 8800\\,\\mathrm{m}$."
+    },
+    {
+      "position": 10, "source": "Modified from 2021 F=ma Problem 10",
+      "question": "A uniform solid circular disk of mass $2\\,\\mathrm{kg}$ and radius $0.5\\,\\mathrm{m}$ lies on a flat, frictionless horizontal table. The center of mass is at rest and the disk spins about its center with angular frequency $10\\,\\mathrm{rad/s}$. What is the disk's kinetic energy?",
+      "choices": {"A": "$5\\,\\mathrm{J}$", "B": "$10\\,\\mathrm{J}$", "C": "$12.5\\,\\mathrm{J}$", "D": "$25\\,\\mathrm{J}$", "E": "$50\\,\\mathrm{J}$"},
+      "answer": "C",
+      "solution": "Only rotation contributes: $K = \\frac12 I \\omega^2 = \\frac12 \\cdot \\frac12 mR^2 \\cdot \\omega^2 = \\frac{mR^2\\omega^2}{4} = \\frac{2 \\cdot 0.25 \\cdot 100}{4} = 12.5\\,\\mathrm{J}$."
+    },
+    {
+      "position": 11, "source": "Modified from 2021 F=ma Problem 11",
+      "question": "Three projectiles are launched from the edge of a $45\\,\\mathrm{m}$ cliff: $A$ straight up at $20\\,\\mathrm{m/s}$, $B$ horizontally at $20\\,\\mathrm{m/s}$, and $C$ straight down at $20\\,\\mathrm{m/s}$. Neglecting air resistance and using $g = 10\\,\\mathrm{m/s^2}$, rank their times $t_A, t_B, t_C$ to reach the ground, from shortest to longest.",
+      "choices": {"A": "$t_A < t_B < t_C$", "B": "$t_B < t_C < t_A$", "C": "$t_C < t_B < t_A$", "D": "$t_C < t_A < t_B$", "E": "$t_A < t_C < t_B$"},
+      "answer": "C",
+      "solution": "$C$ is thrown downward (fastest, $\\approx 1.6\\,\\mathrm{s}$), $B$ takes $\\sqrt{2h/g} = 3\\,\\mathrm{s}$, and $A$ goes up first (slowest, $\\approx 5.6\\,\\mathrm{s}$): $t_C < t_B < t_A$."
+    },
+    {
+      "position": 12, "source": "Modified from 2021 F=ma Problem 12",
+      "question": "An object of mass $1\\,\\mathrm{kg}$ rests on a frictionless horizontal platform, attached to a wall by a spring of spring constant $400\\,\\mathrm{N/m}$. The object is displaced $5\\,\\mathrm{cm}$ from equilibrium and released. What is the period of its oscillation?",
+      "choices": {"A": "$0.157\\,\\mathrm{s}$", "B": "$0.314\\,\\mathrm{s}$", "C": "$0.628\\,\\mathrm{s}$", "D": "$1\\,\\mathrm{s}$", "E": "$3.14\\,\\mathrm{s}$"},
+      "answer": "B",
+      "solution": "$T = 2\\pi\\sqrt{m/k} = 2\\pi\\sqrt{1/400} = \\frac{2\\pi}{20} = \\frac{\\pi}{10} \\approx 0.314\\,\\mathrm{s}$."
+    },
+    {
+      "position": 13, "source": "Modified from 2021 F=ma Problem 13",
+      "question": "A car accelerates from rest along a straight racetrack with a constant acceleration of $3\\,\\mathrm{m/s^2}$. What is its speed after $6\\,\\mathrm{s}$?",
+      "choices": {"A": "$9\\,\\mathrm{m/s}$", "B": "$12\\,\\mathrm{m/s}$", "C": "$15\\,\\mathrm{m/s}$", "D": "$18\\,\\mathrm{m/s}$", "E": "$24\\,\\mathrm{m/s}$"},
+      "answer": "D",
+      "solution": "$v = at = 3 \\cdot 6 = 18\\,\\mathrm{m/s}$."
+    },
+    {
+      "position": 14, "source": "Modified from 2021 F=ma Problem 14",
+      "question": "A bacterium swims by rotating its flagella against a viscous drag force $F = \\eta R v$ that is proportional to its speed $v$. If the bacterium doubles its swimming speed, by what factor does the power required to overcome the drag change?",
+      "choices": {"A": "$2$", "B": "$3$", "C": "$\\sqrt{2}$", "D": "$6$", "E": "$4$"},
+      "answer": "E",
+      "solution": "Power $= F \\cdot v = \\eta R v^2$, so doubling the speed multiplies the required power by $2^2 = 4$."
+    },
+    {
+      "position": 15, "source": "Modified from 2021 F=ma Problem 15",
+      "question": "A block is released from rest at the top of a fixed, frictionless ramp inclined at $30^{\\circ}$ to the horizontal, with horizontal length $5\\,\\mathrm{m}$. Using $g = 10\\,\\mathrm{m/s^2}$, approximately how long does the block take to reach the bottom?",
+      "choices": {"A": "$1\\,\\mathrm{s}$", "B": "$1.5\\,\\mathrm{s}$", "C": "$2\\,\\mathrm{s}$", "D": "$2.5\\,\\mathrm{s}$", "E": "$3\\,\\mathrm{s}$"},
+      "answer": "B",
+      "solution": "The ramp length is $L = 5/\\cos 30^{\\circ} \\approx 5.77\\,\\mathrm{m}$ and the acceleration is $g\\sin 30^{\\circ} = 5\\,\\mathrm{m/s^2}$. Then $t = \\sqrt{2L/a} \\approx \\sqrt{2.31} \\approx 1.5\\,\\mathrm{s}$."
+    }
+  ]
+}

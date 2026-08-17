@@ -1,0 +1,384 @@
+{
+ "id": "amc8_rand_01",
+ "competition": "AMC 8",
+ "title": "AMC 8 — Random Mock #1 · 2026-08-17 11:40",
+ "instructions": "25 questions · 40 minutes · No calculator. 1 point per correct answer, no penalty for wrong answers.",
+ "time_limit_min": 40,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2010 AMC 8 Problem 1",
+   "question": "At Descartes Middle School the mathematics teachers are Ms. Ada, Mr. Babbage, and Mrs. Noether. There are $12$ students in Ms. Ada's class, $9$ students in Mr. Babbage's class, and $14$ students in Mrs. Noether's class taking the AMC $8$ this year. How many mathematics students at Descartes Middle School are taking the contest?",
+   "choices": {
+    "A": "35",
+    "B": "33",
+    "C": "34",
+    "D": "36",
+    "E": "37"
+   },
+   "answer": "A",
+   "solution": "Add the three class sizes: $12+9+14=35$ students.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 2,
+   "source": "2024 AMC 8 Problem 2",
+   "question": "What is the value of this expression in decimal form? $$\\frac{55}{11}+\\frac{110}{55}+\\frac{55}{1100}$$",
+   "choices": {
+    "A": "6.55",
+    "B": "7.005",
+    "C": "7.05",
+    "D": "7.5",
+    "E": "7.55"
+   },
+   "answer": "C",
+   "solution": "$\\frac{55}{11}=5$, $\\frac{110}{55}=2$, $\\frac{55}{1100}=0.05$. The sum is $5+2+0.05=7.05$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 3,
+   "source": "2007 AMC 8 Problem 3",
+   "question": "What is the sum of the two smallest prime factors of $450$?",
+   "choices": {
+    "A": "5",
+    "B": "7",
+    "C": "8",
+    "D": "10",
+    "E": "12"
+   },
+   "answer": "A",
+   "solution": "The prime factorization of $450$ is $2 \\cdot 3^2 \\cdot 5^2$. The two smallest prime factors are $2$ and $3$, and $2+3=\\boxed{5}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 4,
+   "source": "2013 AMC 8 Problem 4",
+   "question": "Six friends ate at a restaurant and agreed to share the bill equally. Because Priya forgot her money, each of her five friends paid an extra $\\$3$ to cover her portion of the total bill. What was the total bill?",
+   "choices": {
+    "A": "$\\$60$",
+    "B": "$\\$72$",
+    "C": "$\\$75$",
+    "D": "$\\$90$",
+    "E": "$\\$108$"
+   },
+   "answer": "D",
+   "solution": "The five friends paid an extra $5\\cdot3=15$ dollars in all, which exactly covers Priya's share. So each of the six equal shares is $\\$15$, and the total bill is $6\\cdot15=\\$90$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 5,
+   "source": "2014 AMC 8 Problem 5",
+   "question": "Ravi's car can go $35$ miles on a gallon of gas, and gas currently costs $\\$5$ per gallon. How many miles can Ravi drive on $\\$28$ worth of gas?",
+   "choices": {
+    "A": "140",
+    "B": "150",
+    "C": "175",
+    "D": "180",
+    "E": "196"
+   },
+   "answer": "E",
+   "solution": "With $\\$28$ Ravi can buy $\\frac{28}{5}=5.6$ gallons of gas. At $35$ miles per gallon, he can drive $5.6\\cdot35=196$ miles.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 6,
+   "source": "2024 AMC 8 Problem 6",
+   "question": "In a race, runner $A$ finished ahead of runner $B$, runner $B$ finished ahead of runner $C$, and runner $D$ finished ahead of runner $A$. Which of the following could be the order in which they finished?",
+   "choices": {
+    "A": "$D,A,B,C$",
+    "B": "$A,B,C,D$",
+    "C": "$D,B,A,C$",
+    "D": "$A,D,B,C$",
+    "E": "$B,D,A,C$"
+   },
+   "answer": "A",
+   "solution": "The conditions force $D$ before $A$, $A$ before $B$, and $B$ before $C$: the only possible order is $D,A,B,C$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 7,
+   "source": "2024 AMC 8 Problem 7",
+   "question": "A $2\\times 5$ rectangle must be completely covered by $1\\times 2$ dominoes (which may be rotated). In how many different ways can this be done?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "8",
+    "D": "7",
+    "E": "10"
+   },
+   "answer": "C",
+   "solution": "Let $T(n)$ be the number of domino tilings of a $2\\times n$ board. The right end is either a vertical domino ($T(n-1)$ ways) or two horizontal dominoes ($T(n-2)$ ways), so $T(n)=T(n-1)+T(n-2)$ with $T(1)=1$, $T(2)=2$: $1,2,3,5,8$. Thus $T(5)=8$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 8,
+   "source": "2017 AMC 8 Problem 8",
+   "question": "Diego wants to visit Luna after school and knows the street where she lives but doesn't know her house number. She tells him, \"My house number has two digits, and exactly three of the following four statements about it are true.\" (1) It is prime. (2) It is even. (3) It is divisible by $11$. (4) One of its digits is $4$. This information allows Diego to determine Luna's house number. What is its units digit?",
+   "choices": {
+    "A": "4",
+    "B": "2",
+    "C": "6",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "A",
+   "solution": "A two-digit number cannot be both prime and even, so statements (1) and (2) cannot both be true; hence exactly one of them is false and the other three statements are all true. If (1) were true, the number would be a prime divisible by $11$, and the only such number, $11$, has no digit $4$ — impossible. So (1) is false and (2), (3), (4) are true. The two-digit multiples of $11$ are $11,22,\\dots,99$; the only even one containing the digit $4$ is $44$. Its units digit is $4$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 9,
+   "source": "2018 AMC 8 Problem 9",
+   "question": "Mia is tiling the floor of her $10$-foot by $14$-foot dining room. She plans to place one-foot by one-foot square tiles to form a border along the edges of the room and to fill in the rest of the floor with two-foot by two-foot square tiles. How many tiles will she use?",
+   "choices": {
+    "A": "66",
+    "B": "68",
+    "C": "70",
+    "D": "72",
+    "E": "76"
+   },
+   "answer": "B",
+   "solution": "The one-foot-wide border contains $10\\cdot14-8\\cdot12=140-96=44$ one-foot tiles. The remaining $8$ by $12$ foot interior holds $\\frac{8\\cdot12}{2\\cdot2}=24$ two-foot tiles. In total she uses $44+24=68$ tiles.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 10,
+   "source": "2024 AMC 8 Problem 10",
+   "question": "In $1985$ a weather station recorded a carbon dioxide level of $340$ ppm. The level increased by exactly $2$ ppm every year. What was the level in $2030$?",
+   "choices": {
+    "A": "410",
+    "B": "420",
+    "C": "425",
+    "D": "430",
+    "E": "440"
+   },
+   "answer": "D",
+   "solution": "$2030-1985=45$ years, so the level is $340+45\\cdot 2=430$ ppm.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 11,
+   "source": "2019 AMC 8 Problem 11",
+   "question": "The seventh grade class at Jefferson Middle School has $84$ students. Each student takes an art class or a music class or both. There are $61$ seventh graders taking an art class, and there are $47$ seventh graders taking a music class. How many seventh graders take only an art class and not a music class?",
+   "choices": {
+    "A": "23",
+    "B": "30",
+    "C": "33",
+    "D": "37",
+    "E": "47"
+   },
+   "answer": "D",
+   "solution": "By inclusion-exclusion, the number taking both classes is $61+47-84=24$. Therefore the number taking only art is $61-24=37$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 12,
+   "source": "2012 AMC 8 Problem 12",
+   "question": "What is the units digit of $13^{2023}$?",
+   "choices": {
+    "A": "1",
+    "B": "3",
+    "C": "5",
+    "D": "7",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "Only the units digit $3$ matters. The units digits of powers of $3$ cycle $3, 9, 7, 1$ with period $4$. Since $2023 = 4 \\cdot 505 + 3$, the units digit of $13^{2023}$ is the third in the cycle, $\\boxed{7}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 13,
+   "source": "2015 AMC 8 Problem 13",
+   "question": "How many subsets of two elements can be removed from the set $\\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}$ so that the mean (average) of the remaining numbers is $5$?",
+   "choices": {
+    "A": "4",
+    "B": "2",
+    "C": "3",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "A",
+   "solution": "The numbers $1$ through $9$ sum to $45$. After removing two numbers, $7$ numbers remain with mean $5$, so their sum is $35$ and the two removed numbers must sum to $45-35=10$. The two-element subsets with sum $10$ are $\\{1,9\\},\\{2,8\\},\\{3,7\\},\\{4,6\\}$ (note $\\{5,5\\}$ is not allowed), giving $4$ subsets.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 14,
+   "source": "2024 AMC 8 Problem 14",
+   "question": "One-way roads connect towns as follows: $A\\to B$ is $3$ km, $B\\to C$ is $4$ km, $A\\to C$ is $9$ km, $C\\to D$ is $2$ km, and $B\\to D$ is $8$ km. What is the length in km of the shortest route from $A$ to $D$?",
+   "choices": {
+    "A": "8",
+    "B": "9",
+    "C": "10",
+    "D": "11",
+    "E": "12"
+   },
+   "answer": "B",
+   "solution": "Compare the routes: $A\\to B\\to C\\to D=3+4+2=9$; $A\\to C\\to D=9+2=11$; $A\\to B\\to D=3+8=11$. The shortest is $9$ km.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 15,
+   "source": "2020 AMC 8 Problem 15",
+   "question": "Suppose $15\\%$ of $x$ equals $25\\%$ of $y.$ What percentage of $x$ is $y?$",
+   "choices": {
+    "A": "60",
+    "B": "75",
+    "C": "90",
+    "D": "133 \\frac{1}{3}",
+    "E": "300"
+   },
+   "answer": "A",
+   "solution": "Since $25\\% = \\frac{1}{4}$, multiplying both sides of $0.15x = 0.25y$ by $4$ gives $y = 0.60x$. So $y$ is $\\boxed{60}$ percent of $x$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 16,
+   "source": "2009 AMC 8 Problem 16",
+   "question": "How many $3$-digit positive integers have digits whose product equals $12$?",
+   "choices": {
+    "A": "12",
+    "B": "15",
+    "C": "18",
+    "D": "21",
+    "E": "24"
+   },
+   "answer": "B",
+   "solution": "The digit multisets (from least to greatest) with product $12$ are $\\{1,2,6\\}$, $\\{1,3,4\\}$, and $\\{2,2,3\\}$. The first two each give $3! = 6$ arrangements, and the last gives $\\frac{3!}{2!}=3$ arrangements, for a total of $6+6+3=\\boxed{15}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 17,
+   "source": "2019 AMC 8 Problem 17",
+   "question": "What is the value of the product $$\\left(\\frac{1\\cdot3}{2\\cdot2}\\right)\\left(\\frac{2\\cdot4}{3\\cdot3}\\right)\\left(\\frac{3\\cdot5}{4\\cdot4}\\right)\\cdots\\left(\\frac{47\\cdot49}{48\\cdot48}\\right)\\left(\\frac{48\\cdot50}{49\\cdot49}\\right)?$$",
+   "choices": {
+    "A": "$\\frac{1}{49}$",
+    "B": "$\\frac{24}{49}$",
+    "C": "$\\frac{1}{2}$",
+    "D": "$\\frac{25}{49}$",
+    "E": "$\\frac{26}{49}$"
+   },
+   "answer": "D",
+   "solution": "Split each factor: $\\prod_{k=1}^{48}\\frac{k(k+2)}{(k+1)^2}=\\left(\\prod_{k=1}^{48}\\frac{k}{k+1}\\right)\\left(\\prod_{k=1}^{48}\\frac{k+2}{k+1}\\right)$. Both products telescope: the first equals $\\frac{1}{49}$ and the second equals $\\frac{50}{2}=25$. Multiplying gives $\\frac{1}{49}\\cdot25=\\frac{25}{49}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 18,
+   "source": "2024 AMC 8 Problem 18",
+   "question": "Three concentric circles have radii $2$, $3$, and $4$. The area of the ring between the circles of radius $2$ and radius $3$ is what fraction of the area of the largest circle?",
+   "choices": {
+    "A": "$\\frac{1}{4}$",
+    "B": "$\\frac{5}{16}$",
+    "C": "$\\frac{3}{8}$",
+    "D": "$\\frac{7}{16}$",
+    "E": "$\\frac{1}{2}$"
+   },
+   "answer": "B",
+   "solution": "Ring area $=\\pi(3^2-2^2)=5\\pi$; largest circle area $=16\\pi$. The fraction is $\\frac{5\\pi}{16\\pi}=\\frac{5}{16}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 19,
+   "source": "2017 AMC 8 Problem 19",
+   "question": "For any positive integer $M$, the notation $M!$ denotes the product of the integers $1$ through $M$. What is the largest integer $n$ for which $5^n$ is a factor of the sum $88!+89!+90!$?",
+   "choices": {
+    "A": "20",
+    "B": "22",
+    "C": "23",
+    "D": "24",
+    "E": "26"
+   },
+   "answer": "B",
+   "solution": "Factor out $88!$: the sum is $88!\\,(1+89+89\\cdot90)=88!\\cdot8100$. Since $8100=2^2\\cdot3^4\\cdot5^2$, it contributes $2$ factors of $5$. The number of factors of $5$ in $88!$ is $\\left\\lfloor\\frac{88}{5}\\right\\rfloor+\\left\\lfloor\\frac{88}{25}\\right\\rfloor=17+3=20$. Since the power of $5$ dividing a product is the sum of the powers dividing each factor, the total is $20+2=22$, so the largest such $n$ is $22$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 20,
+   "source": "2016 AMC 8 Problem 20",
+   "question": "The least common multiple of $a$ and $b$ is $18$, and the least common multiple of $b$ and $c$ is $20$. What is the least possible value of the least common multiple of $a$ and $c$?",
+   "choices": {
+    "A": "36",
+    "B": "60",
+    "C": "90",
+    "D": "120",
+    "E": "180"
+   },
+   "answer": "E",
+   "solution": "Since $\\text{lcm}(a,b)=18$ and $\\text{lcm}(b,c)=20$, the number $b$ divides both $18$ and $20$, so $b\\mid\\gcd(18,20)=2$. Then $b$ contributes no factor of $9$, so $9\\mid a$; likewise $b$ contributes no factor of $4$ or $5$, so $20\\mid c$. Hence $\\text{lcm}(a,c)$ must be a multiple of $\\text{lcm}(9,20)=180$. This bound is achieved with $a=9$, $b=2$, $c=20$: $\\text{lcm}(9,2)=18$ and $\\text{lcm}(2,20)=20$. The least possible value is $180$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 21,
+   "source": "2023 AMC 8 Problem 21",
+   "question": "Bao writes the numbers $2, 3, \\dots, 10$ on separate cards, one number per card. He wishes to divide the cards into $3$ groups of $3$ cards so that the sum of the numbers in each group will be the same. In how many ways can this be done?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "C",
+   "solution": "The total is $2+3+\\cdots+10=54$, so each group must sum to $18$. The card $10$ can only be grouped as $\\{10,2,6\\}$ or $\\{10,3,5\\}$ (since $10+4+4$ repeats a card). If $\\{10,2,6\\}$ is used, the remaining cards $\\{3,4,5,7,8,9\\}$ split uniquely as $\\{9,4,5\\}$ and $\\{8,7,3\\}$. If $\\{10,3,5\\}$ is used, the remaining cards $\\{2,4,6,7,8,9\\}$ split uniquely as $\\{9,2,7\\}$ and $\\{8,6,4\\}$. Thus there are exactly $2$ ways.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 22,
+   "source": "2024 AMC 8 Problem 22",
+   "question": "A roll of tape has an outer diameter of $6$ inches and is wound around a ring of diameter $2$ inches, so a cross section is an annulus. If the tape is $0.01$ inches thick, how many inches long is the tape? (The length equals the annulus area divided by the thickness.)",
+   "choices": {
+    "A": "$400\\pi$",
+    "B": "$600\\pi$",
+    "C": "$1000\\pi$",
+    "D": "$800\\pi$",
+    "E": "$1200\\pi$"
+   },
+   "answer": "D",
+   "solution": "Annulus area $=\\pi(3^2-1^2)=8\\pi$ square inches. Length $=\\dfrac{8\\pi}{0.01}=800\\pi$ inches.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 23,
+   "source": "2024 AMC 8 Problem 23",
+   "question": "On a sheet of graph paper, Leo draws the line segment from $(0,6)$ to $(3,0)$. Through how many unit squares of the grid does the segment pass?",
+   "choices": {
+    "A": "6",
+    "B": "4",
+    "C": "5",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "A",
+   "solution": "A segment between opposite corners of an $a\\times b$ grid passes through $a+b-\\gcd(a,b)$ squares: $3+6-\\gcd(3,6)=3+6-3=6$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 24,
+   "source": "2020 AMC 8 Problem 24",
+   "question": "A large square region is paved with $n^2$ gray square tiles, each measuring $s$ inches on a side. A border $d$ inches wide surrounds each tile, so the large square region has side length $ns+(n+1)d$ inches. When $n=9$, the $81$ gray tiles cover $36\\%$ of the area of the large square region. What is the ratio $\\frac{d}{s}$?",
+   "choices": {
+    "A": "$\\frac{3}{5}$",
+    "B": "$\\frac{1}{2}$",
+    "C": "$\\frac{5}{9}$",
+    "D": "$\\frac{2}{3}$",
+    "E": "$\\frac{9}{16}$"
+   },
+   "answer": "A",
+   "solution": "The tiles cover a fraction $\\dfrac{(9s)^2}{(9s+10d)^2}$ of the region. Setting this equal to $36\\%=\\left(\\frac{3}{5}\\right)^2$ gives $\\frac{9s}{9s+10d}=\\frac{3}{5}$. Cross-multiplying: $45s=27s+30d$, so $18s=30d$ and $\\frac{d}{s}=\\frac{18}{30}=\\frac{3}{5}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 25,
+   "source": "2018 AMC 8 Problem 25",
+   "question": "How many perfect cubes lie between $2^6+1$ and $2^{16}+1$, inclusive?",
+   "choices": {
+    "A": "4",
+    "B": "8",
+    "C": "10",
+    "D": "35",
+    "E": "36"
+   },
+   "answer": "E",
+   "solution": "We have $2^6+1 = 65$ and $2^{16}+1 = 65537$. The smallest cube in range is $5^3 = 125$ and the largest is $40^3 = 64000$ (since $41^3 = 68921$ is too big). The cubes are $5^3, 6^3, \\dots, 40^3$, giving $40 - 5 + 1 = \\boxed{36}$ perfect cubes.",
+   "type": "multiple_choice"
+  }
+ ]
+}

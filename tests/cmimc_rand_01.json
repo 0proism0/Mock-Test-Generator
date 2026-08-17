@@ -1,0 +1,99 @@
+{
+ "id": "cmimc_rand_01",
+ "competition": "CMIMC",
+ "title": "CMIMC — Random Mock #1",
+ "instructions": "10 questions · 60 minutes · No calculator. Proof-based problems: write full solutions, then compare with the official solutions.",
+ "time_limit_min": 60,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2022 CMIMC Computer Science Problem 1",
+   "question": "Every room is reachable from every other room.",
+   "choices": null,
+   "answer": null,
+   "solution": "Let A1A2A3A4 and B1B2B3B4 be two squares. Construct 16 line segments AiBj for each possible i,j ∈{ 1, 2, 3, 4}. What is the maximum number of line segments that don’t intersect the edges of A1A2A3A4 or B1B2B3B4? (intersection with a vertex is not counted).",
+   "type": "proof"
+  },
+  {
+   "n": 2,
+   "source": "2022 CMIMC Computer Science Problem 2",
+   "question": "Despite choosing randomly, you are lucky enough that you traverse each hallway at least once (in both directions) every nnn moves.",
+   "choices": null,
+   "answer": null,
+   "solution": "Find the smallest positive integer n for which 315 2−n2 evenly divides 315 3−n3.",
+   "type": "proof"
+  },
+  {
+   "n": 3,
+   "source": "2018 CMIMC Algebra Problem 3",
+   "question": "Thus P (x) = 1 3(x3− 2x + 1) + 2 3(2x3− 5x2 + 4) and so P (−1) = 1 3· 2 + 2 3· (−3) = − 4 3 .",
+   "choices": null,
+   "answer": null,
+   "solution": "Michelle is at the bottom-left corner of a 6 × 6 lattice grid, at (0 , 0). The grid also contains a pair of one- time-use teleportation devices at (2 , 2) and (3 , 3); the ﬁrst time Michelle moves to one of these points she is instantly teleported to the other point and the devices disappear. If she can only move up or to the right in unit increments, in how many ways can she reach the point (5 , 5)?",
+   "type": "proof"
+  },
+  {
+   "n": 4,
+   "source": "2021 CMIMC Computer Science Problem 4",
+   "question": "Write your team ID on the upper-right corner and the problem and page number of the problem whose solution you are writing on the upper-left corner on each page you submit. Papers missing these will not be graded. Problems with more than one submission will not be graded.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 5,
+   "source": "2017 CMIMC Computer Science Problem 5",
+   "question": "Given a list A of n real numbers, the following algorithm, known as insertion sort , sorts the elements of A from least to greatest. 1: FUNCTION IS(A) 2: FORi = 0,...,n − 1: 3: j←i 4: WHILE j >0 & A[j− 1]>A [j] : 5: SW APA[j],A [j− 1] 6: j←j− 1 7: RETURN A As A ranges over all permutations of{1, 2,...,n }, let f(n) denote the expected number of comparisons (i.e., checking which of two elements is greater) that need to be made when sorting A with insertion sort. Evaluate f(13)−f(12). Proposed by Kyle Gettig Solution. Note that when i =k in the FOR loop, the ﬁrst k elements of A are sorted and the ( k + 1)th element is moved to the left until it reaches a number less than it, at which point it is inserted and the ﬁrst k + 1 elements are sorted. Thus, the number of comparisons made at i = k is equal to the number of elements with index less than k that are greater than A[k], plus an additional count for the ﬁrst such element less than A[k] (if it exists) since that determines when the WHILE loop halts. If such an element doesn’t exist, the extra comparison isn’t added and the original A[k] is at the beginning of the list. Now, let g(A) denote the number of elements of A that are less than any element preceding it. From above, summing over all k we ﬁnd f(n) = Inv(A) +n−g(A), where Inv(A) is the number of inversions in A.1 Thus, E[f(n)] = E[Inv(A)] +n− E[g(A)]. It is not hard to see via linearity of expectation that E[Inv(A)] = 1 2 (n 2 ) = n(n−1) 4 , since for any two elements of A there is a 1 2 probability that they are in increasing order or decreasing order. Now it suﬃces to determine E[g(A)], and furthermore we need only compute the probability that the kth smallest element of A is smaller than any element preceding it. For the largest element, this is possible only if it is the ﬁrst element in A. This occurs with probability 1 n. For the second largest element, it must either be the ﬁrst element, or the second element with the largest element before it. This occurs with probability 1 n + 1 n(n−1) = 1 n−1. Induction shows that the probability the kth smallest element of A is 1 k, and then by linearity of expectation we conclude E[g(A)] =∑n k=1 1 k =Hn, where Hn is the nth harmonic number. Now,f(n) = n(n−1) 4 +n−Hn, and so f(n)−f(n− 1) = n+1 2 − 1 n. When n = 13, the desired value is 97 14 .",
+   "choices": null,
+   "answer": null,
+   "solution": "[ 4] Prove that the above two algorithms are correct and always terminate. We will also introduce a way to generate random numbers. Deﬁnition 3.1. Let the function B(p) return a random number X ∼ Bernoulli(p), and let the function D(N) return a random number X∼ Discrete Uniform(N). With these two basic functions, we can simulate many complex probabilistic events. For example, suppose we want to generate a random number X according to the following distribution: value 0 1 2 Pr[X = value] 1 /4 1 /2 1 /4 One algorithm that can simulate such a distribution is: Data: none Result: a random number with the above distribution u← B(1/2) v← B(1/2) return u + v",
+   "type": "proof"
+  },
+  {
+   "n": 6,
+   "source": "2025 CMIMC Team Problem 6",
+   "question": "Also, with half angle formula, we get cos(15◦) = 1 2 p 2 + √ 3 giving the other form of 3 + √ 3 + q 2 + √",
+   "choices": null,
+   "answer": null,
+   "solution": "(6 points) ∫ 2025 −2025 ⌈ x− 1 2 ⌉ · ⌈ 1 x− 1 2 ⌉ dx",
+   "type": "proof"
+  },
+  {
+   "n": 7,
+   "source": "2022 CMIMC Geometry Problem 7",
+   "question": "In acute △ABC, letI denote the incenter and suppose that line AI intersects segmentBC at a point D. Given that AI = 3,ID = 2, and BI 2 +CI 2 = 64, compute BC 2. Proposed by Kyle Lee Answer: 272 3 Solution: Without loss of generality, suppose AB < AC.Let F be the foot of I onto BC and let E =AI∩ (BAC). Note that ∠DCE = ∠BAE = ∠CAE, so△DCE∼△DAC. If we let CD =l, we have by Fact 5 that DE =l− 2, so l l−2 = l+3 l , whence l =CD = 6 and DE = 4. Now, let M be the midpoint of BC and suppose BM =CM =x. Note that EM = √ 62−x2 and DM = √ 42−EM 2 =p 42− (62−x2) = √ x2− 20. Moreover,△IDF ∼△ EDM, so DF = √ x2−20 2 and IF = √ 62−x2 2 . We have that BI 2 +CI 2 =BF 2 +FC 2 + 2IF 2 = (x− 3 2 p x2− 20)2 + (x + 3 2 p x2− 20)2 + 62−x2 2 = 2 \u0012 x2 + 9 4(x2− 20) \u0013 + 62−x2 2 = 6x2− 72. Hence, 6x2− 72 = 64 =⇒ BC 2 = (2x)2 = 2 3 \u0000 72 + 64 \u0001 = 272 3 .",
+   "choices": null,
+   "answer": null,
+   "solution": "For polynomials P (x) = anxn +··· +a0, let f(P ) = an··· a0 be the product of the coefficients of P . The polynomials P1,P 2,P 3,Q satisfy P1(x) = ( x− a)(x− b), P2(x) = ( x− a)(x− c), P3(x) = ( x−b)(x−c), Q(x) = ( x−a)(x−b)(x−c) for some complex numbers a,b,c . Given f(Q) = 8, f(P1) +f(P2) +f(P3) = 10, and abc> 0, find the value of f(P1)f(P2)f(P3).",
+   "type": "proof"
+  },
+  {
+   "n": 8,
+   "source": "2016 CMIMC Geometry Problem 8",
+   "question": "Suppose ABCD is a convex quadrilateral satisfying AB =BC,AC =BD, ∠ABD = 80◦, and ∠CBD = 20◦. What is ∠BCD in degrees? Proposed by David Altizio A B C D X Solution. Construct a point X outside∆ABC such that∆BCD∼=∆AXC . (This can be done from the fact thatAC =BD.) Then from AB =BC we know ∠BAC = 40◦, so ∠BAX = 40◦ +20◦ = 60◦. Combining this with AX =BC =BA gives that∆ABX is equilateral. From here, note that ∠CBX = ∠CBA− 60◦ = 40◦, and since∆CBX is isosceles ∠BXC = 70◦. Thus ∠BCD = ∠AXC = ∠BXC + ∠AXB = 70◦ + 60◦ = 130◦ .",
+   "choices": null,
+   "answer": null,
+   "solution": "Given that 70∑ x=1 70∑ y=1 xy y = m 67! for some positive integer m, ﬁnd m (mod 71).",
+   "type": "proof"
+  },
+  {
+   "n": 9,
+   "source": "2023 CMIMC Algebra Problem 9",
+   "question": "Let n be a nonnegative integer less than 2023 such that 2n2 + 3n is a perfect square. What is the sum of all possible n? Proposed by Giacomo Rizzo Answer. 444 Solution. We have 2θ2 + 3θ = θ(2θ + 3). If gcd( θ, 2θ + 3) = 1, then θ and 2θ + 3 are both perfect squares. Writing x2 =θ and y2 = 2θ + 3, we see that y2− 2x2 = 3. Perfect squares are equivalent to 0 or 1 modulo 3, so y2 = 2x2 + 3 ⇒x2≡ 0 (mod 3) ⇒x2≡ 0 (mod 9) ⇒y2≡ 3 (mod 9) , but this is a contradiction. Thus, gcd( θ, 2θ + 3)̸= 1. By the Euclidean Algorithm, gcd(θ, 2θ + 3) = gcd(θ, 3), and since it doesn’t equal 1, we just need to consider when it equals 3. Substituting θ = 3n into the expression givesθ(2θ+3) = 9n(2n+1), so n(2n + 1) is a perfect square. Also, since gcd( n, 2n + 1) = gcd(n, 1) = 1, we see that n and 2n + 1 are both perfect squares. Writing x2 =n andy2 = 2n + 1, we see thaty2− 2x2 = 1. Now, this is a Pell equation with solutions of the form (3 + 2 √",
+   "choices": null,
+   "answer": null,
+   "solution": "A grid is called k-special if in each cell is written a distinct integer such that the set of integers in the grid is precisely the set of positive divisors of k. A grid is called k-awesome if it is k-special and for each positive divisor m of k, there exists an m-special grid within this k-special grid (within meaning you could draw a box in this grid to obtain the new grid). Find the sum of the 4 smallest integers k for which no k-awesome grid exists.",
+   "type": "proof"
+  },
+  {
+   "n": 10,
+   "source": "2019 CMIMC Geometry Problem 10",
+   "question": "As a result, since M is the midpoint of AN, [BAC] = 2[BMC ]− [BNC ] = 2· 12 √ 10− 1 2· 14· 7 = 24 √ 10− 49 .",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  }
+ ]
+}

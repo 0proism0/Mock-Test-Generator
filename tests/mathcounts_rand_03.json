@@ -1,0 +1,280 @@
+{
+ "id": "mathcounts_rand_03",
+ "competition": "MATHCOUNTS — Sprint",
+ "category": "Math",
+ "title": "MATHCOUNTS — Sprint — Random Mock #3 · 2026-08-17 12:25",
+ "instructions": "30 questions · 40 minutes · No calculator. Answers are integers from 000 to 999.",
+ "time_limit_min": 40,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2026 MATHCOUNTS State Sprint Problem 1",
+   "question": "Ms. Souza’s fourth grade class is going to start a garden project. The field of land the class has to work with is 75 feet by 40 feet. They plan to break the field into 2 foot by 3 foot plots, with no plots overlapping. What is the maximum number of plots of these dimensions that they will be able to create out of the field?",
+   "choices": null,
+   "answer": "500",
+   "solution": "Answer: 500plots 6.. We see that 40 is even, thus divisible by 2, and that the sum of the digits of 75 is 7 + 5 = 12, which is divisible by 3, so 75 is likewise divisible by 3, enabling us to use the entire field for plots in a very simple manner. A lign the 3 ft sides of the plots parallel to the 75 ft sides of the field and the 2 ft sides of the plots parallel to the 40 ft sides of the fieldso as to have 75 ft = 25 plots lengthwise and 40 ft= 20 plots widthwise, for a total of 25 × 20= 500plots. 3 ft 2 ft",
+   "type": "integer_answer"
+  },
+  {
+   "n": 2,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 2",
+   "question": "Stefani went to the store to buy 3 chocolates for each of her 5 classmates. While shopping, she decided instead to buy 5 chocolates for each classmate. How many additional chocolates does she need to buy compared to her initial plan?",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10chocolates 7.. 5 chocmate× 5 mate − 3 chocmate× 5 mate = (5 − 3)5 choc = (2)5 choc = 𝟏𝟏𝟎𝟎 choc.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 3,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 3",
+   "question": "What is the least perfect square whose digits are all prime?",
+   "choices": null,
+   "answer": "25",
+   "solution": "Answer: 25 8.. All digits must be 2, 3, 5, or 7. A 1-digit perfect square cannot be prime, so the number must have at least 2 digits and value in 20s or higher. There is one such perfect square in the 20s: 52 = 𝟐𝟐𝟐𝟐.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 4,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 4",
+   "question": "Triangle ABC, shown, is a right triangle with side AC y extended. What is the value of x + y?",
+   "choices": null,
+   "answer": "150",
+   "solution": "Answer: 150 degrees 35 14.. The two acute angles of a right triangle are complementary, so 𝑦𝑦 = 90° − 60° = 30°. The two adjacent angles, one measuring 60° and the other measuring 𝑥𝑥 , along and on the same side of ray AC�����⃑ are supplementary, so 𝑥𝑥 = 180° − 60° = 120°. Therefore, 𝑥𝑥 + 𝑦𝑦 = 120° + 30° = 𝟏𝟏𝟐𝟐𝟎𝟎°.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 5,
+   "source": "2026 MATHCOUNTS State Sprint Problem 5",
+   "question": "If x + y = 5 and x 2 − y 2 = 15, what is the value of x?",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4 10.. 15 = 𝑥𝑥 2 − 𝑦𝑦 2 = (𝑥𝑥 + 𝑦𝑦)(𝑥𝑥 − 𝑦𝑦) = 5(𝑥𝑥 − 𝑦𝑦), so (𝑥𝑥 − 𝑦𝑦) = 15/5 = 3. Adding 𝑥𝑥 + 𝑦𝑦 = 5 and 𝑥𝑥 − 𝑦𝑦 = 3 yields 2𝑥𝑥 = 8, so 𝑥𝑥 = 𝟒𝟒.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 6,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 6",
+   "question": "If x # y = 2x + 3y, then 4 # 1 = 2(4) + 3(1) = 11. What is 2 # 3?",
+   "choices": null,
+   "answer": null,
+   "solution": "2 # 3 = 2(2) + 3(3) = 4 + 9 =13.",
+   "type": "proof"
+  },
+  {
+   "n": 7,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 7",
+   "question": "The area of a rectangle is twice the area of a square with side length 8 cm. If one of the side lengths of the rectangle is 4 cm, what is the perimeter of the rectangle?",
+   "choices": null,
+   "answer": null,
+   "solution": "The area relationship of the two figures is (4 cm)𝑤𝑤 = 2(8 cm)2 = 128 cm2 , so 𝑤𝑤 = 128 cm24 cm= 32 cm. Therefore, the perimeter of the rectangle is 2(4 cm + 𝑤𝑤 ) = 2(4 cm + 32 cm) = 2(36 cm) = 𝟕𝟕𝟐𝟐 cm.",
+   "type": "proof"
+  },
+  {
+   "n": 8,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 8",
+   "question": "Janelle writes the positive integers less than or equal to 26 on a white board. What is the sum of the multiples of 3 that she wrote?",
+   "choices": null,
+   "answer": null,
+   "solution": "The sum of the relevant multiples of 3 is the arithmetic series 3 + 6 + 9 + 12 + 15 + 18 + 21 + 24, which has 8 terms whose average is the average of the first and last terms, thus (3+24)2 = 272. Therefore, the desired sum is 8×272 = 4 × 27 = 𝟏𝟏𝟎𝟎𝟏𝟏.",
+   "type": "proof"
+  },
+  {
+   "n": 9,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 9",
+   "question": "A right triangle has side lengths 2 , 6 and 3 inches. What is its area? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "6",
+   "solution": "Answer: 6 in2. Given the three side lengths of a right triangle, the area is ½ of the product of the two shortest sides. Now, 10 = 20 < 21 = 7< 29 , so the area is 1 �10 in� �7 in� = �5� �7� in2 = 𝟑𝟑𝟐𝟐 in2 . 3 6 6 2 6 2 3 2 3 2 𝟔𝟔",
+   "type": "integer_answer"
+  },
+  {
+   "n": 10,
+   "source": "2026 MATHCOUNTS State Sprint Problem 10",
+   "question": "How many two-digit positive integers are 36 more than the sum of their digits?",
+   "choices": null,
+   "answer": null,
+   "solution": "Let 𝑡𝑡 be the tens digit of a positive 2-digit integer (so 𝑡𝑡 is an integer satisfying 1 ≤ 𝑟𝑟 ≤ 9) and 𝑢𝑢 be the ones [units] digit of that same integer (so 𝑢𝑢 is an integer satisfying 0 ≤ 𝑢𝑢 ≤ 9) . Then the integer under consideration is 10 𝑟𝑟 + 𝑢𝑢, which is 36 greater than 𝑟𝑟 + 𝑢𝑢. Thus, 10 𝑟𝑟 + 𝑢𝑢 = 𝑟𝑟 + 𝑢𝑢 + 36, so 9𝑟𝑟 = 36 and 𝑟𝑟 = 4, with no additional constraints on 𝑢𝑢 . This means that any integer in the closed interval 40 .. 49, but no other value, works, yielding 10 qualifying values.",
+   "type": "proof"
+  },
+  {
+   "n": 11,
+   "source": "2026 MATHCOUNTS State Sprint Problem 11",
+   "question": "What is the remainder when 2323 is divided by 5?",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. The remainder upon dividing a nonnegative integer by 5 [just as with dividing by 2 or 10] depends only on the ones digit of the given integer. The ones digit of a power with positive integer exponent depends only on the exponent and the ones digit of the base. Thus, the ones digit of 2323 is the same as the ones digit of 323 . For any digit 𝑑𝑑 and any positive exponent 𝑛𝑛, the ones digit of 𝑑𝑑 𝑛𝑛 is the same as the ones digit of 𝑑𝑑 𝑛𝑛+4 . This means that we can divide 𝑛𝑛 by 4, throwing away the quotient and keeping only the remainder 𝑟𝑟 , and if 𝑟𝑟 = 0 then change 𝑟𝑟 to 4. Then the ones digit of 𝑑𝑑 𝑛𝑛 is the same as the ones digit of 𝑑𝑑 𝑟𝑟 . [NOTE: The cycle of 4 works for all digits, but the actual period is 1 when 𝑑𝑑 is 0, 1, 5, or 6, is 2 when 𝑑𝑑 is 4 or 9, and is 4 when 𝑑𝑑 is 2, 3, 7, or 8. Some students prefer to memorize and keep straight these details of special cases in the heat of competition, whereas other students prefer to keep the rule simple by always using a cycle of 4 and potentially doing a small amount of extra work.] For 3 23 , dividing 23 by 4 leaves a remainder of 3. Finally, 33 = 27, whose ones digit is 7, which upon division by 5 leaves a remainder of 2.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 12,
+   "source": "2026 MATHCOUNTS State Sprint Problem 12",
+   "question": "If x + x + x + x = 30, what is the value of x? 2 22 23",
+   "choices": null,
+   "answer": null,
+   "solution": "30 = �1 + 12+ 14+ 18� 𝑥𝑥 = 8+4+2+18𝑥𝑥 = 158𝑥𝑥 , which means 𝑥𝑥 = 8×3015= 8 × 2 = 𝟏𝟏𝟏𝟏.",
+   "type": "proof"
+  },
+  {
+   "n": 13,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 13",
+   "question": "pays $250 dollars a week no matter what. Bertha’s Burritos pays $20 an hour. Carl’s Cantaloupes pays $15 an hour for the first 10 hours and $25 an hour beyond that. Charlene’s desired number of hours per week would pay her the same at Al’s and at Carl’s. How much would she make per week if she took the job at Bertha’s?",
+   "choices": null,
+   "answer": null,
+   "solution": "Pay at Al’s is a fixed $250; to earn the same amount at Carl’s requires 10 h to reach $150 and then $100 = 4 h to get the remaining $100 at $25/h. Therefore, Charlene wishes to work 14 h each week, $25/h resulting in pay of $20h × 14 h = $𝟐𝟐𝟏𝟏𝟎𝟎 𝑜𝑜𝑟𝑟 $𝟐𝟐𝟏𝟏𝟎𝟎. 𝟎𝟎𝟎𝟎 at Bertha’s.",
+   "type": "proof"
+  },
+  {
+   "n": 14,
+   "source": "2026 MATHCOUNTS State Sprint Problem 14",
+   "question": "For how many positive integers n is there no positive integer strictly between one-half of n and three-fifths of n?",
+   "choices": null,
+   "answer": "8",
+   "solution": "Answer: 8integers. There are two categories of solution: [1] more analysis effort, less plug and grind number crunching; [2] no analysis effort, just plug and grind number crunching. With 10 intervals to assess, the overall effort is similar for the two approaches. 2026 STATE COMPETITION Solutions Approach [1]: The interval considered is 0.5 𝑛𝑛 < 𝑖𝑖 < 0.6𝑛𝑛. The easiest case is even 𝑛𝑛 , meaning there is an integer 𝑘𝑘 = 0.5𝑛𝑛 such that 𝑛𝑛 = 2𝑘𝑘 . Then 𝑘𝑘 < 𝑖𝑖 < 𝑘𝑘 + 0.2𝑘𝑘. Because of the strict inequality and because consecutive integers are separated by 1, we need, in order for such an 𝑖𝑖 to exist, 0.2𝑘𝑘 > 1, so 𝑘𝑘 > 5, so 𝑛𝑛 = 2𝑘𝑘 > 10. However, we want the complementary case that 𝑛𝑛 is positive, even, and 𝑛𝑛 ≤ 10, so 𝑛𝑛 ∈ {2; 4; 6; 8; 10}. For odd integers 𝑛𝑛 , there is an integer 𝑘𝑘 = 0.5(𝑛𝑛 − 1) such that 𝑛𝑛 = 2𝑘𝑘 + 1 and the interval is 𝑘𝑘 + 0.5 < 𝑖𝑖 < 𝑘𝑘 + (0.2𝑘𝑘 + 0.6). Because of the strict inequality and because consecutive integers are separated by 1, we need, in order for such an 𝑖𝑖 to exist, 0.2 𝑘𝑘 + 0.6 > 1, so 𝑘𝑘 > 2, so 𝑛𝑛 = 2𝑘𝑘 + 1 > 5. However, we want the complementary case that 𝑛𝑛 is positive, odd, and 𝑛𝑛 ≤ 5, so 𝑛𝑛 ∈ {1; 3; 5}. Putting the two cases together, we have 𝑛𝑛 ∈ {1; 2; 3; 4; 5; 6; 8; 10}, thus 8 qualifying values. Approach [2]: Integers are spaced 1 apart, so 35 𝑛𝑛 − 12𝑛𝑛 = 110𝑛𝑛 > 1 implies that for 𝑛𝑛 > 10 there will be at least one integer in that interval. Let’s rewrite the bounds as 0.5 𝑛𝑛 < 𝑖𝑖 < 0.6𝑛𝑛 and look for positive integers at most 10 for 𝑛𝑛 such that no such integer 𝑖𝑖 exists: 𝑛𝑛 = 1: 0.5 < 𝑖𝑖 < 0.6 ✔; 𝑛𝑛 = 2: 1.0 < 𝑖𝑖 < 1.2 ✔; 𝑛𝑛 = 3: 1.5 < 𝑖𝑖 < 1.8 ✔; 𝑛𝑛 = 4: 2.0 < 𝑖𝑖 < 2.4 ✔; 𝑛𝑛 = 5: 2.5 < 𝑖𝑖 < 3.0 ✔; 𝑛𝑛 = 6: 3.0 < 𝑖𝑖 < 3.6 ✔; 𝑛𝑛 = 7: 3.5 < 𝑖𝑖 < 4.2 ❌; 𝑛𝑛 = 8: 4.0 < 𝑖𝑖 < 4.8 ✔; 𝑛𝑛 = 9: 4.5 < 𝑖𝑖 < 5.4 ❌; 𝑛𝑛 = 10: 5.0 < 𝑖𝑖 < 6.0 ✔. There are 8 qualifying cases.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 15,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 15",
+   "question": "Carson is pushing a broken shopping cart in a series of straight-line segments. After every meter he pushes it, a wheel locks, causing an instantaneous 15-degree turn to the right before it continues forward. Eventually, he finds himself back where he started for the first time. How far, in meters, has he pushed the cart? 1 m 1 m 1 m 1 m",
+   "choices": null,
+   "answer": null,
+   "solution": "To go around one full cycle requires accumulating 360° of turns. At 15° per turn, one cycle requires 360° = 24 turns. A segment for each turn having length 1 m requires pushing 𝟐𝟐𝟒𝟒 m. 15°/turn",
+   "type": "proof"
+  },
+  {
+   "n": 16,
+   "source": "2026 MATHCOUNTS State Sprint Problem 16",
+   "question": "An isosceles triangle has two side lengths of 20 and 26. What is the sum of the squares of the possible lengths of the altitude to the side of the triangle whose length is different from those of the other two sides?",
+   "choices": null,
+   "answer": "807",
+   "solution": "Answer: 807 21.. For a triangle to be isosceles, at least two of the three sides must be congruent (same length). We are given two distinct lengths, 20 and 26, so the third length must be one of those two values. Thus, there are two qualifying triangles: 20-20-26 and 26-26-20 [hyphen-separated numbers representing side lengths]. The desired squares of the altitudes are the difference of the square of the first number minus the square of half the third number, thus 20 2 − 132 = 400 − 169 = 231 and 262 − 102 = 676 − 100 = 576 [with these computations being based on the desired altitude sitting on the axis of symmetry of the respective triangle so that it divides that triangle into two congruent right triangles, for which the Pythagorean theorem applies]. The sum of these two values is 231 + 576 = 807. 2026 STATE COMPETITION Solutions",
+   "type": "integer_answer"
+  },
+  {
+   "n": 17,
+   "source": "2026 MATHCOUNTS State Sprint Problem 17",
+   "question": "Fry and Amy are playing ping-pong. They take turns serving, starting with Fry. When Fry serves, there is a 50% chance he will score a point and a 50% chance Amy will score a point. When Amy serves, there is a 70% chance she will score a point and a 30% chance Fry will score a point. They keep playing until one of them scores 4 points. What is the probability Fry serves at most 3 times? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "400",
+   "solution": "Answer: 400 27.. Fry does the odd-numbered serves; Amy do es the even-numbered serves. Thus, serve #7 would be Fry’s fourth serve, so, to meet the criterion on number of serves by Fry, a game must be complete within 6 serves. There is only one way to violate that—at the end of 6 serves, the score must be tied 3- 3, and the game will finish 4-3 on the serve #7. The easiest solution involves calculating the probability of getting through 6 rounds with a 3-3 tie (the complement event) and subtracting that probability from 1. That situation is complicated by the probability of a particular player winning a point depending on who served. The odds are different for Fry getting 3 points out of 6 for the cases: [1] Fry wins the point on all 3 of his serves but none of Amy’s serves; [2] Fry wins the point on 2 of his serves and 1 of Amy’s serves; [3] Fry wins the point on 1 of his serves and 2 of Amy’s serves; [4] Fry wins the point on all 3 of Amy’s serves but none of his serves. The number of arrangements of Fry winning the point on 𝑓𝑓 of his 3 serves is ₃C𝑓𝑓 and of Fry winning on 𝑎𝑎 of Amy’s 3 serves is ₃C𝑎𝑎, so combined is ₃ C𝑓𝑓 ⋅ ₃C𝑎𝑎—and, in our scenario, 𝑓𝑓 + 𝑎𝑎 = 3; the probability of any one such arrangement is 0. 53 × 0. 3𝑎𝑎 × 0. 73−𝑎𝑎 , with the 0.5 being for each of Fry’s 3 serves having probability on 0.5 regardless of outcome, the 0.3 for the probability for each of Amy’s 𝑎𝑎 serves that Fry won the point, and the 0.7 for the probability of each of Amy’s 3 − 𝑎𝑎 serves that Amy won the point. Thus, the probabilities are: [1] ₃C₃ × ₃C₀ × 0. 53 × 0. 33 × 0. 70 = 1 × 1 × 18 × 271000 × 1 = 278000 ; [2] ₃C₂ × ₃C₁ × 0. 53 × 0. 32 × 0. 71 = 3 × 3 × 18 × 9100 × 710 = 5678000 ; [3] ₃C₁ × ₃C₂ × 0. 53 × 0. 31 × 0. 72 = 3 × 3 × 18 × 310 × 49100 = 13238000 ; [4] ₃C₀ × ₃C₃ × 0. 53 × 0. 30 × 0. 73 = 1 × 1 × 18 × 1 × 3431000 = 3438000 . The sum of the probabilities for these 4 disjoint cases is 27 + 567 + 1323 + 3438000 = 22608000 = 113400 . However, this is the probability of the complement of our desired event, so we need to subtract this value from 1, thus 400−113400 = 𝟐𝟐𝟐𝟐𝟐𝟐𝟒𝟒𝟒𝟒𝟒𝟒 .",
+   "type": "integer_answer"
+  },
+  {
+   "n": 18,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 18",
+   "question": "How many three-digit positive integers have three digits whose product is 18?",
+   "choices": null,
+   "answer": "15",
+   "solution": "Answer: 15integers 28.. For a product of 3 digits to be 18, the digits must be 1,2,9 with 3! = 6 permutations, 1,3,6 with 6 permutations, and 2,3,3 with 3!1! 2! = 3 permutations. That yields 6 + 6 + 3 = 𝟏𝟏𝟐𝟐 qualifying integers.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 19,
+   "source": "2026 MATHCOUNTS State Sprint Problem 19",
+   "question": "Regular hexagon ABCDEF has side length 2. Let P, Q and R be the midpoints of segments AB, CD and EF, respectively. What percent of the area of ABCDEF is the area of PQR? Express your answer to the nearest whole percent.",
+   "choices": null,
+   "answer": "38",
+   "solution": "Answer: 38%. This problem can be solved using proportions with no need to determine any E D areas. Given DE = 2 in regular hexagon ABCDEF implies FC = 2 ED = 4. Q and R R Q being midpoints of EF���� and CD���� means that QR���� is the median of trapezoid DEFC, so F C QR is the mean of DE = 2 and FC = 4, thus QR = 3. Thus, triangle PQR is an equilateral triangle with side length 3. Now, hexagon ABCDEF can be subdivided A P B into six congruent equilateral triangles of side length 2, which is equivalent in area to one equilateral triangle of side length 2√6. Thus, the ratio of the side length of triangle PQR to the side length of an equilateral triangle equivalent in area of the hexagon is 32√6 . Squaring this 2 = 9 ratio yields the ratio of the area of PQR to the area of ABCDEF, thus � 32√6� 24 = 38= 37.5 %, which rounds to 38 %. [When two candidate rounded values are equally close— here 37 and 38— MATHCOUNTS rounds away from 0, unless explicitly specified otherwise.] 2026 STATE COMPETITION Solutions",
+   "type": "integer_answer"
+  },
+  {
+   "n": 20,
+   "source": "2026 MATHCOUNTS State Sprint Problem 20",
+   "question": "How many distinct arrangements of the letters in the word PROBABILITY rangements contain the sub-arrangement PRO, whose letters must appear consecutively and in that order anywhere in the arrangement?",
+   "choices": null,
+   "answer": null,
+   "solution": "Answer: 90,720ar-. The tokens (with count) being considered for rearrangement are A (1), B (2), I (2), L (1), PRO (1), T (1), Y (1)—total of 1 + 2 + 2 + 1 + 1 + 1 + 1 = 9. Therefore, the number of distinct arrangements of these tokens is 9!1! ⋅ 2! ⋅ 2! ⋅ 1! ⋅ 1! ⋅ 1! ⋅ 1! = 362 8804 = 90 720.",
+   "type": "proof"
+  },
+  {
+   "n": 21,
+   "source": "2026 MATHCOUNTS State Sprint Problem 21",
+   "question": "Six students are seated in a single row of seats with an aisle at each end. The students leave their seats one at a time in random order. What is the probability that each student is able to move to one of the aisles without having to cross over another seated student? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": null,
+   "solution": "When there are 𝑛𝑛 ≥ 2 students in the row, the end 2 out of total 𝑛𝑛 can so leave, and when 𝑛𝑛 = 1, that 1 remaining student can so leave. Therefore, 2 × 2× 2× 2×2×1 = 1× 2× 1 = 𝟐𝟐 . 6 5 4 3 2 1 3 5 3 𝟒𝟒𝟒𝟒",
+   "type": "proof"
+  },
+  {
+   "n": 22,
+   "source": "2026 MATHCOUNTS State Sprint Problem 22",
+   "question": "The four-digit integer 2018 is composed of four distinct digits whose sum is 11. Including 2018, how many positive four-digit integers are composed of four distinct digits whose sum is 11?",
+   "choices": null,
+   "answer": "11",
+   "solution": "Answer: 11 4integers. There are two cases: [1] one digit is 0, which cannot be the thousands digit due to requiring 4- digit integers; [2] none of the digits is 0, so no restriction on digit order. When we have chosen 4 distinct digits that sum to 11, in case [1] the 0 has 3 options for placement and the remaining 3 digits have 3! arrangements for the remaining 3 slots for a total of 3 × 3! = 18 arrangements of the 4 digits, and in case [2] all 4 digits can go in any of the 4 slots for a total of 4! = 24 arrangements of the 4 digits. The required sum of 11 is achieved for case [1] with the 18 permutations of each of (in increasing order) 1028, 1037, 1046, 2036, 2045 for 5 × 18 = 90 distinct values. For case [2] the only possibility is the 24 permutations of 1235. Therefore, there are 90 + 24 = 114 qualifying integers.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 23,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 23",
+   "question": "After placing a delivery order for pizza, five friends realize they’ve run out of soda. They decide that some will go buy more soda while the rest wait for the pizza, with at least one person assigned to each task. In how many ways can the five friends divide themselves between the two tasks?",
+   "choices": null,
+   "answer": "30",
+   "solution": "Answer: 30ways. There are C5 𝑘𝑘 arrangements of 5 people with 𝑘𝑘 staying and 5 − 𝑘𝑘 going, and we want to sum over 1 ≤ 𝑘𝑘 ≤ 4; this is equal to the even easier 25 − C5 0 − C5 5 = 32 − 1 − 1 = 𝟑𝟑𝟎𝟎.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 24,
+   "source": "2026 MATHCOUNTS State Sprint Problem 24",
+   "question": "In a certain sequence, a = 20 and a = ()an /g16 /g1421 for any positive integer n. 0 n 1 What is the value of a500?",
+   "choices": null,
+   "answer": "30",
+   "solution": "Answer: 30. The pattern is 𝑎𝑎 𝑛𝑛 = √400 + 𝑛𝑛 because 𝑎𝑎𝑛𝑛+1 = �𝑎𝑎𝑛𝑛2 + 1= √400 + 𝑛𝑛 + 1, so 𝑎𝑎 500 = √900= 𝟑𝟑𝟒𝟒.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 25,
+   "source": "2026 MATHCOUNTS State Sprint Problem 25",
+   "question": "Andrea has a deck of 50 cards consisting of ten cards, numbered 1 through 10, nations in each of five distinct colors. She randomly draws five cards from this deck and, without looking, shows all five cards to Oscar. Oscar then tells Andrea that exactly three of the five cards are blue, and exactly two of the five cards show the number 5. How many distinct unordered combinations of five cards drawn from the deck, consistent with Oscar ’s statements, do not contain the blue 5?",
+   "choices": null,
+   "answer": "504",
+   "solution": "Answer: 504combi-. There are 5 cards, 3 of which are blue, 2 of which are “5”s, with no overlap of the two categories [because none of the cards is a blue “5”], so all 5 cards are accounted for. There are 9 blue cards other than the blue “5”, of which Andrea has 3, thus ₉C₃ = 9 × 8 × 7/(3 × 2 × 1) = 3 × 4 × 7 = 84 combinations. Andrea has 2 of the 4 non- blue “5” cards, thus ₄C₂ = 4 × 3/(2 × 1) = 6 combinations. The two categories are independent, so altogether there are 84 × 6 = 504 combinations. 2026 STATE COMPETITION Solutions",
+   "type": "integer_answer"
+  },
+  {
+   "n": 26,
+   "source": "2026 MATHCOUNTS State Sprint Problem 26",
+   "question": "Square ABCD with side length 4 inches is inscribed in a circle. Let M and N be the midpoints of minor arcs AB and CD, respectively. What is the value of AM × AN? Express your answer in simplest radical form. D C N",
+   "choices": null,
+   "answer": "82",
+   "solution": "Answer: 82in2. AB = 4 in, X is the midpoint of AB���� so AX = 2 in, AC = 4√2 in is a diameter of the circle, AX���� ⊥ MN�����. 2 M Thus, 𝐴𝐴𝐴𝐴 = √AX 2 + XM 2= �(2 in)2 + ��2√2− 2� in�= �4 + �8 + 4 − 8√2� in A B = �16 − 8√2 in. X Similarly, AN = √AX 2 + XN 2= �(2 in)2 + ��2√2+ 2� in�2= �16 + 8√2 in. Y Thus, AM ⋅ AN = ��16 − 8√2��16 + 8√2� in2 = �162 − �8√2�2 in2 = √128 in2 D C N = 𝟐𝟐√𝟐𝟐 in2 .",
+   "type": "integer_answer"
+  },
+  {
+   "n": 27,
+   "source": "2026 MATHCOUNTS State Sprint Problem 27",
+   "question": "If x is a positive real number satisfying x x = 3, what is x ?",
+   "choices": null,
+   "answer": null,
+   "solution": "𝑥𝑥 𝑥𝑥 𝑥𝑥+1 = 𝑥𝑥 (𝑥𝑥 𝑥𝑥 )𝑥𝑥 = 𝑥𝑥 3𝑥𝑥 = (𝑥𝑥 𝑥𝑥 )3 = 33 = 𝟐𝟐𝟐𝟐.",
+   "type": "proof"
+  },
+  {
+   "n": 28,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 28",
+   "question": "In the drawing below, equilateral triangles are erected on the outside of a square, with shared edges of the square and each triangle coinciding exactly. The total area of the shaded region shown is 100 3 units2. What is the total unshaded area inside ABCD? AB",
+   "choices": null,
+   "answer": null,
+   "solution": "Let 𝑆𝑆 be the area of the shaded region, equal to 100√3, and 𝑈𝑈 be the area of the unshaded region within square ABCD. Let 𝐿𝐿 be the length of a side of square ABCD and 𝑙𝑙 be the length of a side of the inner square and of the shaded triangles. 𝑈𝑈 = 𝐿𝐿2 − 𝑆𝑆. Because the four shaded triangles are congruent and equilateral, each shaded triangle has area expressible as 𝑆𝑆4 and √34 𝑙𝑙2 , so 100√3 = 𝑆𝑆 = √3𝑙𝑙2 , so 𝑙𝑙2 = 100 and 𝑙𝑙 = 10. Now, 𝐿𝐿2 = 12(AC)2 , where AC is twice the altitude of a shaded triangle plus 𝑙𝑙, thus, AC = 2 × 1√3𝑙𝑙 + 𝑙𝑙 = �√3+ 1�𝑙𝑙 = 10�√3+ 1�, so 𝐿𝐿2 = 1�10�√3+ 1��2 = 2 = 50�4 + 2√32 2 50�√3 + 1� � = 200 + 100√3. Thus, 𝑈𝑈 = 𝐿𝐿2 − 𝑆𝑆 = �200 + 100√3� − 100√3= 𝟐𝟐𝟎𝟎𝟎𝟎.",
+   "type": "proof"
+  },
+  {
+   "n": 29,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 29",
+   "question": "digit d in a positive integer is dominant if at least half of the digits in the integer are the digit d. How many positive integers less than or equal to 2026 have at least one dominant digit?",
+   "choices": null,
+   "answer": "867",
+   "solution": "Answer: 867integers. Consider four categories of integers in the span 1 .. 2026: 1. 1 .. 99: Any one digit in any of these values corresponds to at least half of the digits in the value, so is dominant. All 99 such values qualify as having a dominant digit. 2. 100 .. 999: If any two of the three digits in a value match, the value qualifies, but counting these involves multiple subcategories. The non-qualifying values are equivalent to those values that have all digits being different—no matches —which are very easy to count: There are 9 option s (1 .. 9, as 0 does not work for a 3-digit number) for the 100s digit, 9 options left (bringing in 0 but dropping the 100s digit) for the 10s digit, and 8 options left for the 1s digit. Thus, 9 × 9 × 8 = 648 of the 999 − 99 = 900 candidates fail to qualify, so 900 − 648 = 252 qualify. 3. 1000 .. 1999: Like category 2, having any two digits match makes that digit value dominant, so we will again count all of the values in the span that that have all digits being different. The 1000s digit has only the 1 option (1), so there are 9 options left (all other than 1) for the 100s digit, 8 options left for the 10s digit, and 7 options left for the 1s digit. Thus, 1 × 9 × 8 × 7 = 504 of the 1999 − 999 = 1000 possibilities fail to qualify, leaving 1000 − 504 = 496 to qualify. 4. 2000 .. 2026: At least half of the digits in each of 2000 .. 2010 are 0, making 0 the dominant digit and qualifying these 11 values. Then 2011 and 2012 have half 1s and half 2s, respectively, for 2 more qualifying values. At least half of the digits in each of 2020 .. 2026 are 2, making 2 the dominant digit and qualifying these 7 values, so 11 + 2 + 7 = 20 values in this category qualify. In total, there are 99 + 252 + 496 + 20 =𝟏𝟏𝟔𝟔𝟕𝟕 qualifying values. 2026 CHAPTER COMPETITION Solutions",
+   "type": "integer_answer"
+  },
+  {
+   "n": 30,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 30",
+   "question": "If the real number x satisfies the equation xx22/g14/g14xx/g16/g322 , what is the value of 8x? Express your answer in simplest radical form.",
+   "choices": null,
+   "answer": "16",
+   "solution": "Answer: 16+5 or. Square both sides of �𝑥𝑥 2 + √𝑥𝑥 + �𝑥𝑥 2 − √𝑥𝑥 = 2: 𝑥𝑥 2 + √𝑥𝑥+ 𝑥𝑥 2 − √𝑥𝑥+ 2√𝑥𝑥 4 − 𝑥𝑥= 4, which simplifies to 2𝑥𝑥 2 + 2√𝑥𝑥 4 − 𝑥𝑥= 4. Now divide both sides by 2 and shift the resulting 𝑥𝑥 2 term to the right side: √𝑥𝑥 4 − 𝑥𝑥 = 2 − 𝑥𝑥 2 . Square both sides again: 𝑥𝑥 4 − 𝑥𝑥 = 4 − 4𝑥𝑥 2 + 𝑥𝑥 4 . Shift everything to the left side and cancel the quartic terms, leaving the quadratic equation 4𝑥𝑥 2 − 𝑥𝑥 − 4 = 0, which can be solved using the quadratic formula: 𝑥𝑥 = −(−1)±�(−1)2−4(4)(−4)2(4) = 1±√658 . Having squared both sides twice provides opportunity for extraneous roots. The form of the potential answers as the sum of a rational part and an irrational part makes for a challenge to verify versus disqualify the candidates as valid roots by substituting the candidates into the given equation with a pair of nested square roots in a Sprint Round with no calculator support. However, we can readily assess the qualitative behavior of the left side of the given equation adequately to accept one candidate root and reject the other. The two occurrences of √𝑥𝑥 in the given equation forces 𝑥𝑥 ≥ 0. Because √65 > 8 > 1, we have 1−√658< 0, thus disqualifying that candidate. We see also that 1+√658> 1. If we substitute 1 for 𝑥𝑥 on the left side of the equation, we get √1 + 1 + √1 − 1= √2 + 0 = √2, which is less than the 2 on the right side. We can also see that as we increase 𝑥𝑥 above 1, the two main square roots on the left side, and thus their sum, keep increasing arbitrarily large, and thus, must pass through 2. Thus, there must be a root, and the only remaining candidate is 1+√658 , so 𝑥𝑥 = 1+√658 is the one and only solution. Therefore, 8𝑥𝑥 = 𝟏𝟏 + √𝟔𝟔𝟐𝟐, which may be expressed instead as √𝟔𝟔𝟐𝟐 + 𝟏𝟏— either answer is acceptable.",
+   "type": "integer_answer"
+  }
+ ]
+}

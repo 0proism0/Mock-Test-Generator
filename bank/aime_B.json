@@ -1,0 +1,126 @@
+{
+  "competition": "AIME",
+  "set": "B",
+  "variants": [
+    {
+      "position": 1,
+      "source": "2012 AIME II Problem 1",
+      "question": "Find the number of ordered pairs of positive integer solutions $(m, n)$ to the equation $24m + 18n = 2022$.",
+      "choices": null,
+      "answer": "028",
+      "solution": "Dividing both sides by $6$ gives $4m + 3n = 337$. Reducing modulo $3$ gives $m \\equiv 337 \\equiv 1 \\pmod{3}$, so $m = 1, 4, 7, \\dots$. Since $n = \\frac{337 - 4m}{3}$ must be positive, we need $4m \\le 334$, i.e. $m \\le 83$; the largest admissible value is $m = 82$. The number of values is $\\frac{82 - 1}{3} + 1 = 28$."
+    },
+    {
+      "position": 2,
+      "source": "2024 AIME I Problem 2",
+      "question": "There exist real numbers $x$ and $y$, both greater than 1, such that $\\log_x\\left(y^x\\right)=\\log_y\\left(x^{9y}\\right)=12$. Find $xy$.",
+      "choices": null,
+      "answer": "016",
+      "solution": "Using $\\log_b(a^c) = c\\log_b a$, the equations become $x\\log_x y = 12$ and $9y\\log_y x = 12$. Multiplying them gives $$9xy\\,(\\log_x y)(\\log_y x) = 144.$$ Since $(\\log_x y)(\\log_y x) = 1$, we get $9xy = 144$, so $xy = 16$."
+    },
+    {
+      "position": 3,
+      "source": "2014 AIME I Problem 3",
+      "question": "Find the number of rational numbers $r$, $0<r<1$, such that when $r$ is written as a fraction in lowest terms, the numerator and the denominator have a sum of 2024.",
+      "choices": null,
+      "answer": "440",
+      "solution": "Write $r = \\frac{k}{2024-k}$. This is in lowest terms exactly when $\\gcd(k, 2024) = 1$, and $0 < r < 1$ exactly when $1 \\le k \\le 1011$. Since $2024 = 2^3 \\cdot 11 \\cdot 23$, $$\\varphi(2024) = 2024\\left(1-\\tfrac12\\right)\\left(1-\\tfrac1{11}\\right)\\left(1-\\tfrac1{23}\\right) = 1012 \\cdot \\tfrac{10}{11} \\cdot \\tfrac{22}{23} = 880.$$ The $880$ integers in $\\{1, \\dots, 2023\\}$ coprime to $2024$ pair up as $k \\leftrightarrow 2024 - k$, so exactly half lie below $1012$. The answer is $\\frac{880}{2} = 440$."
+    },
+    {
+      "position": 4,
+      "source": "2021 AIME I Problem 4",
+      "question": "Find the number of ways $60$ identical coins can be separated into three nonempty piles so that there are fewer coins in the first pile than in the second pile and fewer coins in the second pile than in the third pile.",
+      "choices": null,
+      "answer": "271",
+      "solution": "Let the pile sizes be $a < b < c$ with $a+b+c = 60$. Write $a = p$, $b = p+q$, $c = p+q+r$ with $p, q, r \\ge 1$; then $3p + 2q + r = 60$. For each $p, q \\ge 1$ with $3p + 2q \\le 59$ there is exactly one valid $r$, so the count is $$\\sum_{p=1}^{19} \\left\\lfloor \\frac{59 - 3p}{2} \\right\\rfloor = 28+26+25+23+22+20+19+17+16+14+13+11+10+8+7+5+4+2+1 = 271.$$"
+    },
+    {
+      "position": 5,
+      "source": "2020 AIME I Problem 5",
+      "question": "Seven cards numbered $1$ through $7$ are to be lined up in a row. Find the number of arrangements of these seven cards where one of the cards can be removed leaving the remaining six cards in either ascending or descending order.",
+      "choices": null,
+      "answer": "074",
+      "solution": "Count arrangements one deletion away from ascending. Each is obtained from $1234567$ by removing one card ($7$ choices) and reinserting it in any of $7$ positions: $49$ operations. The identity arrangement arises from all $7$ choices of the moved card (overcount $6$), and each single adjacent transposition arises twice \u2014 moving the left card right or the right card left (overcount $6$). Hence $49 - 6 - 6 = 37$ ascending-type arrangements. By symmetry $37$ are descending-type. No arrangement of $7$ cards can be one deletion from both: an increasing subsequence of length $6$ and a decreasing subsequence of length $6$ would share at least $6+6-7 = 5$ cards, impossible since an increasing and a decreasing sequence share at most one card. Total: $37 + 37 = 74$."
+    },
+    {
+      "position": 6,
+      "source": "2011 AIME II Problem 6",
+      "question": "Define an ordered quadruple of integers $(a, b, c, d)$ as interesting if $1 \\le a<b<c<d \\le 12$, and $a+d>b+c$. How many interesting ordered quadruples are there?",
+      "choices": null,
+      "answer": "200",
+      "solution": "There are $\\binom{12}{4} = 495$ quadruples with $a<b<c<d$. The involution $(a,b,c,d) \\mapsto (13-d, 13-c, 13-b, 13-a)$ swaps the conditions $a+d > b+c$ and $a+d < b+c$, so these two cases are equally numerous. For $a+d = b+c$, set $p = b-a = d-c \\ge 1$ and $q = c-b \\ge 1$; then $d = a + 2p + q \\le 12$. The count is $\\sum_{p,q \\ge 1} \\max(0, 12-2p-q) = (9+8+\\cdots+1) + (7+6+\\cdots+1) + (5+\\cdots+1) + (3+2+1) + 1 = 45+28+15+6+1 = 95$. Therefore the answer is $\\frac{495-95}{2} = 200$."
+    },
+    {
+      "position": 7,
+      "source": "2023 AIME I Problem 7",
+      "question": "Call a positive integer $n$ ultra-distinct if the remainders when $n$ is divided by $3, 4, 5,$ and $6$ are distinct. Find the number of ultra-distinct positive integers less than $1000$.",
+      "choices": null,
+      "answer": "199",
+      "solution": "The four remainders depend only on $n \\bmod 60$ (since $\\mathrm{lcm}(3,4,5,6) = 60$). Checking $n = 1, \\dots, 60$, the good residues are $$5, 9, 10, 11, 28, 29, 35, 52, 53, 57, 58, 59,$$ twelve in all. (For example, $n \\equiv 5$: remainders $2, 1, 0, 5$ are distinct.) The range $1$ to $960$ contains $16$ complete blocks of $60$, contributing $16 \\cdot 12 = 192$. For $961$ through $999$ (residues $1$ through $39$), the good values are $965, 969, 970, 971, 988, 989, 995$: seven more. Total: $192 + 7 = 199$."
+    },
+    {
+      "position": 8,
+      "source": "2017 AIME II Problem 8",
+      "question": "Find the number of positive integers $n$ less than $1000$ such that $$1+n+\\frac{n^2}{2!}+\\frac{n^3}{3!}+\\frac{n^4}{4!}$$ is an integer.",
+      "choices": null,
+      "answer": "333",
+      "solution": "The expression is an integer exactly when $24 \\mid n^4 + 4n^3 + 12n^2 + 24n + 24$, i.e. $24 \\mid n^2(n^2 + 4n + 12)$. If $n$ is odd, both factors are odd, so $n$ must be even. Write $n = 2m$: then $n^2(n^2+4n+12) = 16m^2(m^2+2m+3)$, which already supplies the factor $8$; we still need $3 \\mid m^2(m^2+2m+3)$, i.e. $3 \\mid m^3(m+2)$. Checking residues, this fails only for $m \\equiv 2 \\pmod 3$. So the condition is: $n$ even and $n/2 \\not\\equiv 2 \\pmod 3$, equivalently $n$ even and $n \\not\\equiv 4 \\pmod 6$. Among $1$ to $999$ there are $499$ even integers, and those $\\equiv 4 \\pmod 6$ are $4, 10, \\dots, 994$, numbering $166$. Answer: $499 - 166 = 333$."
+    },
+    {
+      "position": 9,
+      "source": "2017 AIME I Problem 9",
+      "question": "Let $a_{9} = 9$, and for each positive integer $n > 9$ let $a_n = 100a_{n - 1} + n$. Find the least positive $n > 9$ such that $a_n$ is a multiple of $99$.",
+      "choices": null,
+      "answer": "035",
+      "solution": "Since $100 \\equiv 1 \\pmod{99}$, the recurrence gives $a_n \\equiv a_{n-1} + n \\pmod{99}$, so $$a_n \\equiv 9 + (10 + 11 + \\cdots + n) = \\frac{n(n+1)}{2} - 36 \\pmod{99}.$$ We need $n(n+1) \\equiv 72 \\pmod{198}$. Modulo $9$: $n(n+1) \\equiv 0$, so $n \\equiv 0$ or $8 \\pmod 9$. Modulo $11$: $n(n+1) \\equiv 6$, i.e. $(n-2)(n+3) \\equiv 0$, so $n \\equiv 2$ or $8 \\pmod{11}$. (Parity is automatic since $n(n+1)$ and $72$ are even.) Combining via CRT, $n \\equiv 8, 35, 63,$ or $90 \\pmod{99}$. The smallest such $n > 9$ is $n = 35$: indeed $\\frac{35 \\cdot 36}{2} - 36 = 594 = 6 \\cdot 99$."
+    },
+    {
+      "position": 10,
+      "source": "2020 AIME II Problem 10",
+      "question": "Find the sum of all positive integers $n$ such that when $1^3+2^3+3^3+\\cdots +n^3$ is divided by $n+6$, the remainder is $25$.",
+      "choices": null,
+      "answer": "322",
+      "solution": "The sum is $\\left(\\frac{n(n+1)}{2}\\right)^2$. Put $m = n+6 > 25$, so $n \\equiv -6$ and $n+1 \\equiv -5 \\pmod m$. If $m$ is odd, $\\frac{n(n+1)}{2} \\equiv \\frac{(-6)(-5)}{2} = 15$, so the remainder condition gives $m \\mid 225 - 25 = 200$; but $200$ has no odd divisor exceeding $25$. If $m = 2k$ is even, $\\frac{n(n+1)}{2} = \\frac{m(m-11)}{2} + 15 \\equiv k + 15 \\pmod{m}$ since $k(2k-11) \\equiv k \\pmod{2k}$. Then $(k+15)^2 \\equiv k^2 + 225 \\pmod{2k}$, and $k^2 \\equiv 0$ or $k \\pmod{2k}$ according as $k$ is even or odd. For $k$ even we need $m \\mid 200$ with $4 \\mid m$ and $m > 25$: $m = 40, 100, 200$, giving $n = 34, 94, 194$. For $k$ odd we need $2k \\mid k + 200$ with $k$ odd, forcing $k \\in \\{1, 5, 25\\}$, and direct checks fail (e.g. $k = 25$ gives residue $0$). Each of $n = 34, 94, 194$ checks out (e.g. $595^2 = 354025 = 8850 \\cdot 40 + 25$), and the sum is $34 + 94 + 194 = 322$."
+    },
+    {
+      "position": 11,
+      "source": "2013 AIME II Problem 11",
+      "question": "Let $A = \\{1, 2, 3, 4, 5, 6\\}$, and let $N$ be the number of functions $f$ from set $A$ to set $A$ such that $f(f(x))$ is a constant function. Find the remainder when $N$ is divided by $1000$.",
+      "choices": null,
+      "answer": "176",
+      "solution": "Suppose $f(f(x)) = c$ for all $x$. Then $c$ lies in the image $S$ of $f$, every element of $S$ maps to $c$ (in particular $f(c) = c$), and every element outside $S$ maps into $S$. Count by $c$ ($6$ choices) and $k = |S|$ ($\\binom{5}{k-1}$ ways to choose the rest of $S$): the $6-k$ elements of $A \\setminus S$ must map into $S$ hitting every element of $S \\setminus \\{c\\}$, which by inclusion-exclusion gives $\\sum_{j=0}^{k-1} (-1)^j \\binom{k-1}{j} (k-j)^{6-k}$ functions. This is nonzero only for $k = 1, 2, 3$, giving $1$, $2^4 - 1 = 15$, and $3^3 - 2 \\cdot 2^3 + 1 = 12$ respectively. Hence $$N = 6\\left(\\tbinom{5}{0} \\cdot 1 + \\tbinom{5}{1} \\cdot 15 + \\tbinom{5}{2} \\cdot 12\\right) = 6(1 + 75 + 120) = 1176,$$ and the answer is $176$."
+    },
+    {
+      "position": 12,
+      "source": "2015 AIME II Problem 12",
+      "question": "There are $2^{9} = 512$ possible 9-letter strings in which each letter is either an A or a B. Find the number of such strings that do not have more than 3 adjacent letters that are identical.",
+      "choices": null,
+      "answer": "298",
+      "solution": "Let $a_n$ be the number of valid $n$-letter strings. A valid string ends in a run of length $1$, $2$, or $3$; deleting that final run leaves any valid string of length $n-1$, $n-2$, or $n-3$, and the deleted run's letter is forced (it differs from the letter before it). Thus $a_n = a_{n-1} + a_{n-2} + a_{n-3}$ with $a_1 = 2$, $a_2 = 4$, $a_3 = 8$. Computing: $a_4 = 14$, $a_5 = 26$, $a_6 = 48$, $a_7 = 88$, $a_8 = 162$, $a_9 = 298$."
+    },
+    {
+      "position": 13,
+      "source": "2021 AIME II Problem 13",
+      "question": "Find the least positive integer $n$ for which $3^n + 7^n - n$ is a multiple of $1000$.",
+      "choices": null,
+      "answer": "538",
+      "solution": "Modulo $8$: $3^n + 7^n \\equiv 2$ for every $n$ (the powers alternate $3+7$ and $1+1$), so $n \\equiv 2 \\pmod 8$. Modulo $5$: with $n \\equiv 2 \\pmod 4$ we get $3^n \\equiv 4$ and $7^n \\equiv 2^n \\equiv 4$, so $n \\equiv 3 \\pmod 5$; combined, $n \\equiv 18 \\pmod{40}$. Modulo $25$: since $n \\equiv 18 \\pmod{20}$, $3^n \\equiv 3^{18} \\equiv 14$ and $7^n \\equiv 7^{18} \\equiv 24$, so $n \\equiv 13 \\pmod{25}$, giving $n \\equiv 138 \\pmod{200}$. Modulo $125$: the candidates below $1000$ are $138, 338, 538, 738, 938$, all with $n \\equiv 38 \\pmod{100}$ and $n \\equiv 18 \\pmod{20}$, so $3^n + 7^n \\equiv 3^{38} + 7^{18} \\equiv 89 + 74 = 163 \\equiv 38 \\pmod{125}$; we need $n \\equiv 38 \\pmod{125}$, and among the candidates only $538$ works. Hence $n \\equiv 538 \\pmod{1000}$ (the condition has period $1000$), and the least such positive integer is $538$."
+    },
+    {
+      "position": 14,
+      "source": "2019 AIME II Problem 14",
+      "question": "Find the sum of all positive integers $n$ such that, given an unlimited supply of stamps of denominations $5,n,$ and $n+1$ cents, $131$ cents is the greatest postage that cannot be formed.",
+      "choices": null,
+      "answer": "101",
+      "solution": "Using exactly $k$ large stamps (of values $n$ and $n+1$) forms every integer in $[kn,\\ k(n+1)]$, covering $k+1$ consecutive residue classes mod $5$; adding 5-cent stamps then forms everything above the least formable value in each covered class. The greatest unformable value is therefore $\\max_r (m_r) - 5$, where $m_r$ is the least formable value in class $r \\ne 0$. Computing the $m_r$ by residue of $n$ mod $5$: if $n \\equiv 1$ or $2$, the maximum is $2n+2$, giving $g(n) = 2n-3$; if $n \\equiv 3$, $g(n) = 2n - 4$; if $n \\equiv 4$, the class $1$ first appears at $4n$, giving $g(n) = 4n - 5$; if $n \\equiv 0$, $g(n) = 4n - 1$. Setting these equal to $131$: $2n - 3 = 131$ gives $n = 67$ (consistent, $67 \\equiv 2$); $2n - 4 = 131$ has no integer solution; $4n - 5 = 131$ gives $n = 34$ (consistent, $34 \\equiv 4$); $4n - 1 = 131$ gives nothing valid. Check $n = 34$: $131$ is unformable ($131 - 34a - 35b$ is never a nonnegative multiple of $5$), while $132 = 3\\cdot34 + 30$, $133 = 2\\cdot34 + 35 + 30$, $134 = 34 + 2\\cdot35 + 30$, $135 = 3\\cdot 35 + 30$, $136 = 4 \\cdot 34$, and everything larger follows by adding 5's; similarly for $n = 67$: $132 = 67 + 65$, $133 = 68 + 65$, $134 = 2 \\cdot 67$, $135 = 27 \\cdot 5$, $136 = 2 \\cdot 68$. The sum is $34 + 67 = 101$."
+    },
+    {
+      "position": 15,
+      "source": "2011 AIME I Problem 15",
+      "question": "For some integer $m$, the polynomial $x^3 - 2029x + m$ has the three integer roots $a$, $b$, and $c$.  Find $|a| + |b| + |c|$.",
+      "choices": null,
+      "answer": "104",
+      "solution": "By Vieta's formulas $a+b+c = 0$ and $ab+bc+ca = -2029$. Substituting $c = -(a+b)$ gives $a^2 + ab + b^2 = 2029$. Multiplying by $4$: $(2a+b)^2 + 3b^2 = 8116$, so $|b| \\le 52$ and $8116 - 3b^2$ must be a perfect square. Trying values (noting $8116 - 3b^2 \\equiv 1 \\pmod 3$, so $2a+b \\not\\equiv 0 \\pmod 3$), the only hit is $b = 25$: $8116 - 1875 = 6241 = 79^2$, giving $2a + 25 = \\pm 79$, so $a = 27$ or $a = -52$. (The representation is unique because $2029$ is prime and $2029 \\equiv 1 \\pmod 3$: $a^2+ab+b^2$ is the norm of $\\mathbb{Z}[\\omega]$, and a prime $p \\equiv 1 \\pmod 3$ has essentially one such representation.) The roots are $25, 27, -52$: indeed $25 + 27 - 52 = 0$ and $25 \\cdot 27 - 25 \\cdot 52 - 27 \\cdot 52 = 675 - 2704 = -2029$, with $m = 25 \\cdot 27 \\cdot 52 = 35100$ an integer. Therefore $|a|+|b|+|c| = 25 + 27 + 52 = 104$."
+    }
+  ]
+}

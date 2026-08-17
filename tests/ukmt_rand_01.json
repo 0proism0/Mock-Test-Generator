@@ -1,0 +1,384 @@
+{
+ "id": "ukmt_rand_01",
+ "competition": "UKMT",
+ "title": "UKMT — Random Mock #1",
+ "instructions": "25 questions · 60 minutes · No calculator. 1 point per correct answer, no penalty for wrong answers.",
+ "time_limit_min": 60,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2023 UKMT SMC Problem 1",
+   "question": "What is the value of √ 2023 2 + 0 + 2 + 3?",
+   "choices": {
+    "A": "13",
+    "B": "15",
+    "C": "17",
+    "D": "19",
+    "E": "21"
+   },
+   "answer": "C",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 2,
+   "source": "2025 UKMT IMC Problem 2",
+   "question": "What is the remainder when 2 652 134 is divided by 13?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "D",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 3,
+   "source": "2026 UKMT JMC Problem 3",
+   "question": "What is the value of 4− 3− 2− 1 8− 7− 6− 5 ?",
+   "choices": {
+    "A": "0",
+    "B": "1 5",
+    "C": "1 4",
+    "D": "1 3",
+    "E": "1 2"
+   },
+   "answer": "B",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 4,
+   "source": "2026 UKMT JMC Problem 4",
+   "question": "Barry thinks of a number. Half of the number, plus a third of the number, plus a quarter of the number is 52. What number is Barry thinking of?",
+   "choices": {
+    "A": "24",
+    "B": "30",
+    "C": "36",
+    "D": "42",
+    "E": "48"
+   },
+   "answer": "E",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 5,
+   "source": "2023 UKMT IMC Problem 5",
+   "question": "We know that 1 + 2 + 3 + 4 = 10. It is also true that 13 + 23 + 33 + 43 = 10/u1D45B for some integer /u1D45B. What is this integer?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "B",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 6,
+   "source": "2023 UKMT SMC Problem 6",
+   "question": "How many lines of three adjacent cells can be chosen from this grid, horizontally, vertically or diagonally, such that the sum of the numbers in the three cells is a multiple of three?",
+   "choices": {
+    "A": "30",
+    "B": "24",
+    "C": "18",
+    "D": "12",
+    "E": "6 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16"
+   },
+   "answer": "B",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 7,
+   "source": "2023 UKMT JMC Problem 7",
+   "question": "What is the diﬀerence between the largest two-digit multiple of 2 and the smallest three-digit multiple of 3?",
+   "choices": {
+    "A": "5",
+    "B": "4",
+    "C": "3",
+    "D": "2",
+    "E": "1"
+   },
+   "answer": "B",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 8,
+   "source": "2023 UKMT JMC Problem 8",
+   "question": "How many of these six numbers are prime? 02 + 12 12 + 22 22 + 32 32 + 42 42 + 52 52 + 62",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "D",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 9,
+   "source": "2026 UKMT JMC Problem 9",
+   "question": "Carl counts in a curious way! He starts at 1, but then always misses out multiples of three and multiples of five. What number would Carl say last when he counts 15 items?",
+   "choices": {
+    "A": "22",
+    "B": "23",
+    "C": "26",
+    "D": "28",
+    "E": "29 © UK Mathematics Trust 2026 www.ukmt.org.uk Junior Mathematical Challenge Wednesday 29 April 2026"
+   },
+   "answer": "D",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 10,
+   "source": "2025 UKMT SMC Problem 10",
+   "question": "How many different squares are factors of 2025?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "6 © UK Mathematics Trust 2025 www.ukmt.org.uk Senior Mathematical Challenge Thursday 9 October 2025"
+   },
+   "answer": "E",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 11,
+   "source": "2023 UKMT JMC Problem 11",
+   "question": "To save money, Scrooge is reusing tea bags. After a ﬁrst ‘decent’ cup of tea, he dries the bag and uses two such dried bags to make a new ‘decent’ cup of tea. These bags are then dried again and four such bags now make a ‘decent’ cup of tea. After that they are put on the compost heap. How many ‘decent’ cups of tea can Scrooge get out of a new box of 120 tea bags?",
+   "choices": {
+    "A": "480",
+    "B": "240",
+    "C": "210",
+    "D": "195",
+    "E": "180"
+   },
+   "answer": "C",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 12,
+   "source": "2024 UKMT IMC Problem 12",
+   "question": "What is the length of the line segment marked /u1D465 ? 1 1 1 1 1 1 1 1 1 x",
+   "choices": {
+    "A": "√ 2",
+    "B": "2",
+    "C": "2 √ 2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "D",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 13,
+   "source": "2025 UKMT IMC Problem 13",
+   "question": "The product of the ﬁrst three numbers in the box below is equal to the product of the last three numbers. What is the value of /u1D465 ? /u1D465 120 496 360 48",
+   "choices": {
+    "A": "72",
+    "B": "84",
+    "C": "96",
+    "D": "128",
+    "E": "144"
+   },
+   "answer": "E",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 14,
+   "source": "2025 UKMT IMC Problem 14",
+   "question": "What is the sum of the recurring decimals 0. /dotacc1 + 0. /dotacc2 + 0. /dotacc3 + 0. /dotacc4?",
+   "choices": {
+    "A": "1. /dotacc1",
+    "B": "1. /dotacc1/dotacc0",
+    "C": "1.1",
+    "D": "1. /dotacc0/dotacc1",
+    "E": "1"
+   },
+   "answer": "A",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 15,
+   "source": "2025 UKMT IMC Problem 15",
+   "question": "What is the value of 36 − 34 29 − 23 ?",
+   "choices": {
+    "A": "9 32",
+    "B": "9 16",
+    "C": "9 12",
+    "D": "9 7",
+    "E": "9 5"
+   },
+   "answer": "D",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 16,
+   "source": "2024 UKMT JMC Problem 16",
+   "question": "The world’s smallest vertebrate is much shorter than its name! Discovered in 2022, the frog paedophryne amauensis is only 7.7 mm long. Approximately how many of these frogs, placed end to end, would be needed to make a line 1 metre long?",
+   "choices": {
+    "A": "100",
+    "B": "130",
+    "C": "260",
+    "D": "390",
+    "E": "520"
+   },
+   "answer": "B",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 17,
+   "source": "2023 UKMT JMC Problem 17",
+   "question": "T wo numbers/u1D45D and /u1D45E are such that 0 < /u1D45D < /u1D45E < 1. Which is the largest of these expressions?",
+   "choices": {
+    "A": "/u1D45E − /u1D45D",
+    "B": "/u1D45D − /u1D45E",
+    "C": "/u1D45D + /u1D45E 2",
+    "D": "/u1D45D /u1D45E",
+    "E": "/u1D45E /u1D45D © 2023 UK Mathematics Trust www.ukmt.org.uk Junior Mathematical Challenge Wednesday 26 April 2023"
+   },
+   "answer": "E",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 18,
+   "source": "2024 UKMT JMC Problem 18",
+   "question": "Goldilocks eats three equal-sized bowls of porridge, one after the other. When she has eaten 3 7 of the total amount of porridge, what fraction of the porridge in the second bowl has she eaten?",
+   "choices": {
+    "A": "2 63",
+    "B": "1 7",
+    "C": "1 3",
+    "D": "2 7",
+    "E": "1 2 © UK Mathematics Trust 2024 www.ukmt.org.uk Junior Mathematical Challenge Thursday 25 April 2024"
+   },
+   "answer": "D",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 19,
+   "source": "2025 UKMT SMC Problem 19",
+   "question": "A ‘complete’ football kit consists of a shirt, a pair of shorts and a pair of socks. Three pairs of shorts and one pair of socks together cost the same as two shirts. Seven pairs of shorts and four pairs of socks together cost the same as five shirts. Eden has exactly the right amount of money to buy nine shirts. How many ‘complete’ football kits could be bought for the same amount of money?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "C",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 20,
+   "source": "2025 UKMT SMC Problem 20",
+   "question": "When 1 𝑥− 1 𝑦 = 2025, what is the value of𝑥+ 2026𝑥𝑦−𝑦 2𝑦− 2025𝑥𝑦− 2𝑥?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "1 2",
+    "D": "2026",
+    "E": "1 2025"
+   },
+   "answer": "E",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 21,
+   "source": "2026 UKMT IMC Problem 21",
+   "question": "The numbers𝑥 and𝑦 satisfy the equations𝑥+𝑦 = 6 and𝑥3+𝑦3 = 198. What is the value of𝑥𝑦?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "A",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 22,
+   "source": "2026 UKMT JMC Problem 22",
+   "question": "In Poppy’s pond there are frogs and snakes. Four-fifths of the frogs are green frogs and six-sevenths of the snakes are black snakes. Which of the following couldnot be the total number of creatures in Poppy’s pond?",
+   "choices": {
+    "A": "22",
+    "B": "23",
+    "C": "24",
+    "D": "26",
+    "E": "27"
+   },
+   "answer": "B",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 23,
+   "source": "2025 UKMT IMC Problem 23",
+   "question": "The point /u1D443 is inside a rectangle. The distance from /u1D443 to one corner of the rectangle is 5 cm and its distance from the opposite corner is 14 cm. The distance from /u1D443 to a third corner is 10 cm. What is the distance, in cm, from /u1D443 to the fourth corner?",
+   "choices": {
+    "A": "√ 29",
+    "B": "9",
+    "C": "10",
+    "D": "11",
+    "E": "√ 171"
+   },
+   "answer": "D",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 24,
+   "source": "2025 UKMT JMC Problem 24",
+   "question": "When 180 is divided by a positive integer𝑁, the remainder is 5. For how many values of𝑁 is this true?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "A",
+   "solution": null,
+   "type": "multiple_choice"
+  },
+  {
+   "n": 25,
+   "source": "2023 UKMT SMC Problem 25",
+   "question": "What is the area of the part of the /u1D465/u1D466 -plane within which /u1D465 3/u1D466 2 − /u1D465 2/u1D466 2 − /u1D465/u1D466 4 + /u1D465/u1D466 3 ≥ 0 and 0 ≤ /u1D465 ≤ /u1D466 ?",
+   "choices": {
+    "A": "1 4",
+    "B": "1 2",
+    "C": "1",
+    "D": "2",
+    "E": "4 © UK Mathematics Trust 2023 www.ukmt.org.uk"
+   },
+   "answer": "A",
+   "solution": null,
+   "type": "multiple_choice"
+  }
+ ]
+}

@@ -1,0 +1,356 @@
+{
+  "competition": "AMC 12",
+  "set": "B",
+  "variants": [
+    {
+      "position": 1,
+      "source": "2018 AMC 12A Problem 1",
+      "question": "A large urn contains $120$ balls, of which $25 \\%$ are red and the rest are blue. How many of the blue balls must be removed so that the percentage of red balls in the urn will be $50 \\%$? (No red balls are to be removed.)",
+      "choices": {
+        "A": "40",
+        "B": "50",
+        "C": "60",
+        "D": "70",
+        "E": "90"
+      },
+      "answer": "C",
+      "solution": "The urn contains $0.25 \\cdot 120 = 30$ red balls and $120-30=90$ blue balls. Since no red balls are removed, the $30$ red balls must make up $50\\%$ of the final contents, so the urn must end with $30/0.5 = 60$ balls. Therefore $120-60 = 60$ blue balls must be removed. The answer is $\\boxed{60}$."
+    },
+    {
+      "position": 2,
+      "source": "2012 AMC 12A Problem 2",
+      "question": "Amara can frost a cupcake every $15$ seconds and Bianca can frost a cupcake every $25$ seconds. Working together, how many cupcakes can they frost in $10$ minutes?",
+      "choices": {
+        "A": "64",
+        "B": "60",
+        "C": "68",
+        "D": "56",
+        "E": "72"
+      },
+      "answer": "A",
+      "solution": "Ten minutes is $600$ seconds. Amara frosts $600/15 = 40$ cupcakes and Bianca frosts $600/25 = 24$ cupcakes. Working together they frost $40+24 = 64$ cupcakes. The answer is $\\boxed{64}$."
+    },
+    {
+      "position": 3,
+      "source": "2021 AMC 12B Problem 3",
+      "question": "Suppose that $$1+\\frac{1}{2+\\frac{1}{3+\\frac{1}{x}}}=\\frac{16}{11}.$$ What is the value of $x$?",
+      "choices": {
+        "A": "\\frac{1}{4}",
+        "B": "\\frac{3}{8}",
+        "C": "\\frac{2}{5}",
+        "D": "\\frac{1}{2}",
+        "E": "\\frac{2}{3}"
+      },
+      "answer": "D",
+      "solution": "Subtracting $1$ from both sides, $\\frac{1}{2+\\frac{1}{3+1/x}} = \\frac{5}{11}$, so $2+\\frac{1}{3+1/x} = \\frac{11}{5}$. Then $\\frac{1}{3+1/x} = \\frac{1}{5}$, so $3+\\frac{1}{x} = 5$, giving $\\frac{1}{x}=2$ and $x = \\frac{1}{2}$. The answer is $\\boxed{\\frac{1}{2}}$."
+    },
+    {
+      "position": 4,
+      "source": "2014 AMC 12A Problem 4",
+      "question": "Suppose that $a$ hens lay $b$ eggs in $c$ days. At this rate, how many eggs will $d$ hens lay in $e$ days?",
+      "choices": {
+        "A": "\\frac{ac}{bde}",
+        "B": "\\frac{bde}{ac}",
+        "C": "\\frac{abde}{c}",
+        "D": "\\frac{bcde}{a}",
+        "E": "\\frac{abc}{de}"
+      },
+      "answer": "B",
+      "solution": "One hen lays $\\frac{b}{a}$ eggs in $c$ days, so one hen lays $\\frac{b}{ac}$ eggs per day. Then $d$ hens lay $\\frac{bd}{ac}$ eggs per day, and in $e$ days they lay $\\frac{bde}{ac}$ eggs. The answer is $\\boxed{\\frac{bde}{ac}}$."
+    },
+    {
+      "position": 5,
+      "source": "2024 AMC 12A Problem 5",
+      "question": "A data set containing $24$ numbers, some of which are $8$, has mean $40$. When all the $8$s are removed, the data set has mean $56$. How many $8$s were in the original data set?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "E",
+      "solution": "The $24$ numbers have total $24 \\cdot 40 = 960$. If $k$ of the numbers are $8$s, the remaining $24-k$ numbers total $960 - 8k$ and have mean $56$, so $960 - 8k = 56(24-k) = 1344 - 56k$. Thus $48k = 384$, giving $k = 8$. The answer is $\\boxed{8}$."
+    },
+    {
+      "position": 6,
+      "source": "2017 AMC 12B Problem 6",
+      "question": "The circle having $(0,0)$ and $(6,8)$ as the endpoints of a diameter intersects the $x$-axis at a second point. What is the $x$-coordinate of this point?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "8",
+        "E": "10"
+      },
+      "answer": "C",
+      "solution": "The center of the circle is $(3,4)$ and the radius is $5$. Setting $y=0$ in $(x-3)^2+(y-4)^2 = 25$ gives $(x-3)^2 = 9$, so $x = 0$ or $x = 6$. The origin corresponds to the given endpoint, so the second intersection has $x$-coordinate $6$. The answer is $\\boxed{6}$."
+    },
+    {
+      "position": 7,
+      "source": "2014 AMC 12B Problem 7",
+      "question": "For how many positive integers $n$ is $\\frac{n}{24-n}$ also a positive integer?",
+      "choices": {
+        "A": "7",
+        "B": "6",
+        "C": "8",
+        "D": "5",
+        "E": "9"
+      },
+      "answer": "A",
+      "solution": "We need $0 < n < 24$ with $(24-n) \\mid n$. Since $\\frac{n}{24-n} = \\frac{24}{24-n} - 1$, the condition is equivalent to $(24-n) \\mid 24$. As $24-n$ ranges over $1,2,\\dots,23$, the divisors of $24$ in this range are $1,2,3,4,6,8,12$, giving $n = 23, 22, 21, 20, 18, 16, 12$. That is $7$ values. The answer is $\\boxed{7}$."
+    },
+    {
+      "position": 8,
+      "source": "2022 AMC 12A Problem 8",
+      "question": "The infinite product $$\\sqrt[3]{7} \\cdot \\sqrt[3]{\\sqrt[3]{7}} \\cdot \\sqrt[3]{\\sqrt[3]{\\sqrt[3]{7}}} \\cdots$$ evaluates to a real number. What is that number?",
+      "choices": {
+        "A": "1",
+        "B": "\\sqrt[3]{7}",
+        "C": "\\sqrt[6]{7}",
+        "D": "\\sqrt{7}",
+        "E": "7"
+      },
+      "answer": "D",
+      "solution": "The product equals $7^{\\frac{1}{3}+\\frac{1}{9}+\\frac{1}{27}+\\cdots}$. The exponent is a geometric series with first term $\\frac{1}{3}$ and ratio $\\frac{1}{3}$, summing to $\\frac{1/3}{1-1/3} = \\frac{1}{2}$. Hence the product is $7^{1/2} = \\sqrt{7}$. The answer is $\\boxed{\\sqrt{7}}$."
+    },
+    {
+      "position": 9,
+      "source": "2010 AMC 12B Problem 9",
+      "question": "Let $n$ be the smallest positive integer such that $n$ is divisible by $12$, $n^2$ is a perfect cube, and $n^3$ is a perfect square. What is the number of digits of $n$?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "B",
+      "solution": "If $p^e$ appears in the prime factorization of $n$, then $n^2$ being a cube forces $2e \\equiv 0 \\pmod{3}$, so $3 \\mid e$, and $n^3$ being a square forces $3e$ even, so $2 \\mid e$. Hence $6 \\mid e$ and $n$ is a perfect sixth power. Since $12 = 2^2 \\cdot 3$ divides $n$, the smallest such $n$ is $2^6 \\cdot 3^6 = 6^6 = 46656$, which has $5$ digits. The answer is $\\boxed{5}$."
+    },
+    {
+      "position": 10,
+      "source": "2015 AMC 12A Problem 10",
+      "question": "Integers $x$ and $y$ with $x>y>0$ satisfy $x+y+xy=624$. What is $x$?",
+      "choices": {
+        "A": "24",
+        "B": "34",
+        "C": "49",
+        "D": "104",
+        "E": "124"
+      },
+      "answer": "E",
+      "solution": "Adding $1$ to both sides, $(x+1)(y+1) = 625 = 5^4$. The factor pairs of $625$ are $(1,625)$, $(5,125)$, and $(25,25)$. The first gives $y=0$, which is not positive; the last gives $x=y$, contradicting $x>y$. So $x+1 = 125$ and $y+1 = 5$, giving $x = 124$, $y = 4$. Indeed $124+4+124\\cdot 4 = 624$. The answer is $\\boxed{124}$."
+    },
+    {
+      "position": 11,
+      "source": "2017 AMC 12A Problem 11",
+      "question": "Ravi adds the degree measures of the interior angles of a convex polygon and arrives at a sum of $2170$. He then discovers that he forgot to include one angle. What is the degree measure of the forgotten angle?",
+      "choices": {
+        "A": "150",
+        "B": "160",
+        "C": "170",
+        "D": "175",
+        "E": "110"
+      },
+      "answer": "C",
+      "solution": "The sum of the interior angles of an $n$-gon is $(n-2)\\cdot 180$, so the true sum must be a multiple of $180$ that exceeds $2170$. The candidates are $2340, 2520, \\dots$, with forgotten angle $170, 350, \\dots$. Since the polygon is convex, each angle is less than $180$, so only $170$ works (from $n = 15$). The answer is $\\boxed{170}$."
+    },
+    {
+      "position": 12,
+      "source": "2021 AMC 12A Problem 12",
+      "question": "All the roots of the polynomial $z^6-12z^5+Az^4+Bz^3+Cz^2+Dz+64$ are positive integers, possibly repeated. What is the value of $B$?",
+      "choices": {
+        "A": "-160",
+        "B": "-150",
+        "C": "160",
+        "D": "150",
+        "E": "-120"
+      },
+      "answer": "A",
+      "solution": "By Vieta's formulas, the six roots are positive integers with sum $12$ (the coefficient of $z^5$ is $-e_1=-12$) and product $64$ (the constant term is $(-1)^6 e_6 = 64$). Since $64=2^6$, every root is a power of $2$; write them as $2^{e_1},\\dots,2^{e_6}$ with $e_1+\\cdots+e_6=6$. If some $e_i \\ge 2$, then some $e_j = 0$, and replacing the pair $(e_i, 0)$ by $(e_i-1, 1)$ keeps the exponent sum fixed but strictly decreases the root sum, since $2^{e_i}+1 > 2^{e_i-1}+2$ for $e_i \\ge 2$. Hence the root sum is minimized only when all $e_i=1$, where it equals $6 \\cdot 2 = 12$ — exactly the required sum. So the roots are $2,2,2,2,2,2$ and the polynomial is $(z-2)^6$. The coefficient of $z^3$ is $B = -\\binom{6}{3} \\cdot 2^3 = -20 \\cdot 8 = -160$. The answer is $\\boxed{-160}$."
+    },
+    {
+      "position": 13,
+      "source": "2020 AMC 12A Problem 13",
+      "question": "There are integers $a$, $b$, and $c$, each greater than $1$, such that $$\\sqrt[a]{N\\sqrt[b]{N\\sqrt[c]{N}}} = \\sqrt[24]{N^{17}}$$ for all $N > 0$ with $N \\neq 1$. What is $b$?",
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "5",
+        "D": "3",
+        "E": "6"
+      },
+      "answer": "D",
+      "solution": "The left side is $N$ raised to the power $\\frac{1}{a}\\left(1+\\frac{1}{b}\\left(1+\\frac{1}{c}\\right)\\right)$, so we need $\\frac{1}{a}\\left(1+\\frac{1}{b}\\left(1+\\frac{1}{c}\\right)\\right) = \\frac{17}{24}$. Since $\\frac{1}{b}(1+\\frac{1}{c}) \\le \\frac{1}{2} \\cdot \\frac{3}{2} = \\frac{3}{4}$, the quantity in parentheses is at most $\\frac{7}{4}$, forcing $a = 2$. Then $\\frac{1}{b}\\left(1+\\frac{1}{c}\\right) = \\frac{17}{12} - 1 = \\frac{5}{12}$, so $b = \\frac{12(c+1)}{5c}$. We need $5 \\mid (c+1)$, and checking $c = 4, 9, 14, \\dots$ shows only $c = 4$ gives an integer $b > 1$, namely $b = \\frac{12 \\cdot 5}{20} = 3$. Indeed $\\frac{1}{2}\\left(1+\\frac{1}{3}\\cdot\\frac{5}{4}\\right) = \\frac{1}{2} \\cdot \\frac{17}{12} = \\frac{17}{24}$. The answer is $\\boxed{3}$."
+    },
+    {
+      "position": 14,
+      "source": "2013 AMC 12A Problem 14",
+      "question": "The solution to the equation $\\log_{3x} 9 = \\log_{2x} 27$, where $x$ is a positive real number other than $\\tfrac{1}{3}$ or $\\tfrac{1}{2}$, can be written as $\\tfrac{p}{q}$ where $p$ and $q$ are relatively prime positive integers. What is $p + q$?",
+      "choices": {
+        "A": "29",
+        "B": "31",
+        "C": "33",
+        "D": "35",
+        "E": "37"
+      },
+      "answer": "B",
+      "solution": "Writing both sides with natural logarithms, $\\frac{\\ln 9}{\\ln 3x} = \\frac{\\ln 27}{\\ln 2x}$, so $2\\ln 3 \\cdot \\ln 2x = 3\\ln 3 \\cdot \\ln 3x$, i.e. $2\\ln 2x = 3\\ln 3x$. Expanding, $2\\ln 2 + 2\\ln x = 3\\ln 3 + 3\\ln x$, so $\\ln x = 2\\ln 2 - 3\\ln 3 = \\ln \\frac{4}{27}$. Hence $x = \\frac{4}{27}$ (and $3x = \\frac{4}{9} \\neq 1$, $2x = \\frac{8}{27} \\neq 1$, so the bases are valid). Then $p+q = 4+27 = 31$. The answer is $\\boxed{31}$."
+    },
+    {
+      "position": 15,
+      "source": "2011 AMC 12B Problem 15",
+      "question": "How many positive two-digit integers are factors of $2^{20}-1$?",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8",
+        "E": "9"
+      },
+      "answer": "E",
+      "solution": "Factor: $2^{20}-1 = (2^{10}-1)(2^{10}+1) = 1023 \\cdot 1025 = (3 \\cdot 11 \\cdot 31)(5^2 \\cdot 41) = 3 \\cdot 5^2 \\cdot 11 \\cdot 31 \\cdot 41$. The two-digit factors are $11$, $15=3\\cdot 5$, $25=5^2$, $31$, $33=3\\cdot 11$, $41$, $55=5\\cdot 11$, $75=3\\cdot 5^2$, and $93=3\\cdot 31$ — a total of $9$ (any product involving $41$ or $31$ with another prime exceeds $99$, except those listed). The answer is $\\boxed{9}$."
+    },
+    {
+      "position": 16,
+      "source": "2016 AMC 12B Problem 16",
+      "question": "In how many ways can $225$ be written as the sum of an increasing sequence of two or more consecutive positive integers?",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "8",
+        "D": "9",
+        "E": "10"
+      },
+      "answer": "C",
+      "solution": "A sum of $k \\ge 2$ consecutive positive integers starting at $m \\ge 1$ equals $km + \\frac{k(k-1)}{2}$, so we need $225 - \\frac{k(k-1)}{2}$ to be a positive multiple of $k$. Checking $k = 2, 3, \\dots$ (we need $\\frac{k(k-1)}{2} < 225$, so $k \\le 21$), the valid lengths are $k = 2, 3, 5, 6, 9, 10, 15, 18$: for example $112+113$, $74+75+76$, and $4+5+\\cdots+21$ ($k=18$). That is $8$ ways. The answer is $\\boxed{8}$."
+    },
+    {
+      "position": 17,
+      "source": "2013 AMC 12B Problem 17",
+      "question": "Let $a$, $b$, and $c$ be real numbers such that $$a+b+c=3 \\quad \\text{and} \\quad a^2+b^2+c^2=9.$$ What is the difference between the maximum and minimum possible values of $c$?",
+      "choices": {
+        "A": "4",
+        "B": "3",
+        "C": "5",
+        "D": "\\frac{9}{2}",
+        "E": "6"
+      },
+      "answer": "A",
+      "solution": "Given $c$, we need real $a, b$ with $a+b = 3-c$ and $a^2+b^2 = 9-c^2$. Such $a, b$ exist if and only if $2(a^2+b^2) \\ge (a+b)^2$, i.e. $2(9-c^2) \\ge (3-c)^2$, which simplifies to $3c^2 - 6c - 9 \\le 0$, or $(c-3)(c+1) \\le 0$. So $-1 \\le c \\le 3$, with equality attained: $c=3$ gives $a=b=0$, and $c=-1$ gives $a=b=2$. The difference is $3-(-1) = 4$. The answer is $\\boxed{4}$."
+    },
+    {
+      "position": 18,
+      "source": "2024 AMC 12B Problem 18",
+      "question": "The Fibonacci numbers are defined by $F_1 = 1, F_2 = 1,$ and $F_n = F_{n-1} + F_{n-2}$ for $n \\geq 3.$ What is $${\\frac{F_2}{F_1}} + {\\frac{F_4}{F_2}} + {\\frac{F_6}{F_3}} + \\cdots + {\\frac{F_{16}}{F_8}}?$$",
+      "choices": {
+        "A": "100",
+        "B": "110",
+        "C": "115",
+        "D": "120",
+        "E": "130"
+      },
+      "answer": "D",
+      "solution": "Using the identity $F_{2k} = F_k L_k$, where $L_k$ is the $k$th Lucas number ($L_1 = 1$, $L_2 = 3$, $L_k = L_{k-1}+L_{k-2}$), each term $\\frac{F_{2k}}{F_k}$ equals $L_k$. The sum is $L_1 + L_2 + \\cdots + L_8 = 1+3+4+7+11+18+29+47 = 120$. (One can also verify directly: $F_2/F_1 = 1$, $F_4/F_2 = 3$, $F_6/F_3 = 4$, $F_8/F_4 = 7$, $F_{10}/F_5 = 11$, $F_{12}/F_6 = 18$, $F_{14}/F_7 = 29$, $F_{16}/F_8 = 47$.) The answer is $\\boxed{120}$."
+    },
+    {
+      "position": 19,
+      "source": "2019 AMC 12A Problem 19",
+      "question": "In $\\triangle ABC$ with integer side lengths, $\\cos A = \\frac{3}{5}$, $\\cos B = \\frac{5}{13}$, and $\\cos C = \\frac{33}{65}$. What is the least possible perimeter of $\\triangle ABC$?",
+      "choices": {
+        "A": "36",
+        "B": "42",
+        "C": "48",
+        "D": "54",
+        "E": "60"
+      },
+      "answer": "B",
+      "solution": "By the Law of Sines, $a:b:c = \\sin A : \\sin B : \\sin C$. From the given cosines (all angles are angles of a triangle, so sines are positive), $\\sin A = \\frac{4}{5}$, $\\sin B = \\frac{12}{13}$, and $\\sin C = \\sqrt{1-(33/65)^2} = \\frac{56}{65}$. Thus $a:b:c = \\frac{4}{5} : \\frac{12}{13} : \\frac{56}{65} = 52 : 60 : 56 = 13 : 15 : 14$. Since $\\gcd(13,14,15) = 1$, the smallest integer-sided triangle is $13$-$14$-$15$, and indeed the Law of Cosines on this triangle gives exactly the stated cosines. The least perimeter is $13+14+15 = 42$. The answer is $\\boxed{42}$."
+    },
+    {
+      "position": 20,
+      "source": "2016 AMC 12A Problem 20",
+      "question": "A binary operation $\\diamondsuit$ has the properties that $a\\,\\diamondsuit\\, (b\\,\\diamondsuit \\,c) = (a\\,\\diamondsuit \\,b)\\cdot c$ and that $a\\,\\diamondsuit \\,a=1$ for all nonzero real numbers $a, b,$ and $c$. What is the value of $24\\,\\diamondsuit\\,(3\\,\\diamondsuit\\,12)$?",
+      "choices": {
+        "A": "8",
+        "B": "12",
+        "C": "24",
+        "D": "48",
+        "E": "96"
+      },
+      "answer": "E",
+      "solution": "First, $a\\diamondsuit 1 = a\\diamondsuit(a\\diamondsuit a) = (a\\diamondsuit a)\\cdot a = a$. Next, $(a\\diamondsuit b)\\cdot b = a\\diamondsuit(b\\diamondsuit b) = a\\diamondsuit 1 = a$, so $a\\diamondsuit b = \\frac{a}{b}$ for all nonzero $a, b$. Therefore $24\\diamondsuit(3\\diamondsuit 12) = 24 \\diamondsuit \\frac{3}{12} = \\frac{24}{1/4} = 96$. The answer is $\\boxed{96}$."
+    },
+    {
+      "position": 21,
+      "source": "2020 AMC 12B Problem 21",
+      "question": "How many positive integers $n$ satisfy $$\\dfrac{n+500}{50} = \\lfloor \\sqrt{n} \\rfloor?$$ (Recall that $\\lfloor x \\rfloor$ is the greatest integer not exceeding $x$.)",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "C",
+      "solution": "Set $k = \\lfloor \\sqrt{n} \\rfloor$, so $n = 50k - 500$ and $k^2 \\le n < (k+1)^2$. The left inequality gives $k^2 - 50k + 500 \\le 0$, i.e. $25 - 5\\sqrt{5} \\le k \\le 25 + 5\\sqrt{5}$, so $14 \\le k \\le 36$. The right inequality gives $50k - 500 < k^2 + 2k + 1$, i.e. $k^2 - 48k + 501 > 0$, which holds for $k \\le 15$ or $k \\ge 33$ (the roots are $24 \\pm 5\\sqrt{3} \\approx 15.3$ and $32.7$). Intersecting, $k \\in \\{14, 15, 33, 34, 35, 36\\}$, giving the $6$ values $n = 200, 250, 1150, 1200, 1250, 1300$, each of which checks out. The answer is $\\boxed{6}$."
+    },
+    {
+      "position": 22,
+      "source": "2018 AMC 12B Problem 22",
+      "question": "Consider polynomials $P(x)$ of degree at most $3$, each of whose coefficients is an element of $\\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}$. How many such polynomials satisfy $P(-1) = -7$?",
+      "choices": {
+        "A": "348",
+        "B": "336",
+        "C": "342",
+        "D": "354",
+        "E": "360"
+      },
+      "answer": "A",
+      "solution": "Write $P(x) = ax^3+bx^2+cx+d$ with $a,b,c,d \\in \\{0,\\dots,9\\}$. Then $P(-1) = (b+d) - (a+c) = -7$, so if $t = a+c$ we need $b+d = t-7$. The number of ordered pairs of digits summing to $s$ is $s+1$ for $0 \\le s \\le 9$ and $19-s$ for $10 \\le s \\le 18$. Summing over $t = 7, \\dots, 18$: $8\\cdot 1 + 9\\cdot 2 + 10\\cdot 3 + 9\\cdot 4 + 8\\cdot 5 + 7\\cdot 6 + 6\\cdot 7 + 5\\cdot 8 + 4\\cdot 9 + 3\\cdot 10 + 2\\cdot 9 + 1\\cdot 8 = 8+18+30+36+40+42+42+40+36+30+18+8 = 348$. The answer is $\\boxed{348}$."
+    },
+    {
+      "position": 23,
+      "source": "2019 AMC 12B Problem 23",
+      "question": "How many sequences of $0$s and $1$s of length $15$ are there that begin with a $0$, end with a $0$, contain no two consecutive $0$s, and contain no three consecutive $1$s?",
+      "choices": {
+        "A": "18",
+        "B": "19",
+        "C": "22",
+        "D": "21",
+        "E": "24"
+      },
+      "answer": "D",
+      "solution": "Since no two $0$s are adjacent and the sequence starts and ends with $0$, the sequence is determined by the gaps of $1$s between consecutive $0$s, where each gap has size $1$ or $2$ (no three consecutive $1$s). If there are $k$ zeros, there are $k-1$ gaps, each of size $1$ or $2$, totaling $15 - k$ ones. Writing $g_i \\in \\{1,2\\}$, we need $g_1 + \\cdots + g_{k-1} = 15-k$. Letting $j$ be the number of gaps of size $2$: $j = (15-k) - (k-1) = 16 - 2k$, with $0 \\le j \\le k-1$, giving $k = 6, 7, 8$ with $j = 4, 2, 0$ respectively. The counts are $\\binom{5}{4} + \\binom{6}{2} + \\binom{7}{0} = 5 + 15 + 1 = 21$. The answer is $\\boxed{21}$."
+    },
+    {
+      "position": 24,
+      "source": "2023 AMC 12A Problem 24",
+      "question": "Let $K$ be the number of sequences $A_1$, $A_2$, $\\dots$, $A_n$ such that $n$ is a positive integer less than or equal to $5$, each $A_i$ is a subset of $\\{1, 2, 3, 4, 5\\}$, and $A_{i-1} \\subseteq A_i$ for each $i$ between $2$ and $n$, inclusive. What is $K$?",
+      "choices": {
+        "A": "12000",
+        "B": "12200",
+        "C": "12375",
+        "D": "12625",
+        "E": "11875"
+      },
+      "answer": "B",
+      "solution": "Fix $n$ and build the chain $A_1 \\subseteq A_2 \\subseteq \\cdots \\subseteq A_n$ element by element. For each of the $5$ elements of $\\{1,2,3,4,5\\}$, record the first index at which it appears: it may enter at stage $1, 2, \\dots, n$, or never — that is $n+1$ choices per element, and every such assignment determines a unique valid chain. Hence for fixed $n$ there are $(n+1)^5$ chains. Summing over $n = 1, \\dots, 5$: $K = 2^5 + 3^5 + 4^5 + 5^5 + 6^5 = 32 + 243 + 1024 + 3125 + 7776 = 12200$. The answer is $\\boxed{12200}$."
+    },
+    {
+      "position": 25,
+      "source": "2015 AMC 12B Problem 25",
+      "question": "A bee starts flying from point $P_0$. She flies $1$ inch due east to point $P_1$. For $j \\ge 1$, once the bee reaches point $P_j$, she turns $90^{\\circ}$ counterclockwise and then flies $j+1$ inches straight to point $P_{j+1}$. How far, in inches, is $P_{20}$ from $P_0$?",
+      "choices": {
+        "A": "5\\sqrt{2}",
+        "B": "8",
+        "C": "10",
+        "D": "8\\sqrt{2}",
+        "E": "10\\sqrt{2}"
+      },
+      "answer": "E",
+      "solution": "The directions cycle east, north, west, south. The east-west displacement is $(1+5+9+13+17) - (3+7+11+15+19) = 45 - 55 = -10$, and the north-south displacement is $(2+6+10+14+18) - (4+8+12+16+20) = 50 - 60 = -10$. So $P_{20} = (-10, -10)$ relative to $P_0$, and the distance is $\\sqrt{10^2+10^2} = 10\\sqrt{2}$. The answer is $\\boxed{10\\sqrt{2}}$."
+    }
+  ]
+}

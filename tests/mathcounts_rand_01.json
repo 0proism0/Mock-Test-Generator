@@ -1,0 +1,99 @@
+{
+ "id": "mathcounts_rand_01",
+ "competition": "MATHCOUNTS",
+ "title": "MATHCOUNTS — Random Mock #1",
+ "instructions": "10 questions · 40 minutes · No calculator. Answers are integers from 000 to 999.",
+ "time_limit_min": 40,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 1",
+   "question": "What is the value of (7 × 2) − (3 × 4 + 2)?",
+   "choices": null,
+   "answer": "0",
+   "solution": "Answer: 0 6.. (7 × 2) − (3 × 4 + 2) = (14) − (12 + 2) = 14 − 14 = 𝟎𝟎.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 2,
+   "source": "2026 MATHCOUNTS State Sprint Problem 2",
+   "question": "Maxwell is signing up for three afterschool clubs on different school days of the week. If Maxwell is signing up for the math and chess clubs, then how many clubs can Maxwell select from as his third club? Afterschool Clubs Monday Tu esdayW ednesday Thursday Friday Robotics Coding Spanish Journalism Olympiad Debate Wr iting Math Fitness Baking Drama Reading Photography Music/Band Poetry Chess History Culinary Fashion Astronomy Film French Baseball Gardening Business",
+   "choices": null,
+   "answer": "14",
+   "solution": "Answer: 14clubs. Maxwell has Tuesday, Thursday, and Friday available, thus 6 + 3 + 5 = 14 clubs to choose from.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 3,
+   "source": "2026 MATHCOUNTS State Sprint Problem 3",
+   "question": "What is the sum of the three distinct prime numbers that are divisors of 29 2 − 17 2?",
+   "choices": null,
+   "answer": "28",
+   "solution": "Answer: 28. 292 − 172 = (29 + 17)(29 − 17) = 46 × 12 = (2 × 23)(22 × 3), with 2, 3, and 23 as the distinct prime divisors, summing to 2 + 3 + 23 = 28.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 4,
+   "source": "2026 MATHCOUNTS State Sprint Problem 4",
+   "question": "Sally ate 2 of her candies and gave half of the leftover candies to her friend. If she has 24 candies left, how many candies did she originally have?",
+   "choices": null,
+   "answer": "50",
+   "solution": "Answer: 50candies. Sally at the end kept half of the remaining candies after eating 2, leaving 24 candies for herself, and the friend had the other half, thus 24 candies. Thus, Sally had 48 candies after eating 2 but before dividing them with her friend; adding the 2 that she ate means that Sally started with 50 candies.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 5,
+   "source": "2026 MATHCOUNTS State Team Problem 5",
+   "question": "Let M, A, T and H have the following coordinates: M(0, 7), A(0, 12), T(3, 2), and H(10, 8). Point P is chosen at random on segment TH. What is the probability that the area of triangle MAP is greater than or equal to 15? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "7",
+   "solution": "Answer: 7 25.. Let MA = 12 − 7 = 5 along the 𝑦𝑦 -axis be the base of △MAP. Then to have an area of at least 15 for △MAP, a height of at least 6 is required, meaning the absolute value of the 𝑥𝑥 -coordinate of P must be at least 6. Because P lies on TH����, with T at (3; 2) and H at (10; 8) , choosing a point randomly on TH���� is equivalent to choosing randomly an 𝑥𝑥 -coordinate in the interval 3 ≤ 𝑥𝑥 ≤ 10, with total length of 10 − 3 = 7 but only 6 ≤ 𝑥𝑥 ≤ 10, with length 10 − 6 = 4, satisfies the triangle area requirements, so the probability of such is 𝟒𝟒𝟐𝟐 .",
+   "type": "integer_answer"
+  },
+  {
+   "n": 6,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 6",
+   "question": "Farmer Julie is planning on increasing the length and width of her rectangular wheat field, each by the same percentage. The crop yield per acre will not change, and neither will the water required for each acre. To account for this, Julie must double the capacity of her farm’s water reservoir. By what percent is Julie planning on increasing each dimension of her wheat field? Express your answer as a decimal to the nearest tenth.",
+   "choices": null,
+   "answer": "66",
+   "solution": "Answer: 66 26.. Water needs multiplying by 2 with water usage per acre unchanged means that the acreage (land area) is being multiplied by the same factor of 2. Thus, land area 𝐴𝐴 = 𝑙𝑙𝑤𝑤 goes to 2𝑙𝑙 𝑤𝑤 = (𝑘𝑘𝑙𝑙)(𝑘𝑘𝑤𝑤) = 𝑘𝑘 2𝑙𝑙𝑤𝑤, which means 𝑘𝑘 2 = 2, so the each of the length and width are multiplied by √2 = 1.414 21…. Therefore, the relative increase in each of the length and width of the field is 1.414 21… − 1 = 0.414 21… × 100 % = 41. 421… %, which rounds to the nearest 0.1 % as 41.4 %.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 7,
+   "source": "2026 MATHCOUNTS State Sprint Problem 7",
+   "question": "Max is driving at a constant rate of 55 miles per hour. How many miles does Max travel in three minutes? Express your answer as a decimal to the nearest hundredth.",
+   "choices": null,
+   "answer": null,
+   "solution": "Answer: 2.75mi 12.. The distance 𝑑𝑑, speed [rate] 𝑟𝑟, and time duration 𝑡𝑡 are related by 𝑑𝑑 = 𝑟𝑟𝑟𝑟. Here 𝑟𝑟 = 55 mih and 𝑟𝑟 = 3 min = 3� 160 h� = 120 h, so 𝑑𝑑 = �55 mih� � 120 h� = 114 mi = 2.75 mi.",
+   "type": "proof"
+  },
+  {
+   "n": 8,
+   "source": "2026 MATHCOUNTS State Team Problem 8",
+   "question": "A circle is centered at point C with coordinates (11, 4) and passes through point D with coordinates (17, 10). The line y = x − 1 splits the circle into two regions. What is the area of the smaller region? Express your answer as a decimal to the nearest tenth.",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5 (packs) 28.. The figure shows the given points C and D as well the portion, notated as KM�����, of the M given line that is on or interior to the circle. A circle with center C (11; 4) passing L D through D(17; 10) has radius �(17 − 11)2 + (10 − 4)2 = √62 + 62= 6√2. There is K C no further need of D. Let L be the point on the given line that is closest to C; CL���� ⊥ KM�����. The shortest distance between the circle center and the line 𝑥𝑥 − 𝑦𝑦 − 1 = 0 is given by CL = � 11−4−1�12 +(−1)2� = 6√2= 3√2, with L being at (−3; 3) relative to C, thus at L (8; 7). CKL and CML are congruent right triangles with common leg CL being ½ of the length of the respective hypotenuses CK and CM (both of which are radii of circle C). That means that the sides of both triangles CKL and CML have length ratios in increasing order of 1: √3: 2, which means angle measures of 30° -60°-90°, so m∠KCM = m∠KCL + m∠LCD = 60° + 60° = 120°. That means that the area of sector KCM is 1/3 the area of the whole circle, which, in turn, means the desired area, the area of the smaller segment of circle C formed by line segment KM, is the area of the sector KCM minus the area of triangle KCM. The area enclosed by the circle is π �6√2�2 = 72π, 1/3 of which is 24π. We know that CL = 3√2, KL = LM = √3 CL = 3√6, and KM = KL + LM = 6√6, so the area of KCM is �3√2��6√6� = 9√12 = 2 18√3. Therefore, the desired area is 24π − 18√3 = 44.221…, which rounds to the nearest tenth as 44.2. 2026 STATE COMPETITION Solutions",
+   "type": "integer_answer"
+  },
+  {
+   "n": 9,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 9",
+   "question": "A sequence is said to be non-decreasing when each term is greater than or equal quences to the term before it. For example, 4,4,4,5,6 is non-decreasing, but 4,4,4,3,5,6 is not because 3 is less than 4, and 3 comes after 4 in the sequence. How many non-decreasing sequences of positive integers with length 2026 terms start with 1 and end with 3?",
+   "choices": null,
+   "answer": "210",
+   "solution": "Answer: 210 29.. We have a finite sequence consisting of a 1 followed by a subsequence of a nonnegative integer 𝑛𝑛 count of terms each of which is a 1 , followed by a subsequence of a nonnegative integer 𝑚𝑚 count of terms each of which is a 2, followed by a subsequence of a nonnegative integer 2024 − 𝑛𝑛 − 𝑚𝑚 count of terms each of which is a 3, followed by a 3. Thus, 0 ≤ min(𝑚𝑚, 𝑛𝑛) ≤ max(𝑚𝑚, 𝑛𝑛) ≤ 𝑛𝑛 + 𝑚𝑚 ≤ 2024 in order to be meaningful and totals 1 + 𝑛𝑛 + 𝑚𝑚 + (2024 − 𝑛𝑛 − 𝑚𝑚 ) + 1 = 2026 terms in the sequence, as required by the question. We now focus on the middle 2024 terms because those are the only ones that can change to produce a different sequence—the term at each end is fixed in value. Let’s put a vertical boundary bar immediately to the right of the latest term with value 1 in the full 2026- term sequence and another such bar immediately to the left of the earlie st term with value 3. The two bars will be contiguous if there are no terms with value 2. A bar will be at the far left end of the subsequence of the middle 2024 terms if there are no 1s in the full sequence except the fixed initial 1, and, similarly, a bar will be at the far righ t end of the subsequence of the middle 2024 terms if there are no 3s in the full sequence except the fixed initial 3. Moving a bar to another location means the sequence has changed, which counts as a distinct sequence. In essence, we have 2024 slots for numbers (not counting the fixed number values at each end) and 2 slots for boundary bars—with all 1s to the left of the leftmost bar, all 2s between the two bars, and all 3s to the right of the rightmost bar. One boundary bar can go in any of the 2026 slots and the other boundary bar can go in any of the remaining 2025 slots; however, swapping the two bars does not change the sequence, so we are double- counting, which we need to remedy. Therefore, the count of distinct sequences is 2026 × 20252 = 𝟐𝟐 𝟎𝟎𝟐𝟐𝟏𝟏 𝟑𝟑𝟐𝟐𝟐𝟐.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 10,
+   "source": "2026 MATHCOUNTS Chapter Sprint Problem 10",
+   "question": "In the diagram shown, the larger circle has a diameter of 10 feet and the smaller circle has a diameter of 6 feet. What is the area, in square feet, of the shaded region? Express your answer in terms of π.",
+   "choices": null,
+   "answer": "16",
+   "solution": "Answer: 16πft2. The area enclosed by a circle of radius 𝑟𝑟 is π𝑟𝑟 2 . Read the question carefully to observe that we are not given the radius but the diameter, which is 2 times the radius. Thus, the outer circle has radius 10 ft = 5 ft and the inner circle has radius 6 ft = 3 ft. Therefore, the shaded area is the area enclosed 2 2 by the outer circle minus the area enclosed by the inner circle, thus π(5 ft)2 − π(3 ft)2 = (25 − 9)π ft2 = 𝟏𝟏𝟔𝟔π ft2 . 2026 CHAPTER COMPETITION Solutions",
+   "type": "integer_answer"
+  }
+ ]
+}

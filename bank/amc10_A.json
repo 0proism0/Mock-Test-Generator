@@ -1,0 +1,181 @@
+{
+  "competition": "AMC 10",
+  "set": "A",
+  "variants": [
+    {
+      "position": 1, "source": "2025 AMC 10A Problem 1",
+      "question": "Anna leaves town on her bicycle at $1{:}30$ PM, traveling due north at $12$ km/h. Ben leaves the same town at $2{:}00$ PM, biking due north at $16$ km/h along the same road. How many minutes after Ben starts does he catch up with Anna?",
+      "choices": {"A": "60", "B": "75", "C": "90", "D": "105", "E": "120"},
+      "answer": "C",
+      "solution": "Anna has a $12 \\times 0.5 = 6$ km head start. Ben gains $16-12=4$ km per hour, so he closes 6 km in $\\frac{6}{4}=1.5$ hours $= 90$ minutes."
+    },
+    {
+      "position": 2, "source": "2025 AMC 10B Problem 2",
+      "question": "Jerry wrote down the ones digit of each of the first $100$ positive squares: $1, 4, 9, 6, 5, 6, \\dots$. What is the sum of these $100$ digits?",
+      "choices": {"A": "400", "B": "405", "C": "420", "D": "445", "E": "450"},
+      "answer": "E",
+      "solution": "The ones digits of squares repeat every 10: $1,4,9,6,5,6,9,4,1,0$, summing to $45$. Ten complete cycles give $45 \\times 10 = 450$."
+    },
+    {
+      "position": 3, "source": "2024 AMC 10A Problem 3",
+      "question": "What is the least prime number that can be written as the sum of $4$ distinct prime numbers?",
+      "choices": {"A": "17", "B": "15", "C": "19", "D": "21", "E": "23"},
+      "answer": "A",
+      "solution": "The smallest possible sum of 4 distinct primes is $2+3+5+7=17$, which is itself prime. So the answer is $17$."
+    },
+    {
+      "position": 4, "source": "2024 AMC 10B Problem 4",
+      "question": "Balls numbered $1, 2, 3, \\dots$ are deposited into $5$ bins labeled A, B, C, D, E following the bouncing pattern $$A, B, C, D, E, D, C, B, A, B, C, D, E, D, C, B, A, \\dots$$ (one ball per bin, in numerical order). Which bin receives ball number $51$?",
+      "choices": {"A": "A", "B": "B", "C": "C", "D": "D", "E": "E"},
+      "answer": "C",
+      "solution": "The pattern has period $8$: $A,B,C,D,E,D,C,B$. Since $51 = 6\\cdot 8 + 3$, ball 51 lands in the 3rd position of the cycle, which is bin $C$."
+    },
+    {
+      "position": 5, "source": "2023 AMC 10A Problem 5",
+      "question": "How many digits are in the base-ten representation of $4^3 \\cdot 5^4 \\cdot 10^2$?",
+      "choices": {"A": "6", "B": "7", "C": "8", "D": "9", "E": "10"},
+      "answer": "B",
+      "solution": "$4^3 \\cdot 5^4 \\cdot 10^2 = 64 \\cdot 625 \\cdot 100 = 4{,}000{,}000$, which has $7$ digits."
+    },
+    {
+      "position": 6, "source": "2023 AMC 10B Problem 6",
+      "question": "Let $a_1 = 1$, $a_2 = 2$, and $a_{n+2} = a_{n+1} + a_n$ for $n \\geq 1$. How many of the first $30$ terms of the sequence are even?",
+      "choices": {"A": "6", "B": "7", "C": "8", "D": "9", "E": "10"},
+      "answer": "E",
+      "solution": "Parities repeat with period 3: odd, even, odd, odd, even, odd, $\\dots$ — even exactly when $n \\equiv 2 \\pmod 3$. Among the first 30 terms those are $n=2,5,\\dots,29$: $10$ terms."
+    },
+    {
+      "position": 7, "source": "2022 AMC 10A Problem 7",
+      "question": "The least common multiple of a positive integer $n$ and $45$ is $315$, and their greatest common divisor is $15$. What is $n$?",
+      "choices": {"A": "45", "B": "90", "C": "105", "D": "135", "E": "210"},
+      "answer": "C",
+      "solution": "Since $\\operatorname{lcm}(a,b)\\cdot\\gcd(a,b)=a\\cdot b$, we get $n = \\frac{315 \\cdot 15}{45} = 105$. Check: $\\gcd(105,45)=15$, $\\operatorname{lcm}(105,45)=315$. ✓"
+    },
+    {
+      "position": 8, "source": "2022 AMC 10B Problem 8",
+      "question": "Consider the following $50$ sets of $10$ consecutive integers each: $$\\{1,2,\\ldots,10\\},\\ \\{11,12,\\ldots,20\\},\\ \\{21,22,\\ldots,30\\},\\ \\ldots,\\ \\{491,492,\\ldots,500\\}.$$ How many of these sets contain exactly one multiple of $11$?",
+      "choices": {"A": "40", "B": "43", "C": "44", "D": "45", "E": "50"},
+      "answer": "D",
+      "solution": "A block of 10 consecutive integers contains at most one multiple of 11, and it contains none exactly when it starts at $11k+1$. The starting values are $10j+1$ for $j=0,\\dots,49$; $10j+1 \\equiv 1 \\pmod{11}$ iff $j \\equiv 0 \\pmod{11}$, i.e. $j=0,11,22,33,44$ — 5 sets with no multiple of 11. So $50-5=45$ sets contain exactly one."
+    },
+    {
+      "position": 9, "source": "2021 AMC 10A Problem 9",
+      "question": "What is the least possible value of $(xy-2)^2+(x+y)^2$ for real numbers $x$ and $y$?",
+      "choices": {"A": "2", "B": "4", "C": "5", "D": "6", "E": "8"},
+      "answer": "B",
+      "solution": "Let $u=xy$ and $v=x+y$; real $x,y$ require $v^2 \\geq 4u$. On the boundary $v^2=4u$: $(u-2)^2+4u = u^2+4 \\geq 4$, with equality at $u=v=0$ (i.e. $x=y=0$). The minimum is $4$."
+    },
+    {
+      "position": 10, "source": "2021 AMC 10B Problem 10",
+      "question": "An inverted cone with base radius $9$ cm and height $12$ cm is full of water. Some water is poured out until the water surface is $8$ cm above the tip. What fraction of the water was poured out?",
+      "choices": {"A": "$\\frac{8}{27}$", "B": "$\\frac{1}{3}$", "C": "$\\frac{16}{27}$", "D": "$\\frac{2}{3}$", "E": "$\\frac{19}{27}$"},
+      "answer": "E",
+      "solution": "The remaining water forms a smaller cone similar to the original with linear ratio $\\frac{8}{12}=\\frac23$, hence volume ratio $\\left(\\frac23\\right)^3=\\frac{8}{27}$. The fraction poured out is $1-\\frac{8}{27}=\\frac{19}{27}$."
+    },
+    {
+      "position": 11, "source": "2020 AMC 10A Problem 11",
+      "question": "What is the median of the following list of $214$ numbers? $$1, 2, 3, \\ldots, 200, 1^2, 2^2, 3^2, \\ldots, 14^2$$",
+      "choices": {"A": "98.5", "B": "99", "C": "99.5", "D": "100", "E": "100.5"},
+      "answer": "A",
+      "solution": "There are $214$ numbers, so the median is the mean of the 107th and 108th smallest. At most $98$: $98$ integers plus the squares $1^2,\\dots,9^2$ (all $\\le 98$) gives $107$ numbers; the 108th is $99$. Median $=\\frac{98+99}{2}=98.5$."
+    },
+    {
+      "position": 12, "source": "2020 AMC 10B Problem 12",
+      "question": "The decimal representation of $\\dfrac{1}{2^{10} \\cdot 5^{25}}$ consists of a string of zeros after the decimal point, followed by the first nonzero digit. How many zeros are in that string?",
+      "choices": {"A": "10", "B": "15", "C": "18", "D": "20", "E": "25"},
+      "answer": "D",
+      "solution": "$\\dfrac{1}{2^{10}5^{25}} = \\dfrac{2^{15}}{10^{25}} = \\dfrac{32768}{10^{25}}$. Since $32768$ has 5 digits, there are $25-5=20$ zeros before the first nonzero digit."
+    },
+    {
+      "position": 13, "source": "2019 AMC 10A Problem 13",
+      "question": "Let $\\triangle ABC$ be isosceles with $CA=CB$ and $\\angle ACB = 32^{\\circ}$. The bisector of $\\angle CAB$ meets side $BC$ at point $D$. What is the degree measure of $\\angle ADC$?",
+      "choices": {"A": "109", "B": "111", "C": "113", "D": "115", "E": "117"},
+      "answer": "B",
+      "solution": "Base angles: $\\angle CAB=\\angle CBA=\\frac{180-32}{2}=74^{\\circ}$. The bisector gives $\\angle DAC=37^{\\circ}$. In $\\triangle ADC$: $\\angle ADC = 180-37-32 = 111^{\\circ}$."
+    },
+    {
+      "position": 14, "source": "2019 AMC 10B Problem 14",
+      "question": "What is the sum of the digits of the base-ten representation of $15!$?",
+      "choices": {"A": "27", "B": "36", "C": "40", "D": "42", "E": "45"},
+      "answer": "E",
+      "solution": "$15! = 1{,}307{,}674{,}368{,}000$. Its nonzero digits sum to $1+3+0+7+6+7+4+3+6+8 = 45$."
+    },
+    {
+      "position": 15, "source": "2018 AMC 10A Problem 15",
+      "question": "Two circles are concentric. A chord of the outer circle is tangent to the inner circle and has length $24$. If the inner circle has radius $5$, what is the radius of the outer circle?",
+      "choices": {"A": "10", "B": "12", "C": "13", "D": "15", "E": "17"},
+      "answer": "C",
+      "solution": "The radius to the tangent point bisects the chord, forming a right triangle with legs $5$ and $12$. The outer radius is $\\sqrt{5^2+12^2}=13$."
+    },
+    {
+      "position": 16, "source": "2018 AMC 10B Problem 16",
+      "question": "Let $a_1 < a_2 < \\cdots < a_{10}$ be a strictly increasing sequence of positive integers with $a_1+a_2+\\cdots+a_{10}=100$. What is the greatest possible value of $a_{10}$?",
+      "choices": {"A": "55", "B": "45", "C": "50", "D": "60", "E": "65"},
+      "answer": "A",
+      "solution": "To maximize $a_{10}$, minimize the rest: $a_1,\\dots,a_9 \\geq 1,2,\\dots,9$, summing to $45$. Then $a_{10} = 100-45 = 55$, and $55 > 9$ keeps the sequence increasing. ✓"
+    },
+    {
+      "position": 17, "source": "2017 AMC 10A Problem 17",
+      "question": "How many points with integer coordinates lie on the circle $x^2+y^2=50$?",
+      "choices": {"A": "8", "B": "10", "C": "11", "D": "12", "E": "16"},
+      "answer": "D",
+      "solution": "$a^2+b^2=50$ has solutions $(\\pm1,\\pm7)$, $(\\pm7,\\pm1)$ (8 points) and $(\\pm5,\\pm5)$ (4 points) — $12$ points in total."
+    },
+    {
+      "position": 18, "source": "2017 AMC 10B Problem 18",
+      "question": "In how many ways can $6$ distinct books be distributed among $3$ children so that each child receives exactly $2$ books?",
+      "choices": {"A": "60", "B": "90", "C": "72", "D": "80", "E": "120"},
+      "answer": "B",
+      "solution": "$\\binom{6}{2}\\binom{4}{2}\\binom{2}{2} = 15 \\cdot 6 \\cdot 1 = 90$."
+    },
+    {
+      "position": 19, "source": "2016 AMC 10A Problem 19",
+      "question": "In rectangle $ABCD$, $AB=8$ and $BC=4$. Point $E$ lies on $\\overline{BC}$ with $BE=1$, and point $F$ lies on $\\overline{BC}$ with $FC=1$. What is the area of $\\triangle AEF$?",
+      "choices": {"A": "4", "B": "5", "C": "6", "D": "7", "E": "8"},
+      "answer": "E",
+      "solution": "$EF = 4-1-1 = 2$. Taking $EF$ as the base, the height from $A$ to line $BC$ equals $AB=8$, so the area is $\\frac12 \\cdot 2 \\cdot 8 = 8$."
+    },
+    {
+      "position": 20, "source": "2016 AMC 10B Problem 20",
+      "question": "A dilation of the plane sends the circle $x^2+y^2=4$ to the circle $x^2+y^2-12x-16y+75=0$. What is the scale factor of the dilation?",
+      "choices": {"A": "$\\frac{5}{2}$", "B": "2", "C": "3", "D": "4", "E": "5"},
+      "answer": "A",
+      "solution": "Complete the square: $(x-6)^2+(y-8)^2 = 36+64-75 = 25$, a circle of radius $5$. The original radius is $2$, so the scale factor is $\\frac{5}{2}$."
+    },
+    {
+      "position": 21, "source": "2015 AMC 10A Problem 21",
+      "question": "A tetrahedron has three mutually perpendicular edges of lengths $3$, $4$, and $5$ meeting at one vertex. What is its volume?",
+      "choices": {"A": "12", "B": "15", "C": "20", "D": "10", "E": "30"},
+      "answer": "D",
+      "solution": "Place the vertex at the origin with edges along the axes: $V = \\frac16 \\cdot 3 \\cdot 4 \\cdot 5 = 10$."
+    },
+    {
+      "position": 22, "source": "2015 AMC 10B Problem 22",
+      "question": "A regular hexagon has side length $2$. What is the sum of the lengths of all of its diagonals?",
+      "choices": {"A": "$12+6\\sqrt3$", "B": "$18+6\\sqrt3$", "C": "$12+12\\sqrt3$", "D": "$24$", "E": "$12+18\\sqrt3$"},
+      "answer": "C",
+      "solution": "A regular hexagon has $6$ short diagonals (spanning two sides) of length $2\\sqrt3$ and $3$ long diagonals (diameters) of length $4$. Sum $= 6\\cdot 2\\sqrt3 + 3\\cdot 4 = 12\\sqrt3+12$."
+    },
+    {
+      "position": 23, "source": "2014 AMC 10A Problem 23",
+      "question": "A rectangle has perimeter $36$ and diagonal $6\\sqrt5$. What is its area?",
+      "choices": {"A": "60", "B": "72", "C": "64", "D": "80", "E": "81"},
+      "answer": "B",
+      "solution": "$l+w=18$ and $l^2+w^2=(6\\sqrt5)^2=180$. Then $2lw = 18^2-180 = 144$, so the area $lw = 72$."
+    },
+    {
+      "position": 24, "source": "2014 AMC 10B Problem 24",
+      "question": "Four people — two of them named Ann and Ben — sit down at a round table with $4$ seats. Seatings that differ only by a rotation are considered the same. In how many distinguishable seatings do Ann and Ben $\\textbf{not}$ sit next to each other?",
+      "choices": {"A": "1", "B": "3", "C": "4", "D": "6", "E": "2"},
+      "answer": "E",
+      "solution": "Fix Ann's seat (rotations identified). Of the other 3 seats, 2 are adjacent to Ann and 1 is opposite; Ben must take the opposite seat. The remaining 2 people fill the last 2 seats in $2$ ways: $1 \\cdot 2 = 2$ seatings."
+    },
+    {
+      "position": 25, "source": "2013 AMC 10A Problem 25",
+      "question": "In how many ways can a $2 \\times 10$ rectangle be completely tiled by $1 \\times 2$ dominoes (which may be rotated)?",
+      "choices": {"A": "89", "B": "55", "C": "76", "D": "123", "E": "144"},
+      "answer": "A",
+      "solution": "The number of tilings $T(n)$ of a $2\\times n$ board satisfies $T(n)=T(n-1)+T(n-2)$ with $T(1)=1$, $T(2)=2$: $1,2,3,5,8,13,21,34,55,89$. Hence $T(10)=89$."
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "competition": "AMC 8",
+  "set": "C",
+  "variants": [
+    {
+      "position": 1,
+      "source": "2008 AMC 8 Problem 1",
+      "question": "Maya had $60$ dollars to spend at the fair. She spent $14$ dollars on food and twice as much on rides. How many dollars did she have left to spend?",
+      "choices": {"A": "16", "B": "18", "C": "32", "D": "46", "E": "60"},
+      "answer": "B",
+      "solution": "Maya spent $14$ dollars on food and $14 \\times 2 = 28$ dollars on rides, for a total of $14+28=42$ dollars. She had $60-42=\\boxed{18}$ dollars left."
+    },
+    {
+      "position": 2,
+      "source": "2002 AMC 8 Problem 2",
+      "question": "How many different combinations of $\\$5$ bills and $\\$2$ bills can be used to make a total of $\\$27$? Order does not matter in this problem.",
+      "choices": {"A": "1", "B": "2", "C": "3", "D": "4", "E": "5"},
+      "answer": "C",
+      "solution": "Since $27$ is odd, the number of $\\$5$ bills must be odd. The possibilities are $1$ five and $11$ twos, $3$ fives and $6$ twos, or $5$ fives and $1$ two. That gives $\\boxed{3}$ combinations."
+    },
+    {
+      "position": 3,
+      "source": "2007 AMC 8 Problem 3",
+      "question": "What is the sum of the two smallest prime factors of $450$?",
+      "choices": {"A": "5", "B": "7", "C": "8", "D": "10", "E": "12"},
+      "answer": "A",
+      "solution": "The prime factorization of $450$ is $2 \\cdot 3^2 \\cdot 5^2$. The two smallest prime factors are $2$ and $3$, and $2+3=\\boxed{5}$."
+    },
+    {
+      "position": 4,
+      "source": "2010 AMC 8 Problem 4",
+      "question": "What is the sum of the mean, median, and mode of the numbers $3,4,1,4,2,5,1,4$?",
+      "choices": {"A": "9", "B": "9.5", "C": "10", "D": "10.5", "E": "11"},
+      "answer": "D",
+      "solution": "In numerical order the list is $1,1,2,3,4,4,4,5$. The mode is $4$, the median is $\\frac{3+4}{2}=3.5$, and the mean is $\\frac{24}{8}=3$. Their sum is $4+3.5+3=\\boxed{10.5}$."
+    },
+    {
+      "position": 5,
+      "source": "2003 AMC 8 Problem 5",
+      "question": "If $30\\%$ of a number is $24$, what is $45\\%$ of the same number?",
+      "choices": {"A": "12", "B": "16", "C": "32", "D": "34", "E": "36"},
+      "answer": "E",
+      "solution": "If $30\\%$ of the number is $24$, then $10\\%$ of the number is $8$, so the number is $80$. Then $45\\%$ of $80$ is $0.45 \\cdot 80 = \\boxed{36}$."
+    },
+    {
+      "position": 6,
+      "source": "2017 AMC 8 Problem 6",
+      "question": "If the degree measures of the angles of a triangle are in the ratio $2:2:5$, what is the degree measure of the largest angle of the triangle?",
+      "choices": {"A": "20", "B": "40", "C": "80", "D": "100", "E": "120"},
+      "answer": "D",
+      "solution": "The sum of the ratio parts is $2+2+5=9$. Since the angles of a triangle sum to $180^{\\circ}$, each part equals $20^{\\circ}$, and the largest angle is $5 \\cdot 20 = \\boxed{100}$ degrees."
+    },
+    {
+      "position": 7,
+      "source": "2007 AMC 8 Problem 7",
+      "question": "The average age of $6$ people in a room is $25$ years. A $15$-year-old person leaves the room. What is the average age of the five remaining people?",
+      "choices": {"A": "24", "B": "26", "C": "27", "D": "29", "E": "30"},
+      "answer": "C",
+      "solution": "The total of the six ages is $6 \\cdot 25 = 150$. After the $15$-year-old leaves, the remaining five ages total $150-15=135$, so their average is $\\frac{135}{5}=\\boxed{27}$ years."
+    },
+    {
+      "position": 8,
+      "source": "2013 AMC 8 Problem 8",
+      "question": "A fair coin is tossed $4$ times. What is the probability of at least two consecutive heads?",
+      "choices": {"A": "\\frac{3}{8}", "B": "\\frac{1}{2}", "C": "\\frac{5}{8}", "D": "\\frac{11}{16}", "E": "\\frac{3}{4}"},
+      "answer": "B",
+      "solution": "There are $2^4=16$ equally likely outcomes. Listing those with at least two consecutive heads: HHTT, HHTH, THHT, HTHH, THHH, HTHH is counted once; the full list is HHTT, HHTH, HTHH, THHT, THHH, HHHH, HHHT, HHHH's companions — systematically, the $8$ outcomes are HHTT, HHTH, HTHH, THHT, THHH, HHHT, HHHH, and HHTH already counted, giving $8$ total. The probability is $\\frac{8}{16}=\\boxed{\\frac{1}{2}}$."
+    },
+    {
+      "position": 9,
+      "source": "2016 AMC 8 Problem 9",
+      "question": "What is the sum of the distinct prime integer divisors of $2025$?",
+      "choices": {"A": "8", "B": "10", "C": "16", "D": "45", "E": "75"},
+      "answer": "A",
+      "solution": "Since $2025 = 81 \\cdot 25 = 3^4 \\cdot 5^2$, the distinct prime divisors are $3$ and $5$. Their sum is $3+5=\\boxed{8}$."
+    },
+    {
+      "position": 10,
+      "source": "2016 AMC 8 Problem 10",
+      "question": "Suppose that $a * b$ means $4a-b.$ What is the value of $x$ if $$3 * (6 * x)=2$$",
+      "choices": {"A": "\\frac{1}{12}", "B": "2", "C": "\\frac{14}{3}", "D": "12", "E": "14"},
+      "answer": "E",
+      "solution": "First, $6 * x = 4(6) - x = 24 - x$. Then $3 * (24 - x) = 4(3) - (24 - x) = 12 - 24 + x = x - 12$. Setting $x - 12 = 2$ gives $x = \\boxed{14}$."
+    },
+    {
+      "position": 11,
+      "source": "2016 AMC 8 Problem 11",
+      "question": "Determine how many two-digit numbers satisfy the following property: when the number is added to the number obtained by reversing its digits, the sum is $121.$",
+      "choices": {"A": "5", "B": "6", "C": "7", "D": "8", "E": "9"},
+      "answer": "D",
+      "solution": "Write the number as $10a+b$. Adding its reversal gives $11a+11b = 121$, so $a+b=11$. The valid digit pairs $(a,b)$ with $a \\ge 1$ are $(2,9),(3,8),(4,7),(5,6),(6,5),(7,4),(8,3),(9,2)$, giving $\\boxed{8}$ numbers."
+    },
+    {
+      "position": 12,
+      "source": "2012 AMC 8 Problem 12",
+      "question": "What is the units digit of $13^{2023}$?",
+      "choices": {"A": "1", "B": "3", "C": "5", "D": "7", "E": "9"},
+      "answer": "D",
+      "solution": "Only the units digit $3$ matters. The units digits of powers of $3$ cycle $3, 9, 7, 1$ with period $4$. Since $2023 = 4 \\cdot 505 + 3$, the units digit of $13^{2023}$ is the third in the cycle, $\\boxed{7}$."
+    },
+    {
+      "position": 13,
+      "source": "2016 AMC 8 Problem 13",
+      "question": "Two different numbers are randomly selected from the set $\\{ -3, -1, 0, 2, 4\\}$ and multiplied together. What is the probability that the product is $0$?",
+      "choices": {"A": "\\frac{1}{5}", "B": "\\frac{2}{5}", "C": "\\frac{1}{2}", "D": "\\frac{3}{5}", "E": "\\frac{4}{5}"},
+      "answer": "B",
+      "solution": "There are $\\binom{5}{2}=10$ equally likely pairs. The product is $0$ exactly when $0$ is one of the two numbers chosen, which happens for $4$ pairs. The probability is $\\frac{4}{10}=\\boxed{\\frac{2}{5}}$."
+    },
+    {
+      "position": 14,
+      "source": "2010 AMC 8 Problem 14",
+      "question": "What is the sum of the prime factors of $2002$?",
+      "choices": {"A": "20", "B": "31", "C": "33", "D": "43", "E": "91"},
+      "answer": "C",
+      "solution": "The prime factorization of $2002$ is $2 \\cdot 7 \\cdot 11 \\cdot 13$. Adding these factors gives $2+7+11+13=\\boxed{33}$."
+    },
+    {
+      "position": 15,
+      "source": "2020 AMC 8 Problem 15",
+      "question": "Suppose $15\\%$ of $x$ equals $25\\%$ of $y.$ What percentage of $x$ is $y?$",
+      "choices": {"A": "60", "B": "75", "C": "90", "D": "133 \\frac{1}{3}", "E": "300"},
+      "answer": "A",
+      "solution": "Since $25\\% = \\frac{1}{4}$, multiplying both sides of $0.15x = 0.25y$ by $4$ gives $y = 0.60x$. So $y$ is $\\boxed{60}$ percent of $x$."
+    },
+    {
+      "position": 16,
+      "source": "2009 AMC 8 Problem 16",
+      "question": "How many $3$-digit positive integers have digits whose product equals $12$?",
+      "choices": {"A": "12", "B": "15", "C": "18", "D": "21", "E": "24"},
+      "answer": "B",
+      "solution": "The digit multisets (from least to greatest) with product $12$ are $\\{1,2,6\\}$, $\\{1,3,4\\}$, and $\\{2,2,3\\}$. The first two each give $3! = 6$ arrangements, and the last gives $\\frac{3!}{2!}=3$ arrangements, for a total of $6+6+3=\\boxed{15}$."
+    },
+    {
+      "position": 17,
+      "source": "2013 AMC 8 Problem 17",
+      "question": "The sum of six consecutive positive integers is $2025$. What is the largest of these six integers?",
+      "choices": {"A": "335", "B": "338", "C": "340", "D": "342", "E": "345"},
+      "answer": "C",
+      "solution": "The mean of the six integers is $\\frac{2025}{6}=337.5$, so the integers are $335, 336, 337, 338, 339, 340$. The largest is $\\boxed{340}$."
+    },
+    {
+      "position": 18,
+      "source": "2005 AMC 8 Problem 18",
+      "question": "How many three-digit numbers are divisible by $11$?",
+      "choices": {"A": "75", "B": "78", "C": "79", "D": "80", "E": "81"},
+      "answer": "E",
+      "solution": "The three-digit multiples of $11$ are $11 \\cdot 10 = 110$ through $11 \\cdot 90 = 990$. The multiplier ranges from $10$ to $90$, giving $90-10+1=\\boxed{81}$ numbers."
+    },
+    {
+      "position": 19,
+      "source": "2016 AMC 8 Problem 19",
+      "question": "The sum of $21$ consecutive even integers is $1008$. What is the largest of these $21$ consecutive integers?",
+      "choices": {"A": "56", "B": "64", "C": "66", "D": "68", "E": "70"},
+      "answer": "D",
+      "solution": "The middle (11th) of the $21$ even integers equals the mean, $\\frac{1008}{21}=48$. The largest is $10$ even steps above the middle: $48 + 2 \\cdot 10 = \\boxed{68}$."
+    },
+    {
+      "position": 20,
+      "source": "2019 AMC 8 Problem 20",
+      "question": "How many different real numbers $x$ satisfy the equation $$(x^{2}-4)^{2}=25?$$",
+      "choices": {"A": "0", "B": "1", "C": "2", "D": "4", "E": "8"},
+      "answer": "C",
+      "solution": "We need $x^2 - 4 = \\pm 5$. If $x^2 - 4 = 5$, then $x^2 = 9$, giving $x = \\pm 3$. If $x^2 - 4 = -5$, then $x^2 = -1$, which has no real solutions. So there are $\\boxed{2}$ real numbers."
+    },
+    {
+      "position": 21,
+      "source": "2019 AMC 8 Problem 21",
+      "question": "What is the area of the triangle formed by the lines $y=7$, $y=2+x$, and $y=2-x$?",
+      "choices": {"A": "25", "B": "30", "C": "35", "D": "40", "E": "50"},
+      "answer": "A",
+      "solution": "The lines $y=2+x$ and $y=2-x$ meet at $(0,2)$. They meet $y=7$ at $(5,7)$ and $(-5,7)$. The triangle has base $10$ (along $y=7$) and height $5$, so its area is $\\frac{1}{2} \\cdot 10 \\cdot 5 = \\boxed{25}$."
+    },
+    {
+      "position": 22,
+      "source": "2009 AMC 8 Problem 22",
+      "question": "How many whole numbers between $1$ and $100$ do not contain the digit $1$?",
+      "choices": {"A": "80", "B": "81", "C": "88", "D": "89", "E": "90"},
+      "answer": "A",
+      "solution": "Among one-digit numbers, the $8$ values $2$ through $9$ work. For two-digit numbers, the tens digit has $8$ choices (anything but $0$ or $1$) and the units digit has $9$ choices (anything but $1$), giving $8 \\cdot 9 = 72$. The total is $8 + 72 = \\boxed{80}$."
+    },
+    {
+      "position": 23,
+      "source": "2020 AMC 8 Problem 23",
+      "question": "Four different awards are to be given to three students. Each student will receive at least one award. In how many different ways can the awards be distributed?",
+      "choices": {"A": "24", "B": "27", "C": "30", "D": "33", "E": "36"},
+      "answer": "E",
+      "solution": "With four awards and three students, one student must receive exactly $2$ awards and the others $1$ each. Choose the student who gets $2$ awards ($3$ ways), choose which $2$ of the $4$ awards they get ($\\binom{4}{2}=6$ ways), and distribute the remaining $2$ awards to the remaining $2$ students ($2$ ways): $3 \\cdot 6 \\cdot 2 = \\boxed{36}$."
+    },
+    {
+      "position": 24,
+      "source": "2017 AMC 8 Problem 24",
+      "question": "Mr. Alvarez has three grandchildren, who call him regularly. One calls him every three days, one calls him every four days, and one calls him every seven days. All three called him on December 31, 2018. On how many days during the next year did he not receive a phone call from any of his grandchildren?",
+      "choices": {"A": "150", "B": "157", "C": "160", "D": "163", "E": "170"},
+      "answer": "B",
+      "solution": "The next year has $365$ days. By inclusion-exclusion, the number of days with at least one call is $\\left\\lfloor \\frac{365}{3} \\right\\rfloor + \\left\\lfloor \\frac{365}{4} \\right\\rfloor + \\left\\lfloor \\frac{365}{7} \\right\\rfloor - \\left\\lfloor \\frac{365}{12} \\right\\rfloor - \\left\\lfloor \\frac{365}{21} \\right\\rfloor - \\left\\lfloor \\frac{365}{28} \\right\\rfloor + \\left\\lfloor \\frac{365}{84} \\right\\rfloor = 121+91+52-30-17-13+4 = 208$. So he receives no call on $365-208=\\boxed{157}$ days."
+    },
+    {
+      "position": 25,
+      "source": "2018 AMC 8 Problem 25",
+      "question": "How many perfect cubes lie between $2^6+1$ and $2^{16}+1$, inclusive?",
+      "choices": {"A": "4", "B": "8", "C": "10", "D": "35", "E": "36"},
+      "answer": "E",
+      "solution": "We have $2^6+1 = 65$ and $2^{16}+1 = 65537$. The smallest cube in range is $5^3 = 125$ and the largest is $40^3 = 64000$ (since $41^3 = 68921$ is too big). The cubes are $5^3, 6^3, \\dots, 40^3$, giving $40 - 5 + 1 = \\boxed{36}$ perfect cubes."
+    }
+  ]
+}

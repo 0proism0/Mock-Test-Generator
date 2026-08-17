@@ -1,0 +1,99 @@
+{
+ "id": "bmt_rand_01",
+ "competition": "BMT",
+ "title": "BMT — Random Mock #1",
+ "instructions": "10 questions · 50 minutes · No calculator. Proof-based problems: write full solutions, then compare with the official solutions.",
+ "time_limit_min": 50,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2019 BMT Geometry Problem 1",
+   "question": "Consider the figure below, where every small triangle is equilateral with side length 1 . Compute the area of the polygon AEKS .",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 2,
+   "source": "2025 BMT Algebra Problem 2",
+   "question": "A hat initially contains five slips labeled with the numbers 1, 2, 3, 4, and 5 (one slip per number). Every minute, Jessica adds a new slip labeled with the number 20 to the hat. How many slips are in the hat when the average of the numbers in the hat is 5 times the initial average?",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 3,
+   "source": "2022 BMT Discrete Problem 3",
+   "question": "Katie and Allie are playing a game. Katie rolls two fair six-sided dice and Allie flips two fair two-sided coins. Katie’s score is equal to the sum of the numbers on the top of the dice. Allie’s score is the product of the values of two coins, where heads is worth 4 and tails is worth 2. What is the probability Katie’s score is strictly greater than Allie’s?",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 4,
+   "source": "2025 BMT Algebra Problem 4",
+   "question": "Letf(x) = (2x 2 + 7x+ 3)(x2−2x−15).The graph off(x) in the coordinate plane is translated 4 units to the right and then rotated about the origin by 180 degrees. The resulting graph is the graph of the functiong(x). Compute the sum of the distinct roots ofg(x).",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 5,
+   "source": "2024 BMT Geometry Problem 5",
+   "question": "Let U and C be two circles, and kite BERK have vertices that lie on U and sides that are tangent to C. Given that the diagonals of the kite measure 5 and 6, find the ratio of the area of U to the area of C. DO NOT DISCUSS OR DISTRIBUTE ONLINE UNTIL DECEMBER 8, 2024 1 BMT 2024 Geometry Test November 2, 2024",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 6,
+   "source": "2019 BMT Discrete Problem 6",
+   "question": "Define f(n) = n2+n 2 . Compute the number of positive integers n such that f(n)≤ 1000 and f(n) is the product of two prime numbers.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 7,
+   "source": "2022 BMT Guts Problem 7",
+   "question": "A regular hexagon is inscribed in a circle of radius 1, and all diagonals between vertices that have exactly one vertex between them are drawn. Compute the area of the hexagon enclosed by all of the diagonals.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 8,
+   "source": "2019 BMT Geometry Problem 8",
+   "question": "Let ABC be a triangle with AB = 13, BC = 14, and CA = 15. Let G denote the centroid of ABC, and let GA denote the image of G under a reflection across BC, with GB the image of G under a reflection across AC, and GC the image of G under a reflection across AB. Let OG be the circumcenter of GAGBGC and let X be the intersection of AOG with BC and Y denote the intersections of AG with BC. Compute XY.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 9,
+   "source": "2023 BMT Guts Problem 9",
+   "question": "For positive integers a and b, consider the curve xa +yb = 1 over real numbers x,y and let S(a,b ) be the sum of the number of x-intercepts and y-intercepts of this curve. ComputeP10 a=1 P5 b=1S(a,b ). Set 4",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 10,
+   "source": "2020 BMT Power Problem 10",
+   "question": "Demonstrate how to unfold the following billiard tables into their corresponding shapes. Give a diagram that explains how this is done. This need not be rigorous. (a) [3] A 45◦− 45◦− 90◦ triangle to a square. (b) [3] A 36◦− 90◦− 54◦ triangle to a pentagon. (c) [4] A 36◦− 36◦− 108◦ triangle to a 5-pointed star with 72 ◦ internal angles and 144◦ external angles.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  }
+ ]
+}

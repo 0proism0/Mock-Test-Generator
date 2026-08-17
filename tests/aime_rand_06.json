@@ -1,0 +1,144 @@
+{
+ "id": "aime_rand_06",
+ "competition": "AIME",
+ "title": "AIME — Random Mock #6",
+ "instructions": "15 questions · 180 minutes · No calculator. Answers are integers from 000 to 999.",
+ "time_limit_min": 180,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2012 AIME II Problem 1",
+   "question": "Find the number of ordered pairs of positive integer solutions $(m, n)$ to the equation $24m + 18n = 2022$.",
+   "choices": null,
+   "answer": "028",
+   "solution": "Dividing both sides by $6$ gives $4m + 3n = 337$. Reducing modulo $3$ gives $m \\equiv 337 \\equiv 1 \\pmod{3}$, so $m = 1, 4, 7, \\dots$. Since $n = \\frac{337 - 4m}{3}$ must be positive, we need $4m \\le 334$, i.e. $m \\le 83$; the largest admissible value is $m = 82$. The number of values is $\\frac{82 - 1}{3} + 1 = 28$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 2,
+   "source": "2019 AIME I Problem 2",
+   "question": "Jenn randomly chooses a number $J$ from $1, 2, 3, \\ldots, 23, 24$. Bela then randomly chooses a number $B$ from $1, 2, 3, \\ldots, 23, 24$ distinct from $J$. The value of $B - J$ is at least $3$ with a probability that can be expressed in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+   "choices": null,
+   "answer": "261",
+   "solution": "There are $24 \\cdot 23 = 552$ ordered pairs with $B \\ne J$. Favorable pairs with $B \\ge J+3$: $\\sum_{J=1}^{21}(22-J) = 21+20+\\cdots+1 = 231$. So $P = \\frac{231}{552} = \\frac{77}{184}$, and $m+n = 77+184 = 261$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 3,
+   "source": "2020 AIME II Problem 3",
+   "question": "The value of $x$ that satisfies $\\log_{2^x} 3^{15} = \\log_{2^{x+2}} 3^{600}$ can be written as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+   "choices": null,
+   "answer": "041",
+   "solution": "Since $\\log_{2^x} 3^{a} = \\frac{a \\log 3}{x \\log 2}$, the equation becomes $\\frac{15}{x} = \\frac{600}{x+2}$, so $15(x+2) = 600x$, giving $x = \\frac{30}{585} = \\frac{2}{39}$. Thus $m+n = 2+39 = 41$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 4,
+   "source": "2019 AIME II Problem 4",
+   "question": "A fair four-sided die with faces $1, 2, 3, 4$ is rolled three times. The probability that the product of all three numbers rolled is a perfect square is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+   "choices": null,
+   "answer": "021",
+   "solution": "Track the parity of the exponents of 2 and 3 in the product (4 contributes two 2s). Brute-forcing the $4^3=64$ equally likely outcomes shows $20$ give a perfect square product, so $P = \\frac{20}{64} = \\frac{5}{16}$ and $m+n = 5+16 = 21$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 5,
+   "source": "2020 AIME I Problem 5",
+   "question": "Seven cards numbered $1$ through $7$ are to be lined up in a row. Find the number of arrangements of these seven cards where one of the cards can be removed leaving the remaining six cards in either ascending or descending order.",
+   "choices": null,
+   "answer": "074",
+   "solution": "Count arrangements one deletion away from ascending. Each is obtained from $1234567$ by removing one card ($7$ choices) and reinserting it in any of $7$ positions: $49$ operations. The identity arrangement arises from all $7$ choices of the moved card (overcount $6$), and each single adjacent transposition arises twice — moving the left card right or the right card left (overcount $6$). Hence $49 - 6 - 6 = 37$ ascending-type arrangements. By symmetry $37$ are descending-type. No arrangement of $7$ cards can be one deletion from both: an increasing subsequence of length $6$ and a decreasing subsequence of length $6$ would share at least $6+6-7 = 5$ cards, impossible since an increasing and a decreasing sequence share at most one card. Total: $37 + 37 = 74$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 6,
+   "source": "2017 AIME II Problem 6",
+   "question": "Find the sum of all positive integers $n$ such that $\\sqrt{n^2+75n+2023}$ is an integer.",
+   "choices": null,
+   "answer": "579",
+   "solution": "Write $\\sqrt{n^2+75n+2023} = \\tfrac12\\sqrt{(2n+75)^2 + 2467}$. We need $s^2 - (2n+75)^2 = 2467$. Since $2467$ is prime, $s-(2n+75)=1$ and $s+(2n+75)=2467$, giving $2n+75 = 1233$, so $n = 579$ is the only solution. The sum is $579$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 7,
+   "source": "2020 AIME I Problem 7",
+   "question": "A club consisting of $9$ men and $10$ women needs to choose a nonempty committee from among its members so that the number of women on the committee is one more than the number of men on the committee. Let $N$ be the number of such committees. Find the remainder when $N$ is divided by $1000$.",
+   "choices": null,
+   "answer": "378",
+   "solution": "If $k$ women are chosen, we need $k-1$ men: $N = \\sum_{k=1}^{10} \\binom{10}{k}\\binom{9}{k-1} = \\binom{19}{9} = 92378$ (the sum counts, equivalently, choosing 9 people from 19 by a complementary-counting argument). The remainder is $378$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 8,
+   "source": "2017 AIME II Problem 8",
+   "question": "Find the number of positive integers $n$ less than $1000$ such that $$1+n+\\frac{n^2}{2!}+\\frac{n^3}{3!}+\\frac{n^4}{4!}$$ is an integer.",
+   "choices": null,
+   "answer": "333",
+   "solution": "The expression is an integer exactly when $24 \\mid n^4 + 4n^3 + 12n^2 + 24n + 24$, i.e. $24 \\mid n^2(n^2 + 4n + 12)$. If $n$ is odd, both factors are odd, so $n$ must be even. Write $n = 2m$: then $n^2(n^2+4n+12) = 16m^2(m^2+2m+3)$, which already supplies the factor $8$; we still need $3 \\mid m^2(m^2+2m+3)$, i.e. $3 \\mid m^3(m+2)$. Checking residues, this fails only for $m \\equiv 2 \\pmod 3$. So the condition is: $n$ even and $n/2 \\not\\equiv 2 \\pmod 3$, equivalently $n$ even and $n \\not\\equiv 4 \\pmod 6$. Among $1$ to $999$ there are $499$ even integers, and those $\\equiv 4 \\pmod 6$ are $4, 10, \\dots, 994$, numbering $166$. Answer: $499 - 166 = 333$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 9,
+   "source": "2014 AIME I Problem 9",
+   "question": "Let $x_1<x_2<x_3$ be the three real roots of the equation $\\sqrt{2024}\\,x^3-4049x^2+2=0$. Find $x_2(x_1+x_3)$.",
+   "choices": null,
+   "answer": "002",
+   "solution": "With $n=2024$: $\\sqrt{n}x^3 - (2n+1)x^2 + 2 = (\\sqrt{n}x-1)(x^2 - 2\\sqrt{n}x - 2) = 0$. The roots are $\\frac{1}{\\sqrt{n}}$ and $\\sqrt{n} \\pm \\sqrt{n+2}$. The middle root is $x_2 = \\frac{1}{\\sqrt{n}}$, and $x_1+x_3 = 2\\sqrt{n}$. Product: $2$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 10,
+   "source": "2020 AIME II Problem 10",
+   "question": "Find the sum of all positive integers $n$ such that when $1^3+2^3+3^3+\\cdots +n^3$ is divided by $n+6$, the remainder is $25$.",
+   "choices": null,
+   "answer": "322",
+   "solution": "The sum is $\\left(\\frac{n(n+1)}{2}\\right)^2$. Put $m = n+6 > 25$, so $n \\equiv -6$ and $n+1 \\equiv -5 \\pmod m$. If $m$ is odd, $\\frac{n(n+1)}{2} \\equiv \\frac{(-6)(-5)}{2} = 15$, so the remainder condition gives $m \\mid 225 - 25 = 200$; but $200$ has no odd divisor exceeding $25$. If $m = 2k$ is even, $\\frac{n(n+1)}{2} = \\frac{m(m-11)}{2} + 15 \\equiv k + 15 \\pmod{m}$ since $k(2k-11) \\equiv k \\pmod{2k}$. Then $(k+15)^2 \\equiv k^2 + 225 \\pmod{2k}$, and $k^2 \\equiv 0$ or $k \\pmod{2k}$ according as $k$ is even or odd. For $k$ even we need $m \\mid 200$ with $4 \\mid m$ and $m > 25$: $m = 40, 100, 200$, giving $n = 34, 94, 194$. For $k$ odd we need $2k \\mid k + 200$ with $k$ odd, forcing $k \\in \\{1, 5, 25\\}$, and direct checks fail (e.g. $k = 25$ gives residue $0$). Each of $n = 34, 94, 194$ checks out (e.g. $595^2 = 354025 = 8850 \\cdot 40 + 25$), and the sum is $34 + 94 + 194 = 322$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 11,
+   "source": "2024 AIME I Problem 11",
+   "question": "Each vertex of a regular hexagon is independently colored either red or blue with equal probability. The probability that the hexagon can then be rotated so that all of the blue vertices end up at positions where there had been red vertices is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+   "choices": null,
+   "answer": "047",
+   "solution": "Checking all $2^6 = 64$ colorings against the 5 nontrivial rotations: a coloring works iff some rotation maps every blue vertex onto a red one. Exactly $30$ of the $64$ colorings work, giving $\\frac{30}{64} = \\frac{15}{32}$ and $m+n = 15+32 = 47$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 12,
+   "source": "2015 AIME II Problem 12",
+   "question": "There are $2^{9} = 512$ possible 9-letter strings in which each letter is either an A or a B. Find the number of such strings that do not have more than 3 adjacent letters that are identical.",
+   "choices": null,
+   "answer": "298",
+   "solution": "Let $a_n$ be the number of valid $n$-letter strings. A valid string ends in a run of length $1$, $2$, or $3$; deleting that final run leaves any valid string of length $n-1$, $n-2$, or $n-3$, and the deleted run's letter is forced (it differs from the letter before it). Thus $a_n = a_{n-1} + a_{n-2} + a_{n-3}$ with $a_1 = 2$, $a_2 = 4$, $a_3 = 8$. Computing: $a_4 = 14$, $a_5 = 26$, $a_6 = 48$, $a_7 = 88$, $a_8 = 162$, $a_9 = 298$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 13,
+   "source": "2022 AIME I Problem 13",
+   "question": "Let $S$ be the set of all rational numbers that can be expressed as a repeating decimal in the form $0.\\overline{abc},$ where at least one of the digits $a,$ $b,$ or $c$ is nonzero. Let $N$ be the number of distinct numerators obtained when numbers in $S$ are written as fractions in lowest terms. Find $N$.",
+   "choices": null,
+   "answer": "660",
+   "solution": "$0.\\overline{abc} = \\frac{abc}{999}$ with $999 = 3^3 \\cdot 37$. Counting the distinct numerators of $\\frac{x}{999}$ in lowest terms for $x = 1, \\dots, 998$ gives $660$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 14,
+   "source": "2019 AIME II Problem 14",
+   "question": "Find the sum of all positive integers $n$ such that, given an unlimited supply of stamps of denominations $5,n,$ and $n+1$ cents, $131$ cents is the greatest postage that cannot be formed.",
+   "choices": null,
+   "answer": "101",
+   "solution": "Using exactly $k$ large stamps (of values $n$ and $n+1$) forms every integer in $[kn,\\ k(n+1)]$, covering $k+1$ consecutive residue classes mod $5$; adding 5-cent stamps then forms everything above the least formable value in each covered class. The greatest unformable value is therefore $\\max_r (m_r) - 5$, where $m_r$ is the least formable value in class $r \\ne 0$. Computing the $m_r$ by residue of $n$ mod $5$: if $n \\equiv 1$ or $2$, the maximum is $2n+2$, giving $g(n) = 2n-3$; if $n \\equiv 3$, $g(n) = 2n - 4$; if $n \\equiv 4$, the class $1$ first appears at $4n$, giving $g(n) = 4n - 5$; if $n \\equiv 0$, $g(n) = 4n - 1$. Setting these equal to $131$: $2n - 3 = 131$ gives $n = 67$ (consistent, $67 \\equiv 2$); $2n - 4 = 131$ has no integer solution; $4n - 5 = 131$ gives $n = 34$ (consistent, $34 \\equiv 4$); $4n - 1 = 131$ gives nothing valid. Check $n = 34$: $131$ is unformable ($131 - 34a - 35b$ is never a nonnegative multiple of $5$), while $132 = 3\\cdot34 + 30$, $133 = 2\\cdot34 + 35 + 30$, $134 = 34 + 2\\cdot35 + 30$, $135 = 3\\cdot 35 + 30$, $136 = 4 \\cdot 34$, and everything larger follows by adding 5's; similarly for $n = 67$: $132 = 67 + 65$, $133 = 68 + 65$, $134 = 2 \\cdot 67$, $135 = 27 \\cdot 5$, $136 = 2 \\cdot 68$. The sum is $34 + 67 = 101$.",
+   "type": "integer_answer"
+  },
+  {
+   "n": 15,
+   "source": "2011 AIME I Problem 15",
+   "question": "For some integer $m$, the polynomial $x^3 - 2029x + m$ has the three integer roots $a$, $b$, and $c$.  Find $|a| + |b| + |c|$.",
+   "choices": null,
+   "answer": "104",
+   "solution": "By Vieta's formulas $a+b+c = 0$ and $ab+bc+ca = -2029$. Substituting $c = -(a+b)$ gives $a^2 + ab + b^2 = 2029$. Multiplying by $4$: $(2a+b)^2 + 3b^2 = 8116$, so $|b| \\le 52$ and $8116 - 3b^2$ must be a perfect square. Trying values (noting $8116 - 3b^2 \\equiv 1 \\pmod 3$, so $2a+b \\not\\equiv 0 \\pmod 3$), the only hit is $b = 25$: $8116 - 1875 = 6241 = 79^2$, giving $2a + 25 = \\pm 79$, so $a = 27$ or $a = -52$. (The representation is unique because $2029$ is prime and $2029 \\equiv 1 \\pmod 3$: $a^2+ab+b^2$ is the norm of $\\mathbb{Z}[\\omega]$, and a prime $p \\equiv 1 \\pmod 3$ has essentially one such representation.) The roots are $25, 27, -52$: indeed $25 + 27 - 52 = 0$ and $25 \\cdot 27 - 25 \\cdot 52 - 27 \\cdot 52 = 675 - 2704 = -2029$, with $m = 25 \\cdot 27 \\cdot 52 = 35100$ an integer. Therefore $|a|+|b|+|c| = 25 + 27 + 52 = 104$.",
+   "type": "integer_answer"
+  }
+ ]
+}

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MockTest Maker</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+         background: #f4f5f7; color: #1c1e21; line-height: 1.55; }
+  .container { max-width: 860px; margin: 0 auto; padding: 24px 16px 80px; }
+  header.top { background: #2b3a4a; color: #fff; padding: 18px 0; }
+  header.top .container { padding: 0 16px; }
+  header.top h1 { font-size: 20px; }
+  header.top p { font-size: 13px; opacity: .75; }
+  .card { background: #fff; border-radius: 12px; padding: 20px 22px; margin-top: 16px;
+          box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .card.compact { padding: 12px 18px; margin-top: 10px; }
+  .gen-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+  @media (max-width: 720px) { .gen-grid { grid-template-columns: 1fr; } }
+  .section-title { margin-top: 20px; font-size: 16px; color: #334; }
+  .leave-warn { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: #b02929;
+                color: #fff; text-align: center; padding: 12px; font-weight: 700; display: none; }
+  .test-item { display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+  .test-item:hover { border-color: #2b3a4a; }
+  .test-item h3 { font-size: 16px; }
+  .test-item .meta { font-size: 13px; color: #666; margin-top: 4px; }
+  .btn { background: #2b6cb0; color: #fff; border: none; border-radius: 8px;
+         padding: 9px 18px; font-size: 14px; cursor: pointer; }
+  .btn:hover { background: #245a94; }
+  .btn.secondary { background: #e2e8f0; color: #2d3748; }
+  .qhead { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+  .qnum { font-weight: 700; font-size: 16px; }
+  .badge { font-size: 11.5px; background: #eef2f7; color: #4a5568; border-radius: 20px;
+           padding: 3px 10px; }
+  .diff { font-size: 11.5px; border-radius: 20px; padding: 3px 10px; }
+  .diff.easy { background: #e6f6e6; color: #237a23; }
+  .diff.mid  { background: #fff4db; color: #976d00; }
+  .diff.hard { background: #fde4e4; color: #b02929; }
+  .qtext { margin: 10px 0 12px; font-size: 15.5px; }
+  .choices { display: flex; flex-direction: column; gap: 8px; }
+  .choice { display: flex; gap: 10px; align-items: baseline; border: 1.5px solid #dde3ea;
+            border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 15px; background: #fff; }
+  .choice:hover { border-color: #2b6cb0; }
+  .choice.selected { border-color: #2b6cb0; background: #ebf3fb; }
+  .choice.correct { border-color: #2f9e44; background: #e6f6e6; }
+  .choice.wrong { border-color: #e03131; background: #fde4e4; }
+  .choice .letter { font-weight: 700; min-width: 18px; }
+  .int-input { font-size: 16px; padding: 8px 12px; border: 1.5px solid #dde3ea; border-radius: 8px;
+               width: 140px; font-variant-numeric: tabular-nums; }
+  .int-input.correct { border-color: #2f9e44; background: #e6f6e6; }
+  .int-input.wrong { border-color: #e03131; background: #fde4e4; }
+  .solution { margin-top: 12px; padding: 12px 14px; background: #f8fafc; border-left: 3px solid #2b6cb0;
+              border-radius: 6px; font-size: 14.5px; display: none; }
+  .submitted .solution { display: block; }
+  .sticky-bar { position: sticky; top: 0; z-index: 10; background: #fff; border-radius: 12px;
+                padding: 12px 18px; margin-top: 16px; display: flex; justify-content: space-between;
+                align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+  .timer { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 16px; }
+  .timer.low { color: #e03131; }
+  .progress { font-size: 13px; color: #666; }
+  .score { font-size: 22px; font-weight: 800; }
+  .hidden { display: none; }
+  .tabs { display: flex; gap: 4px; background: #1f2c3a; padding: 0 16px; }
+  .tabs .container { display: flex; gap: 4px; padding: 0; }
+  .tab { padding: 10px 18px; color: #b8c4d0; cursor: pointer; font-size: 14px;
+         border-bottom: 3px solid transparent; }
+  .tab:hover { color: #fff; }
+  .tab.active { color: #fff; border-bottom-color: #5ea3f7; font-weight: 600; }
+  table.stats { width: 100%; border-collapse: collapse; font-size: 14px; }
+  table.stats th, table.stats td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; }
+  table.stats th { color: #666; font-weight: 600; font-size: 12.5px; }
+  .pct-bar { background: #e2e8f0; border-radius: 4px; height: 8px; width: 120px; display: inline-block; vertical-align: middle; }
+  .pct-bar > div { background: #2b6cb0; height: 8px; border-radius: 4px; }
+  .saved-note { color: #237a23; font-size: 13px; margin-left: 10px; }
+</style>
+</head>
+<body>
+<header class="top"><div class="container">
+  <h1>📝 MockTest Maker</h1>
+  <p>Mock exams built from real competition 真题 — numbers modified, difficulty preserved</p>
+</div></header>
+<nav class="tabs"><div class="container">
+  <div class="tab active" data-tab="new" onclick="showTab('new')">🎲 New Test</div>
+  <div class="tab" data-tab="tests" onclick="showTab('tests')">📋 My Tests <span id="testCount"></span></div>
+  <div class="tab" data-tab="stats" onclick="showTab('stats')">📊 Stats</div>
+</div></nav>
+<div class="leave-warn" id="leaveWarn">⚠ You left the test! It will close in <span id="leaveCount">30</span>s — come back now to keep it.</div>
+<div class="container" id="app">Loading…</div>
+
+<script>
+const app = document.getElementById('app');
+let state = { test: null, answers: {}, submitted: false, deadline: null, timerId: null, startedAt: null, tab: 'new' };
+
+function showTab(tab) {
+  // leaving an active test? navigate, but start the 30s close countdown
+  if (state.test && !state.submitted && tab !== state.tab) {
+    doShowTab(tab);
+    startLeaveWatch(tab);
+    return;
+  }
+  doShowTab(tab);
+}
+
+function doShowTab(tab) {
+  state.tab = tab;
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+  if (tab === 'new') home();
+  else if (tab === 'tests') myTests();
+  else if (tab === 'stats') stats();
+}
+
+function renderMath(el) {
+  if (window.renderMathInElement) {
+    renderMathInElement(el, { delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false},
+    ]});
+  }
+}
+function difficulty(n, total) {
+  if (total <= 6) {  // olympiad day format (IMO): P1 easy, P2-4 medium, P5-6 hard
+    if (n <= 1) return ['easy', 'Easy'];
+    if (n <= 4) return ['mid', 'Medium'];
+    return ['hard', 'Hard'];
+  }
+  const r = n / total;
+  if (r <= 0.4) return ['easy', 'Easy'];
+  if (r <= 0.75) return ['mid', 'Medium'];
+  return ['hard', 'Hard'];
+}
+function fmtTime(s) {
+  return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
+}
+
+async function home() {
+  clearInterval(state.timerId);
+  const banks = await (await fetch('/api/banks')).json();
+  const catOrder = ['Math', 'Physics', 'Chemistry', 'Biology', 'Informatics', 'Astronomy & Earth', 'Economics', 'Linguistics', 'Other'];
+  const cats = {};
+  for (const b of banks) (cats[b.category] ??= []).push(b);
+  let html = '';
+  for (const cat of catOrder.filter(c => cats[c])) {
+    html += `<h2 class="section-title">${catIcon(cat)} ${cat}</h2><div class="gen-grid">`;
+    html += cats[cat].map(b => `
+    <div class="card compact test-item">
+      <div>
+        <h3>${b.name} — random variant mock</h3>
+        <div class="meta">${b.n_questions} questions · ${b.time_limit_min} min · ${b.total_variants} real problems with various modified questions</div>
+      </div>
+      ${b.ready
+        ? `<button class="btn" onclick="generate('${b.slug}'${b.round ? `,'${b.round}'` : ''})">Generate →</button>`
+        : `<span class="meta">bank building…</span>`}
+    </div>`).join('');
+    html += '</div>';
+  }
+  html += '<div class="card compact" style="font-size:13px;color:#666;line-height:1.6"><b>Disclaimer:</b> For <b>AMC 8, AMC 10, AMC 12, AIME, and Math Kangaroo</b>, we use <b>modified questions</b> — real problems with numbers changed and answers recomputed (marked <i>Modified from …</i>). For <b>all other competitions</b>, mock tests use the <b>original official past problems</b> (marked <i>Real problem · …</i>), which their organizers publish free for practice.</div>';
+  app.innerHTML = html;
+}
+
+function catIcon(cat) {
+  return {'Math': '📐', 'Physics': '🔭', 'Chemistry': '🧪', 'Biology': '🧬',
+          'Informatics': '💻', 'Astronomy & Earth': '🌌', 'Economics': '💰',
+          'Linguistics': '🗣️', 'Other': '📚'}[cat] || '📚';
+}
+
+async function generate(slug, round) {
+  const r = await (await fetch(`/api/generate/${slug}${round ? '/' + encodeURIComponent(round) : ''}`)).json();
+  if (r.ok) openTest(r.id); else alert(r.error || 'generation failed');
+}
+
+async function openTest(id) {
+  const t = await (await fetch(`/api/test/${id}`)).json();
+  state = { ...state, test: t, answers: {}, submitted: false,
+            deadline: Date.now() + t.time_limit_min * 60000, timerId: null, startedAt: Date.now() };
+  renderTest();
+  state.timerId = setInterval(tick, 1000);
+}
+
+function tick() {
+  const left = Math.max(0, Math.round((state.deadline - Date.now()) / 1000));
+  const el = document.getElementById('timer');
+  if (el) { el.textContent = '⏱ ' + fmtTime(left); el.classList.toggle('low', left < 300); }
+  if (left === 0 && !state.submitted) submit();
+}
+
+function renderTest() {
+  const t = state.test;
+  const total = t.questions.length;
+  app.innerHTML = `
+    <div class="sticky-bar">
+      <div>
+        <div style="font-weight:700">${t.title}</div>
+        <div class="progress" id="progress">0 / ${total} answered</div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <span class="timer" id="timer">⏱ ${fmtTime(t.time_limit_min*60)}</span>
+        <button class="btn secondary" onclick="exitTest(false)">Exit</button>
+        <button class="btn" onclick="submit()">Submit</button>
+      </div>
+    </div>
+    <div class="card" style="font-size:13.5px;color:#555">${t.instructions}</div>
+    <div id="qs"></div>`;
+  const qs = document.getElementById('qs');
+  t.questions.forEach(q => {
+    const [cls, label] = difficulty(q.n, total);
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.id = 'q' + q.n;
+    div.innerHTML = `
+      <div class="qhead">
+        <span class="qnum">Problem ${q.n}</span>
+        <span style="display:flex;gap:6px">
+          <span class="diff ${cls}">${label}</span>
+          <span class="badge">${q.type === 'proof' ? 'Real problem · ' + q.source : 'Modified from ' + q.source}</span>
+        </span>
+      </div>
+      <div class="qtext">${q.question}</div>
+      ${q.type === 'proof'
+        ? `<button class="btn secondary" onclick="document.getElementById('sol${q.n}').style.display='block'; this.style.display='none'">Show solution</button>`
+        : ''}
+      <div class="choices">${q.choices ? Object.entries(q.choices).map(([L, v]) => `
+        <div class="choice" data-q="${q.n}" data-l="${L}" onclick="pick(${q.n},'${L}')">
+          <span class="letter">${L}</span><span>${v}</span>
+        </div>`).join('')
+        : q.type === 'proof' ? ''
+        : `<input class="int-input" id="int${q.n}" type="text" inputmode="numeric" maxlength="3"
+                  placeholder="000–999" oninput="typed(${q.n}, this.value)">`}
+      </div>
+      <div class="solution" id="sol${q.n}">${q.answer ? `<b>Answer: ${q.answer}.</b> ` : ''}${q.solution || '<i>No solution available yet — see the source link on AoPS.</i>'}</div>`;
+    qs.appendChild(div);
+    renderMath(div);
+  });
+}
+
+function typed(n, v) {
+  if (state.submitted) return;
+  if (v.trim() === '') delete state.answers[n]; else state.answers[n] = v.trim();
+  const total = state.test.questions.length;
+  document.getElementById('progress').textContent =
+    `${Object.keys(state.answers).length} / ${total} answered`;
+}
+
+function pick(n, L) {
+  if (state.submitted) return;
+  state.answers[n] = L;
+  document.querySelectorAll(`.choice[data-q="${n}"]`).forEach(c =>
+    c.classList.toggle('selected', c.dataset.l === L));
+  const total = state.test.questions.length;
+  document.getElementById('progress').textContent =
+    `${Object.keys(state.answers).length} / ${total} answered`;
+}
+
+function submit() {
+  if (state.submitted) return;
+  state.submitted = true;
+  clearInterval(state.timerId);
+  stopLeaveWatch();
+  let score = 0, gradable = 0;
+  state.test.questions.forEach(q => {
+    if (q.type === 'proof') {
+      const card = document.getElementById('q' + q.n);
+      card.classList.add('submitted');
+      return; // proof questions are not auto-graded
+    }
+    gradable++;
+    const card = document.getElementById('q' + q.n);
+    card.classList.add('submitted');
+    if (q.choices) {
+      card.querySelectorAll('.choice').forEach(c => {
+        if (c.dataset.l === q.answer) c.classList.add('correct');
+        else if (state.answers[q.n] === c.dataset.l) c.classList.add('wrong');
+      });
+      if (state.answers[q.n] === q.answer) score++;
+    } else {
+      const inp = document.getElementById('int' + q.n);
+      const given = (state.answers[q.n] || '').replace(/^0+(?=\d)/, '');
+      const want = String(q.answer).replace(/^0+(?=\d)/, '');
+      const ok = given !== '' && given === want;
+      inp.classList.add(ok ? 'correct' : 'wrong');
+      inp.disabled = true;
+      if (ok) score++;
+    }
+  });
+  const total = state.test.questions.length;
+  const bar = document.querySelector('.sticky-bar');
+  const scoreText = gradable === 0
+    ? 'Solutions revealed'
+    : `Score: ${score} / ${gradable}${gradable < total ? ` (+${total - gradable} proof)` : ''}`;
+  bar.insertAdjacentHTML('beforeend', `<span class="score">${scoreText}</span><span class="saved-note" id="savedNote">saving…</span>`);
+  window.scrollTo({top: 0, behavior: 'smooth'});
+  // record the attempt
+  const duration_s = Math.round((Date.now() - (state.startedAt || Date.now())) / 1000);
+  fetch('/api/result', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      test_id: state.test.id, title: state.test.title, competition: state.test.competition,
+      score, total: gradable, answered: Object.keys(state.answers).length, duration_s,
+    }),
+  }).then(r => {
+    document.getElementById('savedNote').textContent = '✓ saved to My Tests';
+  }).catch(() => {
+    document.getElementById('savedNote').textContent = '⚠ save failed';
+  });
+}
+
+async function myTests() {
+  clearInterval(state.timerId);
+  const [tests, resultsRaw] = await Promise.all([
+    (await fetch('/api/tests')).json(),
+    (await fetch('/api/results')).json(),
+  ]);
+  const results = resultsRaw.reverse();
+  document.getElementById('testCount').textContent = tests.length ? `(${tests.length})` : '';
+  let html = '<h2 class="section-title">📄 Current Tests</h2><div class="gen-grid">';
+  html += (tests.map(t => `
+    <div class="card compact test-item" onclick="openTest('${t.id}')">
+      <div>
+        <h3>${t.title}</h3>
+        <div class="meta">${t.competition} · ${t.n_questions} questions · ${t.time_limit_min} min</div>
+      </div>
+      <button class="btn">Start →</button>
+    </div>`).join('') || '<div class="card compact">No tests yet — generate one from the New Test tab.</div>');
+  html += '</div><h2 class="section-title">📝 Past Tests</h2>';
+  if (!results.length) {
+    html += '<div class="card compact">No attempts yet.</div>';
+  } else {
+    html += results.map(r => {
+      const pct = r.total ? Math.round(r.score / r.total * 100) : null;
+      const dur = r.duration_s ? `${Math.floor(r.duration_s/60)}m${r.duration_s%60}s` : '–';
+      return `
+      <div class="card compact test-item">
+        <div>
+          <h3>${r.title || r.test_id}</h3>
+          <div class="meta">${r.competition} · submitted ${r.submitted_at} · ${r.answered}/${r.total || '?'} answered · ${dur}</div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:center">
+          ${pct !== null ? `<span class="score" style="font-size:18px">${pct}%</span>` : '<span class="meta">proof</span>'}
+          <button class="btn" onclick="openTest('${r.test_id}')">Retake →</button>
+        </div>
+      </div>`;
+    }).join('');
+  }
+  app.innerHTML = html;
+}
+
+async function stats() {
+  clearInterval(state.timerId);
+  const s = await (await fetch('/api/stats')).json();
+  const rows = s.per_competition.map(c => {
+    const avg = c.avg_pct ?? '–';
+    const best = c.best_pct ?? '–';
+    const w = c.avg_pct ?? 0;
+    return `<tr>
+      <td>${c.competition}</td><td>${c.attempts}</td>
+      <td>${avg}${c.avg_pct !== null ? '%' : ''} <span class="pct-bar"><div style="width:${w}%"></div></span></td>
+      <td>${best}${c.best_pct !== null ? '%' : ''}</td>
+    </tr>`;
+  }).join('');
+  app.innerHTML = `
+    <div class="card" style="display:flex;gap:32px;flex-wrap:wrap">
+      <div><div class="score">${s.total_attempts}</div><div class="meta">tests taken</div></div>
+      <div><div class="score">${s.total_questions_answered}</div><div class="meta">questions answered</div></div>
+      <div><div class="score">${s.avg_pct !== null ? s.avg_pct + '%' : '–'}</div><div class="meta">average score</div></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:10px">By competition</h3>
+      ${rows ? `<table class="stats"><tr><th>Competition</th><th>Attempts</th><th>Average</th><th>Best</th></tr>${rows}</table>` : 'No data yet.'}
+    </div>`;
+}
+
+home();
+
+// --- auto-close a test 30s after the student leaves the test view ---
+let leaveTimer = null, leaveCountdown = null;
+
+function startLeaveWatch(pendingTab) {
+  if (leaveTimer) return;
+  const warn = document.getElementById('leaveWarn');
+  warn.style.display = 'block';
+  warn.innerHTML = `⚠ You left the test! It will close in <b><span id="leaveCount">30</span>s</b> — <u style="cursor:pointer" onclick="returnToTest()">click here to go back to your test</u>.`;
+  let left = 30;
+  leaveCountdown = setInterval(() => {
+    left--;
+    const el = document.getElementById('leaveCount');
+    if (el) el.textContent = left;
+    if (left <= 0) exitTest(true, pendingTab);
+  }, 1000);
+  leaveTimer = true;
+}
+
+function stopLeaveWatch() {
+  document.getElementById('leaveWarn').style.display = 'none';
+  clearInterval(leaveCountdown);
+  leaveTimer = null;
+}
+
+function returnToTest() {
+  stopLeaveWatch();
+  renderTest();  // state (answers, deadline) is preserved
+  // restore picked answers
+  for (const [n, v] of Object.entries(state.answers)) {
+    const c = document.querySelector(`.choice[data-q="${n}"][data-l="${v}"]`);
+    if (c) c.classList.add('selected');
+    const inp = document.getElementById('int' + n);
+    if (inp) inp.value = v;
+  }
+  const total = state.test.questions.length;
+  document.getElementById('progress').textContent = `${Object.keys(state.answers).length} / ${total} answered`;
+}
+
+function exitTest(fromLeave, pendingTab) {
+  clearInterval(state.timerId);
+  stopLeaveWatch();
+  state = { ...state, test: null, answers: {}, submitted: false };
+  doShowTab(pendingTab || 'tests');
+  if (fromLeave) {
+    const d = document.createElement('div');
+    d.className = 'card compact';
+    d.style.cssText = 'background:#fde4e4;color:#b02929;font-weight:600';
+    d.textContent = '⚠ Test closed because you were away for 30 seconds. Your answers were discarded.';
+    document.getElementById('app').prepend(d);
+  }
+}
+
+document.addEventListener('visibilitychange', () => {});  // leaving the screen no longer triggers closing
+</script>
+</body>
+</html>
