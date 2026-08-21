@@ -1,0 +1,8 @@
+# Minimal dependencies for Mock-Test-Generator
+# Update this file with exact versions after confirming which packages the project uses.
+# To generate a concrete requirements.txt from your current environment run:
+#   pip freeze > requirements.txt
+
+Flask
+python-dotenv
+requests
