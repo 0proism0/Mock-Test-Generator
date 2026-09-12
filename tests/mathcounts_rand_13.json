@@ -1,0 +1,111 @@
+{
+ "id": "mathcounts_rand_13",
+ "competition": "MATHCOUNTS — Team",
+ "category": "Math",
+ "title": "MATHCOUNTS — Team — Random Mock #13 · 2026-08-28 11:19",
+ "instructions": "10 questions · 20 minutes · No calculator. Answers are integers from 000 to 999. 10 points total.",
+ "time_limit_min": 20,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2026 MATHCOUNTS State Team Problem 1",
+   "question": "What is the least positive integer whose digits have a product of 100?",
+   "choices": null,
+   "answer": "120",
+   "solution": "Answer: 120 (degrees) 21.. The only digits that divide 100 evenly are 1, 2, 4, and 5. The most important goal to achieve the answer to the problem is to minimize the number of digits: 1 accomplishes nothing to get to a product of 100 but adds to the digit count; 4 and 2 × 2 contribute identically to a product but 4 uses one less digit. 100 = 4 × 5 × 5 minimizes the digit count. Next in importance is to sequence the digits in increasing order from left to right to achieve the desired goal, thus 455.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2026 MATHCOUNTS State Team Problem 2",
+   "question": "On Planet Mathian, the Mathinian folk measure time on an 8 “hour” 8 clock with 90 “minutes” per “hour”. How many degrees are in the measure of the smaller angle formed by the hands of this clock when the time is 2:24? 4",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5 22.. In 1 h = 90 min, the minute hand moves one full turn of 360°, for a rate of 360°/(90 min) = 4°/min. In 8 h, the hour hand moves one full turn of 360° , for a rate of 360°/(8 h) = 45°/h = 45°/(90 min) = 0.5°/min. Assuming 0° is straight up toward the “8” with angle increasing clockwise, at 2:00 the hour hand is at 2 h × 45°/h = 90° while the minute hand is at 0°; Then 24 min later, the hour hand is at 90° + 24 min × 0.5°/min = 102°, and the minute hand is at 24 min × 4°/min = 96°. Thus, the angular separation between the hands is |102° − 96°| = 6°.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 3",
+   "question": "Two right circular cylinders, X and Y, are such that cylinder Y has a height three times that of cylinder X and a base radius one-half that of cylinder X. What is the ratio of the volume of cylinder X to the volume of cylinder Y? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "276",
+   "solution": "Answer: 276 23.. 𝑉𝑉X 2ℎX 2 �ℎX 𝑉𝑉Y = 𝜋𝜋𝑟𝑟X𝜋𝜋𝑟𝑟Y2ℎY= �𝑟𝑟X𝑟𝑟Y� ℎY�. Now, ℎY = 3ℎ X and 𝑟𝑟Y = 12𝑟𝑟X , so 𝑟𝑟X𝑟𝑟Y= 2 and ℎXℎY= 13 , so 𝑉𝑉X𝑉𝑉Y= 22 × 13= 𝟒𝟒𝟑𝟑 . 2026 CHAPTER COMPETITION Solutions",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2026 MATHCOUNTS State Team Problem 4",
+   "question": "When List B is created by appending the numbers 17 and 23 to List A, the mean decreases by p and the median increases by q. What is the value of p + q? Express your answer as a decimal to the nearest tenth. List A: 11, 13, 104, 23, 11, 23 List B: 11, 13, 104, 23, 11, 23, 17, 23",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4 (integers) 24.. Reorganizing List A in increasing order yields the 6 values: 11, 1 1, 13, 23, 23, 104. The median of these 6 values is the mean of the third and fourth values, thus 13+232 = 18. The added values 17 and 23 in List B can be inserted right after the 13 as the new fourth and fifth values, the mean of which is the median of 8 values, thus 17+232 = 20, so the median increases by 𝑞𝑞 = 20 − 18 = 2. The mean of List A is 11+11+13+23+23+1046 = 1856 . For the mean of List B and the amount of decrease from List A, 𝑝𝑝 = 1856 − 185+17+236+2= 1856− 2258= 2. 708…. Finally, we add 𝑝𝑝 + 𝑞𝑞 = 2.708… + 2 = 4.708… and round to the nearest tenth to obtain the answer 4.7 . 2026 STATE COMPETITION Solutions",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2026 MATHCOUNTS State Team Problem 5",
+   "question": "Let M, A, T and H have the following coordinates: M(0, 7), A(0, 12), T(3, 2), and H(10, 8). Point P is chosen at random on segment TH. What is the probability that the area of triangle MAP is greater than or equal to 15? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "7",
+   "solution": "Answer: 7 25.. Let MA = 12 − 7 = 5 along the 𝑦𝑦 -axis be the base of △MAP. Then to have an area of at least 15 for △MAP, a height of at least 6 is required, meaning the absolute value of the 𝑥𝑥 -coordinate of P must be at least 6. Because P lies on TH����, with T at (3; 2) and H at (10; 8) , choosing a point randomly on TH���� is equivalent to choosing randomly an 𝑥𝑥 -coordinate in the interval 3 ≤ 𝑥𝑥 ≤ 10, with total length of 10 − 3 = 7 but only 6 ≤ 𝑥𝑥 ≤ 10, with length 10 − 6 = 4, satisfies the triangle area requirements, so the probability of such is 𝟒𝟒𝟐𝟐 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 6",
+   "question": "Farmer Julie is planning on increasing the length and width of her rectangular wheat field, each by the same percentage. The crop yield per acre will not change, and neither will the water required for each acre. To account for this, Julie must double the capacity of her farm’s water reservoir. By what percent is Julie planning on increasing each dimension of her wheat field? Express your answer as a decimal to the nearest tenth.",
+   "choices": null,
+   "answer": "66",
+   "solution": "Answer: 66 26.. Water needs multiplying by 2 with water usage per acre unchanged means that the acreage (land area) is being multiplied by the same factor of 2. Thus, land area 𝐴𝐴 = 𝑙𝑙𝑤𝑤 goes to 2𝑙𝑙 𝑤𝑤 = (𝑘𝑘𝑙𝑙)(𝑘𝑘𝑤𝑤) = 𝑘𝑘 2𝑙𝑙𝑤𝑤, which means 𝑘𝑘 2 = 2, so the each of the length and width are multiplied by √2 = 1.414 21…. Therefore, the relative increase in each of the length and width of the field is 1.414 21… − 1 = 0.414 21… × 100 % = 41. 421… %, which rounds to the nearest 0.1 % as 41.4 %.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2026 MATHCOUNTS State Team Problem 7",
+   "question": "A positive integer n has 18 positive integer divisors. What is the greatest possible number of positive integer divisors that n2 could have?",
+   "choices": null,
+   "answer": "14",
+   "solution": "Answer: 14 27.. The prime factorization of 18 is 2 × 3 × 3, so a positive integer with exactly 18 positive divisors must have 1, 2, or 3 distinct prime divisors in a total of 4 forms: 𝑝𝑝¹⁷ whose square is 𝑝𝑝³⁴ that has 34 + 1 = 35 divisors; 𝑝𝑝⁸𝑞𝑞 whose square is 𝑝𝑝¹⁶𝑞𝑞² that has (16 + 1)(2 + 1) = 51 divisors; 𝑝𝑝⁵𝑞𝑞² whose square is 𝑝𝑝¹⁰𝑞𝑞⁴ that has (10 + 1)(4 + 1) = 55 divisors; 𝑝𝑝²𝑞𝑞²𝑟𝑟 whose square is 𝑝𝑝⁴𝑞𝑞⁴𝑟𝑟² that has (4 + 1)(4 + 1) (2 + 1) = 75divisors. The greatest count of factors is 75.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 8",
+   "question": "On any given school day, Hill Valley Middle School teacher Leilani Goodwin wears jeans to school with probability 20%, and each day is independent of all other days. What is the probability that in a five-day school week, Ms. Goodwin wears jeans on exactly two days? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "100",
+   "solution": "Answer: 100 28.. For 2 days, each independently at 20 % = 20/20100/20 = 15 for jeans means 5 d − 2 d = 3 d, each independently at 1 − 15 = 45 for non-jeans. This is a binomial distribution, so the requested 2 �4 3 = (5×4)×(1)×(4×4×4) 𝟐𝟐𝟏𝟏 probability is 5!2! 3! �15� 5� (2)×(5×5)×(5×5×5) = 2×4354 = 𝟏𝟏𝟔𝟔𝟐𝟐𝟐𝟐 . 2026 CHAPTER COMPETITION Solutions",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 9",
+   "question": "A sequence is said to be non-decreasing when each term is greater than or equal quences to the term before it. For example, 4,4,4,5,6 is non-decreasing, but 4,4,4,3,5,6 is not because 3 is less than 4, and 3 comes after 4 in the sequence. How many non-decreasing sequences of positive integers with length 2026 terms start with 1 and end with 3?",
+   "choices": null,
+   "answer": "210",
+   "solution": "Answer: 210 29.. We have a finite sequence consisting of a 1 followed by a subsequence of a nonnegative integer 𝑛𝑛 count of terms each of which is a 1 , followed by a subsequence of a nonnegative integer 𝑚𝑚 count of terms each of which is a 2, followed by a subsequence of a nonnegative integer 2024 − 𝑛𝑛 − 𝑚𝑚 count of terms each of which is a 3, followed by a 3. Thus, 0 ≤ min(𝑚𝑚, 𝑛𝑛) ≤ max(𝑚𝑚, 𝑛𝑛) ≤ 𝑛𝑛 + 𝑚𝑚 ≤ 2024 in order to be meaningful and totals 1 + 𝑛𝑛 + 𝑚𝑚 + (2024 − 𝑛𝑛 − 𝑚𝑚 ) + 1 = 2026 terms in the sequence, as required by the question. We now focus on the middle 2024 terms because those are the only ones that can change to produce a different sequence—the term at each end is fixed in value. Let’s put a vertical boundary bar immediately to the right of the latest term with value 1 in the full 2026- term sequence and another such bar immediately to the left of the earlie st term with value 3. The two bars will be contiguous if there are no terms with value 2. A bar will be at the far left end of the subsequence of the middle 2024 terms if there are no 1s in the full sequence except the fixed initial 1, and, similarly, a bar will be at the far righ t end of the subsequence of the middle 2024 terms if there are no 3s in the full sequence except the fixed initial 3. Moving a bar to another location means the sequence has changed, which counts as a distinct sequence. In essence, we have 2024 slots for numbers (not counting the fixed number values at each end) and 2 slots for boundary bars—with all 1s to the left of the leftmost bar, all 2s between the two bars, and all 3s to the right of the rightmost bar. One boundary bar can go in any of the 2026 slots and the other boundary bar can go in any of the remaining 2025 slots; however, swapping the two bars does not change the sequence, so we are double- counting, which we need to remedy. Therefore, the count of distinct sequences is 2026 × 20252 = 𝟐𝟐 𝟎𝟎𝟐𝟐𝟏𝟏 𝟑𝟑𝟐𝟐𝟐𝟐.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 10",
+   "question": "Three unit circles are externally tangent to one another, as shown. From each circle’s center, there are two lines that pass through the center and are tangent to exactly one of the other circles. These six lines form a hexagon. What is the area inside this hexagon but outside the three circles? Express your answer as a decimal to the nearest hundredth.",
+   "choices": null,
+   "answer": "56",
+   "solution": "Answer: 56 (percent) 30.. The figure shows that opposite sides of the hexagon are separated by the same distance as the diameter of the circles, which is 2. For a regular hexagon, like ours, this separation is also equal to √3𝑠𝑠, where 𝑠𝑠 is the length of each side of the hexagon. Thus, we have 𝑠𝑠 = 2√3—do not waste time and effort “normalizing” or “simplifying” radicals out of denominators in intermediate calculations as such actions are often counterproductive, like here. The area of a hexagon is 6 × √34 𝑠𝑠2 = 6 × √34× 43= 2√3. The hexagon cuts out a sector of 120° arc from each circle (because each interior angle of a regular hexagon has measure 120°, and the center of each circle is at the center of a circle). Thus, the sectors from the three circles combine to form one full circle of radius 1, so the interior of that circle has area π. Therefore, the shaded area is 2√3 − π = 0.3225…, which rounds to the nearest hundredth as 0.32 or .32. [The explicit 0 for the integer part is considered good practice—often even required—by numerous organizations . MATHCOUNTS uses the explicit 0 in all printed materials but does not require it in a Mathlete’s answers. The Texas UIL Number Sense Competition takes the contrary approach of forbidding explicitly writing an integer part that is 0.]",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

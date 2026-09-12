@@ -1,0 +1,411 @@
+{
+ "id": "amc10_rand_10",
+ "competition": "AMC 10",
+ "category": "Math",
+ "title": "AMC 10 — Random Mock #10 · 2026-08-26 16:33",
+ "instructions": "25 questions · 75 minutes · No calculator. 150 points total.",
+ "time_limit_min": 75,
+ "total_points": 150,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2010 AMC 10B Problem 1",
+   "question": "What is $50(50-4)-(50\\cdot 50-4)$?",
+   "choices": {
+    "A": "$-196$",
+    "B": "$-204$",
+    "C": "$-96$",
+    "D": "$-4$",
+    "E": "$0$"
+   },
+   "answer": "A",
+   "solution": "Compute each piece: $50(50-4)=50\\cdot 46=2300$ and $50\\cdot 50-4=2500-4=2496$. Therefore the value is $2300-2496=-196$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 2,
+   "source": "2025 AMC 10B Problem 2",
+   "question": "Jerry wrote down the ones digit of each of the first $100$ positive squares: $1, 4, 9, 6, 5, 6, \\dots$. What is the sum of these $100$ digits?",
+   "choices": {
+    "A": "400",
+    "B": "405",
+    "C": "420",
+    "D": "445",
+    "E": "450"
+   },
+   "answer": "E",
+   "solution": "The ones digits of squares repeat every 10: $1,4,9,6,5,6,9,4,1,0$, summing to $45$. Ten complete cycles give $45 \\times 10 = 450$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 3,
+   "source": "2005 AMC 10A Problem 3",
+   "question": "The equations $5x + 13 = 3$ and $bx - 15 = -3$ have the same solution $x$. What is the value of $b$?",
+   "choices": {
+    "A": "-3",
+    "B": "-4",
+    "C": "-5",
+    "D": "-6",
+    "E": "-8"
+   },
+   "answer": "D",
+   "solution": "From $5x+13=3$ we get $x=-2$. Substituting into $bx-15=-3$ gives $-2b=12$, so $b=-6$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 4,
+   "source": "2004 AMC 10A Problem 4",
+   "question": "What is the value of $x$ if $|x-2|=|x-5|$?",
+   "choices": {
+    "A": "3",
+    "B": "\\frac{7}{2}",
+    "C": "4",
+    "D": "\\frac{9}{2}",
+    "E": "5"
+   },
+   "answer": "B",
+   "solution": "The equation says $x$ is equidistant from $2$ and $5$, so $x$ is their midpoint: $x=\\frac{2+5}{2}=\\frac{7}{2}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 5,
+   "source": "2017 AMC 10A Problem 5",
+   "question": "The sum of two nonzero real numbers is $7$ times their product. What is the sum of the reciprocals of the two numbers?",
+   "choices": {
+    "A": "\\frac{1}{7}",
+    "B": "\\frac{2}{7}",
+    "C": "\\frac{7}{2}",
+    "D": "7",
+    "E": "14"
+   },
+   "answer": "D",
+   "solution": "If $x+y=7xy$, then $\\frac{1}{x}+\\frac{1}{y}=\\frac{x+y}{xy}=\\frac{7xy}{xy}=7$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 6,
+   "source": "2023 AMC 10B Problem 6",
+   "question": "Let $a_1 = 1$, $a_2 = 2$, and $a_{n+2} = a_{n+1} + a_n$ for $n \\geq 1$. How many of the first $30$ terms of the sequence are even?",
+   "choices": {
+    "A": "6",
+    "B": "7",
+    "C": "8",
+    "D": "9",
+    "E": "10"
+   },
+   "answer": "E",
+   "solution": "Parities repeat with period 3: odd, even, odd, odd, even, odd, $\\dots$ — even exactly when $n \\equiv 2 \\pmod 3$. Among the first 30 terms those are $n=2,5,\\dots,29$: $10$ terms.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 7,
+   "source": "2015 AMC 10A Problem 7",
+   "question": "How many terms are in the arithmetic sequence $11$, $15$, $19$, $\\dotsc$, $79$, $83$?",
+   "choices": {
+    "A": "17",
+    "B": "18",
+    "C": "19",
+    "D": "20",
+    "E": "21"
+   },
+   "answer": "C",
+   "solution": "The common difference is $4$, so the number of terms is $\\frac{83-11}{4}+1=18+1=19$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 8,
+   "source": "2012 AMC 10A Problem 8",
+   "question": "The sums of three whole numbers taken in pairs are $14$, $19$, and $21$. What is the middle number?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "If the numbers are $a<b<c$, then $a+b=14$, $a+c=19$, $b+c=21$. Adding gives $a+b+c=27$, so $c=13$, $b=8$, $a=6$. The middle number is $8$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 9,
+   "source": "2021 AMC 10A Problem 9",
+   "question": "What is the least possible value of $(xy-2)^2+(x+y)^2$ for real numbers $x$ and $y$?",
+   "choices": {
+    "A": "2",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "8"
+   },
+   "answer": "B",
+   "solution": "Let $u=xy$ and $v=x+y$; real $x,y$ require $v^2 \\geq 4u$. On the boundary $v^2=4u$: $(u-2)^2+4u = u^2+4 \\geq 4$, with equality at $u=v=0$ (i.e. $x=y=0$). The minimum is $4$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 10,
+   "source": "2019 AMC 10A Problem 10",
+   "question": "A rectangular floor that is $12$ feet wide and $19$ feet long is tiled with $228$ one-foot square tiles. A bug walks from one corner to the opposite corner in a straight line. Including the first and the last tile, how many tiles does the bug visit?",
+   "choices": {
+    "A": "$28$",
+    "B": "$29$",
+    "C": "$30$",
+    "D": "$31$",
+    "E": "$32$"
+   },
+   "answer": "C",
+   "solution": "The bug starts in one tile and enters a new tile each time it crosses an interior grid line. It crosses $18$ interior vertical lines and $11$ interior horizontal lines. Since $\\gcd(12,19)=1$, the diagonal never passes through an interior lattice point, so no two crossings coincide. The number of tiles visited is $1+18+11=30$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 11,
+   "source": "2013 AMC 10B Problem 11",
+   "question": "Real numbers $x$ and $y$ satisfy the equation $x^2+y^2=14x-4y-53$. What is $x+y$?",
+   "choices": {
+    "A": "9",
+    "B": "10",
+    "C": "11",
+    "D": "12",
+    "E": "13"
+   },
+   "answer": "A",
+   "solution": "Completing the square: $(x-7)^2+(y-2)^2=49+4-53=0$, so $x=7$ and $y=2$, giving $x+y=9$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 12,
+   "source": "2021 AMC 10B Problem 12",
+   "question": "Let $N = 14 \\cdot 14 \\cdot 33 \\cdot 60$. What is the ratio of the sum of the odd divisors of $N$ to the sum of the even divisors of $N$?",
+   "choices": {
+    "A": "$\\text{1 : 14}$",
+    "B": "$\\text{1 : 16}$",
+    "C": "$\\text{1 : 24}$",
+    "D": "$\\text{1 : 28}$",
+    "E": "$\\text{1 : 30}$"
+   },
+   "answer": "E",
+   "solution": "Factor: $N=14^2\\cdot 33\\cdot 60=2^4\\cdot 3^2\\cdot 5\\cdot 7^2\\cdot 11$. Write $N=2^4 m$ with $m$ odd. Every divisor of $N$ has the form $2^j d$ with $d\\mid m$ and $0\\leq j\\leq 4$. The odd divisors ($j=0$) sum to $\\sigma(m)$, while the even divisors ($j=1,2,3,4$) sum to $(2+4+8+16)\\sigma(m)=30\\,\\sigma(m)$. The ratio is $1:30$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 13,
+   "source": "2022 AMC 10B Problem 13",
+   "question": "The positive difference between a pair of primes is equal to $2$, and the positive difference between the cubes of the two primes is $10586$. What is the sum of the digits of the least prime that is greater than those two primes?",
+   "choices": {
+    "A": "$11$",
+    "B": "$8$",
+    "C": "$10$",
+    "D": "$13$",
+    "E": "$16$"
+   },
+   "answer": "A",
+   "solution": "Let the primes be $p$ and $p+2$. Then $(p+2)^3-p^3=6p^2+12p+8=10586$, so $p^2+2p=1763$, giving $p=41$ (since $41^2+2\\cdot 41=1681+82=1763$). Indeed $41$ and $43$ are both prime. The least prime greater than $43$ is $47$, whose digit sum is $4+7=11$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 14,
+   "source": "2019 AMC 10B Problem 14",
+   "question": "What is the sum of the digits of the base-ten representation of $15!$?",
+   "choices": {
+    "A": "27",
+    "B": "36",
+    "C": "40",
+    "D": "42",
+    "E": "45"
+   },
+   "answer": "E",
+   "solution": "$15! = 1{,}307{,}674{,}368{,}000$. Its nonzero digits sum to $1+3+0+7+6+7+4+3+6+8 = 45$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 15,
+   "source": "2003 AMC 10A Problem 15",
+   "question": "What is the probability that an integer in the set $\\{1,2,3,\\ldots,90\\}$ is divisible by $2$ and not divisible by $3$?",
+   "choices": {
+    "A": "\\frac{1}{6}",
+    "B": "\\frac{2}{9}",
+    "C": "\\frac{4}{15}",
+    "D": "\\frac{3}{10}",
+    "E": "\\frac{1}{3}"
+   },
+   "answer": "E",
+   "solution": "There are $45$ even numbers in the set, and $\\frac{90}{6}=15$ multiples of $6$ to exclude, leaving $30$. The probability is $\\frac{30}{90}=\\frac{1}{3}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 16,
+   "source": "2018 AMC 10B Problem 16",
+   "question": "Let $a_1 < a_2 < \\cdots < a_{10}$ be a strictly increasing sequence of positive integers with $a_1+a_2+\\cdots+a_{10}=100$. What is the greatest possible value of $a_{10}$?",
+   "choices": {
+    "A": "55",
+    "B": "45",
+    "C": "50",
+    "D": "60",
+    "E": "65"
+   },
+   "answer": "A",
+   "solution": "To maximize $a_{10}$, minimize the rest: $a_1,\\dots,a_9 \\geq 1,2,\\dots,9$, summing to $45$. Then $a_{10} = 100-45 = 55$, and $55 > 9$ keeps the sequence increasing. ✓",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 17,
+   "source": "2007 AMC 10A Problem 17",
+   "question": "Suppose that $m$ and $n$ are positive integers such that $48m = n^{3}$. What is the minimum possible value of $m + n$?",
+   "choices": {
+    "A": "24",
+    "B": "36",
+    "C": "48",
+    "D": "60",
+    "E": "72"
+   },
+   "answer": "C",
+   "solution": "Since $48=2^4\\cdot 3$, for $n^3$ to be a multiple of $48$ the smallest $n$ is $2^2\\cdot 3=12$. Then $m=\\frac{12^3}{48}=36$, and $m+n=48$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 18,
+   "source": "2008 AMC 10A Problem 18",
+   "question": "A right triangle has perimeter $30$ and area $30$. What is the length of its hypotenuse?",
+   "choices": {
+    "A": "5",
+    "B": "10",
+    "C": "12",
+    "D": "12.5",
+    "E": "13"
+   },
+   "answer": "E",
+   "solution": "With legs $a,b$ and hypotenuse $c$: $ab=60$ and $a+b=30-c$. Squaring, $a^2+2ab+b^2=(30-c)^2$, so $c^2+120=900-60c+c^2$, giving $c=13$ (the $5$-$12$-$13$ triangle).",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 19,
+   "source": "2016 AMC 10A Problem 19",
+   "question": "In rectangle $ABCD$, $AB=8$ and $BC=4$. Point $E$ lies on $\\overline{BC}$ with $BE=1$, and point $F$ lies on $\\overline{BC}$ with $FC=1$. What is the area of $\\triangle AEF$?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "$EF = 4-1-1 = 2$. Taking $EF$ as the base, the height from $A$ to line $BC$ equals $AB=8$, so the area is $\\frac12 \\cdot 2 \\cdot 8 = 8$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 20,
+   "source": "2018 AMC 10B Problem 20",
+   "question": "A function $f$ is defined recursively by $f(1)=f(2)=1$ and $$f(n)=f(n-1)-f(n-2)+n$$for all integers $n \\geq 3$. What is $f(2024)$?",
+   "choices": {
+    "A": "$2021$",
+    "B": "$2022$",
+    "C": "$2023$",
+    "D": "$2024$",
+    "E": "$2025$"
+   },
+   "answer": "C",
+   "solution": "From the recursion, $f(n)-f(n-1)+f(n-2)=n$, and shifting indices, $f(n-1)-f(n-2)+f(n-3)=n-1$. Adding these gives $f(n)+f(n-3)=2n-1$. Applying the same identity at $n+3$ and subtracting yields $f(n+3)-f(n-3)=6$, so every $6$ steps the values increase by $6$. Since $2024=6\\cdot 337+2$, we get $f(2024)=f(2)+6\\cdot 337=1+2022=2023$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 21,
+   "source": "2017 AMC 10B Problem 21",
+   "question": "In $\\triangle ABC$, $AB=9$, $AC=12$, $BC=15$, and $D$ is the midpoint of $\\overline{BC}$. What is the sum of the radii of the circles inscribed in $\\triangle ADB$ and $\\triangle ADC$?",
+   "choices": {
+    "A": "$3$",
+    "B": "$\\frac{7}{2}$",
+    "C": "$\\frac{15}{4}$",
+    "D": "$4$",
+    "E": "$\\frac{17}{4}$"
+   },
+   "answer": "E",
+   "solution": "Since $9^2+12^2=225=15^2$, the right angle is at $A$, and the midpoint $D$ of the hypotenuse satisfies $AD=BD=CD=\\tfrac{15}{2}$. Triangle $ADB$ has sides $9,\\tfrac{15}{2},\\tfrac{15}{2}$: its height to base $9$ is $\\sqrt{(15/2)^2-(9/2)^2}=6$, so its area is $\\tfrac12\\cdot 9\\cdot 6=27$ and its semiperimeter is $12$, giving inradius $\\tfrac{27}{12}=\\tfrac94$. Triangle $ADC$ has sides $12,\\tfrac{15}{2},\\tfrac{15}{2}$: its height to base $12$ is $\\sqrt{(15/2)^2-6^2}=\\tfrac92$, so its area is $27$ and its semiperimeter is $\\tfrac{27}{2}$, giving inradius $2$. The sum is $\\tfrac94+2=\\tfrac{17}{4}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 22,
+   "source": "2015 AMC 10B Problem 22",
+   "question": "A regular hexagon has side length $2$. What is the sum of the lengths of all of its diagonals?",
+   "choices": {
+    "A": "$12+6\\sqrt3$",
+    "B": "$18+6\\sqrt3$",
+    "C": "$12+12\\sqrt3$",
+    "D": "$24$",
+    "E": "$12+18\\sqrt3$"
+   },
+   "answer": "C",
+   "solution": "A regular hexagon has $6$ short diagonals (spanning two sides) of length $2\\sqrt3$ and $3$ long diagonals (diameters) of length $4$. Sum $= 6\\cdot 2\\sqrt3 + 3\\cdot 4 = 12\\sqrt3+12$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 23,
+   "source": "2007 AMC 10A Problem 23",
+   "question": "How many ordered pairs $(m,n)$ of positive integers, with $m \\ge n$, have the property that their squares differ by $192$?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "D",
+   "solution": "We need $(m-n)(m+n)=192$ with both factors even. The even factor pairs of $192$ are $(2,96),(4,48),(6,32),(8,24),(12,16)$, each giving positive integers $m,n$: five pairs.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 24,
+   "source": "2004 AMC 10A Problem 24",
+   "question": "Let $f$ be a function with the following properties: (i) $f(1) = 1$, and (ii) $f(2n) = n \\cdot f(n)$ for any positive integer $n$. What is the value of $f(2^{50})$?",
+   "choices": {
+    "A": "2^{50}",
+    "B": "2^{1225}",
+    "C": "2^{1250}",
+    "D": "2^{1275}",
+    "E": "2^{2500}"
+   },
+   "answer": "B",
+   "solution": "$f(2^{50})=2^{49}\\cdot 2^{48}\\cdots 2^0\\cdot f(1)=2^{0+1+\\cdots+49}=2^{1225}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 25,
+   "source": "2001 AMC 10 Problem 25",
+   "question": "How many positive integers not exceeding $2004$ are multiples of $3$ or $4$ but not $5$?",
+   "choices": {
+    "A": "768",
+    "B": "782",
+    "C": "792",
+    "D": "800",
+    "E": "802"
+   },
+   "answer": "E",
+   "solution": "Multiples of $3$ or $4$: $668+501-167=1002$. Among these, the multiples of $5$ are the multiples of $15$ or $20$: $133+100-33=200$. The answer is $1002-200=802$.",
+   "type": "multiple_choice",
+   "points": 6
+  }
+ ]
+}

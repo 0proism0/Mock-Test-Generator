@@ -1,0 +1,356 @@
+{
+  "competition": "AMC 10",
+  "set": "C",
+  "variants": [
+    {
+      "position": 1,
+      "source": "2016 AMC 10A Problem 1",
+      "question": "What is the value of $$\\dfrac{13!-12!}{11!}?$$",
+      "choices": {
+        "A": "120",
+        "B": "132",
+        "C": "144",
+        "D": "156",
+        "E": "168"
+      },
+      "answer": "C",
+      "solution": "$\\dfrac{13!-12!}{11!}=\\dfrac{12!(13-1)}{11!}=\\dfrac{12\\cdot 12!}{11!}=12\\cdot 12=144$."
+    },
+    {
+      "position": 2,
+      "source": "2016 AMC 10A Problem 2",
+      "question": "For what value of $x$ does $10^{x}\\cdot 100^{x}=1000^{4}$?",
+      "choices": {
+        "A": "4",
+        "B": "3",
+        "C": "6",
+        "D": "8",
+        "E": "12"
+      },
+      "answer": "A",
+      "solution": "$10^{x}\\cdot 100^{x}=10^x\\cdot 10^{2x}=10^{3x}$ and $1000^4=10^{12}$, so $3x=12$ and $x=4$."
+    },
+    {
+      "position": 3,
+      "source": "2005 AMC 10A Problem 3",
+      "question": "The equations $5x + 13 = 3$ and $bx - 15 = -3$ have the same solution $x$. What is the value of $b$?",
+      "choices": {
+        "A": "-3",
+        "B": "-4",
+        "C": "-5",
+        "D": "-6",
+        "E": "-8"
+      },
+      "answer": "D",
+      "solution": "From $5x+13=3$ we get $x=-2$. Substituting into $bx-15=-3$ gives $-2b=12$, so $b=-6$."
+    },
+    {
+      "position": 4,
+      "source": "2004 AMC 10A Problem 4",
+      "question": "What is the value of $x$ if $|x-2|=|x-5|$?",
+      "choices": {
+        "A": "3",
+        "B": "\\frac{7}{2}",
+        "C": "4",
+        "D": "\\frac{9}{2}",
+        "E": "5"
+      },
+      "answer": "B",
+      "solution": "The equation says $x$ is equidistant from $2$ and $5$, so $x$ is their midpoint: $x=\\frac{2+5}{2}=\\frac{7}{2}$."
+    },
+    {
+      "position": 5,
+      "source": "2017 AMC 10A Problem 5",
+      "question": "The sum of two nonzero real numbers is $7$ times their product. What is the sum of the reciprocals of the two numbers?",
+      "choices": {
+        "A": "\\frac{1}{7}",
+        "B": "\\frac{2}{7}",
+        "C": "\\frac{7}{2}",
+        "D": "7",
+        "E": "14"
+      },
+      "answer": "D",
+      "solution": "If $x+y=7xy$, then $\\frac{1}{x}+\\frac{1}{y}=\\frac{x+y}{xy}=\\frac{7xy}{xy}=7$."
+    },
+    {
+      "position": 6,
+      "source": "2015 AMC 10A Problem 6",
+      "question": "The sum of two positive numbers is $7$ times their difference. What is the ratio of the larger number to the smaller number?",
+      "choices": {
+        "A": "\\frac{4}{3}",
+        "B": "\\frac{5}{4}",
+        "C": "\\frac{6}{5}",
+        "D": "\\frac{7}{6}",
+        "E": "\\frac{8}{7}"
+      },
+      "answer": "A",
+      "solution": "Let $x>y$. Then $x+y=7(x-y)$, so $8y=6x$ and $\\frac{x}{y}=\\frac{8}{6}=\\frac{4}{3}$."
+    },
+    {
+      "position": 7,
+      "source": "2015 AMC 10A Problem 7",
+      "question": "How many terms are in the arithmetic sequence $11$, $15$, $19$, $\\dotsc$, $79$, $83$?",
+      "choices": {
+        "A": "17",
+        "B": "18",
+        "C": "19",
+        "D": "20",
+        "E": "21"
+      },
+      "answer": "C",
+      "solution": "The common difference is $4$, so the number of terms is $\\frac{83-11}{4}+1=18+1=19$."
+    },
+    {
+      "position": 8,
+      "source": "2012 AMC 10A Problem 8",
+      "question": "The sums of three whole numbers taken in pairs are $14$, $19$, and $21$. What is the middle number?",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8",
+        "E": "9"
+      },
+      "answer": "D",
+      "solution": "If the numbers are $a<b<c$, then $a+b=14$, $a+c=19$, $b+c=21$. Adding gives $a+b+c=27$, so $c=13$, $b=8$, $a=6$. The middle number is $8$."
+    },
+    {
+      "position": 9,
+      "source": "2006 AMC 10A Problem 9",
+      "question": "How many sets of two or more consecutive positive integers have a sum of $45$?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "B",
+      "solution": "The sets are $22+23$, $14+15+16$, $7+8+9+10+11$, $5+6+7+8+9+10$, and $1+2+\\cdots+9$: five sets in all."
+    },
+    {
+      "position": 10,
+      "source": "2012 AMC 10B Problem 10",
+      "question": "How many ordered pairs of positive integers $(M,N)$ satisfy the equation $\\frac{M}{8}=\\frac{8}{N}$?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "7"
+      },
+      "answer": "E",
+      "solution": "Cross-multiplying gives $MN=64$. Each positive divisor of $64$ gives a valid $M$ (with $N=64/M$), and $64=2^6$ has $7$ divisors."
+    },
+    {
+      "position": 11,
+      "source": "2013 AMC 10B Problem 11",
+      "question": "Real numbers $x$ and $y$ satisfy the equation $x^2+y^2=14x-4y-53$. What is $x+y$?",
+      "choices": {
+        "A": "9",
+        "B": "10",
+        "C": "11",
+        "D": "12",
+        "E": "13"
+      },
+      "answer": "A",
+      "solution": "Completing the square: $(x-7)^2+(y-2)^2=49+4-53=0$, so $x=7$ and $y=2$, giving $x+y=9$."
+    },
+    {
+      "position": 12,
+      "source": "2016 AMC 10B Problem 12",
+      "question": "Two different numbers are selected at random from $\\{1, 2, 3, 4, 5, 6\\}$ and multiplied together. What is the probability that the product is even?",
+      "choices": {
+        "A": "\\frac{2}{3}",
+        "B": "\\frac{11}{15}",
+        "C": "\\frac{4}{5}",
+        "D": "\\frac{13}{15}",
+        "E": "\\frac{14}{15}"
+      },
+      "answer": "C",
+      "solution": "The product is odd only when both numbers are odd. There are $\\binom{3}{2}=3$ odd-odd pairs out of $\\binom{6}{2}=15$ pairs, so the probability of an even product is $1-\\frac{3}{15}=\\frac{4}{5}$."
+    },
+    {
+      "position": 13,
+      "source": "2004 AMC 10A Problem 13",
+      "question": "At a party, each man danced with exactly four women and each woman danced with exactly three men. Fifteen men attended the party. How many women attended the party?",
+      "choices": {
+        "A": "12",
+        "B": "15",
+        "C": "18",
+        "D": "20",
+        "E": "24"
+      },
+      "answer": "D",
+      "solution": "Counting dance pairs two ways: $15\\cdot 4 = 3w$, so $w=\\frac{60}{3}=20$ women."
+    },
+    {
+      "position": 14,
+      "source": "2002 AMC 10A Problem 14",
+      "question": "Both roots of the quadratic equation $x^2 - 68x + k = 0$ are prime numbers. The number of possible values of $k$ is",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "more than 4"
+      },
+      "answer": "B",
+      "solution": "The roots are primes $p$ and $q$ with $p+q=68$. Checking even/odd: one prime could be $2$ (giving $66$, not prime), so both are odd. The prime pairs summing to $68$ are $(7,61)$ and $(31,37)$, giving $k=427$ or $k=1147$: two values."
+    },
+    {
+      "position": 15,
+      "source": "2003 AMC 10A Problem 15",
+      "question": "What is the probability that an integer in the set $\\{1,2,3,\\ldots,90\\}$ is divisible by $2$ and not divisible by $3$?",
+      "choices": {
+        "A": "\\frac{1}{6}",
+        "B": "\\frac{2}{9}",
+        "C": "\\frac{4}{15}",
+        "D": "\\frac{3}{10}",
+        "E": "\\frac{1}{3}"
+      },
+      "answer": "E",
+      "solution": "There are $45$ even numbers in the set, and $\\frac{90}{6}=15$ multiples of $6$ to exclude, leaving $30$. The probability is $\\frac{30}{90}=\\frac{1}{3}$."
+    },
+    {
+      "position": 16,
+      "source": "2003 AMC 10A Problem 16",
+      "question": "What is the units digit of $19^{2019}$?",
+      "choices": {
+        "A": "9",
+        "B": "1",
+        "C": "3",
+        "D": "5",
+        "E": "7"
+      },
+      "answer": "A",
+      "solution": "The units digit of powers of $19$ alternates $9,1,9,1,\\ldots$ Since $2019$ is odd, the units digit is $9$."
+    },
+    {
+      "position": 17,
+      "source": "2007 AMC 10A Problem 17",
+      "question": "Suppose that $m$ and $n$ are positive integers such that $48m = n^{3}$. What is the minimum possible value of $m + n$?",
+      "choices": {
+        "A": "24",
+        "B": "36",
+        "C": "48",
+        "D": "60",
+        "E": "72"
+      },
+      "answer": "C",
+      "solution": "Since $48=2^4\\cdot 3$, for $n^3$ to be a multiple of $48$ the smallest $n$ is $2^2\\cdot 3=12$. Then $m=\\frac{12^3}{48}=36$, and $m+n=48$."
+    },
+    {
+      "position": 18,
+      "source": "2008 AMC 10A Problem 18",
+      "question": "A right triangle has perimeter $30$ and area $30$. What is the length of its hypotenuse?",
+      "choices": {
+        "A": "5",
+        "B": "10",
+        "C": "12",
+        "D": "12.5",
+        "E": "13"
+      },
+      "answer": "E",
+      "solution": "With legs $a,b$ and hypotenuse $c$: $ab=60$ and $a+b=30-c$. Squaring, $a^2+2ab+b^2=(30-c)^2$, so $c^2+120=900-60c+c^2$, giving $c=13$ (the $5$-$12$-$13$ triangle)."
+    },
+    {
+      "position": 19,
+      "source": "2002 AMC 10B Problem 19",
+      "question": "Suppose that $\\{a_n\\}$ is an arithmetic sequence with $$a_1+a_2+\\cdots+a_{100}=300 \\text{ and } a_{101}+a_{102}+\\cdots+a_{200}=500.$$ What is the value of $a_2 - a_1$?",
+      "choices": {
+        "A": "\\frac{1}{100}",
+        "B": "\\frac{1}{50}",
+        "C": "\\frac{1}{25}",
+        "D": "\\frac{1}{10}",
+        "E": "2"
+      },
+      "answer": "B",
+      "solution": "Each term of the second block is $100d$ more than the corresponding term of the first block, where $d=a_2-a_1$. Thus $500-300=100\\cdot(100d)$, so $d=\\frac{200}{10000}=\\frac{1}{50}$."
+    },
+    {
+      "position": 20,
+      "source": "2007 AMC 10A Problem 20",
+      "question": "Suppose that the number $a$ satisfies the equation $5 = a + a^{-1}$. What is the value of $a^{4} + a^{-4}$?",
+      "choices": {
+        "A": "123",
+        "B": "323",
+        "C": "523",
+        "D": "525",
+        "E": "527"
+      },
+      "answer": "E",
+      "solution": "Squaring: $a^2+a^{-2}=25-2=23$. Squaring again: $a^4+a^{-4}=23^2-2=529-2=527$."
+    },
+    {
+      "position": 21,
+      "source": "2006 AMC 10A Problem 21",
+      "question": "How many four-digit positive integers have at least one digit that is a $7$?",
+      "choices": {
+        "A": "3168",
+        "B": "3240",
+        "C": "3402",
+        "D": "4131",
+        "E": "5832"
+      },
+      "answer": "A",
+      "solution": "Complementary counting: there are $9000$ four-digit integers. Those with no digit $7$ number $8\\cdot 9\\cdot 9\\cdot 9=5832$. So the answer is $9000-5832=3168$."
+    },
+    {
+      "position": 22,
+      "source": "2005 AMC 10A Problem 22",
+      "question": "Let $S$ be the set of the $1500$ smallest positive multiples of $4$, and let $T$ be the set of the $1500$ smallest positive multiples of $6$. How many elements are common to $S$ and $T$?",
+      "choices": {
+        "A": "250",
+        "B": "375",
+        "C": "500",
+        "D": "750",
+        "E": "1000"
+      },
+      "answer": "C",
+      "solution": "The common elements are the multiples of $\\text{lcm}(4,6)=12$ up to $4\\cdot 1500=6000$ (the largest element of $S$). There are $\\frac{6000}{12}=500$ of them."
+    },
+    {
+      "position": 23,
+      "source": "2007 AMC 10A Problem 23",
+      "question": "How many ordered pairs $(m,n)$ of positive integers, with $m \\ge n$, have the property that their squares differ by $192$?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "D",
+      "solution": "We need $(m-n)(m+n)=192$ with both factors even. The even factor pairs of $192$ are $(2,96),(4,48),(6,32),(8,24),(12,16)$, each giving positive integers $m,n$: five pairs."
+    },
+    {
+      "position": 24,
+      "source": "2004 AMC 10A Problem 24",
+      "question": "Let $f$ be a function with the following properties: (i) $f(1) = 1$, and (ii) $f(2n) = n \\cdot f(n)$ for any positive integer $n$. What is the value of $f(2^{50})$?",
+      "choices": {
+        "A": "2^{50}",
+        "B": "2^{1225}",
+        "C": "2^{1250}",
+        "D": "2^{1275}",
+        "E": "2^{2500}"
+      },
+      "answer": "B",
+      "solution": "$f(2^{50})=2^{49}\\cdot 2^{48}\\cdots 2^0\\cdot f(1)=2^{0+1+\\cdots+49}=2^{1225}$."
+    },
+    {
+      "position": 25,
+      "source": "2001 AMC 10 Problem 25",
+      "question": "How many positive integers not exceeding $2004$ are multiples of $3$ or $4$ but not $5$?",
+      "choices": {
+        "A": "768",
+        "B": "782",
+        "C": "792",
+        "D": "800",
+        "E": "802"
+      },
+      "answer": "E",
+      "solution": "Multiples of $3$ or $4$: $668+501-167=1002$. Among these, the multiples of $5$ are the multiples of $15$ or $20$: $133+100-33=200$. The answer is $1002-200=802$."
+    }
+  ]
+}

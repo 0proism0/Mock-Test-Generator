@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_29",
+ "competition": "SMT — Geometry",
+ "category": "Math",
+ "title": "SMT — Geometry — Random Mock #29 · 2026-08-27 08:50",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2020 SMT Geometry Problem 1",
+   "question": "A circle with radius 1 is circumscribed by a rhombus. What is the minimum possible area of this rhombus?",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. A circle with radius 1 is circumscribed by a rhombus. What is the minimum possible area of this rhombus? Answer: 4 Solution: Work with coordinate axes. Deﬁne the unit circle to be x2 +y2 = 1. An arbitrary rhombus circumscribing a circle with radius 1 will be tangent at four total points, two at x0> 0 and two at−x0. Then A = 2 cscθ secθ = 4 1 2 sinθ≤ 4, so the minimum value of A is 4.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2012 SMT Geometry Problem 2",
+   "question": "In trapezoid ABCD , BC ‖ AD, AB = 13, BC = 15, CD = 14, and DA = 30. Find the area of ABCD .",
+   "choices": null,
+   "answer": "252",
+   "solution": "Answer: 252. In trapezoid ABCD , BC ‖ AD, AB = 13, BC = 15, CD = 14, and DA = 30. Find the area of ABCD . Answer: 252 Solution: We can use the standard method of setting up a two-variable system and solving for the height of the trapezoid. However, since one base is half the length of the other, we may take a shortcut. Extend AB and CD until they meet at E. Clearly, BC is a midline of triangle EAD, so we have EA = 2 BA = 26 and ED = 2 CD = 28. The area of EAD is therefore four times that of a standard 13-14-15 triangle, which we know is 1 2 · 14 · 12 = 84 (since the altitude to the side of length 14 splits the triangle into 9-12-15 and 5-12-13 right triangles). The area of the trapezoid is 3 4 the area of EAD by similar triangles, and is therefore 3 · 84 = 252 . A similar solution draws lines from B and C to the midpoint of AD to form three 13 − 14 − 15 triangles.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2022 SMT Geometry Problem 3",
+   "question": "△ABC has side lengths 13, 14, and 15. Let the feet of the altitudes from A, B, and C be D, E, and F, respectively. The circumcircle of △DEF intersects AD, BE, and CF at I, J, and K respectively. What is the area of △IJ K?",
+   "choices": null,
+   "answer": "21",
+   "solution": "Answer: 21. △ABC has side lengths 13, 14, and 15. Let the feet of the altitudes from A,B, andC be D,E, and F, respectively. The circumcircle of △DEF intersects AD,BE, and CF at I,J, and K respectively. What is the area of △IJK ? Answer: 21 Solution: First we can find that the area of △ABC is 84, either by noting that it can be split into 5-12-13 and 9-12-15 triangles, or using Heron’s formula. Let the orthocenter of △ABC be H. The circumcircle of DEF is the 9-point circle of △ABC and thus I,J,K are the midpoints of AH,BH,CH. So, there is a homothety centered at H with factor 1/2 that sends △ABC to △DEF. Then, [DEF ] = (1/2)2[ABC] = 21 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2021 SMT Geometry Problem 4",
+   "question": "∆A0B0C0 has side lengths A0B0 = 13, B0C0 = 14, and C0A0 = 15. ∆A1B1C1 is inscribed in the incircle of∆A0B0C0 such that it is similar to the ﬁrst triangle. Beginning with ∆A1B1C1, the same steps are repeated to construct ∆A2B2C2, and so on inﬁnitely many times. What is the value of ∑∞ i=0AiBi?",
+   "choices": null,
+   "answer": "845",
+   "solution": "Answer: 845. ∆A0B0C0 has side lengths A0B0 = 13, B0C0 = 14, and C0A0 = 15. ∆A1B1C1 is inscribed in the incircle of∆A0B0C0 such that it is similar to the ﬁrst triangle. Beginning with ∆A1B1C1, the same steps are repeated to construct ∆A2B2C2, and so on inﬁnitely many times. What is the value of∑∞ i=0AiBi? Answer: 845 33 Solution: The area of a 13-14-15 triangle is 84 and its circumradius is R = 13·14·15 2·84 = 65 8 . The semiperimeter is 21, so its inradius isr = 84 21 = 4. The ratio of the side lengths of∆Ai+1Bi+1Ci+1 to the side lengths of ∆AiBiCi is then r R = 32",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2012 SMT Geometry Problem 5",
+   "question": "What is the radius of the largest sphere that ﬁts inside an octahedron of side length 1?",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1√. What is the radius of the largest sphere that ﬁts inside an octahedron of side length 1? Answer: 1√ 6 Solution: It is obvious that the sphere must be tangent to each face, because if not, then it can be moved so that it is tangent to four faces; now the radius can be increased until the sphere is tangent to the other four. Additionally, it is clear that the center of the sphere should be in the center of the octahedron. Now notice that the sphere must be tangent to the octahedron at the centroid of each face. This can be seen by symmetry. It is clear that it should be tangent somewhere along the median from one vertex to the opposite side, and this is true for all three medians, which meet at the centroid. Now we can proceed in a few ways. One way is to isolate one half of the octahedron i.e. a square-based pyramid. Slice this pyramid in half perpendicular to the square base and parallel to one of the sides of the square base. This slice will go through the medians of two opposite triangular faces, in addition to the center of the sphere itself. Hence, we get an isosceles triangle ABC with base BC = 1 and legs of length √ 3/2. O, the center of the sphere, is the midpoint of BC . The radius of the sphere is the altitude from O to AB. If this altitude intersects AB at D, then we have OD · AB = AO · BO, since both equal twice the area of AOB, and so DO = AO·BO AB = (1/ √ 2)(1/2)√ 3/2 = 1/ √ 6 . Alternatively, note that our octahedron can be obtained by reﬂecting the region x+y+z ≤ 1/ √ 2, x, y, z ≥ 0 across the xy, yz, and zx planes. The inscribing sphere has its center at origin, so its radius is the distance from the origin to the plane x + y + z = 1/ √ 2, which is 1 / √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2023 SMT Geometry Problem 6",
+   "question": "Let ABC be a triangle and ω1 its incircle. Let points D and E be on segments AB, AC respectively such that DE is parallel to BC and tangent to ω1. Now let ω2 be the incircle of △ADE and let points F and G be on segments AD, AE respectively such that F G is parallel to DE and tangent to ω2. Given that ω2 is tangent to line AF at point X and line AG at point Y , the radius of ω1 is 60, and 4(AX) = 5(F G) = 4(AY ), compute the radius of ω2.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12. Let ABC be a triangle and ω1 its incircle. Let points D and E be on segments AB,AC respectively such that DE is parallel to BC and tangent to ω1. Now let ω2 be the incircle of △ADE and let points F and G be on segments AD,AE respectively such that FG is parallel toDE and tangent to ω2. Given that ω2 is tangent to line AF at point X and line AG at point Y , the radius of ω1 is 60, and 4(AX) = 5(FG ) = 4(AY ), compute the radius of ω2. Answer: 12 Solution: Let s be the semiperimeter of △AFG , r the inradius of △AFG , and a the length of FG . It is well-known that AX =AY = s since ω2 is an excircle of △AFG . Then, if we let s =ka, from the problem statement we have k = 5",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2019 SMT Geometry Problem 7",
+   "question": "Let G be the centroid of triangle ABC with AB = 9, BC = 10, and AC = 17. Denote D as the midpoint of BC. A line through G parallel to BC intersects AB at M and AC at N. If BG intersects CM at E and CG intersects BN at F , compute the area of triangle DEF .",
+   "choices": null,
+   "answer": "9",
+   "solution": "Answer: 9. Let G be the centroid of triangle ABC with AB = 9, BC = 10, and AC = 17. Denote D as the midpoint of BC. A line through G parallel to BC intersectsAB atM andAC atN. If BG intersectsCM at E and CG intersectsBN at F , compute the area of triangle DEF . Answer: 9 4 Solution: The centroid G cuts median AD such that AG : GD = 2 : 1. Since GM||BC, ∆AGM∼∆ ADB. It follows that GM : BD = 2 : 3, and since BC = 2BD, GM : BC = 1 : 3. Furthermore, GM||BC implies∆GEM∼∆BEC , so GE :BE =GM :BC = 1 : 3. Extend median BG so that it intersects AC at X. We know that BG : GX = 2 : 1, so if we let GE = x, we get BE = 3x, BG = BE +GE = 4x, and GX = 2x. It follows that BE =EX = 3x, so E is the midpoint of BX. But D is the midpoint of BC, so DE||CX . Thus,∆BDE∼∆BCX , so DE :CX = 1 : 2, meaning that DE :AC = 1 : 4. By similar reasoning, we ﬁnd that GF : CF = 1 : 3 and DF : AB = 1 : 4. Combining the ﬁrst ratio with GE : BE = 1 : 3 shows that EF||BC, so ∆GEF ∼∆ GBC. Hence, SMT 2019 Geometry Test Solutions March 2, 2019 EF :BC = 1 : 4. It follows that ∆DFE ∼∆ ABC as the ratio of the corresponding sides is 1 : 4. Using Heron’s Formula, the area of ∆ABC is √ 18(18− 17)(18− 10)(18− 9) = 36, so the area of∆DEF is 36 16 = 9 4 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2020 SMT Geometry Problem 8",
+   "question": "Consider an acute angled triangle ∆ABC with side lengths 7, 8, and 9. Let H be the orthocenter of ABC. Let Γ A, ΓB, and ΓC be the circumcircles of ∆BCH , ∆CAH , and ∆ABH respectively. Find the area of the region Γ A ∪ ΓB ∪ ΓC (the set of all points contained in at least one of Γ A, ΓB, and Γ C).",
+   "choices": null,
+   "answer": "441",
+   "solution": "Answer: 441π. Consider an acute angled triangle∆ABC with side lengths 7, 8, and 9. LetH be the orthocenter ofABC. Let ΓA, ΓB, and ΓC be the circumcircles of∆BCH ,∆CAH , and∆ABH respectively. Find the area of the region Γ A∪ ΓB∪ ΓC (the set of all points contained in at least one of Γ A, ΓB, and ΓC). Answer: 441π 10 + 24 √ 5 Solution: LetHA be the reﬂection ofH across sideBC. Note that ∠AHAB = ∠BHHA = 90◦− ∠HBC = ∠ACB, so HA lies on Γ, the circumcircle of ABC. In other words, the circumcircle of BHAC is precisely Γ. So Γ A – the circumcircle of BHC – is the reﬂection of Γ across side BC. Similarly, ΓB and ΓC are the reﬂections of Γ across sides CA and AB. LetOA,OB, andOC be the centers of ΓA, ΓB, and ΓC. We can write the area of ΓA∪ΓB∪ΓC as the area of hexagon AOCBOACOB plus the three external circular sectors AOCB,BOAC, and COAB. Notice that ∠AOCB + ∠BOAC + ∠COAB = ∠AOB + ∠BOC + ∠COA = 360◦, so the sum of the areas of these three sectors is precisely twice the area of Γ. Furthermore, note that [AOCBOACOB] = [AOCB]+[BOAC]+[COBA]+[ABC] = [AOB]+[BOC ]+[COA]+[ABC] = 2[ABC]. We can compute [ABC] = 12 √ 5 by Heron’s, and then the circumradius R is 7·8·9 4[ABC ] = 21 √ 5 10 . Thus the area of Γ is πR2 = 441π 20 . So our ﬁnal answer is 2 πR2 + 2[ABC] = 441π 10 + 24 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2021 SMT Geometry Problem 9",
+   "question": "Rectangle ABCD has an area of 30. Four circles of radius r1 = 2,r 2 = 3,r 3 = 5, and r4 = 4 are centered on the four vertices A,B,C , and D respectively. Two pairs of external tangents are drawn for the circles at A and C and for the circles at B and D. These four tangents intersect to form a quadrilateral WXYZ where WX and YZ lie on the tangents through the circles on A and C. If WX +YZ = 20, ﬁnd the area of quadrilateral WXYZ . SMT 2021 Geometry Test April 17, 2021",
+   "choices": null,
+   "answer": "70",
+   "solution": "Answer: 70. Rectangle ABCD has an area of 30. Four circles of radius r1 = 2,r 2 = 3,r 3 = 5, and r4 = 4 are centered on the four vertices A,B,C , and D respectively. Two pairs of external tangents are drawn for the circles at A and C and for the circles at B and D. These four tangents intersect to form a quadrilateral WXYZ where WX and YZ lie on the tangents through the circles on A and C. If WX +YZ = 20, ﬁnd the area of quadrilateral WXYZ . Answer: 70 Solution: We claim thatWXYZ is a circumscribed quadrilateral, or a tangential quadrilateral. To show this, note that the center of the rectangle is equidistant from each pair of external tangents with distancer+R 2 wherer andR are the radii of opposing circles. Sincer1+r3 =r2+r4, the center of the rectangle is equidistant from all four tangents. Therefore, a circle of radius r1+r3 2 = 7 2 can be inscribed in WXYZ . The Pitot Theorem states that WX +YZ = XY +ZW for any circumscribed quadrilateral. Thus, the perimeter of WXYZ is 20 + 20 = 40. It is not diﬃcult to see that the area of a circumscribed quadrilateral is just sr where s is the semiperimeter and r is the radius of the inscribed circle. Our answer is then 40 2 · 7 2 = 70. Note that the area of ABCD was only invoked so that there existed a quadrilateral WXYZ with WX +YZ = 20. SMT 2021 Geometry Test Solutions April 17, 2021",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2011 SMT Geometry Problem 10",
+   "question": "Given a triangle ABC withBC = 5,AC = 7, andAB = 8, ﬁnd the side length of the largest equilateral triangle PQR such that A,B,C lie on QR,RP,PQ respectively.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. Given a triangle ABC withBC = 5,AC = 7, andAB = 8, ﬁnd the side length of the largest equilateral triangle PQR such that A,B,C lie on QR,RP,PQ respectively. Answer: 2 √ 43 Let a = BC, b = AC, c = AB. We claim that in general, the answer is √ 2 3(a2 +b2 +c2 + 4 √ 3S) , where S is the area of ABC. Suppose that PQR is an equilateral triangle satisfying the conditions. Then ∠BPC = ∠CQA = ∠ARB = 60◦. The locus of points satisfying ∠BXC = 60◦ is part of a circle Oa. Draw Ob and Oc similarly. These three circles meet at a single point X inside the triangle, which is the unique point satisfying ∠BXC = ∠CXA = ∠AXB = 120◦. Then the choice of P on Oa determines Q and R: those two points should also be on Ob and Oc respectively, and line segments PCQ and PBR should form sides of the triangle. Now one should ﬁnd the maximum of PQ under these conditions. Note that ∠BPX and ∠BRX do not depend on the choice of P , so triangle PXR has the same shape regardless of our choice. In particular, the ratio of PX to PR is constant, so PR is maximized when PX is the diameter of Oa. This requires PQ,QR,RP to be perpendicular to XC,XA,XB respectively. From this point there may be several ways to calculate the answer. One way is to observe that PQ = 2√ 3(AX +BX +CX ) by considering (PQR ) = (PXQ ) + (QXR) + (RXP ). AX +BX +CX can be computed by the usual rotation trick for the Fermat point: rotate ∆BXA 60◦ around B to∆BX′A′. Observe that ∆BXX′ is equilateral, and so A′, X′, X, and C are collinear. Hence, A′C =AX +BX +CX , and we can apply the Law of Cosines to∆A′BC to get thatA′C 2 =c2 +a2− 2ac cos (B + 60◦) =a2 +c2 + 2ac sin 60◦ sinB− 2ac cos 60◦ cosB =a2 +c2 + 2S √ 3− 1 2(a2 +c2−b2) = a2+b2+c2 2 +2S √ 3 =⇒ PQ = √ 2 3(a2 +b2 +c2 + 4 √ 3S) (whereS is again the area ofABC). Plugging in our values for a, b, and c, and using Heron’s formula to ﬁnd S = √ 10∗ 5∗ 3∗ 2 = 10 √ 3, we can calculate PQ = 2 √ 43.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

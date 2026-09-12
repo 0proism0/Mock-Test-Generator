@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_10",
+ "competition": "SMT — Calculus",
+ "category": "Math",
+ "title": "SMT — Calculus — Random Mock #10 · 2026-08-26 16:33",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2023 SMT Calculus Problem 1",
+   "question": "Compute the slope of the line tangent to y2 = x3 + x + 1 at the point (0 , 1).",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Compute the slope of the line tangent to y2 =x3 +x + 1 at the point (0, 1). Answer: 1 2 Solution: We can use implicit differentiation to get 2 y· dy dx = 3x2 + 1. Plugging in the point (0, 1), we find 2· 1· dy dx = 3· 02 + 1 and so dy dx = 1 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2014 SMT Calculus Problem 2",
+   "question": "There is a unique positive real number a such that the tangent line to y = x2 + 1 at x = a goes through the origin. Compute a.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. There is a unique positive real number a such that the tangent line to y =x2 + 1 atx =a goes through the origin. Compute a. Answer: 1 Solution: The slope of the tangent line is 2a. The equation for the tangent line is (y−(a2+1)) = 2a(x−a). Setting x =y = 0 gives us−a2− 1 =−2a2, which has solution a = 1 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2018 SMT Calculus Problem 3",
+   "question": "Find the value of a such that ∫ a 1 (3x2− 6x + 3) dx = 27.",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. Find the value of a such that ∫ a 1 (3x2− 6x + 3)dx = 27. Answer: 4 Solution: We factor the integrand to get ∫ a 1 3(x− 1)2dx = (x− 1)3⏐⏐a 1 = (a− 1)3 = 27. Taking the cube root of both sides yields a− 1 = 3 or a = 4 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2020 SMT Calculus Problem 4",
+   "question": "The Chebyshev Polynomials are deﬁned as Tn(x) = cos(n cos−1(x)), for n = 0, 1, 2,... . Compute the following inﬁnite series: ∞∑ n=1 ∫ 1 −1 T2n+1(x)dx. If the series diverges, your answer should be ”D.”",
+   "choices": null,
+   "answer": "0",
+   "solution": "Answer: 0. The Chebyshev Polynomials are deﬁned as Tn(x) = cos(n cos−1(x)), for n = 0, 1, 2,... . Compute the following inﬁnite series: ∞∑ n=1 ∫ 1 −1 T2n+1(x)dx. If the series diverges, your answer should be ”D.” Answer: 0 Solution: We can show that the Chebyshev Polynomials are odd for odd n. Recall that for an odd function, f(−x) =−f(x). So, the integral of said function over [ −1, 1] should be 0. Thus, the sum of those integrals should also be 0.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2022 SMT Calculus Problem 5",
+   "question": "A net for a hexagonal pyramid is constructed by placing a triangle with side lengths x, x, and y on each side of a regular hexagon with side length y. What is the maximum volume of the pyramid formed by the net if x +y = 20?",
+   "choices": null,
+   "answer": "128",
+   "solution": "Answer: 128. A net for a hexagonal pyramid is constructed by placing a triangle with side lengths x, x, and y on each side of a regular hexagon with side length y. What is the maximum volume of the pyramid formed by the net if x +y = 20? Answer: 128 √ 15 Solution: The height of the pyramid can be calculated as p x2−y2. Thus, the volume can be expressed as V = 6· y2√ 3 4 · 1 3 p x2−y2 = √ 3 2 · \u0010 y2p x2−y2 \u0011 . Substituting in x = 20−y we get V = √ 3 2 · \u0000 y2√400− 40y \u0001 . Deriving, we get dV dy = 2y√400− 40y− 20y2 √400−40y = 800y−100y2 √400−40y . The maximum value will occur when dV dy = 0, which occurs at y = 8. This means x = 20− 8 = 12, and our volume V = √ 3 2 · \u0010 82√ 122− 82 \u0011 = 128 √ 15 Picture to illustrate result: y x x p x2 + y2 y",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2023 SMT Calculus Problem 6",
+   "question": "Compute Z 1 −1 1 + cos(x) 1 + 3x dx.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1 + sin(1). Compute Z 1 −1 1 + cos(x) 1 + 3x dx. Answer: 1 + sin(1) Calculus Test Solutions April 8, 2023 Solution: Note that Z 1 −1 1 + cos(x) 1 + 3x dx = Z 0 −1 1 + cos(x) 1 + 3x dx + Z 1 0 1 + cos(x) 1 + 3x dx =− Z 0 1 1 + cos(−y) 1 + 3−y dy + Z 1 0 1 + cos(x) 1 + 3x dx = Z 1 0 3x(1 + cos(x)) 1 + 3x + 1 + cos(x) 1 + 3x dx = Z 1 0 1 + cos(x) dx = 1 + sin(1) where in the second step we did the u-substitution y =−x.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2023 SMT Calculus Problem 7",
+   "question": "A stone is bouncing on a pond. It starts at height 1. Each time it bounces on the pond, its height x changes to a uniformly random height between 0 and x. If the height ever drops below 1 10, the next time it hits the pond it will sink. What is the expected number of times the stone will bounce before sinking (not counting the sinking as a bounce)?",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1 + ln 10. A stone is bouncing on a pond. It starts at height 1. Each time it bounces on the pond, its heightx changes to a uniformly random height between 0 and x. If the height ever drops below 1 10, the next time it hits the pond it will sink. What is the expected number of times the stone will bounce before sinking (not counting the sinking as a bounce)? Answer: 1 + ln 10 Solution: Letf(x) be the expected number of times the stone bounces before sinking, starting from height x. Then, f(x) = 1 + 1 x Rx 1/10f(y) dy if x≥ 1 10 by conditioning on the next height. Multiplying through by x and taking a derivative yields that f(x) + xf′(x) = 1 + f(x), so f′(x) = 1 x andf(x) = lnx +C. The boundary condition is lim x→ 1 10 +f(x) = 1, so C = ln 10 + 1. Hence, f(1) = 1 + ln 1 + ln 10 = 1 + ln 10.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2023 SMT Calculus Problem 8",
+   "question": "Let r1(t)≤ r2(t)≤ r3(t) be the roots of x3 + tx + 2. When t =−3, compute r′ 1(t).",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. Let r1(t)≤r2(t)≤r3(t) be the roots of x3 +tx + 2. When t =−3, compute r′ 1(t). Answer: 2 9 Solution: Note that whent =−3, the polynomial factors as (x−1)2(x+2), hence r1(−3) =−2. Let’s findr′ 1(t) using the limit definition of the derivative. In particular,r′ 1(t) = limh→0 r1(t+h)−r1(t) h . Suppose that r1(t +h) =−2 +ε. Then, r′ 1(t) = limh→0 ε h, where ε is a function of h. Now, we have that (−2 +ε)3 + (−3 +h)(−2 +ε) + 2 = 0 as−2 +ε is a root of x3 + (−3 +h)x + 2 Expanding and cancelling (−2)3 + (−3)(−2) + 2 = 0, we have 12ε− 6ε2 +ε3− 3ε− 2h +εh = 0. Combining like terms and dividing by h, it follows that ε h = 2 9 + 2ϵ2 3h− ε3 9h−ε By the problem, we know that lim h→0 ε h = c exists (this can be proven by the continuity of polynomial roots, using the Implicit Function Theorem). In particular, this implies that limh→0ε = 0, limh→0 ε2 h = 0, limh→0 ε3 h = 0. Hence, limh→0 ε h = 2 9 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2019 SMT Calculus Problem 9",
+   "question": "Magic liquid forms a cone whose circular base rests on the ﬂoor. Time is measured in seconds. At time 0, the cone has height and radius 1 cm. Let R(t) be the rate at which liquid evaporates in cm3/s at time t. As the liquid evaporates, the cone’s radius remains the same but its height decreases. Let S(t) be the surface area of the slanted part of the cone in cm2 at time t. If R(t) = S(t)2 (numerically in the speciﬁed units), how many seconds does it take for the liquid to evaporate entirely?",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Magic liquid forms a cone whose circular base rests on the ﬂoor. Time is measured in seconds. At time 0, the cone has height and radius 1 cm. Let R(t) be the rate at which liquid evaporates in cm3/s at time t. As the liquid evaporates, the cone’s radius remains the same but its height decreases. Let S(t) be the surface area of the slanted part of the cone in cm2 at time t. If R(t) = S(t)2 (numerically in the speciﬁed units), how many seconds does it take for the liquid to evaporate entirely? Answer: 1 12 Solution: The circumference of the bottom circle is always 2π, and when the cone has height h, the slanted portion can be cut and ﬂattened so that 2 π is the length of an arc along the circumference of a circle with radius √ h2 + 1, which should have circumference 2π √ h2 + 1. Thus, by examining ratios, we see that the surface area of the slanted portion is π √ h2 + 1. Denote the cone’s volume by V so that V = 1 3πh and ∂V ∂t =−R(t) =−S(t)2 =−π2(h2 + 1). By the deﬁnition ofV , we also know that ∂V ∂t = π 3 ∂h ∂t . This gives us ∫ dh h2+1 =−3π ∫ dt, which we ﬁnd yields h = tan(C− 3πt). The initial condition is that when t = 0, h is 1, so C = π 4 . Therefore, h is 0 when t is π 4 1 3π = 1 12 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2022 SMT Calculus Problem 10",
+   "question": "Consider the set of continuous functions f, whosenth derivative exists for all positive integer n, satisfying f(x) = d3 dx3f(x), f(0) +f ′(0) +f ′′(0) = 0, and f(0) = f ′(0). For each such function f, let m(f) be the smallest nonnegative x satisfying f(x) = 0. Compute all possible values of m(f).",
+   "choices": null,
+   "answer": "0",
+   "solution": "Answer: 0, 5π. Consider the set of continuous functions f, whosenth derivative exists for all positive integer n, satisfying f(x) = d3 dx3f(x), f(0) +f′(0) +f′′(0) = 0, and f(0) = f′(0). For each such function f, let m(f) be the smallest nonnegative x satisfying f(x) = 0. Compute all possible values of m(f). Answer: 0, 5π √ 3 9 Solution: Solution sketch: express f(x) as Taylor series around x = 0: f(x) = ∞P i=0 aixi i! and notice that the third derivative condition implies that we may rewrite this as f(x) =f(0) ∞X i=0 x3i (3i)! +f′(0) ∞X i=0 x3i+1 (3i + 1)! +f′′(0) ∞X i=0 x3i+2 (3i + 2)!. Now, we can use a roots of unity filter on ex: in particular, if ω = e 2πi 3 is a primitive third root of unity, then each of the sums can be written as ex+αeωx+βeω2x 3 for appropriate α and β. Therefore, we obtain f(x) = f(0) +f′(0) +f′′(0) 3 ·ex +γ1eωx +γ2eω2x where γ1,γ 2 depend on the values at 0. The first initial condition therefore nulls out the ex term. SMT 2022 Calculus Test Solutions April 16–17, 2022 Now noticing that eωx = e−x 2· h cos \u0010√ 3 2 x \u0011 +i sin \u0010√ 3 2 x \u0011i and eω2x flips the last term to a − yields that we may write f(x) =e−x 2 \" λ cos √ 3 2 x ! +µ sin √ 3 2 x !# . Plugging in x = 0 yields f(0) = λ, and taking a derivative gives f′(0) = −λ 2 + µ √ 3 2 . With f(0) =f′(0), we have that µ = √ 3f(0) =λ √",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

@@ -1,0 +1,261 @@
+{
+ "id": "smt_rand_03",
+ "competition": "SMT — General",
+ "category": "Math",
+ "title": "SMT — General — Random Mock #3 · 2026-08-26 16:33",
+ "instructions": "25 questions · 110 minutes · No calculator. 25 points total.",
+ "time_limit_min": 110,
+ "total_points": 25,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2022 SMT General Problem 1",
+   "question": "There are natural numbers a and b, where b is square-free, for which we can write 20 + 1 20 + 1 20+ 1 20+··· = a + √ b. What is a + √ b?",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10 +. There are natural numbers a and b, where b is square-free, for which we can write 20 + 1 20 + 1 20+ 1 20+··· =a + √ b. What is a + √ b? Answer: 10 + √ 101 Solution: Let u = 20 + 1 20+ 1 20+ 1 20+··· . Then u = 20 + 1/u. For non-zero u, we arrive at the equation u2 = 20u + 1. We solve this to find that 10 + √ 101 is the solution.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2012 SMT General Problem 2",
+   "question": "Nick and Moor participate in a typing challenge. When given the same document to type, Nick ﬁnishes typing it 5 minutes before Moor is done. They compete again using a second document that is the same length as the ﬁrst, but now Nick has to type an extra 1200-word document in addition to the original. This time, they ﬁnish at the same time. How fast (in words per minute) does Nick type? (Assume that they both type at constant rates.)",
+   "choices": null,
+   "answer": "240",
+   "solution": "Answer: 240. Nick and Moor participate in a typing challenge. When given the same document to type, Nick ﬁnishes typing it 5 minutes before Moor is done. They compete again using a second document that is the same length as the ﬁrst, but now Nick has to type an extra 1200-word document in addition to the original. This time, they ﬁnish at the same time. How fast (in words per minute) does Nick type? (Assume that they both type at constant rates.) Answer: 240 Solution 1: Let n and m be Nick and Moor’s typing speeds in words per minute, respectively. Let w be the number of words in the document, and let t be the time it takes for Moor to type the document. Then from the ﬁrst round, we know that d = mt = n(t − 5). From the second round, we know that d + 1200 = nt, or d = nt − 1200. Equating the two, we obtain n(t − 5) = nt − 1200, so 5 n = 1200, or n = 240 . Solution 2: From the problem statement, Nick takes 5 minutes to type the extra 1200 words, so his speed is 1200 /5 = 240 words per minute.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2012 SMT General Problem 3",
+   "question": "The Tribonacci numbers Tn are deﬁned as follows: T0 = 0, T1 = 1, and T2 = 1. For all n ≥ 3, we have Tn = Tn−1 + Tn−2 + Tn−3. Compute the smallest Tribonacci number greater than 100 which is prime.",
+   "choices": null,
+   "answer": "149",
+   "solution": "Answer: 149. The Tribonacci numbers Tn are deﬁned as follows: T0 = 0, T1 = 1, and T2 = 1. For all n ≥ 3, we have Tn = Tn−1 + Tn−2 + Tn−3. Compute the smallest Tribonacci number greater than 100 which is prime. Answer: 149 Solution: The ﬁrst few Tribonacci numbers are 0, 1, 1, 2, 4, 7, 13, 24, 44, 81, 149. 149 is the smallest Tribonacci number greater than 100, and it also turns out to be prime, so that is our answer.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2020 SMT General Problem 4",
+   "question": "Consider the sequence an = an−1 + 22an−2 + 2020an−3 for n≥ 3 where a0 = 1, a1 = 1, a2 = 2. What is the last digit of a2020?",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. Consider the sequence an =an−1 + 22an−2 + 2020an−3 for n≥ 3 where a0 = 1, a1 = 1, a2 = 2. What is the last digit of a2020? Answer: 5 Solution: We look for a pattern mod 10. We can see that mod 10, this is in fact an = an−1 + 2an−2. Then this gives us 1, 1, 2, 5, 4, 2, 5, 4, 8,... . Then we see this repeats every 4 terms, so we ﬁnd 2020 = 0 mod 4 and hence a2020≡ 8 mod 10.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2022 SMT General Problem 5",
+   "question": "Let ABCD be a trapezoid with AB parallel to CD and AB = BC = AD = 8 . Side CD is extended past D to a point E so that DE = 8 and CD = AE. What is the length of CD?",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4 + 4. Let ABCD be a trapezoid with AB parallel to CD and AB = BC = AD = 8. Side CD is extended past D to a point E so that DE = 8 and CD =AE. What is the length of CD? Answer: 4 + 4 √ 5 Solution: Note that AB = DE = 8, ∠BAD = ∠ADE (since AB∥ CD), and AD = AD, so △ABD∼=△DAE, which gives BD =AE =CD. Let ∠BDA =a. Then, ∠BAD = 180◦− 2a and ∠CBD = ∠CBA− ∠DBA = ∠BAD− ∠BDA = 180◦− 2a−a = 180◦− 3a. Also, ∠BDC = ∠DBA =a, so ∠ADC = ∠BDA + ∠CDB =a +a = 2a. We have ∠BCD = ∠ADC = 2a. Since△BCD is isosceles, we have ∠BCD = ∠CBD ⇒ 180◦− 3a = 2a⇒a = 36◦. We recognize that△BCD has angles 36◦, 36◦, and 72◦, so its side lengths are in the ratio 1+ √ 5 2 . We haveCD = 8 \u0010 1+ √ 5 2 \u0011 = 4 + 4 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2012 SMT General Problem 6",
+   "question": "A standard 12-hour clock has hour, minute, and second hands. How many times do two hands cross between 1:00 and 2:00 (not including 1:00 and 2:00 themselves)?",
+   "choices": null,
+   "answer": "119",
+   "solution": "Answer: 119. A standard 12-hour clock has hour, minute, and second hands. How many times do two hands cross between 1:00 and 2:00 (not including 1:00 and 2:00 themselves)? Answer: 119 Solution: We know that the hour and minute hands cross exactly once. Let m be the number of minutes past one o’clock that this happens. The angle between the minute hand and the 12 must be equal to the angle between the hour hand and the 12. Since 1 minute is 360◦ 60 = 6 ◦ on the clock and 1 hour is 360◦ 12 = 30 ◦, we have 6 m = 30(1 + m 60 ), so m = 60 11 = 5 5 11 . Note that the second hand is not at the same position at this time, so we do not have to worry about a triple crossing. On the other hand, the second hand crosses the hour hand once every minute, for a total of 60 crossings. Also, the second hand crosses the minute hand once every minute except the ﬁrst and last, since those crossings take place at 1:00 and 2:00, for a total of 58 crossings. There is a grand total of 1 + 60 + 58 = 119 crossings.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2014 SMT General Problem 7",
+   "question": "Isosceles trapezoid ABCD has AB = 10, CD = 20, BC = AD, and an area of 180. Compute the length of BC.",
+   "choices": null,
+   "answer": "13",
+   "solution": "Answer: 13. Isosceles trapezoid ABCD has AB = 10, CD = 20, BC = AD, and an area of 180. Compute the length of BC. SMT 2014 General Test Solutions February 15, 2014 Answer: 13 Solution: We have 180 = h· AB+CD 2 = h·15, thus the height h = 12. Dropping a perpendicular from B down to CD gives us a right triangle with legs of length 20−10 2 = 5 and h = 12, so BC has length √ 52 + 122 = 13 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2012 SMT General Problem 8",
+   "question": "At the 2012 Silly Math Tournament, hamburgers and hot dogs are served. Each hamburger costs $4 and each hot dog costs $3. Each team has between 6 and 10 members, inclusive, and each member buys exactly one food item. How many diﬀerent values are possible for a team’s total food cost?",
+   "choices": null,
+   "answer": "23",
+   "solution": "Answer: 23. At the 2012 Silly Math Tournament, hamburgers and hot dogs are served. Each hamburger costs $4 and each hot dog costs $3. Each team has between 6 and 10 members, inclusive, and each member buys exactly one food item. How many diﬀerent values are possible for a team’s total food cost? Answer: 23 Solution: The minimum food cost for a team is 6($3) = $18, and the maximum food cost is 10($4) = $40. Note that all intermediate values can be achieved. Suppose n dollars can be achieved by purchasing a hamburgers and b hot dogs, where 18 ≤ n < 40. If b > 0, then n + 1 dollars can be achieved by purchasing a + 1 hamburgers and b − 1 hot dogs. If b = 0, then n + 1 dollars can be achieved by purchasing a − 2 hamburgers and b + 3 hot dogs. (This increases the number of team members by 1.) Repeating this process until $40 is reached, the number of team members cannot decrease, and since we end up with 10 team members, the number of team members is always contained within 6 and 10. SMT 2012 General Test and Solutions February 18, 2012 Hence the number of diﬀerent values is 40 − 18 + 1 = 23 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2014 SMT General Problem 9",
+   "question": "Compute the smallest positive integer with exactly 6 distinct factors.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12. Compute the smallest positive integer with exactly 6 distinct factors. Answer: 12 Solution: A number with exactly 6 distinct factors is of the form a5 or a2b where a and b are primes. The minimum value of the ﬁrst is 2 5 = 32 and the minimum value of the second is 22· 3 = 12. Thus, the overall minimum is 12 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2021 SMT General Problem 10",
+   "question": "Let ABC be a triangle and D be a point on side BC. Let O be the midpoint of AD. The circle centered at O passing through A intersects AB and AC at E and F (both not A), respectively. If O lies on EF and ∠ABC is ﬁve times ∠ACB, compute ∠ABC in degrees.",
+   "choices": null,
+   "answer": "75",
+   "solution": "Answer: 75 ◦. Let ABC be a triangle and D be a point on side BC. Let O be the midpoint of AD. The circle centered at O passing through A intersectsAB andAC atE andF (both not A), respectively. If O lies on EF and ∠ABC is ﬁve times ∠ACB, compute ∠ABC in degrees. Answer: 75 ◦ SMT 2021 General Test Solutions April 17, 2021 Solution: If EF passes through center O, then ∠BAC = ∠EAF = 90◦. If ∠ACB = x, then ∠ABC = 5x. Adding up all of the angles of ∆ABC, we have 90 + x + 5x = 180 =⇒ x = 15. It follows that ∠ABC = 5x = 75 ◦ .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2020 SMT General Problem 11",
+   "question": "If you are making a bracelet with 7 indistinguishable purple beads and 2 indistinguishable red beads, how many distinct bracelets can you make? Assume that reﬂections and rotations are indistinct.",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. If you are making a bracelet with 7 indistinguishable purple beads and 2 indistinguishable red beads, how many distinct bracelets can you make? Assume that reﬂections and rotations are indistinct. Answer: 4 SMT 2020 General Test Solutions February 22, 2020 Solution: There are 9 total beads on the bracelet, so you can arrange them 9! ways. However, since the purple beads and the red beads are indistinguishable, you have to divide by 7! and 2!. To account for rotations, you have to divide by 9 ways to rotate the bracelet. Then we have 9! 7!∗2!∗9 = 4 ways.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2021 SMT General Problem 12",
+   "question": "∆ABC has side length BC = 5. The angle bisector from A intersects BC at D, with BD = 2 and CD = 3, and the angle bisector from C intersects AB at F , with BF = 2. What is the length of side AC?",
+   "choices": null,
+   "answer": "15",
+   "solution": "Answer: 15. ∆ABC has side length BC = 5. The angle bisector from A intersects BC at D, with BD = 2 and CD = 3, and the angle bisector from C intersects AB at F , with BF = 2. What is the length of side AC? Answer: 15 2 Solution: Using the angle bisector theorem on ∠A, we know that the ratio between AB and AC is 2 to 3, so we can letAB = 2x, andAC = 3x. Then, we can use the angle bisector theorem again on ∠C to get 5 3x = 2 2x−2⇒ 10x− 10 = 6x⇒x = 5",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2012 SMT General Problem 13",
+   "question": "Deﬁne a number to be boring if all the digits of the number are the same. How many positive integers less than 10000 are both prime and boring?",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. Deﬁne a number to be boring if all the digits of the number are the same. How many positive integers less than 10000 are both prime and boring? Answer: 5 Solution: The one-digit boring primes are 2, 3, 5, and 7. The only two-digit boring prime is 11, since 11 divides all other two-digit boring numbers. No three-digit boring numbers are prime, since 111 divides all of them and 111 = 3 × 37. No four-digit boring numbers are prime since they are all divisible by 11. Therefore, there are 5 positive integers less than 10000 which are both prime and boring.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2013 SMT General Problem 14",
+   "question": "Peter is chasing after Rob. Rob is running on the line y = 2x + 5 at a speed of 2 units a second, starting from the point (0 , 5). Peter starts running t seconds after Rob, running at 3 units a second. Peter also starts at (0 , 5), and catches up to Rob at the point (17 , 39). What is the value of t?",
+   "choices": null,
+   "answer": "17",
+   "solution": "Answer: 17. Peter is chasing after Rob. Rob is running on the line y = 2x + 5 at a speed of 2 units a second, starting from the point (0 , 5). Peter starts running t seconds after Rob, running at 3 units a second. Peter also starts at (0 , 5), and catches up to Rob at the point (17 , 39). What is the value of t? Answer: 17 √ 5 6 Solution: Rob runs a distance of √ 172 + 342 = 17 √ 5 units. Therefore, Rob runs for a total of 17 √ 5 2 seconds. Peter must therefore run a total of 17 √ 5 2 −t seconds, and we know that 3 ( 17 √ 5 2 −t ) = 17 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2019 SMT General Problem 15",
+   "question": "Find the number of two-digit positive integers that are divisible by the sum of their own digits.",
+   "choices": null,
+   "answer": "23",
+   "solution": "Answer: 23. Find the number of two-digit positive integers that are divisible by the sum of their own digits. Answer: 23 Solution: Let such a two-digit number be written ab. Since (a +b)| (10a +b), (a +b)| 9a. Case 1: if 3 ∤ (a +b), then (a +b)|a. This means that b = 0, and we have 6 numbers that satisfy the question: 10, 20, 40, 50, 70, 80. Case 2: if 3 | (a +b) but 9 ∤ (a +b), then (a +b)| 3a. Observe that 1 ≤ 3a a+b≤ 3. Solving for the three cases where 3a a+b equals to 1, 2, 3 yields (12, 24, 48), (21, 42, 84) and (30, 60) as answers correspondingly. Case 3: if 9| (a+b), thena+b = 9 ora+b = 18. If a+b = 9, we have 9 numbers that satisfy the question: 18, 27, 36, 45, 54, 63, 72, 81, 90. If a +b = 18, this means that a = b = 9, which we will reject since 99 is not divisible by 18. Thus, there are 23 two-digit numbers that are divisible by the sum of their own digits.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2021 SMT General Problem 16",
+   "question": "What is the length of the range of x such that 1 x−| 1 x−1| > 1 x−2?",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4− 2. What is the length of the range of x such that 1 x−| 1 x−1|> 1 x−2? Answer: 4− 2 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2023 SMT General Problem 17",
+   "question": "Suppose we have a triangle △ABC with AB = 12, AC = 13, and BC = 15. Let I be the incenter of triangle ABC. We draw a line through I parallel to BC intersecting AB at point D and AC at point E. What is the perimeter of triangle △ADE? General Test April 8, 2023",
+   "choices": null,
+   "answer": "25",
+   "solution": "Answer: 25. Suppose we have a triangle △ABC with AB = 12, AC = 13, and BC = 15. Let I be the incenter of triangle ABC. We draw a line through I parallel to BC intersectingAB at point D and AC at point E. What is the perimeter of triangle △ADE? Answer: 25 Solution: Notice that ∠IBA = ∠IBC by property of incenter while ∠IBC = ∠BID because DE is parallel to BC. Likewise, we also have ∠ICA = ∠ICB = ∠CIE . Then we get isosceles triangles△IDB and△IEC . This gives DE =ID +IE =DB +EC. Then, the perimeter of triangle ADE is AD +AE +DE =AD +DB +AE +EC =AB +AC = 12 + 13 = 25 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2018 SMT General Problem 18",
+   "question": "How many integer pairs ( a, b) satisfy 1 a + 1 b = 1 2018?",
+   "choices": null,
+   "answer": "17",
+   "solution": "Answer: 17. How many integer pairs ( a,b ) satisfy 1 a + 1 b = 1 2018? Answer: 17 Solution: We can rewrite this equation as 2018(a +b) =ab. Using Simon’s factoring trick, we have (a− 2018)(b− 2018) = 2018 2. Factoring, we get 2018 2 = 2 2· 10092. This gives us (2 + 1)(2 + 1) = 9 possible factorizations into two positive factors. Each pair of factors also has its negative counterparts, giving us a total of 18 factors. However, the factorization 2018· 2018 = 2018 2 yields the solution ( a,b ) = (0 , 0), which is not valid in our original equation. Thus, we have 17 pairs.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2021 SMT General Problem 19",
+   "question": "A function f(x) is a quadratic with real coeﬃcients. Given f(0)⁄= 0 and f(xy + 1) = f(x)· f(y) + f(x + y) for all x, y∈ R, ﬁnd f(3).",
+   "choices": null,
+   "answer": "8",
+   "solution": "Answer: 8. A function f(x) is a quadratic with real coeﬃcients. Given f(0)⁄= 0 and f(xy + 1) = f(x)· f(y) +f(x +y) for all x,y∈ R, ﬁnd f(3). Answer: 8 Solution: Setting y = 1, f(x + 1) =f(x)·f(1) +f(x + 1). This means that f(x)·f(1) = 0. If x = 0 then f(x)⁄= 0, so f(1) = 0. Setting x = 0 and y = 0, f(1) = f(0)2 +f(0). Since f(1) = 0, we can solve 0 = f(0)· (f(0) + 1) =⇒ f(0) =−1. Setting x =−1 and y = 2, f(−1· 2 + 1) = f(−1)·f(2) +f(−1 + 2). Simplifying yields the equation f(−1)· (1−f(2)) = 0, which means either f(−1) = 0 or f(2) = 1. Given the three points (0,−1), (1, 0), and one of ( −1, 0) or (2 , 1), we can uniquely deﬁne any polynomial of degree 2 or less. Choosing ( −1, 0), f(x) = x2− 1; choosing (2, 1), f(x) = x− 1. Only one of these points yields a quadratic, hence, f(x) =x2− 1 and f(3) = 32− 1 = 8.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "2014 SMT General Problem 20",
+   "question": "For any 4-tuple ( a1, a2, a3, a4) where each entry is either 0 or 1, call it quadratically satisﬁable if there exist real numbers x1, . . . , x4 such that x1x2 4 + x2x4 + x3 = 0 and for each i = 1, . . . ,4, xi is positive if ai = 1 and negative if ai = 0. Find the number of quadratically satisﬁable 4-tuples.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12. For any 4-tuple ( a1, a2, a3, a4) where each entry is either 0 or 1, call it quadratically satisﬁable if there exist real numbers x1, . . . , x4 such that x1x2 4 + x2x4 + x3 = 0 and for each i = 1, . . . ,4, xi is positive if ai = 1 and negative if ai = 0. Find the number of quadratically satisﬁable 4-tuples. Answer: 12 Solution: First, we may assume a1 = 1 without loss of generality and multiply our answer by 2 at the end, since ax2 + bx + c = 0⇔− ax2− bx− c = 0. We can furthermore assume x1 = 1, since we can always divide the whole equation by x1 (since x1 > 0). Hence, we now consider equations of the form x2 4 + bx4 + c = 0 in which b and c are constrained to be either positive or negative. This yields four cases: Case 1: If b and c are both positive, the two roots have positive product but negative sum, so they must both be negative i.e. x4 < 0. Furthermore, x4 < 0 is possible, e.g. x2 4 + 2x4 + 1 = 0 =⇒ x4 =−1. SMT 2014 General Test Solutions February 15, 2014 Case 2: If b is positive and c is negative, x4 may be positive or negative e.g. x2 4 + x4− 2 =⇒ x4∈{− 2, 1}. Case 3: If b is negative and c is positive, the two roots have positive product and positive sum, so they must both be positive i.e. x4 > 0. Furthermore, x4 > 0 is possible e.g. x2 4− 2x4 + 1 =⇒ x4 = 1. Case 4: If b and c are both negative, x4 may be positive or negative e.g. x2 4− x4− 2 =⇒ x4∈ {−1, 2}. Putting these cases together, we conclude that the answer is 12 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "2023 SMT General Problem 21",
+   "question": "Equilateral triangle △ABC is inscribed in circle Ω, which has a radius of 1. Let the midpoint of BC be M. Line AM intersects Ω again at point D. Let ω be the circle with diameter M D. Compute the radius of the circle that is tangent to BC on the same side of BC as ω, internally tangent to Ω, and externally tangent to ω.",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Equilateral triangle △ABC is inscribed in circle Ω, which has a radius of 1. Let the midpoint of BC be M. Line AM intersects Ω again at point D. Let ω be the circle with diameter MD. Compute the radius of the circle that is tangent to BC on the same side of BC asω, internally tangent to Ω, and externally tangent to ω. Answer: 3 16 Solution: Denote the circle whose radius we want to compute as ω′. Let the center of Ω be O1, the center of ω be O2, and the center of ω′ be O3. Since O1BM is a 30-60-90 triangle, we haveO1M = 1",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "2022 SMT General Problem 22",
+   "question": "Let ABCA 1B1C1 be a right regular triangular prism with triangular faces△ABC and△A1B1C1 and edges AA1, BB1, CC1. A sphere is tangent to sides AB, BC, AC at points M, N, P and to the plane that the triangle △A1B1C1 is in at point Q. Let ∡M P Q = 45◦ and the distance between lines M P and N Q be equal to 1. Find the the side length of the base of the prism.",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. Let ABCA 1B1C1 be a right regular triangular prism with triangular faces△ABC and△A1B1C1 and edges AA1,BB1,CC1. A sphere is tangent to sides AB,BC,AC at points M,N,P and to the plane that the triangle △A1B1C1 is in at point Q. Let ∡MPQ = 45◦ and the distance between lines MP and NQ be equal to 1. Find the the side length of the base of the prism. Answer: 4 Solution: Denote the incircle ofABC with pointI. It is trivial to show that I,O (center of the sphere) andQ are collinear and form a line perpendicular to the bases. Further, by the theorem of the three perpendiculars, we have that NQ⊥BC. SMT 2022 General Test Solutions April 16–17, 2022 Denote the side length of the base with a. We have that MP =a/2. Therefore, from isosceles △MPQ with angle at the base 45◦, MQ =PQ = a √ 2 4 . Hence, NQ = a √ 2 4 as well. Let K denote the midpoint of MP , and let KT be perpendicular to NQ, K∈ NQ. We have that KT = 1, since it is perpendicular to both NQ and MP and hence is the shortest distance between them. Let φ denote the angle ∡KNQ . We have that IN =r = a √ 3 6 and NQ = a √ 2 4 , therefore from right triangle △INQ , cosφ = √ 6 3 . From this, we can compute that sin φ = √ 3 3 . From right triangle△NKT ,NK = KT sinφ = √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "2022 SMT General Problem 23",
+   "question": "Evaluate 12345X j=1 1 24691− 2j j−1Y k=1 24690− 2k 24691− 2k ! .",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Evaluate 12345X j=1 1 24691− 2j j−1Y k=1 24690− 2k 24691− 2k ! . Answer: 1 Solution: Consider the noodle matching problem (courtesy of Arpit): there are 12345 noodles, we start off with one noodle, and join ends together at random. The probability of a cycle of length l is 1 24691− 2l l−1Y k=1 246990− 2k 24691− 2k ! as the leading coefficient is the probability we close off the loop in the lth noodle and each term in the product is the probability we do not close off the loop having already k noodles in the cycle. Then, we will always end up with a cycle of some length, so summing over the probabilities to get a cycle of length l over all possible values of l produces an answer of one.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "2019 SMT General Problem 24",
+   "question": "The center of a circle of radius 2 follows a path around the edges of a regular hexagon with side length 3. What is the area of the region the circle sweeps?",
+   "choices": null,
+   "answer": "72",
+   "solution": "Answer: 72 + 4 π− 8. The center of a circle of radius 2 follows a path around the edges of a regular hexagon with side length 3. What is the area of the region the circle sweeps? Answer: 72 + 4 π− 8 √ 3 Solution: The area the circle passes through can be described in three parts: the rectangular regions on the outside of the hexagon that are adjacent to the hexagon, the sectors (pie- shaped regions) that come out from the corners that connect the rectangles, and the hexagon itself with a smaller, missing hexagon in the middle. First, the rectangles’ areas is easy to calculate. Each rectangle is 3 × 2 and there are six of them (one for each edge). This total area is 36. Second, the sectors are similarly easy. It can be observed (or shown if desired) that each of the six sectors’ angles are 60◦. This adds to one large circle (6×60 = 360) of radius 2. These regions areas add to 4π. Third, the hardest region to calculate is region inside the hexagon. Note that this area can be decomposed into 6 trapezoids, each with a base on a side of the hexagon. Each of the trapezoids has height 2, because the circle’s maximum distance from each of the edges is 2. Also, one base of these trapezoids is 3, the side length. Next, the trapezoid is isosceles and has base angles of 60 ◦. This means that we can calculate the length of the other base of one of the trapezoids by creating two 30− 60− 90 triangles and subtracing the length of the smaller leg from 3. Each of these legs has length 2√ 3, so the length of the smaller base is 3− 4 √ 3 3 . Then, the area of each trapezoid is 6− 4 √ 3 3 . Then, the area of all six trapezoids is 36 − 8 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "2022 SMT General Problem 25",
+   "question": "Suppose that a, b, c are real numbers which satisfy a2 + b2 + c2 = 2022. Let x = √ 2022− c2 and y =√2022− 2ac. Find the minimum value of xy· (x + y + c) b2c .",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. Suppose that a,b,c are real numbers which satisfy a2 +b2 +c2 = 2022. Let x = √ 2022−c2 and y =√2022− 2ac. Find the minimum value of xy· (x +y +c) b2c . Answer: 4 Solution: Let△ABC be a triangle with vertices at A = (0, 0), B = (c, 0), and C = (a,b ). It is clear that the area of △ABC is given by 1 2bc. Furthermore, we have AB = c, BC = p (a−c)2 +b2 =√2022−ac =y, and AC = √ a2 +b2 = √ 2022−c2 =x. Let R and r be the circumradius and inradius of △ABC respectively. Then, we have that R = xyc 4·bc/2 = xy 2b, and r = bc x +y +c. Thus, by Euler’s inequality, we can see that R r = xy· (x +y +c) 2b2c ≥ 2. Thus, multiplying both sides by 2, we obtain xy· (x +y +c) b2c ≥ 4, where equality holds when△ABC is equilateral. This occurs when a = √ 1011 2 ,b = 3 √ 337 2 ,c = √ 1011.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

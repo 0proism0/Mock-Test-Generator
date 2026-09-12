@@ -1,0 +1,161 @@
+{
+ "id": "smt_rand_18",
+ "competition": "SMT — Team",
+ "category": "Math",
+ "title": "SMT — Team — Random Mock #18 · 2026-08-26 16:33",
+ "instructions": "15 questions · 50 minutes · No calculator. 15 points total.",
+ "time_limit_min": 50,
+ "total_points": 15,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2023 SMT Team Problem 1",
+   "question": "We call a time on a 12 hour digital clock nice if the sum of the minutes digits is equal to the hour. For example, 10:55, 3:12 and 5:05 are nice times. How many nice times occur during the course of one day? (We do not consider times of the form 00:XX.)",
+   "choices": null,
+   "answer": "112",
+   "solution": "Answer: 112. We call a time on a 12 hour digital clock nice if the sum of the minutes digits is equal to the hour. For example, 10:55, 3:12 and 5:05 are nice times. How many nice times occur during the course of one day? (We do not consider times of the form 00:XX.) Answer: 112 Solution: Every minute time except 00, 49, 58, 59 has sum between 1 and 12 and so must correspond to exactly one nice time. Therefore, there are (60−4)·2 = 112 nice times (accounting for morning and afternoon).",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2012 SMT Team Problem 2",
+   "question": "Let i be one of the numbers 0 , 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11. Suppose that for all positive integers n, the number nn never has remainder i upon division by 12. List all possible values of i.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2 , 6, 8, 10. Let i be one of the numbers 0 , 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11. Suppose that for all positive integers n, the number nn never has remainder i upon division by 12. List all possible values of i. Answer: 2 , 6, 8, 10 Solution: The table below gives the value of kn (mod 12) for k = 0 , 1, . . . ,11 and n = 1 , 2, 3. (Note that when n = 1, this is just the value of k.) k n = 2 n = 3 0 0 0 1 1 1 2 4 8 3 9 3 4 4 4 5 1 5 6 0 0 7 1 7 8 4 8 9 9 9 10 4 4 11 1 11 All values of k have period 1 or 2 (the rows for 2 and 8 continue 4 , 8, 4, 8, etc.) We can see that nn cannot be congruent to 2 , 6, 10 when divided by 12 for n > 1, and hence cannot be congruent to 2 , 6, 10 at all. For nn to be congruent to 8 (mod 12), we would need either n ≡ 2 (mod 12) and n ≡ 1 (mod 2) or n ≡ 8 (mod 12) and n ≡ 1 (mod 2); this is impossible since a number which is 2 or 8 (mod 12) must be even. All other remainders indeed occur; this can be checked by inspection, with the help of the Chinese Remainder Theorem. So our answer is 2, 6, 8, 10 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2023 SMT Team Problem 3",
+   "question": "5 integers are each selected uniformly at random from the range 1 to 5 inclusive and put into a set S. Each integer is selected independently of the others. What is the expected value of the minimum element of S?",
+   "choices": null,
+   "answer": "177",
+   "solution": "Answer: 177. 5 integers are each selected uniformly at random from the range 1 to 5 inclusive and put into a set S. Each integer is selected independently of the others. What is the expected value of the minimum element of S? Answer: 177 125 Solution 1: The probability that the value of the minimum element isi is \u0000 6−i 5 \u00015 − \u0000 5−i 5 \u00015 since\u0000 6−i 5 \u00015 is the probability that all the integers selected are at least i and we must subtract the probability \u0000 5−i 5 \u00015 that all the integers selected are at least i + 1. This gives us 5X i=1 i \u00126−i 5 \u00135 − \u00125−i 5 \u00135! = 5X i=1 \u0012i 5 \u00135 = 177 125 . Solution 2: E[min(S)] = 5X j=1 (j Pr(min(S) =j)) The challenge lies in finding an expression for the probability. Let the event Xj be the event that no number smaller than j is chosen. Let the event Yj be the event that the number j is chosen at least once. We will use the notation Pr( A,B ) to denote the probability of some two Team Test Solutions April 8, 2023 eventsA and B both occurring. We will use the notation Pr( A|B) to denote the probability of an event A occurring given that an event B has already occurred. Then: Pr(min(S) =j) = Pr(Xj,Yj) = Pr(Xj) Pr(Yj|Xj) We can do the rest with combinatorics. There are 5 5 ways to choose the 5 numbers, so this is our sample space. For a given j, (5−j + 1)5 of those combinations contain no number smaller than j, so this is our event space. Therefore, Pr(Xj) = \u00125−j + 1 5 \u00135 = \u00126−j 5 \u00135 If we know that Xj has occurred, then there were only (5 −j + 1)5 ways to fill S, so this is our sample space given that Xj is true. Of these, we can count that there are ((5−j + 1)− 1)5 ways to choose numbers to fill S such that they do not containj given thatXj is true. Therefore, our event space should be the total possibilities to fill S givenXj minus the number of ways to fillS that don’t includej givenXj is true. This means our event space is: (5−j+1)5−((5−j+1)−1)5. Therefore, Pr(Yj|Xj) = (5−j + 1)5− ((5−j + 1)− 1)5 (5−j + 1)5 = (6−j)5− (5−j)5 (6−j)5 Putting it all together, Pr(min(S) =j) = Pr(Xj,Yj) = Pr(Xj) Pr(Yj|Xj) = \u00126−j 5 \u00135\u0012(6−j)5− (5−j)5 (6−j)5 \u0013 = (6−j)5− (5−j)5 55 Then, E[min(S)] = 5X j=1 j \u0012(6−j)5− (5−j)5 55 \u0013 After simplification, we can re-write this as the beautiful: 5X j=1 \u0012j 5 \u00135 = 177 125 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2018 SMT Team Problem 4",
+   "question": "Let Fk denote the series of Fibonacci numbers shifted back by one index, so that F0 = 1, F1 = 1, and Fk+1 = Fk + Fk−1. It is known that for any ﬁxed n≥ 1 there exist real constants bn, cn such that the following recurrence holds for all k≥ 1: Fn·(k+1) = bn· Fn·k + cn· Fn·(k−1). Prove that|cn| = 1 for all n≥ 1.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2 ln 2 − 1. Plugging these into our product of sums, our original sum is thus (1 + 2) ( 1 + 3 4 ) = 21 4 . LK12 12. Consider all increasing arithmetic progressions of the form 1 a, 1 b, 1 c such that a,b,c ∈ N and gcd(a,b,c ) = 1. Find the sum of all possible values of 1 a. Answer: 2 ln 2 − 1 Solution: Note: The solution below is incorrect, as it misses many triples ( a,b,c ) such as (6, 4, 3). During the grading period, we were unable to determine the correct solution, and so gave all teams credit for this problem. Since 1 a is the initial term, the other subsequent terms are 1+r a and 1+2r a for some common ratior. To ensure that the subsequent 2 terms in the arithmetic progression have a numerator of 1, we must have 1 + r| a and 1 + 2r| a. Therefore, a = k(1 +r)(1 + 2r). However, we SMT 2018 Team Test Solutions February 17, 2018 must havek = 1, otherwise gcd(a,b,c )≥k> 1. Thus, a = (1 +r)(1 + 2r). Next, note that r must be an integer, otherwise we can rearrange the above equation to form 1 c = 1+2r a = 1 1+r which would not be a valid fraction. Finally, we verify that every r≥ 1 indeed gives us an increasing arithmetic progression 1 (1+r)(1+2r), 1 1+2r, 1 1+r with common ratio r (1+r)(1+2r). Therefore, it remains to compute the sum ∞∑ r=1 1 (1 +r)(1 + 2r) = ∞∑ r=1 2 1 + 2r− 1 1 +r = ∞∑ r=1 2 1 + 2r− 2 2 + 2r = 2 ∞∑ r=1 1 1 + 2r− 1 2 + 2r = 2 (1 3− 1 4 + 1 5− 1 6 +··· ) The inner sum looks very similar to the Taylor series expansion of ln 2 = 1− 1 2 + 1 3− 1 4 +··· Therefore, our desired sum is 2 ( ln 2− 1 2 ) = 2 ln 2− 1 . EX19 13. In ∆ABC, let D, E, and F be the feet of the altitudes drawn from A, B, and C respec- tively. Let P and Q be points on line EF such that BP is perpendicular to EF and CQ is perpendicular to EF . If PQ = 2018 and DE =DF + 4, ﬁnd DE. Answer: 1011 Solution: Note that∆DEF is the orthic triangle of ∆ABC, so A, B, and C are excenters of∆DEF . Let ω1 be the excircle centered at B andω2 be the excircle centered at C. Since BP⊥EF and CQ⊥EF , PQ is an external tangent to ω1 and ω2. Furthermore, lines DE and DF are internal tangents to ω1 and ω2. Let line DF touch ω1 at X and ω2 at Y . Let P′ and Q′ be on ω1 and ω2 respectively such that P′Q′ is the other external tangent to ω1 and ω2. Let line DF intersectP′Q′ at E′. Since tangents from a point to a circle are equal in length, we have FP =FX , FQ =FY , E′P′ =E′X, andE′Y =E′Q′. By symmetry of external tangents, we also have PQ =P′Q′. Then 2PQ =PQ +P′Q′ = (FP +FQ ) + (E′P′ +E′Q′) = (FX +FY ) + (E′X +E′Y ) = (FX +E′X) + (FY +E′Y′) =E′F +E′F = 2E′F so PQ = E′F . But by symmetry of internal and external tangents, we see that E and E′ are reﬂections of each other across BC, and since D lies on BC, we have DE =DE′. Then PQ = E′F = DE′ +DF = DE +DF . It follows that DE + (DE− 4) = 2018 and so DE = 1011 . NM04 14. Let A and B be two points chosen independently and uniformly at random inside the unit circle centered at O. Compute the expected area of ∆ABO. SMT 2018 Team Test Solutions February 17, 2018 Answer: 4 9π Solution: Recall that we can compute the area of ∆ABC using the formula A = 1 2ab sinC. Furthermore, for independent random variables X and Y , we have E[XY ] = E[X]· E[Y ]. By assumption, points A and B are chosen independently of each other, so the lengths of OA andOB are also independent. Furthermore, if we let θ be the smaller angle between OA and OB, then θ is also independent of the two side lengths. Therefore, we have E[A] = E [1 2·OA·OB· sinθ ] = 1 2· E[OA]· E[OB]· E[sinθ]. Now for a point P chosen uniformly at random in a circle, the probability that OP = r is proportional to r. We can show this by recalling that the circle of radius r has circumference 2πr, so if r1 = kr2, then the set of points of distance r1 from the center of the circle is k times larger than the set of points of distance r2 from the center of the circle. Therefore, the probability density function of the length of OP isf(r) =cr whenr∈ [0, 1] and 0 otherwise, for some constant c. To ﬁnd c, we solve ∫ 1 0 crdr = 1, which gives us c = 2. Therefore, the expected length of OP is E[OP ] = ∫ 1 0 r· 2rdr = 2",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2011 SMT Team Problem 5",
+   "question": "Let ∆ABC be equilateral. Two points D and E are on side BC (with order B,D,E,C ), and satisfy ∠DAE = 30◦. If BD = 2 and CE = 3, what is BC? B C A D E2 3 30◦",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5 +. Let ∆ABC be equilateral. Two points D and E are on side BC (with order B,D,E,C ), and satisfy ∠DAE = 30◦. If BD = 2 and CE = 3, what is BC? B C A D E2 3 30◦ Answer: 5 + √ 19 Rotate the ﬁgure around A by 60◦ so that C coincides with B. Let B′,C′,D′,E′ be the points corresponding to B,C,D,E in the rotated ﬁgure. Since ∠E′AD = ∠E′AC′ + ∠C′AD = ∠EAC + ∠BAD = 30◦ = ∠EAD, E′A =EA and DA =D′A, one has E′D =ED. So BC =BD +DE +EC can be found if we know E′D. But E′D = √ E′B2 +BD 2− 2·E′B·BD· cos 120◦ = √ 19, so BC = 2 + √ 19 + 3 = 5 + √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2012 SMT Team Problem 6",
+   "question": "Compute the area of the smallest regular polygon that has three vertices coinciding with the vertices of the given triangle.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12 + 6. Compute the area of the smallest regular polygon that has three vertices coinciding with the vertices of the given triangle. Answer: 12 + 6 √ 3 Solution: We begin by computing the angles of the triangle; repeated application of the Law of Cosines gives us that the angles of the triangle are 15 ◦, 60 ◦, and 105 ◦. Therefore, since the greatest common divisor of the angles of the triangle is 15 ◦, a dodecagon is the smallest regular polygon that satisﬁes our current constraints. In particular, the dodecagon has side length √ 2, and it remains to compute the area of the dodecagon. The area of a regular dodecagon is 3 cot ( π 12 ) ( √ 2)2 = 12 + 6 √ 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2011 SMT Team Problem 7",
+   "question": "Tony the mouse starts in the top left corner of a 3x3 grid. After each second, he randomly moves to an adjacent square with equal probability. What is the probability he reaches the cheese in the bottom right corner before he reaches the mousetrap in the center?",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Tony the mouse starts in the top left corner of a 3x3 grid. After each second, he randomly moves to an adjacent square with equal probability. What is the probability he reaches the cheese in the bottom right corner before he reaches the mousetrap in the center? Answer: 1 7 Letx be the probability that Tony reaches the cheese before the mousetrap, starting from the top left. Lety be the probability that Tony reaches the cheese before the mousetrap, starting from the top right or the bottom left (which are symmetric). After 2 moves from the top left there is 1 3 chance that Tony returns to the top left corner, there is 1 3 chance that Tony reaches the mousetrap, and there is 1 3 chance that Tony reaches the top right or bottom left corners. This gives us the relation SMT 2011 Team Test and Solutions February 19, 2011 x = 1 3x + 1 30 + 1 3y. After 2 moves from the top right corner there is 1 3 chance that Tony returns to the top right corner, 1 3 chance that Tony reaches the mousetrap, 1 6 chance that Tony reaches the top left corner, and 1 6 chance that Tony reaches the cheese. This gives the relation y = 1 3y + 1 30 + 1 6x + 1",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2020 SMT Team Problem 8",
+   "question": "Let S be an n-dimensional hypercube of sidelength 1. At each vertex draw a hypersphere of radius 1 2; let Ω be the set of these hyperspheres. Consider a hypersphere Γ centered at the center of the cube that is externally tangent to all the hyperspheres in Ω. For what value of n does the volume of Γ equal to the sum of the volumes of the hyperspheres in Ω.",
+   "choices": null,
+   "answer": "9",
+   "solution": "Answer: 9. Let S be an n-dimensional hypercube of sidelength 1. At each vertex draw a hypersphere of radius 1 2; let Ω be the set of these hyperspheres. Consider a hypersphere Γ centered at the center of the cube that is externally tangent to all the hyperspheres in Ω. For what value of n does the volume of Γ equal to the sum of the volumes of the hyperspheres in Ω. Answer: 9 Solution: Let di denote the diameter of Γ, note that di =√n− 1. We also have that the diameter of the smaller hyperspheres are each 1. Note that Ω contains 2 n hyperspheres. As the ratio of the volumes similar odjects in n-dimensional space is the ratio of the lengths to the nth power, it follows that for the areas to be equal, we must have ( di 1 )n = 2n substituting and solving, we see that di = 2 and n = 9 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2022 SMT Team Problem 9",
+   "question": "Consider the set S of functions f :{1, 2,..., 16}→{ 1, 2,..., 243} satisfying: (a) f(1) = 1 (b) f(n2) =n2f(n), (c) n|f(n), (d) f(lcm(m,n ))f(gcd(m,n )) =f(m)f(n). If|S| can be written aspe1 1·pe2 2·...·pek k wherepi are distinct primes, computep1e1+p2e2+... +pkek.",
+   "choices": null,
+   "answer": "91",
+   "solution": "Answer: 91. Consider the set S of functions f :{1, 2,..., 16}→{ 1, 2,..., 243} satisfying: (a) f(1) = 1 (b) f(n2) =n2f(n), (c) n|f(n), (d) f(lcm(m,n ))f(gcd(m,n )) =f(m)f(n). If|S| can be written aspe1 1·pe2 2·...·pek k wherepi are distinct primes, computep1e1+p2e2+... +pkek. Answer: 91 Solution: Let g(n) = f (n) n . Then, g(n2) =ng(n) and the fourth property is still satisfied for g. The only major change is the range on g. Note that the first property guarantees that g(1) = 1. In addition, if gcd( m,n ) = 1, then we have f(mn) = f(m)f(n), so f is multiplicative. So, it suffices to specify g(pk). By the first property, giveng(p) we have all g(p2i ). Therefore, we only need to give g(pk) for odd k. SMT 2022 Team Test Solutions April 16–17, 2022 Notice that if pk ≥ 8, then g(pk) can take on any value from 1 to 243 /pk (as we can never multiply by it and still be within range of 16). The only three possibilities are 8, 11, and 13. In total, these contribute 30· 22· 18. Now, we must have g(16) = 8g(2)≤m/16, so g(2)≤ 243 128, so g(2) = 1. In addition, we must have g(9) = 3g(3)≤m/9, so g(3)≤ 243 27 = 9. So, the remaining unspecified values are g(5) and g(7). We can bound these via g(15) = g(3)g(5)≤ 243 15 = 16 and g(14) =g(2)g(7) =g(7)≤ 243 14 = 17. So, the total number of solutions is 30 · 22· 18· 17· (16 + 8 + 5 + 4 + 3 + 2 + 2 + 2 + 1) = 2·3·5·2·11·2·32·17·43 = 23·33·5·11·17·43. The answer then is 6+9+5+11+17+43 = 91 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2011 SMT Team Problem 10",
+   "question": "For positive reals x, y, and z, compute the maximum possible value of xyz(x +y +z) (x +y)2(y +z)2 .",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. For positive reals x, y, and z, compute the maximum possible value of xyz(x +y +z) (x +y)2(y +z)2 . Answer: 1 4 If we consider the triangle ABC with side length AB =x +y, BC =y +z, CA =z +x, the equation becomes |ABC|2 AB2·BC 2 = sin2B 4 ≤ 1 4 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2022 SMT Team Problem 11",
+   "question": "Let O be the circumcenter of △ABC. Let M be the midpoint of BC, and let E and F be the feet of the altitudes fromB andC, respectively, onto the opposite sides. EF intersectsBC atP . The line passing through O and perpendicular to BC intersects the circumcircle of△ABC atL (on the major arc BC) and N, and intersects BC at M. Point Q lies on the line LA such that OQ is perpendicular to AP . Given that ∠BAC = 60◦ and ∠AMC = 60◦, compute OQ/AP.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2√. Let O be the circumcenter of △ABC. Let M be the midpoint of BC, and let E and F be the feet of the altitudes fromB andC, respectively, onto the opposite sides. EF intersectsBC atP . The line passing through O and perpendicular to BC intersects the circumcircle of△ABC atL (on the major arc BC) and N, and intersects BC at M. Point Q lies on the line LA such that OQ is perpendicular to AP . Given that ∠BAC = 60◦ and ∠AMC = 60◦, compute OQ/AP. Answer: 2√ 3 Solution: Let H be the orthocenter of △ABC and draw MH . Notice that MH∥OQ so OQ =MH· ON MN =MH· ON NC sin \u0010 1 2 ∠BAC \u0011 = 2MH. H is the orthocenter of △AMP so AP = √ 3MH . OQ/AP = 2√ 3 . To see thatMH∥OQ, note first that OM∥AH since they are both perpendicular to BC. Let OQ intersectAH at pointO′. Then, it suffices to show thatOM =O′H. Since△QLN∼△QAH, we see that because O is the midpoint of LN, O′ is the midpoint of AH. Then, what we want to show is equivalent to OM = 1 2AH. Let CO intersect the circumcircle again at C′. Since BC′ = 2OM, we want to show that BC′ = AH. We know BCC′ is a 30-60-90 triangle, so SMT 2022 Team Test Solutions April 16–17, 2022 BC′ = 1 2CC′ = R, where R is the circumradius of △ABC. We see that ∠C′BH = ∠C′BA + ∠ABH = ∠C′CA + 90◦− ∠A = ∠C− 30◦ + 90◦− 60◦ = ∠C. Also, ∠BC′A = 180◦− ∠C. This proves that C′BHA is a parallelogram, so BC′ =AH =R, proving the claim. Note that we only need the fact that ∠A = 60◦ to say that AH = R. This means in △AMP we haveMH =R′, whereR′ is the circumradius of△AMP. We find thatAP = √ 3R′ from the Law of Sines, which means AP = √ 3MH.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2020 SMT Team Problem 12",
+   "question": "Given a large circle with center (x0,y 0), one can place three smaller congruent circles with centers (x1,y 1), (x2,y 2), (x3,y 3) that are pairwise externally tangent to each other and all internally tangent to the outer circle. If this placement makes x0 = x1 and y1 > y0, we call this an “up-split”. Otherwise, if the placement makes x0 =x1 and y1<y 0, we call it a “down-split.” Alice starts at the center of a circle C with radius 1. Alice ﬁrst walks to the center of the upper small circle Cu of an up-slitting of C. Then, Alice turns right to walk to the center of the upper-right small circle of a down-splitting of Cd. Alice continues this process of turning right and walking to the center of a new circle created by alternatingly up- and down-splitting. Alice’s path will form a spiral converging to ( xA,y A). On the otherhand, Bob always up-splits the circle he is in the center of, turns right and ﬁnds the center of the next small circle. His path will converges to (xB,y B). Compute | 1 xA − 1 xB |.",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. Given a large circle with center (x0,y 0), one can place three smaller congruent circles with centers (x1,y 1), (x2,y 2), (x3,y 3) that are pairwise externally tangent to each other and all internally tangent to the outer circle. If this placement makes x0 = x1 and y1 > y0, we call this an “up-split”. Otherwise, if the placement makes x0 =x1 and y1<y 0, we call it a “down-split.” Alice starts at the center of a circle C with radius 1. Alice ﬁrst walks to the center of the upper small circle Cu of an up-slitting of C. Then, Alice turns right to walk to the center of the upper-right small circle of a down-splitting of Cd. Alice continues this process of turning right and walking to the center of a new circle created by alternatingly up- and down-splitting. Alice’s path will form a spiral converging to ( xA,yA). On the otherhand, Bob always up-splits the circle he is in the center of, turns right and ﬁnds the center of the next small circle. His path will converges to (xB,yB). Compute | 1 xA − 1 xB |. Answer: 4 √ 3+6 3 . Solution: Notice that Alice always turns 60 ◦ right so that the angle between incoming and outgoing paths at each circle center is 120 ◦. Moreover, her moves are all along three vectors: v1 = (0, 1),v 2 = ( √ 3 2 , 1 2),v 3 = ( √ 3 2 ,− 1 2). Her ﬁrst move is along v1, second is along v2, third alongv3, fourth along−v1, ﬁfth along−v2, sixth along−v3, and repeat. The ratio between one move and the next is always constant. We call this constant α. Thus, her total movement from ±v1 movements isM(1−α3 +α6−+··· ) = M 1+α3 , whereM is the length of her ﬁrst step and we also calculate this later. Similarly, she moves Mα 1+α3 units from±v2 movements and Mα 3 1+α3 units from±v3 movements. Therefore, xA = M √ 3 2 α+α2 1+α3 = M √ 3 2 α 1−α+α2. Bob always turns 120 ◦ right and moves along the same u1 = v1, along u2 = v3, and along u3 = −v2. Then the calculations for these three movements is the same as Alice’s, except that the denominators are 1 −α3. We ﬁnd that xB = M √ 3 2 α−α2 1−α3 = M √ 3 2 α 1+α+α2 . Therefore, | 1 xA − 1 xB | = 2·2α Mα √ 3 = 4 M √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2022 SMT Team Problem 13",
+   "question": "For a regular polygon S withn sides, letf(S) denote the regular polygon with 2n sides such that the vertices of S are the midpoints of every other side of f(S). Let f (k)(S) denote the polygon that results after applying f a total of k times. The area of lim k→∞ f (k)(P ) where P is a pentagon of side length 1, can be expressed as a+b√c d πm for some positive integers a,b,c,d,m whered is not divisible by the square of any prime and d does not share any positive divisors with a and b. Find a +b +c +d +m.",
+   "choices": null,
+   "answer": "141",
+   "solution": "Answer: 141. For a regular polygon S withn sides, letf(S) denote the regular polygon with 2n sides such that the vertices of S are the midpoints of every other side of f(S). Let f (k)(S) denote the polygon that results after applying f a total of k times. The area of lim k→∞ f (k)(P ) SMT 2022 Team Test Solutions April 16–17, 2022 where P is a pentagon of side length 1, can be expressed as a+b√c d πm for some positive integers a,b,c,d,m whered is not divisible by the square of any prime and d does not share any positive divisors with a and b. Find a +b +c +d +m. Answer: 141 Solution: First, note that the centers of all the polygons P,f (P ),f 2(P ),... are identical. Denote this point by O This is because circumscribing a polygon around another in the manner described by f does not change the center. Furthermore, the limiting polygon approaches a circle. Therefore, it suffices to find the radius of this circle. Let rn denote distance from O to a vertex of f (n)(P ) (where f 0(P ) = P ). Then we know that r0 = 1 2 sin(π/5), and we also have the relation rn =rn−1 1 cos \u0000 π 5·2n \u0001. Therefore, we have rn =r0 nY i=1 1 cos \u0000 π 5·2i \u0001. We can condense this by multiplying by sin( π 5·2n ) sin( π 5·2n ) and then repeatedly applying the formula sin(2θ) = 2 sin(θ) cos(θ) to the denominator. This gives us rn =r02n sin \u0000 π 5·2n \u0001 sin \u0000π 5 \u0001 As n approaches infinity, we have sin \u0000 π 5·2n \u0001 ≈ π 5·2n , which means rn approaches π/5 2 sin2(π/5) = π 10 sin2(π/5) (we can make this more rigorous with the Taylor expansion of sin, but that’s not necessary for now). Thus, the area of the limiting figure is a circle with area π π2 100 sin4(π/5) = 6 + 2 √ 5 125 π3 which gives us an answer of 141 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2014 SMT Team Problem 14",
+   "question": "Convex quadrilateral ABCD has sidelengths AB = 7, BC = 9, CD = 15. A circle with center I lies inside the quadrilateral, and is tangent to all four of its sides. Let M and N be the midpoints of AC and BD, respectively. It can be proven that I always lies on segment M N. If I is in fact the midpoint of M N, ﬁnd the area of quadrilateral ABCD .",
+   "choices": null,
+   "answer": "11",
+   "solution": "Answer: 11. Convex quadrilateral ABCD has sidelengthsAB = 7,BC = 9,CD = 15. A circle with center I lies inside the quadrilateral, and is tangent to all four of its sides. LetM andN be the midpoints ofAC andBD, respectively. It can be proven that I always lies on segmentMN . If I is in fact the midpoint of MN , ﬁnd the area of quadrilateral ABCD . Answer: 11 √ 101 Solution: First, note that DA = 13. Let P , Q, R, S and P′, Q′, R′, S′ be the midpoints and points of tangency of AB, BC, CD, and DA respectively. Let r be the radius of circle I. Now looking at triangle ABC, we see that QM is parallel to and half the length of AB, while looking at triangleABD, we see thatNS is also parallel to and half the length ofAB. Therefore QMNS is a parallelogram, so QS andMN bisect each other, which implies that they intersect at I the midpoint of MN , and QI =IS. As we have IQ′ =IS′ =r and IQ =IS,∆IQQ′ and ∆ISS′ should be congruent. If Q′ andS′ were on diﬀerent sides of line QS, then we would have that BC and AD are parallel, but this cannot happen, as then sliding BA and CD together would result in a triangle with side lengths 7, 15 and 4(= 13 − 9). Thus, Q′ and S′ are at same side of line QS. Let QQ′ =SS′ =d, so BQ′ +AS′ = (4.5−d) + (6.5−d) = AB = 7. Solving for d givesd = 2, so the lengths of the tangents from A, B, C, and D are 4.5, 2.5, 6.5, and 8.5 respectively. Now, let α, β, γ, and δ denote angles AIP′, BIQ′, CIR′, and DIS′, respectively. We have tanα = 4.5 r , tanβ = 2.5 r , tanγ = 6.5 r , tanδ = 8.5 r and α +β +γ +δ =π, so by solving tan(α +γ) =− tan(β +δ) for tangent angle sum identity we have 4.5 r + 6.5 r 1− 4.5·6.5 r2 =− 2.5 r + 8.5 r 1− 2.5·8.5 r2 , 2 = 1 r2 (2.5· 8.5 + 4.5· 6.5) so ﬁnally r = √ 101/2. The area formula A =pr/2 (p being the perimeter) gives the answer of 11 √ 101 . SMT 2014 Team Test Solutions February 15, 2014",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2022 SMT Team Problem 15",
+   "question": "In △ABC, let G be the centroid and let the circumcenters of △BCG,△CAG, and△ABG be I,J, and K, respectively. The line passing through I and the midpoint of BC intersectsKJ at Y. If the radius of circle K is 5, the radius of circle J is 8, and AG = 6, what is the length of KY ?",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2 +. In △ABC, let G be the centroid and let the circumcenters of △BCG,△CAG, and△ABG be I,J, and K, respectively. The line passing through I and the midpoint of BC intersectsKJ at Y. If the radius of circle K is 5, the radius of circle J is 8, and AG = 6, what is the length of KY ? Answer: 2 + √ 55 2 Solution: We see that both K and J are on the perpendicular bisector of AG, so KJ is the perpendicular bisector of AG. Let KJ intersect at AG at X. Since X is the midpoint of AG, we have AX = 3. Also, we can find that KX = p (AK)2− (AX)2 =√25− 9 = 4 and JX = p (AJ)2− (AX)2 =√64− 9 = √",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

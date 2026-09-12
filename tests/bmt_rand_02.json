@@ -1,0 +1,235 @@
+{
+ "id": "bmt_rand_02",
+ "competition": "BMT — General",
+ "category": "Math",
+ "title": "BMT — General — Random Mock #2 · 2026-08-23 11:24",
+ "instructions": "25 questions · 90 minutes · No calculator. Proof-based problems: write full solutions, then compare with the official solutions.",
+ "time_limit_min": 90,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2025 BMT General Problem 1",
+   "question": "Compute 52 + 82−2·5·8 + 58.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 2,
+   "source": "2021 BMT General Problem 2",
+   "question": "Compute the remainder when ab is divided by 13 .",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 3,
+   "source": "2025 BMT General Problem 3",
+   "question": "Find the smallest two-digit positive integer whose digits sum to a multiple of 6 and whose ones digit is twice its tens digit.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 4,
+   "source": "2022 BMT General Problem 4",
+   "question": "Big Chungus has been thinking of a new symbol for BMT, and the drawing below is what he came up with. If each of the 16 small squares in the grid are unit squares, what is the area of the shaded region?",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 5,
+   "source": "2024 BMT General Problem 5",
+   "question": "Find the smallest number among the following numbers: 7 13 , 10 19 , 5 9 , 3 5 , 2023 4045 , 6 11 , 2024 4047 , 4 7 .",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 6,
+   "source": "2021 BMT General Problem 6",
+   "question": "A toilet paper roll is a cylinder of radius 8 and height 6 with a hole in the shape of a cylinder of radius 2 and the same height. That is, the bases of the roll are annuli with inner radius 2 and outer radius 8. Compute the surface area of the roll.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 7,
+   "source": "2023 BMT General Problem 7",
+   "question": "Recall that an arithmetic sequence is a sequence of numbers such that the difference between any two consecutive terms is the same. Suppose x1, x2, x3 forms an arithmetic sequence. If x2 = 2023, compute x1 + x2 + x3.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 8,
+   "source": "2023 BMT General Problem 8",
+   "question": "One of Landau’s four unsolved problems asks whether there are infinitely many primes p such that p− 1 is a perfect square. How many such primes are there less than 100?",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 9,
+   "source": "2024 BMT General Problem 9",
+   "question": "Find the real number x satisfying x2− 20 x2 + 20x + 4 = x2− 24 x2 + 24x + 4 = 1 2 .",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 10,
+   "source": "2025 BMT General Problem 10",
+   "question": "LetA,B, andCbe digits such thatA B C×A C = 2025. Find the three-digit numberA B C.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 11,
+   "source": "2023 BMT General Problem 11",
+   "question": "Consider two geometric sequences 16 , a1, a2, . . . and 56, b1, b2, . . . with the same common nonzero ratio. Given that a2023 = b2020, compute b6− a6.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 12,
+   "source": "2021 BMT General Problem 12",
+   "question": "Let a, b, and c be the solutions of the equation x3− 3· 20212x = 2· 20213. Compute 1 a + 1 b + 1 c .",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 13,
+   "source": "2022 BMT General Problem 13",
+   "question": "Three standard six-sided dice are rolled. What is the probability that the product of the values on the top faces of the three dice is a perfect cube?",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 14,
+   "source": "2024 BMT General Problem 14",
+   "question": "How many terms of the sequence 3 1 + 1, 32 + 2, 33 + 3, . . . ,32024 + 2024 are divisible by 5?",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 15,
+   "source": "2023 BMT General Problem 15",
+   "question": "Find the number of positive integers n less than 10000 such that there are more 4’s in the digits of n + 1 than in the digits of n.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 16,
+   "source": "2021 BMT General Problem 16",
+   "question": "Jason and Valerie agree to meet for game night, which runs from 4:00 PM to 5:00 PM. Jason and Valerie each choose a random time from 4:00 PM to 5:00 PM to show up. If Jason arrives first, he will wait 20 minutes for Valerie before leaving. If Valerie arrives first, she will wait 10 minutes for Jason before leaving. What is the probability that Jason and Valerie successfully meet each other for game night? BMT 2021 General Test November 20–21, 2021",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 17,
+   "source": "2024 BMT General Problem 17",
+   "question": "Eight players are seated around a circular table. Each player is assigned to either Team Green or Team Yellow so that each team has at least one player. In how many ways can the players be assigned to the teams such that each player is on the same team as at least one player adjacent to them?",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 18,
+   "source": "2021 BMT General Problem 18",
+   "question": "In quadrilateral ABCD , suppose that CD is perpendicular to BC and DA. Point E is chosen on segment CD such that ∠AED = ∠BEC . If AB = 6, AD = 7, and ∠ABC = 120◦, compute AE + EB.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 19,
+   "source": "2023 BMT General Problem 19",
+   "question": "Let ω be a circle with center O and radius 8, and let A be a point such that AO = 17. Let P and Q be points on ω such that line segments AP and AQ are tangent to ω. Let B and C be points chosen on AP and AQ, respectively, such that BC is also tangent to ω. Compute the perimeter of triangle△ABC.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 20,
+   "source": "2021 BMT General Problem 20",
+   "question": "For some positive integer n, (1 + i) + (1 +i)2 + (1 +i)3 +··· + (1 +i)n = (n2− 1)(1− i), where i =√−1. Compute the value of n.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 21,
+   "source": "2023 BMT General Problem 21",
+   "question": "Let p, q, and r be the three roots of the polynomial x3− 2x2 + 3x− 2023. Suppose that the polynomial x3 + Bx2 + M x + T has roots p + q, p + r, and q + r for real numbers B, M, and T . Compute B− M + T .",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 22,
+   "source": "2022 BMT General Problem 22",
+   "question": "Given a positive integer n, let s(n) denote the sum of the digits of n. Compute the largest positive integer n such that n = s(n)2 + 2s(n)− 2.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 23,
+   "source": "2022 BMT General Problem 23",
+   "question": "For real numbers B, M, and T , we have B2 + M 2 + T 2 = 2022 and B + M + T = 72. Compute the sum of the minimum and maximum possible values of T . BMT 2022 General Test November 5, 2022",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 24,
+   "source": "2021 BMT General Problem 24",
+   "question": "Given that x, y, and z are a combination of positive integers such that xyz = 2( x + y + z), compute the sum of all possible values of x + y + z.",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  },
+  {
+   "n": 25,
+   "source": "2023 BMT General Problem 25",
+   "question": "A tetrahedron has three edges of length 2 and three edges of length 4, and one of its faces is an equilateral triangle. Compute the radius of the sphere that is tangent to every edge of this tetrahedron. 3",
+   "choices": null,
+   "answer": null,
+   "solution": null,
+   "type": "proof"
+  }
+ ]
+}

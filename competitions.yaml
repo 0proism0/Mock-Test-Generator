@@ -80,6 +80,24 @@ categories:
       - {slug: timss, name: TIMSS, zh: 国际数学与科学趋势研究, adapter: official_pdf, status: needs_source, notes: "released items at timss.bc.edu"}
       - {slug: naep,  name: NAEP Mathematics, zh: 美国国家教育进展评估, adapter: official_pdf, status: needs_source, notes: "released items at nationsreportcard.gov"}
 
+  physics:
+    label: 🔭 Physics Competitions / 物理竞赛
+    competitions:
+      - {slug: fma,            name: F=ma, zh: 美国物理奥赛初赛, adapter: official_pdf, status: done}
+      - {slug: physicsbowl,    name: Physics Bowl, zh: 物理碗, adapter: official_pdf, status: done}
+      - {slug: usapho,         name: USAPhO, zh: 美国物理奥赛, adapter: official_pdf, status: needs_source}
+      - {slug: bpho_r1,        name: BPhO Round 1, zh: 英国物理奥赛第一轮, adapter: bpho_pdf, status: partial}
+      # partial: 24 Section-1 parts from 2023+2024 (only years with typed mark schemes).
+      # Older S PDFs are scans (no text layer); needs OCR to expand.
+      - {slug: bpho_r2,        name: BPhO Round 2, zh: 英国物理奥赛第二轮, adapter: official_pdf, status: needs_source}
+      - {slug: ipho,           name: IPhO, zh: 国际物理奥林匹克, adapter: official_pdf, status: needs_source}
+      - {slug: sat_physics,    name: SAT Physics, zh: SAT物理, adapter: official_pdf, status: needs_source}
+      - {slug: ap_physics1,    name: AP Physics 1, zh: AP物理1, adapter: official_pdf, status: needs_source}
+      - {slug: ap_physics2,    name: AP Physics 2, zh: AP物理2, adapter: official_pdf, status: needs_source}
+      - {slug: ap_physics_c_mech, name: AP Physics C: Mechanics, zh: AP物理C力学, adapter: official_pdf, status: needs_source}
+      - {slug: ap_physics_c_em,   name: AP Physics C: E&M, zh: AP物理C电磁学, adapter: official_pdf, status: needs_source}
+      - {slug: gre_physics,    name: GRE Physics, zh: GRE物理, adapter: official_pdf, status: needs_source}
+
   other:
     label: 🧩 Other Notable / 其他值得关注的竞赛
     competitions:

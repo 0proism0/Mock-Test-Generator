@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_08",
+ "competition": "SMT — Calculus",
+ "category": "Math",
+ "title": "SMT — Calculus — Random Mock #8 · 2026-08-26 16:33",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2022 SMT Calculus Problem 1",
+   "question": "If f(x) =x4 + 4x3 + 7x2 + 6x + 2022, compute f ′(3).",
+   "choices": null,
+   "answer": "264",
+   "solution": "Answer: 264. If f(x) =x4 + 4x3 + 7x2 + 6x + 2022, compute f′(3). Answer: 264 Solution: f′(x) = 4x3 + 12x2 + 14x + 6. Substitute 3 into x gives f′(3) = 264. Solution 2: It’s easy to recognize that f(x) = (1 +x)4 + (1 +x)2 + 2020. So f′(x) = 4(1 +x)3 + 2(1 +x). Substitute 3 gives the correct answer.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2011 SMT Calculus Problem 2",
+   "question": "A trapezoid is inscribed in a semicircle of radius 2 such that one base of the trapezoid lies along the diameter of the semicircle. Find the largest possible area of the trapezoid.",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. A trapezoid is inscribed in a semicircle of radius 2 such that one base of the trapezoid lies along the diameter of the semicircle. Find the largest possible area of the trapezoid. Answer: 3 √ 3 Clearly, a trapezoid with maximal area will have a base equal to the diameter. If x is the height of the trapezoid, then the area of a trapezoid is h(b1+b2) 2 =A(x) = ( 2 + √ 4−x2) ·x so the maximum occurs when 0 =A′(x) = 2 + √ 4−x2− x2 √ 4−x2 = 2 √ 4−x2 + 4− 2x2 √ 4−x2 , which is equivalent to 4(4−x2) = (2x2− 4)2 = 4x4− 16x2 + 16. Collecting like terms gives 4 x4 = 12x2, and since x⁄= 0 (the degenerate case), we get that x = √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2011 SMT Calculus Problem 3",
+   "question": "A sector of a circle has angle θ. Find the value of θ, in radians, for which the ratio of the sector’s area to the square of its perimeter (the arc along the circle and the two radial edges) is maximized. Express your answer as a number between 0 and 2 π.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. A sector of a circle has angle θ. Find the value of θ, in radians, for which the ratio of the sector’s area to the square of its perimeter (the arc along the circle and the two radial edges) is maximized. Express your answer as a number between 0 and 2 π. Answer: 2 Suppose that the circle has radius r. Then the area of the circle is πr2, so the area of the sector is θ 2ππr2 = 1 2θr2. The arc of the perimeter of the sector has length θ 2π 2πr = θr, and the two straight edges of the sector each has length r, so the perimeter has length θr + 2r = (θ + 2)r, and hence the square of the perimeter is (θ + 2)2r2. The ratio that we want to maximize is therefore 1 2θr2 (θ + 2)2r2 = θ 2(θ + 2)2. To do this, diﬀerentiate to ﬁnd the critical points: 0 = d dθ ( θ 2(θ + 2)2 ) = 2(θ + 2)2− 4θ(θ + 2) 4(θ + 2)4 = 2(θ + 2)− 4θ 4(θ + 2)3 = 2−θ 2(θ + 2)3 =⇒ θ = 2. Observe that the derivative is decreasing at θ = 2, which implies that this is a local maximum, as desired. Alternate Solution: Equivalently, we can minimize the reciprocal: 0 = d dθ (2(θ + 2)2 θ ) = 2 d dθ ( 4θ−1 + 4 +θ ) = 2 ( −4θ−2 + 1 ) =⇒ θ2 = 4 =⇒ θ = 2.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2012 SMT Calculus Problem 4",
+   "question": "Compute the x-coordinate of the point on the curve y = √x that is closest to the point (2 , 1).",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2+. Compute the x-coordinate of the point on the curve y = √x that is closest to the point (2 , 1). Answer: 2+ √ 3 2 Solution: We want to minimize the distance between the points ( a2, a) and (2 , 1). We can equivalently minimize the square of the distance between those two points, which is (2 − a2)2 + (1 − a)2 = a4 − 3a2 − 2a + 5. SMT 2012 Calculus Test and Solutions February 18, 2012 The derivative of this function is 4 a3 −6a−2, which can be factored as 2( a+1)(2a2 −2a−1). The roots of this cubic are therefore a = −1, 1 ± √ 3 2 . Two of the roots are negative and therefore invalid, so a = 1 + √ 3 2 and a2 = 2 + √ 3 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2014 SMT Calculus Problem 5",
+   "question": "Compute the improper integral ∫ 2 0 (√ 4− x x − √ x 4− x ) dx.",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. Compute the improper integral ∫ 2 0 (√ 4−x x − √ x 4−x ) dx. Answer: 4 Solution 1: First of all, we note the many symmetries of the given expression. Speciﬁcally, we have √ 4−x x and we subtract its reciprocal. We also recall that square roots, when we take their derivative, give us their reciprocal. This inspires the guess that the function f(x) =√x√4−x is somehow important to our integral. Indeed, we ﬁnd that f′(x) = 1 2 (√ 4−x x − √ x 4−x ) so that ∫ 2 0 √ 4−x x − √ x 4−xdx = 2√x√4−x ⏐⏐2 0 = 2(2− 0) = 4 . Solution 2: Although solution 1 is, perhaps, the prettiest way of solving this problem, it is not necessarily easy to notice. A more direct approach uses a trig substitution. Speciﬁcally, noting the importance of 4−x x and remembering the Pythagorean identity sin 2x + cos2x = 1, it makes sense to try the substitution x = 4 sin 2θ. Then √ 4−x x = √ cos2x sin2x = cot x. Also, dx = 8 sinθ cosθdθ , 4 sin2θ = 0 when θ = 0 and 4 sin2θ = 2 when θ = π 4 . The integral becomes ∫ π 4 0 (cotθ− tanθ)· 8 sinθ cosθdθ = 8 ∫ π 4 0 cos2θ− sin2θdθ = 8 ∫ π 4 0 cos 2θdθ. This last integral may be easily computed by the substitution 2 θ↦→θ: 8 ∫ π 4 0 cos 2θdθ = 4 ∫ π 2 0 cosθdθ = 4(sinθ) ⏐⏐ π 2 0 = 4(1− 0) = 4 . Solution 3: The simplest way to solve this problem is perhaps to write the integrand with a common denominator. This gives ∫ 2 0 √4−x√x − √x√4−xdx = ∫ 2 0 (4−x)−x√x√4−x dx = ∫ 2 0 4− 2x√ 4x−x2dx. Substitute u = 4x−x2, du = (4− 2x)dx. Then our integral becomes ∫ 2 0 4− 2x√ 4x−x2dx = ∫ 4 0 1√udu = 2√u ⏐⏐4 0 = 4 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2018 SMT Calculus Problem 6",
+   "question": "Compute lim x→0 (1− cos x)2 x2− x2 cos2 x .",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Compute lim x→0 (1− cosx)2 x2−x2 cos2x. Answer: 1 4 Solution: Factoring out thex2 from the denominator and recalling that sin 2x + cos2x = 1, our limit becomes lim x→0 (1− cosx)2 x2 sin2x = ( lim x→0 1− cosx x sinx )2 . Note that the limit is in an indeterminate form 0 /0 when we plug in x = 0, so we apply L’Hopital’s rule to get lim x→0 1− cosx x sinx = lim x→0 sinx sinx +x cosx. Plugging in x = 0 still gives us the indeterminate form 0 /0, so we apply L’Hopital’s rule again to get lim x→0 sinx sinx +x cosx = lim x→0 cosx cosx + cosx−x sinx. Plugging in x = 0 here gives us 1",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2019 SMT Calculus Problem 7",
+   "question": "Turn the graph of y = 1 x by 45◦ counter-clockwise and consider the bowl-like top part of the curve (the part above y = 0). We let a 2D ﬂuid accummulate in this 2D bowl until the maximum depth of the ﬂuid is 2 √ 2 3 . What’s the area of the ﬂuid used?",
+   "choices": null,
+   "answer": "40",
+   "solution": "Answer: 40. Turn the graph of y = 1 x by 45◦ counter-clockwise and consider the bowl-like top part of the curve (the part above y = 0). We let a 2D ﬂuid accummulate in this 2D bowl until the maximum depth of the ﬂuid is 2 √ 2 3 . What’s the area of the ﬂuid used? Answer: 40 9 − 2 ln 3 Solution: Observe that the level surface of the ﬂuid, in the non-rotated system, is given by the line x +y = 2c, for some c >0. The “depth” of the ﬂuid is then the distance from the point (1, 1) (at the bottom of the rotated graph) to the point ( c,c ). This distance is 2 √ 2 3 , so it is clear that c = 5",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2022 SMT Calculus Problem 8",
+   "question": "Given that A = ∞X n=1 sin(n) n , determine⌊100A⌋.",
+   "choices": null,
+   "answer": "107",
+   "solution": "Answer: 107. Given that A = ∞X n=1 sin(n) n , determine⌊100A⌋. Answer: 107 Solution: From Euler’s Formula, this sum is clearly Im ∞X n=1 ein n ! Now recall the Taylor Expansion of− log(1−x) =P∞ k=1 xk k . Hence, it suffices to find Im(− log \u0000 1−ei\u0001 ) We have that ei = cos(1) + i sin(1) (angles taken in radians). Now we convert 1 −ei = 1− cos(1)−i sin(1) into an exponential form. It has magnitude q (1− cos(1))2 + sin2(1) = p 2− 2 cos(1) and argument− arctan sin(1) 1−cos(1). Therefore, 1−ei = p 2− 2 cos(1)·e−i tan−1 sin(1) 1−cos(1) Taking the log of this we have 1 2 log(2− 2 cos(1))−i tan−1 sin(1) 1− cos(1) so our desired answer is tan−1 sin 1 1− cos 1 = tan−1 sin(π− 1) 1 + cos(π− 1) = tan−1 tan \u00121 2(π− 1) \u0013 and so our desired answer is ⌊50(π− 1)⌋≈ 50(2.14) = 107",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2013 SMT Calculus Problem 9",
+   "question": "Evaluate ∫ π/2 0 dx(√ sin x +√cos x )4 .",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1/3. Evaluate ∫ π/2 0 dx(√ sinx +√cosx )4. Answer: 1/3 Solution 1: Observe that by pulling a factor of cos2x out of the denominator, we can write the given integral as ∫ π/2 0 dx (1 + √ tanx)4 cos2x = ∫ π/2 0 sec2xdx (1 + √ tanx)4. SMT 2013 Calculus Test Solutions February 2, 2013 We now substitute u = √ tanx + 1: du = sec2x 2 √ tanxdx = sec2x 2(u− 1)dx. Thus, our integral is equal to ∫ ∞ 1 2u− 2 u4 du = ∫ ∞ 1 2u−3− 2u−4du, which simpliﬁes to [ −u−2 + 2 3u−3 ]∞ 1 = 1 3 . Solution 2: Let I be the value of the given integral. Note that 1 2I = 1 2 ∫ π/2 0 ((√ sin(x) + √ cos(x) )−2)2 dx, which is the polar area bounded by the curve r(θ) = (√ sin(θ) + √ cos(θ) )−2 and the x and y axes for θ∈ [0,π/ 2]. Converting to Cartesian coordinates, we get 1 =r (√ sin(θ) + √ cos(θ) )2 = (√ r sin(θ) + √ r cos(θ) )2 =⇒ √x +√y = 1 =⇒ y = (1−√x)2 = 1 +x− 2√x. Therefore, 1 2I = ∫ 1 0 1 +x− 2√xdx = [ x + x2 2 − 4 3x3/2 ]1 0 = 1 + 1 2− 4 3 = 1 6 =⇒ I = 1 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2012 SMT Calculus Problem 10",
+   "question": "Find the maximum of ∫ 1 0 f (x)3 dx given the constraints −1 ≤ f (x) ≤ 1, ∫ 1 0 f (x) dx = 0.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1 /4. Find the maximum of ∫ 1 0 f (x)3 dx given the constraints −1 ≤ f (x) ≤ 1, ∫ 1 0 f (x) dx = 0. Answer: 1 /4 Solution 1: Consider the expression ∫ 1 0 (f (x) − 1) ( f (x) + 1 2 )2 dx. Since f (x) ≤ 1 this expression is less than or equal to 0. Meanwhile, expanding the integrand gives (f (x) − 1) ( f (x) + 1 2 )2 = f (x)3 − 3 4 f (x) − 1 4 , so its integral is ∫ 1 0 (f (x) − 1) ( f (x) − 1 2 )2 dx = ∫ 1 0 f (x)3 dx − 3 4 ∫ 1 0 f (x) dx − 1 4 ∫ 1 0 dx = ∫ 1 0 f (x)3 dx − 1 4 , proving that the answer is at most 1 /4. This expression is zero when f (x) = 1 or f (x) = −1/2, so 1/4 is indeed the maximum value. Solution 2: Let f+ and f− denote the positive and negative part of f respectively. Deﬁne A+ = {f > 0} and A− = {f < 0}. Then f+ and f− are nonzero only on A+ and A−. Also the condition on f means 0 ≤ f+(x), f−(x) ≤ 1, ∫ 1 0 f+(x) dx = ∫ 1 0 f−(x) dx = s. We will ﬁx s and try to optimize the value ∫ f 3 = ∫ f 3 + − ∫ f 3 −. For the maximum of ∫ f 3 +, we have the inequality f+(x)3 ≤ f+(x), and integrating it gives ∫ 1 0 f+(x)3 dx ≤ ∫ 1 0 f+(x) dx = s. Equality holds when f+(x) is either 0 or 1 for all x. For the minimum of ∫ f 3 −, we claim that the minimum occurs when f− is constant on A−. From the inequality a3 + b3 2 ≥ ( a + b 2 )3 for 1 > a, b > 0, we speculate that the minimum is achieved when the values of f− are distributed as close as possible. Then if we denote the length of A− to be l, the minimum occurs when SMT 2012 Calculus Test and Solutions February 18, 2012 f−(x) = s/l for all x ∈ A−, and the integral will be l · (s/l)3 = s3/l2. This can be made rigorous by applying Jensen’s inequality ∫ A− φ(f−(x)) dx l ≥ φ (∫ A− f−(x) dx l ) for the convex function φ(t) = t3. This gives the minimum as ∫ f−(x)3 dx l ≥ s3 l3 , ∫ f−(x)3 dx ≥ s3 l2 . Meanwhile A+ should have length greater than s, since f+ is only nonzero on A+ and the integral of f+ ≤ 1 over A+ has length at most A+. So we have 1 − l ≥ s, l ≤ 1 − s. Now our objective integral is optimized to be the maximum of a single-variable function in s, as follows: ∫ 1 0 f (x)3 dx ≤ s − s3 (1 − s)2 . We diﬀerentiate this in s to ﬁnd the maximum. Since d ds ( s − s3 (1 − s)2 ) = 1 − 3s (1 − s)3 , its maximum is obtained at s = 1/3. Thus ﬁnally we can calculate our answer 1 3 − (1/3)3 (2/3)2 = 1 3 − 1 12 = 1 4 , and equality occurs when f (x) = 1 on a set of length 1 /3 and f (x) = −s/l = −1/2 elsewhere.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

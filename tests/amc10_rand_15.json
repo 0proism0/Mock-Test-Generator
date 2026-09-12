@@ -1,0 +1,411 @@
+{
+ "id": "amc10_rand_15",
+ "competition": "AMC 10",
+ "category": "Math",
+ "title": "AMC 10 — Random Mock #15 · 2026-09-09 18:01",
+ "instructions": "25 questions · 75 minutes · No calculator. 150 points total.",
+ "time_limit_min": 75,
+ "total_points": 150,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2002 AMC 10B Problem 1",
+   "question": "The ratio $\\frac{2^{2001}\\cdot3^{2003}}{6^{2002}}$ is:",
+   "choices": {
+    "A": "1/6",
+    "B": "1/3",
+    "C": "1/2",
+    "D": "2/3",
+    "E": "$3/2\\qquad$"
+   },
+   "answer": "E",
+   "solution": "$\\frac{2^{2001}\\cdot3^{2003}}{6^{2002}}=\\frac{2^{2001}\\cdot3^{2003}}{2^{2002}\\cdot3^{2002}}=\\frac{3}{2}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 2,
+   "source": "2000 AMC 10 Problem 2",
+   "question": "$2000(2000^{2000}) =$.",
+   "choices": {
+    "A": "$2000^{2001}$",
+    "B": "$4000^{2000}$",
+    "C": "$2000^{4000}$",
+    "D": "$4,000,000^{2000}$",
+    "E": "$2000^{4,000,000}$"
+   },
+   "answer": "A",
+   "solution": "Since $2000^2000$ is the result of multiplying $2000$ copies of $2000$ together, $2000\\left(2000^{2000}\\right)$ must be the result of multiplying $2000 + 1 = 2001$ copies of $2000$ together, which results in $\\boxed{\\textbf{(A) } 2000^{2001}}$.\n\n- itsj, edited by j314andrews",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 3,
+   "source": "2022 AMC 10B Problem 3",
+   "question": "How many three-digit positive integers have an odd number of even digits?",
+   "choices": {
+    "A": "150",
+    "B": "250",
+    "C": "350",
+    "D": "450",
+    "E": "550"
+   },
+   "answer": "D",
+   "solution": "We use simple case work to solve this problem.\n\nCase 1: even, even, even = $4 \\cdot 5 \\cdot 5 = 100$\n\nCase 2: even, odd, odd = $4 \\cdot 5 \\cdot 5 = 100$\n\nCase 3: odd, even, odd = $5 \\cdot 5 \\cdot 5 = 125$\n\nCase 4: odd, odd, even = $5 \\cdot 5 \\cdot 5 = 125$\n\nSimply sum up the cases to get your answer, $100 + 100 + 125 + 125 = \\boxed{\\textbf{(D)~}450}$.\n\n- Wesseywes7254",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 4,
+   "source": "2008 AMC 10B Problem 4",
+   "question": "A semipro baseball league has teams with $21$ players each. League rules state that a player must be paid at least $15,000$ dollars, and that the total of all players' salaries for each team cannot exceed $700,000$ dollars. What is the maximum possiblle salary, in dollars, for a single player?",
+   "choices": {
+    "A": "270,000",
+    "B": "385,000",
+    "C": "400,000",
+    "D": "430,000",
+    "E": "700,000"
+   },
+   "answer": "C",
+   "solution": "We want to find the maximum any player could make, so assume that everyone else makes the minimum possible and that the combined salaries total the maximum of $700,000$\n\n$700,000 = 20 * 15,000 + x$\n\n$x = 400,000$\n\nThe maximum any player could make is $400,000$ dollars $\\Rightarrow C$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 5,
+   "source": "2010 AMC 10B Problem 5",
+   "question": "A month with $31$ days has the same number of Mondays and Wednesdays. How many of the seven days of the week could be the first day of this month?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "B",
+   "solution": "$31 \\equiv 3 \\pmod {7}$ so the week cannot start with Saturday, Sunday, Tuesday or Wednesday as that would result in an unequal number of Mondays and Wednesdays. Therefore, Monday, Thursday, and Friday are valid so the answer is $\\boxed{B}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 6,
+   "source": "2011 AMC 10A Problem 6",
+   "question": "Set $A$ has $20$ elements, and set $B$ has $15$ elements.  What is the smallest possible number of elements in $A \\cup B$?",
+   "choices": {
+    "A": "5",
+    "B": "15",
+    "C": "20",
+    "D": "35",
+    "E": "300"
+   },
+   "answer": "C",
+   "solution": "$A \\cup B$ will be smallest if $B$ is completely contained in $A$, in which case all the elements in $B$ would be counted for in $A$. So the total would be the number of elements in $A$, which is $\\boxed{20 \\ \\mathbf{(C)}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 7,
+   "source": "2010 AMC 10A Problem 7",
+   "question": "Crystal has a running course marked out for her daily run. She starts this run by heading due north for one mile. She then runs northeast for one mile, then southeast for one mile. The last portion of her run takes her on a straight line back to where she started. How far, in miles is this last portion of her run?",
+   "choices": {
+    "A": "1",
+    "B": "$\\sqrt{2}$",
+    "C": "$\\sqrt{3}$",
+    "D": "2",
+    "E": "$2\\sqrt{2}$"
+   },
+   "answer": "C",
+   "solution": "Crystal runs north one mile, then her next two moves can be broken up into four individual moves: for her northeast section, it forms a $45-45-90$ triangle whose legs are each $\\frac{\\sqrt{2}}{2}$. For her southeast section, it is also a $45-45-90$ triangle whose legs are each $\\frac{\\sqrt{2}}{2}$. Notice that the two of the legs cancel each other out; she moves north $\\frac{\\sqrt{2}}{2}$ units and also south $\\frac{\\sqrt{2}}{2}$ units. So her net movement these two moves is $\\sqrt{2}$ to the right. Finally, after the third move, she is at the corner of a right triangle with legs $1$ and $\\sqrt{2}$. Using the Pythagorean theorem, $d^{2}=1^{2}+\\left(\\sqrt{2}\\right)^{2}=1+2=3$ and $d=\\sqrt{3} \\Longrightarrow \\boxed{\\textbf{(C) } \\sqrt{3}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 8,
+   "source": "2005 AMC 10B Problem 8",
+   "question": "An $8 $-foot by $10$-foot bathroom floor is tiled with square tiles of size $1$ foot by $1$ foot.  Each tile has a pattern consisting of four white quarter circles of radius $1/2$ foot centered at each corner of the tile.  The remaining portion of the tile is shaded.  How many square feet of the floor are shaded?",
+   "choices": {
+    "A": "$80-20\\pi$",
+    "B": "$60-10\\pi$",
+    "C": "$80-10\\pi$",
+    "D": "$60+10\\pi$",
+    "E": "$80+10\\pi$"
+   },
+   "answer": "A",
+   "solution": "There are $80$ tiles.  Each tile has $[\\mbox{square} - 4 \\cdot (\\mbox{quarter circle})]$ shaded.  Thus:\n\n\n\n$\\mbox{shaded area} = 80 \\left( 1 - 4 \\cdot \\dfrac{1}{4} \\cdot \\pi \\cdot \\left(\\dfrac{1}{2}\\right)^2\\right) $ \\\\\n$= 80\\left(1-\\dfrac{1}{4}\\pi\\right) $ \\\\\n$= \\boxed{(A) 80-20\\pi}$}.\n\n\n4 quarters of a circle is a circle so that may save you 0.5 seconds :)",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 9,
+   "source": "2004 AMC 10B Problem 9",
+   "question": "A square has sides of length $10$, and a circle centered at one of its vertices has radius $10$. What is the area of the union of the regions enclosed by the square and the circle?",
+   "choices": {
+    "A": "$200+25\\pi$",
+    "B": "$100+75\\pi$",
+    "C": "$75+100\\pi$",
+    "D": "$100+100\\pi$",
+    "E": "$100+125\\pi$"
+   },
+   "answer": "B",
+   "solution": "The area of the circle is $S_{\\bigcirc}=100\\pi$; the area of the square is $S_{\\square}=100$.\n\nExactly $\\frac{1}{4}$ of the circle lies inside the square. Thus the total area is $\\dfrac34 S_{\\bigcirc}+S_{\\square}=\\boxed{\\mathrm{(B)\\ }100+75\\pi}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 10,
+   "source": "2017 AMC 10B Problem 10",
+   "question": "The lines with equations $ax-2y=c$ and $2x+by=-c$ are perpendicular and intersect at $(1, -5)$. What is $c$?",
+   "choices": {
+    "A": "-13",
+    "B": "-8",
+    "C": "2",
+    "D": "8",
+    "E": "13"
+   },
+   "answer": "E",
+   "solution": "Writing each equation in slope-intercept form, we get $y=\\frac{a}{2}x-\\frac{1}{2}c$ and $y=-\\frac{2}{b}x-\\frac{c}{b}$. We observe the slope of each equation is $\\frac{a}{2}$ and $-\\frac{2}{b}$, respectively. Because the slope of a line perpendicular to a line with slope $m$ is $-\\frac{1}{m}$, we see that $\\frac{a}{2}=-\\frac{1}{-\\frac{2}{b}}$ because it is given that the two lines are perpendicular. This equation simplifies to $a=b$.\n\nBecause $(1, -5)$ is a solution of both equations, we deduce $a \\times 1-2 \\times -5=c$ and $2 \\times 1+b \\times -5=-c$. Because we know that $a=b$, the equations reduce to $a+10=c$ and $2-5a=-c$. Solving this system of equations, we get $c=\\boxed{\\textbf{(E)}\\ 13}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 11,
+   "source": "2009 AMC 10A Problem 11",
+   "question": "One dimension of a cube is increased by $1$, another is decreased by $1$, and the third is left unchanged. The volume of the new rectangular solid is $5$ less than that of the cube. What was the volume of the cube?",
+   "choices": {
+    "A": "8",
+    "B": "27",
+    "C": "64",
+    "D": "125",
+    "E": "216"
+   },
+   "answer": "D",
+   "solution": "Let the original cube have edge length $a$. Then its volume is $a^3$.\nThe new box has dimensions $a-1$, $a$, and $a+1$, hence its volume is $(a-1)a(a+1) = a^3-a$. \nThe difference between the two volumes is $a$. As we are given that the difference is $5$, we have $a=5$, and the volume of the original cube was $5^3 = 125\\Rightarrow\\boxed{\\text{(D)}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 12,
+   "source": "2013 AMC 10A Problem 12",
+   "question": "In $\\triangle ABC$, $AB=AC=28$ and $BC=20$.  Points $D,E,$ and $F$ are on sides $\\overline{AB}$, $\\overline{BC}$, and $\\overline{AC}$, respectively, such that $\\overline{DE}$ and $\\overline{EF}$ are parallel to $\\overline{AC}$ and $\\overline{AB}$, respectively.  What is the perimeter of parallelogram $ADEF$?",
+   "choices": {
+    "A": "48",
+    "B": "52",
+    "C": "56",
+    "D": "60",
+    "E": "$72\\qquad$"
+   },
+   "answer": "C",
+   "solution": "Drawing the diagram with a ruler and compass (and scaling back by x4), we can draw approximate parallel lines. This yields about 14, but we need to multiply by 4 to get 56, or $\\boxed{(C)}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 13,
+   "source": "2015 AMC 10B Problem 13",
+   "question": "The line $12x+5y=60$ forms a triangle with the coordinate axes. What is the sum of the lengths of the altitudes of this triangle?",
+   "choices": {
+    "A": "20",
+    "B": "$\\dfrac{360}{17}$",
+    "C": "$\\dfrac{107}{5}$",
+    "D": "$\\dfrac{43}{2}$",
+    "E": "$\\dfrac{281}{13}$"
+   },
+   "answer": "E",
+   "solution": "We find the $x$-intercepts and the $y$-intercepts to find the intersections of the axes and the line. If $x=0$, then $y=12$. If $y$ is $0$, then $x=5$. Our three vertices are $(0,0)$, $(5,0)$, and $(0,12)$. Two of our altitudes are $5$ and $12$, and since it is a $5$-$12$-$13$ right triangle, the hypotenuse is $13$. Since the area of the triangle is $30$, so our final altitude is $\\frac{30(2)}{13}=\\frac{60}{13}$. The sum of our altitudes is $\\frac{60+156+65}{13}=\\boxed{\\textbf{(E)} \\dfrac{281}{13}}$. Note that there is no need to calculate the final answer after we know that the third altitude has length $\\frac{60}{13}$ since $E$ is the only choice with a denominator of $13$ and $13$ is relatively prime to $5$ and $12$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 14,
+   "source": "2019 AMC 10A Problem 14",
+   "question": "For a set of four distinct lines in a plane, there are exactly $N$ distinct points that lie on two or more of the lines. What is the sum of all possible values of $N$?",
+   "choices": {
+    "A": "14",
+    "B": "16",
+    "C": "18",
+    "D": "19",
+    "E": "21"
+   },
+   "answer": "D",
+   "solution": "It is possible to obtain $0$, $1$, $3$, $4$, $5$, and $6$ points of intersection, as demonstrated in the following figures:\n\nIt is clear that the maximum number of possible intersections is ${4 \\choose 2} = 6$, since each pair of lines can intersect at most once. In addition, by looking at the answer choices, we know that we cannot have 7 points of intersection or else our answer would be greater than the given answer choices. Our answer is given by the sum $0+1+3+4+5+6=\\boxed{\\textbf{(D)} 19}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 15,
+   "source": "2023 AMC 10B Problem 15",
+   "question": "What is the least positive integer $m$ such that $m\\cdot2!\\cdot3!\\cdot4!\\cdot5!...16!$ is a perfect square?",
+   "choices": {
+    "A": "30",
+    "B": "30030",
+    "C": "70",
+    "D": "1430",
+    "E": "1001"
+   },
+   "answer": "C",
+   "solution": "We see that all the answer choices are divisible by $10$ except for $1001$, and we also notice that the answer choices have $3$, $7$, $11$, or $13$ as a prime factor.\n\nTesting, we see that $3$, $11$, $13$ have an even power in the product, so we have that all the other answer choices will not work.\n\nTherefore we just have $\\boxed{\\text{ (C) }70}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 16,
+   "source": "2025 AMC 10A Problem 16",
+   "question": "There are three jars. Each of three coins is placed in one of the three jars, chosen at random and independently of the placement of the other coins. What is the expected number of coins in a jar with the most coins?",
+   "choices": {
+    "A": "$\\frac{4}{3}$",
+    "B": "$\\frac{13}{9}$",
+    "C": "$\\frac{5}{8}$",
+    "D": "$\\frac{17}{9}$",
+    "E": "2"
+   },
+   "answer": "D",
+   "solution": "Create a tree diagram and add up the probabilities.\n\n$P = \\frac{3}{9} + \\frac{2}{9} + \\frac{2}{9} + \\frac{2}{9} + \\frac{2}{9} + \\frac{2}{9} + \\frac{2}{9} + \\frac{1}{9} + \\frac{1}{9} = \\boxed{\\text{(D)}\\frac{17}{9}}$\n\nNote:\n(It does not matter which jar you pick at the head of the diagram so long a you stay consistent)",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 17,
+   "source": "2016 AMC 10B Problem 17",
+   "question": "All the numbers $2, 3, 4, 5, 6, 7$ are assigned to the six faces of a cube, one number to each face. For each of the eight vertices of the cube, a product of three numbers is computed, where the three numbers are the numbers assigned to the three faces that include that vertex. What is the greatest possible value of the sum of these eight products?",
+   "choices": {
+    "A": "312",
+    "B": "343",
+    "C": "625",
+    "D": "729",
+    "E": "1680"
+   },
+   "answer": "D",
+   "solution": "Let us call the six faces of our cube $a,b,c,d,e,$ and $f$ (where $a$ is opposite $d$, $c$ is opposite $e$, and $b$ is opposite $f$).\nThus, for the eight vertices, we have the following products: $abc,abe,bcd,bde,acf,cdf,aef,$ and $def$.\nLet us find the sum of these products:\n$$abc+abe+bcd+bde+acf+cdf+aef+def$$\nWe notice $b$ is a factor of the first four terms, and $f$ is a factor of the last four terms.\n$$b(ac+ae+cd+de)+f(ac+ae+cd+de)$$\nNow, we can factor even more:\n\n\n& (b+f)(ac+ae+cd+de)\n\\\\\n= &(b+f)(a(c+e)+d(c+e))\n\\\\\n= &(b+f)(a+d)(c+e)\n\nWe have the product. Notice how the factors are sums of opposite faces. The greatest sum possible is $(7+2)$,$(6+3)$, and $(5+4)$ all factors.\n\n& (7+2)(6+3)(5+4)\n\\\\\n$=  9 \\cdot 9 \\cdot 9$9\n\\\\\n= & 729.\n\nThus our answer is $\\boxed{\\textbf{(D) }729}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 18,
+   "source": "2022 AMC 10B Problem 18",
+   "question": "Consider systems of three linear equations with unknowns $x$, $y$, and $z$,\n\n$a_1 x + b_1 y + c_1 z  = 0 $ \\\\\n$a_2 x + b_2 y + c_2 z  = 0 $ \\\\\n$a_3 x + b_3 y + c_3 z  = 0$0\n\nwhere each of the coefficients is either $0$ or $1$ and the system has a solution other than $x=y=z=0$.\nFor example, one such system is $$\\{ 1x + 1y + 0z = 0, 0x + 1y + 1z = 0, 0x + 0y + 0z = 0 \\}$$\nwith a nonzero solution of $\\{x,y,z\\} = \\{1, -1, 1\\}$. How many such systems of equations are there?\n(The equations in a system need not be distinct, and two systems containing the same equations in a\ndifferent order are considered different.)",
+   "choices": {
+    "A": "302",
+    "B": "338",
+    "C": "340",
+    "D": "343",
+    "E": "344"
+   },
+   "answer": "B",
+   "solution": "Let $M_1=a_1  b_1  c_1$_1,$ M_2=a_2  b_2  c_2$_2, and $M_3=a_3  b_3  c_3$_3. \n\nWe wish to count the ordered triples $(M_1,M_2,M_3)$ of row matrices. We perform casework:\n\n  $M_1=M_2=M_3.$\nThere are $2^3=8$ options for $M_1.$ Once $M_1$ is chosen, $M_2$ and $M_3$ are uniquely determined. \nIn this case, we have $\\boldsymbol{8}$ ordered triples $\\boldsymbol{(M_1,M_2,M_3).}$ \n  Exactly two of $M_1,M_2,$ and $M_3$ are equal.\nFor $M_1=M_2\\neq M_3,$ there are $2^3=8$ options for $M_1.$ Once $M_1$ is chosen, $M_2$ is uniquely determined, and $M_3$ has $2^3-1=7$ options. So, there are $8\\cdot7=56$ ordered triples $(M_1,M_2,M_3).$\nSimilarly, for each of $M_1=M_3\\neq M_2$ and $M_2=M_3\\neq M_1,$ there are $56$ ordered triples $(M_1,M_2,M_3).$\nIn this case, we have $\\boldsymbol{56\\cdot3=168}$ ordered triples $\\boldsymbol{(M_1,M_2,M_3).}$\n  All of $M_1,M_2,$ and $M_3$ are different.\nThere are two subcases: \n     \n       Exactly one of $M_1,M_2,$ and $M_3$ is 0 & 0 & 0.\nFor $M_1=$0 & 0 & 0, there are $2^3-1=7$ options for $M_2$ and $2^3-2=6$ options for $M_3.$ So, there are $7\\cdot6=42$ ordered triples $(M_1,M_2,M_3).$\nSimilarly, for each of $M_2=$0 & 0 & 0 and $M_3=$0 & 0 & 0, there are $42$ ordered triples $(M_1,M_2,M_3).$\nIn this subcase, we have $\\boldsymbol{42\\cdot3=126}$ ordered triples $\\boldsymbol{(M_1,M_2,M_3).}$\n       The sum of two of $M_1,M_2,$ and $M_3$ is equal to the third matrix.\nFor $M_1+M_2=M_3:$\n\n  If $M_1=$1 & 0 & 0, then $M_2\\in\\{$0 & 1 & 1,0 & 1 & 0,0 & 0 & 1$\\}$.\nMore generally, if $M_1$ consists of one $1$ and two $0$'s, then $M_2$ has $3$ options, and $M_3$ is uniquely determined. So, there are $\\binom31\\cdot3=9$ ordered triples $(M_1,M_2,M_3).$\n  If $M_1=$1 & 1 & 0, then $M_2=$0 & 0 & 1.\nMore generally, if $M_1$ consists of two $1$'s and one $0,$ then $M_2$ and $M_3$ are uniquely determined. So, there are $\\binom32=3$ ordered triples $(M_1,M_2,M_3).$\n\nThere are $9+3=12$ ordered triples $(M_1,M_2,M_3).$ \nSimilarly, for each of $M_1+M_3=M_2$ and $M_2+M_3=M_1,$ there are $12$ ordered triples $(M_1,M_2,M_3).$\nIn this subcase, we have $\\boldsymbol{12\\cdot3=36}$ ordered triples $\\boldsymbol{(M_1,M_2,M_3).}$\n     \n\nTogether, the answer is $8+168+126+36=\\boxed{\\textbf{(B)}\\ 338}.$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 19,
+   "source": "2024 AMC 10A Problem 19",
+   "question": "The first three terms of a geometric sequence are the integers $a,\\,720,$ and $b,$ where $a<720<b.$ What is the sum of the digits of the least possible value of $b?$",
+   "choices": {
+    "A": "9",
+    "B": "12",
+    "C": "16",
+    "D": "18",
+    "E": "21"
+   },
+   "answer": "E",
+   "solution": "For a geometric sequence, we have $ab=720^2=2^8 3^4 5^2$, and we can test values for $b$. We find that $b=768$ and $a=675$ works, and we can test multiples of $5$ in between the two values. Finding that none of the multiples of 5 divide $720^2$ besides $720$ itself, we know that the answer is $7+6+8=\\boxed{\\textbf{(E) } 21}$.\n\n(Note: To find the value of $b$ without bashing, we can observe that $2^8=256$, and that multiplying it by $3$ gives us $768$, which is really close to $720$. ~ YTH)\n\nNote: The reason why $ab=720^2$ is because $b/720 = 720/a$. Rearranging this gives $ab = 720^2$\n\nNote: Another reason that $ab=720^2$ is because the $\\sqrt{ab}=720$ (as the middle term in a geometric series is always the geometric mean [the geometric mean is the square root of the product of the first and last terms of the series]) and squaring on both sides results in $ab=720^2$.\n\nNote: Because it is a geometric sequence, it is clear that $a*k = 720$ and $720*k = b$. Then, $a*k = 720 = b/k$. Multiply the first and third term together and it is equal to the middle term multiplied by itself.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 20,
+   "source": "2011 AMC 10B Problem 20",
+   "question": "Rhombus $ABCD$ has side length $2$ and $\\angle B = 120$°. Region $R$ consists of all points inside the rhombus that are closer to vertex $B$ than any of the other three vertices. What is the area of $R$?",
+   "choices": {
+    "A": "$\\frac{\\sqrt{3}}{3}$",
+    "B": "$\\frac{\\sqrt{3}}{2}$",
+    "C": "$\\frac{2\\sqrt{3}}{3}$",
+    "D": "$1 + \\frac{\\sqrt{3}}{3}$",
+    "E": "2"
+   },
+   "answer": "C",
+   "solution": "We split rhombus $ABCD$ into two equilateral triangles, $ABD$ and $BCD$. In triangle $ABD$, the probability that a randomly selected point is closer to $B$ than either other point is $\\frac{1}{3}$ *. Similarly, in triangle $BCD$, the same principle applies. Thus, the area of the region closer to $B$ than $A$, $C$, or $D$ is $\\frac{1}{3} [ABD] + \\frac{1}{3} [BCD]$. Since $ABD$ and $BCD$ are congruent, we have $\\frac{1}{3} [ABD] + \\frac{1}{3} [BCD] = \\frac{2}{3} [ABD] = \\frac{2}{3} \\cdot \\frac{s^2\\sqrt{3}}{4} = \\frac{2}{3} \\cdot \\frac{(2)^2\\sqrt{3}}{4} = \\boxed{\\frac{2\\sqrt3}{3} = C}$, and we are done.\n\n$\\*See$ note",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 21,
+   "source": "2016 AMC 10A Problem 21",
+   "question": "Circles with centers $P, Q$ and $R$, having radii $1, 2$ and $3$, respectively, lie on the same side of line $l$ and are tangent to $l$ at $P', Q'$ and $R'$, respectively, with $Q'$ between $P'$ and $R'$. The circle with center $Q$ is externally tangent to each of the other two circles. What is the area of triangle $PQR$?",
+   "choices": {
+    "A": "0",
+    "B": "$\\sqrt{\\frac{2}{3}}$",
+    "C": "1",
+    "D": "$\\sqrt{6}-\\sqrt{2}$",
+    "E": "$\\sqrt{\\frac{3}{2}}$"
+   },
+   "answer": "D",
+   "solution": "We can use the Pythagorean theorem to find that the lengths are $3,5,\\sqrt{36+16\\sqrt{3}}$. If we apply Heron’s, we know that it must be the sum (or difference) of two or more square roots, by instinct. This means that $\\boxed{\\textbf{(D)} \\sqrt{6}-\\sqrt{2}}$ is the answer.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 22,
+   "source": "2020 AMC 10B Problem 22",
+   "question": "What is the remainder when $2^{202} +202$ is divided by $2^{101}+2^{51}+1$?",
+   "choices": {
+    "A": "100",
+    "B": "101",
+    "C": "200",
+    "D": "201",
+    "E": "202"
+   },
+   "answer": "D",
+   "solution": "Completing the square, then difference of squares:\n\n\n$2^{202} + 202 = (2^{101})^2 + 2\\cdot 2^{101} + 1 - 2\\cdot 2^{101} + 201$1\\\\\n$= (2^{101} + 1)^2 - 2^{102} + 201$1\\\\\n$= (2^{101} - 2^{51} + 1)(2^{101} + 2^{51} + 1) + 201$1.\n\n\nThus, we see that the remainder is $\\boxed{\\textbf{(D) } 201}$\n\n(Source: https://artofproblemsolving.com/community/c5h2001950p14000817)",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 23,
+   "source": "2004 AMC 10A Problem 23",
+   "question": "Circles $A, B$ and $C$ are externally tangent to each other, and internally tangent to circle $D$. Circles $B$ and $C$ are congruent. Circle $A$ has radius $1$ and passes through the center of $D$. What is the radius of circle $B$?",
+   "choices": {
+    "A": "$\\frac23$",
+    "B": "$\\frac {\\sqrt3}{2}$",
+    "C": "$\\frac78$",
+    "D": "$\\frac89$",
+    "E": "$\\frac {1 + \\sqrt3}{3}$"
+   },
+   "answer": "D",
+   "solution": "We can apply Descartes' Circle Formula.\n\nThe four circles have curvatures $-\\frac{1}{2}, 1, \\frac{1}{r}$, and $\\frac{1}{r}$.\n\nWe have $2((-\\frac{1}{2})^2+1^2+\\frac {1}{r^2}+\\frac{1}{r^2})=(-\\frac{1}{2}+1+\\frac{1}{r}+\\frac{1}{r})^2$\n\nSimplifying, we get $\\frac{10}{4}+\\frac{4}{r^2}=\\frac{1}{4}+\\frac{2}{r}+\\frac{4}{r^2}$\n\n$\\frac{2}{r}=\\frac{9}{4}$\n\n$r=\\frac{8}{9} \\Longrightarrow \\qquad \\textbf{(D)}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 24,
+   "source": "2019 AMC 10A Problem 24",
+   "question": "Let $p$, $q$, and $r$ be the distinct roots of the polynomial $x^3 - 22x^2 + 80x - 67$. It is given that there exist real numbers $A$, $B$, and $C$ such that $$\\dfrac{1}{s^3 - 22s^2 + 80s - 67} = \\dfrac{A}{s-p} + \\dfrac{B}{s-q} + \\frac{C}{s-r}$$for all $s\\not\\in\\{p,q,r\\}$. What is $\\tfrac1A+\\tfrac1B+\\tfrac1C$?",
+   "choices": {
+    "A": "243",
+    "B": "244",
+    "C": "245",
+    "D": "246",
+    "E": "247"
+   },
+   "answer": "B",
+   "solution": "Multiplying both sides by $(s-p)(s-q)(s-r)$ yields\n$$1 = A(s-q)(s-r) + B(s-p)(s-r) + C(s-p)(s-q)$$\nAs this is a polynomial identity, and it is true for infinitely many $s$, it must be true for all $s$ (since a polynomial with infinitely many roots must in fact be the constant polynomial $0$). This means we can plug in $s = p$ to find that $\\frac1A = (p-q)(p-r)$.  Similarly, we can find $\\frac1B = (q-p)(q-r)$ and $\\frac1C = (r-p)(r-q)$.  Summing them up, we get that $$\\frac1A + \\frac1B + \\frac1C = p^2 + q^2 + r^2 - pq - qr - pr$$\nWe can express $p^2 + q^2 + r^2 = (p+q+r)^2 - 3(pq + qr + pr)$, and by Vieta's Formulas, we know that this expression is equal to $484$. Vieta's also gives $pq + qr + pr = 80$ (which we also used to find $p^2+q^2+r^2$), so the answer is $484 -240 = \\boxed{\\textbf{(B) } 244}$. \n\n''Note'': this process of substituting in the 'forbidden' values in the original identity is a standard technique for partial fraction decomposition, as taught in calculus classes.  \n\n-very small latex edit from countmath1 :)\n\nMinor rephrasing for correctness and clarity ~ Technodoggo",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 25,
+   "source": "2008 AMC 10B Problem 25",
+   "question": "Michael walks at the rate of $5$ feet per second on a long straight path. Trash pails are located every $200$ feet along the path. A garbage truck traveling at $10$ feet per second in the same direction as Michael stops for $30$ seconds at each pail. As Michael passes a pail, he notices the truck ahead of him just leaving the next pail. How many times will Michael and the truck meet?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "B",
+   "solution": "We can record the time of the truck and the time of Michael at each trash pail. \n\n{c|c|c}Distance (s) &Truck Time&Michael Time$\\\\ \\hline 40020, 5040\\\\ 60070, 10080\\\\ 800120, 150120\\\\ 1000170, 200160\\\\ 1200220, 250200\\\\ 1400270, 300240\\\\ 1600320, 350320$0&320, 350&320\\\\ \n\nSince Micheal moves faster than the truck, the truck will not catch up to Michael afterwards.\n\nWe see that there are 4 correct times and we add 1 because they also pass between pails once which is option $\\boxed{\\textbf{(B)}}$",
+   "type": "multiple_choice",
+   "points": 6
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_09",
+ "competition": "SMT — Calculus",
+ "category": "Math",
+ "title": "SMT — Calculus — Random Mock #9 · 2026-08-26 16:33",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2012 SMT Calculus Problem 1",
+   "question": "What is ∫ 10 0 (x − 5) + (x − 5)2 + (x − 5)3 dx?",
+   "choices": null,
+   "answer": "250",
+   "solution": "Answer: 250. What is ∫ 10 0 (x − 5) + (x − 5)2 + (x − 5)3 dx? Answer: 250 3 Solution: This integral is equal to ∫ 5 −5 x + x2 + x3 dx = ∫ 5 −5 x2 dx = ( 53 3 − (−5)3 3 ) = 250 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2022 SMT Calculus Problem 2",
+   "question": "The straight line y = ax + 16 intersects the graph of y = x3 at 2 distinct points. What is the value of a?",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12. The straight line y = ax + 16 intersects the graph of y = x3 at 2 distinct points. What is the value of a? Answer: 12 Solution: The solution is 12 . For there to be 2 distinct intersections, we must have that our straight line is tangent to the graph. Let the tangent point be (x0,y 0). Then, ax0 + 16 =y0 =x3 0 (point of intersection) and 3x2 0 =a (point of tangency). We have 3x2 0·x0 + 16 =x3",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2012 SMT Calculus Problem 3",
+   "question": "Calculate ∫ 35 25 1 x − x3/5 dx.",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. Calculate ∫ 35 25 1 x − x3/5 dx. Answer: 5 2 ln 8 3 Solution: Note that we can write the integral as ∫ 35 25 1 x3/5(x2/5 − 1) dx. We solve via u-substitution. Let u = x2/5 − 1: du = 2 5 x−3/5 dx =⇒ dx = 5 2 x3/5 du. The integral becomes 5 2 ∫ 32−1 22−1 x3/5 x3/5 · u du = 5 2 ∫ 8 3 1 u du, which evaluates to 5 2 (ln 8 − ln 3) = 5 2 ln 8 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2019 SMT Calculus Problem 4",
+   "question": "Let f0(x) = (√e)x, and recursively deﬁne fn+1(x) = f′ n(x) for integers n≥ 0. Compute∑∞ i=0fi(1).",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2√e. Let f0(x) = (√e)x, and recursively deﬁne fn+1(x) = f′ n(x) for integers n≥ 0. Compute∑∞ i=0fi(1). Answer: 2√e Solution: Rewrite f0(x) as ex/2. Then, we can see by induction that fn(x) = 1 2nex/2, and hence the inﬁnite sum is a geometric series with ratio 1",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2012 SMT Calculus Problem 5",
+   "question": "Let f (x) = x + x2 2 + x3 3 + x4 4 + x5 5 , and set g(x) = f −1(x). Compute g(3)(0).",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Let f (x) = x + x2 2 + x3 3 + x4 4 + x5 5 , and set g(x) = f −1(x). Compute g(3)(0). Answer: 1 Solution 1: The inverse function rule tells us that g′(x) = [ f ′(g(x)) ]−1 . Using this and the fact that g(0) is clearly equal to zero, this problem can be solved with a straightforward bash. Solution 2: We begin by observing that we know by the inverse function rule that we will not need to know any derivatives of f past its third derivative. Since the ﬁrst three derivatives of f at zero agree with those of the function − log (1 − x) (by Taylor series expansion), we can assume f (x) = − log (1 − x). Now, y = − log (1 − x) = ⇒ − y = log (1 − x) = ⇒ e−y = 1 − x =⇒ x = 1 − e−y so g(y) = 1 − e−y and therefore g(3)(0) = e−0 = 1 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2019 SMT Calculus Problem 6",
+   "question": "What is the smallest natural number n for which the limit lim x→0 sinnx cos2x (1− cosx)3 exists?",
+   "choices": null,
+   "answer": "6",
+   "solution": "Answer: 6. What is the smallest natural number n for which the limit lim x→0 sinnx cos2x (1− cosx)3 exists? Answer: 6 Solution: First, note that the cos 2x in the denominator converges to 1 always and can be ignored. The Taylor series expansions of sin x and 1− cosx to ﬁrst order are x and x2 2 , respectively. That means that: lim x→0 sinnx cos2x (1− cosx)3 = lim x→0 xn (x2/2)3 The limit exists exactly when the exponent of x in the numerator is at least the exponent of x in the denominator, so n must be at least 6 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2022 SMT Calculus Problem 7",
+   "question": "Let Aj = ( (x,y ) : 0≤x sin \u0012jπ 3 \u0013 +y cos \u0012jπ 3 \u0013 ≤ 6− \u0012 x cos \u0012jπ 3 \u0013 −y sin \u0012jπ 3 \u0013\u00132) The area of∪5 j=0Aj can be expressed as m√n. What is the area?",
+   "choices": null,
+   "answer": "42",
+   "solution": "Answer: 42. Let Aj = ( (x,y ) : 0≤x sin \u0012jπ 3 \u0013 +y cos \u0012jπ 3 \u0013 ≤ 6− \u0012 x cos \u0012jπ 3 \u0013 −y sin \u0012jπ 3 \u0013\u00132) The area of∪5 j=0Aj can be expressed as m√n. What is the area? Answer: 42 √ 3 Solution: Consider the case ofj = 0; then our inequality simply becomes 0≤y≤ 6−x2, which is the tip of a parabola with vertex (0 , 6) and opens downward. Then, note that Aj is just A0 rotated by π/3 about the origin j times, so graphing produces the following shape, which can be broken down into a central hexagon and six parabolic portions: The key step is to find where the corners of the hexagon are. It will be very difficult to find the intersection of A0 and A1 directly, so instead we note that by symmetry, the intersection happens along the line π/3 above thex-axis. Along that line, y =x √ 3, so the problem becomes solving x √ 3 = 6−x2 which gives x = √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2018 SMT Calculus Problem 8",
+   "question": "Compute lim n→∞ n2 ∫ 1/n 0 x2018x+1 dx.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Compute lim n→∞ n2 ∫ 1/n 0 x2018x+1dx. Answer: 1 2 SMT 2018 Calculus Test Solutions February 17, 2018 Solution: The key to evaluating this limit is to approximate the limit with a simpler integral. In particular, notice that xx→ 1 as x→ 0. This suggests that we can approximate the integrand using x2018x = (xx)2018≈ 1 to get lim n→∞ n2 ∫ 1/n 0 x2018x+1dx = lim n→∞ n2 ∫ 1/n 0 xdx. The integral then evaluates to ∫ 1/n 0 xdx = 1 2n2 . Plugging this back into the limit gives us the answer 1 2 . To prove this claim rigorously, letϵ> 0. Because limx→0x2018x = 1, there exists some δ >0 such that|x2018x− 1|<ϵ for all 0 <x<δ. Now consider the integral n2 ∫ 1/n 0 x2018x+1−xdx. Armed with our approximation, so long as 0 < 1 n <δ , or n> 1 δ , we have ⏐⏐⏐⏐⏐n2 ∫ 1/n 0 x2018x+1−xdx ⏐⏐⏐⏐⏐ = ⏐⏐⏐⏐⏐n2 ∫ 1/n 0 x ( x2018x− 1 ) dx ⏐⏐⏐⏐⏐ ≤n2 ∫ 1/n 0 x ⏐⏐x2018x− 1 ⏐⏐ dx <n 2 ∫ 1/n 0 ϵ·xdx = ϵ 2 where we have used the facts that the function x is non-negative on the interval [0, 1/n]. We have already shown above that n2∫ 1/n 0 xdx = 1 2, so for all n> 1 δ we have ⏐⏐⏐⏐⏐n2 ∫ 1/n 0 x2018x+1dx− 1 2 ⏐⏐⏐⏐⏐< ϵ",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2023 SMT Calculus Problem 9",
+   "question": "Let △ABC be an equilateral triangle with side length 4. Let P be a point chosen uniformly and at random in the interior of △ABC. Determine the probability that a square of side length 1 with a corner at P can be rotated to lie entirely within △ABC.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1 − π. Let △ABC be an equilateral triangle with side length 4. Let P be a point chosen uniformly and at random in the interior of △ABC. Determine the probability that a square of side length 1 with a corner at P can be rotated to lie entirely within △ABC. Answer: 1 − π 48 Calculus Test Solutions April 8, 2023 Solution: Let’s look at the bottom left corner. In particular, when is it possible to create such a square cornered at ( p,q ) = (r cosθ,r sinθ) for a given angle θ (that is, what is the smallest possible value of r such that we can create this square) The edges of the triangle in this bottom left corner at y = 0 and y = √ 3x, assuming we place the corner at (0 , 0). Then, the two lines forming the square and emanating from ( p,q ) are y =mx+ (q−pm) andy =− 1 mx+ (q + p m), parametrized by the slope m. We want the distance from (p,q ) to each of the triangle edges to be at least 1. The squared distance from the first line to y = 0 is (p− q−pm m )2 +q2 =q2\u0000 1 + 1 m2 \u0001 . To find the squared distance from the second line to y = √ 3x, first note that the two intersect atx = qm+p m √ 3+1 andy = √ 3 qm+p m √ 3+1. So, the squared distance between the two is \u0010 p− qm+p m √ 3+1 \u00112 + \u0010 q− √ 3 qm+p m √ 3+1 \u00112 = \u0010 q−p √ 3 1+m √ 3 \u00112 (1 +m2). Note that for a given ( p,q ) the maximum square we can fit into this corner will happen when the two above distances are equal, as the side length of the square is the minimum of the two distances. So, we can rewrite to have q2 \u0012 1 + 1 m2 \u0013 = q−p √ 3 1 +m √ 3 !2 (1 +m2) ⇐⇒ 3m2 + 2m √ 3 + 1 =m2(1− cot(θ) √ 3)2. Lettingt = cot(θ) √ 3− 1 and noting that t> 0 when 0≤θ≤ π 3 , it follows that the solutions are m =−2 √ 3± p 12− 4(3−t2) 2(3−t2) = 1 − √ 3∓t. In fact, we can uniquely take the branch m = 1 − √ 3−t because this corresponds to m being negative always (as θ→ 0+, m→ 0−). Plugging this in to the squared distance from the first line to y = 0, we have that the squared distance is d2 =r2 sin2(θ)(1 + (− √ 3− (cot(θ) √ 3− 1))2) =r2 sin2(θ)(1 + (1− √ 3(1 + cot(θ)))2). The “forbidden region” of points P corresponding to this corner is then when d2< 1, or r(θ)< 1q sin2(θ)(1 + (1− √ 3(1 + cot(θ)))2) Therefore, the area of this forbidden region is I = Z π 3 0 Z r(θ) 0 r dr dθ = 1 2 Z π 3 0 1 sin2(θ)(1 + (1− √ 3(1 + cot(θ)))2) dθ. Our final answer will be 1 − 3I 42√ 3 4 = 1− 3I 4 √ 3, as none of these three corner regions overlap (due to the square sidelength chosen). So, it suffices to compute the given integral. Takex = 1− √ 3(1 + cot(θ)), so that dx = √ 3 csc2θ dθ. Then, I = 1 2 √ 3 Z − √ 3 −∞ 1 1 +x2 dx = 1 2 √ 3arctan(x) − √ 3 x=−∞ = 1 2 √ 3 \u0010 −π 3 + π 2 \u0011 = π 12 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2011 SMT Calculus Problem 10",
+   "question": "Compute the integral ∫ π 0 ln(1 − 2a cosx +a2)dx for a> 1.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2π lna. Compute the integral ∫ π 0 ln(1− 2a cosx +a2)dx for a> 1. Answer: 2π lna Solution 1: This integral can be computed using a Riemann sum. Divide the interval of integration [0 ,π ] into n parts to get the Riemann sum π n [ ln ( a2− 2a cosπ n + 1 ) + ln ( a2− 2a cos 2π n + 1 ) +··· + ln ( a2− 2a cos (n− 1)π n + 1 )] . Recall that cosθ = eiθ +e−iθ 2 . We can rewrite this sum of logs as a product and factor the inside to get π n ln [n−1∏ k=1 ( a2− 2a coskπ n + 1 )] = π n ln [n−1∏ k=1 ( a−ekπi/n )( a−e−kπi/n )] . The terms e±kπi/n are all of the 2n-th roots of unity except for ±1, so the inside product contains all of the factors of a2n− 1 except for a− 1 and a + 1. The Riemann sum is therefore equal to π n lna2n− 1 a2− 1 To compute the value of the desired integral, we compute the limit of the Riemann sum as n→∞ ; this is lim n→∞ π n lna2n− 1 a2− 1 = lim n→∞ π ln n √ a2n− 1 a2− 1 = lim n→∞ π lna2 = 2π lna. (This is problem 471 of R˘ azvan Gelca and Titu Andreescu’s book Putnam and Beyond . The solution is due to Sim´ eon Poisson.) Solution 2: Let the desired integral be I(a), where we think of this integral as a function of the parameter a. In this solution, we diﬀerentiate by a to convert the desired integral to an integral of a rational function in cosx: d daI(a) = d da ∫ π 0 ln(1− 2a cosx +a2)dx = ∫ π 0 2a− 2 cosx 1− 2a cosx +a2 dx. All integrals of this form can be computed using the substitution t = tan x 2 . Then x = 2 arctant, so dx = 2 1+t2 dt and cosx = cos(2 arctant) = 2 cos(arctant)2− 1 = 2 ( 1 1 +t2 ) − 1 = 1−t2 1 +t2, so our integral becomes d daI(a) = ∫ ∞ 0 2a− 2 1−t2 1+t2 1− 2a 1−t2 1+t2 +a2 2 1 +t2 dt = 4 ∫ ∞ 0 a(1 +t2)− (1−t2) (1 +t2)− 2a(1−t2) +a2(1 +t2) 1 1 +t2 dt = 4 ∫ ∞ 0 (a + 1)t2 + (a− 1) ((a + 1)2t2 + (a− 1)2)(1 +t2)dt = 2 a ∫ ∞ 0 a2− 1 (a + 1)2t2 + (a− 1)2 dt + 2 a ∫ ∞ 0 1 1 +t2 dt. SMT 2011 Calculus Test and Solutions February 19, 2011 In the ﬁrst integral, we do the substitution t = a−1 a+1u. Then dt = a−1 a+1du and we have = 2 a ∫ ∞ 0 1 1 +u2 du + 2 a ∫ ∞ 0 1 1 +t2 dt = 2 a (π 2 + π 2 ) = 2π a . Therefore, our desired integral is the integral of the previous quantity, or I = ∫ π 0 ln(1− 2a cosx +a2)dx = 2π lna. Solution 3: We use Chebyshev polynomials 1. First, deﬁne the Chebyshev polynomial of the ﬁrst kind to be Tn(x) = cos(n arccosx). This is a polynomial in x, and note that Tn(cosx) = cos(nx). Note that cos((n + 1)x) = cosnx cosx− sinnx sinx cos((n− 1)x) = cosnx cosx + sinnx sinx, so that cos((n + 1)x) = 2 cosnx cosx− cos((n− 1)x) and hence the Chebyshev polynomials satisfy the recurrence Tn+1(x) = 2xTn(x)−Tn−1(x). Therefore, the Chebyshev polynomials satisfy the generating function ∞∑ n=0 Tn(x)tn = 1−tx 1− 2tx +t2. Now, substituting x↦→ cosx and t↦→a−1, we have ∞∑ n=0 cos(nx)a−n =a a− cosx a2− 2a cosx + 1. So 2 ∞∑ n=0 cos(nx)a−n−1 = 2a− 2 cosx 1− 2a cosx +a2. Then ∫ π 0 2a− 2 cosx 1− 2a cosx +a2 dx = 2 ∫ π 0 ∞∑ n=0 cos(nx)a−n−1dx = 2 ∞∑ n=0 ( a−n−1 ∫ π 0 cos(nx)dx ) = 2πa−1. Now, since ln(1− 2a cosx +a2) = ∫ 2a− 2 cosx 1− 2a cosx +a2 da, we see that ∫ π 0 ln(1− 2a cosx +a2)dx = ∫ 2πa−1da = 2π lna. Solution 4: We can also give a solution based on physics. By symmetry, we can evaluate the integral from 0 to 2 π and divide the answer by 2, so ∫ π 0 ln(1− 2a cosx +a2)dx = ∫ 2π 0 ln √ 1− 2a cosx +a2dx. Now let’s calculate the 2D gravitational potential of a point mass falling along the x axis towards a unit circle mass centered around the origin. We set the potential at inﬁnity to 0. We also note that, 1http://en.wikipedia.org/wiki/Chebyshev_polynomials SMT 2011 Calculus Test and Solutions February 19, 2011 since the 2D gravitational force between two masses is proportional to 1 r , the potential between two masses is proportional to − lnr. So to calculate the gravitational potential, we integrate − lnr over the unit circle. But if the point mass is at ( a, 0), then the distance between the point mass and the section of the circle at angle x is √ 1− 2a cosx +a2. So we get the integral − ∫ 2π 0 ln √ 1− 2a cosx +a2dx This is exactly the integral we want to calculate! We can also calculate this potential by concentrating the mass of the circle at its center. The circle has mass 2 π and its center is distance a from the point mass. So the potential is simply −2π lna. Thus, the ﬁnal answer is 2 π ln(a). Solution 5: This problem also has a solution which uses the Residue Theorem from complex analysis. It is easy to show that 2 ∫ π 0 ln(1− 2a cos(x) +a2)dx = ∫ 2π 0 ln(1− 2a cos(x) +a2)dx. Furthermore, observe that 1− 2a cosx +a2 = (a−eix)(a−e−ix). Thus, our integral is I = 1 2 (∫ 2π 0 ln[(a−eix)(a−e−ix)]dx ) = 1 2 (∫ 2π 0 ln(a−eix)dx + ∫ 2π 0 ln(a−e−ix)dx ) , where the integrals are performed on the real parts of the logarithms in the second expression. In the ﬁrst integral, substitute z =eix, dz =ieixdx =izdx ; the resulting contour integral is ∮ ‖z‖=1 ln(a−z) iz dz. By the Residue Theorem, this is equal to 2πi Resz=0 ln(a−z) iz = 2π ln(a). The second integral is identical. Thus, the ﬁnal answer is 1 2(4π ln(a)) = 2π ln(a).",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

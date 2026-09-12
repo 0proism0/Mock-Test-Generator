@@ -1,0 +1,411 @@
+{
+ "id": "amc12_rand_01",
+ "competition": "AMC 12",
+ "category": "Math",
+ "title": "AMC 12 — Random Mock #1 · 2026-08-26 16:33",
+ "instructions": "25 questions · 75 minutes · No calculator. 150 points total.",
+ "time_limit_min": 75,
+ "total_points": 150,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2018 AMC 12A Problem 1",
+   "question": "A large urn contains $120$ balls, of which $25 \\%$ are red and the rest are blue. How many of the blue balls must be removed so that the percentage of red balls in the urn will be $50 \\%$? (No red balls are to be removed.)",
+   "choices": {
+    "A": "40",
+    "B": "50",
+    "C": "60",
+    "D": "70",
+    "E": "90"
+   },
+   "answer": "C",
+   "solution": "The urn contains $0.25 \\cdot 120 = 30$ red balls and $120-30=90$ blue balls. Since no red balls are removed, the $30$ red balls must make up $50\\%$ of the final contents, so the urn must end with $30/0.5 = 60$ balls. Therefore $120-60 = 60$ blue balls must be removed. The answer is $\\boxed{60}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 2,
+   "source": "2012 AMC 12A Problem 2",
+   "question": "Amara can frost a cupcake every $15$ seconds and Bianca can frost a cupcake every $25$ seconds. Working together, how many cupcakes can they frost in $10$ minutes?",
+   "choices": {
+    "A": "64",
+    "B": "60",
+    "C": "68",
+    "D": "56",
+    "E": "72"
+   },
+   "answer": "A",
+   "solution": "Ten minutes is $600$ seconds. Amara frosts $600/15 = 40$ cupcakes and Bianca frosts $600/25 = 24$ cupcakes. Working together they frost $40+24 = 64$ cupcakes. The answer is $\\boxed{64}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 3,
+   "source": "2024 AMC 12A Problem 3",
+   "question": "The number $2025$ is written as the sum of not necessarily distinct two-digit numbers. What is the least possible number of terms in such a sum?",
+   "choices": {
+    "A": "21",
+    "B": "19",
+    "C": "20",
+    "D": "22",
+    "E": "23"
+   },
+   "answer": "A",
+   "solution": "Each term is at most $99$, and $20 \\times 99 = 1980 < 2025$, so at least $21$ terms are needed. And $21$ terms work: twenty copies of $99$ plus $45$ gives $2079 - 54 = 2025$. The answer is $21$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 4,
+   "source": "2024 AMC 12B Problem 4",
+   "question": "Balls numbered $1, 2, 3, \\dots$ are deposited into $5$ bins labeled A, B, C, D, E following the bouncing pattern $$A, B, C, D, E, D, C, B, A, B, C, D, E, D, C, B, A, \\dots$$ (one ball per bin, in numerical order). Which bin receives ball number $68$?",
+   "choices": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D",
+    "E": "E"
+   },
+   "answer": "D",
+   "solution": "The pattern has period $8$: $A,B,C,D,E,D,C,B$. Since $68 = 8 \\cdot 8 + 4$, ball 68 lands in the 4th position of the cycle, bin $D$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 5,
+   "source": "2023 AMC 12A Problem 5",
+   "question": "A standard $6$-sided die is rolled $3$ times. What is the probability that the sum of the three numbers rolled is exactly $10$?",
+   "choices": {
+    "A": "$\\frac{1}{9}$",
+    "B": "$\\frac{1}{8}$",
+    "C": "$\\frac{1}{7}$",
+    "D": "$\\frac{1}{6}$",
+    "E": "$\\frac{5}{36}$"
+   },
+   "answer": "B",
+   "solution": "There are $6^3=216$ equally likely outcomes. The number of ordered triples summing to 10 is $27$ (coefficient of $x^{10}$ in $(x+\\cdots+x^6)^3$), giving $\\frac{27}{216}=\\frac18$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 6,
+   "source": "2023 AMC 12B Problem 6",
+   "question": "What is the sum of all the roots (counted with multiplicity) of $$P(x) = (x-1)^1 (x-2)^2 (x-3)^3 (x-4)^4 (x-5)^5?$$",
+   "choices": {
+    "A": "50",
+    "B": "55",
+    "C": "60",
+    "D": "45",
+    "E": "65"
+   },
+   "answer": "B",
+   "solution": "Each root $k$ occurs with multiplicity $k$, contributing $k \\cdot k = k^2$. The sum is $1+4+9+16+25=55$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 7,
+   "source": "2022 AMC 12A Problem 7",
+   "question": "A row of $5$ houses is to be painted, each house red, green, or blue, so that no two adjacent houses have the same color. In how many ways can this be done?",
+   "choices": {
+    "A": "36",
+    "B": "42",
+    "C": "48",
+    "D": "54",
+    "E": "96"
+   },
+   "answer": "C",
+   "solution": "The first house has $3$ choices, and each subsequent house has $2$ choices (anything but its neighbor): $3 \\cdot 2^4 = 48$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 8,
+   "source": "2022 AMC 12A Problem 8",
+   "question": "The infinite product $$\\sqrt[3]{7} \\cdot \\sqrt[3]{\\sqrt[3]{7}} \\cdot \\sqrt[3]{\\sqrt[3]{\\sqrt[3]{7}}} \\cdots$$ evaluates to a real number. What is that number?",
+   "choices": {
+    "A": "1",
+    "B": "\\sqrt[3]{7}",
+    "C": "\\sqrt[6]{7}",
+    "D": "\\sqrt{7}",
+    "E": "7"
+   },
+   "answer": "D",
+   "solution": "The product equals $7^{\\frac{1}{3}+\\frac{1}{9}+\\frac{1}{27}+\\cdots}$. The exponent is a geometric series with first term $\\frac{1}{3}$ and ratio $\\frac{1}{3}$, summing to $\\frac{1/3}{1-1/3} = \\frac{1}{2}$. Hence the product is $7^{1/2} = \\sqrt{7}$. The answer is $\\boxed{\\sqrt{7}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 9,
+   "source": "2021 AMC 12A Problem 9",
+   "question": "What is the value of $(1+2)(1+2^2)(1+2^4)(1+2^8)$?",
+   "choices": {
+    "A": "32767",
+    "B": "65535",
+    "C": "65536",
+    "D": "131071",
+    "E": "32768"
+   },
+   "answer": "B",
+   "solution": "Multiplying by $(2-1)=1$ telescopes: $(2-1)(2+1)(2^2+1)(2^4+1)(2^8+1) = 2^{16}-1 = 65535$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 10,
+   "source": "2015 AMC 12A Problem 10",
+   "question": "Integers $x$ and $y$ with $x>y>0$ satisfy $x+y+xy=624$. What is $x$?",
+   "choices": {
+    "A": "24",
+    "B": "34",
+    "C": "49",
+    "D": "104",
+    "E": "124"
+   },
+   "answer": "E",
+   "solution": "Adding $1$ to both sides, $(x+1)(y+1) = 625 = 5^4$. The factor pairs of $625$ are $(1,625)$, $(5,125)$, and $(25,25)$. The first gives $y=0$, which is not positive; the last gives $x=y$, contradicting $x>y$. So $x+1 = 125$ and $y+1 = 5$, giving $x = 124$, $y = 4$. Indeed $124+4+124\\cdot 4 = 624$. The answer is $\\boxed{124}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 11,
+   "source": "2017 AMC 12A Problem 11",
+   "question": "Ravi adds the degree measures of the interior angles of a convex polygon and arrives at a sum of $2170$. He then discovers that he forgot to include one angle. What is the degree measure of the forgotten angle?",
+   "choices": {
+    "A": "150",
+    "B": "160",
+    "C": "170",
+    "D": "175",
+    "E": "110"
+   },
+   "answer": "C",
+   "solution": "The sum of the interior angles of an $n$-gon is $(n-2)\\cdot 180$, so the true sum must be a multiple of $180$ that exceeds $2170$. The candidates are $2340, 2520, \\dots$, with forgotten angle $170, 350, \\dots$. Since the polygon is convex, each angle is less than $180$, so only $170$ works (from $n = 15$). The answer is $\\boxed{170}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 12,
+   "source": "2021 AMC 12A Problem 12",
+   "question": "All the roots of the polynomial $z^6-12z^5+Az^4+Bz^3+Cz^2+Dz+64$ are positive integers, possibly repeated. What is the value of $B$?",
+   "choices": {
+    "A": "-160",
+    "B": "-150",
+    "C": "160",
+    "D": "150",
+    "E": "-120"
+   },
+   "answer": "A",
+   "solution": "By Vieta's formulas, the six roots are positive integers with sum $12$ (the coefficient of $z^5$ is $-e_1=-12$) and product $64$ (the constant term is $(-1)^6 e_6 = 64$). Since $64=2^6$, every root is a power of $2$; write them as $2^{e_1},\\dots,2^{e_6}$ with $e_1+\\cdots+e_6=6$. If some $e_i \\ge 2$, then some $e_j = 0$, and replacing the pair $(e_i, 0)$ by $(e_i-1, 1)$ keeps the exponent sum fixed but strictly decreases the root sum, since $2^{e_i}+1 > 2^{e_i-1}+2$ for $e_i \\ge 2$. Hence the root sum is minimized only when all $e_i=1$, where it equals $6 \\cdot 2 = 12$ — exactly the required sum. So the roots are $2,2,2,2,2,2$ and the polynomial is $(z-2)^6$. The coefficient of $z^3$ is $B = -\\binom{6}{3} \\cdot 2^3 = -20 \\cdot 8 = -160$. The answer is $\\boxed{-160}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 13,
+   "source": "2019 AMC 12A Problem 13",
+   "question": "How many subsets of $\\{1,2,3,\\ldots,8\\}$ (including the empty set) contain no two consecutive integers?",
+   "choices": {
+    "A": "34",
+    "B": "55",
+    "C": "45",
+    "D": "64",
+    "E": "89"
+   },
+   "answer": "B",
+   "solution": "The count $f(n)$ for $\\{1,\\dots,n\\}$ satisfies $f(n)=f(n-1)+f(n-2)$ with $f(1)=2$, $f(2)=3$, giving $2,3,5,8,13,21,34,55$. So $f(8)=55$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 14,
+   "source": "2019 AMC 12B Problem 14",
+   "question": "How many positive integer divisors of $1{,}000{,}000 = 10^6$ are perfect squares?",
+   "choices": {
+    "A": "8",
+    "B": "12",
+    "C": "20",
+    "D": "25",
+    "E": "16"
+   },
+   "answer": "E",
+   "solution": "$10^6 = 2^6 \\cdot 5^6$. A divisor is a square exactly when both exponents are even: $4$ choices each ($0,2,4,6$), giving $4 \\cdot 4 = 16$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 15,
+   "source": "2018 AMC 12A Problem 15",
+   "question": "How many squares of all sizes, with sides along the grid lines, are contained in a $7 \\times 7$ grid of unit squares?",
+   "choices": {
+    "A": "91",
+    "B": "126",
+    "C": "140",
+    "D": "154",
+    "E": "168"
+   },
+   "answer": "C",
+   "solution": "The number of $k \\times k$ squares is $(8-k)^2$, so the total is $\\sum_{k=1}^{7}(8-k)^2 = 1^2+2^2+\\cdots+7^2 = 140$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 16,
+   "source": "2016 AMC 12B Problem 16",
+   "question": "In how many ways can $225$ be written as the sum of an increasing sequence of two or more consecutive positive integers?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "8",
+    "D": "9",
+    "E": "10"
+   },
+   "answer": "C",
+   "solution": "A sum of $k \\ge 2$ consecutive positive integers starting at $m \\ge 1$ equals $km + \\frac{k(k-1)}{2}$, so we need $225 - \\frac{k(k-1)}{2}$ to be a positive multiple of $k$. Checking $k = 2, 3, \\dots$ (we need $\\frac{k(k-1)}{2} < 225$, so $k \\le 21$), the valid lengths are $k = 2, 3, 5, 6, 9, 10, 15, 18$: for example $112+113$, $74+75+76$, and $4+5+\\cdots+21$ ($k=18$). That is $8$ ways. The answer is $\\boxed{8}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 17,
+   "source": "2013 AMC 12B Problem 17",
+   "question": "Let $a$, $b$, and $c$ be real numbers such that $$a+b+c=3 \\quad \\text{and} \\quad a^2+b^2+c^2=9.$$ What is the difference between the maximum and minimum possible values of $c$?",
+   "choices": {
+    "A": "4",
+    "B": "3",
+    "C": "5",
+    "D": "\\frac{9}{2}",
+    "E": "6"
+   },
+   "answer": "A",
+   "solution": "Given $c$, we need real $a, b$ with $a+b = 3-c$ and $a^2+b^2 = 9-c^2$. Such $a, b$ exist if and only if $2(a^2+b^2) \\ge (a+b)^2$, i.e. $2(9-c^2) \\ge (3-c)^2$, which simplifies to $3c^2 - 6c - 9 \\le 0$, or $(c-3)(c+1) \\le 0$. So $-1 \\le c \\le 3$, with equality attained: $c=3$ gives $a=b=0$, and $c=-1$ gives $a=b=2$. The difference is $3-(-1) = 4$. The answer is $\\boxed{4}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 18,
+   "source": "2017 AMC 12B Problem 18",
+   "question": "The diameter $\\overline{AB}$ of a circle of radius $3$ is extended past $B$ to a point $D$ with $BD=2$. A tangent from $D$ touches the circle at $T$. What is $DT$?",
+   "choices": {
+    "A": "$2\\sqrt3$",
+    "B": "4",
+    "C": "$3\\sqrt2$",
+    "D": "5",
+    "E": "$2\\sqrt6$"
+   },
+   "answer": "B",
+   "solution": "By the power of point $D$: $DT^2 = DB \\cdot DA = 2 \\cdot (2+6) = 16$, so $DT = 4$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 19,
+   "source": "2019 AMC 12A Problem 19",
+   "question": "In $\\triangle ABC$ with integer side lengths, $\\cos A = \\frac{3}{5}$, $\\cos B = \\frac{5}{13}$, and $\\cos C = \\frac{33}{65}$. What is the least possible perimeter of $\\triangle ABC$?",
+   "choices": {
+    "A": "36",
+    "B": "42",
+    "C": "48",
+    "D": "54",
+    "E": "60"
+   },
+   "answer": "B",
+   "solution": "By the Law of Sines, $a:b:c = \\sin A : \\sin B : \\sin C$. From the given cosines (all angles are angles of a triangle, so sines are positive), $\\sin A = \\frac{4}{5}$, $\\sin B = \\frac{12}{13}$, and $\\sin C = \\sqrt{1-(33/65)^2} = \\frac{56}{65}$. Thus $a:b:c = \\frac{4}{5} : \\frac{12}{13} : \\frac{56}{65} = 52 : 60 : 56 = 13 : 15 : 14$. Since $\\gcd(13,14,15) = 1$, the smallest integer-sided triangle is $13$-$14$-$15$, and indeed the Law of Cosines on this triangle gives exactly the stated cosines. The least perimeter is $13+14+15 = 42$. The answer is $\\boxed{42}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 20,
+   "source": "2016 AMC 12B Problem 20",
+   "question": "A set of teams held a round-robin tournament in which every team played every other team exactly once. A total of $45$ games were played. How many teams participated?",
+   "choices": {
+    "A": "10",
+    "B": "9",
+    "C": "11",
+    "D": "12",
+    "E": "8"
+   },
+   "answer": "A",
+   "solution": "$\\binom{n}{2}=45$ gives $n(n-1)=90$, so $n=10$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 21,
+   "source": "2020 AMC 12B Problem 21",
+   "question": "How many positive integers $n$ satisfy $$\\dfrac{n+500}{50} = \\lfloor \\sqrt{n} \\rfloor?$$ (Recall that $\\lfloor x \\rfloor$ is the greatest integer not exceeding $x$.)",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "C",
+   "solution": "Set $k = \\lfloor \\sqrt{n} \\rfloor$, so $n = 50k - 500$ and $k^2 \\le n < (k+1)^2$. The left inequality gives $k^2 - 50k + 500 \\le 0$, i.e. $25 - 5\\sqrt{5} \\le k \\le 25 + 5\\sqrt{5}$, so $14 \\le k \\le 36$. The right inequality gives $50k - 500 < k^2 + 2k + 1$, i.e. $k^2 - 48k + 501 > 0$, which holds for $k \\le 15$ or $k \\ge 33$ (the roots are $24 \\pm 5\\sqrt{3} \\approx 15.3$ and $32.7$). Intersecting, $k \\in \\{14, 15, 33, 34, 35, 36\\}$, giving the $6$ values $n = 200, 250, 1150, 1200, 1250, 1300$, each of which checks out. The answer is $\\boxed{6}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 22,
+   "source": "2018 AMC 12B Problem 22",
+   "question": "Consider polynomials $P(x)$ of degree at most $3$, each of whose coefficients is an element of $\\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}$. How many such polynomials satisfy $P(-1) = -7$?",
+   "choices": {
+    "A": "348",
+    "B": "336",
+    "C": "342",
+    "D": "354",
+    "E": "360"
+   },
+   "answer": "A",
+   "solution": "Write $P(x) = ax^3+bx^2+cx+d$ with $a,b,c,d \\in \\{0,\\dots,9\\}$. Then $P(-1) = (b+d) - (a+c) = -7$, so if $t = a+c$ we need $b+d = t-7$. The number of ordered pairs of digits summing to $s$ is $s+1$ for $0 \\le s \\le 9$ and $19-s$ for $10 \\le s \\le 18$. Summing over $t = 7, \\dots, 18$: $8\\cdot 1 + 9\\cdot 2 + 10\\cdot 3 + 9\\cdot 4 + 8\\cdot 5 + 7\\cdot 6 + 6\\cdot 7 + 5\\cdot 8 + 4\\cdot 9 + 3\\cdot 10 + 2\\cdot 9 + 1\\cdot 8 = 8+18+30+36+40+42+42+40+36+30+18+8 = 348$. The answer is $\\boxed{348}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 23,
+   "source": "2019 AMC 12B Problem 23",
+   "question": "How many sequences of $0$s and $1$s of length $15$ are there that begin with a $0$, end with a $0$, contain no two consecutive $0$s, and contain no three consecutive $1$s?",
+   "choices": {
+    "A": "18",
+    "B": "19",
+    "C": "22",
+    "D": "21",
+    "E": "24"
+   },
+   "answer": "D",
+   "solution": "Since no two $0$s are adjacent and the sequence starts and ends with $0$, the sequence is determined by the gaps of $1$s between consecutive $0$s, where each gap has size $1$ or $2$ (no three consecutive $1$s). If there are $k$ zeros, there are $k-1$ gaps, each of size $1$ or $2$, totaling $15 - k$ ones. Writing $g_i \\in \\{1,2\\}$, we need $g_1 + \\cdots + g_{k-1} = 15-k$. Letting $j$ be the number of gaps of size $2$: $j = (15-k) - (k-1) = 16 - 2k$, with $0 \\le j \\le k-1$, giving $k = 6, 7, 8$ with $j = 4, 2, 0$ respectively. The counts are $\\binom{5}{4} + \\binom{6}{2} + \\binom{7}{0} = 5 + 15 + 1 = 21$. The answer is $\\boxed{21}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 24,
+   "source": "2014 AMC 12B Problem 24",
+   "question": "The polynomial $x^3 - 6x^2 + 11x - 6$ has roots $r$, $s$, and $t$. What is $r^2+s^2+t^2$?",
+   "choices": {
+    "A": "10",
+    "B": "12",
+    "C": "16",
+    "D": "18",
+    "E": "14"
+   },
+   "answer": "E",
+   "solution": "By Vieta's, $r+s+t=6$ and $rs+rt+st=11$. Then $r^2+s^2+t^2 = 6^2 - 2\\cdot 11 = 36-22 = 14$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 25,
+   "source": "2013 AMC 12A Problem 25",
+   "question": "How many complex numbers $z$ satisfy $z^2 = \\overline{z}$, where $\\overline{z}$ denotes the complex conjugate of $z$?",
+   "choices": {
+    "A": "4",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "5"
+   },
+   "answer": "A",
+   "solution": "Write $z = re^{i\\theta}$. Then $r^2 e^{2i\\theta} = re^{-i\\theta}$. Either $r=0$ (giving $z=0$), or $r=1$ and $3\\theta \\equiv 0 \\pmod{2\\pi}$, giving $3$ roots on the unit circle. Total: $4$ numbers.",
+   "type": "multiple_choice",
+   "points": 6
+  }
+ ]
+}

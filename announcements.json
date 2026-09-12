@@ -1,0 +1,12 @@
+[
+  {
+    "date": "2026-09-07",
+    "title": "BPhO Round 1 is live",
+    "body": "BPhO Round 1 mock tests are now available under Physics — 10 questions, 60 minutes, calculator allowed, numeric answers with 2% tolerance."
+  },
+  {
+    "date": "2026-09-07",
+    "title": "LaTeX rendering overhaul",
+    "body": "Bare LaTeX in solutions (e.g. x^{3/8}) is now auto-wrapped server-side. If you still spot raw math text anywhere, please report it."
+  }
+]

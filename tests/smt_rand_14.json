@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_14",
+ "competition": "SMT — Geometry",
+ "category": "Math",
+ "title": "SMT — Geometry — Random Mock #14 · 2026-08-26 16:33",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2021 SMT Geometry Problem 1",
+   "question": "A paper rectangle ABCD hasAB = 8 and BC = 6. After corner B is folded over diagonal AC, what is BD?",
+   "choices": null,
+   "answer": "14",
+   "solution": "Answer: 14. A paper rectangle ABCD hasAB = 8 and BC = 6. After corner B is folded over diagonal AC, what is BD? Answer: 14 5 Solution: Use the law of cosines on ∆BCD , so BD = √ BC 2 +DC 2− 2(BC)(DC) cos(90◦− 2x) wherex = ∠DCA and ∠BCA = 90◦−x. Plugging in cos(90◦− 2x) = sin(2x) = 24 25,BD = 14 5 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2023 SMT Geometry Problem 2",
+   "question": "From B and E, altitudes BF and EG are drawn onto side AC. Compute CF CG− AF AG.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. From B and E, altitudes BF and EG are drawn onto side AC. Compute CF CG− AF AG. Geometry Test Solutions April 8, 2023 Answer: 2 Solution: Let ∠BAC = 3a and AB = x. Observe first that, by the angle bisector theorem, AD AC = DE EC , so AD = AC· DE EC = 5· 3 5 = 3. Then, △ADC is a 3-4-5 triangle, so ∠ADC = 90◦. Since AD bisects ∠BAE and is perpendicular to BE, we have that △BAE is isosceles, which gives us BD = 3 2 and AE =AB =x. Now we know that BF = x sin(3a), AF = x cos(3a), EG = x sin(a), and AG = x cos(a). Since BF is parallel to EG, CF CG = BF EG = x sin(3a) x sin(a) = 3− 4 sin2a, using the triple angle formula. Similarly, AF AG = x cos(3a) x cos(a) = 4 cos2a− 3. Then CF CG− AF AG = 3− 4 sin2a− 4 cos2a + 3 = 6− 4 = 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2020 SMT Geometry Problem 3",
+   "question": "Square ABCD has side length 4. Points P and Q are located on sides BC and CD, respectively, such that BP = DQ = 1. Let AQ intersect DP at point X. Compute the area of triangle P QX.",
+   "choices": null,
+   "answer": "45",
+   "solution": "Answer: 45. Square ABCD has side length 4. Points P andQ are located on sidesBC andCD, respectively, such thatBP =DQ = 1. Let AQ intersectDP at pointX. Compute the area of trianglePQX . Answer: 45 38 Solution: Notice that the desired area is [ PQD ]− [QDX]. By the standard area of a triangle formula, [PQD ] = 1 2· 1· 3 = 3",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2012 SMT Geometry Problem 4",
+   "question": "Let ABCD be a rectangle with area 2012. There exist points E on AB and F on CD such that DE = EF = F B. Diagonal AC intersects DE at X and EF at Y . Compute the area of triangle EXY .",
+   "choices": null,
+   "answer": "503",
+   "solution": "Answer: 503. Let ABCD be a rectangle with area 2012. There exist points E on AB and F on CD such that DE = EF = F B. Diagonal AC intersects DE at X and EF at Y . Compute the area of triangle EXY . Answer: 503 6 Solution: Let ( XY Z ) denote the area of triangle XY Z . After a bit of angle-chasing, we can use SAS congruence to prove that ∆DEF ∼= ∆BF E, so EB ∼= DF and therefore AE ∼= F C. If we draw altitudes from E and F onto CD and AB, respectively, we note that 2 AE = 2F C = DF = BE , so AE = 1 3 AB. Next, note that ∆AEX ∼ ∆CDX , so CX AX = CD AE = 3. Also, ∆CF Y ∼ ∆AEY , so CY AY = CF AE =",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2011 SMT Geometry Problem 5",
+   "question": "Let ABCD be a cyclic quadrilateral with AB = 6, BC = 12, CD = 3, and DA = 6. Let E,F be the intersection of lines AB and CD, lines AD and BC respectively. Find EF .",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10. Let ABCD be a cyclic quadrilateral with AB = 6, BC = 12, CD = 3, and DA = 6. Let E,F be the intersection of lines AB and CD, lines AD and BC respectively. Find EF . Answer: 10 √ 2 We have∆ADE∼∆ CBE , and their length ratio is AD : CB = 1 : 2. Let AE = p and DE = q. Then we haveAB =BE−AE = 2DE−AE = 2q−p andCD = 2p−q. Solving for p andq, we have p = 4 and q = 5. Similarly we have FC = 8 and FD = 10. Let ∠B =θ. Then ∠FDE =π−θ. Apply the Law of Cosines to ∆EBF to get EF 2 =BE 2 +BF 2− 2BE·BF· cosθ = 102 + 202− 2· 10· 20 cosθ = 500− 400 cosθ and to∆EDF to get EF 2 =DE 2 +DF 2 + 2·DE·DF cosθ = 52 + 102− 2· 5· 10 cosθ = 125 + 100 cosθ. Solving for EF 2, we get EF 2 = 200.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2019 SMT Geometry Problem 6",
+   "question": "Let the altitude of ∆ABC from A intersect the circumcircle of ∆ABC at D. Let E be a point on line AD such that E⁄= A and AD = DE. If AB = 13, BC = 14, and AC = 15, what is the area of quadrilateral BDCE ?",
+   "choices": null,
+   "answer": "441",
+   "solution": "Answer: 441. Let the altitude of ∆ABC from A intersect the circumcircle of ∆ABC at D. Let E be a point on line AD such that E⁄= A and AD = DE. If AB = 13, BC = 14, and AC = 15, what is the area of quadrilateral BDCE ? Answer: 441 4 Solution: Let AD intersect BC at X. From the Pythagorean Theorem, we have that 132−BX 2 = 15 2− (14−BX)2, so solving for BX yields BX = 5. This implies that CX = 14−BX = 9 andAX = 12. Next, note that since ABDC is cyclic, ∠BAX = ∠DCX and ∠ABX = ∠CDX so∆ABX∼∆ CDX . Then CD 13 = 9 12 =⇒ CD = 39 4 . Also, DX 5 = 9 12 =⇒ DX = 15 4 . By similar reasoning, ∆BDX∼∆ACX so BD 15 = 5 12 =⇒ BD = 25 4 . We also have that sin ∠BDE = sin ∠BDX = sin ∠ACX = 12 15 = 4 5 and sin ∠CDE = sin ∠CDX = sin ∠ABX = 12",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2013 SMT Geometry Problem 7",
+   "question": "ABCD is a square such that AB lies on the line y = x + 4 and points C and D lie on the graph of parabola y2 = x. Compute the sum of all possible areas of ABCD .",
+   "choices": null,
+   "answer": "68",
+   "solution": "Answer: 68. ABCD is a square such that AB lies on the line y =x + 4 and pointsC andD lie on the graph of parabola y2 =x. Compute the sum of all possible areas of ABCD . Answer: 68 Solution 1: First, shift the coordinate system so that the line goes through the origin and the parabola is now at x =y2 + 4. LetCD lie on the line y =x +b. The distance between lines AB andCD is therefore |b|√ 2, which can be proven by drawing 45-45-90 triangles. This distance is precisely AD =BC, so CD must also have this length. Hence, the y-coordinates of C and D must have diﬀerence |b| 2 , again by 45-45-90 triangles. Substituting x = y−b to x = y2 + 4 yields y2−y + (b + 4) = 0. The diﬀerence between two solutions is √ 1− 4(b + 4) = |b| 2 , which simpliﬁes to b2 + 16b + 60 = 0. The area of ABCD is 1 2b2, so we want 1 2 times the square of the possible values of b as our answer. We can compute this as 162−2·60 2 = 68 . Solution 2: Let C = (y2 1,y 1) and D = (y2 2,y 2), and assume without loss of generality that the points are positioned such that y1 < y2. Viewing this in the complex plane, we have B−C = (D−C)i, so B = (y2 1 +y1−y2,y 2 2−y2 1 +y1). Plugging this into y = x + 4 gives us y2 2− 2y2 1 +y2− 4 = 0. Since AB‖ DC, the slope of DC is 1, so y1−y2 y2 1−y2 2 = 1 =⇒ y1 +y2 = 1. Solving this system of equations gives us two pairs of solutions for ( y1,y 2), namely (−1, 2) and (−2, 3). These give √ 18 and √ 50 for CD, respectively, so the sum of all possible areas is 18 + 50 = 68 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2023 SMT Geometry Problem 8",
+   "question": "In triangle △ABC, point R lies on the perpendicular bisector of AC such that CA bisects ∠BAR. Line BR intersects AC at Q, and the circumcircle of △ARC intersects segment AB at P̸= A. If AP = 1, P B = 5, and AQ = 2, compute AR. Geometry Test April 8, 2023",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3+3. In triangle △ABC, point R lies on the perpendicular bisector of AC such that CA bisects ∠BAR. Line BR intersectsAC atQ, and the circumcircle of △ARC intersects segmentAB at P̸=A. If AP = 1,PB = 5, and AQ = 2, compute AR. Answer: 3+3 √ 129 16 Solution: Since R lies on the perpendicular bisector, ∠ACR = ∠RAC = ∠CAB and AB is parallel to RC. Thus,△AQB∼△CQR and QC = RC AB·AQ = RC 3 . Let AR =RC =x. Then as AB is parallel to RC and ARCP is cyclic, PC =AR =x and PR =AC = 2 +x",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2018 SMT Geometry Problem 9",
+   "question": "Let ABCD be a cyclic quadrilateral with 3 AB = 2AD and BC = CD. The diagonals AC and BD intersect at point X. Let E be a point on AD such that DE = AB and Y be the point of intersection of lines AC and BE. If the area of triangle ABY is 5, then what is the area of quadrilateral DEY X ?",
+   "choices": null,
+   "answer": "11",
+   "solution": "Answer: 11. Let ABCD be a cyclic quadrilateral with 3 AB = 2AD and BC =CD. The diagonals AC and BD intersect at point X. Let E be a point on AD such that DE =AB and Y be the point of intersection of lines AC andBE. If the area of triangle ABY is 5, then what is the area of quadrilateral DEYX ? Answer: 11 Solution 1: Let [A] denote the area of polygon A. Since BC = CD, ∠BDC = ∠DBC . Note that ∠BAC = ∠BDC since they are angles of the same segment and ∠CAD = ∠CBD for the same reason. Hence, ∠BAC = ∠CAD and thus AC is the angle bisector of ∠BAD. Therefore, BX XD = AB AD = 2",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2019 SMT Geometry Problem 10",
+   "question": "Let ABC be an acute triangle with BC = 48. Let M be the midpoint of BC, and let D and E be the feet of the altitudes drawn from B and C to AC and AB respectively. Let P be the intersection between the line through A parallel to BC and line DE. If AP = 10, compute the length of P M.",
+   "choices": null,
+   "answer": "26",
+   "solution": "Answer: 26. Let ABC be an acute triangle with BC = 48. Let M be the midpoint of BC, and let D and E be the feet of the altitudes drawn from B and C to AC and AB respectively. Let P be the intersection between the line through A parallel to BC and line DE. If AP = 10, compute the length of PM . Answer: 26 Solution: Let H be the intersection of BD and CE, or in other words, the orthocenter of∆ABC. First, we show that ADHE is cyclic. Note that ∠HBC = 90◦− ∠ACB and ∠HCB = 90◦− ∠ABC, so ∠DHE = ∠BHC = 180− ∠HBC− ∠HCB = ∠ACB + ∠ABC It follows that ∠DHE + ∠BAC = 180◦, as desired. SMT 2019 Geometry Test Solutions March 2, 2019 Furthermore, we have that ∠ADH = 90◦, so AH is the diameter of the circumcircle of ADHE . But AP||BC and AH⊥ BC, so ∠PAH = 90◦. It follows that PA is tangent to the circumcircle of ADHE . Then by Power of a Point, PA 2 = (PD )(PE ). Next, we have that ∠BDC = 90◦ = ∠BEC , so BCDE is cyclic. Since M is the midpoint of BC, the circumcenter of the BCDE is M. Then if r is the radius of that circumcircle of BCDE , by Power of a Point, ( PD )(PE ) = ( PM −r)(PM +r) = PM 2−r2. Since r = BC 2 = 24, we can combine our results to get PA 2 =PM 2−r2 =⇒ PM = √ 102 + 242 = 26",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

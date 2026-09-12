@@ -1,0 +1,161 @@
+{
+ "id": "aime_rand_15",
+ "competition": "AIME",
+ "category": "Math",
+ "title": "AIME — Random Mock #15 · 2026-08-27 08:50",
+ "instructions": "15 questions · 180 minutes · No calculator. Answers are integers from 000 to 999. 15 points total.",
+ "time_limit_min": 180,
+ "total_points": 15,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2022 AIME I Problem 1",
+   "question": "Quadratic polynomials $P(x)$ and $Q(x)$ have leading coefficients $2$ and $-2,$ respectively. The graphs of both polynomials pass through the two points $(10,60)$ and $(16,57).$ Find $P(0) + Q(0).$",
+   "choices": null,
+   "answer": "130",
+   "solution": "Let $R(x)=P(x)+Q(x)$. The $x^2$ terms cancel, so $R$ is linear. $R(10)=60+60=120$ and $R(16)=57+57=114$, so the slope is $\\frac{114-120}{16-10}=-1$. Then $R(0) = 120 + 10 = 130$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2024 AIME I Problem 2",
+   "question": "There exist real numbers $x$ and $y$, both greater than 1, such that $\\log_x\\left(y^x\\right)=\\log_y\\left(x^{9y}\\right)=12$. Find $xy$.",
+   "choices": null,
+   "answer": "016",
+   "solution": "Using $\\log_b(a^c) = c\\log_b a$, the equations become $x\\log_x y = 12$ and $9y\\log_y x = 12$. Multiplying them gives $$9xy\\,(\\log_x y)(\\log_y x) = 144.$$ Since $(\\log_x y)(\\log_y x) = 1$, we get $9xy = 144$, so $xy = 16$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2014 AIME I Problem 3",
+   "question": "Find the number of rational numbers $r$, $0<r<1$, such that when $r$ is written as a fraction in lowest terms, the numerator and the denominator have a sum of 2024.",
+   "choices": null,
+   "answer": "440",
+   "solution": "Write $r = \\frac{k}{2024-k}$. This is in lowest terms exactly when $\\gcd(k, 2024) = 1$, and $0 < r < 1$ exactly when $1 \\le k \\le 1011$. Since $2024 = 2^3 \\cdot 11 \\cdot 23$, $$\\varphi(2024) = 2024\\left(1-\\tfrac12\\right)\\left(1-\\tfrac1{11}\\right)\\left(1-\\tfrac1{23}\\right) = 1012 \\cdot \\tfrac{10}{11} \\cdot \\tfrac{22}{23} = 880.$$ The $880$ integers in $\\{1, \\dots, 2023\\}$ coprime to $2024$ pair up as $k \\leftrightarrow 2024 - k$, so exactly half lie below $1012$. The answer is $\\frac{880}{2} = 440$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2019 AIME II Problem 4",
+   "question": "A fair four-sided die with faces $1, 2, 3, 4$ is rolled three times. The probability that the product of all three numbers rolled is a perfect square is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+   "choices": null,
+   "answer": "021",
+   "solution": "Track the parity of the exponents of 2 and 3 in the product (4 contributes two 2s). Brute-forcing the $4^3=64$ equally likely outcomes shows $20$ give a perfect square product, so $P = \\frac{20}{64} = \\frac{5}{16}$ and $m+n = 5+16 = 21$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2020 AIME I Problem 5",
+   "question": "Seven cards numbered $1$ through $7$ are to be lined up in a row. Find the number of arrangements of these seven cards where one of the cards can be removed leaving the remaining six cards in either ascending or descending order.",
+   "choices": null,
+   "answer": "074",
+   "solution": "Count arrangements one deletion away from ascending. Each is obtained from $1234567$ by removing one card ($7$ choices) and reinserting it in any of $7$ positions: $49$ operations. The identity arrangement arises from all $7$ choices of the moved card (overcount $6$), and each single adjacent transposition arises twice — moving the left card right or the right card left (overcount $6$). Hence $49 - 6 - 6 = 37$ ascending-type arrangements. By symmetry $37$ are descending-type. No arrangement of $7$ cards can be one deletion from both: an increasing subsequence of length $6$ and a decreasing subsequence of length $6$ would share at least $6+6-7 = 5$ cards, impossible since an increasing and a decreasing sequence share at most one card. Total: $37 + 37 = 74$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2011 AIME II Problem 6",
+   "question": "Define an ordered quadruple of integers $(a, b, c, d)$ as interesting if $1 \\le a<b<c<d \\le 12$, and $a+d>b+c$. How many interesting ordered quadruples are there?",
+   "choices": null,
+   "answer": "200",
+   "solution": "There are $\\binom{12}{4} = 495$ quadruples with $a<b<c<d$. The involution $(a,b,c,d) \\mapsto (13-d, 13-c, 13-b, 13-a)$ swaps the conditions $a+d > b+c$ and $a+d < b+c$, so these two cases are equally numerous. For $a+d = b+c$, set $p = b-a = d-c \\ge 1$ and $q = c-b \\ge 1$; then $d = a + 2p + q \\le 12$. The count is $\\sum_{p,q \\ge 1} \\max(0, 12-2p-q) = (9+8+\\cdots+1) + (7+6+\\cdots+1) + (5+\\cdots+1) + (3+2+1) + 1 = 45+28+15+6+1 = 95$. Therefore the answer is $\\frac{495-95}{2} = 200$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2020 AIME I Problem 7",
+   "question": "A club consisting of $9$ men and $10$ women needs to choose a nonempty committee from among its members so that the number of women on the committee is one more than the number of men on the committee. Let $N$ be the number of such committees. Find the remainder when $N$ is divided by $1000$.",
+   "choices": null,
+   "answer": "378",
+   "solution": "If $k$ women are chosen, we need $k-1$ men: $N = \\sum_{k=1}^{10} \\binom{10}{k}\\binom{9}{k-1} = \\binom{19}{9} = 92378$ (the sum counts, equivalently, choosing 9 people from 19 by a complementary-counting argument). The remainder is $378$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2015 AIME II Problem 8",
+   "question": "Let $a$ and $b$ be positive integers satisfying $\\frac{ab+1}{a+b} < \\frac{4}{3}$. The maximum possible value of $\\frac{a^3b^3+1}{a^3+b^3}$ is $\\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p+q$.",
+   "choices": null,
+   "answer": "081",
+   "solution": "The inequality rearranges to $(3a-4)(3b-4) < 7$. If $a=1$ or $b=1$, the expression equals $1$. Otherwise $a,b \\ge 2$ forces $3b-4 \\le 3$, i.e. $b=2$ (and symmetrically $a=2$). At $a=b=2$: $\\frac{64+1}{8+8} = \\frac{65}{16}$. So $p+q = 65+16 = 81$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2017 AIME I Problem 9",
+   "question": "Let $a_{9} = 9$, and for each positive integer $n > 9$ let $a_n = 100a_{n - 1} + n$. Find the least positive $n > 9$ such that $a_n$ is a multiple of $99$.",
+   "choices": null,
+   "answer": "035",
+   "solution": "Since $100 \\equiv 1 \\pmod{99}$, the recurrence gives $a_n \\equiv a_{n-1} + n \\pmod{99}$, so $$a_n \\equiv 9 + (10 + 11 + \\cdots + n) = \\frac{n(n+1)}{2} - 36 \\pmod{99}.$$ We need $n(n+1) \\equiv 72 \\pmod{198}$. Modulo $9$: $n(n+1) \\equiv 0$, so $n \\equiv 0$ or $8 \\pmod 9$. Modulo $11$: $n(n+1) \\equiv 6$, i.e. $(n-2)(n+3) \\equiv 0$, so $n \\equiv 2$ or $8 \\pmod{11}$. (Parity is automatic since $n(n+1)$ and $72$ are even.) Combining via CRT, $n \\equiv 8, 35, 63,$ or $90 \\pmod{99}$. The smallest such $n > 9$ is $n = 35$: indeed $\\frac{35 \\cdot 36}{2} - 36 = 594 = 6 \\cdot 99$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2020 AIME II Problem 10",
+   "question": "Find the sum of all positive integers $n$ such that when $1^3+2^3+3^3+\\cdots +n^3$ is divided by $n+6$, the remainder is $25$.",
+   "choices": null,
+   "answer": "322",
+   "solution": "The sum is $\\left(\\frac{n(n+1)}{2}\\right)^2$. Put $m = n+6 > 25$, so $n \\equiv -6$ and $n+1 \\equiv -5 \\pmod m$. If $m$ is odd, $\\frac{n(n+1)}{2} \\equiv \\frac{(-6)(-5)}{2} = 15$, so the remainder condition gives $m \\mid 225 - 25 = 200$; but $200$ has no odd divisor exceeding $25$. If $m = 2k$ is even, $\\frac{n(n+1)}{2} = \\frac{m(m-11)}{2} + 15 \\equiv k + 15 \\pmod{m}$ since $k(2k-11) \\equiv k \\pmod{2k}$. Then $(k+15)^2 \\equiv k^2 + 225 \\pmod{2k}$, and $k^2 \\equiv 0$ or $k \\pmod{2k}$ according as $k$ is even or odd. For $k$ even we need $m \\mid 200$ with $4 \\mid m$ and $m > 25$: $m = 40, 100, 200$, giving $n = 34, 94, 194$. For $k$ odd we need $2k \\mid k + 200$ with $k$ odd, forcing $k \\in \\{1, 5, 25\\}$, and direct checks fail (e.g. $k = 25$ gives residue $0$). Each of $n = 34, 94, 194$ checks out (e.g. $595^2 = 354025 = 8850 \\cdot 40 + 25$), and the sum is $34 + 94 + 194 = 322$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2024 AIME I Problem 11",
+   "question": "Each vertex of a regular hexagon is independently colored either red or blue with equal probability. The probability that the hexagon can then be rotated so that all of the blue vertices end up at positions where there had been red vertices is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+   "choices": null,
+   "answer": "047",
+   "solution": "Checking all $2^6 = 64$ colorings against the 5 nontrivial rotations: a coloring works iff some rotation maps every blue vertex onto a red one. Exactly $30$ of the $64$ colorings work, giving $\\frac{30}{64} = \\frac{15}{32}$ and $m+n = 15+32 = 47$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2016 AIME I Problem 12",
+   "question": "Find the least positive integer $m$ such that $m^2 - m + 17$ is a product of at least four not necessarily distinct primes.",
+   "choices": null,
+   "answer": "306",
+   "solution": "Factoring $m^2-m+17$ for $m = 1, 2, 3, \\dots$ (it is prime for $1 \\le m \\le 16$, and usually has few prime factors), the first value with at least four prime factors counted with multiplicity occurs at $m = 306$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2022 AIME I Problem 13",
+   "question": "Let $S$ be the set of all rational numbers that can be expressed as a repeating decimal in the form $0.\\overline{abc},$ where at least one of the digits $a,$ $b,$ or $c$ is nonzero. Let $N$ be the number of distinct numerators obtained when numbers in $S$ are written as fractions in lowest terms. Find $N$.",
+   "choices": null,
+   "answer": "660",
+   "solution": "$0.\\overline{abc} = \\frac{abc}{999}$ with $999 = 3^3 \\cdot 37$. Counting the distinct numerators of $\\frac{x}{999}$ in lowest terms for $x = 1, \\dots, 998$ gives $660$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2019 AIME II Problem 14",
+   "question": "Find the sum of all positive integers $n$ such that, given an unlimited supply of stamps of denominations $5,n,$ and $n+1$ cents, $131$ cents is the greatest postage that cannot be formed.",
+   "choices": null,
+   "answer": "101",
+   "solution": "Using exactly $k$ large stamps (of values $n$ and $n+1$) forms every integer in $[kn,\\ k(n+1)]$, covering $k+1$ consecutive residue classes mod $5$; adding 5-cent stamps then forms everything above the least formable value in each covered class. The greatest unformable value is therefore $\\max_r (m_r) - 5$, where $m_r$ is the least formable value in class $r \\ne 0$. Computing the $m_r$ by residue of $n$ mod $5$: if $n \\equiv 1$ or $2$, the maximum is $2n+2$, giving $g(n) = 2n-3$; if $n \\equiv 3$, $g(n) = 2n - 4$; if $n \\equiv 4$, the class $1$ first appears at $4n$, giving $g(n) = 4n - 5$; if $n \\equiv 0$, $g(n) = 4n - 1$. Setting these equal to $131$: $2n - 3 = 131$ gives $n = 67$ (consistent, $67 \\equiv 2$); $2n - 4 = 131$ has no integer solution; $4n - 5 = 131$ gives $n = 34$ (consistent, $34 \\equiv 4$); $4n - 1 = 131$ gives nothing valid. Check $n = 34$: $131$ is unformable ($131 - 34a - 35b$ is never a nonnegative multiple of $5$), while $132 = 3\\cdot34 + 30$, $133 = 2\\cdot34 + 35 + 30$, $134 = 34 + 2\\cdot35 + 30$, $135 = 3\\cdot 35 + 30$, $136 = 4 \\cdot 34$, and everything larger follows by adding 5's; similarly for $n = 67$: $132 = 67 + 65$, $133 = 68 + 65$, $134 = 2 \\cdot 67$, $135 = 27 \\cdot 5$, $136 = 2 \\cdot 68$. The sum is $34 + 67 = 101$.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2013 AIME I Problem 15",
+   "question": "Let $N$ be the number of ordered triples $(A,B,C)$ of integers satisfying the following conditions: (a) $0 \\le A < B < C \\le 79$; (b) there exist integers $a$, $b$, and $c$, and a prime $p$, where $0 \\le b < a < c < p$; (c) $p$ divides $A-a$, $B-b$, and $C-c$; and (d) each ordered triple $(A,B,C)$ and $(b,a,c)$ forms an arithmetic sequence. Find $N$.",
+   "choices": null,
+   "answer": "169",
+   "solution": "Write $(A,B,C) = (B-D, B, B+D)$ and $(b,a,c) = (a-d, a, a+d)$. Condition (c) forces $p \\mid (a-A)$ with the common differences matching mod $p$. Exhaustive enumeration over $B$, $D$, primes $p \\le 79$, and $a, d$ gives exactly $169$ such triples. (The same enumeration with bound $99$ reproduces the known answer $272$.)",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

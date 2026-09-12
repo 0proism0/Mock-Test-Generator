@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_26",
+ "competition": "SMT — Discrete",
+ "category": "Math",
+ "title": "SMT — Discrete — Random Mock #26 · 2026-08-27 08:50",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2018 SMT Discrete Problem 1",
+   "question": "A number is formed using the digits {2, 0, 1, 8}, using all 4 digits exactly once. Note that 0218 = 218 is a valid number that can be formed. What is the probability that the resulting number is strictly greater than 2018?",
+   "choices": null,
+   "answer": "11",
+   "solution": "Answer: 11. A number is formed using the digits {2, 0, 1, 8}, using all 4 digits exactly once. Note that 0218 = 218 is a valid number that can be formed. What is the probability that the resulting number is strictly greater than 2018? Answer: 11 24 Solution: There are 4! = 24 total possible permutations of the digits {2, 0, 1, 8}. Next, we count the number of cases where the permutation is greater than 2018. When the leftmost digit is an 8, the permutation must be greater than 2018, and there are 3! = 6 such per- mutations. When the leftmost digit is a 2, the permutation is not greater than 2018 only when the permutation is 2018 itself, since 0 < 1 < 8. In this case, there are 3! − 1 = 5 such permutations. Because all other permutations of the digits have a thousands digit which is less than 2, the desired probability is 6+5 24 = 11 24 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2018 SMT Discrete Problem 2",
+   "question": "Let S(n) denote the sum of the digits of the integer n. If S(n) = 2018, what is the smallest possible value S(n + 1) can be?",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Let S(n) denote the sum of the digits of the integer n. If S(n) = 2018, what is the smallest possible value S(n + 1) can be? Answer: 3 Solution: To minimize S(n + 1), when we add 1 to n, we should change as many digits possible from 9 to 0 due to the carry. For example, if we have n = 199, adding 1 gives us n + 1 = 200, changing 2 nines to zeros. Since 2018 = 224 · 9 + 2, we can let n be a number starting with the digit 2 followed by 224 nines. Then adding 1 to n gives us the digit 3 followed by 224 zeros. Hence, S(n + 1) = 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2023 SMT Discrete Problem 3",
+   "question": "How many trailing zeros does the value 300· 305· 310··· 1090· 1095· 1100 end with?",
+   "choices": null,
+   "answer": "161",
+   "solution": "Answer: 161. How many trailing zeros does the value 300· 305· 310··· 1090· 1095· 1100 end with? Answer: 161 Solution: Rewrite the expression as 300· 305· 310··· 1090· 1095· 1100 = 5161· 220! 59! . By Legendre’s formula, there are \u001659 5 \u0017 + \u001659 25 \u0017 = 13 Discrete Test Solutions April 8, 2023 factors of 5 in 59! and \u001659 2 \u0017 + \u001659 4 \u0017 + \u001659 8 \u0017 + \u001659 16 \u0017 + \u001659 32 \u0017 = 54 factors of 2 in 59!. Morever, there are \u0016220 5 \u0017 + \u0016220 25 \u0017 + \u0016220 125 \u0017 = 53 factors of 5 in 220! and \u0016220 2 \u0017 + \u0016220 4 \u0017 + \u0016220 8 \u0017 + \u0016220 16 \u0017 + \u0016220 32 \u0017 + \u0016220 64 \u0017 + \u0016220 128 \u0017 = 215 factors of 2 in 220!. Thus there are 161 + 53− 13 = 201 factors of 5 in the product and 215− 54 = 161 factors of 2 in the product. Since 161 < 201, it follows the answer is 161 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2018 SMT Discrete Problem 4",
+   "question": "One of the six digits in the expression 435 · 605 can be changed so that the product is a perfect square N 2. Compute N.",
+   "choices": null,
+   "answer": "495",
+   "solution": "Answer: 495. One of the six digits in the expression 435 · 605 can be changed so that the product is a perfect square N 2. Compute N. Answer: 495 Solution: We ﬁrst factorize 435 = 3· 5· 29 and 605 = 5· 112. First, suppose that we change 605. In this case, we could change it to be of the form (3 · 5· 29)k2 for some positive integer k. If k = 1, we clearly cannot change 605 to 435 by only modifying a single digit, and if k≥ 2, then this number would have more than 4 digits. SMT 2018 Discrete Math Test Solutions February 17, 2018 Therefore, we must change 435 so that it is of the form 5 k2. It must be divisible by 5, so the last digit must be 0 or 5. If we change the last digit to a 0, then we have 430 = 5 k2 =⇒ k2 = 86, which is not a perfect square. Therefore, the last digit must remain a 5, which also implies that k must be odd. Computing 5 k2 for small odd values of k gives us the three digit numbers 125, 245, 405, 605, and 845. The only number that can be formed by changing a single digit of 435 is 405 = 3 4· 5, so we have N 2 = 405· 605 = 34· 52· 112. Taking the square root gives us the answer N = 32· 5· 11 = 495 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2020 SMT Discrete Problem 5",
+   "question": "Find the smallest integer value of n such that 222...2 | {z } n 2’s ≥ 16161616 .",
+   "choices": null,
+   "answer": "7",
+   "solution": "Answer: 7. Find the smallest integer value of n such that 222...2 |{z} n 2’s ≥ 16161616 . Answer: 7 Solution: The natural ﬁrst step is to start by taking the base-2 logarithm of the right hand side: log2 ( 16161616 ) = 4· 161616 . We can do this again: log2 ( 4· 161616 ) = log2 4 + log2 ( 161616 ) = 2 + 4· 1616. Note that 2 + 4· 1616 = 2 + 4· 264 = 2 + 266. On the other hand, 2222 = 216< 2 + 266< 2216 = 22222 . Hence 222222 < 16161616 < 2222222 , and the answer is n = 7.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2018 SMT Discrete Problem 6",
+   "question": "Elizabeth is at a candy store buying jelly beans. Elizabeth begins with 0 jellybeans. With each scoop, she can increase her jellybean count to the next largest multiple of 30, 70 or 110. (For example, her next scoop after 70 can increase her jellybean count to 90, 110, or 140). What is the smallest number of jellybeans Elizabeth can collect in more than 100 diﬀerent ways?",
+   "choices": null,
+   "answer": "210",
+   "solution": "Answer: 210. Elizabeth is at a candy store buying jelly beans. Elizabeth begins with 0 jellybeans. With each scoop, she can increase her jellybean count to the next largest multiple of 30, 70 or 110. (For example, her next scoop after 70 can increase her jellybean count to 90, 110, or 140). What is the smallest number of jellybeans Elizabeth can collect in more than 100 diﬀerent ways? Answer: 210 Solution: Let J(n) be the number of diﬀerent ways to collectn jellybeans. Note that J(30k) is the sum of all J(n) where 30( k− 1)≤ n < 30k. A similar thing is true for J(70k) and J(110k). We can then compute the following values for J(n): J(0) = 1 J(30) = 1 J(60) = 1 J(70) = J(0) + J(30) + J(60) = 3 J(90) = J(60) + J(70) = 4 J(110) = J(0) + J(30) + J(60) + J(70) + J(90) = 10 J(120) = J(90) + J(110) = 14 J(140) = J(70) + J(90) + J(110) + J(120) = 31 J(150) = J(120) + J(140) = 45 J(180) = J(150) = 45 J(210) = J(140) + J(150) + J(180) > 100 SMT 2018 Discrete Math Test Solutions February 17, 2018 The smallest number is thus 210 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2020 SMT Discrete Problem 7",
+   "question": "A rook is on a chess board with 8 rows and 8 columns. The rows are numbered 1, 2, . . ., 8 and the columns are lettered a, b, . . ., h. The rook begins at a1 (the square in both row 1 and column a). Every minute, the rook randomly moves to a diﬀerent square either in the same row or the same column. The rook continues to move until it arrives a square in either row 8 or column h. After inﬁnite time, what is the probability the rook ends at a8?",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. A rook is on a chess board with 8 rows and 8 columns. The rows are numbered 1, 2, ... , 8 and the columns are lettered a, b, ... , h. The rook begins at a1 (the square in both row 1 and column a). Every minute, the rook randomly moves to a diﬀerent square either in the same row or the same column. The rook continues to move until it arrives a square in either row 8 or column h. After inﬁnite time, what is the probability the rook ends at a8? Answer: 1 6 Solution: Observe that there are are a total of 14 possible squares that the rook can end at as the rook can never reach h8. By symmetry, if the rook is at square xY where x represents a column from a to g and Y represents a row from 1 to 7, Rook has equal probability at x8 and hY. We will denote this probability as x. Similarly, the rook has an equal probability of ending at each of the other 12 reachable squares in column h or row 8. We will denote this probability as y. This gives us the equation 2 x + 12y = 1. Furthermore, note that x is the probability that the rook ends at a8 when the rook starts at a1. Now consider the probability that the rook ends at a8 after the ﬁrst move. The rook has 14 possible ﬁrst moves (which can be split into 4 cases): (a) The rook moves directly to a8 and stops. This occurs with probability 1",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2022 SMT Discrete Problem 8",
+   "question": "Given that 20 22 + 1 has exactly 4 prime divisors p1 < p 2 < p 3 < p 4, determine p1 + p2.",
+   "choices": null,
+   "answer": "490",
+   "solution": "Answer: 490. Given that 20 22 + 1 has exactly 4 prime divisors p1 < p2 < p3 < p4, determine p1 + p2. Answer: 490 Solution: Suppose that p divides 2022 + 1. Then, since 20 22≡− 1 mod p it must follow that 2044≡ 1 mod p. Let k be the minimal positive integer such that 20 k≡ 1 mod p. Then, as k| 44 and k ∤ 22, it follows that either k = 44 or k = 4. As 20 p−1≡ 1 mod p for any p by Fermat’s Little Theorem, the next claim is that 44 | p− 1 if we are in the first case. Indeed, suppose not. Then, write p− 1 = 44k + r, with 0 < r < 44. We have that 20r≡ 1 mod p, but this is impossible as k = 44 is minimal. We may test to see that 20 22≡− 1 mod 89: since 89 · 23 = 2047 and 89 · 7 = 623 we have 244≡ 20484≡ 1 mod 89 and 5 22≡ 25· (625)5≡ 100· 8≡ 88 mod 89. Hence, 20 22≡− 1 mod 89 as desired. Now, suppose that 20 4 ≡ 1 mod p. This implies that 20 4− 1 = 3 · 7· 19· 401≡ 0 mod p. Note that 3 , 7, 19 =±1 mod 20 so 20 22 + 1≡ 2modany of them. However, we may check that 2022 = (−1)11≡− 1 mod 401. So, to finish off, we show that there are no other 44 | p− 1 with p < 401 and 20 22≡− 1 mod p. By divisibility considerations, we end up with having to check that 20 22̸≡− 1 mod{353, 397}. SMT 2022 Discrete Test Solutions April 16–17, 2022 Let’s handle 397 first. Note that 20 22 = 3 11 = 243· 243· 3 = 154 2· 3̸≡− 1 mod 397. One way of showing the last inequivalence is noting that 3 −1 = 2·397−1 3 = 265 and showing that 1542̸≡ 132 mod 397. Now we deal with 353. Note that 2 44 = 24· (−35)4 = 704 = 49002 = 422≡− 1 mod 353. Hence, it suffices to show that 5 22̸≡ 1 mod 353. We may write 5 22− 1 = (511− 1)(511 + 1), but since 511≡ (−81)2· 125≡ 5· 4052≡ 5· 522̸≡ 1,−1 mod 353, we are done. Therefore, our answer is indeed 89 + 401 = 490 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2022 SMT Discrete Problem 9",
+   "question": "For any positive integer n, let f(n) be the maximum number of groups formed by a total of n people such that the following holds: every group consists of an even number of members, and every two groups share an odd number of members. Compute P2022 n=1 f(n) mod 1000.",
+   "choices": null,
+   "answer": "242",
+   "solution": "Answer: 242. For any positive integer n, let f(n) be the maximum number of groups formed by a total of n people such that the following holds: every group consists of an even number of members, and every two groups share an odd number of members. Compute P2022 n=1 f(n) mod 1000. Answer: 242 Solution: For simplicity, we may translate the problem into the following form. For positive integer n, f(n) is the maximum number m for which one can find a collection of m subsets C1, . . . , Cm⊆{ 1, . . . , n} such that Ci contains an even number of elements for 1 ≤ i≤ n, and Ci∩ Cj contains an odd number of elements for 1 ≤ i̸= j≤ n. We prove that f(2k) = f(2k− 1) = 2k− 1 for any positive integer k. Clearly f(2k)≥ f(2k− 1) because any collection of subsets of {1, . . . ,2k− 1} is also a collection of subsets of {1, . . . ,2k}. Hence it suffices to show that f(2k− 1)≥ 2k− 1, and f(2k)≤ 2k− 1. To show that f(2k− 1)≥ 2k− 1, it suffices to construct 2 k− 1 subsets such that the conditions hold. Let Ci ={i, 2k− 1} for 1 ≤ i≤ 2k− 2 and C2k−1 ={1, . . . ,2k− 2}. These subsets satisfying the conditions, so f(2k− 1)≥ 2k− 1. It remains to show that f(2k)≤ 2k− 1. Let n = 2 k. Suppose otherwise that there exists n subsets C1, . . . , Cn of{1, . . . , n} such that Ci contains an even number of elements for 1≤ i≤ n, and Ci∩ Cj contains an odd number of elements for 1≤ i̸= j≤ n. We will show a contradiction from here. We start with a few notations. For a finite set X, let|X| be the number of elements in X. For finite sets X, Y , let X∆Y be the symmetric difference ( X∪ Y )\\ (X∩ Y ). We have the following properties regarding symmetric difference ∆. • ∆ is commutative and associative. Therefore we may write ∆ t i=1Xi := X1∆··· ∆Xt. • For sets X and Y , X∆Y =∅ if and only if X = Y . • |X∆Y|≡| X| +|Y| (mod 2) for any finite sets X, Y . • X∩ (Y ∆Z) = (X∩ Y )∆(X∩ Z) for any finite sets X, Y, Z. Now we can continue our argument for showing a contradiction. First we show that there exists a nonempty collection of the subsets {Ci}i∈I where I ̸=∅ such that ∆ i∈I Ci =∅. For any I⊆{ 1, . . . , n}, note that |∆i∈I Ci|≡ X i∈I |Ci|≡ 0 (mod 2) . Hence there are a total of 2 n choices for I, while there are only 2 n−1 possibilities for ∆ i∈I Ci. Hence by the pigeonhole principle, there exists distinct subsets I1, I2 such that ∆ i∈I1Ci = ∆i∈I2Ci. Then we have for I = I1∆I2̸=∅, ∆i∈I Ci = ∆i∈I1∆I2Ci = (∆i∈I1Ci) ∆ (∆i∈I2Ci) =∅. SMT 2022 Discrete Test Solutions April 16–17, 2022 This shows the existence of the nonempty collection indexed by I. Now we argue that|I| is odd. Fix j∈ I. We have 0 =|∅| =|Cj∩ ∆i∈I Ci| =|∆i∈I Cj∩ Ci|≡| Cj| + X i∈I,i̸=j |Cj∩ Ci|≡| I|− 1 (mod 2) . Because n is even and |I| is odd, it follows that we can find j∈{ 1, . . . , n}\\ I. We repeat the same argument as above and get 0 =|∅| =|Cj∩ ∆i∈I Ci| =|∆i∈I Cj∩ Ci|≡ X i∈I |Cj∩ Ci|≡| I| (mod 2). This shows that|I| is even. However,|I| cannot be both odd and even, so we have a contradiction. Therefore we have f(2k) = f(2k− 1) = 2k− 1. Hence 2022X n=1 f(n) = 1011X k=1 (f(2k) + f(2k− 1)) = 2 1011X k=1 (2k− 1) = 2× 10112 = 2044242. It follows that the last 3 digits are 242 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2019 SMT Discrete Problem 10",
+   "question": "Let N be a positive integer that is a product of two primes p, q such that p ≤ q and for all a, a5N ≡ a mod 5N. Find the sum of p over all possible values N.",
+   "choices": null,
+   "answer": "59",
+   "solution": "Answer: 59. Let N be a positive integer that is a product of two primes p,q such that p≤q and for all a, a5N≡a mod 5N. Find the sum of p over all possible values N. Answer: 59 Solution: Note that 25pq = 2 (mod 5) = ⇒ 2pq = 2 (mod 5) = ⇒ 2pq−1 = 1 mod 5 So, we have that ord 5(2) must divide pq− 1 by the last equation. So, we know that p,q are odd. Now let α be a primitive root (mod p) and thenα5pq−1≡ 1 (mod p). So, p−1| 5pq−1, and p− 1| 5pq− 1− 5q(p− 1) = 5q− 1. We can similarly see that q− 1| 5p− 1. If p =q, then p = q = 5 but 6 125≡ 1 (mod 125), a contradiction. So, WLOG p < qand q≥ p + 2. So, 1< 5p− 1 q− 1 ≤ 5q− 1 p + 1 < 5 Then we do case work on 5p−1 q−1 is 2, 3 or 4. Cases: (a) (5p−1)/(q−1) = 2: Then 2q = 5p+1. But p−1|5q−1 = 5(5p+1)/2−1 = 25p/2+3/2 = 1/2(25p + 3). So p− 1 needs to divide (25p + 3)− (25p− 25) = 28. Hence, the options arep− 1 = 2, 4, 7, 14, 28. Since p is prime, havep = 3, 5, 29. Solving for prime q, we see that the only solutions are p = 5,q = 13 and p = 29,q = 73. (b) (5p−1)/(q−1) = 3 implies 3q = 5p+2. But p−1|5q−1 = 5(5p+2)/3−1 = 1/3(25p+7). So,p− 1 divides (25p + 7)− (25p− 25) = 32 giving options p− 1 = 2, 4, 8, 16, 32. Since p is prime, we have p = 3, 5, 17. Solving for prime q, we see that the only solution is p = 17,q = 29. (c) (5p−1)/(q−1) = 4 gives 4q = 5p+3. But p−1|5q−1 = 5(5p+3)/4−1 = 1/4(25p+11). So,p−1 also divides (25p+11)−(25p−25) = 36. So, p−1 can be 2, 3, 4, 6, 9, 12, 18, 36. Sincep is prime, we have p = 3, 5, 7, 13, 19, 37. Solving for prime q, we get p = 5,q = 7, p = 13,q = 17, p = 37,q = 47. We also have the condition that ord 5(2)|pq− 1, and since ord 5(2) = 4, we have that pq≡ 1 (mod 4). Also, we note that if N is 65 then 2 5N≡ 132 mod 5 N. The remaining values of p have the sum of 29 + 17 + 13 = 59",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

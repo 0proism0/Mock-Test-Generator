@@ -1,0 +1,111 @@
+{
+ "id": "mathcounts_rand_06",
+ "competition": "MATHCOUNTS — Team",
+ "category": "Math",
+ "title": "MATHCOUNTS — Team — Random Mock #6 · 2026-08-26 16:33",
+ "instructions": "10 questions · 20 minutes · No calculator. Answers are integers from 000 to 999. 10 points total.",
+ "time_limit_min": 20,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 1",
+   "question": "The value of one US dollar varies between a low of 1.33 and a high of dollars 1.39 Canadian dollars during a certain week. Michelle exchanges 1500 US dollars for Canadian dollars. What is the range of the possible amount of Canadian dollars she will receive after the exchange?",
+   "choices": null,
+   "answer": "31",
+   "solution": "Answer: 31 21.. [The official currency exchange symbols for the American dollar and Canadian dollar are USD and CAD, respectively.] The range is the maximum value minus the minimum value; therefore, 1500 USD × 1.39 CADUSD − 1500 USD × 1.33 CADUSD = 1500(1.39 − 1.33) CAD = 1500 × 0.06 CAD = 15 × 6 CAD = 90 CAD.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2026 MATHCOUNTS State Team Problem 2",
+   "question": "On Planet Mathian, the Mathinian folk measure time on an 8 “hour” 8 clock with 90 “minutes” per “hour”. How many degrees are in the measure of the smaller angle formed by the hands of this clock when the time is 2:24? 4",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5 22.. In 1 h = 90 min, the minute hand moves one full turn of 360°, for a rate of 360°/(90 min) = 4°/min. In 8 h, the hour hand moves one full turn of 360° , for a rate of 360°/(8 h) = 45°/h = 45°/(90 min) = 0.5°/min. Assuming 0° is straight up toward the “8” with angle increasing clockwise, at 2:00 the hour hand is at 2 h × 45°/h = 90° while the minute hand is at 0°; Then 24 min later, the hour hand is at 90° + 24 min × 0.5°/min = 102°, and the minute hand is at 24 min × 4°/min = 96°. Thus, the angular separation between the hands is |102° − 96°| = 6°.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2026 MATHCOUNTS State Team Problem 3",
+   "question": "If A, I, M and S are distinct digits such that I × AM = SAM and S is nonzero, what is the greatest possible value of the 4-digit number AIMS?",
+   "choices": null,
+   "answer": "343",
+   "solution": "Answer: 343 23.. S ≠ 0 implies I ≥ 2. Any odd I multiplied by 50 yields an integer ending in 50. Any integer I leaving a remainder of 1 when divided by 4 can be multiplied by 25 or 75 to yield an integer ending with 25 or 75, respectively. Then 6 times any even digit ends with that same digit, so 6 can be multiplied by 20, 40, 60, or 80 yielding a value that has the same last two digits as the number being multiplied by 6. Those are all the candidates. To maximize AIMS, we want the maximum A , which is 8 from 6 × 80 = 480, so M = 0, I = 6, and S = 4, resulting in AIMS = 8604.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 4",
+   "question": "If five standard, fair six-sided dice are rolled, in how many ways can the sum of the rolls be at least 26, if the order of the rolls matters?",
+   "choices": null,
+   "answer": "54",
+   "solution": "Answer: 54 (in2) 24.. Case Number of p ermutations 6-6-6-6-6 1 ×5! = 1 5! 6-6-6-6-(2,3,4,5) 4 ×5! = 20 4! 1! 6-6-6-5-5 1 ×5! = 10 3! 2! 6-6-6-5-(3,4) 2 × 5! = 40 3! 1! 1! 6-6-6-4-4 1 ×5! = 10 3! 2! 6-6-5-5-5 1 ×5! = 10 2! 3! 6-6-5-5-4 1 × 5! = 30 2! 2! 1! 6-5-5-5-5 1 ×5! = 5 1! 4! Total = 𝟏𝟏𝟐𝟐𝟔𝟔",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2026 MATHCOUNTS State Team Problem 5",
+   "question": "Let M, A, T and H have the following coordinates: M(0, 7), A(0, 12), T(3, 2), and H(10, 8). Point P is chosen at random on segment TH. What is the probability that the area of triangle MAP is greater than or equal to 15? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "7",
+   "solution": "Answer: 7 25.. Let MA = 12 − 7 = 5 along the 𝑦𝑦 -axis be the base of △MAP. Then to have an area of at least 15 for △MAP, a height of at least 6 is required, meaning the absolute value of the 𝑥𝑥 -coordinate of P must be at least 6. Because P lies on TH����, with T at (3; 2) and H at (10; 8) , choosing a point randomly on TH���� is equivalent to choosing randomly an 𝑥𝑥 -coordinate in the interval 3 ≤ 𝑥𝑥 ≤ 10, with total length of 10 − 3 = 7 but only 6 ≤ 𝑥𝑥 ≤ 10, with length 10 − 6 = 4, satisfies the triangle area requirements, so the probability of such is 𝟒𝟒𝟐𝟐 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2026 MATHCOUNTS State Team Problem 6",
+   "question": "Mrs. Gemma Tree has a window in her house in the shape of an equilateral triangle. The height of the window is 48 inches. She has a window shade that rises from the bottom of the window upward. When the height of the shade is h inches, the total area covered by the shade is given by the formula A = ( ph 2 + qh) square inches, for h ranging from 0 to 48. h What is the value of pq?",
+   "choices": null,
+   "answer": "45",
+   "solution": "Answer: 45 26.. The altitude being 48 in means each side is 2√3 × 48 in = 32√3 in and the area of the window is 768√3 in². When 0 < ℎ < 48, the shaded region is a trapezoid of height ℎ in, lower base length 32√3 in, and upper base length 32√3 �1 − ℎ48� in (based on taking advantage of proportions of similar shapes and of complementarity). The area of a trapezoid is the product of the height and the average of the base lengths, thus 32√3�1 − ℎ96� ℎ in²= �− √33 ℎ 2 + 32√3� in2 , so 𝑝𝑝 = − √33 , 𝑞𝑞 = 32√3, and 𝑝𝑝𝑞𝑞 = −32.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2026 MATHCOUNTS State Team Problem 7",
+   "question": "A positive integer n has 18 positive integer divisors. What is the greatest possible number of positive integer divisors that n2 could have?",
+   "choices": null,
+   "answer": "14",
+   "solution": "Answer: 14 27.. The prime factorization of 18 is 2 × 3 × 3, so a positive integer with exactly 18 positive divisors must have 1, 2, or 3 distinct prime divisors in a total of 4 forms: 𝑝𝑝¹⁷ whose square is 𝑝𝑝³⁴ that has 34 + 1 = 35 divisors; 𝑝𝑝⁸𝑞𝑞 whose square is 𝑝𝑝¹⁶𝑞𝑞² that has (16 + 1)(2 + 1) = 51 divisors; 𝑝𝑝⁵𝑞𝑞² whose square is 𝑝𝑝¹⁰𝑞𝑞⁴ that has (10 + 1)(4 + 1) = 55 divisors; 𝑝𝑝²𝑞𝑞²𝑟𝑟 whose square is 𝑝𝑝⁴𝑞𝑞⁴𝑟𝑟² that has (4 + 1)(4 + 1) (2 + 1) = 75divisors. The greatest count of factors is 75.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2026 MATHCOUNTS State Team Problem 8",
+   "question": "A circle is centered at point C with coordinates (11, 4) and passes through point D with coordinates (17, 10). The line y = x − 1 splits the circle into two regions. What is the area of the smaller region? Express your answer as a decimal to the nearest tenth.",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5 (packs) 28.. The figure shows the given points C and D as well the portion, notated as KM�����, of the M given line that is on or interior to the circle. A circle with center C (11; 4) passing L D through D(17; 10) has radius �(17 − 11)2 + (10 − 4)2 = √62 + 62= 6√2. There is K C no further need of D. Let L be the point on the given line that is closest to C; CL���� ⊥ KM�����. The shortest distance between the circle center and the line 𝑥𝑥 − 𝑦𝑦 − 1 = 0 is given by CL = � 11−4−1�12 +(−1)2� = 6√2= 3√2, with L being at (−3; 3) relative to C, thus at L (8; 7). CKL and CML are congruent right triangles with common leg CL being ½ of the length of the respective hypotenuses CK and CM (both of which are radii of circle C). That means that the sides of both triangles CKL and CML have length ratios in increasing order of 1: √3: 2, which means angle measures of 30° -60°-90°, so m∠KCM = m∠KCL + m∠LCD = 60° + 60° = 120°. That means that the area of sector KCM is 1/3 the area of the whole circle, which, in turn, means the desired area, the area of the smaller segment of circle C formed by line segment KM, is the area of the sector KCM minus the area of triangle KCM. The area enclosed by the circle is π �6√2�2 = 72π, 1/3 of which is 24π. We know that CL = 3√2, KL = LM = √3 CL = 3√6, and KM = KL + LM = 6√6, so the area of KCM is �3√2��6√6� = 9√12 = 2 18√3. Therefore, the desired area is 24π − 18√3 = 44.221…, which rounds to the nearest tenth as 44.2. 2026 STATE COMPETITION Solutions",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 9",
+   "question": "A sequence is said to be non-decreasing when each term is greater than or equal quences to the term before it. For example, 4,4,4,5,6 is non-decreasing, but 4,4,4,3,5,6 is not because 3 is less than 4, and 3 comes after 4 in the sequence. How many non-decreasing sequences of positive integers with length 2026 terms start with 1 and end with 3?",
+   "choices": null,
+   "answer": "210",
+   "solution": "Answer: 210 29.. We have a finite sequence consisting of a 1 followed by a subsequence of a nonnegative integer 𝑛𝑛 count of terms each of which is a 1 , followed by a subsequence of a nonnegative integer 𝑚𝑚 count of terms each of which is a 2, followed by a subsequence of a nonnegative integer 2024 − 𝑛𝑛 − 𝑚𝑚 count of terms each of which is a 3, followed by a 3. Thus, 0 ≤ min(𝑚𝑚, 𝑛𝑛) ≤ max(𝑚𝑚, 𝑛𝑛) ≤ 𝑛𝑛 + 𝑚𝑚 ≤ 2024 in order to be meaningful and totals 1 + 𝑛𝑛 + 𝑚𝑚 + (2024 − 𝑛𝑛 − 𝑚𝑚 ) + 1 = 2026 terms in the sequence, as required by the question. We now focus on the middle 2024 terms because those are the only ones that can change to produce a different sequence—the term at each end is fixed in value. Let’s put a vertical boundary bar immediately to the right of the latest term with value 1 in the full 2026- term sequence and another such bar immediately to the left of the earlie st term with value 3. The two bars will be contiguous if there are no terms with value 2. A bar will be at the far left end of the subsequence of the middle 2024 terms if there are no 1s in the full sequence except the fixed initial 1, and, similarly, a bar will be at the far righ t end of the subsequence of the middle 2024 terms if there are no 3s in the full sequence except the fixed initial 3. Moving a bar to another location means the sequence has changed, which counts as a distinct sequence. In essence, we have 2024 slots for numbers (not counting the fixed number values at each end) and 2 slots for boundary bars—with all 1s to the left of the leftmost bar, all 2s between the two bars, and all 3s to the right of the rightmost bar. One boundary bar can go in any of the 2026 slots and the other boundary bar can go in any of the remaining 2025 slots; however, swapping the two bars does not change the sequence, so we are double- counting, which we need to remedy. Therefore, the count of distinct sequences is 2026 × 20252 = 𝟐𝟐 𝟎𝟎𝟐𝟐𝟏𝟏 𝟑𝟑𝟐𝟐𝟐𝟐.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2026 MATHCOUNTS State Team Problem 10",
+   "question": "How many ordered pairs of two-digit positive integers (a, b) are there such that pairs gcd(30, a, b) × lcm(30, a, b) = 30ab?",
+   "choices": null,
+   "answer": "388",
+   "solution": "Answer: 388 (integers) 30.. For all positive integers 𝑚𝑚 and 𝑛𝑛, gcd(𝑚𝑚, 𝑛𝑛) ⋅ lcm(𝑚𝑚, 𝑛𝑛) = 𝑚𝑚𝑛𝑛 , so it i s reasonable to ask if the same concept works upon bring ing in a third positive integer 𝑙𝑙 : gcd(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) ⋅ lcm(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) = 𝑙𝑙𝑚𝑚𝑛𝑛 ? No, that typically does not work—let’s see why not, and what is the most general case that will work for three input values. Let’s focus on a n arbitrary prime factor 𝑝𝑝 , and say that 𝑙𝑙 has 𝑥𝑥 factors of 𝑝𝑝 (that is, 𝑝𝑝 𝑥𝑥 divides 𝑙𝑙 but 𝑝𝑝 𝑥𝑥+1 does not), 𝑚𝑚 has 𝑦𝑦 factors of 𝑝𝑝 , and 𝑛𝑛 has 𝑧𝑧 factors of 𝑝𝑝, with 𝑥𝑥 , 𝑦𝑦, and 𝑧𝑧 being nonnegative integers. Then gcd(𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝 min( 𝑦𝑦, 𝑧𝑧) and lcm(𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝max(𝑦𝑦, 𝑧𝑧) , so the product of the gcd and lcm has min(𝑦𝑦, 𝑧𝑧) + max(𝑦𝑦, 𝑧𝑧) = 𝑦𝑦 + 𝑧𝑧 factors of 𝑝𝑝, which is the number of factors of 𝑝𝑝 in 𝑚𝑚𝑛𝑛—this always works when two values are being processed. Going to three values, gcd(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝 min( 𝑥𝑥, 𝑦𝑦, 𝑧𝑧) and lcm(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝 max(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) , so the product of the gcd and lcm has min(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) + max(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) factors of 𝑝𝑝, while the product 𝑙𝑙 𝑚𝑚𝑛𝑛 has 𝑥𝑥 + 𝑦𝑦 + 𝑧𝑧 factors of 𝑝𝑝—for the two sums to be equal , the middle value 𝑥𝑥 + 𝑦𝑦 + 𝑧𝑧 − (min(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) + max(𝑥𝑥, 𝑦𝑦, 𝑧𝑧)) must be 0, which then requires the minimum value to be 0; in other words, at most one of 𝑥𝑥 , 𝑦𝑦, and 𝑧𝑧 can be nonzero, so 𝑝𝑝 can divide at most one of 𝑙𝑙 , 𝑚𝑚, and 𝑛𝑛—then, and only then, the formula given by the problem can work. Thus, for the given problem with the three values 30 , 𝑎𝑎, and 𝑏𝑏 , no two of those values can have a common divisor greater than 1, thus gcd(30, 𝑎𝑎) = gcd(30, 𝑏𝑏) = gcd(𝑎𝑎, 𝑏𝑏) = 1, which is referred to mathematically as “30, 𝑎𝑎 , and 𝑏𝑏 are mutually relatively prime”. Because 30 = 2 × 3 × 5, 𝑎𝑎 and 𝑏𝑏 must not have any of 2, 3, or 5 as factors. Now, 10 ≤ 𝑎𝑎 ≤ 99 and 10 ≤ 𝑏𝑏 ≤ 99 are given as restrictions. Thus, 𝑎𝑎 and 𝑏𝑏 are required to be [1] distinct 2 -digit primes or [2] the product of primes with the product having two digits. In c ase [1], there are 21 two-digit primes (25 primes under 100 minus 4 primes under 10), so 𝑎𝑎 can be any one of those 21 primes and 𝑏𝑏 can be any of the 20 remaining primes, so 21 × 20 = 420 choices. Case [2] must involve the square of a one- digit prime (other than 2, 3, or 5—meaning 7) or the product of a one-digit prime and a small two - digit prime, leaving only 7² = 49, 7 × 11 = 77, and 7 × 13 = 91 for one of 𝑎𝑎 and 𝑏𝑏, with one of the remaining two-digit primes for the other, thus another 2 × (21 + 20 + 20) = 122 choices. Therefore, the total count of choices is 420 + 122 = 542.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

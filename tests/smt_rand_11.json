@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_11",
+ "competition": "SMT — Discrete",
+ "category": "Math",
+ "title": "SMT — Discrete — Random Mock #11 · 2026-08-26 16:33",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2023 SMT Discrete Problem 1",
+   "question": "For all positive integers n > 1, let f(n) denote the largest odd proper divisor of n (a proper divisor of n is a positive divisor of n except for n itself). Given that N = 2023· 2320, compute f(N) f(f(f(N))) .",
+   "choices": null,
+   "answer": "25",
+   "solution": "Answer: 25. For all positive integers n > 1, let f(n) denote the largest odd proper divisor of n (a proper divisor of n is a positive divisor of n except for n itself). Given that N = 2023· 2320, compute f(N) f(f(f(N))) . Answer: 25 Solution: Let n > 1 be a positive integer. If n is even, note that f(n) = n 2v(n) , where v(n) is the largest integer k such that 2 k divides n. Otherwise, if n > 1 is odd, we have f(n) = n p(n), where p(n) is the smallest odd prime factor of n (which exists since n > 1 and n is odd). Using these observations, we find that f(N) = 523· 2320, f(f(N)) = 522· 2320, and f(f(f(N))) = 521· 2320. Our answer is 523· 2320 521· 2320 = 25 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2019 SMT Discrete Problem 2",
+   "question": "How many rational numbers can be written in the form a b such that a and b are relatively prime positive integers and the product of a and b is (25!)?",
+   "choices": null,
+   "answer": "512",
+   "solution": "Answer: 512. How many rational numbers can be written in the form a b such that a and b are relatively prime positive integers and the product of a and b is (25!)? Answer: 512 Solution: From gcd(a,b ) = 1, we note that for each prime p dividing 25!, either p|a or p|b. As a result, for each prime p dividing 25!, we have two ways to choose which of a or b it divides. Since there are nine primes less than 25, the answer is 2 9 = 512 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2022 SMT Discrete Problem 3",
+   "question": "Every day you go to the music practice rooms at a random time from 12AM to 8AM and practice for 3 hours, while your friend goes at a random time from 5AM to 11AM and practices for 1 hour (the block of practice time need not be contained in the given time range for the arrival). What is the probability that you and your friend meet on at least 2 days in a given span of 5 days?",
+   "choices": null,
+   "answer": "131",
+   "solution": "Answer: 131. Every day you go to the music practice rooms at a random time from 12AM to 8AM and practice for 3 hours, while your friend goes at a random time from 5AM to 11AM and practices for 1 hour (the block of practice time need not be contained in the given time range for the arrival). What is the probability that you and your friend meet on at least 2 days in a given span of 5 days? Answer: 131 243 Solution: Friend’s Arrival (AM) Your Arrival (AM)5 6 7 8 9 10 11 1 2 3 4 5 6 7 812 For a given day, the probability that you and your friend meet is 1 3 , which we can find by graphing the possible pairs of your and your friend’s arrival times (see diagram). You can arrive no earlier than 3 hours before your friend and no later than 1 hour after your friend in order SMT 2022 Discrete Test Solutions April 16–17, 2022 to meet. Then, the probability that you and your friend don’t meet or only meet once in a span of 5 days is \u0000 2 3 \u00015 + 5 \u0000 1 3 \u0001\u0000 2 3 \u00014 = 112 243 . Then, the probability that you meet at least twice is 1− 112 243 = 131 243 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2023 SMT Discrete Problem 4",
+   "question": "Michelle is drawing segments in the plane. She begins from the origin facing up the y-axis and draws a segment of length 1. Now, she rotates her direction by 120 ◦, with equal probability clockwise or counterclockwise, and draws another segment of length 1 beginning from the end of the previous segment. She then continues this until she hits an already drawn segment. What is the expected number of segments she has drawn when this happens?",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. Michelle is drawing segments in the plane. She begins from the origin facing up the y-axis and draws a segment of length 1. Now, she rotates her direction by 120 ◦, with equal probability clockwise or counterclockwise, and draws another segment of length 1 beginning from the end of the previous segment. She then continues this until she hits an already drawn segment. What is the expected number of segments she has drawn when this happens? Answer: 4 Solution: Michelle’s drawing process is that of a random walk on the triangulated lattice. Notice that if at any point Michelle has two of the same rotation in a row, she will necessarily hit an already drawn segment by constructing an equilateral triangle. Note as well that if she alternates rotations every step, then she will go to infinity and never intersect a prior segment. The problem thus reduces to finding the expected time of first occurrence of two adjacent heads or tails in a series of coin tosses. Let f(X) denote this expected time if the last toss was X. Then, f(H) = 1 2· 1 + 1 2· (1 + f(T )) = 1 + 1 2 f(T ) and f(T ) = 1 + 1 2 f(H). This implies that f(T ) = f(H) = 2. Hence, our final answer is 2 + 2 = 4 (where we add the first segment and the first rotated segment).",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2020 SMT Discrete Problem 5",
+   "question": "Find the smallest integer value of n such that 222...2 | {z } n 2’s ≥ 16161616 .",
+   "choices": null,
+   "answer": "7",
+   "solution": "Answer: 7. Find the smallest integer value of n such that 222...2 |{z} n 2’s ≥ 16161616 . Answer: 7 Solution: The natural ﬁrst step is to start by taking the base-2 logarithm of the right hand side: log2 ( 16161616 ) = 4· 161616 . We can do this again: log2 ( 4· 161616 ) = log2 4 + log2 ( 161616 ) = 2 + 4· 1616. Note that 2 + 4· 1616 = 2 + 4· 264 = 2 + 266. On the other hand, 2222 = 216< 2 + 266< 2216 = 22222 . Hence 222222 < 16161616 < 2222222 , and the answer is n = 7.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2023 SMT Discrete Problem 6",
+   "question": "We say that an integer x∈{ 1,··· , 102} is square-ish if there exists some integer n such that x≡ n2 + n (mod 103). Compute the product of all square-ish integers modulo 103.",
+   "choices": null,
+   "answer": "52",
+   "solution": "Answer: 52. We say that an integer x∈{ 1,··· , 102} is square-ish if there exists some integer n such that x≡ n2 + n (mod 103). Compute the product of all square-ish integers modulo 103. Answer: 52 Solution: Note that n2 + n≡ (n + 52)2− 522. The set of square-ish residues is equal to the set of residues of the form x2− 522. It is tempting to simply multiply out Q x x2− 522, but we must prevent multiplicity. Aside from the case x = 0, each residue has two values of x corresponding to it, x and 103− x, so to prevent multiplicity it suffices to calculate 50Y x=0 (x2− 522)≡ 50Y x=0 (x− 52)(x + 52) ≡ (−52)(−51)··· (−2)· (52)(53)··· (102) ≡ (−2)(−3)··· (−52)· (52)(53)··· (102) ≡ (−1)51102!· 52 (mod 103) . By Wilson’s Theorem, 102!≡− 1. Thus, the residue comes out to be ( −1)52· 52 = 52 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2023 SMT Discrete Problem 7",
+   "question": "Let S be the number of bijective functions f :{0, 1, . . . ,288}→{ 0, 1, . . . ,288} such that f((m+ n) mod 17) is divisible by 17 if and only if f(m) + f(n) is divisible by 17. Compute the largest positive integer n such that 2 n divides S.",
+   "choices": null,
+   "answer": "270",
+   "solution": "Answer: 270. Let S be the number of bijective functions f :{0, 1, . . . ,288}→{ 0, 1, . . . ,288} such that f((m+ n) mod 17) is divisible by 17 if and only if f(m) + f(n) is divisible by 17. Compute the largest positive integer n such that 2 n divides S. Answer: 270 Solution: Since f is bijective, there exists some m∈{ 0, 1, . . . ,288} such that f(m)≡ 0 mod 17. For any integer k, since f(m + 17k mod 17) = f(m + 0)≡ 0 mod 17, by the condition given in the problem we also know that f(m) +f(17k)≡ 0 mod 17. This gives us f(17k)≡ 0 mod 17 for any integer k. So, m + n≡ 0 mod 17 if and only if f(m) + f(n)≡ 0 mod 17. There are 8 pairs of residues modulo 17 that sum to 17 (for example, (1 , 16) is such a pair). Each pair is mapped by f to another pair, so there are 8! ways to order them, and the residues within each pair can be switched, giving us a factor of 2 8. Then, in{0, 1, . . . ,288} there are 17 numbers for each residue modulo 17. Once the mappings of residues modulo 17 have been determined, there are 17! ways to map each of the numbers with the same residue. Thus, S = 28· 8!· (17!)17. The exponent of the largest power of 2 that divides S is 8 + (4 + 2 + 1) + 17(8 + 4 + 2 + 1) = 270.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2023 SMT Discrete Problem 8",
+   "question": "Define the Fibonacci numbers via F0 = 0, F 1 = 1, and Fn = Fn−1 + Fn−2. Olivia flips two fair coins at the same time, repeatedly, until she has flipped a tails on both, not necessarily on the same throw. She records the number of pairs of flips c until this happens (not including the last pair, so if on the first flip both coins turned up tails c would be 0). What is the expected value of Fc? Discrete Test April 8, 2023",
+   "choices": null,
+   "answer": "19",
+   "solution": "Answer: 19. Define the Fibonacci numbers via F0 = 0, F 1 = 1, and Fn = Fn−1 + Fn−2. Olivia flips two fair coins at the same time, repeatedly, until she has flipped a tails on both, not necessarily on the same throw. She records the number of pairs of flips c until this happens (not Discrete Test Solutions April 8, 2023 including the last pair, so if on the first flip both coins turned up tails c would be 0). What is the expected value of Fc? Answer: 19 11 Solution: Let a, b be the number of flips of each coin until tails. Then, we are looking for the expected value of max( Fa, Fb). Suppose that a = 0. Then, this expected value is F0 2 + F1 22 + F2 23 +··· , that is, the regular expected value. However, if a = n then the expected value becomes Fn 2 + Fn 22 +··· + Fn 2n+1 + Fn+1 2n+2 +··· = Fn· \u0012 1− 1 2n+1 \u0013 + Fn+1 2n+2 +··· that is, the first n cases have numerator transformed into Fn. So, let fn be the expected value given that a = n. Then, the quantity we are looking for is E = f0 2 + f1 22 + f2 23 +··· Let’s look at the contribution of Fn to this sum, since Fn can only appear in f0, f1, . . . , fn. In the first n of these, Fn has a coefficient of 1 2n+1 and in the last one it has 1 − 1 2n+1 . So, its contribution is 1 2n+1· \u0012 1− 1 2n+1 \u0013 + 1 2n+1 n−1X i=0 1 2i+1 = 1 2n+1· \u0012 1− 1 2n+1 + 1− 1 2n \u0013 = 2 2n+1− 3 4n+1 . Therefore, the sum we are looking for is E = ∞X n=0 \u0012 2 2n+1− 3 4n+1 \u0013 Fn. It is well known (or done via generating functions) that ∞X n=0 Fnxn+1 = x2 1− x− x2 so our answer is E = 2· \u0000 1 2 \u00012 1− 1 2− \u0000 1 2 \u00012− 3· \u0000 1 4 \u00012 1− 1 4− \u0000 1 4 \u00012 = 19 11 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2018 SMT Discrete Problem 9",
+   "question": "Let S = 2018102∑ k=1 1008∑ n=1 nk. Compute the remainder when S is divided by 1009.",
+   "choices": null,
+   "answer": "16",
+   "solution": "Answer: 16. Let S = 2018102∑ k=1 1008∑ n=1 nk. Compute the remainder when S is divided by 1009. Answer: 16 Solution: Note that p = 1009 is a prime. We claim that for any ﬁxed prime p and integer k, the sum p−1∑ n=1 nk (mod p) is−1 mod p if (p− 1)| k and 0 mod p if (p− 1) ∤ k. We ﬁrst consider the case where ( p− 1)| k. By Fermat’s little theorem, nk≡ 1 (mod p) for all n = 1, ..., p− 1. Therefore, we have p−1∑ n=1 nk≡− 1 (mod p) in this case. Now consider the case where ( p− 1) ∤ k. Because p is prime, there exists some generator g such that gp−1≡ 1 (mod p) but ga⁄≡ 1 (mod p) for all 0 < a < p− 1. This implies that for all 1≤ n≤ p− 1, there exists a unique 1≤ a≤ p− 1 such that n≡ ga (mod p). Otherwise, if there exists two diﬀerent a, b such that ga≡ gb≡ n (mod p), we would have ga−b≡ 1 (mod p), which implies that a− b = 0, or a = b. Therefore, we can rewrite the sum as p−1∑ n=1 nk≡ p−1∑ n=1 gnk (mod p). However, if we multiply the sum by 1− gk, we ﬁnd that the sum telescopes, and we get (1− gk) p−1∑ n=1 gnk≡ gk− gpk≡ gk(1− (gp−1)k)≡ 0 (mod p) SMT 2018 Discrete Math Test Solutions February 17, 2018 where gp−1≡ 1 (mod p) from Fermat’s Little Theorem. However, because k ∤ p−1, we know that gk⁄≡ 1 (mod p), which implies that p−1∑ n=1 nk≡ 0 (mod p) in this case. Thus, we have S≡− ⌊2018102 1008 ⌋ ≡− 2002≡ 16 (mod p).",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2018 SMT Discrete Problem 10",
+   "question": "Morris plays a game using a fair coin. He starts with $2 and proceeds using the following rules: • If Morris ﬂips a heads, he gains $2. • If Morris ﬂips a tails, he loses half his money. • If Morris ﬂips two tails in a row, the game ends (but he doesn’t lose any more money) For instance, if Morris ﬂips the sequence THTT, he will end up with $1.50. What is the expected amount of money in dollars Morris will have after the game ends?",
+   "choices": null,
+   "answer": "8",
+   "solution": "Answer: 8. Morris plays a game using a fair coin. He starts with $2 and proceeds using the following rules: • If Morris ﬂips a heads, he gains $2. • If Morris ﬂips a tails, he loses half his money. • If Morris ﬂips two tails in a row, the game ends (but he doesn’t lose any more money) For instance, if Morris ﬂips the sequence THTT, he will end up with $1.50. What is the expected amount of money in dollars Morris will have after the game ends? Answer: 8 3 Solution: Let f(x) be the expected amount of money Morris has at the end of the game if he starts with $ x. We split the original game into two slightly diﬀerent games, where the winnings of the original game is the sum of the winnings of the two other games. Game 1: Morris starts the game with $ x. • If Morris ﬂips a heads, nothing happens. • If Morris ﬂips a tails, he loses half his money. • If Morris ﬂips two tails in a row, the game ends (but he doesn’t lose any more money) Game 2: Morris starts the game with $0. • If Morris ﬂips a heads, he gains $2. • If Morris ﬂips a tails, he loses half his money. • If Morris ﬂips two tails in a row, the game ends (but he doesn’t lose any more money) Intuitively, the ﬁrst game represents the decay of our original investment of $2 by ﬂipping tails, while the second game represents our winnings when we start with $0. We ﬁrst compute the expected value of game 1. The probability that we halve exactly once is 1 2, since that means that we ﬂipped another tails immediately after ﬂipping our ﬁrst one. Likewise, the probability that we halve exactly twice is 1 4, and so on, so the probability that we exactly halve k times is 1 2k . The expected value is therefore ∞∑ k=1 1 2k· x 2k = ∞∑ k=1 x 4k = x 3 . By deﬁnition, the expected value of game 2 is f(0). Thus, the expected value of original the game when we start with $ x is f(x) = x 3 + f(0). Plugging in x = 2 gives us the equation f(2) = 2 3 + f(0). On the other hand, consider the case when we start with $0. We have a 1 2 chance of ﬂipping heads and gaining $2, which is the same as starting the game again with $2. We have a 1 4 chance of ﬂipping tails and then heads, which is equivalent to the scenario SMT 2018 Discrete Math Test Solutions February 17, 2018 above. Finally we have a 1 4 chance of ﬂipping tails twice in a row and ending the game. This gives us the equation f(0) = 1 2 f(2) + 1 4 f(2) + 1 4· 0. Plugging this into the other equation and solving, we get f(2) = 8 3 .",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

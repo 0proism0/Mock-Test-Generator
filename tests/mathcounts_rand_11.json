@@ -1,0 +1,111 @@
+{
+ "id": "mathcounts_rand_11",
+ "competition": "MATHCOUNTS — Team",
+ "category": "Math",
+ "title": "MATHCOUNTS — Team — Random Mock #11 · 2026-08-27 08:50",
+ "instructions": "10 questions · 20 minutes · No calculator. Answers are integers from 000 to 999. 10 points total.",
+ "time_limit_min": 20,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2026 MATHCOUNTS State Team Problem 1",
+   "question": "What is the least positive integer whose digits have a product of 100?",
+   "choices": null,
+   "answer": "120",
+   "solution": "Answer: 120 (degrees) 21.. The only digits that divide 100 evenly are 1, 2, 4, and 5. The most important goal to achieve the answer to the problem is to minimize the number of digits: 1 accomplishes nothing to get to a product of 100 but adds to the digit count; 4 and 2 × 2 contribute identically to a product but 4 uses one less digit. 100 = 4 × 5 × 5 minimizes the digit count. Next in importance is to sequence the digits in increasing order from left to right to achieve the desired goal, thus 455.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2026 MATHCOUNTS State Team Problem 2",
+   "question": "On Planet Mathian, the Mathinian folk measure time on an 8 “hour” 8 clock with 90 “minutes” per “hour”. How many degrees are in the measure of the smaller angle formed by the hands of this clock when the time is 2:24? 4",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5 22.. In 1 h = 90 min, the minute hand moves one full turn of 360°, for a rate of 360°/(90 min) = 4°/min. In 8 h, the hour hand moves one full turn of 360° , for a rate of 360°/(8 h) = 45°/h = 45°/(90 min) = 0.5°/min. Assuming 0° is straight up toward the “8” with angle increasing clockwise, at 2:00 the hour hand is at 2 h × 45°/h = 90° while the minute hand is at 0°; Then 24 min later, the hour hand is at 90° + 24 min × 0.5°/min = 102°, and the minute hand is at 24 min × 4°/min = 96°. Thus, the angular separation between the hands is |102° − 96°| = 6°.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2026 MATHCOUNTS State Team Problem 3",
+   "question": "If A, I, M and S are distinct digits such that I × AM = SAM and S is nonzero, what is the greatest possible value of the 4-digit number AIMS?",
+   "choices": null,
+   "answer": "343",
+   "solution": "Answer: 343 23.. S ≠ 0 implies I ≥ 2. Any odd I multiplied by 50 yields an integer ending in 50. Any integer I leaving a remainder of 1 when divided by 4 can be multiplied by 25 or 75 to yield an integer ending with 25 or 75, respectively. Then 6 times any even digit ends with that same digit, so 6 can be multiplied by 20, 40, 60, or 80 yielding a value that has the same last two digits as the number being multiplied by 6. Those are all the candidates. To maximize AIMS, we want the maximum A , which is 8 from 6 × 80 = 480, so M = 0, I = 6, and S = 4, resulting in AIMS = 8604.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2026 MATHCOUNTS State Team Problem 4",
+   "question": "When List B is created by appending the numbers 17 and 23 to List A, the mean decreases by p and the median increases by q. What is the value of p + q? Express your answer as a decimal to the nearest tenth. List A: 11, 13, 104, 23, 11, 23 List B: 11, 13, 104, 23, 11, 23, 17, 23",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4 (integers) 24.. Reorganizing List A in increasing order yields the 6 values: 11, 1 1, 13, 23, 23, 104. The median of these 6 values is the mean of the third and fourth values, thus 13+232 = 18. The added values 17 and 23 in List B can be inserted right after the 13 as the new fourth and fifth values, the mean of which is the median of 8 values, thus 17+232 = 20, so the median increases by 𝑞𝑞 = 20 − 18 = 2. The mean of List A is 11+11+13+23+23+1046 = 1856 . For the mean of List B and the amount of decrease from List A, 𝑝𝑝 = 1856 − 185+17+236+2= 1856− 2258= 2. 708…. Finally, we add 𝑝𝑝 + 𝑞𝑞 = 2.708… + 2 = 4.708… and round to the nearest tenth to obtain the answer 4.7 . 2026 STATE COMPETITION Solutions",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2026 MATHCOUNTS State Team Problem 5",
+   "question": "Let M, A, T and H have the following coordinates: M(0, 7), A(0, 12), T(3, 2), and H(10, 8). Point P is chosen at random on segment TH. What is the probability that the area of triangle MAP is greater than or equal to 15? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "7",
+   "solution": "Answer: 7 25.. Let MA = 12 − 7 = 5 along the 𝑦𝑦 -axis be the base of △MAP. Then to have an area of at least 15 for △MAP, a height of at least 6 is required, meaning the absolute value of the 𝑥𝑥 -coordinate of P must be at least 6. Because P lies on TH����, with T at (3; 2) and H at (10; 8) , choosing a point randomly on TH���� is equivalent to choosing randomly an 𝑥𝑥 -coordinate in the interval 3 ≤ 𝑥𝑥 ≤ 10, with total length of 10 − 3 = 7 but only 6 ≤ 𝑥𝑥 ≤ 10, with length 10 − 6 = 4, satisfies the triangle area requirements, so the probability of such is 𝟒𝟒𝟐𝟐 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2026 MATHCOUNTS State Team Problem 6",
+   "question": "Mrs. Gemma Tree has a window in her house in the shape of an equilateral triangle. The height of the window is 48 inches. She has a window shade that rises from the bottom of the window upward. When the height of the shade is h inches, the total area covered by the shade is given by the formula A = ( ph 2 + qh) square inches, for h ranging from 0 to 48. h What is the value of pq?",
+   "choices": null,
+   "answer": "45",
+   "solution": "Answer: 45 26.. The altitude being 48 in means each side is 2√3 × 48 in = 32√3 in and the area of the window is 768√3 in². When 0 < ℎ < 48, the shaded region is a trapezoid of height ℎ in, lower base length 32√3 in, and upper base length 32√3 �1 − ℎ48� in (based on taking advantage of proportions of similar shapes and of complementarity). The area of a trapezoid is the product of the height and the average of the base lengths, thus 32√3�1 − ℎ96� ℎ in²= �− √33 ℎ 2 + 32√3� in2 , so 𝑝𝑝 = − √33 , 𝑞𝑞 = 32√3, and 𝑝𝑝𝑞𝑞 = −32.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2026 MATHCOUNTS State Team Problem 7",
+   "question": "A positive integer n has 18 positive integer divisors. What is the greatest possible number of positive integer divisors that n2 could have?",
+   "choices": null,
+   "answer": "14",
+   "solution": "Answer: 14 27.. The prime factorization of 18 is 2 × 3 × 3, so a positive integer with exactly 18 positive divisors must have 1, 2, or 3 distinct prime divisors in a total of 4 forms: 𝑝𝑝¹⁷ whose square is 𝑝𝑝³⁴ that has 34 + 1 = 35 divisors; 𝑝𝑝⁸𝑞𝑞 whose square is 𝑝𝑝¹⁶𝑞𝑞² that has (16 + 1)(2 + 1) = 51 divisors; 𝑝𝑝⁵𝑞𝑞² whose square is 𝑝𝑝¹⁰𝑞𝑞⁴ that has (10 + 1)(4 + 1) = 55 divisors; 𝑝𝑝²𝑞𝑞²𝑟𝑟 whose square is 𝑝𝑝⁴𝑞𝑞⁴𝑟𝑟² that has (4 + 1)(4 + 1) (2 + 1) = 75divisors. The greatest count of factors is 75.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2026 MATHCOUNTS Chapter Team Problem 8",
+   "question": "On any given school day, Hill Valley Middle School teacher Leilani Goodwin wears jeans to school with probability 20%, and each day is independent of all other days. What is the probability that in a five-day school week, Ms. Goodwin wears jeans on exactly two days? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "100",
+   "solution": "Answer: 100 28.. For 2 days, each independently at 20 % = 20/20100/20 = 15 for jeans means 5 d − 2 d = 3 d, each independently at 1 − 15 = 45 for non-jeans. This is a binomial distribution, so the requested 2 �4 3 = (5×4)×(1)×(4×4×4) 𝟐𝟐𝟏𝟏 probability is 5!2! 3! �15� 5� (2)×(5×5)×(5×5×5) = 2×4354 = 𝟏𝟏𝟔𝟔𝟐𝟐𝟐𝟐 . 2026 CHAPTER COMPETITION Solutions",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2026 MATHCOUNTS State Team Problem 9",
+   "question": "A random number generator repeatedly picks one of the numbers 20 or 26 with equal probability, each pick independent of the others. What is the expected value of the sum of the chosen numbers when the sum is greater than or equal to 100 for the first time? Express your answer as a common fraction.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12 (cm) 29.. The table below itemizes cases based on number of 20s and 26s in the sum. The “p robability per arrangement” is 1/2 raised to the number of terms in the sum. The “number of a rrangements” is how many distinct orders the terms in the sum can be arrang ed—be careful, because nominally the second row should hav e 5 arrangements, but the 20 must not be the last term becaus e the first 4 terms being 26 already exceed 100 so is covered by the first row. The “ probability of case” is the product of the probability per arrangement times the number of arrangements. The expected value is the product of the sum and the probability of case. The “Total” row gives for each meaningful column the sum, over the cases, of the values in that column ; “—” is used where a sum is not use ful. Case Sum Probability per Number of Probability Expected Arrangement Arrangements of Case Value 26 + 26 + 26 + 26 104 1/16 1 1/16 104/16 20 + 26 + 26 + 26 + 26 124 1/32 4 2/16 248/16 20 + 20 + 26 + 26 + 26 118 1/32 10 5/16 590/16 20 + 20 + 20 + 26 + 26 112 1/32 10 5/16 560/16 20 + 20 + 20 + 20 + 26 106 1/32 5 5/32 265/16 20 + 20 + 20 + 20 + 20 100 1/32 1 1/32 50/16 Total — — — 1 1817/16 The desired answer is in the cell at the lower right corner of the table: 𝟏𝟏𝟐𝟐𝟏𝟏𝟐𝟐 . 𝟏𝟏𝟏𝟏",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2026 MATHCOUNTS State Team Problem 10",
+   "question": "How many ordered pairs of two-digit positive integers (a, b) are there such that pairs gcd(30, a, b) × lcm(30, a, b) = 30ab?",
+   "choices": null,
+   "answer": "388",
+   "solution": "Answer: 388 (integers) 30.. For all positive integers 𝑚𝑚 and 𝑛𝑛, gcd(𝑚𝑚, 𝑛𝑛) ⋅ lcm(𝑚𝑚, 𝑛𝑛) = 𝑚𝑚𝑛𝑛 , so it i s reasonable to ask if the same concept works upon bring ing in a third positive integer 𝑙𝑙 : gcd(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) ⋅ lcm(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) = 𝑙𝑙𝑚𝑚𝑛𝑛 ? No, that typically does not work—let’s see why not, and what is the most general case that will work for three input values. Let’s focus on a n arbitrary prime factor 𝑝𝑝 , and say that 𝑙𝑙 has 𝑥𝑥 factors of 𝑝𝑝 (that is, 𝑝𝑝 𝑥𝑥 divides 𝑙𝑙 but 𝑝𝑝 𝑥𝑥+1 does not), 𝑚𝑚 has 𝑦𝑦 factors of 𝑝𝑝 , and 𝑛𝑛 has 𝑧𝑧 factors of 𝑝𝑝, with 𝑥𝑥 , 𝑦𝑦, and 𝑧𝑧 being nonnegative integers. Then gcd(𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝 min( 𝑦𝑦, 𝑧𝑧) and lcm(𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝max(𝑦𝑦, 𝑧𝑧) , so the product of the gcd and lcm has min(𝑦𝑦, 𝑧𝑧) + max(𝑦𝑦, 𝑧𝑧) = 𝑦𝑦 + 𝑧𝑧 factors of 𝑝𝑝, which is the number of factors of 𝑝𝑝 in 𝑚𝑚𝑛𝑛—this always works when two values are being processed. Going to three values, gcd(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝 min( 𝑥𝑥, 𝑦𝑦, 𝑧𝑧) and lcm(𝑙𝑙, 𝑚𝑚, 𝑛𝑛) has a factor 𝑝𝑝 max(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) , so the product of the gcd and lcm has min(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) + max(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) factors of 𝑝𝑝, while the product 𝑙𝑙 𝑚𝑚𝑛𝑛 has 𝑥𝑥 + 𝑦𝑦 + 𝑧𝑧 factors of 𝑝𝑝—for the two sums to be equal , the middle value 𝑥𝑥 + 𝑦𝑦 + 𝑧𝑧 − (min(𝑥𝑥, 𝑦𝑦, 𝑧𝑧) + max(𝑥𝑥, 𝑦𝑦, 𝑧𝑧)) must be 0, which then requires the minimum value to be 0; in other words, at most one of 𝑥𝑥 , 𝑦𝑦, and 𝑧𝑧 can be nonzero, so 𝑝𝑝 can divide at most one of 𝑙𝑙 , 𝑚𝑚, and 𝑛𝑛—then, and only then, the formula given by the problem can work. Thus, for the given problem with the three values 30 , 𝑎𝑎, and 𝑏𝑏 , no two of those values can have a common divisor greater than 1, thus gcd(30, 𝑎𝑎) = gcd(30, 𝑏𝑏) = gcd(𝑎𝑎, 𝑏𝑏) = 1, which is referred to mathematically as “30, 𝑎𝑎 , and 𝑏𝑏 are mutually relatively prime”. Because 30 = 2 × 3 × 5, 𝑎𝑎 and 𝑏𝑏 must not have any of 2, 3, or 5 as factors. Now, 10 ≤ 𝑎𝑎 ≤ 99 and 10 ≤ 𝑏𝑏 ≤ 99 are given as restrictions. Thus, 𝑎𝑎 and 𝑏𝑏 are required to be [1] distinct 2 -digit primes or [2] the product of primes with the product having two digits. In c ase [1], there are 21 two-digit primes (25 primes under 100 minus 4 primes under 10), so 𝑎𝑎 can be any one of those 21 primes and 𝑏𝑏 can be any of the 20 remaining primes, so 21 × 20 = 420 choices. Case [2] must involve the square of a one- digit prime (other than 2, 3, or 5—meaning 7) or the product of a one-digit prime and a small two - digit prime, leaving only 7² = 49, 7 × 11 = 77, and 7 × 13 = 91 for one of 𝑎𝑎 and 𝑏𝑏, with one of the remaining two-digit primes for the other, thus another 2 × (21 + 20 + 20) = 122 choices. Therefore, the total count of choices is 420 + 122 = 542.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

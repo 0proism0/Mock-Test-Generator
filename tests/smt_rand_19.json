@@ -1,0 +1,161 @@
+{
+ "id": "smt_rand_19",
+ "competition": "SMT — Team",
+ "category": "Math",
+ "title": "SMT — Team — Random Mock #19 · 2026-08-26 16:33",
+ "instructions": "15 questions · 50 minutes · No calculator. 15 points total.",
+ "time_limit_min": 50,
+ "total_points": 15,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2021 SMT Team Problem 1",
+   "question": "What is the length of the longest string of consecutive prime numbers that divide 224444220?",
+   "choices": null,
+   "answer": "6",
+   "solution": "Answer: 6. What is the length of the longest string of consecutive prime numbers that divide 224444220? Answer: 6 Solution: We note that this is 2020(x5 +x4 +x3 +x2 + 1) = 2020(x + 1)(x2−x + 1)(x2 +x + 1) whenx = 10. So, we can factor it as 2020×11×91×111 = 4×5×101×11×7×13×3×37. So, we count that 2,3,5,7,11,13 all divide 224444220. So, 6 consecutive primes divide the number.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2018 SMT Team Problem 2",
+   "question": "Consider a game played on the integers in the closed interval [1 , n]. The game begins with some tokens placed in [1, n]. At each turn, tokens are added or removed from [1 , n] using the following rule: For each integer k∈ [1, n], if exactly one of k− 1 and k + 1 has a token, place a token at k for the next turn, otherwise leave k blank for the next turn. We call a position static if no changes to the interval occur after one turn. For instance, the trivial position with no tokens is static because no tokens are added or removed after a turn (because there are no tokens). Find all non-trivial static positions.",
+   "choices": null,
+   "answer": "32",
+   "solution": "Answer: 32. Furthermore, in this case the coordinates of each of the points must lie in the set{−1,− 1 2, 0, 1 2, 1}. It remains to construct values for the 5 points that will work. Note that a point is on the surface of the cube if at least one of the coordinates of a point has absolute value 1. We have 6 coordinates with absolute value 1, and only 5 points, so we can easily choose them to lie on the surface of the cube and satisfy the desired properties. For example, the points ( −1, 1 2, 0 ) , ( −1 2, 1,−1 ) , ( 0,−1,−1 2 ) , (1 2, 0, 1 ) , ( 1,−1 2, 1 2 ) satisfy the given conditions. Therefore, the maximum value is 1 2 + 1 2 + 1 2 = 3 2 . EY04 8. Eddy has two blank cubes A and B and a marker. Eddy is allowed to draw a total of 36 dots on cubes A and B to turn them into dice, where each side has an equal probability of appearing, and each side has at least one dot on it. Eddy then rolls dice A twice and dice B once and computes the product of the three numbers. Given that Eddy draws dots on the two dice to maximize his expected product, what is his expected product? Answer: 32 Solution: Suppose the faces of dice A are labeled as a1,...,a 6 and the faces of dice B are labeled as b1,...,b 6. We are given that a1 +··· +a6 +b1 +··· +b6 = 36. We can then write the expected product as 1 63 (a1 +··· +a6)2(b1 +··· +b6). If we let a =a1 +··· +a6 and b =b1 +··· +b6, then we can reduce this to maximizing a2b 63 under the constraint a +b = 36. Note that it suﬃces to maximize a2b, which we can do using AM-GM as follows: a +b 3 = a/2 +a/2 +b 3 ≥ 3 √ a2b 4 where equality (and thus the maximum) holds when a/2 = b. Since a +b = 36, equality occurs whena = 24 andb = 12, giving us a maximum expected value of 242·12 63 = 42·2 = 32 . SMT 2018 Team Test Solutions February 17, 2018 EX03 9. Let ABCD be a square. Point E is chosen inside the square such that AE = 6. Point F is chosen outside the square such that BE = BF = 2 √ 5, ∠ABF = ∠CBE , and AEBF is cyclic. Compute the area of ABCD . Answer: 32 Solution: Since ∠ABF = ∠CBE , we have ∠EBF = ∠CBA = 90◦. Moreover, since BE = BF = 2 √ 5,∆EBF is a 45-45-90 triangle, so EF = 2 √ 5· √ 2 = 2 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2019 SMT Team Problem 3",
+   "question": "Consider the set of 5 digit numbers ABCDE (with A⁄= 0) such that A+ B = C, B + C = D, and C + D = E. What’s the size of this set?",
+   "choices": null,
+   "answer": "8",
+   "solution": "Answer: 8. Consider the set of 5 digit numbers ABCDE (withA⁄= 0) such thatA+B =C,B +C =D, and C +D =E. What’s the size of this set? Answer: 8 Solution: Observe that E = D +C = 2C +B = 3B + 2A and E≥ D≥ C≥ A,B . We proceed by computing the number of digits (A,B ) with A⁄= 0 such that 2A + 3B <10, and apply casework on A: A = 1: B can be 0, 1, or 2 A = 2: B can be 0 or 1 A = 3: B can be 0 or 1 A = 4: B can only be 0 Notice that onceA andB are determined, the other digits are also determined. Hence, there are a total of 8 such numbers.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2019 SMT Team Problem 4",
+   "question": "Let D be the midpoint of BC in∆ABC. A line perpendicular to D intersects AB at E. If the area of∆ABC is four times that of the area of ∆BDE, what is ∠ACB in degrees?",
+   "choices": null,
+   "answer": "90",
+   "solution": "Answer: 90. Let D be the midpoint of BC in∆ABC. A line perpendicular to D intersectsAB at E. If the area of∆ABC is four times that of the area of ∆BDE, what is ∠ACB in degrees? Answer: 90 Solution: We have that the area of ∆BDE is 1 2(BD)(ED), and the area of ∆ABC is 1 2(BC)h = (BD)h, where h is the height of the altitude from A to BC. Since the area of ∆ABC is four times that of ∆BDE, we have that h = 2(ED). This is only possible if E is the midpoint of AB. But then AE =BE =CE, so E is the circumcenter of ∆ABC. But E lies on AB, so AB is a diameter of the circumcircle, implying that ∠ACB = 90◦ .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2022 SMT Team Problem 5",
+   "question": "Let a,b, and c be the roots of the polynomial x3− 3x2− 4x + 5. Compute a4 +b4 a +b + b4 +c4 b +c + c4 +a4 c +a .",
+   "choices": null,
+   "answer": "869",
+   "solution": "Answer: 869. Let a,b, and c be the roots of the polynomial x3− 3x2− 4x + 5. Compute a4 +b4 a +b + b4 +c4 b +c + c4 +a4 c +a . Answer: 869 7 Solution: Vieta’s formulas tell us that a +b +c = 3, and thus we can rewrite the expression has a4 +b4 3−c + b4 +c4 3−a + c4 +a4 3−b Combining everything under a common denominator gives us (a4 +b4)(3−a)(3−b) + (b4 +c4)(3−b)(3−c) + (c4 +a4)(3−c)(3−a) (3−a)(3−b)(3−c) Denote Sk =ak +bk +ck. Now, by expanding the numerator and regrouping terms, we obtain 18S4− 6S5− 3S4S1 + 3S5 +S5S1−S6 27− 9(a +b +c) + 3(ab +bc +ca)−abc We can derive from Vieta’s formulas and Newton’s sums that S1 = 3, S2 = 17, and S3 = 48. Now, using the fact that Sk = 3Sk−1 + 4Sk−2− 5Sk−3, then we can compute S3 = 48,S4 = 197, S5 = 698, and S6 = 2642. Putting this all together, we get a value of 869 7 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2023 SMT Team Problem 6",
+   "question": "In the language of Blah, there is a unique word for every integer between 0 and 98 inclusive. A team of students has an unordered list of these 99 words, but do not know what integer each word corresponds to. However, the team is given access to a machine that, given two, not necessarily distinct, words in Blah, outputs the word in Blah corresponding to the sum modulo 99 of their corresponding integers. What is the minimum N such that the team can narrow down the possible translations of “1” to a list of N Blah words, using the machine as many times as they want?",
+   "choices": null,
+   "answer": "60",
+   "solution": "Answer: 60. In the language of Blah, there is a unique word for every integer between 0 and 98 inclusive. A team of students has an unordered list of these 99 words, but do not know what integer each word corresponds to. However, the team is given access to a machine that, given two, not necessarily distinct, words in Blah, outputs the word in Blah corresponding to the sum modulo 99 of their corresponding integers. What is the minimum N such that the team can narrow down the possible translations of “1” to a list of N Blah words, using the machine as many times as they want? Answer: 60 Solution: We can only narrow down 1 to the list of Blah words which are relatively prime to",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2023 SMT Team Problem 7",
+   "question": "Compute vuuut6 ∞X t=1  1 + ∞X k=1   ∞X j=1 (1 +k)−j   2  −t .",
+   "choices": null,
+   "answer": "6",
+   "solution": "Answer: 6. Compute vuuut6 ∞X t=1  1 + ∞X k=1   ∞X j=1 (1 +k)−j   2  −t . Answer: 6 π Solution: Using sum of geometric series: ∞X j=1 (1 +k)−j = 1 k Using sum of squared reciprocals: ∞X k=1   ∞X j=1 (1 +k)−j   2 = ∞X k=1 \u00121 k \u00132 = π2 6 Using sum of geometric series: ∞X t=1  1 + ∞X k=1   ∞X j=1 (1 +k)−j   2  −t = ∞X t=1 \u0012 1 +π2 6 \u0013−t = 6 π2 Then the rest is simply r 6 6 π2 = 6 π",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2014 SMT Team Problem 8",
+   "question": "Call a function g lower-approximating for f on the interval [ a, b] if for all x∈ [a, b], f(x)≥ g(x). Find the maximum possible value of ∫ 2 1 g(x)dx where g(x) is a linear lower-approximating function for f(x) = xx on [1, 2].",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Call a function g lower-approximating for f on the interval [ a,b ] if for all x∈ [a,b ], f(x)≥ g(x). Find the maximum possible value of ∫ 2 1 g(x)dx whereg(x) is a linear lower-approximating function for f(x) =xx on [1, 2]. Answer: 3 √ 6 4 Solution: We note that, because g is linear, the integral is actually the area of a trapezoid. The area of a trapezoid is given by A = 1 2h(b1 +b2) =hM whereM is the length of the midline. Next, g(x)≤f(x) for all x∈ [1, 2], and the midline has length g( 3 2)≤f( 3 2) = (3/2)3/2 = 3 √ 6 4 . Then ∫ 2 1 g(x)dx≤hM = 3 √ 6 4 . We note that this maximum is achieved, for example, when g(x) is the tangent line to f(x) at x = 3 2 (which works because f is convex), so the answer must be 3 √ 6 4 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2023 SMT Team Problem 9",
+   "question": "Let A be the the area enclosed by the relation x2 +y2≤ 2023. Team Test April 8, 2023 Let B be the area enclosed by the relation x2n +y2n≤ \u0012 A· 7 16π \u0013n/2 . Compute the limit of B as n→∞ for n∈ N.",
+   "choices": null,
+   "answer": "119",
+   "solution": "Answer: 119. Let A be the the area enclosed by the relation x2 +y2≤ 2023. Team Test Solutions April 8, 2023 Let B be the area enclosed by the relation x2n +y2n≤ \u0012 A· 7 16π \u0013n/2 . Compute the limit of B as n→∞ for n∈ N. Answer: 119 Solution: A is the area of a circle with radius of √ 2023, so A is 2023π. The shape described in B is a square with side length 2 \u0000 A· 7 16π \u00011/4. Therefore, B is equal to 4 q 2023π· 7 16π = 4 q\u0000 119 4 \u00012 = 119 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2022 SMT Team Problem 10",
+   "question": "You are given that log 10 2≈ 0.3010 and that the first (leftmost) two digits of 2 1000 are 10. Compute the number of integers n with 1000≤ n≤ 2000 such that 2 n starts with either the digit 8 or 9 (in base 10).",
+   "choices": null,
+   "answer": "97",
+   "solution": "Answer: 97. You are given that log 10 2≈ 0.3010 and that the first (leftmost) two digits of 2 1000 are 10. Compute the number of integers n with 1000≤ n≤ 2000 such that 2 n starts with either the digit 8 or 9 (in base 10). Answer: 97 Solution: Consider the “runs” of first digits that can happen. These are (1 , 2, 4, 8); (1, 2, 4, 9); (1, 2, 5); (1, 3, 6); (1, 3, 7). So, 2 n starts with the digit 8 or 9 if and only if it has a length 4 run until we get another decimal digit. So, if let x be the number of runs of length 3 and y be the number of runs of length 4. If 2 n starts with a 1, then that means 2 0, 21,..., 2n−1 have 3x + 4y = n total terms, and since each run ends with getting a new digit, x +y =⌊log10 2n−1 + 1⌋. So, y =n− 3⌊(n− 1) log10 2 + 1⌋. Since 2 1000 starts with a 1, the number of 2 k starting with 8 or 9 with k≤ 1000 is 1000 − 3⌊999 log10 2 + 1⌋ = 97. Since 21000 starts with 10, then 2 2000 starts with 1 as well. Therefore, the number of 2k starting with 8 or 9 withk≤ 2000 is 2000−3⌊1999 log10 2+1⌋ = 194. Therefore, our answer is 194− 97 = 97 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2014 SMT Team Problem 11",
+   "question": "Let b be a positive real number, and let an be the sequence of real numbers deﬁned by a1 = a2 = a3 = 1, and an = an−1 + an−2 + ban−3 for all n > 3. Find the smallest value of b such that ∞∑ n=1 √an 2n diverges. SMT 2014 Team Test February 15, 2014",
+   "choices": null,
+   "answer": "44",
+   "solution": "Answer: 44. Let b be a positive real number, and let an be the sequence of real numbers deﬁned by a1 = a2 =a3 = 1, and an =an−1 +an−2 +ban−3 for all n> 3. Find the smallest value of b such that ∞∑ n=1 √an 2n diverges. Answer: 44 Solution: Consider the polynomialP (x) =x3−x2−x−b. First, we notice that this has exactly one positive root; the quickest proof is by Descartes’s Rule of Signs. Let r be this root. We now claim that there exist positive constants c1 and c2 such that c1rn≤ an≤ c2rn for all n∈ N. We proceed by induction. It is easy to ﬁnd such c1 and c2 to satisfy the base cases n = 1, 2, 3. Now, take n> 3, and assume that c1ri≤ai≤c2ri for all i<n . We see that an =an−1 +an−2 +ban−3≥c1rn−1 +c1rn−2 +c1brn−3 =c1rn−3·(r2 +r +b) =c1rn−3·r3 =c1rn. The upper bound follows for exactly the same reason. Finally, we examine ∞∑ n=1 √an 2n . SMT 2014 Team Test Solutions February 15, 2014 If r< 4, then this is bounded above by ∞∑ n=1 √c2rn/2 2n =√c2 ∞∑ n=1 (√r 2 )n , which is a geometric series with common ratio √r/2< 1, therefore convergent. However, when r≥ 4, the sum is bounded below by ∞∑ n=1 √c1rn/2 2n =√c1 ∞∑ n=1 (√r 2 )n ≥√c1 ∞∑ n=1 1, since√r/2≥ 1. As c1> 0, this clearly diverges. Hence, we want to ﬁnd the smallest value of b for which r≥ 4. Plugging in x = 4 to P (x), we get P (4) = 64− 16− 4−b = 0 =⇒ b = 44. It is clear that if we chose a larger value of r, the corresponding value of b would only increase, so this is the smallest value of b that makes the sum diverge.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2023 SMT Team Problem 12",
+   "question": "Let A,B,C, and D be points in the plane with integer coordinates such that no three of them are collinear, and where the distances AB,AC,AD,BC,BD, andCD are all integers. Compute the smallest possible length of a side of a convex quadrilateral formed by such points.",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Let A,B,C, and D be points in the plane with integer coordinates such that no three of them are collinear, and where the distances AB,AC,AD,BC,BD, andCD are all integers. Compute the smallest possible length of a side of a convex quadrilateral formed by such points. Answer: 3 Solution: We want to find the minimum length of any side. WLOG we minimize AB. Then, consider the triangle △ABC. WLOG we can take A = (0, 0) and B = (AB, 0) (since we can rotate the points to this and preserve the fact they have integer coordinates). Using the triangle inequality, we have|AC−BC|≤ AB with equality if A,B,C are collinear. If AB = 1, then AC =BC and C = (1/2,y ), which does not have integer coefficients Now if AB = 2 and C = (x,y ), AC2 = x2 +y2 and BC 2 = (2−x)2 +y2. Since |AC−BC| is 0 or 1, and AC2 and BC 2 have the same parity, they must be equal. So, x = 1. But then 1 +y2 = AC2 where y,AC are both integers. This only occurs if y = 0, but then A,B,C are collinear, a contradiction. So, the minimal length of AB is 3 and we can construct this with A = (0, 0), B = (3, 0), C = (0, 4) and D = (3, 4).",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2023 SMT Team Problem 13",
+   "question": "Suppose the real roots of p(x) =x9 + 16x8 + 60x7 + 1920x2 + 2048x + 512 arer1,r 2...,r k (roots may be repeated). Compute kX i=1 1 2−ri .",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. Suppose the real roots of p(x) =x9 + 16x8 + 60x7 + 1920x2 + 2048x + 512 arer1,r 2...,r k (roots may be repeated). Compute kX i=1 1 2−ri . Answer: 5 4 Solution: We transformx→ 2x to obtain that the roots are twice those of f(x) =x9 + 8x8 + 15x7 + 15x2 + 8x + 1. Note that the final computation is now 1 2 kX i=1 1 1−ri where ri are the roots of this new polynomial. Note that−1 is a root of this polynomial. Our goal is characterize the other roots. By noting that f(x) is palindromic (as in, f(x) = x9f(1/x)) it follows that roots must come in conjugate pairs: so, if x is a root, then so is 1 x. So, it follows that as for any pair ( x, 1/x) we have 1 1−x + 1 1− 1 x = 1, so we can think of each root x as contributing a value of 1 4 to the sum. Therefore, we only care about the number of real roots. We show that there are 5 of these, and so the answer is 5",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2023 SMT Team Problem 14",
+   "question": "A teacher stands at (0 , 10) and has some students, where there is exactly one student at each integer position in the following triangle: ··· Here, the circle denotes the teacher at (0 , 10) and the triangle extends until and includes the column (21,y ). A teacher can see a student ( i,j ) if there is no student in the direct line of sight between the teacher and the position ( i,j ). Compute the number of students the teacher can see (assume that each student has no width—that is, each student is a point).",
+   "choices": null,
+   "answer": "279",
+   "solution": "Answer: 279. A teacher stands at (0 , 10) and has some students, where there is exactly one student at each integer position in the following triangle: ··· Here, the circle denotes the teacher at (0 , 10) and the triangle extends until and includes the column (21,y ). A teacher can see a student ( i,j ) if there is no student in the direct line of sight between the teacher and the position ( i,j ). Compute the number of students the teacher can see (assume that each student has no width—that is, each student is a point). Answer: 279 Solution: We count the number of slopes between (0,n ) and (i,j ). Since each of these radiate from the same point on one end, this will count the number of students the teacher can see. To do so, modify the grid: put the teacher at (0 , 0) and the students at ( x,y ) with 1 ≤ x≤ 21, −20≤y≤ 20 in the triangle shape. Then, the slope of a line is exactly y x. This implies that we are counting the number of reduced fractions y x where (x,y ) are in the triangle. Restrict our attention to the positive triangle: that is, the set of points 1 ≤y <x≤ 21, and let s be the number of reduced fractions. Then, the number of reduced fractions in this set is equal to the number of reduced fractions in the set 1≤x < y≤ 21. Hence, we find that 2 s + 1 is the total number of reduced fractions in the set 1≤x,y≤ 21, which is 21X i=1 21X j=1 1[gcd(i,j ) = 1]. This latter expression is the indicator of the gcd being 1: it is 1 if the gcd is 1 and 0 otherwise. Team Test Solutions April 8, 2023 Furthermore, note that our final answer is 2s + 1 as well (by symmetry and the midline), so we compute this value. Note that since Pn i=1 1[gcd(i,n ) = 1] =φ(n) and 1[gcd(n,n ) = 1] = 0, this implies that we can write nX i=1 nX j=1 1[gcd(i,j ) = 1] = n−1X i=1 n−1X j=1 1[gcd(i,j ) = 1] + 2φ(n). Recursing then yields that 21X i=1 21X j=1 1[gcd(i,j ) = 1] = 1 + 2 21X i=2 φ(i). Computing this last sum is a little bit tedious, but made easier by observing that for odd x, φ(2x) =φ(x) whereas for even x, φ(2x) = 2φ(x). 21X i=2 φ(n) = 1 + 2 + 2 + 4 + 2 + 6 + 4 + 6 + 4 + 10 + 4 + 12 + 6 + 8 + 8 + 16 + 6 + 18 + 8 + 12 = 139. Hence, our answer is 139· 2 + 1 = 279.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2021 SMT Team Problem 15",
+   "question": "Robin is at an archery range. There are 10 targets, each of varying diﬃculty. If Robin spends t seconds concentrating on target n where 1≤ n≤ 10, he has a probability p = 1− e−t/n of hitting the target. Hitting target n gives him n points and he is alloted a total of 60 seconds. If he has at most one attempt on each target, and he allots time to concentrate on each target optimally to maximize his point total, what is the expected value of the number of points Robin will get? (Assume no time is wasted between shots).",
+   "choices": null,
+   "answer": "55",
+   "solution": "Answer: 55− 55e−12/11. Robin is at an archery range. There are 10 targets, each of varying diﬃculty. If Robin spends t seconds concentrating on target n where 1≤ n≤ 10, he has a probability p = 1−e−t/n of hitting the target. Hitting target n gives him n points and he is alloted a total of 60 seconds. If he has at most one attempt on each target, and he allots time to concentrate on each target optimally to maximize his point total, what is the expected value of the number of points Robin will get? (Assume no time is wasted between shots). Answer: 55− 55e−12/11 Solution: Assume that Robin allots time tk to concentrate on target k. Then the expected value of his score is: 10∑ k=1 k(1−etk/k) = 55− (e−t1 + 2e−t2/2 +... + 10e−t10/10) By AM-GM, we have e−t1 + 2e−t2/2 +... + 10e−t10/10≥ 55 55√ e−t1−...−t10 = 55 55√ e−60 Therefore, the maximum expected value of his score is 55 − 55e −12 11 . This is achieved when he allots 12k/11 seconds to concentrating on target k.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

@@ -1,0 +1,411 @@
+{
+ "id": "amc10_rand_13",
+ "competition": "AMC 10",
+ "category": "Math",
+ "title": "AMC 10 — Random Mock #13 · 2026-09-04 13:16",
+ "instructions": "25 questions · 75 minutes · No calculator. 150 points total.",
+ "time_limit_min": 75,
+ "total_points": 150,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2006 AMC 10B Problem 1",
+   "question": "What is $(-1)^{1} + (-1)^{2} + ... + (-1)^{2006}$ ?",
+   "choices": {
+    "A": "-2006",
+    "B": "-1",
+    "C": "0",
+    "D": "1",
+    "E": "2006"
+   },
+   "answer": "C",
+   "solution": "Since $-1$ raised to an odd integer is $-1$ and $-1$ raised to an even integer exponent is $1$: \n\n$(-1)^{1} + (-1)^{2} + ... + (-1)^{2006} = (-1) + (1) + ... + (-1)+(1) = \\boxed{\\textbf{(C) }0}.$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 2,
+   "source": "2024 AMC 10B Problem 2",
+   "question": "What is $10! - 7! \\cdot 6!?$",
+   "choices": {
+    "A": "-120",
+    "B": "0",
+    "C": "120",
+    "D": "600",
+    "E": "720"
+   },
+   "answer": "B",
+   "solution": "$10! = 10 \\cdot 9 \\cdot 8 \\cdot 7! = 720 \\cdot 7!$\n\n$6! \\cdot 7! = 720 \\cdot 7!$\n\nTherefore, the equation is equal to $720 \\cdot 7! - 720 \\cdot 7! = \\boxed{\\textbf{(B) }0}$\n\n[ONLY FOR CERTAIN CHINESE TESTPAPERS]\n\n$0 - 5! = \\boxed{\\textbf{(A) }-120}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 3,
+   "source": "2020 AMC 10B Problem 3",
+   "question": "The ratio of $w$ to $x$ is $4:3$, the ratio of $y$ to $z$ is $3:2$, and the ratio of $z$ to $x$ is $1:6$. What is the ratio of $w$ to $y?$",
+   "choices": {
+    "A": "4:3",
+    "B": "3:2",
+    "C": "8:3",
+    "D": "4:1",
+    "E": "16:3"
+   },
+   "answer": "E",
+   "solution": "We have $$\\frac wy = \\frac wx \\cdot \\frac xz \\cdot \\frac zy = \\frac43\\cdot\\frac61\\cdot\\frac23=\\frac{16}{3},$$ from which $w:y=\\boxed{\\textbf{(E)}\\ 16:3}.$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 4,
+   "source": "2020 AMC 10A Problem 4",
+   "question": "A driver travels for $2$ hours at $60$ miles per hour, during which her car gets $30$ miles per gallon of gasoline. She is paid $\\$0.50$ per mile, and her only expense is gasoline at $\\$2.00$ per gallon. What is her net rate of pay, in dollars per hour, after this expense?",
+   "choices": {
+    "A": "20",
+    "B": "22",
+    "C": "24",
+    "D": "25",
+    "E": "26"
+   },
+   "answer": "E",
+   "solution": "Since the driver travels $60$ miles per hour and each hour she uses $2$ gallons of gasoline, she spends $\\$4$ per hour on gas. If she gets $\\$0.50$ per mile, then she gets $\\$30$ per hour of driving. Subtracting the gas cost, her net rate of money earned per hour is $\\boxed{\\textbf{(E)}\\ 26}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 5,
+   "source": "2018 AMC 10B Problem 5",
+   "question": "How many subsets of $\\{2,3,4,5,6,7,8,9\\}$ contain at least one prime number?",
+   "choices": {
+    "A": "\\text{ 128}",
+    "B": "\\text{ 192}",
+    "C": "\\text{ 224}",
+    "D": "\\text{ 240}",
+    "E": "\\text{ 256}"
+   },
+   "answer": "D",
+   "solution": "We use complementary counting, or \n\n$\\text{total - what we don't want = what we want}$. \n\nThere are a total of $2^8$ ways to create subsets (consider including or excluding each number) and there are a total of $2^4$ subsets only containing composite numbers (the composite numbers are $4, 6, 8, 9$). Therefore, there are $2^8-2^4=\\boxed{\\textbf{(D) }240}$ total ways to have at least one prime in a subset.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 6,
+   "source": "2003 AMC 10B Problem 6",
+   "question": "Many television screens are rectangles that are measured by the length of their diagonals. The ratio of the horizontal length to the height in a standard television screen is $4:3$. The horizontal length of a \"$27$-inch\" television screen is closest, in inches, to which of the following?",
+   "choices": {
+    "A": "20",
+    "B": "20.5",
+    "C": "21",
+    "D": "21.5",
+    "E": "22"
+   },
+   "answer": "D",
+   "solution": "If you divide the television screen into two right triangles, the legs are in the ratio of $4 : 3$, and we can let one leg be $4x$ and the other be $3x$. Then we can use the Pythagorean Theorem.\n\n$$\\begin{align*}(4x)^2+(3x)^2&=27^2\\\\\n16x^2+9x^2&=729\\\\\n25x^2&=729\\\\\nx^2&=\\frac{729}{25}\\\\\nx&=\\frac{27}{5}\\\\\nx&=5.4\\end{align*}$$\n\nThe horizontal length is $5.4\\times4=21.6$, which is closest to $\\boxed{\\textbf{(D) \\ } 21.5}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 7,
+   "source": "2007 AMC 10B Problem 7",
+   "question": "All sides of the convex pentagon $ABCDE$ are of equal length, and $\\angle A= \\angle B = 90^\\circ.$ What is the degree measure of $\\angle E?$",
+   "choices": {
+    "A": "90",
+    "B": "108",
+    "C": "120",
+    "D": "144",
+    "E": "150"
+   },
+   "answer": "E",
+   "solution": "$AB = EC$ because they are opposite sides of a square. Also, $ED = DC = AB$ because all sides of the convex pentagon are of equal length. Since $ABCE$ is a square and $\\triangle CED$ is an equilateral triangle, $\\angle AEC = 90$ and $\\angle CED = 60.$ Use angle addition:\n$$\\angle E = \\angle AEC + \\angle CED = 90 + 60 = \\boxed{\\textbf{(E)} 150}$$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 8,
+   "source": "2023 AMC 10A Problem 8",
+   "question": "Barb the baker has developed a new temperature scale for her bakery called the Breadus scale, which is a linear function of the Fahrenheit scale. Bread rises at $110$ degrees Fahrenheit, which is $0$ degrees on the Breadus scale. Bread is baked at $350$ degrees Fahrenheit, which is $100$ degrees on the Breadus scale. Bread is done when its internal temperature is $200$ degrees Fahrenheit. What is this in degrees on the Breadus scale?",
+   "choices": {
+    "A": "33",
+    "B": "34.5",
+    "C": "36",
+    "D": "37.5",
+    "E": "39"
+   },
+   "answer": "D",
+   "solution": "To solve this question, you can use $f(x) = mx + b$ where the $x$ is Fahrenheit and the $y$ is Breadus. We have $(110,0)$ and $(350,100)$. We want to find the value of $y$ in $(200,y)$ that falls on this line. The slope for these two points is $\\frac{5}{12}$; $y = \\frac{5}{12}x + b$. Solving for $b$ using $(110, 0)$, $\\frac{550}{12} = -b$. We get $b = \\frac{-275}{6}$. Plugging in $(200, y), \\frac{1000}{12}-\\frac{550}{12}=y$. Simplifying, $\\frac{450}{12} = \\boxed{\\textbf{(D) }37.5}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 9,
+   "source": "2013 AMC 10A Problem 9",
+   "question": "In a recent basketball game, Shenille attempted only three-point shots and two-point shots.  She was successful on $20\\%$ of her three-point shots and $30\\%$ of her two-point shots.  Shenille attempted $30$ shots.  How many points did she score?",
+   "choices": {
+    "A": "12",
+    "B": "18",
+    "C": "24",
+    "D": "30",
+    "E": "36"
+   },
+   "answer": "B",
+   "solution": "Let the number of attempted three-point shots be $x$ and the number of attempted two-point shots be $y$.  We know that $x+y=30$, and we need to evaluate $3(0.2x) + 2(0.3y)$, as we know that the three-point shots are worth $3$ points and that she made $20$% of them and that the two-point shots are worth $2$ and that she made $30$% of them.\n\nSimplifying, we see that this is equal to $0.6x + 0.6y = 0.6(x+y)$.  Plugging in $x+y=30$, we get $0.6(30) = \\boxed{\\textbf{(B) }18}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 10,
+   "source": "2006 AMC 10B Problem 10",
+   "question": "In a triangle with integer side lengths, one side is three times as long as a second side, and the length of the third side is $15$. What is the greatest possible perimeter of the triangle?",
+   "choices": {
+    "A": "43",
+    "B": "44",
+    "C": "45",
+    "D": "46",
+    "E": "47"
+   },
+   "answer": "A",
+   "solution": "Let $x$ be the length of the first side. \n\nThe lengths of the sides are: $x$, $3x$, and $15$. \n\nBy the Triangle Inequality,\n\n$3x < x + 15$ \n\n$2x < 15$\n\n$x < \\frac{15}{2}$\n\nThe greatest integer satisfying this inequality is $7$.\n\nSo the greatest possible perimeter is $7 + 3\\cdot7 + 15 =\\boxed{\\textbf{(A) } 43}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 11,
+   "source": "2022 AMC 10A Problem 11",
+   "question": "Ted mistakenly wrote $2^m\\cdot\\sqrt{\\frac{1}{4096}}$ as $2\\cdot\\sqrt[m]{\\frac{1}{4096}}.$ What is the sum of all real numbers $m$ for which these two expressions have the same value?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "C",
+   "solution": "We are given that $$2^m\\cdot\\sqrt{\\frac{1}{4096}} = 2\\cdot\\sqrt[m]{\\frac{1}{4096}}.$$\nConverting everything into powers of $2$ and equating exponents, we have\n$$\\begin{align*}\n2^m\\cdot(2^{-12})^{\\frac12} &= 2\\cdot (2^{-12})^{\\frac1m} \\\\\n2^{m-6} &= 2^{1-\\frac{12}{m}} \\\\\nm-6 &= 1-\\frac{12}{m}.\n\\end{align*}$$\nWe multiply both sides by $m,$ then rearrange as $$m^2-7m+12=0.$$\nBy Vieta's Formulas, the sum of such values of $m$ is $\\boxed{\\textbf{(C) } 7}.$\n\nNote that $m=3$ or $m=4$ from the quadratic equation above.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 12,
+   "source": "2018 AMC 10B Problem 12",
+   "question": "Line segment $\\overline{AB}$ is a diameter of a circle with $AB = 24$. Point $C$, not equal to $A$ or $B$, lies on the circle. As point $C$ moves around the circle, the centroid (center of mass) of $\\triangle ABC$ traces out a closed curve missing two points. To the nearest positive integer, what is the area of the region bounded by this curve?",
+   "choices": {
+    "A": "25",
+    "B": "38",
+    "C": "50",
+    "D": "63",
+    "E": "75"
+   },
+   "answer": "C",
+   "solution": "By the Inscribed Angle Theorem, $\\triangle ABC$ is a right triangle with $\\angle C=90^{\\circ}.$ So, its circumcenter is the midpoint of $\\overline{AB},$ and its median from $C$ is half as long as $\\overline{AB}.$ For each $\\triangle ABC,$ let $O$ and $G$ be its circumcenter and centroid, respectively. It follows that $OA=OB=OC=12.$ In any triangle, since the centroid divides each median into parts in the ratio $2:1,$ with the centroid being twice as close to the midpoint of a side as it is to the opposite vertex, we have $OG=\\frac13 OC=4.$\n\nAs shown below, $\\triangle ABC_1$ and $\\triangle ABC_2$ are two shapes of $\\triangle ABC$ with centroids $G_1$ and $G_2,$ respectively:\n\nTherefore, point $G$ traces out a circle (missing two points) with the center $O$ and the radius $\\overline{OG},$ as indicated in red. To the nearest positive integer, the area of the region bounded by the red curve is $\\pi\\cdot OG^2=16\\pi\\approx\\boxed{\\textbf{(C) } 50}.$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 13,
+   "source": "2019 AMC 10B Problem 13",
+   "question": "What is the sum of all real numbers $x$ for which the median of the numbers $4,6,8,17,$ and $x$ is equal to the mean of those five numbers?",
+   "choices": {
+    "A": "-5",
+    "B": "0",
+    "C": "5",
+    "D": "\\frac{15}{4}",
+    "E": "\\frac{35}{4}"
+   },
+   "answer": "A",
+   "solution": "The mean is $\\frac{4+6+8+17+x}{5}=\\frac{35+x}{5}$.\n\nThere are three possibilities for the median: it is either $6$, $8$, or $x$.\n\nLet's start with $6$.\n\n$\\frac{35+x}{5}=6$ has solution $x=-5$, and the sequence is $-5, 4, 6, 8, 17$, which does have median $6$, so this is a valid solution.\n\nNow let the median be $8$.\n\n$\\frac{35+x}{5}=8$ gives $x=5$, so the sequence is $4, 5, 6, 8, 17$, which has median $6$, so this is not valid.\n\nFinally we let the median be $x$.\n\n$\\frac{35+x}{5}=x \\implies 35+x=5x \\implies x=\\frac{35}{4}=8.75$, and the sequence is $4, 6, 8, 8.75, 17$, which has median $8$. This case is therefore again not valid.\n\nHence the only possible value of $x$ is $\\boxed{\\textbf{(A) }-5}.$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 14,
+   "source": "2011 AMC 10B Problem 14",
+   "question": "A rectangular parking lot has a diagonal of $25$ meters and an area of $168$ square meters. In meters, what is the perimeter of the parking lot?",
+   "choices": {
+    "A": "52",
+    "B": "58",
+    "C": "62",
+    "D": "68",
+    "E": "70"
+   },
+   "answer": "C",
+   "solution": "Let the sides of the rectangular parking lot be $a$ and $b$. Then $a^2 + b^2 = 625$ and $ab = 168$. Add the two equations together, then factor.\n$$\\begin{align*}\na^2 + 2ab + b^2 &= 625 + 168 \\times 2\\\\\n(a + b)^2 &= 961\\\\\na + b &= 31\n\\end{align*}$$\nThe perimeter of a rectangle is $2 (a + b) = 2 (31) = \\boxed{\\textbf{(C)} 62}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 15,
+   "source": "2017 AMC 10A Problem 15",
+   "question": "Chloe chooses a real number uniformly at random from the interval $[0, 2017]$. Independently, Laurent chooses a real number uniformly at random from the interval $[0, 4034]$. What is the probability that Laurent's number is greater than Chloe's number?",
+   "choices": {
+    "A": "\\frac{1}{2}",
+    "B": "\\frac{2}{3}",
+    "C": "\\frac{3}{4}",
+    "D": "\\frac{5}{6}",
+    "E": "\\frac{7}{8}"
+   },
+   "answer": "C",
+   "solution": "We can use geometric probability to solve this.\nSuppose a point $(x,y)$ lies in the $xy$-plane. Let $x$ be Chloe's number and $y$ be Laurent's number. Then obviously we want $y>x$, which basically gives us a region above a line. We know that Chloe's number is in the interval $[0,2017]$ and Laurent's number is in the interval $[0,4034]$, so we can create a rectangle in the plane, whose length is $2017$ and whose width is $4034$. Drawing it out and dividing into 4 congruent triangles, we see that Laurent's winning area is 3 triangles and Chloe's  is 1 triangle. $\\boxed{\\textbf{(C)}\\ \\frac{3}{4}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 16,
+   "source": "2010 AMC 10B Problem 16",
+   "question": "A square of side length $1$ and a circle of radius $\\dfrac{\\sqrt{3}}{3}$ share the same center. What is the area inside the circle, but outside the square?",
+   "choices": {
+    "A": "\\dfrac{\\pi}{3}-1",
+    "B": "\\dfrac{2\\pi}{9}-\\dfrac{\\sqrt{3}}{3}",
+    "C": "\\dfrac{\\pi}{18}",
+    "D": "\\dfrac{1}{4}",
+    "E": "\\dfrac{2\\pi}{9}"
+   },
+   "answer": "B",
+   "solution": "The radius of the circle is $\\frac{\\sqrt{3}}{3} = \\sqrt{\\frac{1}{3}}$. Half the diagonal of the square is $\\frac{\\sqrt{1^2+1^2}}{2} = \\frac{\\sqrt{2}}{2} = \\sqrt{\\frac12}$. We can see that the circle passes outside the square, but the square is NOT completely contained in the circle. Therefore the picture will look something like this:\n\nThen we proceed to find: 4 $\\cdot$ (area of sector marked off by the two radii - area of the triangle with sides on the square and the two radii).\n\nFirst we realize that the radius perpendicular to the side of the square between the two radii marking off the sector splits $AB$ in half. Let this half-length be $a$. Also note that $OX=\\frac12$ because it is half the side length of the square. Because this is a right triangle, we can use the Pythagorean Theorem to solve for $a.$\n\n$$a^2+\\left( \\frac12 \\right) ^2 = \\left( \\frac{\\sqrt{3}}{3} \\right) ^2$$\n\nSolving, $a= \\frac{\\sqrt{3}}{6}$ and $2a=\\frac{\\sqrt{3}}{3}$. Since $AB=AO=BO$, $\\triangle AOB$ is an equilateral triangle and the central angle is $60^{\\circ}$. Therefore the sector has an area $\\pi \\left( \\frac{\\sqrt{3}}{3} \\right) ^2 \\left( \\frac{60}{360} \\right) = \\frac{\\pi}{18}$.\n\nNow we turn to the triangle. Since it is equilateral, we can use the formula for the area of an equilateral triangle which is\n\n$$\\frac{s^2\\sqrt{3}}{4} = \\frac{\\frac13 \\sqrt{3}}{4} = \\frac{\\sqrt{3}}{12}$$\n\nPutting it together, we get the answer to be $4\\cdot\\left( \\frac{\\pi}{18}-\\frac{\\sqrt{3}}{12} \\right)= \\boxed{\\textbf{(B)}\\ \\frac{2\\pi}{9}-\\frac{\\sqrt{3}}{3}}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 17,
+   "source": "2020 AMC 10A Problem 17",
+   "question": "Define $$P(x) =(x-1^2)(x-2^2)\\cdots(x-100^2).$$ How many integers $n$ are there such that $P(n)\\leq 0$?",
+   "choices": {
+    "A": "4900",
+    "B": "4950",
+    "C": "5000",
+    "D": "5050",
+    "E": "5100"
+   },
+   "answer": "E",
+   "solution": "We perform casework on $P(n)\\leq0:$\n\n  $P(n)=0$\nIn this case, there are $100$ such integers $n:$ $$1^2,2^2,3^2,\\ldots,100^2.$$\n  $P(n)\nThere are $100$ factors in $P(x),$ and we need an odd number of them to be negative. We construct the table below:\n$$\\begin{array}{c|c|c}\n& & \\\\ [-2.5ex]\n\\textbf{Interval of }\\boldsymbol{x} & \\boldsymbol{\\#}\\textbf{ of Negative Factors} & \\textbf{Valid?} \\\\ [0.5ex]\n\\hline\n& & \\\\ [-2ex]\n\\left(-\\infty,1^2\\right) & 100 & \\\\ [0.5ex]\n\\left(1^2,2^2\\right) & 99 & \\checkmark \\\\ [0.5ex]\n\\left(2^2,3^2\\right) & 98 & \\\\ [0.5ex]\n\\left(3^2,4^2\\right) & 97 & \\checkmark \\\\ [0.5ex]\n\\left(4^2,5^2\\right) & 96 & \\\\ [0.5ex]\n\\left(5^2,6^2\\right) & 95 & \\checkmark \\\\ [0.5ex]\n\\left(6^2,7^2\\right) & 94 & \\\\\n\\vdots & \\vdots & \\vdots \\\\ [0.75ex]\n\\left(99^2,100^2\\right) & 1 & \\checkmark \\\\ [0.5ex]\n\\left(100^2,\\infty\\right) & 0 &  \\\\ [0.5ex]\n\\end{array}$$\nNote that there are $50$ valid intervals of $x.$ We count the integers in these intervals: \n$$\\begin{align*}\n\\left(2^2-1^2-1\\right)+\\left(4^2-3^2-1\\right)+\\left(6^2-5^2-1\\right)+\\cdots+\\left(100^2-99^2-1\\right)&=\\underbrace{\\left(2^2-1^2\\right)}_{(2+1)(2-1)}+\\underbrace{\\left(4^2-3^2\\right)}_{(4+3)(4-3)}+\\underbrace{\\left(6^2-5^2\\right)}_{(6+5)(6-5)}+\\cdots+\\underbrace{\\left(100^2-99^2\\right)}_{(100+99)(100-99)}-50 \\\\\n&=\\underbrace{(2+1)+(4+3)+(6+5)+\\cdots+(100+99)}_{1+2+3+4+5+6+\\cdots+99+100}-50 \\\\\n&=\\frac{101(100)}{2}-50 \\\\\n&=5000.\n\\end{align*}$$\nIn this case, there are $5000$ such integers $n.$\n\nTogether, the answer is $100+5000=\\boxed{\\textbf{(E) } 5100}.$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 18,
+   "source": "2012 AMC 10B Problem 18",
+   "question": "Suppose that one of every 500 people in a certain population has a particular disease, which displays no symptoms. A blood test is available for screening for this disease. For a person who has this disease, the test always turns out positive. For a person who does not have the disease, however, there is a $2\\%$ false positive rate--in other words, for such people, $98\\%$ of the time the test will turn out negative, but $2\\%$ of the time the test will turn out positive and will incorrectly indicate that the person has the disease. Let $p$ be the probability that a person who is chosen at random from this population and gets a positive test result actually has the disease. Which of the following is closest to $p$?",
+   "choices": {
+    "A": "\\frac{1}{98}",
+    "B": "\\frac{1}{9}",
+    "C": "\\frac{1}{11}",
+    "D": "\\frac{49}{99}",
+    "E": "\\frac{98}{99}"
+   },
+   "answer": "C",
+   "solution": "This question can be solved by considering all the possibilities:\n\n$1$ out of $500$ people will have the disease and will be tested positive for the disease.\n\nOut of the remaining $499$ people, $\\frac{1}{50}$, or about $10$ people, will be tested positive for the disease incorrectly.\n\nTherefore, an approximation of $p$ can be found by taking $\\dfrac{1}{1 +10}$, which is $\\dfrac{1}{11}$, or $\\boxed{\\textbf{(C)}}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 19,
+   "source": "2015 AMC 10B Problem 19",
+   "question": "In $\\triangle{ABC}$, $\\angle{C} = 90^{\\circ}$ and $AB = 12$. Squares $ABXY$ and $ACWZ$ are constructed outside of the triangle. The points $X, Y, Z$, and $W$ lie on a circle. What is the perimeter of the triangle?",
+   "choices": {
+    "A": "12+9\\sqrt{3}",
+    "B": "18+6\\sqrt{3}",
+    "C": "12+12\\sqrt{2}",
+    "D": "30",
+    "E": "32"
+   },
+   "answer": "C",
+   "solution": "The center of the circle lies on the intersection between the perpendicular bisectors of chords $ZW$ and $YX$. Therefore we know the center of the circle must also be the midpoint of the hypotenuse. Let this point be $O$. Draw perpendiculars to $ZW$ and $YX$ from $O$, and connect $OZ$ and $OY$. $OY^2=6^2+12^2=180$. Let $AC=a$ and $BC=b$. Then $\\left(\\dfrac{a}{2}\\right)^2+\\left(a+\\dfrac{b}{2}\\right)^2=OZ^2=OY^2=180$. Simplifying this gives $\\dfrac{a^2}{4}+\\dfrac{b^2}{4}+a^2+ab=180$. But by Pythagorean Theorem on $\\triangle ABC$, we know $a^2+b^2=144$, because $AB=12$. Thus $\\dfrac{a^2}{4}+\\dfrac{b^2}{4}=\\dfrac{144}{4}=36$. So our equation simplifies further to $a^2+ab=144$. However $a^2+b^2=144$, so $a^2+ab=a^2+b^2$, which means $ab=b^2$, or $a=b$. Aha! This means $\\triangle ABC$ is just an isosceles right triangle, so $AC=BC=\\dfrac{12}{\\sqrt{2}}=6\\sqrt{2}$, and thus the perimeter is $\\boxed{\\textbf{(C)}\\ 12+12\\sqrt{2}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 20,
+   "source": "2010 AMC 10B Problem 20",
+   "question": "Two circles lie outside regular hexagon $ABCDEF$. The first is tangent to $\\overline{AB}$, and the second is tangent to $\\overline{DE}$. Both are tangent to lines $BC$ and $FA$. What is the ratio of the area of the second circle to that of the first circle?",
+   "choices": {
+    "A": "18",
+    "B": "27",
+    "C": "36",
+    "D": "81",
+    "E": "108"
+   },
+   "answer": "D",
+   "solution": "A good diagram is very helpful. \n\n File:Amc10B 2010.gif \n\nThe first circle is in red, the second in blue.\nWith this diagram, we can see that the first circle is inscribed in equilateral triangle $GBA$ while the second circle is inscribed in $GKJ$.\nFrom this, it's evident that the ratio of the blue area to the red area is equal to the '''ratio of the areas $\\triangle GKJ$ to $\\triangle GBA$'''\n\nSince the ratio of areas is equal to the square of the ratio of lengths, we know our final answer is $\\left(\\frac{GK}{GB}\\right)^2$.\nFrom the diagram, we can see that this is $9^2=\\boxed{\\textbf{(D)}\\ 81}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 21,
+   "source": "2016 AMC 10B Problem 21",
+   "question": "What is the area of the region enclosed by the graph of the equation $x^2+y^2=|x|+|y|?$",
+   "choices": {
+    "A": "\\pi+\\sqrt{2}",
+    "B": "\\pi+2",
+    "C": "\\pi+2\\sqrt{2}",
+    "D": "2\\pi+\\sqrt{2}",
+    "E": "2\\pi+2\\sqrt{2}"
+   },
+   "answer": "B",
+   "solution": "Without loss of generality (WLOG) note that if a point in the first quadrant satisfies the equation, so do its corresponding points in the other three quadrants. Therefore, we can assume that $x, y \\ge 0$, which implies that $|x|=x$ and $|y|=y$, and multiply by $4$ at the end.\n\nWe can rearrange the equation to get $x^2-x+y^2-y=0 \\Rightarrow (x-\\tfrac12)^2+(y-\\tfrac12)^2=(\\tfrac{\\sqrt2}{2})^2$, which describes a circle with center $(\\tfrac12, \\tfrac12)$ and radius $\\tfrac{\\sqrt2}{2}.$ It's clear we now want to find the union of four equal areas.\n\nThere are several ways to find the area, but note that if you connect $(0, 1)$ to its other three respective points in the other three quadrants, you get a square of area $2$, along with four half-circles of diameter $\\sqrt{2}$, for a total area of $2+2\\cdot(\\tfrac{\\sqrt2}{2})^2\\pi = \\pi + 2$ which is $\\boxed{\\textbf{(B)} \\pi+2}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 22,
+   "source": "2014 AMC 10A Problem 22",
+   "question": "In rectangle $ABCD$, $\\overline{AB}=20$ and $\\overline{BC}=10$. Let $E$ be a point on $\\overline{CD}$ such that $\\angle CBE=15^\\circ$. What is $\\overline{AE}$?",
+   "choices": {
+    "A": "\\dfrac{20\\sqrt3}3",
+    "B": "10\\sqrt3",
+    "C": "18",
+    "D": "11\\sqrt3",
+    "E": "20"
+   },
+   "answer": "E",
+   "solution": "Note that $\\tan 15^\\circ=2-\\sqrt{3}=\\frac{EC}{10} \\Rightarrow EC=20-10 \\sqrt 3$. (It is important to memorize the sin, cos, and tan values of $15^\\circ$ and $75^\\circ$.) Therefore, we have $DE=10\\sqrt 3$. Since $ADE$ is a $30-60-90$ triangle, $AE=2 \\cdot AD=2 \\cdot 10=\\boxed{\\textbf{(E)} \\: 20}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 23,
+   "source": "2023 AMC 10A Problem 23",
+   "question": "If the positive integer $c$ has positive integer divisors $a$ and $b$ with $c = ab$, then $a$ and $b$ are said to be $\\textit{complementary}$ divisors of $c$. Suppose that $N$ is a positive integer that has one complementary pair of divisors that differ by $20$ and another pair of complementary divisors that differ by $23$. What is the sum of the digits of $N$?",
+   "choices": {
+    "A": "9",
+    "B": "13",
+    "C": "15",
+    "D": "17",
+    "E": "19"
+   },
+   "answer": "C",
+   "solution": "Consider positive integers $a, b$ with a difference of $20$. Suppose $b = a-20$. Then, we have $(a)(a-20) = n$. If there is another pair of two integers that multiply to $n$ but have a difference of 23, one integer must be greater than $a$, and the other must be smaller than $a-20$. We can create two cases and set both equal. \n\nWe have $(a)(a-20) = (a+1)(a-22) \\text{ or } (a+2)(a-21).$ Note that if we go further to $(a+3)(a-20)$ and beyond, that would violate the condition that one of the two integers must be smaller than $a-20.$\n\nStarting with the first case, we have $a^2-20a = a^2-21a-22$, or $0=-a-22$, which gives $a=-22$, which is not possible. The other case is $a^2-20a = a^2-19a-42$, so $a=42$. Thus, our product is $(42)(22) = (44)(21)$, so $n = 924$. Adding the digits, we have $9+2+4 = \\boxed{\\textbf{(C) } 15}$.\n\n-Sepehr2010, mathboy282, the_eaglercraft_grinder",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 24,
+   "source": "2013 AMC 10A Problem 24",
+   "question": "Central High School is competing against Northern High School in a backgammon match. Each school has three players, and the contest rules require that each player play two games against each of the other school's players. The match takes place in six rounds, with three games played simultaneously in each round. In how many different ways can the match be scheduled?",
+   "choices": {
+    "A": "540",
+    "B": "600",
+    "C": "720",
+    "D": "810",
+    "E": "900"
+   },
+   "answer": "E",
+   "solution": "Let us label the players of the first team $A$, $B$, and $C$, and those of the second team, $X$, $Y$, and $Z$. \n\n$\\textbf{1}$. One way of scheduling all six distinct rounds could be:\n\nRound 1: $AX$ $BY$ $CZ$\n\nRound 2: $AX$ $BZ$ $CY$\n\nRound 3: $AY$ $BX$ $CZ$\n\nRound 4: $AY$ $BZ$ $CX$\n\nRound 5: $AZ$ $BX$ $CY$\n\nRound 6: $AZ$ $BY$ $CX$\n\nThe above mentioned schedule ensures that each player of one team plays twice with each player from another team. Now you can generate a completely new schedule by permutating those $6$ rounds and that can be done in $6!=720$ ways.\n\n$\\textbf{2}$. One can also make the schedule in such a way that two rounds are repeated.  \n\n(a)\n\nRound 1: $AX$ $BZ$ $CY$\n\nRound 2: $AX$ $BZ$ $CY$\n\nRound 3: $AY$ $BX$ $CZ$\n\nRound 4: $AY$ $BX$ $CZ$\n\nRound 5: $AZ$ $BY$ $CX$\n\nRound 6: $AZ$ $BY$ $CX$\n\n(b)\n\nRound 1: $AX$ $BY$ $CZ$\n\nRound 2: $AX$ $BY$ $CZ$\n\nRound 3: $AY$ $BZ$ $CX$\n\nRound 4: $AY$ $BZ$ $CX$\n\nRound 5: $AZ$ $BX$ $CY$\n\nRound 6: $AZ$ $BX$ $CY$\n\nAs mentioned earlier any permutation of (a) and (b) will also give us a new schedule. For both (a) and (b) the number of permutations are\n$\\frac{6!}{2!2!2!}$ = $90$\n\nSo the total number of schedules is $720+90+90$ =$\\boxed{\\textbf{(E)} 900}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 25,
+   "source": "2020 AMC 10A Problem 25",
+   "question": "Jason rolls three fair standard six-sided dice. Then he looks at the rolls and chooses a subset of the dice (possibly empty, possibly all three dice) to reroll. After rerolling, he wins if and only if the sum of the numbers face up on the three dice is exactly $7.$ Jason always plays to optimize his chances of winning. What is the probability that he chooses to reroll exactly two of the dice?",
+   "choices": {
+    "A": "\\frac{7}{36}",
+    "B": "\\frac{5}{24}",
+    "C": "\\frac{2}{9}",
+    "D": "\\frac{17}{72}",
+    "E": "\\frac{1}{4}"
+   },
+   "answer": "A",
+   "solution": "Consider the probability that rolling two dice gives a sum of $s$, where $s \\leq 7$. There are $s - 1$ pairs that satisfy this, namely $(1, s - 1), (2, s - 2), \\ldots, (s - 1, 1)$, out of $6^2 = 36$ possible pairs. The probability is $\\frac{s - 1}{36}$.\n\nTherefore, if one die has a value of $a$ and Jason rerolls the other two dice, then the probability of winning is $\\frac{7 - a - 1}{36} = \\frac{6 - a}{36}$.\n\nIn order to maximize the probability of winning, $a$ must be minimized. This means that if Jason rerolls two dice, he must choose the two dice with the maximum values.\n\nThus, we can let $a \\leq b \\leq c$ be the values of the three dice. Consider the case when $a + b  \\frac{6 - a}{36}$, so rolling one die is always better than rolling two dice if $a + b  \\frac5{72} \\rightarrow a \\leq 3$.\n\nThus, rerolling two dice is optimal if and only if $a \\leq 3$ and $a + b \\geq 7$. The possible triplets $(a, b, c)$ that satisfy these conditions, and the number of ways they can be permuted, are\n\n$(3, 4, 4) \\rightarrow 3$ ways.\n\n$(3, 4, 5) \\rightarrow 6$ ways.\n\n$(3, 4, 6) \\rightarrow 6$ ways.\n\n$(3, 5, 5) \\rightarrow 3$ ways.\n\n$(3, 5, 6) \\rightarrow 6$ ways.\n\n$(3, 6, 6) \\rightarrow 3$ ways.\n\n$(2, 5, 5) \\rightarrow 3$ ways.\n\n$(2, 5, 6) \\rightarrow 6$ ways.\n\n$(2, 6, 6) \\rightarrow 3$ ways.\n\n$(1, 6, 6) \\rightarrow 3$ ways.\n\nThere are $3 + 6 + 6 + 3 + 6 + 3 + 3 + 6 + 3 + 3 = 42$ ways in which rerolling two dice is optimal, out of $6^3 = 216$ possibilities, Therefore, the probability that Jason will reroll two dice is $\\frac{42}{216} = \\boxed{\\textbf{(A) } \\frac{7}{36}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  }
+ ]
+}

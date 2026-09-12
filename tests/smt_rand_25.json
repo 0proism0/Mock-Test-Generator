@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_25",
+ "competition": "SMT — Calculus",
+ "category": "Math",
+ "title": "SMT — Calculus — Random Mock #25 · 2026-08-27 08:50",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2014 SMT Calculus Problem 1",
+   "question": "Let f(x) = x4 and let g(x) = x−4. Compute f′′(2)g′′(2).",
+   "choices": null,
+   "answer": "15",
+   "solution": "Answer: 15. Let f(x) =x4 and let g(x) =x−4. Compute f′′(2)g′′(2). Answer: 15 Solution: We note that f′′(x) = 12x2 and g′′(x) = 20x−6. Then f′′(x)g′′(x) = 20· 12·x−4. Plugging in x = 2 we get f′′(2)g′′(2) = 12·20 16 = 3· 5 = 15 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2011 SMT Calculus Problem 2",
+   "question": "A trapezoid is inscribed in a semicircle of radius 2 such that one base of the trapezoid lies along the diameter of the semicircle. Find the largest possible area of the trapezoid.",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. A trapezoid is inscribed in a semicircle of radius 2 such that one base of the trapezoid lies along the diameter of the semicircle. Find the largest possible area of the trapezoid. Answer: 3 √ 3 Clearly, a trapezoid with maximal area will have a base equal to the diameter. If x is the height of the trapezoid, then the area of a trapezoid is h(b1+b2) 2 =A(x) = ( 2 + √ 4−x2) ·x so the maximum occurs when 0 =A′(x) = 2 + √ 4−x2− x2 √ 4−x2 = 2 √ 4−x2 + 4− 2x2 √ 4−x2 , which is equivalent to 4(4−x2) = (2x2− 4)2 = 4x4− 16x2 + 16. Collecting like terms gives 4 x4 = 12x2, and since x⁄= 0 (the degenerate case), we get that x = √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2020 SMT Calculus Problem 3",
+   "question": "For all θ from 0 to 2π, Annie draws a line segment of length θ from the origin in the direction of θ radians. What is the area of the spiral swept out by the union of these line segments?",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4π3. For all θ from 0 to 2π, Annie draws a line segment of length θ from the origin in the direction of θ radians. What is the area of the spiral swept out by the union of these line segments? Answer: 4π3 3 Solution: After drawing the spiral, it should become clear that we have the following calculation since our radius is θ 1 2 ∫ 2π 0 θ2dθ = 4π3 3",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2014 SMT Calculus Problem 4",
+   "question": "The set of points ( x, y) in the plane satisfying x2/5 +|y| = 1 form a curve enclosing a region. Compute the area of this region.",
+   "choices": null,
+   "answer": "8",
+   "solution": "Answer: 8. The set of points ( x,y ) in the plane satisfying x2/5 +|y| = 1 form a curve enclosing a region. Compute the area of this region. Answer: 8 7 Solution: The set of points satisfying the equation form a closed curve that encloses a region. Observe that this curve is preserved if we transform x↦→−x or y↦→−y, so it is symmetric in all 4 quadrants. In particular, we can ﬁnd the area in the ﬁrst quadrant, where x,y >0. In the quadrant, we can rewrite our equation as y = 1−x2/5. This curve intersects the coordinate axes at (0, 1) and (1, 0), and it is continuous, so the area is A = ∫ 1 0 1−x2/5dx = 2",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2023 SMT Calculus Problem 5",
+   "question": "Compute Z sin(sin(x)) sin(2x) dx.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2(sin(sin(x)) − sin(x) cos(sin(x))). Compute Z sin(sin(x)) sin(2x) dx. Answer: 2(sin(sin(x)) − sin(x) cos(sin(x))) Solution: Rewrite sin(2x) = 2 sinx cosx. Then, if f(x) = sinx, we are looking at 2 Z f(x)f(f(x))f′(x) dx . This suggests letting y =f(x), so then our integral becomes 2 Z yf (y) dy = 2 Z sin(y) dy = 2(sin(y)−y cos(y)) = 2(sin(sin(x))− sin(x) cos(sin(x))).",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2023 SMT Calculus Problem 6",
+   "question": "Compute Z 1 −1 1 + cos(x) 1 + 3x dx.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1 + sin(1). Compute Z 1 −1 1 + cos(x) 1 + 3x dx. Answer: 1 + sin(1) Calculus Test Solutions April 8, 2023 Solution: Note that Z 1 −1 1 + cos(x) 1 + 3x dx = Z 0 −1 1 + cos(x) 1 + 3x dx + Z 1 0 1 + cos(x) 1 + 3x dx =− Z 0 1 1 + cos(−y) 1 + 3−y dy + Z 1 0 1 + cos(x) 1 + 3x dx = Z 1 0 3x(1 + cos(x)) 1 + 3x + 1 + cos(x) 1 + 3x dx = Z 1 0 1 + cos(x) dx = 1 + sin(1) where in the second step we did the u-substitution y =−x.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2011 SMT Calculus Problem 7",
+   "question": "For the curve sin(x) + sin(y) = 1 lying in the ﬁrst quadrant, ﬁnd the constant α such that lim x→0 xαd2y dx2 exists and is nonzero.",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. For the curve sin(x) + sin(y) = 1 lying in the ﬁrst quadrant, ﬁnd the constant α such that lim x→0 xαd2y dx2 SMT 2011 Calculus Test and Solutions February 19, 2011 exists and is nonzero. Answer: 3 2 Diﬀerentiate the equation to get cos(x) +dy dx cos(y) = 0 and again to get − sin(x) +d2y dx2 cos(y)− (dy dx )2 sin(y) = 0. By solving these we have dy dx =−cos(x) cos(y) and d2y dx2 = sin(x) cos2(y) + sin(y) cos2(x) cos3(y) . Let sin(x) = t, then sin(y) = 1−t. Also cos( x) = √ 1−t2 and cos(y) = √ 1− (1−t)2 = √ t(2−t). Substituting gives d2y dx2 = t2(2−t) + (1−t)(1−t2) t3/2(2−t)3/2 =t−3/2 1−t +t2 (2−t)3/2. Since limx→0 t x = 1, α = 3 2 should give the limit limx→0xαd2y dx2 = 1 2 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2014 SMT Calculus Problem 8",
+   "question": "Evaluate ∫ 2 −2 1 + x2 1 + 2x dx.",
+   "choices": null,
+   "answer": "14",
+   "solution": "Answer: 14. Evaluate ∫ 2 −2 1 +x2 1 + 2x dx. Answer: 14 3 Solution: We substitute the variable x by−x and add the resulting integral to the original integral to get 2I = ∫ 2 −2 1 +x2 1 + 2x dx + ∫ −2 2 − 1 +x2 1 + 2−xdx = ∫ 2 −2 1 +x2 1 + 2x + 1 +x2 1 + 2−xdx = ∫ 2 −2 1 +x2 1 + 2x + (1 +x2)2x 1 + 2x dx = ∫ 2 −2 (1 +x2)· (1 + 2x) 1 + 2x dx = ∫ 2 −2 1 +x2dx = 4 + 16 3 = 28 3 . So the given integral is I = 14 3 . Note that more generally, for even functions f, ∫a −a f (x) 1+bxdx = 1 2 ∫a −af(x)dx. SMT 2014 Calculus Test Solutions February 15, 2014",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2019 SMT Calculus Problem 9",
+   "question": "Magic liquid forms a cone whose circular base rests on the ﬂoor. Time is measured in seconds. At time 0, the cone has height and radius 1 cm. Let R(t) be the rate at which liquid evaporates in cm3/s at time t. As the liquid evaporates, the cone’s radius remains the same but its height decreases. Let S(t) be the surface area of the slanted part of the cone in cm2 at time t. If R(t) = S(t)2 (numerically in the speciﬁed units), how many seconds does it take for the liquid to evaporate entirely?",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Magic liquid forms a cone whose circular base rests on the ﬂoor. Time is measured in seconds. At time 0, the cone has height and radius 1 cm. Let R(t) be the rate at which liquid evaporates in cm3/s at time t. As the liquid evaporates, the cone’s radius remains the same but its height decreases. Let S(t) be the surface area of the slanted part of the cone in cm2 at time t. If R(t) = S(t)2 (numerically in the speciﬁed units), how many seconds does it take for the liquid to evaporate entirely? Answer: 1 12 Solution: The circumference of the bottom circle is always 2π, and when the cone has height h, the slanted portion can be cut and ﬂattened so that 2 π is the length of an arc along the circumference of a circle with radius √ h2 + 1, which should have circumference 2π √ h2 + 1. Thus, by examining ratios, we see that the surface area of the slanted portion is π √ h2 + 1. Denote the cone’s volume by V so that V = 1 3πh and ∂V ∂t =−R(t) =−S(t)2 =−π2(h2 + 1). By the deﬁnition ofV , we also know that ∂V ∂t = π 3 ∂h ∂t . This gives us ∫ dh h2+1 =−3π ∫ dt, which we ﬁnd yields h = tan(C− 3πt). The initial condition is that when t = 0, h is 1, so C = π 4 . Therefore, h is 0 when t is π 4 1 3π = 1 12 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2018 SMT Calculus Problem 10",
+   "question": "Fact: The value ln(2) is not the root of any polynomial with rational coeﬃcients. For any nonnegative integer n, let pn(x) be the unique polynomial with integer coeﬃcients such that pn(ln(2)) = ∫ 2 1 (ln(x))n dx. Compute the value of the sum ∞∑ n=0 1 pn(0) .",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Fact: The value ln(2) is not the root of any polynomial with rational coeﬃcients. For any nonnegative integer n, let pn(x) be the unique polynomial with integer coeﬃcients such that pn(ln(2)) = ∫ 2 1 (ln(x))ndx. Compute the value of the sum ∞∑ n=0 1 pn(0). Answer: 1 e Solution: We ﬁrst attempt to compute the integral pn(ln(2)) = ∫ 2 1 (ln(x))ndx. Using inte- gration by parts with u = (ln(x))n and dv = 1, we get ∫ 2 1 (ln(x))ndx =x(ln(x))n⏐⏐2 1− ∫ 2 1 n(ln(x))n−1dx = 2(ln(2))n−n ∫ 2 1 (ln(x))n−1dx = 2(ln(2))n−npn−1(ln(2)). Because ln(2) is not the root of any polynomial with rational coeﬃcients, we can plug in x = ln(2) to get the recurrence pn(x) = 2xn−npn−1(x). Recall that we are only concerned with the constant terms pn(0), so plugging in x = 0 yields pn(0) =−npn−1(0). Now since p0(ln(2)) = ∫ 2 1 dx = 1, we havep0(x) = 1, and therefore p0(0) = 1. From the recurrence, we deduce that pn(0) = (−1)n·n!. Our desired sum is thus ∞∑ n=0 1 pn(0) = ∞∑ n=0 (−1)n n! = 1 e from the Taylor series expansion of ex at x =−1.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

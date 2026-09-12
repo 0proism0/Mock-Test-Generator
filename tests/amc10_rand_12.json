@@ -1,0 +1,411 @@
+{
+ "id": "amc10_rand_12",
+ "competition": "AMC 10",
+ "category": "Math",
+ "title": "AMC 10 — Random Mock #12 · 2026-08-27 08:50",
+ "instructions": "25 questions · 75 minutes · No calculator. 150 points total.",
+ "time_limit_min": 75,
+ "total_points": 150,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2025 AMC 10A Problem 1",
+   "question": "Anna leaves town on her bicycle at $1{:}30$ PM, traveling due north at $12$ km/h. Ben leaves the same town at $2{:}00$ PM, biking due north at $16$ km/h along the same road. How many minutes after Ben starts does he catch up with Anna?",
+   "choices": {
+    "A": "60",
+    "B": "75",
+    "C": "90",
+    "D": "105",
+    "E": "120"
+   },
+   "answer": "C",
+   "solution": "Anna has a $12 \\times 0.5 = 6$ km head start. Ben gains $16-12=4$ km per hour, so he closes 6 km in $\\frac{6}{4}=1.5$ hours $= 90$ minutes.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 2,
+   "source": "2016 AMC 10A Problem 2",
+   "question": "For what value of $x$ does $10^{x}\\cdot 100^{x}=1000^{4}$?",
+   "choices": {
+    "A": "4",
+    "B": "3",
+    "C": "6",
+    "D": "8",
+    "E": "12"
+   },
+   "answer": "A",
+   "solution": "$10^{x}\\cdot 100^{x}=10^x\\cdot 10^{2x}=10^{3x}$ and $1000^4=10^{12}$, so $3x=12$ and $x=4$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 3,
+   "source": "2012 AMC 10A Problem 3",
+   "question": "A bug crawls along a number line, starting at $3$. It crawls to $-5$, then turns around and crawls to $7$. How many units does the bug crawl altogether?",
+   "choices": {
+    "A": "$18$",
+    "B": "$20$",
+    "C": "$22$",
+    "D": "$24$",
+    "E": "$25$"
+   },
+   "answer": "B",
+   "solution": "From $3$ to $-5$ the bug crawls $|3-(-5)|=8$ units, and from $-5$ to $7$ it crawls $|-5-7|=12$ units. Altogether it crawls $8+12=20$ units.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 4,
+   "source": "2013 AMC 10B Problem 4",
+   "question": "When counting from $5$ to $303$, $77$ is the $73^{\\text{rd}}$ number counted. When counting backwards from $303$ to $5$, $77$ is the $n^{\\text{th}}$ number counted. What is $n$?",
+   "choices": {
+    "A": "$224$",
+    "B": "$225$",
+    "C": "$226$",
+    "D": "$227$",
+    "E": "$228$"
+   },
+   "answer": "D",
+   "solution": "There are $303-5+1=299$ numbers from $5$ to $303$. If $77$ is the $73^{\\text{rd}}$ number counting forward, then $299-73=226$ numbers come after it, so counting backwards it is the $226+1=227^{\\text{th}}$ number. Thus $n=227$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 5,
+   "source": "2017 AMC 10A Problem 5",
+   "question": "The sum of two nonzero real numbers is $7$ times their product. What is the sum of the reciprocals of the two numbers?",
+   "choices": {
+    "A": "\\frac{1}{7}",
+    "B": "\\frac{2}{7}",
+    "C": "\\frac{7}{2}",
+    "D": "7",
+    "E": "14"
+   },
+   "answer": "D",
+   "solution": "If $x+y=7xy$, then $\\frac{1}{x}+\\frac{1}{y}=\\frac{x+y}{xy}=\\frac{7xy}{xy}=7$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 6,
+   "source": "2015 AMC 10A Problem 6",
+   "question": "The sum of two positive numbers is $7$ times their difference. What is the ratio of the larger number to the smaller number?",
+   "choices": {
+    "A": "\\frac{4}{3}",
+    "B": "\\frac{5}{4}",
+    "C": "\\frac{6}{5}",
+    "D": "\\frac{7}{6}",
+    "E": "\\frac{8}{7}"
+   },
+   "answer": "A",
+   "solution": "Let $x>y$. Then $x+y=7(x-y)$, so $8y=6x$ and $\\frac{x}{y}=\\frac{8}{6}=\\frac{4}{3}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 7,
+   "source": "2022 AMC 10A Problem 7",
+   "question": "The least common multiple of a positive integer $n$ and $45$ is $315$, and their greatest common divisor is $15$. What is $n$?",
+   "choices": {
+    "A": "45",
+    "B": "90",
+    "C": "105",
+    "D": "135",
+    "E": "210"
+   },
+   "answer": "C",
+   "solution": "Since $\\operatorname{lcm}(a,b)\\cdot\\gcd(a,b)=a\\cdot b$, we get $n = \\frac{315 \\cdot 15}{45} = 105$. Check: $\\gcd(105,45)=15$, $\\operatorname{lcm}(105,45)=315$. ✓",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 8,
+   "source": "2017 AMC 10A Problem 8",
+   "question": "At a gathering of $40$ people, there are $25$ people who all know each other and $15$ people who know no one. People who know each other hug, and people who do not know each other shake hands. How many handshakes occur within the group?",
+   "choices": {
+    "A": "$480$",
+    "B": "$375$",
+    "C": "$420$",
+    "D": "$450$",
+    "E": "$510$"
+   },
+   "answer": "A",
+   "solution": "There are $\\binom{40}{2}=780$ pairs of people altogether. The only pairs who know each other (and hence hug) are the $\\binom{25}{2}=300$ pairs within the group of $25$ mutual acquaintances. Every other pair shakes hands, giving $780-300=480$ handshakes.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 9,
+   "source": "2020 AMC 10B Problem 9",
+   "question": "How many ordered pairs of integers $(x, y)$ satisfy the equation $$x^{2024}+y^2=2y?$$",
+   "choices": {
+    "A": "$1$",
+    "B": "$2$",
+    "C": "$3$",
+    "D": "$4$",
+    "E": "$\\text{infinitely many}$"
+   },
+   "answer": "D",
+   "solution": "Rewrite as $(y-1)^2=1-x^{2024}$. Since the left side is nonnegative, $x^{2024}\\leq 1$, so $x\\in\\{-1,0,1\\}$. If $x=0$, then $(y-1)^2=1$, giving $y=0$ or $y=2$. If $x=\\pm 1$, then $(y-1)^2=0$, giving $y=1$. The pairs are $(0,0),(0,2),(1,1),(-1,1)$: a total of $4$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 10,
+   "source": "2012 AMC 10B Problem 10",
+   "question": "How many ordered pairs of positive integers $(M,N)$ satisfy the equation $\\frac{M}{8}=\\frac{8}{N}$?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "E",
+   "solution": "Cross-multiplying gives $MN=64$. Each positive divisor of $64$ gives a valid $M$ (with $N=64/M$), and $64=2^6$ has $7$ divisors.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 11,
+   "source": "2020 AMC 10A Problem 11",
+   "question": "What is the median of the following list of $2000$ numbers$?$\n$$1, 2, 3, \\ldots, 1000, 1^2, 2^2, 3^2, \\ldots, 1000^2$$",
+   "choices": {
+    "A": "$968.5$",
+    "B": "$969.5$",
+    "C": "$970.5$",
+    "D": "$971.5$",
+    "E": "$972.5$"
+   },
+   "answer": "B",
+   "solution": "For $1\\leq k\\leq 1000$, the number of list entries that are at most $k$ equals $k+\\lfloor\\sqrt{k}\\rfloor$: the entries $1,2,\\dots,k$ plus the $\\lfloor\\sqrt{k}\\rfloor$ perfect squares not exceeding $k$. For $961\\leq k\\leq 1000$ we have $\\lfloor\\sqrt{k}\\rfloor=31$. At $k=968$ the count is $968+31=999$; at $k=969$ it is $1000$; at $k=970$ it is $1001$. So the $1000^{\\text{th}}$ and $1001^{\\text{st}}$ smallest entries are $969$ and $970$, and the median is $\\frac{969+970}{2}=969.5$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 12,
+   "source": "2020 AMC 10B Problem 12",
+   "question": "The decimal representation of $\\dfrac{1}{2^{10} \\cdot 5^{25}}$ consists of a string of zeros after the decimal point, followed by the first nonzero digit. How many zeros are in that string?",
+   "choices": {
+    "A": "10",
+    "B": "15",
+    "C": "18",
+    "D": "20",
+    "E": "25"
+   },
+   "answer": "D",
+   "solution": "$\\dfrac{1}{2^{10}5^{25}} = \\dfrac{2^{15}}{10^{25}} = \\dfrac{32768}{10^{25}}$. Since $32768$ has 5 digits, there are $25-5=20$ zeros before the first nonzero digit.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 13,
+   "source": "2019 AMC 10A Problem 13",
+   "question": "Let $\\triangle ABC$ be isosceles with $CA=CB$ and $\\angle ACB = 32^{\\circ}$. The bisector of $\\angle CAB$ meets side $BC$ at point $D$. What is the degree measure of $\\angle ADC$?",
+   "choices": {
+    "A": "109",
+    "B": "111",
+    "C": "113",
+    "D": "115",
+    "E": "117"
+   },
+   "answer": "B",
+   "solution": "Base angles: $\\angle CAB=\\angle CBA=\\frac{180-32}{2}=74^{\\circ}$. The bisector gives $\\angle DAC=37^{\\circ}$. In $\\triangle ADC$: $\\angle ADC = 180-37-32 = 111^{\\circ}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 14,
+   "source": "2019 AMC 10B Problem 14",
+   "question": "What is the sum of the digits of the base-ten representation of $15!$?",
+   "choices": {
+    "A": "27",
+    "B": "36",
+    "C": "40",
+    "D": "42",
+    "E": "45"
+   },
+   "answer": "E",
+   "solution": "$15! = 1{,}307{,}674{,}368{,}000$. Its nonzero digits sum to $1+3+0+7+6+7+4+3+6+8 = 45$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 15,
+   "source": "2024 AMC 10A Problem 15",
+   "question": "Let $M$ be the greatest integer such that both $M+1117$ and $M+3357$ are perfect squares. What is the units digit of $M$?",
+   "choices": {
+    "A": "$1$",
+    "B": "$2$",
+    "C": "$4$",
+    "D": "$6$",
+    "E": "$8$"
+   },
+   "answer": "C",
+   "solution": "Write $M+1117=t^2$ and $M+3357=s^2$ with $s>t\\geq 0$. Then $s^2-t^2=2240$, i.e. $(s-t)(s+t)=2240$. Both factors have the same parity, and since their product is even, both are even. To maximize $M$ we maximize $t$, which means making $s+t$ as large as possible: $s-t=2$ and $s+t=1120$, giving $t=559$ and $s=561$. Then $M=559^2-1117=312481-1117=311364$, whose units digit is $4$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 16,
+   "source": "2010 AMC 10A Problem 16",
+   "question": "Nondegenerate $\\triangle ABC$ has integer side lengths, $\\overline{BD}$ is an angle bisector, $AD = 4$, and $DC=9$. What is the smallest possible value of the perimeter?",
+   "choices": {
+    "A": "$39$",
+    "B": "$36$",
+    "C": "$40$",
+    "D": "$42$",
+    "E": "$45$"
+   },
+   "answer": "A",
+   "solution": "Here $AC=AD+DC=13$. By the Angle Bisector Theorem, $\\frac{AB}{BC}=\\frac{AD}{DC}=\\frac{4}{9}$, so write $AB=4k$ and $BC=9k$. Since $\\gcd(4,9)=1$, requiring $4k$ and $9k$ to be integers forces $k$ to be a positive integer. The triangle inequality $AB+AC>BC$ gives $4k+13>9k$, so $k<\\frac{13}{5}$, i.e. $k\\leq 2$; also $AB+BC>AC$ gives $13k>13$, so $k>1$ ($k=1$ gives the degenerate triple $4,9,13$). Hence $k=2$, the sides are $8, 18, 13$, and the perimeter is $8+18+13=39$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 17,
+   "source": "2017 AMC 10A Problem 17",
+   "question": "How many points with integer coordinates lie on the circle $x^2+y^2=50$?",
+   "choices": {
+    "A": "8",
+    "B": "10",
+    "C": "11",
+    "D": "12",
+    "E": "16"
+   },
+   "answer": "D",
+   "solution": "$a^2+b^2=50$ has solutions $(\\pm1,\\pm7)$, $(\\pm7,\\pm1)$ (8 points) and $(\\pm5,\\pm5)$ (4 points) — $12$ points in total.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 18,
+   "source": "2014 AMC 10B Problem 18",
+   "question": "A list of $11$ positive integers has a mean of $9$, a median of $8$, and a unique mode of $7$. What is the largest possible value of an integer in the list?",
+   "choices": {
+    "A": "$29$",
+    "B": "$30$",
+    "C": "$31$",
+    "D": "$32$",
+    "E": "$33$"
+   },
+   "answer": "D",
+   "solution": "The numbers sum to $11\\cdot 9=99$. In sorted order $a_1\\leq\\cdots\\leq a_{11}$ we need $a_6=8$. To maximize $a_{11}$, minimize the other ten entries. Make $7$ the unique mode by using three $7$'s; then no other value may appear three times. The smallest choice for the five entries below the median is $1,1,7,7,7$ (sum $23$), and $a_6=8$. For $a_7,a_8,a_9,a_{10}$ (each at least $8$), we may use $8$ at most once more and any other value at most twice, so the minimum is $8,9,9,10$ (sum $36$). Then $a_{11}=99-23-8-36=32$, achieved by $1,1,7,7,7,8,8,9,9,10,32$. (Using only two $7$'s forces everything else to appear at most once, giving a smaller maximum of $29$.)",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 19,
+   "source": "2016 AMC 10A Problem 19",
+   "question": "In rectangle $ABCD$, $AB=8$ and $BC=4$. Point $E$ lies on $\\overline{BC}$ with $BE=1$, and point $F$ lies on $\\overline{BC}$ with $FC=1$. What is the area of $\\triangle AEF$?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "$EF = 4-1-1 = 2$. Taking $EF$ as the base, the height from $A$ to line $BC$ equals $AB=8$, so the area is $\\frac12 \\cdot 2 \\cdot 8 = 8$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 20,
+   "source": "2007 AMC 10A Problem 20",
+   "question": "Suppose that the number $a$ satisfies the equation $5 = a + a^{-1}$. What is the value of $a^{4} + a^{-4}$?",
+   "choices": {
+    "A": "123",
+    "B": "323",
+    "C": "523",
+    "D": "525",
+    "E": "527"
+   },
+   "answer": "E",
+   "solution": "Squaring: $a^2+a^{-2}=25-2=23$. Squaring again: $a^4+a^{-4}=23^2-2=529-2=527$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 21,
+   "source": "2006 AMC 10A Problem 21",
+   "question": "How many four-digit positive integers have at least one digit that is a $7$?",
+   "choices": {
+    "A": "3168",
+    "B": "3240",
+    "C": "3402",
+    "D": "4131",
+    "E": "5832"
+   },
+   "answer": "A",
+   "solution": "Complementary counting: there are $9000$ four-digit integers. Those with no digit $7$ number $8\\cdot 9\\cdot 9\\cdot 9=5832$. So the answer is $9000-5832=3168$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 22,
+   "source": "2005 AMC 10A Problem 22",
+   "question": "Let $S$ be the set of the $1500$ smallest positive multiples of $4$, and let $T$ be the set of the $1500$ smallest positive multiples of $6$. How many elements are common to $S$ and $T$?",
+   "choices": {
+    "A": "250",
+    "B": "375",
+    "C": "500",
+    "D": "750",
+    "E": "1000"
+   },
+   "answer": "C",
+   "solution": "The common elements are the multiples of $\\text{lcm}(4,6)=12$ up to $4\\cdot 1500=6000$ (the largest element of $S$). There are $\\frac{6000}{12}=500$ of them.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 23,
+   "source": "2015 AMC 10A Problem 23",
+   "question": "The zeroes of the function $f(x)=x^2-ax+3a$ are integers. What is the sum of the possible values of $a?$",
+   "choices": {
+    "A": "$24$",
+    "B": "$20$",
+    "C": "$18$",
+    "D": "$26$",
+    "E": "$28$"
+   },
+   "answer": "A",
+   "solution": "Let the integer roots be $r$ and $s$. Then $r+s=a$ and $rs=3a=3(r+s)$, so $rs-3r-3s=0$, i.e. $(r-3)(s-3)=9$. The factorizations of $9$ (up to order) are $1\\cdot 9$, $3\\cdot 3$, $(-1)(-9)$, and $(-3)(-3)$, giving $(r,s)=(4,12),(6,6),(2,-6),(0,0)$. The corresponding values of $a=r+s$ are $16, 12, -4, 0$, whose sum is $24$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 24,
+   "source": "2016 AMC 10B Problem 24",
+   "question": "How many four-digit integers $abcd$, with $a \\neq 0$, have the property that the three two-digit integers $ab>bc>cd$ form a decreasing arithmetic sequence? One such number is $6418$, where $a=6$, $b=4$, $c=1$, and $d=8$.",
+   "choices": {
+    "A": "$16$",
+    "B": "$22$",
+    "C": "$24$",
+    "D": "$26$",
+    "E": "$28$"
+   },
+   "answer": "B",
+   "solution": "The arithmetic sequence condition $2\\cdot\\overline{bc}=\\overline{ab}+\\overline{cd}$ becomes $2(10b+c)=(10a+b)+(10c+d)$, or $19b=10a+8c+d$, and the decreasing condition is $10a>9b+c$ and $10b>9c+d$. Working through the possible values of $b$ from $0$ to $9$, solving $19b=10a+8c+d$ with $a\\in\\{1,\\dots,9\\}$ and $c,d\\in\\{0,\\dots,9\\}$, and keeping only those with $\\overline{ab}>\\overline{bc}>\\overline{cd}$, yields exactly $22$ four-digit numbers (for example, $1109$, $3208$, $4319$, $5432$, $6418$, $9753$, and $9876$ all work).",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 25,
+   "source": "2019 AMC 10B Problem 25",
+   "question": "How many sequences of $0$s and $1$s of length $17$ are there that begin with a $0$, end with a $0$, contain no two consecutive $0$s, and contain no three consecutive $1$s?",
+   "choices": {
+    "A": "$29$",
+    "B": "$33$",
+    "C": "$37$",
+    "D": "$41$",
+    "E": "$45$"
+   },
+   "answer": "C",
+   "solution": "Suppose the sequence contains $k$ zeros. Since no two zeros are adjacent and the sequence begins and ends with $0$, the zeros create exactly $k-1$ gaps, each filled with a block of one or two $1$s (no three consecutive $1$s). If $j$ of these blocks have size $2$, then the number of $1$s is $(k-1)+j=17-k$, so $j=18-2k$. We need $0\\leq j\\leq k-1$, which forces $k\\in\\{7,8,9\\}$. Counting arrangements of the blocks: $k=7$ gives $\\binom{6}{4}=15$; $k=8$ gives $\\binom{7}{2}=21$; $k=9$ gives $\\binom{8}{0}=1$. The total is $15+21+1=37$.",
+   "type": "multiple_choice",
+   "points": 6
+  }
+ ]
+}

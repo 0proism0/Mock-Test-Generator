@@ -1,0 +1,3002 @@
+{
+ "competition": "AMC8",
+ "set": "allq",
+ "variants": [
+  {
+   "position": 1,
+   "source": "1999 AMC 8 Problem 1",
+   "question": "$(6?3) + 4 - (2 - 1) = 5.$ To make this statement true, the question mark between the 6 and the 3 should be replaced by",
+   "choices": {
+    "A": "\\div",
+    "B": "\\times",
+    "C": "+",
+    "D": "-",
+    "E": "\\text{None of these}"
+   },
+   "answer": "A",
+   "solution": "Simplifying the given expression, we get: $(6?3)=2.$\n\nAt this point, it becomes clear that it should be $\\boxed{\\mathrm{(A)}\\ \\div}$."
+  },
+  {
+   "position": 2,
+   "source": "1999 AMC 8 Problem 2",
+   "question": "What is the degree measure of the smaller angle formed by the hands of a clock at 10 o'clock?",
+   "choices": {
+    "A": "30",
+    "B": "45",
+    "C": "60",
+    "D": "75",
+    "E": "90"
+   },
+   "answer": "C",
+   "solution": "At $10:00$, the hour hand will be on the $10$ while the minute hand on the $12$.\n\nThis makes them $\\frac{1}{6}$th of a circle apart, and $\\frac{1}{6}\\cdot360^{\\circ}=\\boxed{\\textbf{(C) } 60}$."
+  },
+  {
+   "position": 3,
+   "source": "1999 AMC 8 Problem 3",
+   "question": "Which triplet of numbers has a sum NOT equal to 1?",
+   "choices": {
+    "A": "(1/2,1/3,1/6)",
+    "B": "(2,-2,1)",
+    "C": "(0.1,0.3,0.6)",
+    "D": "(1.1,-2.1,1.0)",
+    "E": "(-3/2,-5/2,5)"
+   },
+   "answer": "D",
+   "solution": "By adding each triplet, we can see that $\\boxed{(D)}$ gives us $0$, not $1$, as our sum."
+  },
+  {
+   "position": 4,
+   "source": "1999 AMC 8 Problem 4",
+   "question": "The diagram shows the miles traveled by bikers Alberto and Bjorn. After four hours, about how many more miles has Alberto biked than Bjorn?",
+   "choices": {
+    "A": "15",
+    "B": "20",
+    "C": "25",
+    "D": "30",
+    "E": "35"
+   },
+   "answer": "A",
+   "solution": "We see that each dot is $15$ units away from the nearest one above it. So the answer is $\\boxed{\\text{A}}  $."
+  },
+  {
+   "position": 5,
+   "source": "1999 AMC 8 Problem 5",
+   "question": "A rectangular garden 60 feet long and 20 feet wide is enclosed by a fence. To make the garden larger, while using the same fence, its shape is changed to a square. By how many square feet does this enlarge the garden?",
+   "choices": {
+    "A": "100",
+    "B": "200",
+    "C": "300",
+    "D": "400",
+    "E": "500"
+   },
+   "answer": "D",
+   "solution": "We need the same perimeter as a $60$ by $20$ rectangle, but in a square. Right now the perimeter is $160$, since a square has equal sides and $160$ divided by 4 is $40$,  the sides should all be $40$, that means an area of $1600$. Before, the area is $20 \\times 60$ which is $1200$. $1600-1200=400$ which is $\\boxed{D}$."
+  },
+  {
+   "position": 6,
+   "source": "1999 AMC 8 Problem 6",
+   "question": "Bo, Coe, Flo, Jo, and Moe have different amounts of money. Neither Jo nor Bo has as much money as Flo. Both Bo and Coe have more than Moe. Jo has more than Moe, but less than Bo. Who has the least amount of money?",
+   "choices": {
+    "A": "\\text{Bo}",
+    "B": "\\text{Coe}",
+    "C": "\\text{Flo}",
+    "D": "\\text{Jo}",
+    "E": "\\text{Moe}"
+   },
+   "answer": "E",
+   "solution": "Use logic to solve this problem. You don't actually need to use any equations.\n\nNeither Jo nor Bo has as much money as Flo. So Flo clearly does not have the least amount of money. Rule out Flo.\n\nBoth Bo and Coe have more than Moe. Rule out Bo and Coe; they clearly do not have the least amount of money.\n\nJo has more than Moe. Rule out Jo. \n\nThe only person who has not been ruled out is Moe. So $\\boxed{\\text{(E)}}$ is the answer."
+  },
+  {
+   "position": 7,
+   "source": "1999 AMC 8 Problem 7",
+   "question": "The third exit on a highway is located at milepost 40 and the tenth exit is at milepost 160. There is a service center on the highway located three-fourths of the way from the third exit to the tenth exit. At what milepost would you expect to find this   service center?",
+   "choices": {
+    "A": "90",
+    "B": "100",
+    "C": "110",
+    "D": "120",
+    "E": "130"
+   },
+   "answer": "E",
+   "solution": "There are $160-40=120$ miles between the third and tenth exits, so the service center is at milepost $40+(3/4)(120) = 40+90=\\boxed{\\text{(E)}\\ 130}$."
+  },
+  {
+   "position": 12,
+   "source": "1999 AMC 8 Problem 12",
+   "question": "The ratio of the number of games won to the number of games lost (no ties) by the Middle School Middies is $11/4$. To the nearest whole percent, what percent of its games did the team lose?",
+   "choices": {
+    "A": "24\\%",
+    "B": "27\\%",
+    "C": "36\\%",
+    "D": "45\\%",
+    "E": "73\\%"
+   },
+   "answer": "B",
+   "solution": "The ratio means that for every $11$ games won, $4$ are lost, so the team has won $11x$ games, lost $4x$ games, and played $15x$ games for some positive integer $x$. The percentage of games lost is just $\\dfrac{4x}{15x}\\times100=\\dfrac{4}{15}\\times 100=26.\\overline{6}\\%\\approx\\boxed{\\text{(B)}\\ 27\\%}$"
+  },
+  {
+   "position": 13,
+   "source": "1999 AMC 8 Problem 13",
+   "question": "The average age of the 40 members of a computer science camp is 17 years. There are 20 girls, 15 boys, and 5 adults. If the average age of the girls is 15 and the average age of the boys is 16, what is the average age of the adults?",
+   "choices": {
+    "A": "26",
+    "B": "27",
+    "C": "28",
+    "D": "29",
+    "E": "30"
+   },
+   "answer": "C",
+   "solution": "First, find the total amount of the girl's ages and add it to the total amount of the boy's ages. It equals $(20)(15)+(15)(16)=540$. The total amount of everyone's ages can be found from the average age, $17\\cdot40=680$. Then you do $680-540=140$ to find the sum of the adult's ages. The average age of an adult is divided among the five of them, $140\\div5=\\boxed{\\text{(C)}\\ 28}$."
+  },
+  {
+   "position": 14,
+   "source": "1999 AMC 8 Problem 14",
+   "question": "In trapezoid $ABCD$, the sides $AB$ and $CD$ are equal. The perimeter of $ABCD$ is",
+   "choices": {
+    "A": "27",
+    "B": "30",
+    "C": "32",
+    "D": "34",
+    "E": "48"
+   },
+   "answer": "D",
+   "solution": "There is a rectangle present, with both horizontal bases being $8$ units in length. The excess units on the bottom base must then be $16-8=8$. The fact that $AB$ and $CD$ are equal in length indicate, by the Pythagorean Theorem, that these excess lengths are equal. There are two with a total length of $8$ units, so each is $4$ units. The triangle has a hypotenuse of $5$, because the triangles are $3-4-5$ right triangles. So, the sides of the trapezoid are $8$, $5$, $16$, and $5$. Adding those up gives us the perimeter, $8 + 5 + 16 + 5 = 13 + 21 = \\boxed{\\text{(D)}\\ 34}$ units."
+  },
+  {
+   "position": 16,
+   "source": "1999 AMC 8 Problem 16",
+   "question": "Tori's mathematics test had 75 problems: 10 arithmetic, 30 algebra, and 35 geometry problems. Although she answered 70% of the arithmetic, 40% of the algebra, and 60% of the geometry problems correctly, she did not pass the test because she got less than 60% of the problems right. How many more problems would she have needed to answer correctly to earn a 60% passing grade?",
+   "choices": {
+    "A": "1",
+    "B": "5",
+    "C": "7",
+    "D": "9",
+    "E": "11"
+   },
+   "answer": "B",
+   "solution": "First, calculate how many of each type of problem she got right:\n\nArithmetic:  $70\\% \\cdot 10 = 0.70 \\cdot 10 = 7$\n\nAlgebra:  $40\\% \\cdot 30 = 0.40 \\cdot 30 = 12$\n\nGeometry:  $60\\% \\cdot 35 = 0.60 \\cdot 35 =  21$\n\nAltogether, Tori answered $7 + 12 + 21 = 40$ questions correct.\nTo get a $60\\%$ on her test overall, she needed to get $60\\% \\cdot 75 = 0.60 \\cdot 75 = 45$ questions right.\n\nTherefore, she needed to answer $45 - 40 = 5$ more questions to pass, so the correct answer is $\\boxed{(B) 5}$"
+  },
+  {
+   "position": 17,
+   "source": "1999 AMC 8 Problem 17",
+   "question": "At Central Middle School the 108 students who take the AMC 8 meet in the evening to talk about problems and eat an average of two cookies apiece. Walter and Gretel are baking Bonnie's Best Bar Cookies this year. Their recipe, which makes a pan of 15 cookies, lists this items: $1\\frac{1}{2}$ cups of flour, $2$ eggs, $3$ tablespoons butter, $\\frac{3}{4}$ cups sugar, and $1$ package of chocolate drops. They will make only full recipes, not partial recipes.\n\nWalter can buy eggs by the half-dozen. How many half-dozens should he buy to make enough cookies? (Some eggs and some cookies may be left over.)",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "5",
+    "D": "7",
+    "E": "15"
+   },
+   "answer": "C",
+   "solution": "If $108$ students eat $2$ cookies on average, there will need to be $108\\cdot 2 = 216$ cookies.  There are $15$ cookies per pan, meaning there needs to be $\\frac{216}{15} = 14.4$ pans.  However, since half-recipes are forbidden, we need to round up and make $\\lceil \\frac{216}{15}\\rceil = 15$ pans.\n\n$1$ pan requires $2$ eggs, so $15$ pans require $2\\cdot 15 = 30$ eggs.   Since there are $6$ eggs in a half dozen, we need $\\frac{30}{6} = 5$ half-dozens of eggs, and the answer is $\\boxed{C}$"
+  },
+  {
+   "position": 19,
+   "source": "1999 AMC 8 Problem 19",
+   "question": "At Central Middle School, the 108 students who take the AMC 8 meet in the evening to talk about problems and eat an average of two cookies apiece. Hansel and Gretel are baking Bonnie's Best Bar Cookies this year. Their recipe, which makes a pan of 15 cookies, lists these items: $1\\frac{1}{2}$ cups flour, $2$ eggs, $3$ tablespoons butter, $\\frac{3}{4}$ cups sugar, and $1$ package of chocolate drops. They will make full recipes, not partial recipes.\n\nHansel and Gretel must make enough pans of cookies to supply 216 cookies. There are 8 tablespoons in a stick of butter. How many sticks of butter will be needed? (Some butter may be leftover, of course.)",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "B",
+   "solution": "For $216$ cookies, you need to make $\\frac{216}{15} = 14.4$ pans.  Since fractional pans are forbidden, round up to make $\\lceil \\frac{216}{15} \\rceil = 15$ pans.\n\nThere are $3$ tablespoons of butter per pan, meaning $3 \\cdot 15 = 45$ tablespoons of butter are required for $15$ pans.\n\nEach stick of butter has $8$ tablespoons, so we need $\\frac{45}{8} = 5.625$ sticks of butter.  However, we must round up again because partial sticks of butter are forbidden!  Thus, we need $\\lceil \\frac{45}{8} \\rceil = 6$ sticks of butter, and the answer is $\\boxed{B}$."
+  },
+  {
+   "position": 21,
+   "source": "1999 AMC 8 Problem 21",
+   "question": "The degree measure of angle $A$ is",
+   "choices": {
+    "A": "20",
+    "B": "30",
+    "C": "35",
+    "D": "40",
+    "E": "45"
+   },
+   "answer": "B",
+   "solution": "The third angle of the triangle containing the $100^\\circ$ angle and the $40^\\circ$ angle is $180^\\circ - 100^\\circ - 40^\\circ = 40^\\circ$. It follows that $A$ is the third angle of the triangle consisting of the found $40^\\circ$ angle and the given $110^\\circ$ angle. Thus, $A$ is a $180^\\circ - 110^\\circ - 40^\\circ = 30^\\circ$ angle, and so the answer is $\\boxed{30^\\circ, \\textbf{B}}$."
+  },
+  {
+   "position": 22,
+   "source": "1999 AMC 8 Problem 22",
+   "question": "In a far-off land three fish can be traded for two loaves of bread and a loaf of bread can be traded for four bags of rice. How many bags of rice is one fish worth?",
+   "choices": {
+    "A": "\\frac{3}{8}",
+    "B": "\\frac{1}{2}",
+    "C": "\\frac{3}{4}",
+    "D": "2\\frac{2}{3}",
+    "E": "3\\frac{1}{3}"
+   },
+   "answer": "D",
+   "solution": "Let $f$ represent one fish, $l$ a loaf of bread, and $r$ a bag of rice. Then:\n$3f=2l$, \n$l=4r$\n\nSubstituting $l$ from the second equation back into the first gives us $3f=8r$. So each fish is worth $\\frac{8}{3}$ bags of rice, or $2 \\frac{2}{3}\\Rightarrow \\boxed{D}$."
+  },
+  {
+   "position": 23,
+   "source": "1999 AMC 8 Problem 23",
+   "question": "Square $ABCD$ has sides of length 3. Segments $CM$ and $CN$ divide the square's area into three equal parts. How long is segment $CM$?",
+   "choices": {
+    "A": "\\sqrt{10}",
+    "B": "\\sqrt{12}",
+    "C": "\\sqrt{13}",
+    "D": "\\sqrt{14}",
+    "E": "\\sqrt{15}"
+   },
+   "answer": "C",
+   "solution": "Connect $AC$, $S_\\triangle AMC=S_\\triangle ANC$. To satisfied the three area is equal, we have $2S_\\triangle AMC=S_\\triangle BMC$, $2S_\\triangle ANC=S_\\triangle DNC$. Thus, $AM=AN=\\frac{1}{2}BM=\\frac{1}{2}ND=1$. $BM=2,BC=3,MC=\\boxed{\\text{(C)}\\ \\sqrt{13}}$."
+  },
+  {
+   "position": 24,
+   "source": "1999 AMC 8 Problem 24",
+   "question": "When $1999^{2000}$ is divided by $5$, the remainder is",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "B",
+   "solution": "As $1999 \\equiv -1 \\pmod{5}$, we have $1999^{2000} \\equiv (-1)^{2000} \\equiv 1 \\pmod{5}$. Thus, the answer is $\\boxed{\\text{(B)}\\ 1}$."
+  },
+  {
+   "position": 25,
+   "source": "1999 AMC 8 Problem 25",
+   "question": "Points $B$, $D$, and $J$ are midpoints of the sides of right triangle $ACG$. Points $K$, $E$, $I$ are midpoints of the sides of triangle $JDG$, etc. If the dividing and shading process is done 100 times (the first three are shown) and $AC=CG=6$, then the total area of the shaded triangles is nearest",
+   "choices": {
+    "A": "6",
+    "B": "7",
+    "C": "8",
+    "D": "9",
+    "E": "10"
+   },
+   "answer": "A",
+   "solution": "Find the area of the bottom triangle, which is 4.5. Notice that the area of the triangles is divided by 4 every time. 4.5*5/4\u22485.7, and 5.7+(1/4)\u22485.9. We can clearly see that the sum is approaching answer choice $\\boxed{A}$."
+  },
+  {
+   "position": 1,
+   "source": "2000 AMC 8 Problem 1",
+   "question": "Aunt Anna is $42$ years old. Caitlin is $5$ years younger than Brianna, and Brianna is half as old as Aunt Anna. How old is Caitlin?",
+   "choices": {
+    "A": "15",
+    "B": "16",
+    "C": "17",
+    "D": "21",
+    "E": "37"
+   },
+   "answer": "B",
+   "solution": "Brianna is $\\frac{1}{2} \\cdot 42 = 21$ years old, so Caitlin is $21-5=\\boxed{\\textbf{(B)}\\ 16}$ years old."
+  },
+  {
+   "position": 2,
+   "source": "2000 AMC 8 Problem 2",
+   "question": "Which of these numbers is less than its reciprocal?",
+   "choices": {
+    "A": "{-2}",
+    "B": "{-1}",
+    "C": "0",
+    "D": "1",
+    "E": "2"
+   },
+   "answer": "A",
+   "solution": "The reciprocal of $-2$ is $-\\frac{1}{2}$.  Since $-2  \\frac{1}{2}$, (E) is incorrect."
+  },
+  {
+   "position": 3,
+   "source": "2000 AMC 8 Problem 3",
+   "question": "How many whole numbers lie in the interval between $\\frac{5}{3}$ and $2\\pi$?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "\\text{infinitely many}"
+   },
+   "answer": "D",
+   "solution": "Note that $1 < \\frac{5}{3} < 2$ while $6 < 2\\pi < 7$.  Therefore, the interval from $\\frac{5}{3}$ to $2\\pi$ contains $\\boxed{\\textbf{(D)}\\ 5}$ whole numbers: $2$, $3$, $4$, $5$, and $6$."
+  },
+  {
+   "position": 5,
+   "source": "2000 AMC 8 Problem 5",
+   "question": "Each principal of Lincoln High School serves exactly one $3$-year term. What is the maximum number of principals this school could have during an $8$-year period?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "8"
+   },
+   "answer": "C",
+   "solution": "In an $8$-year period, at most $\\left\\lfloor{\\frac{8}{3}}\\right\\rfloor = 2$ principals could serve complete terms.  Furthermore, at most $2$ principals could serve incomplete terms during this period: those who are in office at the start and end of this period.  Therefore, at most $2 + 2 = \\boxed{\\textbf{(C)}\\ 4}$ principals could be active during this period (which would happen if the acting principal at the start of the period has $1$ year left of their term)."
+  },
+  {
+   "position": 6,
+   "source": "2000 AMC 8 Problem 6",
+   "question": "Figure $ABCD$ is a square. Inside this square three smaller squares are drawn with the side lengths as labeled. The area of the shaded $L$-shaped region is",
+   "choices": {
+    "A": "7",
+    "B": "10",
+    "C": "12.5",
+    "D": "14",
+    "E": "15"
+   },
+   "answer": "A",
+   "solution": "Chop the entire 5 by 5 region into $25$ squares like a piece of graph paper.  When you draw all the lines, you can count that only $7$ of the small 1 by 1 squares will be shaded, giving $\\boxed{A}$ as the answer."
+  },
+  {
+   "position": 7,
+   "source": "2000 AMC 8 Problem 7",
+   "question": "What is the minimum possible product of three different numbers of the set $\\{-8,-6,-4,0,3,5,7\\}$?",
+   "choices": {
+    "A": "{-336}",
+    "B": "{-280}",
+    "C": "{-210}",
+    "D": "{-192}",
+    "E": "0"
+   },
+   "answer": "B",
+   "solution": "If the product of $3$ selected numbers is negative, either all $3$ numbers are negative or $1$ number is negative and $2$ numbers are positive.\n\nThe minimum product of $3$ negative numbers from this set is $(-8)(-6)(-4) = -192$, while the minimum product of $1$ negative number and $2$ positive numbers from this set is $(-8)(5)(7) = -280$.\n\nTherefore, the minimum product of $3$ numbers from this set is $\\boxed{\\textbf{(B)}\\ {-280}}$."
+  },
+  {
+   "position": 9,
+   "source": "2000 AMC 8 Problem 9",
+   "question": "Three-digit powers of $2$ and $5$ are used in this \"cross-number\" puzzle. What is the only possible digit for the outlined square?\n$$\\begin{array}{lcl}\n\\textbf{ACROSS} & & \\textbf{DOWN} \\\\\n\\textbf{2}.~ 2^m & & \\textbf{1}.~ 5^n\n\\end{array}$$",
+   "choices": {
+    "A": "0",
+    "B": "2",
+    "C": "4",
+    "D": "6",
+    "E": "8"
+   },
+   "answer": "D",
+   "solution": "The $3$-digit powers of $5$ are $125$ and $625$, so space $2$ is filled with a $2$.\nThe only $3$-digit power of $2$ beginning with $2$ is $256$, so the outlined block is filled with\na $\\boxed{\\text{(D) 6}}$."
+  },
+  {
+   "position": 10,
+   "source": "2000 AMC 8 Problem 10",
+   "question": "Ara and Shea were once the same height. Since then Shea has grown 20% while Ara has grown half as many inches as Shea. Shea is now 60 inches tall. How tall, in inches, is Ara now?",
+   "choices": {
+    "A": "48",
+    "B": "51",
+    "C": "52",
+    "D": "54",
+    "E": "55"
+   },
+   "answer": "E",
+   "solution": "Shea has grown $20\\%$, if x was her original height, then $1.2x = 60$, so she was originally $\\frac{60}{1.2}=50$ inches tall which is a $60 - 50 = 10$ inch increase.  Ara also started off at $50$ inches.  Since Ara grew half as much as Shea, Ara grew $\\frac{10}{2} = 5$ inches.  Therefore, Ara is now $50+5=55$ inches tall which is choice $\\boxed{E}.$"
+  },
+  {
+   "position": 11,
+   "source": "2000 AMC 8 Problem 11",
+   "question": "The number $64$ has the property that it is divisible by its unit digit. How many whole numbers between 10 and 50 have this property?",
+   "choices": {
+    "A": "15",
+    "B": "16",
+    "C": "17",
+    "D": "18",
+    "E": "20"
+   },
+   "answer": "C",
+   "solution": "Casework by the units digit $u$ will help organize the answer.\n\n$u=0$ gives no solutions, since no real numbers are divisible by $0$\n\n$u=1$ has $4$ solutions, since all numbers are divisible by $1$.\n\n$u=2$ has $4$ solutions, since every number ending in $2$ is even (ie divisible by $2$).\n\n$u=3$ has $1$ solution: $33$.  $\\pm 10$ or $\\pm 20$ will retain the units digit, but will stop the number from being divisible by $3$.  $\\pm 30$ is the smallest multiple of $10$ that will keep the number divisible by $3$, but those numbers are $3$ and $63$, which are out of the range of the problem.\n\n$u=4$ has $2$ solutions:  $24$ and $44$.  Adding or subtracting $10$ will kill divisibility by $4$, since $10$ is not divisible by $4$.\n\n$u=5$ has $4$ solutions:  every number ending in $5$ is divisible by $5$.\n\n$u=6$ has $1$ solution:  $36$.  $\\pm 10$ or $\\pm 20$ will kill divisibility by $3$, and thus kill divisibility by $6$.\n\n$u=7$ has no solutions.  The first multiples of $7$ that end in $7$ are $7$ and $77$, but both are outside of the range of this problem.\n\n$u=8$ has $1$ solution:  $48$.  $\\pm 10, \\pm 20, \\pm 30$ will all kill divisibility by $8$ since $10, 20, $ and $30$ are not divisible by $8$.\n\n$u=9$ has no solutions.  $9$ and $99$ are the smallest multiples of $9$ that end in $9$.\n\nTotalling the solutions, we have $0 + 4 + 4 + 1 + 2 + 4 + 1 + 0 + 1 + 0 = 17$ solutions, giving the answer $\\boxed{C}$, which is 17."
+  },
+  {
+   "position": 13,
+   "source": "2000 AMC 8 Problem 13",
+   "question": "In triangle $CAT$, we have $ \\angle ACT =\\angle ATC $ and $ \\angle CAT = 36^\\circ $. If $ \\overline{TR} $ bisects  $\\angle ATC $, then $ \\angle CRT = $",
+   "choices": {
+    "A": "36^\\circ",
+    "B": "54^\\circ",
+    "C": "72^\\circ",
+    "D": "90^\\circ",
+    "E": "108^\\circ"
+   },
+   "answer": "C",
+   "solution": "In $\\triangle ACT$, the three angles sum to $180^\\circ$, and $\\angle C = \\angle T$\n\n$\\angle CAT + \\angle ATC + \\angle ACT = 180$\n\n$36 + \\angle ATC + \\angle ATC = 180$\n\n$2 \\angle ATC = 144$\n\n$\\angle ATC = 72$\n\nSince $\\angle ATC$ is bisected by $\\overline{TR}$, $\\angle RTC = \\frac{72}{2} = 36$\n\nNow focusing on the smaller $\\triangle RTC$, the sum of the angles in that triangle is $180^\\circ$, so:\n\n$\\angle RTC + \\angle TCR + \\angle CRT = 180$\n\n$36 + \\angle ACT + \\angle CRT = 180$\n\n$36 + \\angle ATC + \\angle CRT = 180$\n\n$36 + 72 + \\angle CRT = 180$\n\n$\\angle CRT = 72^\\circ$, giving the answer $\\boxed{C}$"
+  },
+  {
+   "position": 14,
+   "source": "2000 AMC 8 Problem 14",
+   "question": "What is the units digit of $19^{19} + 99^{99}$?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "Using modular arithmetic:\n$$99 \\equiv 9 \\equiv -1 \\pmod{10}$$\n\nSimilarly,\n$$19 \\equiv 9 \\equiv -1 \\pmod{10}$$\n\nWe have \n$$(-1)^{19} + (-1)^{99} = -1 + -1 \\equiv \\boxed{(\\textbf{D}) \\ 8} \\pmod{10}$$\n\n-ryjs"
+  },
+  {
+   "position": 15,
+   "source": "2000 AMC 8 Problem 15",
+   "question": "Triangles $ ABC $, $ADE$, and $EFG$ are all equilateral. Points $D$ and $G$ are midpoints of $ \\overline{AC} $ and $ \\overline{AE} $, respectively. If $ AB = 4 $, what is the perimeter of figure $ ABCDEFG $?",
+   "choices": {
+    "A": "12",
+    "B": "13",
+    "C": "15",
+    "D": "18",
+    "E": "21"
+   },
+   "answer": "C",
+   "solution": "First, remove segments $DA$, and $EG$. Notice that segments $DE$, and $AG$ can fit into $DA$, and $EG$, respectively. This means we only need to account for the perimeters of triangles $ABC$, and $EFG$, whose perimeters are $12$, and $3$ respectively. Adding these perimeters gives us $12+3=15$, or answer choice $\\boxed{C}$."
+  },
+  {
+   "position": 16,
+   "source": "2000 AMC 8 Problem 16",
+   "question": "In order for Mateen to walk a kilometer (1000m) in his rectangular backyard, he must walk the length 25 times or walk its perimeter 10 times. What is the area of Mateen's backyard in square meters?",
+   "choices": {
+    "A": "40",
+    "B": "200",
+    "C": "400",
+    "D": "500",
+    "E": "1000"
+   },
+   "answer": "C",
+   "solution": "The length $L$ of the rectangle is $\\frac{1000}{25}=40$ meters. The perimeter $P$ is $\\frac{1000}{10}=100$ meters. Since $P_{rect} = 2L + 2W$, we plug values in to get:\n\n$100 = 2\\cdot 40 + 2W$\n\n$100 = 80 + 2W$\n\n$2W = 20$\n\n$W = 10$ meters\n\nSince $A_{rect} = LW$, the area is $40\\cdot 10=400$ square meters or $\\boxed{C}$."
+  },
+  {
+   "position": 17,
+   "source": "2000 AMC 8 Problem 17",
+   "question": "The operation $ \\otimes $ is defined for all nonzero numbers by $ a\\otimes b =\\frac{a^{2}}{b} $. Determine $ [(1\\otimes 2)\\otimes 3]-[1\\otimes (2\\otimes 3)] $.",
+   "choices": {
+    "A": "-\\frac{2}{3}",
+    "B": "-\\frac{1}{4}",
+    "C": "0",
+    "D": "\\frac{1}{4}",
+    "E": "\\frac{2}{3}"
+   },
+   "answer": "A",
+   "solution": "Follow PE(MD)(AS), doing the innermost parentheses first.\n\n$ [(1\\otimes 2)\\otimes 3]-[1\\otimes (2\\otimes 3)] $\n\n$ [\\frac{1^2}{2}\\otimes 3]-[1\\otimes \\frac{2^2}{3}] $\n\n$ [\\frac{1}{2}\\otimes 3]-[1\\otimes \\frac{4}{3}] $\n\n$ [\\frac{(\\frac{1}{2})^{2}}{3}]-[\\frac{1^2}{(\\frac{4}{3})}] $\n\n$ [\\frac{1}{4} \\cdot \\frac{1}{3}]-[\\frac{3}{4}] $\n\n$\\frac{1}{12} - \\frac{3}{4}$\n\n$\\frac{1}{12} - \\frac{9}{12}$\n\n$\\frac{-8}{12}$\n\n$-\\frac{2}{3}$, which is answer $\\boxed{A}$"
+  },
+  {
+   "position": 18,
+   "source": "2000 AMC 8 Problem 18",
+   "question": "Consider these two geoboard quadrilaterals. Which of the following statements is true?",
+   "choices": {
+    "A": "\\text{The area of quadrilateral I is more than the area of quadrilateral II.}",
+    "B": "\\text{The area of quadrilateral I is less than the area of quadrilateral II.}",
+    "C": "\\text{The quadrilaterals have the same area and the same perimeter.}",
+    "D": "\\text{The quadrilaterals have the same area, but the perimeter of I is more than the perimeter of II.}",
+    "E": "\\text{The quadrilaterals have the same area, but the perimeter of I is less than the perimeter of II.}"
+   },
+   "answer": "E",
+   "solution": "Using the Pick\u2019s Theorem, The area of both figures is 1. This rules out answer choices A and B. When using the Pythagorean Theorem, we find that the perimeter of I is 2 + 2($\\sqrt{2}$) and the perimeter of II is 1 + 2($\\sqrt{2}$) + $\\sqrt{5}$. Since $\\sqrt{5}$ > 1, the perimeter of II is greater, therefore the correct answer is $\\boxed{E}$. Yaay!"
+  },
+  {
+   "position": 20,
+   "source": "2000 AMC 8 Problem 20",
+   "question": "You have nine coins: a collection of pennies, nickels, dimes, and quarters having a total value of \\$$1.02$, with at least one coin of each type. How many dimes must you have?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "A",
+   "solution": "We see that there must be 102 cents, so therefore there's at least 2 pennies. That leaves 7 coins. We assume that there are 3 quarters, leaving 25 cents with 4 coins left. If all 4 are nickels, that would only be 20 cents, missing 5. Therefore, one nickel must be changed into 1 dime, so the answer is $\\boxed{A}$\n\nSolution by ILoveMath31415926535"
+  },
+  {
+   "position": 21,
+   "source": "2000 AMC 8 Problem 21",
+   "question": "Keiko tosses one penny and Ephraim tosses two pennies. The probability that Ephraim gets the same number of heads that Keiko gets is",
+   "choices": {
+    "A": "\\frac{1}{4}",
+    "B": "\\frac{3}{8}",
+    "C": "\\frac{1}{2}",
+    "D": "\\frac{2}{3}",
+    "E": "\\frac{3}{4}"
+   },
+   "answer": "B",
+   "solution": "Keiko can only get 1 head or one tail. That means Ephriam has to also get 1 head or one tail. There are 3 cases $HHT, HTH, TTT$ and each have a $\\frac{1}{2}\\cdot\\frac{1}{2}\\cdot\\frac{1}{2}=\\frac{1}{8}$ chance. Adding all 3 ways makes a total of $\\boxed{(B)\\frac38}$"
+  },
+  {
+   "position": 22,
+   "source": "2000 AMC 8 Problem 22",
+   "question": "A cube has edge length $2$. Suppose that we glue a cube of edge length $1$ on top of the big cube so that one of its faces rests entirely on the top face of the larger cube. The percent increase in the surface area (sides, top, and bottom) from the original cube to the new solid formed is closest to",
+   "choices": {
+    "A": "10",
+    "B": "15",
+    "C": "17",
+    "D": "21",
+    "E": "25"
+   },
+   "answer": "C",
+   "solution": "To be honest, we could just bash this one out to get about 20%, which is C. Yaaaay! BRO, who ever made this is tweaking, if you bashed it to 20 you would choose D so this is not bashable. Tsk Tsk  Plus they never said how to bash\u00af\\_(\u30c4)"
+  },
+  {
+   "position": 23,
+   "source": "2000 AMC 8 Problem 23",
+   "question": "There is a list of seven numbers. The average of the first four numbers is $5$, and the average of the last four numbers is $8$. If the average of all seven numbers is $ 6\\frac{4}{7} $, then the number common to both sets of four numbers is",
+   "choices": {
+    "A": "5\\frac{3}{7}",
+    "B": "6",
+    "C": "6\\frac{4}{7}",
+    "D": "7",
+    "E": "7\\frac{3}{7}"
+   },
+   "answer": "B",
+   "solution": "Remember that if a list of $n$ numbers has an average of $k$, then the sum $S$ of all the numbers on the list is $S = nk$.\n\nSo if the average of the first $4$ numbers is $5$, then the first four numbers total $4 \\cdot 5 = 20$.\n\nIf the average of the last $4$ numbers is $8$, then the last four numbers total $4 \\cdot 8 = 32$.\n\nIf the average of all $7$ numbers is $6\\frac{4}{7}$, then the total of all seven numbers is $7 \\cdot 6\\frac{4}{7} = 7\\cdot 6 + 4 =  46$.\n\nIf the first four numbers are $20$, and the last four numbers are $32$, then all \"eight\" numbers are $20 + 32 = 52$.  But that's counting one number twice.  Since the sum of all seven numbers is $46$, then the number that was counted twice is $52 - 46 = 6$, and the answer is $\\boxed{(B) 6}$\n\nAlgebraically, if $a + b + c + d = 20$, and $d + e + f + g = 32$, you can add both equations to get $a + b + c + 2d + e + f + g = 52$.  You know that $a + b + c + d + e + f + g = 46$, so you can subtract that from the last equation to get $d = \\boxed{(B) 6}$, and $d$ is the number that appeared twice.\n\nYay!  :D"
+  },
+  {
+   "position": 24,
+   "source": "2000 AMC 8 Problem 24",
+   "question": "If $ \\angle A = 20^\\circ $ and $ \\angle AFG =\\angle AGF $, then $ \\angle B+\\angle D = $",
+   "choices": {
+    "A": "48^\\circ",
+    "B": "60^\\circ",
+    "C": "72^\\circ",
+    "D": "80^\\circ",
+    "E": "90^\\circ"
+   },
+   "answer": "D",
+   "solution": "As a strategy, think of how $\\angle B + \\angle D$ would be determined, particularly without determining either of the angles individually, since it may not be possible to determine $\\angle B$ or $\\angle D$ alone.  If you see $\\triangle BFD$, then you can see that the problem is solved quickly after determining $\\angle BFD$.\n\nBut start with $\\triangle AGF$, since that's where most of our information is.  Looking at $\\triangle AGF$, since $\\angle AFG = \\angle AGF$, and $\\angle A = 20$, we can write:\n\n$\\angle A + \\angle AFG + \\angle AGF = 180$\n\n$20 + 2\\angle AFG = 180$\n\n$\\angle AFG = 80$\n\nBy noting that $\\angle AFG$ and $\\angle GFD$ make a straight line, we know\n\n$\\angle AFG + \\angle GFD = 180$\n\n$80 + \\angle GFD = 180$\n\n$\\angle GFD = 100$\n\nIgnoring all other parts of the figure and looking only at $\\triangle BFD$, you see that $\\angle B + \\angle D + \\angle BFD = 180$.  But $\\angle BFD$ is the same as $\\angle GFD$.  Therefore:\n\n$\\angle B + \\angle D + \\angle GFD = 180$\n\n$\\angle B + \\angle D + 100 = 180$\n\n$\\angle B + \\angle D = 80^\\circ$, and the answer is thus $\\boxed{D}$"
+  },
+  {
+   "position": 25,
+   "source": "2000 AMC 8 Problem 25",
+   "question": "The area of rectangle $ABCD$ is $72$ units squared. If point $A$ and the midpoints of $ \\overline{BC} $ and $ \\overline{CD} $ are joined to form a triangle, the area of that triangle is",
+   "choices": {
+    "A": "21",
+    "B": "27",
+    "C": "30",
+    "D": "36",
+    "E": "40"
+   },
+   "answer": "B",
+   "solution": "Let's assume WLOG that the sides of the rectangle are $9$ and $8.$ The area of the 3 triangles would then be $8\\cdot\\frac{9}{2}\\cdot\\frac{1}{2} = 18,$\n$4\\cdot\\frac{9}{2}\\cdot\\frac{1}{2} = 9,$\n$4\\cdot 9\\cdot\\frac{1}{2} = 18.$\nAdding these up, we get $45$, and subtracting that from $72$, we get $27$, so the answer is $\\boxed{B}$"
+  },
+  {
+   "position": 1,
+   "source": "2001 AMC 8 Problem 1",
+   "question": "Casey's shop class is making a golf trophy. He has to paint 300 dimples on a golf ball. If it takes him 2 seconds to paint one dimple, how many minutes will it take for him to finish",
+   "choices": {
+    "A": "4",
+    "B": "6",
+    "C": "8",
+    "D": "10",
+    "E": "12"
+   },
+   "answer": "D",
+   "solution": "It will take him $300\\cdot2=600$ seconds to paint all the dimples. \n\nThis is equivalent to $\\frac{600}{60}=10$ minutes $\\Rightarrow \\boxed{D}$."
+  },
+  {
+   "position": 2,
+   "source": "2001 AMC 8 Problem 2",
+   "question": "I'm thinking of two whole numbers. Their product is 24 and their sum is 11. What is the larger number?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "6",
+    "D": "8",
+    "E": "12"
+   },
+   "answer": "D",
+   "solution": "Use the answers to attempt to \"reverse engineer\" an appropriate pair of numbers.  Looking at option $A$, guess that one of the numbers is $3$.  If the sum of two numbers is $11$ and one is $3$, then other must be $11 - 3 = 8$.  The product of those numbers is $3\\cdot 8 = 24$, which is the second condition of the problem, so our numbers are $3$ and $8$.\n\nHowever, $3$ is the smaller of the two numbers, so the answer is $ 8$ or $\\boxed{D}$."
+  },
+  {
+   "position": 3,
+   "source": "2001 AMC 8 Problem 3",
+   "question": "Granny Smith has \\$63. Elberta has \\$2 more than Anjou and Anjou has one-third as much as Granny Smith. How many dollars does Elberta have?",
+   "choices": {
+    "A": "17",
+    "B": "18",
+    "C": "19",
+    "D": "21",
+    "E": "23"
+   },
+   "answer": "E",
+   "solution": "Since Anjou has $ \\frac{1}{3} $ the amount of money as Granny Smith and Granny Smith has \\$$ 63$, Anjou has $ \\frac{1}{3}\\times63=21 $ dollars. Elberta has \\$$ 2$ more than this, so she has \\$$ 23 $, or $\\boxed{\\text{E}} $."
+  },
+  {
+   "position": 4,
+   "source": "2001 AMC 8 Problem 4",
+   "question": "The digits 1, 2, 3, 4 and 9 are each used once to form the smallest possible '''even''' five-digit number. The digit in the tens place is",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "9"
+   },
+   "answer": "E",
+   "solution": "We know that the smallest possible number is $12349$. However, $12349$ is an odd number. Thus, by shifting the 4 (the largest even number) into the unit's place and rearranging the rest of the digits from least to greatest, we arrive at $12394$. Thus, the digit in the tens place is $\\boxed{\\text{E}}$  $9$."
+  },
+  {
+   "position": 5,
+   "source": "2001 AMC 8 Problem 5",
+   "question": "On a dark and stormy night Snoopy suddenly saw a flash of lightning. Ten seconds later he heard the sound of thunder. The speed of sound is 1088 feet per second and one mile is 5280 feet. Estimate, to the nearest half-mile, how far Snoopy was from the flash of lightning.",
+   "choices": {
+    "A": "1",
+    "B": "1\\frac{1}{2}",
+    "C": "2",
+    "D": "2\\frac{1}{2}",
+    "E": "3"
+   },
+   "answer": "C",
+   "solution": "During the $ 10 $ seconds, the sound traveled $ 1088\\times10=10880 $ feet from the lightning to Snoopy. This is equivalent to $ \\frac{10880}{5280}\\approx2 $ miles, $ \\boxed{\\text{C}} $."
+  },
+  {
+   "position": 6,
+   "source": "2001 AMC 8 Problem 6",
+   "question": "Six trees are equally spaced along one side of a straight road. The distance from the first tree to the fourth is 60 feet. What is the distance in feet between the first and last trees?",
+   "choices": {
+    "A": "90",
+    "B": "100",
+    "C": "105",
+    "D": "120",
+    "E": "140"
+   },
+   "answer": "B",
+   "solution": "There are $ 3 $ spaces between the 1st and 4th trees, so each of these spaces has $ \\frac{60}{3}=20 $ feet. Between the first and last trees there are $ 5 $ spaces, so the distance between them is $ 20\\times5=100 $ feet, $ \\boxed{\\text{B}} $."
+  },
+  {
+   "position": 10,
+   "source": "2001 AMC 8 Problem 10",
+   "question": "A collector offers to buy state quarters for 2000% of their face value. At that rate how much will Bryden get for his four state quarters?",
+   "choices": {
+    "A": "20\\text{ dollars}",
+    "B": "50\\text{ dollars}",
+    "C": "200\\text{ dollars}",
+    "D": "500\\text{ dollars}",
+    "E": "2000\\text{ dollars}"
+   },
+   "answer": "A",
+   "solution": "$ 2000\\% $ is equivalent to $ 20\\times100\\% $. Therefore, $ 2000\\% $ of a number is the same as $ 20 $ times that number. $ 4 $ quarters is $ 1 $ dollar, so Bryden will get $ 20\\times1={20} $ dollars, $ \\boxed{\\text{A}} $."
+  },
+  {
+   "position": 11,
+   "source": "2001 AMC 8 Problem 11",
+   "question": "Points $A$, $B$, $C$ and $D$ have these coordinates: $A(3,2)$, $B(3,-2)$, $C(-3,-2)$ and $D(-3, 0)$. The area of quadrilateral $ABCD$ is",
+   "choices": {
+    "A": "12",
+    "B": "15",
+    "C": "18",
+    "D": "21",
+    "E": "24"
+   },
+   "answer": "C",
+   "solution": "We can add a 2 by 6 triangle to make a 4*6 rectangle which has area 24. Then subtracting the area of the triangle, we get 24-(2*6/2)=24-6=18, answer C"
+  },
+  {
+   "position": 12,
+   "source": "2001 AMC 8 Problem 12",
+   "question": "If $a\\otimes b = \\dfrac{a + b}{a - b}$, then $(6\\otimes 4)\\otimes 3 = $",
+   "choices": {
+    "A": "4",
+    "B": "13",
+    "C": "15",
+    "D": "30",
+    "E": "72"
+   },
+   "answer": "A",
+   "solution": "$ 6\\otimes4=\\frac{6+4}{6-4}=\\frac{10}{2}=5 $. \n$ 5\\otimes3=\\frac{5+3}{5-3}=\\frac{8}{2}=\\boxed{\\textbf{(A)}\\ 4} $"
+  },
+  {
+   "position": 13,
+   "source": "2001 AMC 8 Problem 13",
+   "question": "Of the 36 students in Richelle's class, 12 prefer chocolate pie, 8 prefer apple, and 6 prefer blueberry. Half of the remaining students prefer cherry pie and half prefer lemon. For Richelle's pie graph showing this data, how many degrees should she use for cherry pie?",
+   "choices": {
+    "A": "10",
+    "B": "20",
+    "C": "30",
+    "D": "50",
+    "E": "72"
+   },
+   "answer": "D",
+   "solution": "There are $ 36 $ students in the class: $ 12 $ prefer chocolate pie, $ 8 $ prefer apple pie, and $ 6 $ prefer blueberry pie. Therefore, $ 36-12-8-6=10 $ students prefer cherry pie or lemon pie. Half of these prefer each, so $ 5 $ students prefer cherry pie. This means that $ \\frac{5}{36} $ of the students prefer cherry pie, so $ \\frac{5}{36} $ of the full $ 360^\\circ $ should be used for cherry pie. This is $ (\\frac{5}{36})(360^\\circ)=50^\\circ, \\boxed{\\text{D}} $"
+  },
+  {
+   "position": 14,
+   "source": "2001 AMC 8 Problem 14",
+   "question": "Tyler has entered a buffet line in which he chooses one kind of meat, two different vegetables and one dessert. If the order of food items is not important, how many different meals might he choose?\n\n*Meat: beef, chicken, pork\n*Vegetables: baked beans, corn, potatoes, tomatoes\n*Dessert: brownies, chocolate cake, chocolate pudding, ice cream",
+   "choices": {
+    "A": "4",
+    "B": "24",
+    "C": "72",
+    "D": "80",
+    "E": "144"
+   },
+   "answer": "C",
+   "solution": "There are $ 3 $ possibilities for the meat and $ 4 $ possibilites for the dessert, for a total of $ 4\\times3=12 $ possibilities for the meat and the dessert. There are $ 4 $ possibilities for the first vegetable and $ 3 $ possibilities for the second, but order doesn't matter, so we overcounted by a factor of $ 2 $. For example, we counted 'baked beans and corn' and 'corn and baked beans' as $ 2 $ different possibilities, so the total possibilites for the two vegetables is $ \\frac{4\\times3}{2}=6 $, and the total number of possibilites is $ 12\\times6=\\boxed{\\textbf{(C)}\\ 72}.$"
+  },
+  {
+   "position": 15,
+   "source": "2001 AMC 8 Problem 15",
+   "question": "Homer began peeling a pile of 44 potatoes at the rate of 3 potatoes per minute. Four minutes later Christen joined him and peeled at the rate of 5 potatoes per minute. When they finished, how many potatoes had Christen peeled?",
+   "choices": {
+    "A": "20",
+    "B": "24",
+    "C": "32",
+    "D": "33",
+    "E": "40"
+   },
+   "answer": "A",
+   "solution": "After the $ 4 $ minutes of Homer peeling alone, he had peeled $ 4\\times3=12 $ potatoes. This means that there are $ 44-12=32 $ potatoes left. Once Christen joins him, the two are peeling potatoes at a rate of $ 3+5=8 $ potatoes per minute. Because Christen's rate is $ 5 $, she peels $ 5/8 $ of $ 32 $, or $20$ potatoes.\n\n-N."
+  },
+  {
+   "position": 16,
+   "source": "2001 AMC 8 Problem 16",
+   "question": "A square piece of paper, 4 inches on a side, is folded in half vertically. Both layers are then cut in half parallel to the fold. Three new rectangles are formed, a large one and two small ones. What is the ratio of the perimeter of one of the small rectangles to the perimeter of the large rectangle?",
+   "choices": {
+    "A": "\\dfrac{1}{3}",
+    "B": "\\dfrac{1}{2}",
+    "C": "\\dfrac{3}{4}",
+    "D": "\\dfrac{4}{5}",
+    "E": "\\dfrac{5}{6}"
+   },
+   "answer": "E",
+   "solution": "A simpler way to solve the problem is by brute-forcing it. We know that the side length of the original paper is $4$ inches by $4$ inches. The smaller paper would have a side length of $4$ inches by $4$ \u00b7 $\\frac{1}{4} = 1$ inches, having a perimeter of $2$($4 + 1$) = $2$($5$) = $10$ inches. The larger rectangle would have a side length of $4$ inches by $4$ \u00b7 $\\frac{1}{2} = 2$ inches, having a perimeter of $2$($4 + 2$) = $2$($6$) = $12$ inches. Thus, the answer is $\\frac{10}{12} = \\frac{5}{6}$, i.e. $\\boxed{\\text{E}}$"
+  },
+  {
+   "position": 17,
+   "source": "2001 AMC 8 Problem 17",
+   "question": "For the game show ''Who Wants To Be A Millionaire?'', the dollar values of each question are shown in the following table (where K = 1000).\n\n$$\\begin{array}{rccccccccccccccc}\n\\text{Question} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\\\\n\\text{Value} & 100 & 200 & 300 & 500 & 1\\text{K} & 2\\text{K} & 4\\text{K} & 8\\text{K} & 16\\text{K} & 32\\text{K} & 64\\text{K} & 125\\text{K} & 250\\text{K} & 500\\text{K} & 1000\\text{K}\n\\end{array}$$\n\nBetween which two questions is the percent increase of the value the smallest?",
+   "choices": {
+    "A": "\\text{From 1 to 2}",
+    "B": "\\text{From 2 to 3}",
+    "C": "\\text{From 3 to 4}",
+    "D": "\\text{From 11 to 12}",
+    "E": "\\text{From 14 to 15}"
+   },
+   "answer": "B",
+   "solution": "Notice that in two of the increases, the dollar amount doubles. The increases in which this is not true is $ 2 $ to $ 3 $, $ 3 $ to $ 4 $, and $ 11 $ to $ 12 $. We can disregard $ 11 $ to $ 12 $ since that increase is almost $ 2 $ times. The increase from $ 2 $ to $ 3 $ is $ \\frac{300-200}{200}=\\frac{1}{2} $, so it's only multiplied by a factor of $ 1.5 $. The increase from $ 3 $ to $ 4 $ is $ \\frac{500-300}{300}=\\frac{2}{3} $, so it is multiplied by a factor of $ 1.\\bar{6} $. Therefore, the smallest percent increase is $ \\text{From 2 to 3}, \\boxed{\\text{B}} $"
+  },
+  {
+   "position": 18,
+   "source": "2001 AMC 8 Problem 18",
+   "question": "Two dice are thrown. What is the probability that the product of the two numbers is a multiple of 5?",
+   "choices": {
+    "A": "\\dfrac{1}{36}",
+    "B": "\\dfrac{1}{18}",
+    "C": "\\dfrac{1}{6}",
+    "D": "\\dfrac{11}{36}",
+    "E": "\\dfrac{1}{3}"
+   },
+   "answer": "D",
+   "solution": "The only way to get a multiple of $ 5 $ is to have at least one $ 5 $. If the first dice rolls a $ 5 $,  there are $ 6 $ ways to get a multiple of $ 5 $. If the second dice rolls a $ 5 $, there are also $ 6 $ ways. However, one case is repeated: both dice roll a $ 5 $. Therefore, there are $ 6 + 6 - 1 = 11 $, and there is a total of $ 6 \\times 6 $ ways, so the probability is $\\text{(D)}\\ \\dfrac{11}{36}$\n\nSolution by IHateMath314265169"
+  },
+  {
+   "position": 20,
+   "source": "2001 AMC 8 Problem 20",
+   "question": "Kaleana shows her test score to Quay, Marty and Shana, but the others keep theirs hidden. Quay thinks, \"At least two of us have the same score.\" Marty thinks, \"I didn't get the lowest score.\" Shana thinks, \"I didn't get the highest score.\" List the scores from lowest to highest for Marty (M), Quay (Q) and Shana (S).",
+   "choices": {
+    "A": "\\text{S,Q,M}",
+    "B": "\\text{Q,M,S}",
+    "C": "\\text{Q,S,M}",
+    "D": "\\text{M,S,Q}",
+    "E": "\\text{S,M,Q}"
+   },
+   "answer": "A",
+   "solution": "Since the only other score Quay knows is Kaleana's, and he knows that two of them have the same score, Quay and Kaleana must have the same score, and $ K=Q $. Marty knows that he didn't get the lowest score, and the only other score he knows is Kaleana's, so Marty must know that Kaleana must have a lower score than him, and $ M>K $. Finally, Shana knows that she didn't get the highest score, and the only other score she knows is Kaleana's, so Shana must know that Kaleana must have a higher score than her, and $ S<K $. Putting these together and substituting $ Q $ for $ K $, we have $ S<Q<M $, and from least to greatest this is $ \\text{S, Q, M}$, therefore the answer is $\\boxed{\\text{A}} $."
+  },
+  {
+   "position": 21,
+   "source": "2001 AMC 8 Problem 21",
+   "question": "The mean of a set of five different positive integers is 15. The median is 18. The maximum possible value of the largest of these five integers is",
+   "choices": {
+    "A": "19",
+    "B": "24",
+    "C": "32",
+    "D": "35",
+    "E": "40"
+   },
+   "answer": "D",
+   "solution": "Since there is an odd number of terms, the median is the number in the middle, specifically, the third largest number is $ 18 $, and there are $ 2 $ numbers less than $ 18 $ and $ 2 $ numbers greater than $ 18 $. The sum of these integers is $ 5(15)=75 $, since the mean is $ 15 $. To make the largest possible number with a given sum, the other numbers must be as small as possible. The two numbers less than $ 18 $ must be positive and distinct, so the smallest possible numbers for these are $ 1 $ and $ 2 $. The number right after $ 18 $ also needs to be as small as possible, so it must be $ 19 $. This means that the remaining number, the maximum possible value for a number in the set, is $ 75-1-2-18-19=35, \\boxed{\\text{(D) 35}} $."
+  },
+  {
+   "position": 22,
+   "source": "2001 AMC 8 Problem 22",
+   "question": "On a twenty-question test, each correct answer is worth 5 points, each unanswered question is worth 1 point and each incorrect answer is worth 0 points. Which of the following scores is '''NOT''' possible?",
+   "choices": {
+    "A": "90",
+    "B": "91",
+    "C": "92",
+    "D": "95",
+    "E": "97"
+   },
+   "answer": "E",
+   "solution": "We can equivalently construct the following rules: You have 100 point at first, but if you give the wrong answer, you will lose 5 points, if you don't answer a question you will lose 4 points. Obviously, you can lose 10 points, 9 points, 8 points, 5 points or 4 points, but you cannot lose 3 points. The answer is $ \\boxed{\\text{E}} $."
+  },
+  {
+   "position": 23,
+   "source": "2001 AMC 8 Problem 23",
+   "question": "Points [mathjax]R[/mathjax], [mathjax]S[/mathjax] and [mathjax]T[/mathjax] are vertices of an equilateral triangle, and points [mathjax]X[/mathjax], [mathjax]Y[/mathjax] and [mathjax]Z[/mathjax] are midpoints of its sides. How many noncongruent triangles can be\ndrawn using any three of these six points as vertices?\n\n[mathjax]",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "20[/mathjax]"
+   },
+   "answer": "D",
+   "solution": "Simply count all possible such triangles, while keeping in mind that the maximum length of any such triangle is 2 units:\n\n(2,1,1) lengths\n\n(2,1,2) lengths\n\n(2,2,2) lengths\n\n(1,1,1) lengths\n\nTo avoid stuff being congruent, we know that there are 4 different such triangles.\nSo, our answer is [mathjax]\\boxed{4}[/mathjax].\n\n- cheltstudent B)"
+  },
+  {
+   "position": 24,
+   "source": "2001 AMC 8 Problem 24",
+   "question": "Each half of this figure is composed of 3 red triangles, 5 blue triangles and 8 white triangles. When the upper half is folded down over the centerline, 2 pairs of red triangles coincide, as do 3 pairs of blue triangles. There are 2 red-white pairs. How many white pairs coincide?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "9"
+   },
+   "answer": "B",
+   "solution": "Each half has $ 3 $ red triangles, $ 5 $ blue triangles, and $ 8 $ white triangles. There are also $ 2 $ pairs of red triangles, so $ 2 $ red triangles on each side are used, leaving $ 1 $ red triangle, $ 5 $ blue triangles, and $ 8 $ white triangles remaining on each half. Also, there are $ 3 $ pairs of blue triangles, using $ 3 $ blue triangles on each side, so there is $ 1 $ red triangle, $ 2 $ blue triangles, and $ 8 $ white triangles remaining on each half. Also, we have $ 2 $ red-white pairs. This obviously can't use $ 2 $ red triangles on one side, since there is only $ 1 $ on each side, so we must use $ 1 $ red triangle and $ 1 $ white triangle per side, leaving $ 2 $ blue triangles and $ 7 $ white triangles apiece. The remaining blue triangles cannot be matched with other blue triangles since that would mean there were more than $ 3 $ blue pairs, so the remaining blue triangles must be paired with white triangles, yielding $ 4 $ blue-white pairs, one for each of the remaining blue triangles. This uses $ 2 $ blue triangles and $ 2 $ white triangles on each side, leaving $ 5 $ white triangles apiece, which must be paired with each other, so there are $ 5 $ white-white pairs, $ \\boxed{\\text{B}} $."
+  },
+  {
+   "position": 3,
+   "source": "2002 AMC 8 Problem 3",
+   "question": "What is the smallest possible average of four distinct positive even integers?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "C",
+   "solution": "In order to get the smallest possible average, we want the 4 even numbers to be as small as possible. The first 4 positive even numbers are 2, 4, 6, and 8. Their average is $\\frac{2+4+6+8}{4}=\\frac{20}{4}=\\boxed{\\text{(C)}\\ 5}$."
+  },
+  {
+   "position": 4,
+   "source": "2002 AMC 8 Problem 4",
+   "question": "The year 2002 is a palindrome (a number that reads the same from left to right as it does from right to left). What is the product of the digits of the next year after 2002 that is a palindrome?",
+   "choices": {
+    "A": "0",
+    "B": "4",
+    "C": "9",
+    "D": "16",
+    "E": "25"
+   },
+   "answer": "B",
+   "solution": "The palindrome right after 2002 is 2112. The product of the digits of 2112 is $\\boxed{\\text{(B)}\\ 4}$."
+  },
+  {
+   "position": 5,
+   "source": "2002 AMC 8 Problem 5",
+   "question": "Carlos Montado was born on Saturday, November 9, 2002. On what day of the week will Carlos be 706 days old?",
+   "choices": {
+    "A": "\\text{Monday}",
+    "B": "\\text{Wednesday}",
+    "C": "\\text{Friday}",
+    "D": "\\text{Saturday}",
+    "E": "\\text{Sunday}"
+   },
+   "answer": "C",
+   "solution": "Days of the week have a cycle that repeats every $7$ days.  Thus, after $100$ cycles, or $700$ days, it will be Saturday again.  Six more days will make it $\\text{Friday} \\rightarrow \\boxed{C}$"
+  },
+  {
+   "position": 6,
+   "source": "2002 AMC 8 Problem 6",
+   "question": "A birdbath is designed to overflow so that it will be self-cleaning. Water flows in at the rate of 20 milliliters per minute and drains at the rate of 18 milliliters per minute. Which one of these graphs shows the volume of water in the birdbath during the filling time and continuing into the overflow time?",
+   "choices": {
+    "A": "\\text{A}",
+    "B": "\\text{B}",
+    "C": "\\text{C}",
+    "D": "\\text{D}",
+    "E": "\\text{E}"
+   },
+   "answer": "A",
+   "solution": "The change in the water volume has a net gain of $20-18=2$ millimeters per minute. The birdbath's volume increases at a constant rate until it reaches its maximum and starts overflowing to keep a constant volume. This is best represented by graph $\\boxed{\\text{(A)}\\ A}$."
+  },
+  {
+   "position": 7,
+   "source": "2002 AMC 8 Problem 7",
+   "question": "The students in Mrs. Sawyer's class were asked to do a taste test of five kinds of candy. Each student chose one kind of candy. A bar graph of their preferences is shown. What percent of her class chose candy E?",
+   "choices": {
+    "A": "5",
+    "B": "12",
+    "C": "15",
+    "D": "16",
+    "E": "20"
+   },
+   "answer": "E",
+   "solution": "From the bar graph, we can see that $5$ students chose candy E. There are $6+8+4+2+5=25$ total students in Mrs. Sawyers class. The percent that chose E is $\\frac{5}{25} \\cdot 100 = \\boxed{\\text{(E)}\\ 20}$."
+  },
+  {
+   "position": 8,
+   "source": "2002 AMC 8 Problem 8",
+   "question": "Problems 8,9 and 10 use the data found in the accompanying paragraph and table:\n\nJuan organizes the stamps in his collection by country and by the decade in which they were issued. The prices he paid for them at a stamp shop were: Brazil and\nFrance, 6 cents each, Peru 4 cents each, and Spain 5 cents each. (Brazil and Peru are South American countries and France and Spain are in Europe.)\n\nHow many of his European stamps were issued in the '80s?",
+   "choices": {
+    "A": "9",
+    "B": "15",
+    "C": "18",
+    "D": "24",
+    "E": "42"
+   },
+   "answer": "D",
+   "solution": "France and Spain are European countries. The number of '80s stamps from France is $15$ and the number of '80s stamps from Spain is $9$. The total number of stamps is $15+9=\\boxed{\\text{(D)}\\ 24}$."
+  },
+  {
+   "position": 9,
+   "source": "2002 AMC 8 Problem 9",
+   "question": "Problems 8,9 and 10 use the data found in the accompanying paragraph and table:\n\nJuan organizes the stamps in his collection by country and by the decade in which they were issued. The prices he paid for them at a stamp shop were: Brazil and\nFrance, 6 cents each, Peru 4 cents each, and Spain 5 cents each. (Brazil and Peru are South American countries and France and Spain are in Europe.)\n\nIn dollars and cents, how much did his South American stamps issued before the \u201970s cost him?",
+   "choices": {
+    "A": "\\0.40",
+    "B": "\\1.06",
+    "C": "\\1.80",
+    "D": "\\2.38",
+    "E": "\\2.64"
+   },
+   "answer": "B",
+   "solution": "Brazil 50s and 60s total 11 stamps with each 6 cents, Peru 50s and 60s total 10 stamps with each 4 cents. So total $11*0.06+10*0.04 = \\boxed{\\text{(B)}\\ \\$1.06}$"
+  },
+  {
+   "position": 10,
+   "source": "2002 AMC 8 Problem 10",
+   "question": "Problems 8,9 and 10 use the data found in the accompanying paragraph and table:\n\nJuan organizes the stamps in his collection by country and by the decade in which they were issued. The prices he paid for them at a stamp shop were: Brazil and\nFrance, 6 cents each, Peru 4 cents each, and Spain 5 cents each. (Brazil and Peru are South American countries and France and Spain are in Europe.)\n\nThe average price of his '70s stamps is closest to",
+   "choices": {
+    "A": "3.5 \\text{ cents}",
+    "B": "4 \\text{ cents}",
+    "C": "4.5 \\text{ cents}",
+    "D": "5 \\text{ cents}",
+    "E": "5.5 \\text{ cents}"
+   },
+   "answer": "E",
+   "solution": "The price of all the stamps in the '70s together over the total number of stamps is equal to the average price.\n\n$$\n\\begin{align*}\n\\frac{(12)(0.06)+(12)(0.06)+(6)(0.04)+(13)(0.05)}{12+12+6+13} \n&= \\frac{0.72+0.72+0.24+0.65}{43} \\\\\n&= \\frac{2.33}{43} \\\\\n&\\approx \\boxed{\\text{(E)}\\ 5.5\\ \\text{cents}}\n\\end{align*}\n$$"
+  },
+  {
+   "position": 12,
+   "source": "2002 AMC 8 Problem 12",
+   "question": "A board game spinner is divided into three regions labeled $A$, $B$ and $C$. The probability of the arrow stopping on region $A$ is $\\frac{1}{3}$ and on region $B$ is $\\frac{1}{2}$. The probability of the arrow stopping on region $C$ is:",
+   "choices": {
+    "A": "\\frac{1}{12}",
+    "B": "\\frac{1}{6}",
+    "C": "\\frac{1}{5}",
+    "D": "\\frac{1}{3}",
+    "E": "\\frac{2}{5}"
+   },
+   "answer": "B",
+   "solution": "Since the arrow must land in one of the three regions, the sum of the probabilities must be 1. Thus the answer is $1-\\frac{1}{2}-\\frac{1}{3}=\\boxed{\\text{(B)}\\ \\frac16}$."
+  },
+  {
+   "position": 13,
+   "source": "2002 AMC 8 Problem 13",
+   "question": "For his birthday, Bert gets a box that holds 125 jellybeans when filled to capacity. A few weeks later, Carrie gets a larger box full of jellybeans. Her box is twice as high, twice as wide and twice as long as Bert's. Approximately, how many jellybeans did Carrie get?",
+   "choices": {
+    "A": "250",
+    "B": "500",
+    "C": "625",
+    "D": "750",
+    "E": "1000"
+   },
+   "answer": "E",
+   "solution": "Since the volume ratio is equal to the sides ratio cubed, then the ratio of the larger box's volume to the smaller one is 2 cubed.\n\n$2^3=8$\n\nNow multiply 125 (the number of jellybeans that Bert's box can hold) by 8.\n\n$8\\cdot125=\n\\boxed{\\text{(E)}\\ 1000}$."
+  },
+  {
+   "position": 14,
+   "source": "2002 AMC 8 Problem 14",
+   "question": "A merchant offers a large group of items at $30\\%$ off. Later, the merchant takes $20\\%$ off these sale prices. The total discount is",
+   "choices": {
+    "A": "35\\%",
+    "B": "44\\%",
+    "C": "50\\%",
+    "D": "56\\%",
+    "E": "60\\%"
+   },
+   "answer": "B",
+   "solution": "Let $x$ be the price of an item on sale. When the item is $30\\%$ off, its new price is \n$$(1-0.3)x=0.7x.$$\nWhen $20\\%$ is taken off of that price, the item's final sales price is \n$$(1-0.2)\\cdot0.7x=0.8\\cdot0.7x=0.56x=(1-0.44)x.$$\nTherefore, the item was $44\\%$ off, so the answer is $\\boxed{(B)}$."
+  },
+  {
+   "position": 15,
+   "source": "2002 AMC 8 Problem 15",
+   "question": "Which of the following polygons has the largest area?",
+   "choices": {
+    "A": "\\text{A}",
+    "B": "\\text{B}",
+    "C": "\\text{C}",
+    "D": "\\text{D}",
+    "E": "\\text{E}"
+   },
+   "answer": "E",
+   "solution": "Each polygon can be partitioned into unit squares and right triangles with sidelength $1$. Count the number of boxes enclosed by each polygon, with the unit square being $1$, and the triangle being $.5$. A has 5, B has 5, C has 5, D has 4.5, and E has 5.5. Therefore, the polygon with the largest area is $\\boxed{\\textbf{(E)}\\ \\text{E}}$."
+  },
+  {
+   "position": 17,
+   "source": "2002 AMC 8 Problem 17",
+   "question": "In a mathematics contest with ten problems, a student gains 5 points for a correct answer and loses 2 points for an incorrect answer. If Olivia answered every problem and her score was 29, how many correct answers did she have?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "C",
+   "solution": "Suppose she got $x$ questions right. Then she got $10 - x$ questions wrong. Since she gains 5 points for a correct answer and loses 2 for an incorrect one, we can solve $5x - 2(10 - x) = 29$ to get that $x = \\boxed{\\text{(C)}\\ 7}$."
+  },
+  {
+   "position": 18,
+   "source": "2002 AMC 8 Problem 18",
+   "question": "Gage skated $1$ hr $15$ min each day for $5$ days and $1$ hr $30$ min each day for $3$ days. How long would he have to skate the ninth day in order to average $85$ minutes of skating each day for the entire time?",
+   "choices": {
+    "A": "\\text{1 hr}",
+    "B": "\\text{1 hr 10 min}",
+    "C": "\\text{1 hr 20 min}",
+    "D": "\\text{1 hr 40 min}",
+    "E": "\\text{2 hr}"
+   },
+   "answer": "E",
+   "solution": "Converting into minutes and adding, we get that she skated $75*5+90*3+x = 375+270+x = 645+x$ minutes total, where $x$ is the amount she skated on day $9$. Dividing by $9$ to get the average, we get $\\frac{645+x}{9}=85$. Solving for $x$, $$645+x=765$$ $$x=120$$ Now we convert back into hours and minutes to get $\\boxed{\\text{(E)}\\ 2\\ \\text{hr}}$."
+  },
+  {
+   "position": 19,
+   "source": "2002 AMC 8 Problem 19",
+   "question": "How many whole numbers between 99 and 999 contain exactly one 0?",
+   "choices": {
+    "A": "72",
+    "B": "90",
+    "C": "144",
+    "D": "162",
+    "E": "180"
+   },
+   "answer": "D",
+   "solution": "Numbers with exactly one zero have the form $\\overline{a0b}$ or $\\overline{ab0}$, where the $a,b \\neq 0$. There are $(9\\cdot1\\cdot9)+(9\\cdot9\\cdot1) = 81+81 = \\boxed{162}$ such numbers, hence our answer is $\\fbox{D}$."
+  },
+  {
+   "position": 20,
+   "source": "2002 AMC 8 Problem 20",
+   "question": "The area of triangle $XYZ$ is 8 square inches. Points $A$ and $B$ are midpoints of congruent segments $\\overline{XY}$ and $\\overline{XZ}$. Altitude $\\overline{XC}$ bisects $\\overline{YZ}$. The area (in square inches) of the shaded region is",
+   "choices": {
+    "A": "1\\frac{1}2",
+    "B": "2",
+    "C": "2\\frac{1}2",
+    "D": "3",
+    "E": "3\\frac{1}2"
+   },
+   "answer": "D",
+   "solution": "We know the area of triangle $XYZ$ is $8$ square inches. The area of a triangle can also be represented as $\\frac{bh}{2}$ or in this problem $\\frac{XC\\cdot YZ}{2}$. By solving, we have $$\\frac{XC\\cdot YZ}{2} = 8,$$ $$XC\\cdot YZ = 16.$$ \n\nWith SAS congruence, triangles $XCY$ and $XCZ$ are congruent. Hence, triangle $XCY = \\frac{8}{2} = 4$. (Let's say point $D$ is the intersection between line segments $XC$ and $AB$.) We can find the area of the trapezoid $ADCY$ by subtracting the area of triangle $XAD$ from $4$. \n\nWe find the area of triangle $XAD$ by the $\\frac{bh}{2}$ formula- $\\frac{XD\\cdot AD}{2} = \\frac{\\frac{XC}{2}\\cdot AD}{2}$. $AD$ is $\\frac{1}{4}$ of $YZ$ from solution 1. The area of $XAD$ is $$\\frac{\\frac{XC}{2}\\cdot \\frac{YZ}{4}}{2} = \\frac{16}{16} = 1$$.\n\nTherefore, the area of the shaded area- trapezoid $ADCY$ has area $4-1 = \\boxed{\\text{(D)}\\ 3}$. \n\n- sarah07"
+  },
+  {
+   "position": 21,
+   "source": "2002 AMC 8 Problem 21",
+   "question": "Harold tosses a coin four times. The probability that he gets at least as many heads as tails is",
+   "choices": {
+    "A": "\\frac{5}{16}",
+    "B": "\\frac{3}{8}",
+    "C": "\\frac{1}{2}",
+    "D": "\\frac{5}{8}",
+    "E": "\\frac{11}{16}"
+   },
+   "answer": "E",
+   "solution": "Case 1: There are two heads and two tails. There are $\\binom{4}{2} = 6$ ways to choose which two tosses are heads, and the other two must be tails.\n\nCase 2: There are three heads, one tail. There are $\\binom{4}{1} = 4$ ways to choose which of the four tosses is a tail.\n\nCase 3: There are four heads and no tails. This can only happen $1$ way.\n\nThere are a total of $2^4=16$ possible configurations, giving a probability of $\\frac{6+4+1}{16} = \\boxed{\\text{(E)}\\ \\frac{11}{16}}$."
+  },
+  {
+   "position": 23,
+   "source": "2002 AMC 8 Problem 23",
+   "question": "A corner of a tiled floor is shown. If the entire floor is tiled in this way and each of the four corners looks like this one, then what fraction of the tiled floor is made of darker tiles?",
+   "choices": {
+    "A": "\\frac{1}3",
+    "B": "\\frac{4}9",
+    "C": "\\frac{1}2",
+    "D": "\\frac{5}9",
+    "E": "\\frac{5}8"
+   },
+   "answer": "B",
+   "solution": "The same pattern is repeated for every $6 \\times 6$ tile. Looking closer, there is also symmetry of the top $3 \\times 3$ square, so the fraction of the entire floor in dark tiles is the same as the fraction in the square. Counting the tiles, there are $4$ dark tiles, and $9$ total tiles, giving a fraction of $\\boxed{\\text{(B)}\\ \\frac49}$."
+  },
+  {
+   "position": 24,
+   "source": "2002 AMC 8 Problem 24",
+   "question": "Miki has a dozen oranges of the same size and a dozen pears of the same size. Miki uses her juicer to extract 8 ounces of pear juice from 3 pears and 8 ounces of orange juice from 2 oranges. She makes a pear-orange juice blend from an equal number of pears and oranges. What percent of the blend is pear juice?",
+   "choices": {
+    "A": "30",
+    "B": "40",
+    "C": "50",
+    "D": "60",
+    "E": "70"
+   },
+   "answer": "B",
+   "solution": "A pear gives $8/3$ ounces of juice per pear. An orange gives $8/2=4$ ounces of juice per orange. If the pear-orange juice blend used one pear and one orange each, the percentage of pear juice would be\n\n$$\\frac{8/3}{8/3+4} \\times 100 = \\frac{8}{8+12} \\times 100  = \\boxed{\\text{(B)}\\ 40}$$"
+  },
+  {
+   "position": 25,
+   "source": "2002 AMC 8 Problem 25",
+   "question": "Loki, Moe, Nick and Ott are good friends. Ott had no money, but the others did. Moe gave Ott one-fifth of his money, Loki gave Ott one-fourth of his money and Nick gave Ott one-third of his money. Each gave Ott the same amount of money. What fractional part of the group's money does Ott now have?",
+   "choices": {
+    "A": "\\frac{1}{10}",
+    "B": "\\frac{1}{4}",
+    "C": "\\frac{1}{3}",
+    "D": "\\frac{2}{5}",
+    "E": "\\frac{1}{2}"
+   },
+   "answer": "B",
+   "solution": "Since Ott gets equal amounts of money from each friend, we can say that he gets $x$ dollars from each friend. This means that Moe has $5x$ dollars, Loki has $4x$ dollars, and Nick has $3x$ dollars. The total amount is $12x$ dollars, and since Ott gets $3x$ dollars total, $\\frac{3x}{12x}= \\frac{3}{12} = \\boxed{\\text{(B)}\\ \\frac14}$."
+  },
+  {
+   "position": 2,
+   "source": "2003 AMC 8 Problem 2",
+   "question": "Which of the following numbers has the smallest prime factor?",
+   "choices": {
+    "A": "55",
+    "B": "57",
+    "C": "58",
+    "D": "59",
+    "E": "61"
+   },
+   "answer": "C",
+   "solution": "The smallest prime factor is $ 2 $, and since $ 58 $ is the only multiple of $ 2 $, the answer is $ \\boxed{\\mathrm{(C)}\\ 58} $."
+  },
+  {
+   "position": 3,
+   "source": "2003 AMC 8 Problem 3",
+   "question": "A burger at Ricky C's weighs $120$ grams, of which $30$ grams are filler. \nWhat percent of the burger is not filler?",
+   "choices": {
+    "A": "60\\%",
+    "B": "65\\%",
+    "C": "70\\%",
+    "D": "75\\%",
+    "E": "90\\%"
+   },
+   "answer": "D",
+   "solution": "There are $ 30 $ grams of filler, so there are $ 120-30= 90 $ grams that aren't filler. $ \\frac{90}{120}=\\frac{3}{4}=\\boxed{\\mathrm{(D)}\\ 75\\%} $."
+  },
+  {
+   "position": 12,
+   "source": "2003 AMC 8 Problem 12",
+   "question": "When a fair six-sided dice is tossed on a table top, the bottom face cannot be seen. What is the probability that the product of the  faces that can be seen is divisible by $6$?",
+   "choices": {
+    "A": "1/3",
+    "B": "1/2",
+    "C": "2/3",
+    "D": "5/6",
+    "E": "1"
+   },
+   "answer": "E",
+   "solution": "We have six cases: each different case, every one where a different number cannot be seen. The rolls that omit numbers one through five are all something times six: an example would be where the number you cannot see is one, so the product should be 2 x 3 x 4 x 5 x 6, and so product should be divisible by six. The roll that omits six on the other hand is 1 x 2 x 3 x 4 x 5, which has 2 x 3, also equal to six. We can see that all of them have a factor of 6 and therefore are divisible by six, so the solution should be $ \\textbf{(E)}\\"
+  },
+  {
+   "position": 13,
+   "source": "2003 AMC 8 Problem 13",
+   "question": "Fourteen white cubes are put together to form the figure on the right. The complete surface of the figure, including the bottom, is painted red. The figure is then separated into individual cubes. How many of the individual cubes have exactly four red faces",
+   "choices": {
+    "A": "4",
+    "B": "6",
+    "C": "8",
+    "D": "10",
+    "E": "12"
+   },
+   "answer": "B",
+   "solution": "This is the number cubes that are adjacent to another cube on exactly two sides. The bottom corner cubes are connected on three sides, and the top corner cubes are connected on one. The number we are looking for is the number of middle cubes, which is $\\boxed{\\textbf{(B)}\\ 6}$."
+  },
+  {
+   "position": 15,
+   "source": "2003 AMC 8 Problem 15",
+   "question": "A figure is constructed from unit cubes. Each cube shares at least one face with another cube. What is the minimum number of cubes needed to build a figure with the front and side views shown?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "B",
+   "solution": "In order to minimize the amount of cubes needed, we must match up as many squares of our given figures with each other to make different sides of the same cube.  One example of the solution with $\\boxed{\\textbf{(B)}\\ 4}$ cubes. Notice the corner cube cannot be removed for a figure of 3 cubes because at least one face of a cube must be touching another face."
+  },
+  {
+   "position": 18,
+   "source": "2003 AMC 8 Problem 18",
+   "question": "Each of the twenty dots on the graph below represents one of Sarah's classmates.  Classmates who are friends are connected with a line segment.  For her birthday party, Sarah is inviting only the following:  all of her friends and all of those classmates who are friends with at least one of her friends.  How many classmates will not be invited to Sarah's party?",
+   "choices": {
+    "A": "1",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "D",
+   "solution": "There are $3$ people who are friends with only each other who won't be invited, plus $1$ person who has no friends, and $2$ people who are friends of friends of friends who won\u2019t be invited. So the answer is $\\boxed{\\textbf{(D)}\\ 6}$."
+  },
+  {
+   "position": 20,
+   "source": "2003 AMC 8 Problem 20",
+   "question": "What is the measure of the acute angle formed by the hands of the clock at 4:20 PM?",
+   "choices": {
+    "A": "0",
+    "B": "5",
+    "C": "8",
+    "D": "10",
+    "E": "12"
+   },
+   "answer": "D",
+   "solution": "Imagine the clock as a circle. The minute hand will be at the 4 at 20 minutes past the  hour. The central angle formed between $4$ and $5$ is $30$ degrees (since it is 1/12 of a full circle, 360). By $4:20$, the hour hand would have moved $\\frac{1}{3}$ way from 4 to 5 since $\\frac{20}{60}$ is reducible to $\\frac{1}{3}$. One third of the way from 4 to 5 is one third of 30 degrees, which is 10 degrees past the 4. Recall that the minute hand is at the 4, so the angle between them is $\\boxed{(D)  10}$."
+  },
+  {
+   "position": 21,
+   "source": "2003 AMC 8 Problem 21",
+   "question": "The area of trapezoid $ ABCD$ is $164\\text{ cm}^2$.  The altitude is 8 cm, $AB$ is 10 cm, and $CD$ is 17 cm.  What is $BC$, in centimeters?",
+   "choices": {
+    "A": "9",
+    "B": "10",
+    "C": "12",
+    "D": "15",
+    "E": "20"
+   },
+   "answer": "B",
+   "solution": "Using the formula for the area of a trapezoid, we have $164=8(\\frac{BC+AD}{2})$. Thus $BC+AD=41$. Drop perpendiculars from $B$ to $AD$ and from $C$ to $AD$ and let them hit $AD$ at $E$ and $F$ respectively. Note that each of these perpendiculars has length $8$. From the Pythagorean Theorem, $AE=6$ and $DF=15$ thus $AD=BC+21$. Substituting back into our original equation we have $BC+BC+21=41$ thus $BC=\\boxed{\\text{(B)}\\ 10}$"
+  },
+  {
+   "position": 22,
+   "source": "2003 AMC 8 Problem 22",
+   "question": "The following figures are composed of squares and circles. Which figure has a shaded region with largest area?",
+   "choices": {
+    "A": "\\text{A only}",
+    "B": "\\text{B only}",
+    "C": "\\text{C only}",
+    "D": "\\text{both A and B}",
+    "E": "\\text{all are equal}"
+   },
+   "answer": "C",
+   "solution": "First we have to find the area of the shaded region in each of the figures. In figure $\\textbf{A}$ the area of the shaded region is the area of the circle subtracted from the area of the square. That is $2^2-1^2 \\pi=4-\\pi$. In figure $\\textbf{B}$ the area of the shaded region is the sum of the areas of the 4 circles subtracted from the area of the square. That is $2^2-4 \\left( \\left(  \\frac{1}{2} \\right)^2 \\pi \\right)=4-4 \\left(\\frac{\\pi}{4} \\right)=4-\\pi$. In figure $\\textbf{C}$ the area of the shaded region is the area of the square subtracted from the area of the circle. The diameter of the circle and the diagonal of the square are equal to 2. We can easily find the area of the square using the area formula $\\frac{d_1 d_2}{2}$. So the area of the shaded region is $1^2 \\pi-\\frac{2\\cdot{2}}{2}=\\pi-2$. Clearly the largest area that we found among the three shaded regions is $\\pi-2$.  Thus the answer is $\\boxed{C}$.\n\n*Note - If you don't know the diagonal formula, you can also find the length of the square using the Pythagorean Theorem (set up an equation and solve for $x$), which is $\\sqrt{2}$, and get that the area is $2$, and continue as shown in the solution."
+  },
+  {
+   "position": 5,
+   "source": "2004 AMC 8 Problem 5",
+   "question": "Ms. Hamilton's eighth-grade class wants to participate in the annual three-person-team basketball tournament. The losing team of each game is eliminated from the tournament. If sixteen teams compete, how many games will be played to determine the winner?",
+   "choices": {
+    "A": "4",
+    "B": "7",
+    "C": "8",
+    "D": "15",
+    "E": "16"
+   },
+   "answer": "D",
+   "solution": "There will be $8$ games the first round, $4$ games the second round, $2$ games the third round, and $1$ game in the final round, giving us a total of $8+4+2+1=15$ games. $\\boxed{\\textbf{(D)}\\ 15}$."
+  },
+  {
+   "position": 14,
+   "source": "2004 AMC 8 Problem 14",
+   "question": "What is the area enclosed by the geoboard quadrilateral below?",
+   "choices": {
+    "A": "15",
+    "B": "18\\frac12",
+    "C": "22\\frac12",
+    "D": "27",
+    "E": "41"
+   },
+   "answer": "C",
+   "solution": "The figure contains $21$ interior points and $5$ boundary points. Using Pick's Theorem, the area is $$21+\\frac{5}{2}-1=\\boxed{\\textbf{(C)}\\ 22\\frac12}$$"
+  },
+  {
+   "position": 20,
+   "source": "2004 AMC 8 Problem 20",
+   "question": "Two-thirds of the people in a room are seated in three-fourths of the chairs. The rest of the people are standing. If there are $6$ empty chairs, how many people are in the room?",
+   "choices": {
+    "A": "12",
+    "B": "18",
+    "C": "24",
+    "D": "27",
+    "E": "36"
+   },
+   "answer": "D",
+   "solution": "Working backwards, if $3/4$ of the chairs are taken and $6$ are empty, then there are three times as many taken chairs as empty chairs, or $3 \\cdot 6 = 18$. If $x$ is the number of people in the room and $2/3$ are seated, then $\\frac23 x = 18$ and $x = \\boxed{(\\text{D}) 27}$."
+  },
+  {
+   "position": 21,
+   "source": "2004 AMC 8 Problem 21",
+   "question": "Spinners $A$ and $B$ are spun. On each spinner, the arrow is equally likely to land on each number. What is the probability that the product of the two spinners' numbers is even?",
+   "choices": {
+    "A": "\\frac14",
+    "B": "\\frac13",
+    "C": "\\frac12",
+    "D": "\\frac23",
+    "E": "\\frac34"
+   },
+   "answer": "D",
+   "solution": "We can make a chart and the we see that the 12 possibilities: 1, 2, 3, 2, 4, 6, 3, 6, 9, 4, 8, and 12. Out of these only 8 work; thus the probability is $$ \\boxed{\\textbf{(D)}\\ \\frac23}$$"
+  },
+  {
+   "position": 3,
+   "source": "2005 AMC 8 Problem 3",
+   "question": "What is the minimum number of small squares that must be colored black so that a line of symmetry lies on the diagonal $ \\overline{BD}$ of square $ ABCD$?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "D",
+   "solution": "Rotating square $ABCD$ counterclockwise $45^\\circ$ so that the line of symmetry $BD$ is a vertical line makes it easier to see that $\\boxed{\\textbf{(D)}\\ 4}$ squares need to be colored to match its corresponding square."
+  },
+  {
+   "position": 13,
+   "source": "2005 AMC 8 Problem 13",
+   "question": "The area of polygon $ ABCDEF$ is 52 with $ AB=8$, $BC=9$ and $FA=5$. What is $ DE+EF$?",
+   "choices": {
+    "A": "7",
+    "B": "8",
+    "C": "9",
+    "D": "10",
+    "E": "11"
+   },
+   "answer": "C",
+   "solution": "Similar to solution 1, $AF + DE = BC$, so $DE=4$. Split the polygon into two rectangles by extending the $DE$ so it intersects $AB$. Let's say the length of $FE$ is equal to $x$. We can form the equation: $$5x + 9(8-x) = 52$$. We see that $x = 5$, so we can add $5 + 4 = \\boxed{\\textbf{(C)}\\ 9}$.\n - ArjunBhumula"
+  },
+  {
+   "position": 17,
+   "source": "2005 AMC 8 Problem 17",
+   "question": "The results of a cross-country team's training run are graphed below. Which student has the greatest average speed?",
+   "choices": {
+    "A": "\\text{Angela}",
+    "B": "\\text{Briana}",
+    "C": "\\text{Carla}",
+    "D": "\\text{Debra}",
+    "E": "\\text{Evelyn}"
+   },
+   "answer": "E",
+   "solution": "Average speed is distance over time, or the slope of the line through the point and the origin. $\\boxed{\\textbf{(E)}\\ \\text{Evelyn}}$ has the steepest line, and runs the greatest distance for the shortest amount of time."
+  },
+  {
+   "position": 19,
+   "source": "2005 AMC 8 Problem 19",
+   "question": "What is the perimeter of trapezoid $ ABCD$?",
+   "choices": {
+    "A": "180",
+    "B": "188",
+    "C": "196",
+    "D": "200",
+    "E": "204"
+   },
+   "answer": "A",
+   "solution": "Draw altitudes from $B$ and $C$ to base $AD$ to create a rectangle and two right triangles. The side opposite $BC$ is equal to $50$. The bases of the right triangles can be found using Pythagorean or special triangles to be $18$ and $7$. Add it together to get $AD=18+50+7=75$. The perimeter is $75+30+50+25=\\boxed{\\textbf{(A)}\\ 180}$."
+  },
+  {
+   "position": 21,
+   "source": "2005 AMC 8 Problem 21",
+   "question": "How many distinct triangles can be drawn using three of the dots below as vertices?",
+   "choices": {
+    "A": "9",
+    "B": "12",
+    "C": "18",
+    "D": "20",
+    "E": "24"
+   },
+   "answer": "C",
+   "solution": "The number of ways to choose three points to make a triangle is $\\binom 63 = 20$. However, two* of these are a straight line so we subtract $2$ to get $\\boxed{\\textbf{(C)}\\ 18}$.\n\n*Note:  We are assuming that there are no degenerate triangles in this problem, and that is why we subtract two."
+  },
+  {
+   "position": 22,
+   "source": "2005 AMC 8 Problem 22",
+   "question": "A company sells detergent in three different sized boxes: small (S), medium (M) and large (L). The medium size costs 50% more than the small size and contains 20% less detergent than the large size. The large size contains twice as much detergent as the small size and costs 30% more than the medium size. Rank the three sizes from best to worst buy.",
+   "choices": {
+    "A": "\\, SML",
+    "B": "\\, LMS",
+    "C": "\\, MSL",
+    "D": "\\, LSM",
+    "E": "\\, MLS"
+   },
+   "answer": "E",
+   "solution": "WLOG (Without Loss of Generality), suppose the small size costs $\\textdollar 1$ and has $5$ oz. The medium size then costs $\\textdollar 1.50$ and has $8$ oz. The large size costs $\\textdollar 1.95$ and has 10 oz. The small, medium, and large sizes cost, respectively, $0.200, $0.188, and S0.195 per oz. The sizes from best to worst buy are $\\boxed{\\textbf{(E)}\\ \\text{MLS}}$."
+  },
+  {
+   "position": 2,
+   "source": "2006 AMC 8 Problem 2",
+   "question": "On the AMC 8 contest Billy answers 13 questions correctly, answers 7 questions incorrectly and doesn't answer the last 5. What is his score?",
+   "choices": {
+    "A": "1",
+    "B": "6",
+    "C": "13",
+    "D": "19",
+    "E": "26"
+   },
+   "answer": "C",
+   "solution": "As the AMC 8 only rewards 1 point for each correct answer, everything is irrelevant except the number Billy answered correctly, $ \\boxed{\\textbf{(C)}\\ 13} $."
+  },
+  {
+   "position": 4,
+   "source": "2006 AMC 8 Problem 4",
+   "question": "Initially, a spinner points west. Chenille moves it clockwise $ 2 \\dfrac{1}{4}$ revolutions and then counterclockwise $ 3 \\dfrac{3}{4}$ revolutions. In what direction does the spinner point after the two moves?",
+   "choices": {
+    "A": "\\text{north}",
+    "B": "\\text{east}",
+    "C": "\\text{south}",
+    "D": "\\text{west}",
+    "E": "\\text{northwest}"
+   },
+   "answer": "B",
+   "solution": "If the spinner goes clockwise $ 2 \\dfrac{1}{4}$ revolutions and then counterclockwise $ 3 \\dfrac{3}{4}$ revolutions, it ultimately goes counterclockwise $ 1 \\dfrac{1}{2} $ which brings the spinner pointing $ \\boxed{\\textbf{(B)}\\ \\text{east}} $."
+  },
+  {
+   "position": 7,
+   "source": "2006 AMC 8 Problem 7",
+   "question": "Circle $ X $ has a radius of $ \\pi $. Circle $ Y $ has a circumference of $ 8 \\pi $. Circle $ Z $ has an area of $ 9 \\pi $. List the circles in order from smallest to the largest radius.",
+   "choices": {
+    "A": "X, Y, Z",
+    "B": "Z, X, Y",
+    "C": "Y, X, Z",
+    "D": "Z, Y, X",
+    "E": "X, Z, Y"
+   },
+   "answer": "B",
+   "solution": "Not using the formulas of circles, $ C=2 \\pi r $ and $ A= \\pi r^2 $, we find that circle $ Y $ has a radius of $ 4 $ and circle $ Z $ has a radius of $ 3 $. Also, circle X has a radius of $ \\pi $. Thus, the order from smallest to largest radius is $ \\boxed{\\textbf{(B)}\\ Z, X, Y} $."
+  },
+  {
+   "position": 17,
+   "source": "2006 AMC 8 Problem 17",
+   "question": "Jeff rotates spinners $P$, $Q$ and $R$ and adds the resulting numbers. What is the probability that his sum is an odd number?",
+   "choices": {
+    "A": "\\frac{1}{4}",
+    "B": "\\frac{1}{3}",
+    "C": "\\frac{1}{2}",
+    "D": "\\frac{2}{3}",
+    "E": "\\frac{3}{4}"
+   },
+   "answer": "B",
+   "solution": "In order for Jeff to have an odd number sum, the numbers must either be Odd + Odd + Odd or Even + Even + Odd. We easily notice that we cannot obtain Odd + Odd + Odd because spinner $Q$ contains only even numbers. Therefore we must work with Even + Even + Odd and spinner $Q$ will give us one of our even numbers. We also see that spinner $R$ only contains odd, so spinner $R$ must give us our odd number. We still need one even number from spinner $P$. There is only 1 even number: $2$. Since spinning the required numbers are automatic on the other spinners, we only have to find the probability of spinning a $2$ in spinner $P$, which is clearly $\\boxed{\\textbf{(B)}\\ \\frac{1}{3}}$"
+  },
+  {
+   "position": 19,
+   "source": "2006 AMC 8 Problem 19",
+   "question": "Triangle $ ABC $ is an isosceles triangle with $ \\overline{AB}=\\overline{BC}$. Point $ D $ is the midpoint of both $ \\overline{BC}$ and $ \\overline{AE}$, and $ \\overline{CE} $ is 11 units long. Triangle $ ABD $ is congruent to triangle $ ECD $. What is the length of $ \\overline{BD} $?",
+   "choices": {
+    "A": "4",
+    "B": "4.5",
+    "C": "5",
+    "D": "5.5",
+    "E": "6"
+   },
+   "answer": "D",
+   "solution": "Since triangle $ ABD $ is congruent to triangle $ ECD $ and $ \\overline{CE} =11 $, $ \\overline{AB}=11 $. Since $ \\overline{AB}=\\overline{BC}$,  $ \\overline{BC}=11 $. Because point $ D $ is the midpoint of $ \\overline{BC} $, $ \\overline{BD}=\\frac{\\overline{BC}}{2}=\\frac{11}{2}=\\boxed{\\textbf{(D)}\\ 5.5} $. We can say this because of CPCTC; corresponding parts of congruent triangles are congruent."
+  },
+  {
+   "position": 22,
+   "source": "2006 AMC 8 Problem 22",
+   "question": "Three different one-digit positive integers are placed in the bottom row of cells. Numbers in adjacent cells are added and the sum is placed in the cell above them. In the second row, continue the same process to obtain a number in the top cell. What is the difference between the largest and smallest numbers possible in the top cell?",
+   "choices": {
+    "A": "16",
+    "B": "24",
+    "C": "25",
+    "D": "26",
+    "E": "35"
+   },
+   "answer": "D",
+   "solution": "If the lower cells contain $A, B$ and $C$, then the second row will contain\n$A + B$ and $B + C$, and the top cell will contain $A + 2B + C$. To obtain the\nsmallest sum, place $1$ in the center cell and $2$ and $3$ in the outer ones. The top\nnumber will be $7$. For the largest sum, place $9$ in the center cell and $7$ and $8$ in\nthe outer ones. This top number will be $33$. The difference is $33 - 7 = \\boxed{\\textbf{(D)}\\ 26\n}$."
+  },
+  {
+   "position": 23,
+   "source": "2006 AMC 8 Problem 23",
+   "question": "A box contains gold coins. If the coins are equally divided among six people, four coins are left over. If the coins are equally divided among five people, three coins are left over. If the box holds the smallest number of coins that meets these two conditions, how many coins are left when equally divided among seven people?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "5"
+   },
+   "answer": "A",
+   "solution": "If there were two more coins in the box, the number of coins would be divisible\nby both $6$ and $5$. The smallest number that is divisible by $6$ and $5$ is $30$, so the\nsmallest possible number of coins in the box is $28$ and the remainder when divided by $7$ is $\\boxed{\\textbf{(A)}\\ 0}$."
+  },
+  {
+   "position": 1,
+   "source": "2007 AMC 8 Problem 1",
+   "question": "Theresa's parents have agreed to buy her tickets to see her favorite band if she spends an average of $10$ hours per week helping around the house for $6$ weeks. For the first $5$ weeks she helps around the house for $8$, $11$, $7$, $12$ and $10$ hours. How many hours must she work for the final week to earn the tickets?",
+   "choices": {
+    "A": "9",
+    "B": "10",
+    "C": "11",
+    "D": "12",
+    "E": "13"
+   },
+   "answer": "D",
+   "solution": "Let $x$ be the number of hours she must work for the final week. We are looking for the average, so  \n$$\\frac{8 + 11 + 7 + 12 + 10 + x}{6} = 10$$  \nSolving gives:\n$$\\frac{48 + x}{6} = 10$$ \n \n$$48 + x = 60$$\n\n$$x = 12$$\n\nSo, the answer is $ \\boxed{\\textbf{(D)}\\ 12} $"
+  },
+  {
+   "position": 2,
+   "source": "2007 AMC 8 Problem 2",
+   "question": "$650$ students were surveyed about their pasta preferences. The choices were lasagna, manicotti, ravioli and spaghetti. The results of the survey are displayed in the bar graph. What is the ratio of the number of students who preferred spaghetti to the number of students who preferred manicotti?",
+   "choices": {
+    "A": "\\frac{2}{5}",
+    "B": "\\frac{1}{2}",
+    "C": "\\frac{5}{4}",
+    "D": "\\frac{5}{3}",
+    "E": "\\frac{5}{2}"
+   },
+   "answer": "E",
+   "solution": "The answer is $\\dfrac{\\text{number of students who preferred spaghetti}}{\\text{number of students who preferred manicotti}}$\n\nSo,\n\n$\\frac{250}{100}$ \n \nSimplify,\n\n$\\frac{5}{2}$ \n\nThe answer is $ \\boxed{\\textbf{(E)}\\ \\dfrac{5}{2}} $"
+  },
+  {
+   "position": 4,
+   "source": "2007 AMC 8 Problem 4",
+   "question": "A haunted house has six windows. In how many ways can\nGeorgie the Ghost enter the house by one window and leave\nby a different window?",
+   "choices": {
+    "A": "12",
+    "B": "15",
+    "C": "18",
+    "D": "30",
+    "E": "36"
+   },
+   "answer": "D",
+   "solution": "Georgie can enter the haunted house through any of the six windows. Then, he can leave through any of the remaining five windows.\n\nSo, Georgie has a total of $6 \\cdot 5$ ways he can enter the house by one window and leave\nby a different window.\n\nTherefore, we have $ \\boxed{\\textbf{(D)}\\ 30} $ ways."
+  },
+  {
+   "position": 5,
+   "source": "2007 AMC 8 Problem 5",
+   "question": "Chandler wants to buy a $500$ dollar mountain bike. For his birthday, his grandparents\nsend him $50$ dollars, his aunt sends him $35$ dollars and his cousin gives him $15$ dollars. He earns\n$16$ dollars per week for his paper route. He will use all of his birthday money and all\nof the money he earns from his paper route. In how many weeks will he be able\nto buy the mountain bike?",
+   "choices": {
+    "A": "24",
+    "B": "25",
+    "C": "26",
+    "D": "27",
+    "E": "28"
+   },
+   "answer": "B",
+   "solution": "Let $x$ be the number of weeks.\n\nThus, we have the equation $50 + 35 + 15 + 16x = 500$.\n\nSimplify,\n\n$100 + 16x = 500$\n\n$16x = 400$\n\n$x = 25$\n\nThe answer is $ \\boxed{\\textbf{(B)}\\ 25} $"
+  },
+  {
+   "position": 6,
+   "source": "2007 AMC 8 Problem 6",
+   "question": "The average cost of a long-distance call in the USA in $1985$ was\n$41$ cents per minute, and the average cost of a long-distance\ncall in the USA in $2005$ was $7$ cents per minute. Find the\napproximate percent decrease in the cost per minute of a long-\ndistance call.",
+   "choices": {
+    "A": "7",
+    "B": "17",
+    "C": "34",
+    "D": "41",
+    "E": "80"
+   },
+   "answer": "E",
+   "solution": "The percent decrease is (the amount of decrease)/(original amount)\n\nthe amount of decrease is $41 - 7 = 34$\n\nso the percent decrease is $\\frac{34}{41}$ which is about $ \\boxed{\\textbf{(E)}\\ 80\\%} $"
+  },
+  {
+   "position": 8,
+   "source": "2007 AMC 8 Problem 8",
+   "question": "In trapezoid $ABCD$, $\\overline{AD}$ is perpendicular to $\\overline{DC}$,\n$AD = AB = 3$, and $DC = 6$. In addition, $E$ is on $\\overline{DC}$, and $\\overline{BE}$ is parallel to $\\overline{AD}$. Find the area of $\\triangle BEC$.",
+   "choices": {
+    "A": "3",
+    "B": "4.5",
+    "C": "6",
+    "D": "9",
+    "E": "18"
+   },
+   "answer": "B",
+   "solution": "$4.5$ is the only one that isn't an integer, and is the odd one out. \n$$\\begin{align*}\n&\\boxed{\\textbf{(B)}\\ 4.5}.\n\\end{align*}$$"
+  },
+  {
+   "position": 9,
+   "source": "2007 AMC 8 Problem 9",
+   "question": "To complete the grid below, each of the digits 1 through 4 must occur once\nin each row and once in each column. What number will occupy the lower\nright-hand square?\n\n$$ \\begin{array}\\hline 1 & & 2 &\\\\ \\hline 2 & 3 & &\\\\ \\hline & &&4\\\\ \\hline & &&\\\\ \\hline\\end{array} $$",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "\\text{cannot be determined}"
+   },
+   "answer": "B",
+   "solution": "Note how the first and second row already contain a $2$. Since the third row, last column already has a $4$, the only possible place a $2$ could be in is the bottom right square. Thus our answer is $\\boxed{\\textbf{(B)}\\ 2}$."
+  },
+  {
+   "position": 11,
+   "source": "2007 AMC 8 Problem 11",
+   "question": "Tiles $I, II, III$ and $IV$ are translated so one tile coincides with each of the rectangles $A, B, C$ and $D$. In the final arrangement, the two numbers on any side common to two adjacent tiles must be the same. Which of the tiles is translated to Rectangle $C$?",
+   "choices": {
+    "A": "I",
+    "B": "II",
+    "C": "III",
+    "D": "IV",
+    "E": "cannot be determined"
+   },
+   "answer": "D",
+   "solution": "We first notice that tile III has a $0$ on the bottom and a $5$ on the right side. Since no other tile has a $0$ or a $5$, Tile III must be in rectangle $D$. Tile III also has a $1$ on the left, so Tile IV must be in Rectangle $C$.\n\nThe answer is $\\boxed{\\textbf{(D)}}$"
+  },
+  {
+   "position": 13,
+   "source": "2007 AMC 8 Problem 13",
+   "question": "Sets $A$ and $B$, shown in the Venn diagram, have the same number of elements.\nTheir union has $2007$ elements and their intersection has $1001$ elements. Find\nthe number of elements in $A$.",
+   "choices": {
+    "A": "503",
+    "B": "1006",
+    "C": "1504",
+    "D": "1507",
+    "E": "1510"
+   },
+   "answer": "C",
+   "solution": "Let $x$ be the number of elements in $A$ and $B$ which is equal. \n\nThen we could form equation \n$2x-1001 = 2007$\n\n$2x = 3008$\n\n$x = 1504$. \n\nThe answer is $\\boxed{\\textbf{(C)}\\ 1504}$"
+  },
+  {
+   "position": 14,
+   "source": "2007 AMC 8 Problem 14",
+   "question": "The base of isosceles $\\triangle ABC$ is $24$ and its area is $60$. What is the length of one\nof the congruent sides?",
+   "choices": {
+    "A": "5",
+    "B": "8",
+    "C": "13",
+    "D": "14",
+    "E": "18"
+   },
+   "answer": "C",
+   "solution": "The area of a triangle is shown by $\\frac{1}{2}bh$. We set the base equal to $24$, and the area equal to $60$, and we get the triangle's height, or altitude, to be $5$. In this isosceles triangle, the height bisects the base, so by using the Pythagorean Theorem, $a^2+b^2=c^2$, we can solve for one of the legs of the triangle (it will be the hypotenuse, $c$).\n$a = 12$, $b = 5$,\n$c = 13$.\nThe answer is $\\boxed{\\textbf{(C)}\\ 13}$."
+  },
+  {
+   "position": 15,
+   "source": "2007 AMC 8 Problem 15",
+   "question": "Let $a, b$ and $c$ be numbers with $0 < a < b < c$. Which of the following is\nimpossible?",
+   "choices": {
+    "A": "a + c < b",
+    "B": "a \\cdot b < c",
+    "C": "a + b < c",
+    "D": "a \\cdot c < b",
+    "E": "\\frac{b}{c} = a"
+   },
+   "answer": "A",
+   "solution": "We can test numbers into the inequality we\u2019re given. The simplest is $02$, so $\\boxed{\\textbf{(A) }a+c<b}$ is correct.\n\n\u2014jason.ca"
+  },
+  {
+   "position": 17,
+   "source": "2007 AMC 8 Problem 17",
+   "question": "A mixture of $30$ liters of paint is $25\\%$ red tint, $30\\%$ yellow\ntint and $45\\%$ water. Five liters of yellow tint are added to\nthe original mixture. What is the percent of yellow tint\nin the new mixture?",
+   "choices": {
+    "A": "25",
+    "B": "35",
+    "C": "40",
+    "D": "45",
+    "E": "50"
+   },
+   "answer": "C",
+   "solution": "Since $30\\%$ of the original $30$ liters of paint was yellow, and $5$ liters of yellow paint were added to make the new mixture, there are $9+5=14$ liters of yellow tint in the new mixture. Since only $5$ liters of paint were added to the original $30$, there are a total of $35$ liters of paint in the new mixture. This gives $40\\%$ of yellow tint in the new mixture, which is $\\boxed{\\textbf{(C) 40}}$."
+  },
+  {
+   "position": 18,
+   "source": "2007 AMC 8 Problem 18",
+   "question": "The product of the two $99$-digit numbers\n\n$303,030,303,...,030,303$ and $505,050,505,...,050,505$\n\nhas thousands digit $A$ and units digit $B$. What is the sum of $A$ and $B$?",
+   "choices": {
+    "A": "3",
+    "B": "5",
+    "C": "6",
+    "D": "8",
+    "E": "10"
+   },
+   "answer": "D",
+   "solution": "We can first make a small example to find out $A$ and $B$. So, \n\n$303\\times505=153015 $\n\nThe ones digit plus thousands digit is $5+3=8$.\n\nNote that the ones and thousands digits are, added together, $8$. (and so on...) So the answer is $\\boxed{\\textbf{(D)}\\ 8}$\nThis is a direct multiplication way."
+  },
+  {
+   "position": 19,
+   "source": "2007 AMC 8 Problem 19",
+   "question": "Pick two consecutive positive integers whose sum is less than $100$. Square both\nof those integers and then find the difference of the squares. Which of the\nfollowing could be the difference?",
+   "choices": {
+    "A": "2",
+    "B": "64",
+    "C": "79",
+    "D": "96",
+    "E": "131"
+   },
+   "answer": "C",
+   "solution": "Let the smaller of the two numbers be $x$. Then, the problem states that $ (x+1)+x<100$. $ (x+1)^2-x^2=x^2+2x+1-x^2=2x+1 $. $ 2x+1 $ is obviously odd, so only answer choices C and E need to be considered.\n\n$ 2x+1=131 $ contradicts the fact that $ 2x+1<100 $, so the answer is $ \\boxed{\\mathrm{(C)} 79} $"
+  },
+  {
+   "position": 23,
+   "source": "2007 AMC 8 Problem 23",
+   "question": "What is the area of the shaded pinwheel shown in the $5 \\times 5$ grid?",
+   "choices": {
+    "A": "\\: 4",
+    "B": "\\: 6",
+    "C": "\\: 8",
+    "D": "\\: 10",
+    "E": "\\: 12"
+   },
+   "answer": "B",
+   "solution": "The pinwheel is composed of $8$ congruent obtuse triangles whose base measures length $1$ and height measures length $1.5$. Using the area formula for triangles, the pinwheel has an area of\n$$8(\\frac12\\cdot1\\cdot1.5)=8(0.75)=\\boxed{\\textbf{(B) 6}}.$$"
+  },
+  {
+   "position": 24,
+   "source": "2007 AMC 8 Problem 24",
+   "question": "A bag contains four pieces of paper, each labeled with one of the digits $1$, $2$, $3$ or $4$, with no repeats. Three of these pieces are drawn, one at a time without replacement, to construct a three-digit number. What is the probability that the three-digit number is a multiple of $3$?",
+   "choices": {
+    "A": "\\frac{1}{4}",
+    "B": "\\frac{1}{3}",
+    "C": "\\frac{1}{2}",
+    "D": "\\frac{2}{3}",
+    "E": "\\frac{3}{4}"
+   },
+   "answer": "C",
+   "solution": "Only (1,2,3) and (2,3,4) are possible combinations that sum to 3. The total ways to choose three numbers from the four numbers is 4 choose 3 which equals 4. The answer is $\\frac{2}{4} = \\boxed{\\frac{1}{2}}$."
+  },
+  {
+   "position": 8,
+   "source": "2008 AMC 8 Problem 8",
+   "question": "Candy sales from the Boosters Club from January through April are shown. What were the average sales per month in dollars?",
+   "choices": {
+    "A": "60",
+    "B": "70",
+    "C": "75",
+    "D": "80",
+    "E": "85"
+   },
+   "answer": "D",
+   "solution": "There are a total of $100+60+40+120=320$ dollars of sales spread through $4$ months, for an average of $320/4 = \\boxed{\\textbf{(D)}\\ 80}$."
+  },
+  {
+   "position": 14,
+   "source": "2008 AMC 8 Problem 14",
+   "question": "Three $\\text{A's}$, three $\\text{B's}$, and three  $\\text{C's}$ are placed in the nine spaces so that each row and column contain one of each letter. If $\\text{A}$ is placed in the upper left corner, how many arrangements are possible?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "6 \n\nSolution"
+   },
+   "answer": "C",
+   "solution": "There are $2$ ways to place the remaining $\\text{As}$, $2$ ways to place the remaining $\\text{Bs}$, and $1$ way to place the remaining $\\text{Cs}$ for a total of $(2)(2)(1) = \\boxed{\\textbf{(C)}\\ 4}$."
+  },
+  {
+   "position": 18,
+   "source": "2008 AMC 8 Problem 18",
+   "question": "Two circles that share the same center have radii $10$ meters and $20$ meters. An aardvark runs along the path shown, starting at $A$ and ending at $K$. How many meters does the aardvark run?",
+   "choices": {
+    "A": "10\\pi+20",
+    "B": "10\\pi+30",
+    "C": "10\\pi+40",
+    "D": "20\\pi+20\\qquad \\",
+    "E": "20\\pi+40"
+   },
+   "answer": "E",
+   "solution": "We will deal with this part by part:\nPart 1: 1/4 circumference of big circle= $\\frac{2\\pi r}{4}=\\frac{\\pi r}{2}=\\frac{20\\pi}{2}=10\\pi$\nPart 2: Big radius minus small radius= $20-10=10$\nPart 3: 1/4 circumference of small circle= $\\frac{\\pi r}{2}=\\frac{10\\pi}{2}=5\\pi$\nPart 4: Diameter of small circle: $2*10=20$\nPart 5: Same as part 3: $5\\pi$\nPart 6: Same as part 2: $10$\nTotal: $10\\pi + 10 + 5\\pi + 20 + 5\\pi + 10 = \\boxed{E = 20\\pi + 40}$"
+  },
+  {
+   "position": 23,
+   "source": "2008 AMC 8 Problem 23",
+   "question": "In square $ABCE$, $AF=2FE$ and $CD=2DE$. What is the ratio of the area of $\\triangle BFD$ to the area of square $ABCE$?",
+   "choices": {
+    "A": "\\frac{1}{6}",
+    "B": "\\frac{2}{9}",
+    "C": "\\frac{5}{18}",
+    "D": "\\frac{1}{3}",
+    "E": "\\frac{7}{20}"
+   },
+   "answer": "C",
+   "solution": "Say that $\\overline{FE}$ has length $x$, and that from there we can infer that $\\overline{AF} = 2x$. We also know that $\\overline{ED} = x$, and that $\\overline{DC} = 2x$. The area of triangle $BFD$ is the square's area subtracted from the area of the excess triangles, which is simply these equations:\n$$9x^2 - (3x^2 + \\dfrac{x}{2}^2 + 3x^2) $$ \n$$9x^2 - 6.5x^2$$ \n$$2.5x^2$$\nThus, the area of the triangle is $2.5x^2$. We can now put the ratio of triangle $BFD$'s area to the area of the square $ABCE$ as a fraction. We have:\n$$\\dfrac{2.5x^2}{9x^2}$$\n$$\\dfrac{2.5\\cancel{x^2}}{9\\cancel{x^2}} $$ \n$$\\dfrac{2.5}{9}$$ \n$$\\dfrac{5}{18} $$\nThus, our answer is $\\boxed{\\textbf{(C)}\\ \\frac{5}{18}}$"
+  },
+  {
+   "position": 25,
+   "source": "2008 AMC 8 Problem 25",
+   "question": "Margie's winning art design is shown. The smallest circle has radius 2 inches, with each successive circle's radius increasing by 2 inches. Which of the following is closest to the percent of the design that is black?",
+   "choices": {
+    "A": "42",
+    "B": "44",
+    "C": "45",
+    "D": "46",
+    "E": "48\\qquad"
+   },
+   "answer": "A",
+   "solution": "Let the smallest circle be 1, the second smallest circle be 2, the third smallest circle be 3, etc. \n$$\\begin{array}{c|cc}\n\\text{circle \\#} & \\text{radius} & \\text{area} \\\\ \\hline\n1 & 2 & 4\\pi \\\\\n2 & 4 & 16\\pi \\\\\n3 & 6 & 36\\pi \\\\\n4 & 8 & 64\\pi \\\\\n5 & 10 & 100\\pi \\\\\n6 & 12 & 144\\pi\n\\end{array}$$\n\nThe entire circle's area is $144\\pi$. The area of the black regions is $(100-64)\\pi + (36-16)\\pi + 4\\pi = 60\\pi$. The percentage of the design that is black is $\\frac{60\\pi}{144\\pi} = \\frac{5}{12} \\approx \\boxed{\\textbf{(A)}\\ 42}$."
+  },
+  {
+   "position": 1,
+   "source": "2009 AMC 8 Problem 1",
+   "question": "Bridget bought a bag of apples at the grocery store. She gave half of the apples to Ann. Then she gave Cassie 3 apples, keeping 4 apples for herself. How many apples did Bridget buy?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "7",
+    "D": "11",
+    "E": "14"
+   },
+   "answer": "E",
+   "solution": "If we set up an equation, we find out $x=(3+4)\\cdot 2$ because 3 apples were left after giving half, then four away. \nWe can simplify the equations to $x=7\\cdot 2=14.$\nThe answer is $\\text{(E) } 14.$"
+  },
+  {
+   "position": 3,
+   "source": "2009 AMC 8 Problem 3",
+   "question": "The graph shows the constant rate at which Suzanna rides her bike. If she rides a total of a half an hour at the same speed, how many miles would she have ridden?",
+   "choices": {
+    "A": "5",
+    "B": "5.5",
+    "C": "6",
+    "D": "6.5",
+    "E": "7"
+   },
+   "answer": "C",
+   "solution": "Suzanna's speed is $\\frac{1}{5}$. This means she runs $\\frac{1}{5} \\cdot 30 = \\boxed{ \\textbf{(C) }6 }$"
+  },
+  {
+   "position": 10,
+   "source": "2009 AMC 8 Problem 10",
+   "question": "On a checkerboard composed of 64 unit squares, what is the probability that a randomly chosen unit square does  '''not'''  touch the outer edge of the board?",
+   "choices": {
+    "A": "\\frac{1}{16}",
+    "B": "\\frac{7}{16}",
+    "C": "\\frac{1}2",
+    "D": "\\frac{9}{16}",
+    "E": "\\frac{49}{64}"
+   },
+   "answer": "D",
+   "solution": "There are $8^2=64$ total squares. There are $(8-1)(4)=28$ unit squares on the perimeter and therefore $64-28=36$ NOT on the perimeter. The probability of choosing one of those squares is $\\frac{36}{64} = \\boxed{\\textbf{(D)}\\ \\frac{9}{16}}$."
+  },
+  {
+   "position": 12,
+   "source": "2009 AMC 8 Problem 12",
+   "question": "The two spinners shown are spun once and each lands on one of the numbered sectors. What is the probability that the sum of the numbers in the two sectors is prime?",
+   "choices": {
+    "A": "\\frac{1}{2}",
+    "B": "\\frac{2}{3}",
+    "C": "\\frac{3}{4}",
+    "D": "\\frac{7}{9}",
+    "E": "\\frac{5}{6}"
+   },
+   "answer": "D",
+   "solution": "The possible sums are\n$$\\begin{array}{c|ccc}\n& 1 & 3 & 5 \\\\ \\hline\n2 & 3 & 5 & 7 \\\\\n4 & 5 & 7 & 9 \\\\\n6 & 7 & 9 & 11\n\\end{array}$$\n\nOnly $9$ is not prime, so there are $7$ prime numbers and $9$ total numbers for a probability of $\\boxed{\\textbf{(D)}\\ \\frac79}$."
+  },
+  {
+   "position": 21,
+   "source": "2009 AMC 8 Problem 21",
+   "question": "Andy and Bethany have a rectangular array of numbers with $ 40$ rows and $ 75$ columns. Andy adds the numbers in each row. The average of his $ 40$ sums is $ A$. Bethany adds the numbers in each column. The average of her $ 75$ sums is $ B$. What is the value of $ \\frac{A}{B}$?",
+   "choices": {
+    "A": "\\frac{64}{225}",
+    "B": "\\frac{8}{15}",
+    "C": "1",
+    "D": "\\frac{15}{8}",
+    "E": "\\frac{225}{64}"
+   },
+   "answer": "D",
+   "solution": "Note that $40A=75B=\\text{sum of the numbers in the array}$. This means that $\\frac{A}{B}=\\boxed{\\text{(D) } \\frac{15}{8}}$ using basic algebraic    manipulation."
+  },
+  {
+   "position": 3,
+   "source": "2010 AMC 8 Problem 3",
+   "question": "The graph shows the price of five gallons of gasoline during the first ten months of the year. By what percent is the highest price more than the lowest price?",
+   "choices": {
+    "A": "50",
+    "B": "62",
+    "C": "70",
+    "D": "89",
+    "E": "100"
+   },
+   "answer": "C",
+   "solution": "The highest price was in Month 1, which was \\$17. The lowest price was in Month 3, which was \\$10. 17 is $\\frac{17}{10}\\cdot100=170\\%$ of 10, and is $170-100=70\\%$ more than 10.\nTherefore, the answer is $ \\boxed{\\textbf{(C)}\\  70}$"
+  },
+  {
+   "position": 7,
+   "source": "2010 AMC 8 Problem 7",
+   "question": "Using only pennies, nickels, dimes, and quarters, what is the smallest number of coins Freddie would need so he could pay any amount of money less than a dollar?",
+   "choices": {
+    "A": "6",
+    "B": "10",
+    "C": "15",
+    "D": "25",
+    "E": "99"
+   },
+   "answer": "B",
+   "solution": "To make any units digit, you can use 4 pennies and 1 nickel. Using 3 quarters, you can make 75, so you will need 2 more dimes. Therefore, you will need $\\boxed{4 + 1 + 2 + 3 = B(10)}$ coins."
+  },
+  {
+   "position": 17,
+   "source": "2010 AMC 8 Problem 17",
+   "question": "The diagram shows an octagon consisting of $10$ unit squares. The portion below $\\overline{PQ}$ is a unit square and a triangle with base $5$. If $\\overline{PQ}$ bisects the area of the octagon, what is the ratio $\\dfrac{XQ}{QY}$?",
+   "choices": {
+    "A": "\\frac{2}{5}",
+    "B": "\\frac{1}{2}",
+    "C": "\\frac{3}{5}",
+    "D": "\\frac{2}{3}",
+    "E": "\\frac{3}{4}"
+   },
+   "answer": "D",
+   "solution": "We see that half the area of the octagon is $5$. We see that the triangle area is $5-1 = 4$. That means that $\\frac{5h}{2} = 4 \\rightarrow h=\\frac{8}{5}$.\n$$\\text{QY}=\\frac{8}{5} - 1 = \\frac{3}{5}$$\nMeaning, $\\frac{\\frac{2}{5}}{\\frac{3}{5}} = \\boxed{\\textbf{(D) }\\frac{2}{3}}$"
+  },
+  {
+   "position": 18,
+   "source": "2010 AMC 8 Problem 18",
+   "question": "A decorative window is made up of a rectangle with semicircles at either end. The ratio of $AD$ to $AB$ is $3:2$. And $AB$ is 30 inches. What is the ratio of the area of the rectangle to the combined area of the semicircles?",
+   "choices": {
+    "A": "2:3",
+    "B": "3:2",
+    "C": "6:\\pi",
+    "D": "9:\\pi",
+    "E": "30 :\\pi"
+   },
+   "answer": "C",
+   "solution": "We can solve this without the measurement of $30$ inches. Let the constant of proportionality between the sides of the rectangle be $k$. \n$\\frac{A_{rect}}{A_{circle}}=\\frac{3k*2k}{\\pi(\\frac{2k}{2})^2}=\\frac{6k^2}{\\pi k^2}=\\frac{6}{\\pi}\\Rightarrow\\boxed{\\textbf{(C)}\\ 6:\\pi}$"
+  },
+  {
+   "position": 23,
+   "source": "2010 AMC 8 Problem 23",
+   "question": "Semicircles $POQ$ and $ROS$ pass through the center $O$. What is the ratio of the combined areas of the two semicircles to the area of circle $O$?",
+   "choices": {
+    "A": "\\frac{\\sqrt 2}{4}",
+    "B": "\\frac{1}{2}",
+    "C": "\\frac{2}{\\pi}",
+    "D": "\\frac{2}{3}",
+    "E": "\\frac{\\sqrt 2}{2}"
+   },
+   "answer": "B",
+   "solution": "By the Pythagorean Theorem, the radius of the larger circle turns out to be $\\sqrt{1^2 + 1^2} = \\sqrt{2}$. Therefore, the area of the larger circle is $(\\sqrt{2})^2\\pi = 2\\pi $. Using the coordinate plane given, we find that the radius of each of the two semicircles to be 1. So, the area of the two semicircles is $1^2\\pi=\\pi$. Finally, the ratio of the combined areas of the two semicircles to the area of circle $O$ is $\\boxed{\\textbf{(B)}\\ \\frac{1}{2}}$."
+  },
+  {
+   "position": 3,
+   "source": "2011 AMC 8 Problem 3",
+   "question": "Extend the square pattern of 8 black and 17 white square tiles by attaching a border of black tiles around the square. What is the ratio of black tiles to white tiles in the extended pattern?",
+   "choices": {
+    "A": "8:17",
+    "B": "25:49",
+    "C": "36:25",
+    "D": "32:17",
+    "E": "36:17"
+   },
+   "answer": "D",
+   "solution": "Notice that in total, once we add the border there will be $7^2$ squares total. So far as there is only one option that sums to 49 and we know that there are an integer number of boxes, it has to be $\\boxed{\\textbf{(D) }32:17}$. ~math_genius_11"
+  },
+  {
+   "position": 7,
+   "source": "2011 AMC 8 Problem 7",
+   "question": "Each of the following four large congruent squares is subdivided into combinations of congruent triangles or rectangles and is partially '''bolded'''. What percent of the total area is partially bolded?",
+   "choices": {
+    "A": "12\\frac{1}{2}",
+    "B": "20",
+    "C": "25",
+    "D": "33\\frac{1}{3}",
+    "E": "37\\frac{1}{2}"
+   },
+   "answer": "C",
+   "solution": "Assume that the area of each square is $1$.  Then, the area of the bolded region in the top left square is $\\dfrac{1}{4}$.  The area of the top right bolded region is $\\dfrac{1}{8}$.  The area of the bottom left bolded region is $\\dfrac{3}{8}$.  And the area of the bottom right bolded region is $\\dfrac{1}{4}$.  Add the four fractions:  $\\dfrac{1}{4} + \\dfrac{1}{8} + \\dfrac{3}{8} + \\dfrac{1}{4} = 1$.  The four squares together have an area of $4$, so the percentage bolded is $\\dfrac{1}{4} \\cdot 100 = \\boxed{\\textbf{(C)}\\ 25}$."
+  },
+  {
+   "position": 9,
+   "source": "2011 AMC 8 Problem 9",
+   "question": "Carmen takes a long bike ride on a hilly highway. The graph indicates the miles traveled during the time of her ride. What is Carmen's average speed for her entire ride in miles per hour?",
+   "choices": {
+    "A": "2",
+    "B": "2.5",
+    "C": "4",
+    "D": "4.5",
+    "E": "5"
+   },
+   "answer": "E",
+   "solution": "We observe the graph and see that the shape of the graph does not matter. We only want the total time it took Carmen and the total distance she traveled. Based on the graph, Carmen traveled 35 miles for 7 hours. Therefore, her average speed is $\\boxed{\\textbf{(E)}\\ 5}$"
+  },
+  {
+   "position": 11,
+   "source": "2011 AMC 8 Problem 11",
+   "question": "The graph shows the number of minutes studied by both Asha (black bar) and Sasha (grey bar) in one week. On the average, how many more minutes per day did Sasha study than Asha?",
+   "choices": {
+    "A": "6",
+    "B": "8",
+    "C": "9",
+    "D": "10",
+    "E": "12"
+   },
+   "answer": "A",
+   "solution": "This solution may take longer to do than the first solution. In total, Asha studied for 400 minutes a week (80 minutes per day) and Sasha studied for 430 minutes a week (86 minutes per day).  86 - 80 = 6.  Therefore, the answer is $\\boxed{\\textbf{(A)}\\ 6}$.\n\n-MiracleMaths"
+  },
+  {
+   "position": 13,
+   "source": "2011 AMC 8 Problem 13",
+   "question": "Two congruent squares, $ABCD$ and $PQRS$, have side length $15$. They overlap to form the $15$ by $25$ rectangle $AQRD$ shown. What percent of the area of rectangle $AQRD$ is shaded?",
+   "choices": {
+    "A": "15",
+    "B": "18",
+    "C": "20",
+    "D": "24",
+    "E": "25"
+   },
+   "answer": "C",
+   "solution": "The length of BP is 5. the ratio of the areas is $\\dfrac{5\\cdot 15}{25\\cdot 15}=\\dfrac{5}{25}=20\\% $\n-Megacleverstarfish15"
+  },
+  {
+   "position": 19,
+   "source": "2011 AMC 8 Problem 19",
+   "question": "How many rectangles are in this figure?",
+   "choices": {
+    "A": "8",
+    "B": "9",
+    "C": "10",
+    "D": "11",
+    "E": "12"
+   },
+   "answer": "D",
+   "solution": "We can remove the 3 big blocks of rectangles one by one. 7 (left) + 3 (bottom) + 1 = 11 are removed in total."
+  },
+  {
+   "position": 20,
+   "source": "2011 AMC 8 Problem 20",
+   "question": "Quadrilateral $ABCD$ is a trapezoid, $AD = 15$, $AB = 50$, $BC = 20$, and the altitude is $12$. What is the area of the trapezoid?",
+   "choices": {
+    "A": "600",
+    "B": "650",
+    "C": "700",
+    "D": "750",
+    "E": "800"
+   },
+   "answer": "D",
+   "solution": "If you draw altitudes from $A$ and $B$ to $CD,$ the trapezoid will be divided into two right triangles and a rectangle. You can find the values of $a$ and $b$ with the Pythagorean theorem.\n\n$$a=\\sqrt{15^2-12^2}=\\sqrt{81}=9$$\n\n$$b=\\sqrt{20^2-12^2}=\\sqrt{256}=16$$\n\n$ABYX$ is a rectangle so $XY=AB=50.$\n\n$$CD=a+XY+b=9+50+16=75$$\n\nThe area of the trapezoid is\n\n$$12\\cdot \\frac{(50+75)}{2} = 6(125) = \\boxed{\\textbf{(D)}\\ 750}$$"
+  },
+  {
+   "position": 11,
+   "source": "2012 AMC 8 Problem 11",
+   "question": "The mean, median, and unique mode of the positive integers 3, 4, 5, 6, 6, 7, and $x$ are all equal. What is the value of $x$?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "11",
+    "E": "12"
+   },
+   "answer": "D",
+   "solution": "Since all the answer choices are integers, we know that $\\frac{3+4+5+6+6+7+x}{7}$, which simplifies to $\\frac{31+x}{7}$, must be an integer. The only answer choice that satisfies this is $\\boxed{{\\textbf{(D)}\\ 11}}$.\n\nEdit: The only answer choice that keeps $\\frac{31+x}{7}$ equal to the mode, 6, is $\\boxed{{\\textbf{(D)}\\ 11}}$"
+  },
+  {
+   "position": 17,
+   "source": "2012 AMC 8 Problem 17",
+   "question": "A square with integer side length is cut into 10 squares, all of which have integer side length and at least 8 of which have area 1. What is the smallest possible value of the length of the side of the original square?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "B",
+   "solution": "The first answer choice $ {\\textbf{(A)}\\ 3} $, can be eliminated since there must be $ 10 $ squares with integer side lengths. We then test the next smallest side length, which is $ 4 $. The square with area $ 16 $ can be partitioned into $ 8 $ squares with area $ 1 $ and two squares with area $ 4 $, which satisfies all the conditions of the problem. Therefore, the smallest possible value of the length of the side of the original square is $ \\boxed{\\textbf{(B)}\\ 4} $."
+  },
+  {
+   "position": 24,
+   "source": "2012 AMC 8 Problem 24",
+   "question": "A circle of radius $2$ is cut into four congruent arcs. The four arcs are joined to form the star figure shown. What is the ratio of the area of the star figure to the area of the original circle?",
+   "choices": {
+    "A": "\\frac{4-\\pi}{\\pi}",
+    "B": "\\frac{1}\\pi",
+    "C": "\\frac{\\sqrt2}{\\pi}",
+    "D": "\\frac{\\pi-1}{\\pi}",
+    "E": "\\frac{3}\\pi"
+   },
+   "answer": "A",
+   "solution": "Draw a square around the star figure. The side length of this square is $ 4 $, because the side length is the diameter of the circle. The square forms $4$-quarter circles around the star figure. This is the equivalent of one large circle with radius $ 2 $, meaning that the total area of the quarter circles is $ 4\\pi $. The area of the square is $ 16 $. Thus, the area of the star figure is $ 16 - 4\\pi $. The area of the circle is $ 4\\pi $. Taking the ratio of the two areas, we find the answer is $ \\boxed{\\textbf{(A)}\\ \\frac{4-\\pi}{\\pi}} $."
+  },
+  {
+   "position": 25,
+   "source": "2012 AMC 8 Problem 25",
+   "question": "A square with area $4$ is inscribed in a square with area $5$, with each vertex of the smaller square on a side of the larger square. A vertex of the smaller square divides a side of the larger square into two segments, one of length $ a $, and the other of length $ b $. What is the value of $ ab $?",
+   "choices": {
+    "A": "\\frac{1}5",
+    "B": "\\frac{2}5",
+    "C": "\\frac{1}2",
+    "D": "1",
+    "E": "4"
+   },
+   "answer": "C",
+   "solution": "Proceed as in solution 3 until you get the equation $2a^2-2a\\sqrt5+1=0$. The two solutions to this equation will be the long and short side of the triangle we are looking for, or $a$ and $b$ from the problem statement. Using Vieta's formula, their product is the constant term divided by the quadratic term, or $\\boxed{\\textbf{(C)} \\frac {1}{2}}$."
+  },
+  {
+   "position": 6,
+   "source": "2013 AMC 8 Problem 6",
+   "question": "The number in each box below is the product of the numbers in the two boxes that touch it in the row above. For example, $30 = 6\\times5$. What is the missing number in the top row?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "C",
+   "solution": "Another way to do this problem is to realize what makes up the bottommost number. This method doesn't work quite as well for this problem, but in a larger tree, it might be faster. Again, let the value in the empty box in the middle row be $x$, and the value in the empty box in the top row be $y$. $y$ is the answer we're looking for.\n\nWe can write some equations:\n\n$600 = 30x\\\\\n30 = 6\\cdot 5\\\\\nx = 5y$\n\nNow we can substitute into the first equation using the two others:\n\n$600 = (6\\cdot5)(5y)\\\\\n600= 6\\cdot5\\cdot5\\cdot y\\\\\n600=6\\cdot25\\cdot y\\\\\n600 = 150y\\\\\n\\boxed{\\textbf{(C)}\\ 4} = y$"
+  },
+  {
+   "position": 18,
+   "source": "2013 AMC 8 Problem 18",
+   "question": "Isabella uses one-foot cubical blocks to build a rectangular fort that is $12$ feet long, $10$ feet wide, and $5$ feet high. The floor and the four walls are all one foot thick. How many blocks does the fort contain?",
+   "choices": {
+    "A": "204",
+    "B": "280",
+    "C": "320",
+    "D": "340",
+    "E": "600"
+   },
+   "answer": "B",
+   "solution": "There are $10 \\cdot 12 = 120$ cubes on the base of the box. Then, for each of the 4 layers above the bottom (as since each cube is 1 foot by 1 foot by 1 foot and the box is 5 feet tall, there are 4 feet left), there are $9 + 11 + 9 + 11 = 40$ cubes. Hence, the answer is $120 + 4 \\cdot 40 = \\boxed{\\textbf{(B)}\\ 280}$."
+  },
+  {
+   "position": 22,
+   "source": "2013 AMC 8 Problem 22",
+   "question": "Toothpicks are used to make a grid that is $60$ toothpicks long and $32$ toothpicks wide. How many toothpicks are used altogether?",
+   "choices": {
+    "A": "1920",
+    "B": "1952",
+    "C": "1980",
+    "D": "2013",
+    "E": "3932"
+   },
+   "answer": "E",
+   "solution": "With a quick mental calculation, 60 * 30 yields 1800, which is roughly where 4 of our 5 answer choices lie in. However, we can tell that each square would require at most 2 toothpicks that uniquely belong to itself, so the answer would be $60\\cdot 30 \\cdot 2$ which would be roughly $\\boxed{\\textbf{(E)}\\ 3932}$.\n\n-pearlseal34, Minor Edit by MagentaButterfly29"
+  },
+  {
+   "position": 24,
+   "source": "2013 AMC 8 Problem 24",
+   "question": "Squares $ABCD$, $EFGH$, and $GHIJ$ are equal in area. Points $C$ and $D$ are the midpoints of sides $IH$ and $HE$, respectively. What is the ratio of the area of the shaded pentagon $AJICB$ to the sum of the areas of the three squares?",
+   "choices": {
+    "A": "\\frac{1}{4}",
+    "B": "\\frac{7}{24}",
+    "C": "\\frac{1}{3}",
+    "D": "\\frac{3}{8}",
+    "E": "\\frac{5}{12}"
+   },
+   "answer": "C",
+   "solution": "Name the intersection of line segment AJ and CH as K. Notice that triangle ADK is congruent to triangle JIK by AAS (Angle-Angle-Side), so they have the same area. Therefore, the shaded area is just the area of the topmost square which is $\\boxed{\\textbf{(C)}\\ \\frac {1}{3}}$ of the whole."
+  },
+  {
+   "position": 25,
+   "source": "2013 AMC 8 Problem 25",
+   "question": "A ball with diameter 4 inches starts at point A to roll along the track shown. The track is comprised of 3 semicircular arcs whose radii are $R_1 = 100$ inches, $R_2 = 60$ inches, and $R_3 = 80$ inches, respectively. The ball always remains in contact with the track and does not slip. What is the distance the center of the ball travels over the course from A to B?",
+   "choices": {
+    "A": "238\\pi",
+    "B": "240\\pi",
+    "C": "260\\pi",
+    "D": "280\\pi",
+    "E": "500\\pi"
+   },
+   "answer": "A",
+   "solution": "The total length of all of the arcs is $100\\pi +80\\pi +60\\pi=240\\pi$. Since we want the path from the center, the actual distance will be subtracted by $2\\pi$ because it's already half the circumference through semicircle A, which needs to go half the circumference extra through semicircle B, and it's already half the circumference through semicircle C, and the circumference is $4\\pi$ Therefore, the answer is $240\\pi-2\\pi=\\boxed{\\textbf{(A)}\\ 238\\pi}$.\n\nVideo Solution:\nhttps://www.youtube.com/watch?v=zZGuBFyiQrk by WhyMath"
+  },
+  {
+   "position": 9,
+   "source": "2014 AMC 8 Problem 9",
+   "question": "In $\\bigtriangleup ABC$, $D$ is a point on side $\\overline{AC}$ such that $BD=DC$ and $\\angle BCD$ measures $70^\\circ$. What is the degree measure of $\\angle ADB$?",
+   "choices": {
+    "A": "100",
+    "B": "120",
+    "C": "135",
+    "D": "140",
+    "E": "150"
+   },
+   "answer": "D",
+   "solution": "Using angle chasing is a good way to solve this problem. $BD = DC$, so $\\angle DBC = \\angle DCB = 70$, because it is an isosceles triangle. Then $\\angle CDB = 180-(70+70) = 40$. Since $\\angle ADB$ and $\\angle BDC$ are supplementary, $\\angle ADB = 180 - 40 = \\boxed{\\textbf{(D)}~140}$."
+  },
+  {
+   "position": 10,
+   "source": "2014 AMC 8 Problem 10",
+   "question": "The first AMC $8$ was given in $1985$ and it has been given annually since that time. Samantha turned $12$ years old the year that she took the seventh AMC $8$. In what year was Samantha born?",
+   "choices": {
+    "A": "1979",
+    "B": "1980",
+    "C": "1981",
+    "D": "1982",
+    "E": "1983"
+   },
+   "answer": "A",
+   "solution": "The seventh AMC 8 would have been given in $1991$. If Samantha was 12 then, that means she was born 12 years ago, so she was born in $1991-12=1979$.\n\nOur answer is $\\boxed{(\\text{A})1979}$\n\ncorrections made by DrDominic"
+  },
+  {
+   "position": 11,
+   "source": "2014 AMC 8 Problem 11",
+   "question": "Jack wants to bike from his house to Jill's house, which is located three blocks east and two blocks north of Jack's house. After biking each block, Jack can continue either east or north, but he needs to avoid a dangerous intersection one block east and one block north of his house. In how many ways can he reach Jill's house by biking a total of five blocks?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "8",
+    "E": "10"
+   },
+   "answer": "A",
+   "solution": "We can apply complementary counting and count the paths that DO go through the blocked intersection, which is $\\dbinom{2}{1}\\dbinom{3}{1}=6$. There are a total of $\\dbinom{5}{2}=10$ paths, so there are $10-6=4$ paths possible. $\\boxed{(\\text{A})4}$ is the correct answer."
+  },
+  {
+   "position": 12,
+   "source": "2014 AMC 8 Problem 12",
+   "question": "A magazine printed photos of three celebrities along with three photos of the celebrities as babies. The baby pictures did not identify the celebrities. Readers were asked to match each celebrity with the correct baby pictures. What is the probability that a reader guessing at random will match all three correctly?",
+   "choices": {
+    "A": "\\frac{1}{9}",
+    "B": "\\frac{1}{6}",
+    "C": "\\frac{1}{4}",
+    "D": "\\frac{1}{3}",
+    "E": "\\frac{1}{2}"
+   },
+   "answer": "B",
+   "solution": "There are $3!$ ways assign the pictures to each of the celebrities. There is one favorable outcome where all of them are matched correctly, so the answer is $\\boxed{\\textbf{(B)}~\\frac{1}{6}}$."
+  },
+  {
+   "position": 13,
+   "source": "2014 AMC 8 Problem 13",
+   "question": "If $n$ and $m$ are integers and $n^2+m^2$ is even, which of the following is impossible?",
+   "choices": {
+    "A": "$n$ and $m$ are even",
+    "B": "$n$ and $m$ are odd",
+    "C": "$n+m$ is even",
+    "D": "$n+m$ is odd",
+    "E": "none of these are impossible"
+   },
+   "answer": "D",
+   "solution": "We can assign values of n and m as 1,3. Then $1^2 + 3^2$ is 10. We can also assign values of n and m to be even, like 2 and 4. After calculating, we can determine that $n^2$ + $m^2$ could be odd or even. Then, we can conclude that n+m is not odd. Hence our answer choice is $\\boxed{(\\text{D})}$\n- TheNerdWhoIsNerdy."
+  },
+  {
+   "position": 15,
+   "source": "2014 AMC 8 Problem 15",
+   "question": "The circumference of the circle with center $O$ is divided into $12$ equal arcs, marked the letters $A$ through $L$ as seen below. What is the number of degrees in the sum of the angles $x$ and $y$?",
+   "choices": {
+    "A": "75",
+    "B": "80",
+    "C": "90",
+    "D": "120",
+    "E": "150"
+   },
+   "answer": "C",
+   "solution": "Since $\\triangle AOE$ is isosceles and $\\angle AOE = \\frac{4}{12} \\cdot 360^{\\circ} = 120^{\\circ}$, $x = 30^{\\circ}$. Since $\\triangle GOI$ is isosceles and $\\angle GOI = \\frac{2}{12} \\cdot 360^{\\circ} = 60^{\\circ}$, $x = 60^{\\circ}$. The number of degrees in the sum of both angles is $30+60 = \\boxed{(C)\\ 90}$."
+  },
+  {
+   "position": 16,
+   "source": "2014 AMC 8 Problem 16",
+   "question": "The \"Middle School Eight\" basketball conference has $8$ teams. Every season, each team plays every other conference team twice (home and away), and each team also plays $4$ games against non-conference opponents. What is the total number of games in a season involving the \"Middle School eight\" teams?",
+   "choices": {
+    "A": "60",
+    "B": "88",
+    "C": "96",
+    "D": "144",
+    "E": "160"
+   },
+   "answer": "B",
+   "solution": "Within the conference, there are 8 teams, so there are $\\dbinom{8}{2}=28$ pairings of teams, and each pair must play two games, for a total of $28\\cdot 2=56$ games within the conference.\n\nEach team also plays 4 games outside the conference, and there are 8 teams, so there are a total of $4\\cdot 8 =32$ games outside the conference.\n\nTherefore, the total number of games is $56 + 32 = \\boxed{\\text{(B) }88}$."
+  },
+  {
+   "position": 17,
+   "source": "2014 AMC 8 Problem 17",
+   "question": "George walks $1$ mile to school. He leaves home at the same time each day, walks at a steady speed of $3$ miles per hour, and arrives just as school begins. Today he was distracted by the pleasant weather and walked the first $\\frac{1}{2}$ mile at a speed of only $2$ miles per hour. At how many miles per hour must George run the last $\\frac{1}{2}$ mile in order to arrive just as school begins today?",
+   "choices": {
+    "A": "4",
+    "B": "6",
+    "C": "8",
+    "D": "10",
+    "E": "12"
+   },
+   "answer": "B",
+   "solution": "Note that on a normal day, it takes him $1/3$ hour to get to school. However, today it took $\\frac{1/2 \\text{ mile}}{2 \\text{ mph}}=1/4$ hour to walk the first $1/2$ mile. That means that he has $1/3 -1/4 = 1/12$ hours left to get to school, and $1/2$ mile left to go. Therefore, his speed must be $\\frac{1/2 \\text{ mile}}{1/12 \\text { hour}}=\\boxed{6 \\text{ mph}}$, so $\\boxed{\\text{(B) }6}$ is the answer."
+  },
+  {
+   "position": 18,
+   "source": "2014 AMC 8 Problem 18",
+   "question": "Four children were born at City Hospital yesterday. Assume each child is equally likely to be a boy or a girl. Which of the following outcomes is most likely?",
+   "choices": {
+    "A": "All are boys",
+    "B": "All are girls",
+    "C": "2 are boys and 2 are girls",
+    "D": "3 are the same gender and 1 is of the other gender",
+    "E": "All of these outcomes are equally likely"
+   },
+   "answer": "D",
+   "solution": "We'll just start by breaking cases down. The probability of A occurring is $\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{16}$. The probability of B occurring is $\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{16}$.\n\nThe probability of C occurring is $\\dbinom{4}{2}\\cdot \\left(\\frac{1}{2}\\right)^4 = \\frac{3}{8}$, because we need to choose 2 of the 4 slots to be girls. \n\nFor D, there are two possible cases, 3 girls and 1 boy or 3 boys and 1 girl. The probability of the first case is $\\dbinom{4}{1}\\cdot\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{4}$ because we need to choose 1 of the 4 slots to be a boy. However, the second case has the same probability because we are choosing 1 of the 4 children to be a girl, so the total probability is $\\frac{1}{4} \\cdot 2 = \\frac{1}{2}$.\n\nSo out of the four fractions, D is the largest. So our answer is $\\boxed{\\text{(D) 3 are of one gender and 1 is of the other gender}}.$"
+  },
+  {
+   "position": 20,
+   "source": "2014 AMC 8 Problem 20",
+   "question": "Rectangle $ABCD$ has sides $CD=3$ and $DA=5$. A circle of radius $1$ is centered at $A$, a circle of radius $2$ is centered at $B$, and a circle of radius $3$ is centered at $C$. Which of the following is closest to the area of the region inside the rectangle but outside all three circles?",
+   "choices": {
+    "A": "3.5",
+    "B": "4.0",
+    "C": "4.5",
+    "D": "5.0",
+    "E": "5.5"
+   },
+   "answer": "B",
+   "solution": "The area in the rectangle but outside the circles is the area of the rectangle minus the area of all three of the quarter circles in the rectangle.\n\nThe area of the rectangle is $3\\cdot5 =15$. The area of all 3 quarter circles is $\\frac{\\pi}{4}+\\frac{\\pi(2)^2}{4}+\\frac{\\pi(3)^2}{4} = \\frac{14\\pi}{4} = \\frac{7\\pi}{2}$. Therefore the area in the rectangle but outside the circles is $15-\\frac{7\\pi}{2}$.  $\\pi$ is approximately $\\dfrac{22}{7},$ and substituting that in will give $15-11=\\boxed{\\text{(B) }4.0}$"
+  },
+  {
+   "position": 23,
+   "source": "2014 AMC 8 Problem 23",
+   "question": "Three members of the Euclid Middle School girls' softball team had the following conversation.\n\nAshley: I just realized that our uniform numbers are all $2$-digit primes.\n\nBethany : And the sum of your two uniform numbers is the date of my birthday earlier this month.\n\nCaitlin: That's funny. The sum of your two uniform numbers is the date of my birthday later this month.\n\nAshley: And the sum of your two uniform numbers is today's date.\n\nWhat number does Caitlin wear?",
+   "choices": {
+    "A": "11",
+    "B": "13",
+    "C": "17",
+    "D": "19",
+    "E": "23"
+   },
+   "answer": "A",
+   "solution": "The maximum amount of days any given month can have is $31$, and the smallest two-digit primes are $11, 13,$ and $17$. There are a few different sums that can be deduced from the following numbers, which are $24, 30,$ and $28$, all of which represent the three days. Therefore, since Bethany says that the other two people's uniform numbers are earlier, so that means Caitlin and Ashley's numbers must add up to $24$. Similarly, Caitlin says that the other two people's uniform numbers are later, so the sum must add up to $30$. This leaves $28$ as today's date. From this, Caitlin was referring to the uniform wearers $13$ and $17$, telling us that her number is $11$, giving our solution as $\\boxed{(A) 11}$."
+  },
+  {
+   "position": 24,
+   "source": "2014 AMC 8 Problem 24",
+   "question": "One day the Beverage Barn sold $252$ cans of soda to $100$ customers, and every customer bought at least one can of soda. What is the maximum possible median number of cans of soda bought per customer on that day?",
+   "choices": {
+    "A": "2.5",
+    "B": "3.0",
+    "C": "3.5",
+    "D": "4.0",
+    "E": "4.5"
+   },
+   "answer": "C",
+   "solution": "In order to maximize the median, we need to make the first half of the numbers as small as possible. Since there are $100$ people, the median will be the average of the $50\\text{th}$ and $51\\text{st}$ largest amount of cans per person. To minimize the first $49$, they would each have one can. Subtracting these $49$ cans from the $252$ cans gives us $203$ cans left to divide among $51$ people. Taking $\\frac{203}{51}$ gives us $3$ and a remainder of $50$. Seeing this, the largest number of cans the $50$th person could have is $3$, which leaves $4$ to the rest of the people. The average of $3$ and $4$ is $3.5$. Thus our answer is $\\boxed{\\text{(C) }3.5}$."
+  },
+  {
+   "position": 2,
+   "source": "2015 AMC 8 Problem 2",
+   "question": "Point $O$ is the center of the regular octagon $ABCDEFGH$, and $X$ is the midpoint of the side $\\overline{AB}.$ What fraction of the area of the octagon is shaded?",
+   "choices": {
+    "A": "\\frac{11}{32}",
+    "B": "\\frac{3}{8}",
+    "C": "\\frac{13}{32}",
+    "D": "\\frac{7}{16}",
+    "E": "\\frac{15}{32}"
+   },
+   "answer": "D",
+   "solution": "We can divide the octagon into 8 parts and pretend that the area is 64. We know that X is the midpoint of BA and that each space between two points is 8 because 64/8=8. This means that BX=4 because 8/2=4. Then, we add that to 3*8 because there are 3 spaces between points that are each 8. After that, you turn it into a fraction, 28/64, and simplify to get  $\\boxed{\\textbf{(D)}~\\frac{7}{16}}$."
+  },
+  {
+   "position": 21,
+   "source": "2015 AMC 8 Problem 21",
+   "question": "In the given figure, hexagon $ABCDEF$ is equiangular, $ABJI$ and $FEHG$ are squares with areas $18$ and $32$ respectively, $\\triangle JBK$ is equilateral and $FE=BC$. What is the area of $\\triangle KBC$?",
+   "choices": {
+    "A": "6\\sqrt{2}",
+    "B": "9",
+    "C": "12",
+    "D": "9\\sqrt{2}",
+    "E": "32."
+   },
+   "answer": "C",
+   "solution": "Square ABJI's side length is $\\sqrt{18}=3\\sqrt{2}$, and since Triangle JBK is equilateral, that means that the side length of Triangle JBK would be $3\\sqrt{2}$, which means that KB, the height of Triangle KBC would be $3\\sqrt{2}$. Square FEHG's side length would then be $\\sqrt{32}=4\\sqrt{2}$, and because line FE = line BC, The base of Triangle KBC would be $4\\sqrt{2}$. The formula to finding the area of a triangle is the $\\frac{Height \\cdot Base}{2}$, which means that Triangle KBC's area would just be $\\frac{3\\sqrt{2}\\cdot4\\sqrt{2}}{2}$, and the answer is $\\boxed{12}.$"
+  },
+  {
+   "position": 25,
+   "source": "2015 AMC 8 Problem 25",
+   "question": "One-inch squares are cut from the corners of this 5 inch square.  What is the area in square inches of the largest square that can be fitted into the remaining space?",
+   "choices": {
+    "A": "9",
+    "B": "12\\frac{1}{2}",
+    "C": "15",
+    "D": "15\\frac{1}{2}",
+    "E": "17"
+   },
+   "answer": "C",
+   "solution": "By inspection, we can see that the area of the largest square would be the area of the middle square formed by the vertices of the shaded squares plus half the combined area of the four smaller rectangles. Our desired answer is $9 + \\frac{3\\cdot4}{2} = 15\\implies \\boxed{\\textbf{(C)}}$."
+  },
+  {
+   "position": 6,
+   "source": "2016 AMC 8 Problem 6",
+   "question": "The following bar graph represents the length (in letters) of the names of 19 people. What is the median length of these names?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "B",
+   "solution": "We first notice that the median name willl be the $(19+1)/2=10^{\\mbox{th}}$ name. The $10^{\\mbox{th}}$ name is $\\boxed{\\textbf{(B)}\\ 4}$."
+  },
+  {
+   "position": 22,
+   "source": "2016 AMC 8 Problem 22",
+   "question": "Rectangle $DEFA$ below is a $3 \\times 4$ rectangle with $DC=CB=BA=1$. The area of the \"bat wings\" (shaded area) is",
+   "choices": {
+    "A": "2",
+    "B": "2 \\frac{1}{2}",
+    "C": "3",
+    "D": "3 \\frac{1}{2}",
+    "E": "4"
+   },
+   "answer": "C",
+   "solution": "The area of trapezoid $CBFE$ is $\\frac{1+3}2\\cdot 4=8$. Next, we find the height of each triangle to calculate their area. The two non-colored isosceles triangles are similar, and are in a $3:1$ ratio by AA similarity (alternate interior and vertical angles) so the height of the larger is $3,$ while the height of the smaller one is $1.$ Thus, their areas are $\\frac12$ and $\\frac92$. Subtracting these areas from the trapezoid, we get $8-\\frac12-\\frac92 =\\boxed3$. Therefore, the answer to this problem is $\\boxed{\\textbf{(C) }3}$."
+  },
+  {
+   "position": 2,
+   "source": "2017 AMC 8 Problem 2",
+   "question": "Alicia, Brenda, and Colby were the candidates in a recent election for student president. The pie chart below shows how the votes were distributed among the three candidates. If Brenda received $36$ votes, then how many votes were cast all together?",
+   "choices": {
+    "A": "70",
+    "B": "84",
+    "C": "100",
+    "D": "106",
+    "E": "120"
+   },
+   "answer": "E",
+   "solution": "If $36$ votes is $\\frac{3}{10}$ of all the votes, we can divide that by $3$ to get $12$ as 10%, and then we can multiply the $12$ by $10$ to get to $120$. So, the answer is $\\boxed{\\textbf{(E)}\\ 120}.$"
+  },
+  {
+   "position": 10,
+   "source": "2017 AMC 8 Problem 10",
+   "question": "A box contains five cards, numbered 1, 2, 3, 4, and 5. Three cards are selected randomly without replacement from the box. What is the probability that 4 is the largest value selected?",
+   "choices": {
+    "A": "\\frac{1}{10}",
+    "B": "\\frac{1}{5}",
+    "C": "\\frac{3}{10}",
+    "D": "\\frac{2}{5}",
+    "E": "\\frac{1}{2}"
+   },
+   "answer": "C",
+   "solution": "There are $\\binom{5}{3}$ possible groups of cards that can be selected. If $4$ is the largest card selected, then the other two cards must be either $1$, $2$, or $3$, for a total $\\binom{3}{2}$ groups of cards. Then, the probability is just ${\\frac{{\\dbinom{3}{2}}}{{\\dbinom{5}{3}}}} = \\boxed{{\\textbf{(C) }} {\\frac{3}{10}}}$."
+  },
+  {
+   "position": 15,
+   "source": "2017 AMC 8 Problem 15",
+   "question": "In the arrangement of letters and numerals below, by how many different paths can one spell AMC8? Beginning at the A in the middle, a path only allows moves from one letter to an adjacent (above, below, left, or right, but not diagonal) letter. One example of such a path is traced in the picture.",
+   "choices": {
+    "A": "8",
+    "B": "9",
+    "C": "12",
+    "D": "24",
+    "E": "36"
+   },
+   "answer": "D",
+   "solution": "Notice that the $A$ is adjacent to $4$ $M$s, each $M$ is adjacent to $3$ $C$s, and each $C$ is adjacent to $2$ $8$'s. So for each $A$, there are $4$ $M$s, and for each $M$, there are $3$ $C$s, and for each $C$, there are $2$ $8$s. Thus, the answer is $1\\cdot 4\\cdot 3\\cdot 2 = \\boxed{\\textbf{(D)}\\ 24}.$"
+  },
+  {
+   "position": 4,
+   "source": "2018 AMC 8 Problem 4",
+   "question": "The twelve-sided figure shown has been drawn on $1 \\text{ cm}\\times 1 \\text{ cm}$ graph paper. What is the area of the figure in $\\text{cm}^2$?",
+   "choices": {
+    "A": "12",
+    "B": "12.5",
+    "C": "13",
+    "D": "13.5",
+    "E": "14"
+   },
+   "answer": "C",
+   "solution": "We can apply Pick's Theorem here. There are $8$ lattice points, and $12$ lattice points on the boundary. Then,\n\n$$ 8 + 12 \\div 2 - 1 = \\boxed {\\textbf{(C) }13}.$$"
+  },
+  {
+   "position": 8,
+   "source": "2018 AMC 8 Problem 8",
+   "question": "Mr.Garcia asked the members of his health class how many days last week they exercised for at least 30 minutes.  The results are summarized in the following bar graph, where the heights of the bars represent the number of students.\n\nWhat was the mean number of days of exercise last week, rounded to the nearest hundredth, reported by the students in Mr. Garcia's class?",
+   "choices": {
+    "A": "3.50",
+    "B": "3.57",
+    "C": "4.36",
+    "D": "4.50",
+    "E": "5.00"
+   },
+   "answer": "C",
+   "solution": "The mean, or average number of days is the total number of days divided by the total number of students. The total number of days is $1\\cdot 1+2\\cdot 3+3\\cdot 2+4\\cdot 6+5\\cdot 8+6\\cdot 3+7\\cdot 2=109$. The total number of students is $1+3+2+6+8+3+2=25$. Hence, $\\frac{109}{25}=\\boxed{\\textbf{(C) } 4.36}$.\n\nThis problem is a good example of times when the problem statement may give information that may seem important to solving the problem, but turns out it's just there to mess around with you.\n\nIn my opinion, I think that it's not a good example of that.\n\nI don't think it is a good example either.\n\nAgreed. Can someone explain another solution? Thanks.\n\n-Flexo3168"
+  },
+  {
+   "position": 20,
+   "source": "2018 AMC 8 Problem 20",
+   "question": "In $\\triangle ABC,$ a point $E$ is on $\\overline{AB}$ with $AE=1$ and $EB=2.$ Point $D$ is on $\\overline{AC}$ so that $\\overline{DE} \\parallel \\overline{BC}$ and point $F$ is on $\\overline{BC}$ so that $\\overline{EF} \\parallel \\overline{AC}.$ What is the ratio of the area of $CDEF$ to the area of $\\triangle ABC?$",
+   "choices": {
+    "A": "\\frac{4}{9}",
+    "B": "\\frac{1}{2}",
+    "C": "\\frac{5}{9}",
+    "D": "\\frac{3}{5}",
+    "E": "\\frac{2}{3}"
+   },
+   "answer": "A",
+   "solution": "Let $a = DE$ and $b =$ the height of $\\triangle ABC$. We can extend $\\triangle ABC$ to form a parallelogram, which would equal $3a \\cdot 3b$. The smaller parallelogram is $a$ times $2b$. The smaller parallelogram is $\\frac{2}{9}$ of the larger parallelogram, so the answer would be $\\frac{2}{9} \\cdot 2$, since the triangle is $\\frac{1}{2}$ of the parallelogram, so the answer is $\\boxed{\\textbf{(A) } \\frac{4}{9}}$.\n\nBy babyzombievillager with credits to many others who helped with the solution :D"
+  },
+  {
+   "position": 22,
+   "source": "2018 AMC 8 Problem 22",
+   "question": "Point $E$ is the midpoint of side $\\overline{CD}$ in square $ABCD,$ and $\\overline{BE}$ meets diagonal $\\overline{AC}$ at $F.$ The area of quadrilateral $AFED$ is $45.$ What is the area of $ABCD?$",
+   "choices": {
+    "A": "100",
+    "B": "108",
+    "C": "120",
+    "D": "135",
+    "E": "144"
+   },
+   "answer": "B",
+   "solution": "$\\triangle ABF \\sim \\triangle FEC$, and the bases $AB$ and $EC$ are in the ratio $2:1$, so $\\frac{[\\triangle ABF]}{[\\triangle FEC]}=\\left(\\frac{2}{1}\\right)^2=\\frac{4}{1}$, and $[\\triangle ABF]=4\\cdot[\\triangle FEC]$\n\nIt is obvious that $[AFED]+[\\triangle FEC]=45+[\\triangle FEC]=\\frac{1}{2}\\cdot[ABCD]$\n\nand $[AFED]+[\\triangle ABF]=45+4\\cdot[\\triangle FEC]=\\frac{3}{4}\\cdot[ABCD]$\n\nSolving the two equations we get $[ABCD]=\\boxed{\\textbf{(B)}108}$\n\n- bbidev"
+  },
+  {
+   "position": 23,
+   "source": "2018 AMC 8 Problem 23",
+   "question": "From a regular octagon, a triangle is formed by connecting three randomly chosen vertices of the octagon. What is the probability that at least one of the sides of the triangle is also a side of the octagon?",
+   "choices": {
+    "A": "\\frac{2}{7}",
+    "B": "\\frac{5}{42}",
+    "C": "\\frac{11}{14}",
+    "D": "\\frac{5}{7}",
+    "E": "\\frac{6}{7}"
+   },
+   "answer": "D",
+   "solution": "Firstly, we calculate the amount of all possible triangles. It is $C_8^3=56$. Then, we consider how many triangles have at least a edge which is also the edge of octagon. \n\nIf the triangle shares only one edge with the octagon, fix an edge, we can choose $4$ different vertices for the triangle. Thus, there are $8\\times 4=32$ possible triangles. If the triangle shares its two edges with the octagon, obviously, there are only $8$ possible triangles. $\\frac{32+8}{56}=\\boxed{\\textbf{(D)}\\frac{5}{7}}$."
+  },
+  {
+   "position": 24,
+   "source": "2018 AMC 8 Problem 24",
+   "question": "In the cube $ABCDEFGH$ with opposite vertices $C$ and $E,$ $J$ and $I$ are the midpoints of segments $\\overline{FB}$ and $\\overline{HD},$ respectively. Let $R$ be the ratio of the area of the cross-section $EJCI$ to the area of one of the faces of the cube. What is $R^2?$",
+   "choices": {
+    "A": "\\frac{5}{4}",
+    "B": "\\frac{4}{3}",
+    "C": "\\frac{3}{2}",
+    "D": "\\frac{25}{16}",
+    "E": "\\frac{9}{4}"
+   },
+   "answer": "C",
+   "solution": "This time, instead of using a variable like we did in Solution 1, $s$, for the side length as in the above solution, choose an easy value for $s$ such as $2$. In the above solution, $s^2$ cancels out in the end, so ultimately the answers are equivalent."
+  },
+  {
+   "position": 4,
+   "source": "2019 AMC 8 Problem 4",
+   "question": "Quadrilateral $ABCD$ is a rhombus with perimeter $52$ meters. The length of diagonal $\\overline{AC}$ is $24$ meters. What is the area in square meters of rhombus $ABCD$?",
+   "choices": {
+    "A": "60",
+    "B": "90",
+    "C": "105",
+    "D": "120",
+    "E": "144"
+   },
+   "answer": "D",
+   "solution": "Right off the bat, we can see that the perimeter of the figure is 52. Dividing this by four, we can get that each side is equal to 13. By drawing a line perpendicular to the one given, we can split the figure into four right triangles. 12 (24/2) is equal to the height of one small right triangle, and 13 is the slanted side. Using the Pythagorean theorem we can find that 169 (13 squared) - 144 (12 squared) = 25 (five squared). With this, we can determine that each small right triangle equals 30. Multiplying that by four we can get $\\boxed{\\textbf{(D)}\\ 120}$."
+  },
+  {
+   "position": 10,
+   "source": "2019 AMC 8 Problem 10",
+   "question": "The diagram shows the number of students at soccer practice each weekday during last week. After computing the mean and median values, Coach discovers that there were actually $21$ participants on Wednesday. Which of the following statements describes the change in the mean and median after the correction is made?",
+   "choices": {
+    "A": "The mean increases by $1$ and the median does not change.",
+    "B": "The mean increases by $1$ and the median increases by $1$.",
+    "C": "The mean increases by $1$ and the median increases by $5$.",
+    "D": "The mean increases by $5$ and the median increases by $1$.",
+    "E": "The mean increases by $5$ and the median increases by $5$."
+   },
+   "answer": "B",
+   "solution": "On Monday, $20$ people come. On Tuesday, $26$ people come. On Wednesday, $16$ people come. On Thursday, $22$ people come. Finally, on Friday, $16$ people come. $20+26+16+22+16=100$, so the mean is $20$. The median is $(16, 16, 20, 22, 26)$ $20$. The coach figures out that actually $21$ people come on Wednesday. The new mean is $21$, while the new median is $(16, 20, 21, 22, 26)$ $21$. Also, the median increases by $1$ because now the median is $21$ instead of $20$. The median and mean both change, so the answer is $\\boxed{\\textbf{(B)}}$.\n\nAnother way to compute the change in mean is to notice that the sum increased by $5$ with the correction. So, the average increased by $5/5 = 1$. Then, the median is computed the same way."
+  },
+  {
+   "position": 18,
+   "source": "2019 AMC 8 Problem 18",
+   "question": "The faces of each of two fair dice are numbered $1$, $2$, $3$, $5$, $7$, and $8$. When the two dice are tossed, what is the probability that their sum will be an even number?",
+   "choices": {
+    "A": "\\frac{4}{9}",
+    "B": "\\frac{1}{2}",
+    "C": "\\frac{5}{9}",
+    "D": "\\frac{3}{5}",
+    "E": "\\frac{2}{3}"
+   },
+   "answer": "C",
+   "solution": "To get an even, you must get either 2 odds or 2 evens. The probability of getting 2 odds is $\\frac{4}{6} \\times \\frac{4}{6}$. The probability of getting 2 evens is $\\frac{2}{6} \\times \\frac{2}{6}$. If you add them together, you get $\\frac{16}{36} + \\frac{4}{36}$ = $\\boxed{(\\textbf{C})  \\frac{5}{9}}$."
+  },
+  {
+   "position": 24,
+   "source": "2019 AMC 8 Problem 24",
+   "question": "In triangle $\\triangle ABC$, point $D$ divides side $\\overline{AC}$ so that $AD:DC=1:2$. Let $E$ be the midpoint of $\\overline{BD}$ and let $F$ be the point of intersection of line  $\\overline{BC}$ and line $\\overline{AE}$. Given that the area of $\\triangle ABC$ is $360$, what is the area of $\\triangle EBF$?",
+   "choices": {
+    "A": "24",
+    "B": "30",
+    "C": "32",
+    "D": "36",
+    "E": "40"
+   },
+   "answer": "B",
+   "solution": "$AD : DC = 1:2$, so $ADB$ has area $120$ and $CDB$ has area $240$. $BE = ED$ so the area of $ABE$ is equal to the area of $ADE = 60$.\nDraw $\\overline{DG}$ parallel to $\\overline{AF}$. \nSet area of BEF = $x$.  BEF is similar to BDG in ratio of 1:2 \nso area of BDG = $4x$, area of EFDG=$3x$, and area of CDG$=240-4x$.\nCDG is similar to CAF in ratio of 2:3 so area CDG = $4/9$ area CAF, and area AFDG=$5/4$ area CDG. \nThus, $60+3x=5/4(240-4x)$ and $x=30$."
+  },
+  {
+   "position": 11,
+   "source": "2020 AMC 8 Problem 11",
+   "question": "After school, Maya and Naomi headed to the beach, $6$ miles away. Maya decided to bike while Naomi took a bus. The graph below shows their journeys, indicating the time and distance traveled. What was the difference, in miles per hour, between Naomi's and Maya's average speeds?",
+   "choices": {
+    "A": "6",
+    "B": "12",
+    "C": "18",
+    "D": "20",
+    "E": "24"
+   },
+   "answer": "E",
+   "solution": "Naomi's speed of $6$ miles in $10$ minutes is equivalent to $6 \\cdot 6 = 36$ miles per hour, while Maya's speed of $6$ miles in $30$ minutes (i.e. half an hour) is equivalent to $6 \\cdot 2 = 12$ miles per hour. The difference is consequently $36-12=\\boxed{\\textbf{(E) }24}$."
+  },
+  {
+   "position": 14,
+   "source": "2020 AMC 8 Problem 14",
+   "question": "There are $20$ cities in the County of Newton. Their populations are shown in the bar chart below. The average population of all the cities is indicated by the horizontal dashed line. Which of the following is closest to the total population of all $20$ cities?",
+   "choices": {
+    "A": "65{,}000",
+    "B": "75{,}000",
+    "C": "85{,}000",
+    "D": "95{,}000",
+    "E": "105{,}000"
+   },
+   "answer": "D",
+   "solution": "The dotted line is slightly below $5000$. Since $5000\\cdot20=100000$, the answer is slightly below this, so $\\boxed{\\textbf{(D) }95{,}000}$ would be the best choice to guess."
+  },
+  {
+   "position": 14,
+   "source": "2022 AMC 8 Problem 14",
+   "question": "In how many ways can the letters in $\\textbf{BEEKEEPER}$ be rearranged so that two or more $\\textbf{E}$s do not appear together?",
+   "choices": {
+    "A": "1",
+    "B": "4",
+    "C": "12",
+    "D": "24",
+    "E": "120"
+   },
+   "answer": "D",
+   "solution": "All valid arrangements of the letters must be of the form $$\\textbf{E\\underline{\\hspace{3mm}}E\\underline{\\hspace{3mm}}E\\underline{\\hspace{3mm}}E\\underline{\\hspace{3mm}}E}.$$\nThe problem is equivalent to counting the arrangements of $\\textbf{B},\\textbf{K},\\textbf{P},$ and $\\textbf{R}$ into the four blanks, in which there are $4!=\\boxed{\\textbf{(D) } 24}$ ways."
+  },
+  {
+   "position": 15,
+   "source": "2022 AMC 8 Problem 15",
+   "question": "Laszlo went online to shop for black pepper and found thirty different black pepper options varying in weight and price, shown in the scatter plot below. In ounces, what is the weight of the pepper that offers the lowest price per ounce?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "C",
+   "solution": "By the answer choices, we can disregard the points that do not have integer weights. As a result, we obtain the following diagram:\n\nWe then proceed in the same way that we had done in Solution 1. Following the steps, we figure out the blue dot that yields the lowest slope, along with passing the origin. We then can look at the x-axis(in this situation, the weight) and figure out it has $\\boxed{\\textbf{(C) } 3}$ ounces."
+  },
+  {
+   "position": 20,
+   "source": "2022 AMC 8 Problem 20",
+   "question": "The grid below is to be filled with integers in such a way that the sum of the numbers in each row and the sum of the numbers in each column are the same. Four numbers are missing. The number $x$ in the lower left corner is larger than the other three missing numbers. What is the smallest possible value of $x$?",
+   "choices": {
+    "A": "-1",
+    "B": "5",
+    "C": "6",
+    "D": "8",
+    "E": "9 \\qquad"
+   },
+   "answer": "D",
+   "solution": "Note that the sum of the rows and columns must be $8+5-1=12$. We proceed to test the answer choices.\n\nTesting $\\textbf{(A)}$, when $x = -1$, the number above $x$ must be $15$, which contradicts the precondition that the numbers surrounding $x$ is less than $x$.\n\nTesting $\\textbf{(B)}$, the number above $x$ is $9$, which does not work.\n\nTesting $\\textbf{(C)}$, the number above $x$ is $8$, which does not work.\n\nTesting $\\textbf{(D)}$, the number above $x$ is $6$, which ''does'' work. Hence, the answer is $\\boxed{\\textbf{(D) }8}$.\n\nWe do not need to test $\\textbf{(E)}$, because the problem asks for the '''smallest''' value of $x$."
+  },
+  {
+   "position": 21,
+   "source": "2022 AMC 8 Problem 21",
+   "question": "Steph scored $15$ baskets out of $20$ attempts in the first half of a game, and $10$ baskets out of $10$ attempts in the second half. Candace took $12$ attempts in the first half and $18$ attempts in the second. In each half, Steph scored a higher percentage of baskets than Candace. Surprisingly they ended with the same overall percentage of baskets scored. How many more baskets did Candace score in the second half than in the first?",
+   "choices": {
+    "A": "7",
+    "B": "8",
+    "C": "9",
+    "D": "10",
+    "E": "11"
+   },
+   "answer": "C",
+   "solution": "Clearly, Steph made $15 + 10 = 25$ shots in total. Also, due to parity reasons, the difference between the amount of shots Candace made in the first and second half must be odd. Thus, we can just test 7, 9, and 11, and after doing so we find that the answer is $\\boxed{\\textbf{(C) } 9}.$"
+  },
+  {
+   "position": 22,
+   "source": "2022 AMC 8 Problem 22",
+   "question": "A bus takes $2$ minutes to drive from one stop to the next, and waits $1$ minute at each stop to let passengers board. Zia takes $5$ minutes to walk from one bus stop to the next. As Zia reaches a bus stop, if the bus is at the previous stop or has already left the previous stop, then she will wait for the bus. Otherwise she will start walking toward the next stop. Suppose the bus and Zia start at the same time toward the library, with the bus $3$ stops behind. After how many minutes will Zia board the bus?",
+   "choices": {
+    "A": "17",
+    "B": "19",
+    "C": "20",
+    "D": "21",
+    "E": "23"
+   },
+   "answer": "A",
+   "solution": "Since Zia will wait for the bus if the bus is at the previous stop, we can create an equation to solve for when the bus is at the previous stop. The bus travels $\\frac{1}{3}$ of a stop per minute, and Zia travels $\\frac{1}{5}$ of a stop per minute. Now we create the equation, $\\frac{1}{3}m = \\frac{1}{5}m + 3 - 1$ (the $-1$ accounts for us wanting to find when the bus reaches the stop before Zia's). Solving, we find that $m=15.$ Now Zia has to wait $2$ minutes for the bus to reach her, so our answer is $15+2=\\boxed{\\textbf{(A) } 17}.$"
+  },
+  {
+   "position": 4,
+   "source": "2023 AMC 8 Problem 4",
+   "question": "The numbers from $1$ to $49$ are arranged in a spiral pattern on a square grid, beginning at the center. The first few numbers have been entered into the grid below. Consider the four numbers that will appear in the shaded squares, on the same diagonal as the number $7.$ How many of these four numbers are prime?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "D",
+   "solution": "Since the last shaded square is very close to the final number, which is 49, we can easily subtract two instead of having to count all the way there. Then, we can count (:P)."
+  },
+  {
+   "position": 6,
+   "source": "2023 AMC 8 Problem 6",
+   "question": "The digits $2,0,2,$ and $3$ are placed in the expression below, one digit per box. What is the maximum possible value of the expression?",
+   "choices": {
+    "A": "0",
+    "B": "8",
+    "C": "9",
+    "D": "16",
+    "E": "18"
+   },
+   "answer": "C",
+   "solution": "There are two 2\u2019s and one 3.  To make use of them all, use 2 and 3 as the bases and 2 and 0 as the exponents."
+  },
+  {
+   "position": 7,
+   "source": "2023 AMC 8 Problem 7",
+   "question": "A rectangle, with sides parallel to the $x$-axis and $y$-axis, has opposite vertices located at $(15, 3)$ and $(16, 5)$. A line is drawn through points $A(0, 0)$ and $B(3, 1)$. Another line is drawn through points $C(0, 10)$ and $D(2, 9)$. How many points on the rectangle lie on at least one of the two lines?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "B",
+   "solution": "Note that the $ y $-intercepts of line $ AB $ and line $ CD $ are $ 0 $ and $ 10 $. If the analytic expression for line $ AB $ is $ y=k_{1}x $, and the analytic expression for line $ CD $ is $ y=k_{2}x+10 $, we have equations: $ 3k_{1} = 1 $ and $ 2k_{2} + 10 = 9 $. Solving these equations, we can find out that $ k_{1} = \\frac{1}{3}$ and $k_{2} = -\\frac{1}{2}$. Therefore, we can determine that the expression for line $ AB $ is $ y=\\frac{1}{3}x $ and the expression for line $ CD $ is $ y=-\\frac{1}{2}x + 10 $. When $ x=15 $, the coordinates that line $ AB $ and line $ CD $ pass through are $ (15, 5) $ and $ \\left(15, \\frac{5}{2}\\right) $, and $ (15, 5) $ lies perfectly on one vertex of the rectangle while the $ y $ coordinate of $ \\left(15, \\frac{5}{2}\\right) $ is out of the range $ 3 \\leq y \\leq 5 $ (lower than the bottom left corner of the rectangle $ (15, 3) $). Considering that the $ y $ value of the line $ CD $ will only decrease, and the $ y $ value of the line $ AB $ will only increase, there will not be another point on the rectangle that lies on either of the two lines. Thus, we can conclude that the answer is $\\boxed{\\textbf{(B)}\\ 1}.$"
+  },
+  {
+   "position": 9,
+   "source": "2023 AMC 8 Problem 9",
+   "question": "Malaika is skiing on a mountain. The graph below shows her elevation, in meters, above the base of the mountain as she skis along a trail. In total, how many seconds does she spend at an elevation between $4$ and $7$ meters?",
+   "choices": {
+    "A": "6",
+    "B": "8",
+    "C": "10",
+    "D": "12",
+    "E": "14"
+   },
+   "answer": "B",
+   "solution": "Notice that the entire section between the $2$ second mark and the $14$ second mark is between the $4$ and $7$ feet elevation level except the $2$ seconds where she skis just under the $4$ feet mark and when she skis just above the $7$ feet mark, making the answer $14-2-2-2=\\boxed{\\textbf{(B)}\\ 8}.$"
+  },
+  {
+   "position": 15,
+   "source": "2023 AMC 8 Problem 15",
+   "question": "Viswam walks half a mile to get to school each day. His route consists of $10$ city blocks of equal length and he takes $1$ minute to walk each block. Today, after walking $5$ blocks, Viswam discovers he has to make a detour, walking $3$ blocks of equal length instead of $1$ block to reach the next corner. From the time he starts his detour, at what speed, in mph, must he walk, in order to get to school at his usual time?",
+   "choices": {
+    "A": "4",
+    "B": "4.2",
+    "C": "4.5",
+    "D": "4.8",
+    "E": "5"
+   },
+   "answer": "B",
+   "solution": "Viswam walks $10$ blocks, or half a mile, in $10$ minutes. Therefore, he walks at a rate of $3$ mph. When he takes his detour, he must travel $7$ blocks instead of $5$. Our final equation is $\\frac{7}{5} \\times 3 = \\frac{21}{5} = \\boxed{\\textbf{(B)}\\ 4.2}$.\n\nNote: In the second half of his journey, he is travelling 7/5 as far as he originally expected to, so he needs to travel at 7/5 the speed to get there on time."
+  },
+  {
+   "position": 17,
+   "source": "2023 AMC 8 Problem 17",
+   "question": "A regular octahedron has eight equilateral triangle faces with four faces meeting at each vertex. Jun will make the regular octahedron shown on the right by folding the piece of paper shown on the left. Which numbered face will end up to the right of $Q$?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "A",
+   "solution": "Trace the net on your scratch paper, rip it out, and fold it. You'll see the answer is $\\boxed{\\textbf{(A)}\\ 1}$ This is not recommended."
+  },
+  {
+   "position": 2,
+   "source": "2025 AMC 8 Problem 2",
+   "question": "The table below shows the ancient Egyptian hieroglyphs that were used to represent different numbers.\n\nFor example, the number $32$ was represented by the hieroglyphs $\\cap \\cap \\cap ||$. What number is represented by the following combination of hieroglyphs?",
+   "choices": {
+    "A": "1,423",
+    "B": "10,423",
+    "C": "14,023",
+    "D": "14,203",
+    "E": "14,230"
+   },
+   "answer": "B",
+   "solution": "From a first inspection, you may notice that there is no thousands hieroglyph. The only option with zero in the thousands place is $\\boxed{\\textbf{(B)}\\ 10,423}$"
+  },
+  {
+   "position": 3,
+   "source": "2025 AMC 8 Problem 3",
+   "question": "Buffalo Shuffle-o is a card game in which all the cards are distributed evenly among all players at the start of the game. When Annika and 3 of her friends play Buffalo Shuffle-o, each player is dealt 15 cards. Suppose 2 more friends join the next game. How many cards will be dealt to each player?",
+   "choices": {
+    "A": "8",
+    "B": "9",
+    "C": "10",
+    "D": "11",
+    "E": "12"
+   },
+   "answer": "C",
+   "solution": "We start with Annika and $3$ of her friends playing, meaning that there are $4$ players. This must mean that there is a total of $4 \\cdot 15 = 60$ cards. If $2$ more players joined, there would be $6$ players, and since the cards need to be split evenly, this would mean that each player gets $\\frac{60}{6}=\\boxed{\\text{(C)\\ 10}}$ Buffalo Shuffle-O cards each meaning that the final answer is 10.\n\ni agree"
+  },
+  {
+   "position": 4,
+   "source": "2025 AMC 8 Problem 4",
+   "question": "Lucius is counting backward by $7$s. His first three numbers are $100$, $93$, and $86$. What is his $10$th number?",
+   "choices": {
+    "A": "30",
+    "B": "37",
+    "C": "42",
+    "D": "44",
+    "E": "47"
+   },
+   "answer": "B",
+   "solution": "Setting this as a function $f (x)= 100- 7(x-1)$ where x is the xth number, we can plug in 10 for x. Quick arithmetic gives us the answer of $\\boxed{\\text{(B)\\ 37}}$."
+  },
+  {
+   "position": 7,
+   "source": "2025 AMC 8 Problem 7",
+   "question": "On the most recent exam on Prof. Xochi's class, \n\n* $5$ students earned a score of at least $95\\%$, \n\n* $13$ students earned a score of at least $90\\%$, \n\n* $27$ students earned a score of at least $85\\%$, \n\n* $50$ students earned a score of at least $80\\%$, \n\nHow many students earned a score of at least $80\\%$ and less than $90\\%$?",
+   "choices": {
+    "A": "8",
+    "B": "14",
+    "C": "22",
+    "D": "37",
+    "E": "45"
+   },
+   "answer": "D",
+   "solution": "$50$ people scored at least $80\\%$, and out of these $50$ people, $13$ of them earned a score that was not less than $90\\%$, so the number of people that scored in between at least $80\\%$ and less than $90\\%$ is $50-13 = \\boxed{\\text{(D)\\ 37}}$."
+  },
+  {
+   "position": 9,
+   "source": "2025 AMC 8 Problem 9",
+   "question": "Ningli looks at the $6$ pairs of numbers directly across from each other on a clock. She takes the average of each pair of numbers. What is the average of the resulting $6$ numbers?",
+   "choices": {
+    "A": "5",
+    "B": "6.5",
+    "C": "8",
+    "D": "9.5",
+    "E": "12"
+   },
+   "answer": "B",
+   "solution": "We proceed with brute force. All of the pairs of opposite numbers on the clock are $(12,6)$, $(1,7)$, $(2,8)$, $(3,9)$, $(4,10)$, $(5,11)$, where order doesn't matter. The averages of each of these pairs are $9, 4, 5, 6, 7,$ and $8$ respectively, and the average these numbers is $\\frac{9+4+5+6+7+8}{6}=\\boxed{\\textbf{(B)}~6.5}$"
+  },
+  {
+   "position": 13,
+   "source": "2025 AMC 8 Problem 13",
+   "question": "Each of the even numbers $2, 4, 6, \\ldots, 50$ is divided by $7$. The remainders are recorded. Which histogram displays the number of times each remainder occurs?\n\n/*By Reda_mandymath*/\nunitsize(15);\nvoid histogram(pair p, string _str, int[] n) {\n    /* p is shift transformation, \n    _str is choice string, \n    n[] is the array of number of remainders, \n    _pen is the pen style of block, \n    a is the width of block, \n    b is the width of gap\n    _scale is the font scale of labels*/\n    pen _pen;\n    real a = 0.8;\n    real b = 0.3;\n    real _scale = 0.8;\n    draw(shift(p) * ((0, 0) -- (9, 0) -- (9, 5) -- (0, 5) -- cycle));\n    label(scale(_scale) * rotate(90) * \"Count\", (-0.4, 2.5)+p);\n    label(scale(_scale) * \"Remainder\", (4.5, -1)+p);\n    for (int i = 0; i <= 6; ++i) {\n        if (n[i] == 3) {\n            _pen = mediumgray;\n        } else {\n            _pen = heavygray;\n        }\n        fill(shift(p) * ((a*(i+1) + b*i, 0) -- (a*(i+1) + b*i, n[i]) -- (a*(i+2) + b*i, n[i]) -- (a*(i+2) + b*i, 0) -- cycle), _pen);\n        label(scale(_scale) * string(i), shift(p) * (a*(i+1.5) + b*i, 0), S);\n        label(scale(_scale) * string(n[i]), shift(p) * (a*(i+1.5) + b*i, n[i]), N);\n    }\n    label(_str, shift(p) * (-0.4, 6));\n}\nhistogram((0, 0), \"",
+   "choices": {
+    "A": "\", new int[] {3, 4, 4, 3, 4, 3, 4});\nhistogram((12, 0), \"",
+    "B": "\", new int[] {3, 4, 4, 4, 3, 3, 4});\nhistogram((24, 0), \"",
+    "C": "\", new int[] {3, 4, 4, 4, 4, 3, 3});\nhistogram((0, -8), \"",
+    "D": "\", new int[] {4, 3, 4, 3, 4, 3, 4});\nhistogram((12, -8), \"",
+    "E": "\", new int[] {4, 4, 3, 4, 3, 4, 3});"
+   },
+   "answer": "A",
+   "solution": "Let's take the numbers 2 through 14 (evens). The remainders will be 2, 4, 6, 1, 3, 5, and 0. This sequence keeps repeating itself over and over. We can take floor(50/14) = 3, so after the number 42, every remainder has been achieved 3 times. However, since 44, 46, 48, and 50 are left, the remainders of those will be 2, 4, 6, and 1 respectively. The only histogram in which those 4 numbers are set at 4 is histogram $\\boxed{\\textbf{(A)}}$."
+  },
+  {
+   "position": 14,
+   "source": "2025 AMC 8 Problem 14",
+   "question": "A number $N$ is inserted into the list $2$, $6$, $7$, $7$, $28$. The mean is now twice as great as the median. What is $N$?",
+   "choices": {
+    "A": "7",
+    "B": "14",
+    "C": "20",
+    "D": "28",
+    "E": "34"
+   },
+   "answer": "E",
+   "solution": "We try out every option by inserting each number into the list. After trying out each number, we get $\\boxed{\\text{(E)\\ 34}}$\n\nNote that this is very time-consuming and it is not the most practical solution.\n\n$~$"
+  },
+  {
+   "position": 15,
+   "source": "2025 AMC 8 Problem 15",
+   "question": "Kei draws a $6$-by-$6$ grid. He colors $13$ of the unit squares silver and the remaining squares gold. Kei then folds the grid in half vertically, forming pairs of overlapping unit squares. Let $m$ and $M$ equal the least and greatest possible number of gold-on-gold pairs, respectively. What is the value of $m+M$?",
+   "choices": {
+    "A": "12",
+    "B": "14",
+    "C": "16",
+    "D": "18",
+    "E": "20"
+   },
+   "answer": "C",
+   "solution": "We can see that the least number of gold-on-gold pairs will be obtained when the $13$ silver squares are placed on the two sides so that they don't overlap when folded over (because then it will minimize the number of gold-on-golds). We can see that if we split them up $6$ and $7$ on both sides, and then fold it, the number of gold-on-golds will be $18-13 = 5$.\n\nThe maximum number of gold-on-golds will be achieved when the silver squares overlap when folded over, which will increase the number of gold-on-golds. If we align 6 silver squares with each other on each side, and put the last one somewhere else, we get the maximum is $18 - 7 = 11$. Therefore, the answer is $11+5=\\boxed{\\textbf{(C)}~16}$."
+  },
+  {
+   "position": 16,
+   "source": "2025 AMC 8 Problem 16",
+   "question": "Five distinct integers from $1$ to $10$ are chosen, and five distinct integers from $11$ to $20$ are chosen. No two numbers differ by exactly $10$. What is the sum of the ten chosen numbers?",
+   "choices": {
+    "A": "95",
+    "B": "100",
+    "C": "105",
+    "D": "110",
+    "E": "115"
+   },
+   "answer": "C",
+   "solution": "Note that '''for no two numbers to differ by $10$, every number chosen must have a different units digit'''. To make computations easier, we can choose $(1, 2, 3, 4, 5)$ from the first group and $(16, 17, 18, 19, 20)$ from the second group. Then the sum evaluates to $1+2+3+4+5+16+17+18+19+20 = \\boxed{\\text{(C)\\ 105}}$."
+  },
+  {
+   "position": 19,
+   "source": "2025 AMC 8 Problem 19",
+   "question": "Two towns, $A$ and $B$, are connected by a straight road that is $15$ miles long. Travelling from city $A$ to town $B$, the speed limit changes every $5$ miles: from $25$ to $40$ to $20$ miles per hour (mph). Two cars, one at town $A$ and one at town $B$, start moving toward each other at the same time. They drive at exactly the speed limit in each portion of the road. How far from town $A$, in miles, will the two cars meet?",
+   "choices": {
+    "A": "7.75",
+    "B": "8",
+    "C": "8.25",
+    "D": "8.5",
+    "E": "8.75"
+   },
+   "answer": "D",
+   "solution": "The first car, moving from town $A$ at $25$ miles per hour, takes $\\frac{5}{25} = \\frac{1}{5} \\text{hours} = 12$ minutes. The second car, traveling another $5$ miles from town $B$, takes $\\frac{5}{20} = \\frac{1}{4} \\text{hours} = 15$ minutes. The first car has traveled for 3 minutes or $\\frac{1}{20}$th of an hour at $40$ miles per hour when the second car has traveled 5 miles. The first car has traveled $40 \\cdot \\frac{1}{20} = 2$ miles from the previous $5$ miles it traveled at $25$ miles per hour. They have $3$ miles left, and they travel at the same speed, so they meet $1.5$ miles through, so they are $5 + 2 + 1.5 = \\boxed{\\textbf{(D) }8.5}$ miles from town $A$."
+  },
+  {
+   "position": 22,
+   "source": "2025 AMC 8 Problem 22",
+   "question": "A classroom has a row of 35 coat hooks. Paulina likes coats to be equally spaced, so that there is the same number of empty hooks before the first coat, after the last coat, and between every coat and the next one. Suppose there is at least 1 coat and at least 1 empty hook. How many different numbers of coats can satisfy Paulina's pattern?",
+   "choices": {
+    "A": "2",
+    "B": "4",
+    "C": "5",
+    "D": "7",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "Say Paulina placed $n$ coats. That will divide the 35 hooks into $n+1$ spaces and $35-n$ empty hooks. Therefore, $$n+1|35-n$$ The values of $n$ that satisfy this are $$n\\in{1,2,3,5,8,11,17}$$The answer is $\\boxed{\\text{(D) }7}$."
+  },
+  {
+   "position": 23,
+   "source": "2025 AMC 8 Problem 23",
+   "question": "How many four-digit numbers have all three of the following properties?\n\n(I) The tens and ones digit are both 9.\n\n(II) The number is 1 less than a perfect square.\n\n(III) The number is the product of exactly two prime numbers.",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "B",
+   "solution": "The \"Condition (II)\" perfect square must end in \"$00$\" because $...99+1=...00$ ''Condition (I)''. Four-digit perfect squares ending in \"$00$\" are ${40, 50, 60, 70, 80, 90}$. \n\n''Condition (II)'' also says the number is in the form $n^2-1$. By the '''[https://en.wikipedia.org/wiki/Difference_of_two_squares Difference of Squares]''', $n^2-1 = (n+1)(n-1)$. Hence: \n*$40^2-1 = (39)(41)$\n*$50^2-1 = (49)(51)$\n*$60^2-1 = (59)(61)$\n*$70^2-1 = (69)(71)$\n*$80^2-1 = (79)(81)$\n*$90^2-1 = (89)(91)$\n\nOn this list, the only number that is the product of $2$ prime numbers (condition $3$) is $60^2-1 = (59)(61)$, so the answer is $\\boxed{\\text{(B)\\ 1}}$."
+  },
+  {
+   "position": 24,
+   "source": "2025 AMC 8 Problem 24",
+   "question": "In trapezoid $ABCD$, angles $B$ and $C$ measure $60^\\circ$ and $AB = DC$. The side lengths are all positive integers, and the perimeter of $ABCD$ is 30 units. How many non-congruent trapezoids satisfy all of these conditions?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "E",
+   "solution": "We give lengths to the base of the $30-60-90$ triangles on both sides as the trapezoid as variable $x$.  We give lengths of Line $AB$ and the other side as variable $y$.  When we add them, we have $6x+2y=30$ from the sides.  If we lext $x=5$, the other sides won't work so it has to be integers less than $5$ which is $4$ which is the answer.\n- Spacepandamath13"
+  },
+  {
+   "position": 7,
+   "source": "2026 AMC 8 Problem 7",
+   "question": "Mika would like to estimate how far she can ride a new model of electric bike on a fully charged battery. She completed two trips totaling $40$ miles. The first trip used $\\frac{1}{2}$ of the total battery power, while the second trip used $\\frac{3}{10}$ of the total battery power. How many miles can this electric bike go on a fully charged battery?",
+   "choices": {
+    "A": "45",
+    "B": "48",
+    "C": "50",
+    "D": "52",
+    "E": "55\\qquad"
+   },
+   "answer": "C",
+   "solution": "Start with combining the battery fractions listed in the problem, and we compare that to the number of miles she rode.\n\n$\\frac{1}{2} + \\frac{3}{10} = \\frac{8}{10}$\n\nSo $40$ miles is $\\frac{8}{10}$ of her battery power.\n\n$$\\frac{8}{10}x = 40$$\n\nMultiply both sides by $\\frac{10}{8}$:\n\n$$ \\frac{10}{8} \\cdot \\frac{8}{10}x = 40 \\cdot \\frac{10}{8} $$\n\n$$ x = \\frac{400}{8} $$\n\nThe answer is $\\boxed{50}$."
+  },
+  {
+   "position": 9,
+   "source": "2026 AMC 8 Problem 9",
+   "question": "What is the value of this expression?\n\n$$\\frac{\\sqrt{16\\sqrt{81}}}{\\sqrt{81\\sqrt{16}}}$$\n\n$$",
+   "choices": {
+    "A": "\\frac{4}{9}",
+    "B": "\\frac{2}{3}",
+    "C": "1",
+    "D": "\\frac{3}{2}",
+    "E": "\\frac{9}{4}"
+   },
+   "answer": "B",
+   "solution": "$\\frac{\\sqrt{16\\sqrt{81}}}{\\sqrt{81\\sqrt{16}}}=\\frac{4\\sqrt{\\sqrt{81}}}{9\\sqrt{\\sqrt{16}}}=\\frac{4\\times3}{9\\times2}=\\frac{12}{18}=\\frac23$, so our answer is $\\boxed{ \\textbf{(B) } \\frac{2}{3}}$."
+  },
+  {
+   "position": 10,
+   "source": "2026 AMC 8 Problem 10",
+   "question": "Five runners completed the grueling Xmarathon: Luke, Melina, Nico, Olympia, and Pedro.\n\nNico finished $11$ minutes behind Pedro.\nOlympia finished $2$ minutes ahead of Melina, but $3$ minutes behind Pedro.\nOlympia finished $6$ minutes ahead of Luke.\n\nWhich runner finished fourth?",
+   "choices": {
+    "A": "\\text{Luke}",
+    "B": "\\text{Melina}",
+    "C": "\\text{Nico}",
+    "D": "\\text{Olympia}",
+    "E": "\\text{Pedro}"
+   },
+   "answer": "A",
+   "solution": "Let the respective places be $ L $, $ M $, $ N $, $ O $, and $ P $ respectively. Then, $ P = 11+N $, $ O-2 = M $, $ O+3 = P $, and $ O = 6+L $. Then, substitution for $ P $ gives us $ O+3 = N+11 $, in which $ O=N+8 $. Then, $ N+6 = M $, $ N+8=6+L \\Rightarrow N+2=L $. So $ N $ finished m minutes behind everyone (that was ok), and thus was last.\n\nNow, $ O=6+L $, in which $ L+9 = P $, $ L+7 = M $, and thus $\\boxed{\\text{Luke}}$ finished fourth."
+  },
+  {
+   "position": 17,
+   "source": "2026 AMC 8 Problem 17",
+   "question": "Four students are seated in a row. They chat with the people sitting next to them, then rearrange themselves so that they are no longer seated next to any of the same people. How many rearrangements are possible?",
+   "choices": {
+    "A": "2",
+    "B": "4",
+    "C": "9",
+    "D": "12",
+    "E": "24"
+   },
+   "answer": "A",
+   "solution": "Let's say the people are $A$, $B$, $C$, and $D$, and they seated in the order $ABCD$ at first. $A$ cannot be next to $B$, $B$ cannot be next to $C$, and $C$ cannot be next to $D$, so our only possibilities are $CADB$ and $BDAC$ as orders, so our answer is $\\boxed{\\mathbf{(A) 2}}$."
+  },
+  {
+   "position": 19,
+   "source": "2026 AMC 8 Problem 19",
+   "question": "Miguel is walking with his dog, Luna. When they reach the entrance to a park, Miguel throws a ball straight ahead and continues to walk at a steady pace. Luna sprints toward the ball, which stops by a tree. As soon as the dog reaches the ball, she brings it back to Miguel. Luna runs 5 times faster than Miguel walks. What fraction of the distance between the entrance and the tree does Miguel cover by the time Luna brings him the ball?",
+   "choices": {
+    "A": "\\frac{1}{6}",
+    "B": "\\frac{1}{5}",
+    "C": "\\frac{1}{4}",
+    "D": "\\frac{1}{3}",
+    "E": "\\frac{2}{5}"
+   },
+   "answer": "D",
+   "solution": "Let Miguel's speed equal $s$. That makes Luna's speed $5s$. Let the distance between the park entrance and the tree be $d$. The total distance covered by Miguel and Luna is $s + 5s = 6s$, which is also equal to $2d$. Thus $6s = 2d \\Rightarrow s = \\boxed{ \\textbf{(D) } \\frac{1}{3}}d$."
+  },
+  {
+   "position": 24,
+   "source": "2026 AMC 8 Problem 24",
+   "question": "The notation $n!$ (read \"n factorial\") is defined as the product of the first $n$ positive integers. (For example, $3!=1 \\cdot 2 \\cdot 3 = 6$). Define the superfactorial of a positive integer, denoted by $n^!$, to be the product of the factorials of the first $n$ integers. (For example, $3^!=1! \\cdot 2! \\cdot 3! = 12$). How many factors of $7$ appear in the prime factorization of $51^!$, the superfactorial of $51$?",
+   "choices": {
+    "A": "147",
+    "B": "150",
+    "C": "156",
+    "D": "168",
+    "E": "171"
+   },
+   "answer": "E",
+   "solution": "If $51^! = 1! \\cdot 2! \\cdot ... \\cdot 51! = (1) (1 \\cdot 2)(1 \\cdot 2 \\cdot 3)(...)(1 \\cdot 2 \\cdot 3 \\cdot ... \\cdot 51)$ is expanded as such, each integer $k \\leq 51$ will appear once in each of the expansions of $\\{k!, ..., 51!\\}$, for a total of $52-k$ appearances.  \n\nTherefore, in this expansion, $7$ appears $45$ times, $14$ appears $38$ times, $21$ appears $31$ times, $28$ appears $24$ times, $35$ appears $17$ times, $42$ appears $10$ times, and $49$ appears $3$ times.  Except for $49$, which contributes $2$ copies of the factor $7$, each of these terms contributes $1$ copy of the factor $7$, for a total of $45 + 38 + 31 + 24 + 17 + 10 + 3 \\cdot 2 = \\boxed{ \\textbf{(E) } 171}$ copies of the factor $7$.\n\n-j314andrews"
+  }
+ ]
+}

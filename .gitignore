@@ -11,3 +11,17 @@ __pycache__/
 scraper/state.json
 scraper/download.log
 scraper/verification/
+
+# user data & secrets — never commit
+users.json
+sessions.json
+messages.jsonl
+friends.json
+classes.json
+class_reports.jsonl
+users/
+pk/
+log
+*.log
+.vscode/
+Mock-Test-Generator/

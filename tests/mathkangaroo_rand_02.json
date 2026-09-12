@@ -1,0 +1,160 @@
+{
+ "id": "mathkangaroo_rand_02",
+ "competition": "Math Kangaroo",
+ "category": "Math",
+ "title": "Math Kangaroo — Random Mock #2 · 2026-08-23 16:40",
+ "instructions": "10 questions · 45 minutes · No calculator. 1 point per correct answer, no penalty for wrong answers.",
+ "time_limit_min": 45,
+ "questions": [
+  {
+   "n": 1,
+   "source": "Modified from 2025 Math Kangaroo G1-2 Sample (4 pts)",
+   "question": "There were $16$ pieces of fruit on the table. Vera removed $3$ pears, $5$ apples, and half of the oranges. Now there are only oranges left on the table. How many oranges are left?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "8"
+   },
+   "answer": "C",
+   "solution": "Pears and apples total $3+5=8$, so there were $16-8=8$ oranges. Vera removed half, leaving $4$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 2,
+   "source": "Modified from 2025 Math Kangaroo G3-4 Sample (3 pts)",
+   "question": "Arya writes the four digits $3, 0, 3, 7$ in the four boxes. $$\\Box + \\Box - \\Box + \\Box$$ Which order would give her the largest result?",
+   "choices": {
+    "A": "0, 3, 3, 7",
+    "B": "0, 7, 3, 3",
+    "C": "3, 7, 3, 0",
+    "D": "7, 0, 3, 3",
+    "E": "7, 3, 0, 3"
+   },
+   "answer": "E",
+   "solution": "Maximize by adding the two largest digits and subtracting the smallest: $7+3-0+3=13$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 3,
+   "source": "Modified from 2026 Math Kangaroo G7-8 Sample (3 pts)",
+   "question": "Jo wants to place the numbers $3, 0, 3,$ and $8$ into the four boxes, one in each, to form the expression $\\dfrac{\\Box + \\Box}{\\Box - \\Box}$. What is the smallest positive value she can obtain?",
+   "choices": {
+    "A": "$\\frac{1}{2}$",
+    "B": "$\\frac{2}{5}$",
+    "C": "$\\frac{3}{5}$",
+    "D": "$\\frac{3}{4}$",
+    "E": "$1$"
+   },
+   "answer": "C",
+   "solution": "The smallest positive fraction is $\\dfrac{0+3}{8-3} = \\dfrac{3}{5}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 4,
+   "source": "Modified from 2025 Math Kangaroo G9-10 Sample (3 pts)",
+   "question": "The 4-digit number $60\\Box\\Box$ is missing its last two digits. The number is divisible by $8$ and $9$. What is the product of these two missing digits?",
+   "choices": {
+    "A": "12",
+    "B": "24",
+    "C": "32",
+    "D": "36",
+    "E": "48"
+   },
+   "answer": "C",
+   "solution": "Divisible by both means divisible by $72$; the only completion is $6048 = 72 \\cdot 84$. Product: $4 \\cdot 8 = 32$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 5,
+   "source": "Modified from 2026 Math Kangaroo G9-10 Sample (3 pts)",
+   "question": "Consider years in the 21st century (2000–2099) with two properties: exactly two of the four digits are equal (one pair, the other two digits different), and the sum of the digits is $8$. How many such years are there?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "D",
+   "solution": "We need $a+b=6$ with exactly one pair equal in $20ab$: valid years are $2006, 2024, 2033, 2042, 2060$ — $5$ years.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 6,
+   "source": "Modified from 2025 Math Kangaroo G11-12 Sample (3 pts)",
+   "question": "Mike obtains a number $x$ by dividing the number $\\sqrt{17}$ by $4$. Where is the number $x$ to be found on the number line?",
+   "choices": {
+    "A": "between 0 and 1",
+    "B": "between 1 and 2",
+    "C": "between 2 and 3",
+    "D": "between 3 and 4",
+    "E": "between 4 and 5"
+   },
+   "answer": "B",
+   "solution": "$\\sqrt{17} \\approx 4.12$, so $x \\approx 1.03$, which lies between $1$ and $2$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 7,
+   "source": "Modified from 2024 Math Kangaroo G9-10 Sample (4 pts)",
+   "question": "There are five vases on the table. The number of sweets in the first vase equals the number of vases containing exactly one sweet; the second equals the number of vases containing exactly two sweets; the third equals the number of vases containing exactly three sweets; the fourth equals the number of vases containing exactly four sweets; the fifth equals the number of vases containing zero sweets. If the five vases contain $1, 2, 3, 4,$ and $0$ sweets in some order, how many sweets are there in total?",
+   "choices": {
+    "A": "6",
+    "B": "8",
+    "C": "10",
+    "D": "12",
+    "E": "14"
+   },
+   "answer": "C",
+   "solution": "With contents $(1,2,3,4,0)$, every count matches its definition (one vase with 1, one with 2, etc.), and the total is $1+2+3+4+0=10$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 8,
+   "source": "Modified from 2026 Math Kangaroo G11-12 Sample (4 pts)",
+   "question": "Two points $P$ and $Q$ are randomly placed on a line segment $AB$. What is the probability that the length of $PQ$ is at most half the length of $AB$?",
+   "choices": {
+    "A": "$\\frac14$",
+    "B": "$\\frac13$",
+    "C": "$\\frac12$",
+    "D": "$\\frac23$",
+    "E": "$\\frac34$"
+   },
+   "answer": "E",
+   "solution": "For uniform $P, Q$ on $[0,1]$, $P(|P-Q| \\le \\tfrac12) = 1 - 2\\cdot\\frac12\\left(\\frac12\\right)^2 = \\frac34$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 9,
+   "source": "Modified from 2024 Math Kangaroo G3-4 Sample (5 pts)",
+   "question": "There are $48$ students on a trip. When they line up, the colors of their reflective vests follow the pattern yellow, green, yellow, green, … The colors of their backpacks follow the pattern red, brown, orange, red, brown, orange, … How many students with a yellow vest also have an orange backpack?",
+   "choices": {
+    "A": "4",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "10"
+   },
+   "answer": "D",
+   "solution": "Yellow vests are at odd positions and orange backpacks at positions divisible by 3, so both occur at positions $3, 9, 15, \\dots, 45$: $8$ students.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 10,
+   "source": "Modified from 2026 Math Kangaroo G9-10 Sample (5 pts)",
+   "question": "Charles and Paul alternate taking toffees out of a box: Charles takes $1$, then Paul takes $2$, then Charles takes $3$, then Paul takes $4$, and so on. When there are not enough toffees left to follow this pattern, the boy whose turn it is takes all the remaining ones. At the end, Charles has $415$ toffees. How many toffees were in the box at the beginning?",
+   "choices": {
+    "A": "815",
+    "B": "825",
+    "C": "835",
+    "D": "845",
+    "E": "855"
+   },
+   "answer": "C",
+   "solution": "After 20 complete pairs of turns Charles has $20^2=400$ and Paul $20\\cdot 21=420$. Charles needs $15$ more on his 21st turn, and $15 < 41$, so the box held $400+420+15=835$.",
+   "type": "multiple_choice"
+  }
+ ]
+}

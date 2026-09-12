@@ -1,0 +1,246 @@
+{
+ "competition": "bpho_r1",
+ "round": "Round 1",
+ "variants": [
+  {
+   "source": "BPhO R1 2023 1(a)",
+   "position": 1,
+   "question": "A steel ball is thrown down with a speed of 3.0$ms^{-1}$ on to a hard surface from a height of 2.0m. It retains 70% of its energy on each bounce. Calculate",
+   "answer": "7.0 ms^{-1}",
+   "solution": "i) $v^{2}$ = $u^{2}$ + 2as = $3^{2}$ + 2 $\\times$ 9.81 $\\times$ 2 = 6.946 = 7.0$ms^{-1}$",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(b)",
+   "position": 2,
+   "question": "A long-distance cyclist uses a cycle computer that is dual-powered: it has an internal battery and a solar panel. While the cyclist is riding in direct sunlight, the solar panel on the computer provides energy at a rate equal to $\\frac{1}{3}$ of the power consumption. If a fully-charged cycle computer lasts 10hours when riding at night, calculate how long a fully charged computer will run for in direct sunlight.",
+   "answer": "15 hours",
+   "solution": "Consider power consumption P and energy E of the battery: At night E = 10P In the day E = T $\\times$ $\\frac{2}{3}$P ∴ $\\frac{2}{3}$T = 10 $\\to$ T = 15hours (2 mark2)",
+   "points": 2,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(d)",
+   "position": 4,
+   "question": "Io and Europa are both moons of Jupiter. Europa takes twice as long as Io to complete an $a_{Io}$ orbit. What is the ratio of the centripetal acceleration of Io and Europa, ? $a_{Europa}$ You may use the result that for this gravitational system, ^{2}$\\omega r^{3}$ = constant, where $\\omega$ is the angular velocity and $r$ is the radius of the orbit.",
+   "answer": "3",
+   "solution": "If $T_{E}$ = 2$T_{I}$, then ω_{E} = $\\frac{1}{2}$ω_{I} ω$\\frac{2}{E}$ $r_{E}$^{2} = ω$\\frac{2}{I}r_{I}$^{3} _{\\omega I} $\\frac{2}{3}$ _{2} ∴ $r_{E}$ = $r_{I}$ _{\\omega E} = $r_{I}$ $\\times$ $2^{3}$ a = ω^{2}r _{aI} _{\\omega I} ^{2} _{rI} _{2} _{-2} $\\to$ _{aE} = _{\\omega E} $\\times$ _{rE} = 2 $\\times$ 2 ^{3} = 2.52 e)Momentum conservation: Parallel: $m_{1}$u = $m_{1}v_{1}$ cosθ + $m_{2}v_{2}$ cosθ Perpendicular: $m_{1}v_{1}$ sinθ = $m_{2}v_{2}$ sinθ ∴ $m_{1}v_{1}$ = $m_{2}v_{2}$ $\\to$ u = 2$v_{1}$ cosθ Energy conservation: $m_{1}u^{2}$ = $m_{1}v_{1}$^{2} + $m_{2}v_{2}$^{2} _{2} _{v1} = $m_{1}v_{1}$($v_{1}$ + $v_{2}$) = $m_{1}v_{1}$ 1 + _{v2} _{2} _{2} _{v1} ∴ u = $v_{1}$ 1 + _{v2} Eliminating u, we get: 4$cos^{2}$ θ = 1 + $\\frac{m1}{m2}$ There largest value of $\\frac{m1}{m2}$ = 3, when θ $\\to$ 0. If $m_{1}$ = $m_{2}$, cosθ = $\\frac{√1}{2}$ $\\to$ θ = $\\frac{\\pi}{4}$ = $45^{^\\circ}$",
+   "points": 2,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(f)",
+   "position": 6,
+   "question": "A body is projected with velocity $v$ up a plane inclined at an angle $\\alpha$ to the horizontal. When it returns through its starting point it is moving with half the speed with which is was projected. Determine the coefficient of friction $\\mu$, in terms of the angle of the plane. Hint: The coefficient of friction is given by $F_{friction}$ = $\\mu N$ where $N$ is the normal contact force and $F_{friction}$ is the frictional force on the body.",
+   "answer": "5",
+   "solution": "Resolving when the object travels up the slope: $-$ma_{u} = $F_{d}$ + mg sinα ∴ _{2} _{Fd} v = 2 _{m} + g sinα s Similarly for going down the slope we get: $\\frac{2}{v}$ _{Fd} _{4} = 2 $-$ _{m} + g sinα s Dividing the two equations to eliminate v: _{Fd} _{Fd} 4 = _{m} + g sinα / g sinα $-$ _{m} 4mg sinα $-$ 4$F_{d}$ = $F_{d}$ + mg sinα 3mg sinα = 5$F_{d}$ = 5µN = 5µmg cosα ∴ µ = $\\frac{3}{5}$ tanα",
+   "points": 4,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(h)",
+   "position": 8,
+   "question": "A rocket of mass $m_{r}$ = 5000kg contains a further mass $m_{0}$ = 5000kg of fuel. Once the fuelisignited,50kgpersecondofhotgasisexpelleddownwardsataspeedof2000$ms^{-1}$.",
+   "answer": "50",
+   "solution": "i) Thrust = $\\frac{∆(mv)}{∆t}$ = 50 $\\times$ 2000 = $10^{5}$N",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(j)",
+   "position": 10,
+   "question": "Observed from an air traffic control tower, an aeroplane has a bearing of $068^{^\\circ}$ and a range of 43km. Five minutes later the bearing of the aircraft is $040^{^\\circ}$ with a range of 52km. Determine",
+   "answer": "89.7 km",
+   "solution": "Applying the cosine rule to the smaller triangle: $c^{2}$ = $52^{2}$ + $43^{2}$ $-$ 2 $\\times$ 52 $\\times$ 43cos($28^{^\\circ}$) $\\to$ c = 24.586km v = $\\frac{c}{300}$ = 82$ms^{-1}$ Applying the sine rule on the small triangle to find θ: Figure 2: 1.j $\\frac{sin28}{c}$ = $\\frac{sin\\theta}{52}$ θ = $83.19^{^\\circ}$ or θ = $96.81^{^\\circ}$ If θ was $90^{^\\circ}$, the lenght marked as 52km would be $\\frac{43}{cos28}$ = 49km. Therefore θ = $96.8^{^\\circ}$. Now using the cosine rule on the larger triangle: $R^{2}$ = $43^{2}$ + 9 $\\times$ $24.586^{2}$ $-$ 2 $\\times$ 43 $\\times$ 3 $\\times$ 24.586cos(96.8) R = 89.7km $\\frac{R}{sin\\theta}$ = $\\frac{3c}{sinϕ}$ ∴ ϕ = $54.76^{^\\circ}$ So the bearing is $013.2^{^\\circ}$",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(o)",
+   "position": 15,
+   "question": "The Stefan-Boltzmann law says that the emitted power of a spherical $``$black body$''$, $P$, is related to the radius, $R$, and absolute surface temperature, $T$, as $P$ $\\propto$ ^{2}$RT^{4}$. Wien$'$s $``$displacement law$''$ says that the wavelength $\\lambda_{max}$ corresponding to the peak value of the emitted power of this spectrum is inversely proportional to the absolute surface temperature. The Sun currently has its peak wavelength as 500nm. What will be the new peak wavelength when it becomes a red giant, given its radius will be 200 times larger and its power output 4000 times larger?",
+   "answer": "889 nm",
+   "solution": "Given P = $kR^{2}T^{4}$ and Tλ_{max} = $k^{′}$, then P = $k^{′′R}\\frac{2}{lamda4}$ Hence: $\\frac{lamda41}{lamda42}$ = $\\frac{R12P2}{P1R22}$ = $\\frac{4000}{2002}$ = $\\frac{1}{10}$ ∴ λ$\\frac{4}{2}$ = $500^{4}$ $\\times$ 10$nm^{4}$ λ_{2} = 889nm",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(p)",
+   "position": 16,
+   "question": "One spectral line in hydrogen is caused by photons with an energy of 2.55eV. The same line is redshifted in the spectrum of a distant galaxy by 5.4nm. Calculate",
+   "answer": "3.32",
+   "solution": "For a photon of energy E, λ = $\\frac{hc}{E(eVe}$, where e is the electronic charge. Therfore, λ = 487nm. Doppler effect: $\\frac{∆lamda}{lamda}$ = $\\frac{v}{c}$ and Hubble$'$s Law: v = $H_{0}$d $\\to_{-9}$ d = $\\frac{C∆lamda}{H0lamda}$ _{-19} d = $\\frac{5.4\\times10\\times2.55\\times1.6\\times10}{70\\times103\\times6.63\\times10-34}$ Mpc ∴ d = 47.5Mpc v = 3.32 $\\times$ $10^{6}ms^{-1}$",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(q)",
+   "position": 17,
+   "question": "A car drives along a road that has small depressions regularly spaced about 8.0m apart. When four 80kg passengers enter the 800kg car, it sinks down by 1.8cm. At approximately what speed might travelling in the vehicle become very uncomfortable?",
+   "answer": "15.9 ms^{-1}",
+   "solution": "We want to find the natural frequency of the cars $''$bouncing$''$ $movement^{1}$: mg = kx 4 $\\times$ 80 $\\times$ 9.81 = k $\\times$ 1.8 $\\times$ $10^{-2}$ = 1.74 $\\times$ $10^{5}Nm^{-1}$ Travelling forward, the ride will be uncomfortable if the time between the bumps is resonant with the time period of the $''$bouncing$''$ motion: _{∆x} _{m} T = _{v} = 2π _{k} _{∆x} _{k} v = _{2\\pi} _{m} ∴ v = 15.9$ms^{-1}$",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(r)",
+   "position": 18,
+   "question": "A pendulum clock is controlled by the swing of a simple pendulum (a mass on the end of a light rod) and is intended to have a period of 1.00 seconds. However, the clock runs slow by ten minutes each day. What percentage change should be made in the length of the pendulum?",
+   "answer": "1.4",
+   "solution": "A pendulum clock has a period of T = 2π _{g}. Let the correct period (1 second) be T, so the wrong pendulum period is T + ∆T. In 24 hours, NT = 24 $\\times$ 3600, where N is the number of 1 second pe- riods in a day. Therefore, for the wrong period N(T +∆T) = 24$\\times$3600+600, so N∆T = 600. Hence: $\\frac{∆T}{T}$ = $\\frac{1}{6\\times24}$ = $\\frac{1}{144}$ Now binomially expanding the time period: _{l} $\\frac{0.5}{\\delta l}$ _{1} _{\\delta l} T + ∆T = 2π _{g} 1 + _{l} $\\approx$ T + T _{2} _{l} ∴ $\\frac{\\deltal}{l}$ = $2^{∆}\\frac{T}{T}$ = $\\frac{1}{72}$ = 1.4% Hence, the pendulum is 1.4% too long, so it should be shortened.",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(s)",
+   "position": 19,
+   "question": "A binary star system is 2140 light years away and consists of two stars like the Sun. The average separation between the stars is 0.00593 light years. Determine the diameter of the telescope needed to resolve them if using a visible wavelength of 550nm.",
+   "answer": "0.20 m",
+   "solution": "The resolution limit of two point sources is given by θ_{Rayleigh} = 1.22λ/D. D = 1.22 $\\times$ $\\frac{2140}{0.00593}$ $\\times$ 550 $\\times$ $10^{-9}$ = 0.24m OR D = 0.20m, if 1.22 not included.",
+   "points": 2,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(u)",
+   "position": 21,
+   "question": "A particle A, of mass $m$ carrying a charge of $Q$ is suspended by an insulating thread of length $\\ell$. Another particle B, of negligible mass but of positive charge +$q$ is brought towards A, which is repelled. When B arrives at the point previously occupied by A, the system is in (neutral) equilibrium. 1 Calculate the work done in terms of $m$,$g$,$\\ell$,$q$,$Q$, and $k$, where $k$ = . $4_{0}\\pi𝜖$",
+   "answer": "6",
+   "solution": "Diagram with forces: Figure 5: 1.u WD = energy gained by particle A = mgh + $\\frac{qQ}{4\\piϵ0r}$ Now resolving the forces vertically and horizontally: V: mg = T cosθ + $\\frac{qQ}{4\\piϵ0r2}$ sin $\\frac{\\theta}{2}$ H: $\\frac{qQ}{4\\piϵ0r2}$ cos $\\frac{\\theta}{2}$ = T sinθ Now, dividing the first equation by $\\frac{qQ}{4\\piϵ0r2}$ cos $\\frac{\\theta}{2}$ = QE cos $\\frac{\\theta}{2}$ we get: $\\frac{mg}{QEcos}$ _{\\theta2} = tan $\\frac{\\theta}{2}$ + $\\frac{1}{tan\\theta}$ $\\frac{mg}{QE}$ = sin $\\frac{\\theta}{2}$ + $\\frac{cos\\theta2}{tan\\theta}$ Making the substitutions s = sin $\\frac{\\theta}{2}$, c = cos $\\frac{\\theta}{2}$ and t = tan $\\frac{\\theta}{2}$, and observing that tanθ = $\\frac{2t}{1-t2}$, we find: $\\frac{mg}{QE}$ = s + $\\frac{c(1-t2)}{2t}$ _{s2} = 2st + c $-$ _{c} /2t _{s2} _{s2} = 2 _{c} + c $-$ _{c} /2t _{s2} $\\frac{22}{(s+c)c}$ _{1} = c + _{c} /2t = _{2sc} = _{2s} ∴ $\\frac{mg}{QE}$ = $\\frac{mgr2}{kqQ}$ = $\\frac{1}{sin\\theta2}$ From the diagram, we have $\\frac{r}{2l}$ = sin $\\frac{\\theta}{2}$, so $r^{3}$ = $\\frac{kqQl}{mg}$ _{kqQ} _{kqQ} So now we have WD = mgh + _{r} = mg h + _{mgr} . From the diagram, h = l(1 $-$ cosθ) = 2$lsin^{2}$ $\\frac{\\theta}{2}$.Bringing this together we get: _{2} _{\\theta} _{r2} WD = mg 2lsin _{2} + _{l} _{2} _{\\theta} _{2} _{\\theta} = mg 2lsin _{2} + 4lsin _{22} = 6$mglsin^{2}$ $\\frac{\\theta}{2}$ = $\\frac{6mgr}{4l}$ _{3} $\\frac{1}{mgk2q2Q23}$ = _{2} _{l} Where q = $\\frac{1}{4\\piϵ0}$",
+   "points": 6,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(v)",
+   "position": 22,
+   "question": "A capacitor of value 1.0F discharges through a device whose resistance $R$ varies linearly with applied potential difference, $V$, so that $R$ = $AV$ + $B$, where $A$ and $B$ are constants. The resistance of the device has a value of 10.0$\\Omega$ when $V$ = 6.0V, and 4.0$\\Omega$ when $V$ = 0.06V. The capacitor is initially charged to a potential of 6.0V. Determine how long it takes for the capacitor to discharge to 1% of this initial value.",
+   "answer": "24 s",
+   "solution": "Applying Kirchoff$'$s 2nd Law: 0 = $V_{c}$ + $V_{R}$ 0 = $\\frac{Q}{C}$ + IR $\\frac{Q}{C}$ = $\\frac{dQ}{dt}-$ (AV + B) V = $-$C$\\frac{dV}{dt}$ (AV + B) Now integrating to find V (t): _{1} ^{t} _{′} ^{V} _{′} _{B} _{C} _{0} dt = $-$ _{V0} dV A + _{V} _{t} _{V} _{V} _{c} = $AV_{0}$ 1 $-$ _{V0} $-$ B ln _{V0} To solve for A and B: R = AV + B 4 = 0.06A + B and 10 = 6A + B ∴ A = $\\frac{100}{99}$ $\\approx$ 1.01,B = $\\frac{130}{33}$ $\\approx$ 3.94 Finally, substituting all values into the equation for t(V ), we get t = 6 + $\\frac{260}{33}$ ln10 = 24s.",
+   "points": 6,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2023 1(w)",
+   "position": 23,
+   "question": "The $\\frac{238}{92}$U decays according to $\\frac{238}{92}$U $\\to$ $\\frac{234}{90}$Th + $\\frac{4}{2}$He Determine the kinetic energy of the emitted $\\alpha-$particle in MeV. $c$ = 2.998 $\\times$ $10^{8}$ $ms^{-1}$ Mass of the $\\frac{238}{92}$U nucleus is 3.85395 $\\times$ $10^{-25}$ kg Mass of the $\\frac{234}{90}$Th nucleus is 3.78737 $\\times$ $10^{-25}$ kg Mass of the $\\alpha-$particle is 6.64807 $\\times$ $10^{-27}$ kg END OF SECTION 1",
+   "answer": "5.48 MeV",
+   "solution": "Let the energy release k = $k_{\\alpha}$ + $k_{T}$, where $k_{\\alpha}$ is the kinetic energy of the alpha particle, and $k_{T}$ is the kinetic energy of the Thorium nucleus. Momentum $conservation_{2}$: $p_{T}$ = $p_{\\alpha}$ $in_{2}$the rest frame. k = $k_{\\alpha}$ + $\\frac{pT}{2mT}$ = $k_{\\alpha}$ + $\\frac{p\\alpha}{2mT}$ _{2m\\alpha k\\alpha} _{m\\alpha} k = $k_{\\alpha}$ + _{2mT} = $k_{\\alpha}$ 1 + _{mT} ∴ $k_{\\alpha}$ = $\\frac{kmT}{mT+m\\alpha}$ k = ($m_{U}$ $-$ $m_{T}$ $-$ $m_{\\alpha}$)$c^{2}$ = 8.937 $\\times$ $10^{-13}$J ∴ $k_{\\alpha}$ = 5.48MeV",
+   "points": 5,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2024 1(b)",
+   "position": 2,
+   "question": "A car of mass 1200kg tows a caravan of mass 600kg. The resistive forces acting on the car and caravan are proportional to their individual weights and their sum equals 900N. The vehicle accelerates at 2.0$ms^{-2}$ on a flat road.",
+   "answer": "45000 W",
+   "solution": "Car & caravan. ma = engine force $-$ total drag So, engine force = ma + drag = 1800 $\\times$ 2 + 900 engine force = 4500N Tension in tow bar = ma + 300N = 2 $\\times$ 600 + 300 = 1500N power = Fv = 4500N $\\times$ 10$ms^{-1}$ = 45000W",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2024 1(c)",
+   "position": 3,
+   "question": "The distance between village A and village B is 50km. Helen and Robert decided to cycle from A to B. Robert left A at 8.00 am, with a speed of 12$kmh^{-1}$ and had a break of 30minutes. Helen left at 8.30 am, did not have a break and reached B an hour before Robert. What was Helen$'$s speed?",
+   "answer": "16 kmh^{-1}",
+   "solution": "Helen & Robert cycling. For Robert: 50(km) = (T $-$ 0.5) $\\times$ 12($kmh^{-1}$) 56 T = h 12 For Helen: 50 = (T $-$ 1.5)$v_{H}$ 50 = (56/12 $-$ 3/2)$v_{H}$ Hence, $v_{H}$ = (50 $\\times$ 38)/12 = 15.8 = 16$kmh^{-1}$",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2024 1(e)",
+   "position": 5,
+   "question": "An object falls under gravity. The ratio of the distance fallen by the object in the last second of its fall to the distance covered in the last but one second of its fall is 3 : 2.",
+   "answer": "3.5 s",
+   "solution": "Time & ratios for a falling object. The object fall for T seconds. Using s = $\\frac{1}{2}gt^{2}$, we have ($\\ell$ = last second, p = penultimate second) $s_{\\ell}$ = $\\frac{1}{2}gT^{2}$ $-$ $\\frac{1}{2}$g(T $-$ 1)^{2} and $s_{p}$ = $\\frac{1}{2}$g(T $-$ 1)^{2} $-$ $\\frac{1}{2}$g(T $-$ 2)^{2} $s_{\\ell}$ $T^{2}$ $-$ (T $-$ 1)^{2} So, = _{2} _{2} $s_{p}$ (T $-$ 1) $-$ (T $-$ 2) 2 2 $s_{\\ell}$ T $-$ T + 2T $-$ 1 Hence = $s_{p}$ $T^{2}$ $-$ 2T + 1 $-$ $T^{2}$ + 4T $-$ 4 2T $-$ 1 3 So that = 2T $-$ 3 2 Giving T = 7/2 = 3.5s s = $\\frac{1}{2}$9.8 $\\times$ $3.5^{2}$ = 60m (or even 61m using g=10) v = at = 9.8 $\\times$ 3.5 = 34.3 = 34$ms^{-1}$ An alternative: distance fallen is average speed x time interval. Times increasing by 1s are $t_{2}$,$t_{1}$,$t_{0}$ = T $gt_{1}$ + $gt_{2}$ $s_{p}$ = ($t_{1}$ $-$ $t_{2}$) 2 $gt_{1}$ + $gt_{0}$ $s_{\\ell}$ = ($t_{0}$ $-$ $t_{1}$) 2 $s_{\\ell}$ $t_{1}$ + $t_{0}$ 3 So = = $s_{p}$ $t_{2}$ + $t_{1}$ 2 Then 3($t_{2}$ + $t_{1}$) = 2($t_{1}$ + $t_{0}$) And using $t_{0}$ $-$ $t_{1}$ = 1 and $t_{1}$ $-$ $t_{2}$ = 1 we obtain $t_{0}$ = T = 3.5s as above.",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2024 1(g)",
+   "position": 7,
+   "question": "The resistance of a copper wire 1m long with a mass of 1g is 0.15$\\Omega$. Find the length of a wire of the same material with a mass of 1000kg and a resistance of 6000$\\Omega$.",
+   "answer": "2.0",
+   "solution": "Long copper wire. ρ$\\ell$ RA Since R = ⇒ $\\ell$ = A ρ m m m Density, d is given by d = = ⇒ A = V A$\\ell$ $\\ell$d RA Rm Hence $\\ell$ = = ρ ρ$\\ell$d _{2} Rm So $\\ell$ = ρd _{2}$\\ell^{2}$ $R_{2}$ $m_{2}$ Therefore _{2} = $\\times$ $\\ell_{1}$ $R_{1}$ $m_{1}$ 6000 $10^{3}$ _{10} = = 4 $\\times$ 10 0.15 $10^{-3}$ So that $\\ell_{2}$ = 2.0 $\\times$ $10^{5}$ m",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2024 1(i)",
+   "position": 9,
+   "question": "An 8W beam of light is shone on a surface at normal incidence. The surface reflects 50% of the incident light and absorbs the other 50%.",
+   "answer": "6.7",
+   "solution": "Beam of photons. ∆p 1 ∆E Power F = = = ∆t c ∆t c For reflection, there is a factor of 2 for 50% of the power 3P 4 4 So net force = = $\\times$ 2 + 2c c c 12 12 = = c 3 $\\times$ $10^{8}$ = 4 $\\times$ $10^{-8}$ N In time ∆t there are N = nc∆tA photons in a cylinder of beam. N P $\\times$ ∆t)/hf Then n = = cA∆t cA∆t P Pλ 8 $\\times$ 600 $\\times$ $10^{-9}$ Giving n = = _{2} = _{-34} _{16} hfcA hc A 6.63 $\\times$ 10 $\\times$ 9 $\\times$ 10 $\\times$ 0.0012 n = 6.7 $\\times$ $10^{13}$ $m^{-3}$",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2024 1(j)",
+   "position": 10,
+   "question": "A short pulse of $10^{8}$ neutrons is fired through a vacuum at a target. If the bunch of neutrons is travelling at a speed $v$ = 2200$ms^{-1}$ and the half life of a neutron is 880s, how many neutrons will decay whilst travelling a distance of 11m towards the target?",
+   "answer": "390",
+   "solution": "neutron time of flight. time of flight = $\\frac{11}{2200}$ = 5 $\\times$ $10^{-3}$ s t Using N = $N_{0}$ exp($-$λt) = $N_{0}$ exp($-$ln2. ) $t_{hl}$ t 5 $\\times$ $10^{-3}$ _{-6} With ln2. = ln2 $\\times$ = 3.94 $\\times$ 10 $t_{hl}$ 880 The exponent is small so an approximation is used, $e^{-x}$ $\\approx$ 1 $-$ x N So that for $N_{decays}$ = $N_{0}$ $-$ N = $N_{0}$ 1 $-$ $N_{0}$ _{-lamda.t} t = $N_{0}$(1 $-$ e ) $\\approx$ $N_{0}$λt = $N_{0}$ ln2 $t_{hl}$ = $10^{8}$ $\\times$ 3.94 $\\times$ $10^{-6}$ = 394 = 390 = 400 neutrons. Lose a mark for missing ln2 factor, which results in 570 neutrons. Alternatively Since time of flight $\\ll$ $t_{hl}$ _{8} 5 $\\times$ $10^{-3}$ dN = Nλdt = 10 $\\times$ 0.693 $\\times$ = 390 neutrons (3 marks here + 1 for ToF) 880",
+   "points": 4,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2024 1(m)",
+   "position": 13,
+   "question": "Two ships, A and B spot each other at the moment ship B is due south of A with a range of 2.0 nautical miles. Ship A is travelling on a bearing $090^{^\\circ}$ at 5.0 knots, and ship B on a bearing of $030^{^\\circ}$ at 20 knots. What is their distance of closest approach? 1 knot = 1 nautical mile per hour. A bearing is an angle measured clockwise from $0^{^\\circ}$ as due north.",
+   "answer": "0.55",
+   "solution": "Two ships. Diagram √ y = 2 $-$ 10 3t one mark for both the x and y equations here x = t(5 $-$ 10) = $-$5t √ $r^{2}$ = $x^{2}$ + $y^{2}$ = 25$t^{2}$ + 300$t^{2}$ + 4 $-$ 40 3t _{2} _{2} √ which is r = 325t $-$ 40 3t + 4 _{2} √ _{2} Either solve quadratic in t: 325t $-$ 40 3t + (4 $-$ r ) = 0 for zero discriminant, _{2} _{2} 2 40 .3 $-$ 4.325.(4 $-$ r ) = 0 which gives r = √ , or [] 13 dr √ OR differentiate w.r.t. time 2r = 650t $-$ 40 3 dt √ 40 3 = 0 when t = √ 650 _{2} $40^{2}$.3 √ 40 3 Therefore $r_{min}$ = 325 _{2} $-$ 40 3 + 4 650 650 4 = 13 2 Hence $r_{min}$ = √ = 0.55nautical miles 13",
+   "points": 5,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2024 1(n)",
+   "position": 14,
+   "question": "A steel tube of 4.0cm internal diameter and 30cm long, with a wall 0.25cm thick, is covered externally and lined internally with copper tubes 0.20cm thick. The three concentric tubes are firmly connected. This compound tube is placed under tension by a load and the stress produced equals 6.2 $\\times$ $10^{7}$ $Nm^{-2}$. Determine",
+   "answer": "1",
+   "solution": "Concentric cylinders. $F_{1}$ $\\ell$ E = $A_{1}$ δ$\\ell$ δ$\\ell$ δ$\\ell$ δ$\\ell$ So that $F_{1}$ = $E_{1}A_{1}$ ,$F_{2}$ = $E_{2}A_{2}$ ,$F_{3}$ = $E_{3}A_{3}$ $\\ell$ $\\ell$ $\\ell$ ^{3} _{i=1} $F_{i}$ ($E_{1}A_{1}$ + $E_{2}A_{2}$ + $E_{3}A_{3}$) δ$\\ell$ Now the applied stress = _{3} = . _{i=1} $A_{i}$ ($A_{1}$ + $A_{2}$ + $A_{3}$) $\\ell$ Σ$F_{i}$ Σ$A_{1}$ Hence δ$\\ell$ = $\\times$ $\\times$ $\\ell$ Σ$A_{i}$ Σ$E_{i}A_{i}$ In the question the diameter was given, not the radius. Either is accepted. The diameter = 4.0cm answers would be a factor of 4$\\times$ smaller than those here. $A_{1}$ + $A_{3}$ = π($4.00^{2}$ $-$ $3.8^{2}$) $\\times$ $10^{-4}$ + π($4.45^{2}$ $-$ $4.25^{2}$) $\\times$ $10^{-4}$ = π $\\times$ (1.74 + 1.56) $\\times$ $10^{-4}$ = π $\\times$ 3.3 $\\times$ $10^{-4}$ $m^{2}$ If 4.0cm is (correctly) used as the diameter $A_{1}$ + $A_{3}$ = π $\\times$ 0.825 $\\times$ $10^{-4}$ $m^{2}$ $A_{2}$ = π($4.25^{2}$ $-$ $4.00^{2}$) $\\times$ $10^{-4}$ = π $\\times$ 2.06 $\\times$ $10^{-4}$ $m^{2}$ $A_{2}$ = π $\\times$ 0.516 $\\times$ $10^{-4}$ $m^{2}$ Area of copper and steel tubes ^{3} _{-4} _{2} ^{3} _{-4} _{2} _{i=1} $A_{i}$ = π $\\times$ 5.36 $\\times$ 10 m _{i=1} $A_{i}$ = π $\\times$ 1.34 $\\times$ 10 m And Σ$E_{i}A_{i}$ = (200 $\\times$ $10^{9}$ $\\times$ π $\\times$ 2.06 $\\times$ $10^{-4}$) + (110 $\\times$ $10^{9}$ $\\times$ 3.3 $\\times$ $10^{-4}$) = π $\\times$ $10^{5}$(200 $\\times$ 2.06 + 110 $\\times$ 3.3) = π $\\times$ 7.75 $\\times$ $10^{5}$ N π $\\times$ 1.94 $\\times$ $10^{5}$ N _{7} π $\\times$ 5.36 $\\times$ $10^{-4}$ So the extension is δ$\\ell$ = 6.2 $\\times$ 10 $\\times$ _{7} $\\times$ 0.30 π $\\times$ 7.75 $\\times$ 10 2 $\\times$ 5.36 $\\times$ $10^{-4}$ $\\times$ 0.30 = 6.2 $\\times$ 7.75 = 1.29 $\\times$ $10^{-4}$ m 5.16 $\\times$ $10^{-4}$ m δ$\\ell$ _{9} 1.29 $\\times$ $10^{-4}$ _{7} Stress in copper tubes = $E_{copper}$ = 110 $\\times$ 10 $\\times$ = 4.7 $\\times$ 10 Pa $\\ell$ 0.3 = 1.9 $\\times$ $10^{8}$ Pa δ$\\ell$ δ$\\ell$ Total load = ($E_{s}A_{s}$ + $E_{c}A_{c}$) $\\times$ = Given stress $\\times$ total area $\\times$ $\\ell$ $\\ell$ _{7} _{-4} δ$\\ell$ _{5} = 6.4$\\times$10 $\\times$ π $\\times$ 5.36 $\\times$10 $\\times$ = 1$\\times$10 N $\\ell$ _{-4} _{9} _{-4} 1.29 $\\times$ 10 = (200 $\\times$ 2.06 + 110 $\\times$ 3.3) $\\times$ 10 $\\times$ π $\\times$ 10 $\\times$ 0.30 = 1 $\\times$ $10^{5}$ N the same value - ALLOW ecf with their total area",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2024 1(o)",
+   "position": 15,
+   "question": "A thin wire of mass $m$ = 6.0g and length $L$ = 1.2m is stretched to a tension $T$ between two fixed supports. The wire is excited so that the third harmonic standing waveis formed of maximum amplitude $A_{max}$. In such a wire, the total KE and elastic PE are equal. The tension is $T$ = 45N and $A_{max}$ = 1.8cm.",
+   "answer": "0.54 J",
+   "solution": "Standing wave on a wire. A particle on the wire oscillates with SHM x = Asinωt v = Aω cosωt 1 _{2} 1 _{2} _{2} _{2} So the KE of a point would be given by mv = mA ω cos ωt 2 2 1 _{2} 1 _{2} _{2} and the $KE_{m}$ax = mv = mA ω 2 2 Average value of KE for the wire requires average value of $sin^{2}$ θ over three cycles, which 1 is 2 1 _{2} So the KE of the wire will be $M_{wire}$Aω 4 1 _{2} Given the average KE and PE are equal, the energy in the wire is KE+PE = $M_{wire}$Aω 2 To obtain ω we need the speed of the wave and its wavelength: √ T 45 _{3} _{-1} v = = = 9 $\\times$ 10 = 94.87 = 95ms µ 6.0 $\\times$ $10^{-3}$/1.2 v 94.97 94.87 and f = = = = 118.6 = 120Hz λ 1.2/3 $\\times$ 2 0.8 1 _{2} _{2} So $E_{total}$ = $M_{wire}$A ω 2 = 0.5 $\\times$ 6 $\\times$ $10^{-3}$ $\\times$ (1.8 $\\times$ $10^{-2}$)^{2} $\\times$ 4π^{2} $\\times$ $118.6^{2}$ = 0.54J",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  },
+  {
+   "source": "BPhO R1 2024 1(s)",
+   "position": 19,
+   "question": "Two balls A and B of masses and volumes $m_{A}$,$V_{A}$ and $m_{B}$,$V_{A}$ respectively are attached to the ends of a light thread. The thread is hung over a freely moving pulley above a beaker of water. The pulley is lowered so that B is fully submerged and ball A floats on the water. $V_{A}$ = 1000$cm^{3}$,$m_{A}$ = 500g,$V_{B}$ = 50$cm^{3}$ and $m_{B}$ = 390g.",
+   "answer": "3.3 cm",
+   "solution": "Two balls above a beaker of water. • By Archimedes we can equate forces on the string. f is the fraction of the volume of A submerged Two forces on each ball T = $m_{B}$g $-$ ρ$V_{B}$g and a tension in the string and T = $m_{A}$g $-$ ρ$fV_{A}$g (labelled in words is fine) ⇒⇒ So that $m_{B}$g $-$ ρ$V_{B}$g = $m_{A}$g $-$ ρ$fV_{A}$g Hence ρ$fV_{A}$g = ($m_{A}$ $-$ $m_{B}$)g + ρ$V_{B}$g ($m_{A}$ $-$ $m_{B}$) then $fV_{A}$ = + $V_{B}$ ρ (500 $-$ 390) $fV_{A}$ = + 50 1 f1000 = 160 and thus f = 0.16 = 16% T = $m_{B}$g $-$ ρ$V_{B}$g So kx = ($m_{B}$ $-$ ρ$V_{B}$)g Now using units of m, kg, s, we have 100x = (0.390 $-$ 1000 $\\times$ 50 $\\times$ $10^{-6}$) $\\times$ 9.8 0.34 $\\times$ 9.8 x = = 0.033m = 3.3cm 100",
+   "points": 3,
+   "type": "numeric",
+   "subject": "Physics"
+  }
+ ]
+}

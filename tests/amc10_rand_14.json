@@ -1,0 +1,411 @@
+{
+ "id": "amc10_rand_14",
+ "competition": "AMC 10",
+ "category": "Math",
+ "title": "AMC 10 — Random Mock #14 · 2026-09-09 18:01",
+ "instructions": "25 questions · 75 minutes · No calculator. 150 points total.",
+ "time_limit_min": 75,
+ "total_points": 150,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2007 AMC 10A Problem 1",
+   "question": "One ticket to a show costs $$\\$20 at full price. Susan buys 4 tickets using a coupon that gives her a 25% discount. Pam buys 5 tickets using a coupon that gives her a 30% discount. How many more dollars does Pam pay than Susan?\n\n$\\$$",
+   "choices": {
+    "A": "2",
+    "B": "5",
+    "C": "10",
+    "D": "15",
+    "E": "20"
+   },
+   "answer": "C",
+   "solution": "$\\textbf{Answer: \\boxed{(C)}}$ \nSusan pays $(4)(0.75)(20) = 60$ dollars. Pam pays $(5)(0.70)(20) = 70$ dollars, so she pays $70-60=10$ more dollars than Susan.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 2,
+   "source": "2012 AMC 10A Problem 2",
+   "question": "A square with side length 8 is cut in half, creating two congruent rectangles. What are the dimensions of one of these rectangles?",
+   "choices": {
+    "A": "2\\ $\\text{by}$\\ 4",
+    "B": "2\\ $\\text{by}$\\ 6",
+    "C": "2\\ $\\text{by}$\\ 8",
+    "D": "4\\ $\\text{by}$\\ 4",
+    "E": "4\\ $\\text{by}$\\ 8"
+   },
+   "answer": "E",
+   "solution": "Cutting the square in half will bisect one pair of sides while the other side will remain unchanged. Thus, the new square is $\\frac{8}{2}$ by $8$, or  $\\boxed{\\textbf{(E)}\\ 4\\ \\text{by}\\ 8}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 3,
+   "source": "2012 AMC 10B Problem 3",
+   "question": "The point in the $xy$-plane with coordinates $(1000, 2012)$ is reflected across the line $y=2000$.  What are the coordinates of the reflected point?",
+   "choices": {
+    "A": "(998,2012)",
+    "B": "(1000,1988)",
+    "C": "(1000,2024)",
+    "D": "(1000,4012)",
+    "E": "(1012,2012)"
+   },
+   "answer": "B",
+   "solution": "The line $y = 2000$ is a horizontal line located $12$ units beneath the point $(1000, 2012)$. When a point is reflected about a horizontal line, only the $y$ - coordinate will change. The $x$ - coordinate remains the same. Since the $y$-coordinate of the point is $12$ units above the line of reflection, the new $y$ - coordinate  will be $2000 - 12 = 1988$. Thus, the coordinates of the reflected point are $(1000, 1988)$. $\\boxed{\\textbf{(B)}}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 4,
+   "source": "2015 AMC 10A Problem 4",
+   "question": "Pablo, Sofia, and Mia got some candy eggs at a party.  Pablo had three times as many eggs as Sofia, and Sofia had twice as many eggs as Mia.  Pablo decides to give some of his eggs to Sofia and Mia so that all three will have the same number of eggs.  What fraction of his eggs should Pablo give to Sofia?",
+   "choices": {
+    "A": "$\\frac{1}{12}$",
+    "B": "$\\frac{1}{6}$",
+    "C": "$\\frac{1}{4}$",
+    "D": "$\\frac{1}{3}$",
+    "E": "$\\frac{1}{2}$"
+   },
+   "answer": "B",
+   "solution": "Assign a variable to the number of eggs Mia has, say $m$.  Then, because we are given that Sofia has twice the number of eggs Mia has, Sofia has $2m$ eggs, and Pablo, having three times the number of eggs as Sofia, has $6m$ eggs.\n\nFor them to all have the same number of eggs, they must each have $\\frac{m+2m+6m}{3} = 3m$ eggs.  This means Pablo must give $2m$ eggs to Mia and $m$ eggs to Sofia, so the answer is $\\frac{m}{6m} = \\boxed{\\textbf{(B) }\\frac{1}{6}}$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 5,
+   "source": "2003 AMC 10B Problem 5",
+   "question": "Moe uses a mower to cut his rectangular $90$-foot by $150$-foot lawn. The swath he cuts is $28$ inches wide, but he overlaps each cut by $4$ inches to make sure that no grass is missed. He walks at the rate of $5000$ feet per hour while pushing the mower. Which of the following is closest to the number of hours it will take Moe to mow the lawn?",
+   "choices": {
+    "A": "0.75",
+    "B": "0.8",
+    "C": "1.35",
+    "D": "1.5",
+    "E": "3"
+   },
+   "answer": "C",
+   "solution": "Since the swath Moe actually mows is $24$ inches, or $2$ feet wide, he mows $10000$ square feet in one hour. His lawn has an area of $13500$, so it will take Moe $1.35$ hours to finish mowing the lawn. Thus the answer is $\\boxed{\\textbf{(C) } 1.35}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 6,
+   "source": "2020 AMC 10B Problem 6",
+   "question": "Driving along a highway, Megan noticed that her odometer showed $15951$ (miles). This number is a palindrome-it reads the same forward and backward. Then $2$ hours later, the odometer displayed the next higher palindrome. What was her average speed, in miles per hour, during this $2$-hour period?",
+   "choices": {
+    "A": "50",
+    "B": "55",
+    "C": "60",
+    "D": "65",
+    "E": "70"
+   },
+   "answer": "B",
+   "solution": "In order to get the smallest palindrome greater than $15951$, we need to raise the middle digit. If we were to raise any of the digits after the middle, we would be forced to also raise a digit before the middle to keep it a palindrome, making it unnecessarily larger.\n\nSo we raise $9$ to the next largest value, $10$, but obviously, that's not how place value works, so we're in the $16000$s now. To keep this a palindrome, our number is now $16061$. \n\nSo Megan drove $16061-15951=110$ miles. Since this happened over $2$ hours, she drove at $\\frac{110}{2}=\\boxed{\\textbf{(B) }55}$ mph.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 7,
+   "source": "2021 AMC 10A Problem 7",
+   "question": "Tom has a collection of $13$ snakes, $4$ of which are purple and $5$ of which are happy. He observes that\n\n* all of his happy snakes can add,\n\n* none of his purple snakes can subtract, and\n\n* all of his snakes that can't subtract also can't add.\n\nWhich of these conclusions can be drawn about Tom's snakes?",
+   "choices": {
+    "A": "Purple snakes can add.",
+    "B": "Purple snakes are happy.",
+    "C": "Snakes that can add are purple.",
+    "D": "Happy snakes are not purple.",
+    "E": "Happy snakes can't subtract."
+   },
+   "answer": "D",
+   "solution": "We are given that\n\n$\\text{happy}\\Longrightarrow\\text{can add}, (1) $) \\\\\n$\\text{purple}\\Longrightarrow\\text{cannot subtract}, \\hspace{15mm} (2) $) \\\\\n$\\text{cannot subtract}\\Longrightarrow\\text{cannot add}$}. &(3)\n\nTwo solutions follow from here:",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 8,
+   "source": "2011 AMC 10B Problem 8",
+   "question": "At a certain beach if it is at least $80^{\\circ} F$ and sunny, then the beach will be crowded. On June 10 the beach was not crowded. What can be concluded about the weather conditions on June 10?",
+   "choices": {
+    "A": "$\\text{The temperature was cooler than } 80^{\\circ} \\text{F and it was not sunny.}$",
+    "B": "$\\text{The temperature was cooler than } 80^{\\circ} \\text{F or it was not sunny.}$",
+    "C": "$\\text{If the temperature was at least } 80^{\\circ} \\text{F, then it was sunny.}$",
+    "D": "$\\text{If the temperature was cooler than } 80^{\\circ} \\text{F, then it was sunny.}$",
+    "E": "$\\text{If the temperature was cooler than } 80^{\\circ} \\text{F, then it was not sunny.}$"
+   },
+   "answer": "B",
+   "solution": "The beach not being crowded only means that it is not both hot and sunny. Equivalently, it is either cool or cloudy, which means $\\boxed{\\textbf{(B)}}$ is correct.\n\nIt could be in fact cool and sunny, which would violate '''(A)''' and '''(E)'''. It could also be cool and cloudy, which would violate '''(D)''', or hot and cloudy, which would violate '''(C)'''.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 9,
+   "source": "2009 AMC 10A Problem 9",
+   "question": "Positive integers $a$, $b$, and $2009$, with $a<b<2009$, form a geometric sequence with an integer ratio. What is $a$?",
+   "choices": {
+    "A": "7",
+    "B": "41",
+    "C": "49",
+    "D": "289",
+    "E": "2009"
+   },
+   "answer": "B",
+   "solution": "The prime factorization of $2009$ is $2009 = 7\\cdot 7\\cdot 41$. As $a<b<2009$, the ratio must be positive and larger than $1$, hence there is only one possibility: the ratio must be $7$, and then $b=7\\cdot 41$, and $a=41\\Rightarrow\\fbox{B}$.\n\nWe know that this is important because the complete equation would be $a\\cdot x^2=2009,$ and the only possible outcome for $x$ is $7.$\n-Edited slightly by RealityWrites - minor $\\LaTeX$ edits by BS2012",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 10,
+   "source": "2024 AMC 10A Problem 10",
+   "question": "Consider the following operation. Given a positive integer $n$, if $n$ is a multiple of $3$, then you replace $n$ by $\\frac{n}{3}$. If $n$ is not a multiple of $3$, then you replace $n$ by $n+10$. Then continue this process. For example, beginning with $n=4$, this procedure gives $4 \\to 14 \\to 24 \\to 8 \\to 18 \\to 6 \\to 2 \\to 12 \\to \\cdots$. Suppose you start with $n=100$. What value results if you perform this operation exactly $100$ times?",
+   "choices": {
+    "A": "10",
+    "B": "20",
+    "C": "30",
+    "D": "40",
+    "E": "50"
+   },
+   "answer": "C",
+   "solution": "Let $s$ be the number of times the operation is performed. Notice the sequence goes $100 \\to 110 \\to 120 \\to 40 \\to 50 \\to 60 \\to 20 \\to 30 \\to 10 \\to 20 \\to \\cdots$. Thus, for $s \\equiv 1 \\pmod{3}$, the value is $30$. Since $100 \\equiv 1 \\pmod{3}$, the answer is $\\boxed{\\textbf{(C) }30}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 11,
+   "source": "2018 AMC 10B Problem 11",
+   "question": "Which of the following expressions is never a prime number when $p$ is a prime number?",
+   "choices": {
+    "A": "$p^2+16$",
+    "B": "$p^2+24$",
+    "C": "$p^2+26$",
+    "D": "$p^2+46$",
+    "E": "$p^2+96=Solution=$"
+   },
+   "answer": "C",
+   "solution": "Each expression is in the form $p^2 + n$.\n\nAll prime numbers are of the form $6k \\pm 1$, AKA they are congruent to $\\pm1 \\pmod{6}$. We can utilize this nicely to check for what we are looking for. If the expression is a prime, then\n\n$p^2 + n \\equiv \\pm1 \\pmod{6}$\n\n$\\Rightarrow (\\pm1)^2 + n \\equiv \\pm1 \\pmod{6}$\n\n$\\Rightarrow 1 + n \\equiv \\pm1 \\pmod{6}$\n\n$\\Rightarrow n \\equiv (\\pm1) - 1 \\pmod{6}$\n\n$\\Rightarrow n \\equiv (1$ $or$ $-1) - 1 \\pmod{6}$\n\n$\\Rightarrow n \\equiv 0$ $or$ $-2 \\pmod{6}$\n\nNow, just check for $n$ in each option using this condition to check whether its prime or not.\n\n$$(A)\\ n = 16; prime$$\n$$(B)\\ n = 24; prime$$\n$$(C)\\ n = 26; not\\ prime$$\n$$(D)\\ n = 46; prime$$\n$$(E)\\ n = 96; prime$$\n\nTherefore, the answer is $\\boxed{\\textbf{(C) } p^2 + 26}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 12,
+   "source": "2016 AMC 10A Problem 12",
+   "question": "Three distinct integers are selected at random between $1$ and $2016$, inclusive. Which of the following is a correct statement about the probability $p$ that the product of the three integers is odd?",
+   "choices": {
+    "A": "$p<\\dfrac{1}{8}$",
+    "B": "$p=\\dfrac{1}{8}$",
+    "C": "$\\dfrac{1}{8}<p<\\dfrac{1}{3}$",
+    "D": "$p=\\dfrac{1}{3}$",
+    "E": "$p>\\dfrac{1}{3}$"
+   },
+   "answer": "A",
+   "solution": "For the product to be odd, all three factors have to be odd. The probability of this is $\\frac{1008}{2016} \\cdot \\frac{1007}{2015} \\cdot \\frac{1006}{2014}$.\n\n$\\frac{1008}{2016} = \\frac{1}{2}$, but $\\frac{1007}{2015}$ and $\\frac{1006}{2014}$ are slightly less than $\\frac{1}{2}$. Thus, the whole product is slightly less than $\\frac{1}{2} \\cdot \\frac{1}{2} \\cdot \\frac{1}{2} = \\frac{1}{8}$, so $\\boxed{\\textbf{(A) }p<\\dfrac{1}{8}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 13,
+   "source": "2011 AMC 10B Problem 13",
+   "question": "Two real numbers are selected independently at random from the interval $[-20, 10]$. What is the probability that the product of those numbers is greater than zero?",
+   "choices": {
+    "A": "$\\frac{1}{9}$",
+    "B": "$\\frac{1}{3}$",
+    "C": "$\\frac{4}{9}$",
+    "D": "$\\frac{5}{9}$",
+    "E": "$\\frac{2}{3}$"
+   },
+   "answer": "D",
+   "solution": "For the product of two numbers to be greater than zero, they either have to both be negative or both be positive. The interval for a positive number is $\\frac{1}{3}$ of the total interval, and the interval for a negative number is $\\frac{2}{3}$. Therefore, the probability the product is greater than zero is\n$$\\frac{1}{3} \\times \\frac{1}{3} + \\frac{2}{3} \\times \\frac{2}{3} = \\frac{1}{9} + \\frac{4}{9} = \\boxed{\\textbf{(D)} \\frac{5}{9}}$$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 14,
+   "source": "2025 AMC 10B Problem 14",
+   "question": "Nine athletes, no two of whom are the same height, try out for the basketball team. One at a time, they draw a wristband at random, without replacement, from a bag containing 3 blue bands, 3 red bands, and 3 green bands. They are divided into a blue group, a red group, and a green group. The tallest member of each group is named the group captain. What is the probability that the group captains are the three tallest athletes?",
+   "choices": {
+    "A": "$\\dfrac{2}{9}$",
+    "B": "$\\dfrac{2}{7}$",
+    "C": "$\\dfrac{9}{28}$",
+    "D": "$\\dfrac{1}{3}$",
+    "E": "$\\dfrac{3}{8}$"
+   },
+   "answer": "C",
+   "solution": "Upon realizing that the denominator is a multiple of $7$, and that there are a bunch of $3$'s in the numerator (just do some C&P with the right logic that could even be a bit flawed) we can make an educated guess that the answer must be $\\boxed{\\textbf{(C) }\\frac{9}{28}}.$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 15,
+   "source": "2002 AMC 10B Problem 15",
+   "question": "The positive integers $A, B, A-B, $ and $A+B$ are all prime numbers. The sum of these four primes is",
+   "choices": {
+    "A": "$\\mathrm{even}$",
+    "B": "$\\mathrm{divisible\\ by\\ }3$",
+    "C": "$\\mathrm{divisible\\ by\\ }5$",
+    "D": "$\\mathrm{divisible\\ by\\ }7$",
+    "E": "$\\mathrm{prime}$"
+   },
+   "answer": "E",
+   "solution": "Trying out some primes for $A$ and $B$ such that $A-B$ and $A+B$ are prime, $A=5$ and $B=2$ can be found almost immediately. Summing the four primes, the result is $5+2+3+7=17$, which is $\\boxed{\\mathrm{(E)}\\ \\text{prime}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 16,
+   "source": "2018 AMC 10A Problem 16",
+   "question": "Right triangle $ABC$ has leg lengths $AB=20$ and $BC=21$. Including $\\overline{AB}$ and $\\overline{BC}$, how many line segments with integer length can be drawn from vertex $B$ to a point on hypotenuse $\\overline{AC}$?",
+   "choices": {
+    "A": "5",
+    "B": "8",
+    "C": "12",
+    "D": "13",
+    "E": "$15 \\qquad$"
+   },
+   "answer": "D",
+   "solution": "Through the Pythagorean theorem, we can get the hypotenuse is $29$, now we just need to find the range of what integers could be present in the triangle when connected from vertex $B$ to $AC$.\nWe know the shortest length from $AC$ to $B$ is the altitude of $AC$, which is $\\dfrac{20\\cdot  21}{29}$(about $14$). The max length is $21$ from the $BC$ side, which means there would probably be 8 numbers, including 14. Now for the $AB$, we know $AB$ has a length of $20$, excluding 14 that we have already included previously, we have 4 numbers.\n$$9+4 = \\boxed{(D) 13}$$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 17,
+   "source": "2022 AMC 10B Problem 17",
+   "question": "One of the following numbers is not divisible by any prime number less than $10.$ Which is it?",
+   "choices": {
+    "A": "$2^{606}-1$",
+    "B": "$2^{606}+1$",
+    "C": "$2^{607}-1$",
+    "D": "$2^{607}+1$",
+    "E": "$2^{607}+3^{607}$"
+   },
+   "answer": "C",
+   "solution": "For $\\textbf{(A)}$ modulo $3,$\n\n$2^{606} - 1  \\equiv (-1)^{606} - 1 $ \\\\\n$ \\equiv 1 - 1 $ \\\\\n$ \\equiv 0$0 .\n\nThus, $2^{606} - 1$ is divisible by $3.$\n\nFor $\\textbf{(B)}$ modulo $5,$\n\n$2^{606} + 1  \\equiv 2$^{{$\\rm Rem$} $( 606, \\phi(5) )$} $+ 1 $\\\\\n$ \\equiv 2$^{{$\\rm Rem$} ( 606, 4 )} $+ 1 $\\\\\n$ \\equiv 2^2 + 1 $ \\\\\n$ \\equiv 0$0 .\n\nThus, $2^{606} + 1$ is divisible by $5.$\n\nFor $\\textbf{(D)}$ modulo $3,$\n\n$2^{607} + 1  \\equiv (-1)^{607} + 1 $ \\\\\n$ \\equiv - 1 + 1 $ \\\\\n$ \\equiv 0$0 .\n\nThus, $2^{607} + 1$ is divisible by $3.$\n\nFor $\\textbf{(E)}$ modulo $5,$\n\n$2^{607} + 3^{607}$\n$ \\equiv 2^{607} + (-2)^{607} $ \\\\\n$ \\equiv 2^{607} - 2^{607} $ \\\\\n$ \\equiv 0$0 .\n\nThus, $2^{607} + 3^{607}$ is divisible by $5.$\n\nTherefore, the answer is $\\boxed{\\textbf{(C) }2^{607} - 1}.$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 18,
+   "source": "2005 AMC 10B Problem 18",
+   "question": "All of David's telephone numbers have the form $555-abc-defg$, where $a$, $b$, $c$, $d$, $e$, $f$, and $g$ are distinct digits and in increasing order, and none is either $0$ or $1$. How many different telephone numbers can David have?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "The only digits available to use in the phone number are $2$, $3$, $4$, $5$, $6$, $7$, $8$, and $9$. There are only $7$ spots left among the $8$ numbers, so we need to find the number of ways to choose $7$ numbers from $8$. The answer is then $\\dbinom{8}{7}=\\dfrac{8!}{7!\\,(8-7)!}=\\boxed{\\textbf{(D) } 8}$\n\nAlternatively, we could just choose $1$ out of the $8$ numbers not to be used. There are obviously $\\boxed{8}$ ways to do so.\n\nNote: for each combination of 7 numbers, exactly 1 is in increasing order -Williamgolly",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 19,
+   "source": "2006 AMC 10A Problem 19",
+   "question": "How many non-similar triangles have angles whose degree measures are distinct positive integers in arithmetic progression?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "59",
+    "D": "89",
+    "E": "178"
+   },
+   "answer": "C",
+   "solution": "The sum of the angles of a triangle is $180$ degrees. For an arithmetic progression with an odd number of terms, the middle term is equal to the average of the sum of all of the terms, making it $\\frac{180}{3} = 60$ degrees. The minimum possible value for the smallest angle is $1$ and the highest possible is $59$ (since the numbers are distinct), so there are $\\boxed{\\textbf{(C) }59}$ possibilities.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 20,
+   "source": "2024 AMC 10A Problem 20",
+   "question": "Let $S$ be a subset of $\\{1, 2, 3, \\dots, 2024\\}$ such that the following two conditions hold:\n\n*If $x$ and $y$ are distinct elements of $S$, then $|x-y| > 2.$\n\n*If $x$ and $y$ are distinct odd elements of $S$, then $|x-y| > 6.$\n\nWhat is the maximum possible number of elements in $S$?",
+   "choices": {
+    "A": "436",
+    "B": "506",
+    "C": "608",
+    "D": "654",
+    "E": "675"
+   },
+   "answer": "C",
+   "solution": "All lists are organized in ascending order:\n\nBy listing out the smallest possible elements of subset $S,$ we can find that subset $S$ starts with $\\{1, 4, 8, 11, 14, 18, 21, 24, 28, 31, \\dots\\}.$ It is easily noticed that the elements of the subset \"loop around\" every 3 elements, specifically adding 10 each time. This means that there will be $2024/10$ or $202R4$ whole loops in the subset $S,$ implying that there will be $202*3 = 606$ elements in S. However, we have undercounted, as we did not count the remainder that resulted from 2024/10\\$ .$ With a remainder of $4,$ we can fit $2$ more elements into the subset $S,$ namely $2021$ and $2024,$ resulting in a total of $606+2$ or $\\boxed{\\textbf{(C) }608}$ elements in subset $S$.\n\n'''NOTE:'''\n\nTo prove that this is the best we can do, consider adding each element one by one, for the first element, say n. If $n>2$, we can choose $n - 2$ which is always better. Therefore, $n = 1$ or $n = 2.$ \n\nIf $n = 2$ was optimal, then choose it, then the set of usable numbers in $S$ becomes 5 through 2024. We can transform the usable set of $S$ to $Q$ where $Q$ contains the numbers 1 through 2020. Because we assumed $n = 2$ was optimal, we can choose $n = 2$ for the set $Q$ too. Because every element in $Q$ is 4 below the elements of $S$, choosing 2 in $Q$ would mean choosing 6 in set $S$. By induction we see that our list would be $\\{2,6,10,14,18,.....2022\\}$ which only gives $506$ elements which is sub-optimal. Therefore, we can conclude that $$n = 1\\$$ is optimal, and we proceed as the solution above.\n\n-weihou0\n\n- minor latex edits by eqb5000",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 21,
+   "source": "2010 AMC 10A Problem 21",
+   "question": "The polynomial $x^3-ax^2+bx-2010$ has three positive integer roots. What is the smallest possible value of $a$?",
+   "choices": {
+    "A": "78",
+    "B": "88",
+    "C": "98",
+    "D": "108",
+    "E": "118"
+   },
+   "answer": "A",
+   "solution": "By Vieta's Formulas, we know that $a$ is the sum of the three roots of the polynomial $x^3-ax^2+bx-2010$. Again Vieta's Formulas tell us that $2010$ is the product of the three integer roots. Also, $2010$ factors into $2\\cdot3\\cdot5\\cdot67$. But, since the polynomial has only three roots, two of the four prime factors must be multiplied so that we are left with three roots. To minimize $a$, $2$ and $3$ should be multiplied, which means $a$ will be $6+5+67=78$ and the answer is $\\boxed{\\textbf{(A)78}}$.\n\nNote:\n\nIf you are feeling unconfident about $78$, you can try to expand the expression $(x-5)(x-6)(x-67)$ which has roots $5$, $6$, and $67$.\n$$(x-5)(x-6)(x-67)=(x^{2}-11x+30)(x-67)$$\n$$=x\\left(x^{2}-11x+30\\right)-67\\left(x^{2}-11x+30\\right)=x^{3}-11x^{2}+30x-67x^{2}+737x-2010=x^{3}-78x^{2}+767x-2010$$\n\nAs we can see, $a=78$, and since this is the least answer choice, we can be confident that the right option is $\\boxed{\\textbf{(A) } 78}$.\n\nWe can expand $(x+a)(x+b)(x+c)$ as $(x+a)(x+b)(x+c) = (x^2+ax+bx+ab)(x+c) $ \\\\\n$= x^3+abx+acx+bcx+abx^2+acx^2+bcx^2+abc $ \\\\\n$= x^3+x^2(a+b+c)+x(ab+ac+bc)+abc$c \n\nWe do not care about $+bx$ in this case, because we are only looking for $a$.  We know that the constant term is $-2010=-(2\\cdot 3\\cdot 5\\cdot 67)$\nWe are trying to minimize a, such that we have $-ax^2$\nSince we have three positive solutions, we have $(x-a)(x-b)(x-c)$ as our factors.  We have to combine two of the factors of $2\\cdot 3\\cdot 5\\cdot 67$, and then sum up the $3$ resulting factors.  Since we are minimizing, we choose $2$ and $3$ to combine together.  We get $(x-6)(x-5)(x-67)$ which gives us a coefficient of $x^2$ of $-6-5-67=-78$\nTherefore $-a=-78$ or $a=\\boxed{\\textbf{(A)}78}$\n\nWe want the polynomial $x^3-ax^2+bx-2010$ to have POSITIVE integer roots. That means we want to factor it in to the form $(x-a)(x-b)(x-c).$ We therefore want the prime factorization for $2010$. The prime factorization of $2010$ is $2 \\cdot 3 \\cdot 5 \\cdot 67$. We want the smallest difference of the $3$ roots since by Vieta's Formulas, $a$ is the sum of the $3$ roots.\n\nWe proceed to factorize it in to $(x-5)(x-6)(x-67)$. Therefore, our answer is $5+6+67$ = $\\boxed{\\textbf{(A)78}}$.\n\nSuggestion for the author: The variables $a$ and $b$ are already defined as coefficients of the cubic polynomial. So, consider using different variables when describing how we want to factor this polynomial in the second sentence. Thanks!",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 22,
+   "source": "2002 AMC 10P Problem 22",
+   "question": "In how many zeroes does the number $\\frac{2002!}{(1001!)^2}$ end?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "200",
+    "E": "400"
+   },
+   "answer": "B",
+   "solution": "We can solve this problem with an application of Legendre's Formula. \n\nWe know that there will be an abundance of factors of $2$ compared to factors of $5,$ so finding the amount of factors of $5$ is equivalent to finding how many factors of $10$ there are, which is equivalent to how many zeroes there are at the end of the number. Additionally, squaring a number will multiply the exponent of each factor by $2.$ Therefore, we plug in $p=5$ and $n=2002,$ then plug in $p=5$ and $n=1001$ and multiply by $2$ in:\n\n$$e_p(n!)=\\sum_{i=1}^{\\infty} \\left\\lfloor \\dfrac{n}{p^i}\\right\\rfloor =\\frac{n-S_{p}(n)}{p-1}$$\n\nAs such,\n\n\n$e_5(2002$!$)=\\left\\lfloor\\frac{2002}{5}\\right\\rfloor+\\left\\lfloor\\frac{2002}{5^2}\\right\\rfloor+\\left\\lfloor\\frac {2002}{5^3}\\right\\rfloor+\\left\\lfloor\\frac{2002}{5^4}\\right\\rfloor$r\\\\\n$=400+80+16+3 $ \\\\\n=&499\n\n\nor alternatively,\n\n$e_5(2002!)=\\frac{2002-S_5(2002)}{5-1}=\\frac{2002-S_5(31002_5)]}{4}=\\frac{2002-6}{4}=499.$\n\nSimilarly, \n\n\n$e_5(1001$!$)=\\left\\lfloor\\frac{1001}{5}\\right\\rfloor+\\left\\lfloor\\frac{1001}{5^2}\\right\\rfloor+\\left\\lfloor\\frac {1001}{5^3}\\right\\rfloor+\\left\\lfloor\\frac{1001}{5^4}\\right\\rfloor$r\\\\\n$=200+40+8+1 $ \\\\\n=&249\n\n\nor alternatively,\n\n$e_5(1001!)=\\frac{1001-S_5(1001)}{5-1}=\\frac{1001-S_5(13001_5)]}{4}=\\frac{1001-5}{4}=249.$\n\nIn any case, our answer is $499-2(249)= \\boxed{\\textbf{(B) } 1}.$",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 23,
+   "source": "2023 AMC 10B Problem 23",
+   "question": "An arithmetic sequence of positive integers has $n \\ge 3$ terms, initial term $a$, and common difference $d > 1$. Carl wrote down all the terms in this sequence correctly except for one term, which was off by $1$. The sum of the terms he wrote was $222$. What is $a + d + n$?",
+   "choices": {
+    "A": "24",
+    "B": "20",
+    "C": "22",
+    "D": "28",
+    "E": "26"
+   },
+   "answer": "B",
+   "solution": "Since one of the terms was either $1$  more or $1$ less than it should have been, the sum should have been $222-1=221$ or $222+1=223.$ \n\nThe formula for an arithmetic series is $an+d\\left(\\dfrac{(n-1)n}2\\right)=\\dfrac n2\\left(2a+d(n-1)\\right).$ This can quickly be rederived by noticing that the sequence goes $a,a+d,a+2d,a+3d,\\dots,a+(n-1)d$, and grouping terms. \n\nWe know that $\\dfrac n2(2a+d(n-1))=221$ or $223$. Let us now show that $223$ is not possible. \n\nIf $\\dfrac n2(2a+d(n-1))=223$, we can simplify this to be $n(2a+d(n-1))=223\\cdot2.$ Since every expression here should be an integer, we know that either $n=2$ and $2a+d(n-1)=223$ or $n=223$ and $2a+d(n-1)=2.$ The latter is not possible, since $n\\ge3,d>1,$ and $a>0.$ The former is also impossible, as $n\\ge3.$ Thus, $\\dfrac n2(2a+d(n-1))\\neq223\\implies\\dfrac n2(2a+d(n-1))=221$. \n\n(Alternatively, we have $S=mn$ with $n$ terms and arithmetic mean $m$, and $223=mn$ does not satisfy both $m > 1$ and $n > 1$ because it is prime.)\n\nWe can factor $221$ as $13\\cdot17$. Using similar reasoning, we see that $221\\cdot2$ cannot be paired as $2$ and $221$, but rather must be paired as $13$ and $17$ with a factor of $2$ somewhere. \n\nLet us first try $n=13.$ Our equation simplifies to $2a+12d=34\\implies a+6d=17.$ We know that $d>1,$ so we try the smallest possible value: $d=2.$ This would give us $a=17-2\\cdot6=17-12=5.$ (Indeed, this is the only possible $d$.)\n\nThere is nothing wrong with the values we have achieved, so it is reasonable to assume that this is the only valid solution (or all solutions sum to the same thing), so we answer $a+d+n=5+2+13=\\boxed{\\textbf{(B) }20.}$ \n\nFor the sake of completeness, we can explore $n=17.$ It turns out that we reach a contradiction in this case, so we are done.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 24,
+   "source": "2013 AMC 10B Problem 24",
+   "question": "A positive integer $n$ is ''nice'' if there is a positive integer $m$ with exactly four positive divisors (including $1$ and $m$) such that the sum of the four divisors is equal to $n$. How many numbers in the set $\\{ 2010,2011,2012,\\dotsc,2019 \\}$ are nice?",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "A",
+   "solution": "A positive integer with only four positive divisors has its prime factorization in the form of $a \\cdot b$, where $a$ and $b$ are both prime positive integers or $c^3$ where $c$ is a prime. One can easily deduce that none of the numbers are even near a cube so the second case is not possible. We now look at the case of $a \\cdot b$. The four factors of this number would be $1$, $a$, $b$, and $ab$.  The sum of these would be $ab+a+b+1$, which can be factored into the form $(a+1)(b+1)$. Easily we can see that now we can take cases again. \n\nCase 1: Either $a$ or $b$ is 2. \n\nIf this is true then we have to have that one of $(a+1)$ or $(b+1)$ is odd and that one is 3. The other is still even.  So we have that in this case the only numbers that work are even multiples of 3 which are 2010 and 2016. So we just have to check if either $\\frac{2016}{3} - 1$  or $\\frac{2010}{3} - 1$ is a prime. We see that in this case none of them work.\n\nCase 2: Both $a$ and $b$ are odd primes. \n\nThis implies that both $(a+1)$ and $(b+1)$ are even which implies that in this case the number must be divisible by $4$. This leaves only $2012$ and $2016$.\n$2012={4}\\cdot{503}$ so either $(a+1)$ or $(b+1)$ both have a factor of $2$ or one has a factor of $4$ since $503$ is prime. If it was the first case, then $a$ or $b$ will equal $1$.  That means that either $(a+1)$ or $(b+1)$ has a factor of $4$.  That means that $a$ or $b$ is $502$ which isn't a prime, so 2012 does not work.  $2016 = 4 \\cdot 504$ so we have $(503 + 1)(3 + 1)$. 503 and 3 are both odd primes, so 2016 is a solution. Thus the answer is $\\boxed{\\textbf{(A)}\\ 1}$.\n\nAfter deducing that $2012$ and case $1$ is impossible, and since there is no option for $0$, $2016$ is obviously a solution and the answer is $\\boxed{\\textbf{(A)}\\ 1}$.\n\n-mathboy282",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 25,
+   "source": "2005 AMC 10B Problem 25",
+   "question": "A subset $B$ of the set of integers from $1$ to $100$, inclusive, has the property that no two elements of $B$ sum to $125$. What is the maximum possible number of elements in $B$?",
+   "choices": {
+    "A": "50",
+    "B": "51",
+    "C": "62",
+    "D": "65",
+    "E": "68"
+   },
+   "answer": "C",
+   "solution": "The question asks for the maximum possible number of elements. The integers from $1$ to $24$ can be included because you cannot make $125$ with integers from $1$ to $24$ without the other number being greater than $100$. The integers from $25$ to $100$ are left. They can be paired so the sum is $125$: $25+100$, $26+99$, $27+98$, $\\ldots$, $62+63$. That is $38$ pairs, and at most one number from each pair can be included in the set. The total is $24 + 38 = \\boxed{\\textbf{(C)}\\ 62}$.\n\nAlso, it is possible to see that since the numbers $1$ to $24$ are in the set there are only the numbers $25$ to $100$ to consider. As $62+63$ gives $125$, the numbers $25$ to $62$ can be put in subset $B$ without having two numbers add up to $125$. In this way, subset $B$ will have the numbers $1$ to $62$, and so the answer is $\\boxed{\\textbf{(C)}\\ 62}$.\n\nSince there are $38$ numbers that sum to $125$, there are $100-38=62$ numbers not summing to $125.$",
+   "type": "multiple_choice",
+   "points": 6
+  }
+ ]
+}

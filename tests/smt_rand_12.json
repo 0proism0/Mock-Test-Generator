@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_12",
+ "competition": "SMT — Discrete",
+ "category": "Math",
+ "title": "SMT — Discrete — Random Mock #12 · 2026-08-26 16:33",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2019 SMT Discrete Problem 1",
+   "question": "How many nonnegative integers less than 2019 are not solutions to x8 + 4x6 − x2 + 3 ≡ 0 (mod 7)?",
+   "choices": null,
+   "answer": "289",
+   "solution": "Answer: 289. How many nonnegative integers less than 2019 are not solutions to x8 + 4x6−x2 + 3≡ 0 (mod 7)? Answer: 289 Solution: We know that x is a solution to x8 + 4x6−x2 + 3≡ 0 (mod 7) if x (mod 7) is. Thus, we only need to test the numbers 0 through 6. Alternatively, we can factor our polynomial as x8 + 4x6−x2 + 3≡x8 + 4x6−x2− 4≡ (x6− 1)(x2 + 4) (mod 7) Then since 7 is prime, by Fermat’s Little Theorem, 1 , 2, 3, 4, 5, 6 all satisfy x6− 1. Hence, the only numbers that are not solutions are multiples of 7. Thus, the number of multiples of 7 from 0 to 2019 is 1 + ⌊ 2019 7 ⌋ = 289 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2023 SMT Discrete Problem 2",
+   "question": "A 3 × 3 grid is to be painted with three colors (red, green, and blue) such that (i) no two squares that share an edge are the same color and (ii) no two corner squares on the same edge of the grid have the same color. As an example, the upper-left and bottom-left squares cannot both be red, as that would violate condition (ii). In how many ways can this be done? (Rotations and reflections are considered distinct colorings.)",
+   "choices": null,
+   "answer": "24",
+   "solution": "Answer: 24. A 3 × 3 grid is to be painted with three colors (red, green, and blue) such that (i) no two squares that share an edge are the same color and (ii) no two corner squares on the same edge of the grid have the same color. As an example, the upper-left and bottom-left squares cannot both be red, as that would violate condition (ii). In how many ways can this be done? (Rotations and reflections are considered distinct colorings.) Answer: 24 Solution: Let A be the upper-left corner and let the other corners be B, C, and D in counter- clockwise order. Now, let a denote the color on A. Then if the corners adjacent to A have the same color, say b, the last corner has color a or c̸= a, b. In the first case, the squares between A and B, B and C, C and D, D and A are determined to be of color c, while the center square still has 2 options ( a or b). In the second case, corner C is of color c, while every other square gets uniquely determined. Now, in the last case, the corners adjacent to A are of different colors b, c (WLOG b at corner B and c at corner D), implying the last corner has color a and all the remaining squares are determined. Thus, for a fixed triplet ( a, b, c), there are a total of 2 + 1 + 1 = 4 different configurations of colors. As there are 3! = 6 ways to determine ( a, b, c), the answer is 6· 4 = 24 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2023 SMT Discrete Problem 3",
+   "question": "How many trailing zeros does the value 300· 305· 310··· 1090· 1095· 1100 end with?",
+   "choices": null,
+   "answer": "161",
+   "solution": "Answer: 161. How many trailing zeros does the value 300· 305· 310··· 1090· 1095· 1100 end with? Answer: 161 Solution: Rewrite the expression as 300· 305· 310··· 1090· 1095· 1100 = 5161· 220! 59! . By Legendre’s formula, there are \u001659 5 \u0017 + \u001659 25 \u0017 = 13 Discrete Test Solutions April 8, 2023 factors of 5 in 59! and \u001659 2 \u0017 + \u001659 4 \u0017 + \u001659 8 \u0017 + \u001659 16 \u0017 + \u001659 32 \u0017 = 54 factors of 2 in 59!. Morever, there are \u0016220 5 \u0017 + \u0016220 25 \u0017 + \u0016220 125 \u0017 = 53 factors of 5 in 220! and \u0016220 2 \u0017 + \u0016220 4 \u0017 + \u0016220 8 \u0017 + \u0016220 16 \u0017 + \u0016220 32 \u0017 + \u0016220 64 \u0017 + \u0016220 128 \u0017 = 215 factors of 2 in 220!. Thus there are 161 + 53− 13 = 201 factors of 5 in the product and 215− 54 = 161 factors of 2 in the product. Since 161 < 201, it follows the answer is 161 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2018 SMT Discrete Problem 4",
+   "question": "One of the six digits in the expression 435 · 605 can be changed so that the product is a perfect square N 2. Compute N.",
+   "choices": null,
+   "answer": "495",
+   "solution": "Answer: 495. One of the six digits in the expression 435 · 605 can be changed so that the product is a perfect square N 2. Compute N. Answer: 495 Solution: We ﬁrst factorize 435 = 3· 5· 29 and 605 = 5· 112. First, suppose that we change 605. In this case, we could change it to be of the form (3 · 5· 29)k2 for some positive integer k. If k = 1, we clearly cannot change 605 to 435 by only modifying a single digit, and if k≥ 2, then this number would have more than 4 digits. SMT 2018 Discrete Math Test Solutions February 17, 2018 Therefore, we must change 435 so that it is of the form 5 k2. It must be divisible by 5, so the last digit must be 0 or 5. If we change the last digit to a 0, then we have 430 = 5 k2 =⇒ k2 = 86, which is not a perfect square. Therefore, the last digit must remain a 5, which also implies that k must be odd. Computing 5 k2 for small odd values of k gives us the three digit numbers 125, 245, 405, 605, and 845. The only number that can be formed by changing a single digit of 435 is 405 = 3 4· 5, so we have N 2 = 405· 605 = 34· 52· 112. Taking the square root gives us the answer N = 32· 5· 11 = 495 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2019 SMT Discrete Problem 5",
+   "question": "Let S(n) denote the sum of the digits of positive integers n. For some positive integer k, it is known that S(k) = 152 and that S(k + 1) is a multiple of 5. What is the diﬀerence between the largest and smallest possible values of S(k + 1)?",
+   "choices": null,
+   "answer": "90",
+   "solution": "Answer: 90. Let S(n) denote the sum of the digits of positive integers n. For some positive integer k, it is known that S(k) = 152 and that S(k + 1) is a multiple of 5. What is the diﬀerence between the largest and smallest possible values of S(k + 1)? Answer: 90 Solution: Let us denote k = n∑ i=0 10iai, k + 1 = n′ ∑ i=0 10ia′ i where aj,a′ j ∈{ 0, 1,..., 9}, and n + 1 and n′ + 1 are the number of digits in k and k + 1 respectively. Consider the case where the last m digits of k be all equal to 9, i.e. a0 =a1 = ... = am−1 = 9, and am < 9. Then we have a′ 0 = a′ 1 = ... = a′ m−1 = 0,a′ m = am + 1. This gives us S(k + 1) = S(k)− 9m + 1 = 153− 9m. Since these cases span all possible values of k, S(k + 1) is necessarily a value of this form. Using the fact that 5 |S(k + 1), we identify that the largest possible value of S(k + 1) is 135 (m = 2), and the smallest possible value is 45 (m = 12). Thus, we have the diﬀerence between the largest and smallest possible values is 135− 45 = 90 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2019 SMT Discrete Problem 6",
+   "question": "The numbers 1 , 2, ...,13 are written down, one at a time, in a random order. What is the probability that at no time during this process the sum of all written numbers is divisible by 3?",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. The numbers 1 , 2,..., 13 are written down, one at a time, in a random order. What is the probability that at no time during this process the sum of all written numbers is divisible by 3? Answer: 1 182 Solution: Since we only care about divisibility by 3, we can consider this list mod 3, i.e. {1, 2, 0,..., 1}. With the exception of the ﬁrst slot, the 0 mod 3 elements can be inserted anywhere without changing the partial sum mod 3. Using this list, it is clear that the only way the other elements can be ordered is {1, 1, 2, 1, 2, 1, 2, 1, 2}. There are 5!4! ways to SMT 2019 Discrete Math Test Solutions March 2, 2019 arrange the 5 elements that are 1 mod 3 and the 4 elements that are 2 mod 3 in this manner. Then, there are 9 spots to insert “3” in this list, 10 for “6”, and so on. Thus, the probability that any given arrangement is of the desired form is 5!4!· 9· 10· 11· 12 13! = 1 182",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2022 SMT Discrete Problem 7",
+   "question": "Let n0 be the product of the first 25 primes. Now, choose a random divisor n1 of n0, where a choice n1 is taken with probability proportional to φ(n1). (φ(m) is the number of integers less than m which are relatively prime tom.) Given this n1, we let n2 be a random divisor ofn1, again chosen with probability proportional to φ(n2). Compute the probability that n2≡ 0 mod 2310.",
+   "choices": null,
+   "answer": "256",
+   "solution": "Answer: 256. Let n0 be the product of the first 25 primes. Now, choose a random divisor n1 of n0, where a choice n1 is taken with probability proportional to φ(n1). (φ(m) is the number of integers less than m which are relatively prime tom.) Given this n1, we let n2 be a random divisor ofn1, again chosen with probability proportional to φ(n2). Compute the probability that n2≡ 0 mod 2310. Answer: 256 5929 Solution: First, we show that P d|n φ(d) = n. This is true for all n, but we’ll only show it for squarefree n for simplicity. We proceed by induction (all divisors of a squarefreen are themselves squarefree). For any prime p, φ(p) + φ(1) = p. Now, suppose that n = p· n′. Then, we may pair up divisors of n via (d, p· d) with d| n′. So, X d|n φ(d) = X d|n′ φ(d) + φ(p· d) = X d|n′ (1 + (p− 1))φ(d) = pn′ = n as desired. We used that φ(ab) = φ(a)· φ(b) if gcd( a, b) = 1. As a note, to prove the general case, we strengthen the statement to prime powers and strengthen pairs to tuples of divisors. This means that each choice of n1 actually happens with probability φ(n1) n0 , and each choice of n2 happens with probability φ(n2) n1 given a specific n1. To begin, let’s compute the probability that n1≡ 0 mod 2310. Let m = n0 2310. We will need that φ is a multiplicative function: that is, if gcd( m, n) = 1 then φ(mn) = φ(m)φ(n). SMT 2022 Discrete Test Solutions April 16–17, 2022 Then, the probability of getting n1 = 2310d for d a specific divisor of m is exactly φ(2310d) n0 = φ(2310)φ(d) 2310m = φ(2310) 2310 · φ(d) m . So, summing over all choices of d means that the probability that 2310 divides n1 is X d|m φ(2310) 2310 · φ(d) m = φ(2310) 2310 . We’ve finished one step, so what remains is to repeat it. In particular, note that we didn’t care much about what n0 was: all that mattered was that n0 was squarefree and n≡ 0 mod 2310. So, conditioned on n1≡ 0 mod 2310, it follows that the probability that n2≡ 0 mod 2310 is also φ(2310) 2310 . Therefore, our answer is (probability n2≡ 0 mod 2310) =(probability n1≡ 0 mod 2310) · (probability n2≡ 0 mod 2310 given n1≡ 0 mod 2310) = \u0012 φ(2310) 2310 \u00132 = \u00121· 2· 4· 6· 10 2· 3· 5· 7· 11 \u00132 = \u001216 77 \u00132 = 256 5929",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2019 SMT Discrete Problem 8",
+   "question": "Let Sn = ∑n j=1 j3. Find the smallest positive integer n greater than 100 such that the ﬁrst three digits of Sn are 100.",
+   "choices": null,
+   "answer": "141",
+   "solution": "Answer: 141. Let Sn =∑n j=1j3. Find the smallest positive integer n greater than 100 such that the ﬁrst three digits of Sn are 100. Answer: 141 Solution: We know that Sn = ∑n j=1j3 = ( n(n+1) 2 )2 and we want the smallest positive integer n such that Sn begins in 100. Let ( n(n + 1)/2)2≥ 10k for some positive integer k. Rearranging, we get n2 +n≥ 2· 10k/2, and solving for n gives n≥ 1 2(−1 + √ 8· 10k/2) =√ 2· 10k/2− 1/2. Additionally, n≥ 100 which means that k≥ 8. Using this value, the smallest possible n is n≥ √ 2· 104− 1/2≥ 140. It is clear that n = 140 does not work, but S141 = (141·71)2 = 100112 = 100220121. Therefore, the smallest possible value isn = 141 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2023 SMT Discrete Problem 9",
+   "question": "Suppose a and b are positive integers with a curious property: ( a3− 3ab + 1 2)n + (b3 + 1 2)n is an integer for at least 3, but at most finitely many different choices of positive integers n. What is the least possible value of a + b?",
+   "choices": null,
+   "answer": "6",
+   "solution": "Answer: 6. Suppose a and b are positive integers with a curious property: ( a3− 3ab + 1 2)n + (b3 + 1 2)n is an integer for at least 3, but at most finitely many different choices of positive integers n. What is the least possible value of a + b? Answer: 6 Solution: Observe that the condition ( a3− 3ab + 1 2)n + (b3 + 1 2)n being an integer is equivalent to (2a3− 6ab + 1)n + (2b3 + 1)n being divisible by 2 n. If n is even, both powers are equal to 1 modulo 4, so the expression is never divisible by 4, contradiction. Discrete Test Solutions April 8, 2023 Meanwhile if n is odd, we can factor out (2a3−6ab+1)+(2 b3+1) from the expression. The other factor is a sum of n odd numbers, thus is odd. We thus demand that (2a3−6ab+1)+(2 b3 +1) = 2(a3 + b3 + 1− 3ab) be divisible by at least 3, but at most finitely many odd powers of 2. If 2n| 2(a3 + b3 + 1− 3ab), of course all powers of 2 less than n also divide 2(a3 + b3 + 1− 3ab). So it suffices to make ( a3 + b3 + 1− 3ab) divisible by 16 (which would mean that 2 , 8, 32 divide 2(a3 + b3 + 1− 3ab)), but nonzero (if the expression is equal to zero, which is the case when (a, b) = (1, 1), an infinite number of powers of 2 will divide it). Factoring, ( a3 + b3 + 1− 3ab) = (a + b + 1)(a2 + b2 + 1− ab− a− b). Because a2− a, b2− b are always even, (a2 + b2 +1− ab− a− b) is even iff ab−1 is even iff a, b are both odd, in which case a+ b+ 1 is odd. So, either 16| a+ b+ 1, or 16| (a2 + b2 + 1− ab− a− b). In the former case, we have a+ b at least 15. In the latter case, setting a = 1 and experimenting, we see that (a, b) = (1, 5) is a valid pair, whereas any pair with smaller sum will not work. Thus 1 + 5 = 6 is the solution desired.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2023 SMT Discrete Problem 10",
+   "question": "Colin has a peculiar 12-sided dice: it is made up of two regular hexagonal pyramids. Colin wants to paint each face one of three colors so that no two adjacent faces on the same pyramid have the same color. How many ways can he do this? Two paintings are considered identical if there is a way to rotate or flip the dice to go from one to the other. Faces are adjacent if they share an edge.",
+   "choices": null,
+   "answer": "405",
+   "solution": "Answer: 405. Colin has a peculiar 12-sided dice: it is made up of two regular hexagonal pyramids. Colin wants to paint each face one of three colors so that no two adjacent faces on the same pyramid have the same color. How many ways can he do this? Two paintings are considered identical if there is a way to rotate or flip the dice to go from one to the other. Faces are adjacent if they share an edge. Answer: 405 Solution: Consider how we can rotate the dice. We can rotate either about the axis containing the vertices with six faces adjoining them, or around one of the vertices with four faces. Note that doing two rotations about the “central” vertices is equivalent to doing none, and rotations are just reversed when in a rotated state. Furthermore, the flip operation is a central rotation combined with three top rotations. Hence, there are 12 symmetries. Let G be the set of these symmetries and for each g∈ G, let f(g) the number of ways to draw on the faces such that applying g does nothing (for example, if g is a rotation by one face, then f(g) is 0 since it would imply two adjacent faces are equal). By Burnside’s Lemma, the answer then is 1 12 P g∈G f(g). For convenience, label the top pyramid as having faces a1, a2, . . . , a6 and the bottom pyramid as having b1, b2, . . . , b6. Let c(x) be the color of the face x. With this in mind, let’s compute f(g) for each g. First, we look at the symmetries with no flips (that is, just rotations). As stated previously, if the rotation is by 1 or 5 then f(g) is 0 since Discrete Test Solutions April 8, 2023 two adjacent faces will be equal. Next, consider a rotation by 2 or 4. These imply that every other face in each of the pyramids is equal. Therefore, there are (3 · 2)2 = 36 possible colorings. Next, let’s look at a rotation by 3. Then, c(a1), c(a2), c(a3) must all be distinct. There are again (3!)2 = 36 possible colorings. Finally, among the rotations the final case is no rotation (that is, the identity symmetry). In this case, each of the pyramids must have no two adjacent faces having the same color (with no other restrictions). Let f(n) be the number of ways to do this if the pyramid had n faces instead of just 6. If c(a1)̸= c(an−1), then we c(an) has only one possibility. If c(a1) = c(an−1), then c(a1)̸= c(an−2) and there are two possible assignments for c(an), c(an−1). Hence, f(n) = f(n− 1) + 2f(n− 2). With the base cases f(2) = 6, f(3) = 6, we can quickly compute f(4) = 18, f(5) = 30, f(6) = 66 (alternatively, one can compute f(n) = 2n + 2· (−1)n). Hence, this case gives 66 2 = 4356. Now, consider each of the flip symmetries. In fact, each of these contribute 66: for example, just a flip implies that a1 = b4, a2 = b3, a3 = b2, a4 = b1, a5 = b6, a6 = b5. Hence, the two colorings must be identical up to reflection and translation. Therefore, our answer is 1 12 (36· 2 + 36 + 4356 + 66· 6) = 405 .",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

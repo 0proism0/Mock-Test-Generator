@@ -1,0 +1,261 @@
+{
+ "id": "smt_rand_02",
+ "competition": "SMT — General",
+ "category": "Math",
+ "title": "SMT — General — Random Mock #2 · 2026-08-26 16:33",
+ "instructions": "25 questions · 110 minutes · No calculator. 25 points total.",
+ "time_limit_min": 110,
+ "total_points": 25,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2011 SMT General Problem 1",
+   "question": "Let F (x) be a real-valued function deﬁned for all real x⁄= 0, 1 such that F (x) + F ( x− 1 x ) = 1 + x. Find F (2).",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Let F (x) be a real-valued function deﬁned for all real x⁄= 0, 1 such that F (x) +F (x− 1 x ) = 1 +x. Find F (2). Answer: 3 4 Setting x = 2, we ﬁnd that F (2) +F ( 1 2 ) = 3. Now take x = 1 2, to get that F ( 1 2 ) +F (−1) = 3",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2018 SMT General Problem 2",
+   "question": "Maddy also has a gumball in the shape of a sphere with the same volume as her chocolate coin. What is the radius of her gumball?",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Maddy also has a gumball in the shape of a sphere with the same volume as her chocolate coin. What is the radius of her gumball? Answer: 3 2 Solution: Recall that the volume of a cylinder with height h and radius r is V = πr2h. Likewise, the volume of a sphere with radius r is V = 4 3πr3. Therefore, the volume of the chocolate coin is π· 32· 1 2 = 9π 2 . If Maddy’s gumball has radius r, we get the equation 9π 2 = 4 3πr3. Solving for r gives us the answer r = 3 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2021 SMT General Problem 3",
+   "question": "A rectangular pool has diagonal 17 units and area 120 units2. What is the perimeter of the pool?",
+   "choices": null,
+   "answer": "46",
+   "solution": "Answer: 46. A rectangular pool has diagonal 17 units and area 120 units2. What is the perimeter of the pool? Answer: 46 Solution: Let l be the length of the pool and let w be the width of the pool. We can solve that (l +w)2 = (l2 +w2) + 2lw = 529 = 232. Then, the perimeter of the pool is 2*23 = 46 units.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2014 SMT General Problem 4",
+   "question": "The analog clock in front of you displays the time 3:40. Compute the number of degrees in the smaller angle formed by the minute hand and the hour hand of the clock.",
+   "choices": null,
+   "answer": "130",
+   "solution": "Answer: 130. The analog clock in front of you displays the time 3:40. Compute the number of degrees in the smaller angle formed by the minute hand and the hour hand of the clock. Answer: 130 Solution: The angle between any two consecutive numbers is 360◦ 12 = 30◦. The hour hand has moved 2 3 of the way from the 3 to the 4, so the angle between the hour hand and 4 is 10 ◦. Meanwhile, the angle between 4 and 8 is 30 ◦· 4 = 120◦. Thus, the total angle between the two hands is 10◦ + 120◦ = 130 degrees.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2012 SMT General Problem 5",
+   "question": "There are 100 people in a room. 60 of them claim to be good at math, but only 50 are actually good at math. If 30 of them correctly deny that they are good at math, how many people are good at math but refuse to admit it?",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10. There are 100 people in a room. 60 of them claim to be good at math, but only 50 are actually good at math. If 30 of them correctly deny that they are good at math, how many people are good at math but refuse to admit it? SMT 2012 General Test and Solutions February 18, 2012 Answer: 10 Solution: By the principle of inclusion and exclusion, the sum of the number of people who are good at math and the number of people who claim to be good at math minus the number of people in both categories gives the number of people who either are good at math or claim they are good at math. Let x be the number of people in both categories. Then 50+60 −x = 100 −30, so x = 40. Thus we are left with 50 − 40 = 10 people who are good at math but refuse to admit it.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2011 SMT General Problem 6",
+   "question": "Find all square numbers which can be represented in the form 2 a + 3b, where a, b are nonnegative integers. You can assume the fact that the equation 3 x− 2y = 1 has no integer solutions if x≥ 3.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2 2, 32, 52. Find all square numbers which can be represented in the form 2 a + 3b, where a,b are nonnegative integers. You can assume the fact that the equation 3 x− 2y = 1 has no integer solutions if x≥ 3. Answer: 2 2, 32, 52 Forb = 0 one has 2a + 1 =c2, 2a = (c + 1)(c− 1). Thus both c + 1 and c− 1 should be powers of 2. The only possibility is c = 3, which gives a solution 2 3 + 30 = 9 = 32. Forb≥ 1, 2a + 3b is not divisible by 3, so it should be ≡ 1(mod 3). This requires a to be even. Let a = 2d, then 3b =c2− 22d = (c + 2d)(c− 2d). Let c + 2d = 3p and c− 2d = 3q. Eliminating c, one has 2d+1 = 3p−3q. For q≥ 1 the right-hand side is divisible by 3, so q = 0. From what we know, there are only two solutions (d,p ) = (0, 1), (2, 2). These solutions give 2 0 + 31 = 4 = 2 2 and 2 4 + 32 = 25 = 5 2 respectively.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2019 SMT General Problem 7",
+   "question": "Bob and Joe are running around a 500m track. Bob runs clockwise at 5 m/s and Joe runs counterclockwise at 10 m/s. They start at the same spot on the track and run for 10 minutes. How many times do they pass each other after they start running?",
+   "choices": null,
+   "answer": "18",
+   "solution": "Answer: 18. Bob and Joe are running around a 500m track. Bob runs clockwise at 5 m/s and Joe runs counterclockwise at 10 m/s. They start at the same spot on the track and run for 10 minutes. How many times do they pass each other after they start running? Answer: 18 Solution: Bob runs 5· 60· 10 = 3000m, while Joe runs twice as much, 6000m. Because they run in opposite directions, they pass each other every time they run 500m combined. Thus, they pass each other (3000 + 6000)/500 = 18 times",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2021 SMT General Problem 8",
+   "question": "What is the least positive integer n such that 2020! is not a multiple of 7 n?",
+   "choices": null,
+   "answer": "335",
+   "solution": "Answer: 335. What is the least positive integer n such that 2020! is not a multiple of 7 n? Answer: 335 Solution: The least value of n is equal to one more than the exponent of 7 in the prime factorization of 2020!. Of the ﬁrst 2020 positive integers, ⌊ 2020 7 ⌋ = 288 are multiples of 7. Of these 288 multiples of 7, only ⌊ 288 7 ⌋ = 41 are multiple of 7 2. Of these 41 multiples of 7, only ⌊ 41 7 ⌋ = 5 are multiple of 7 3. Since this number 5 is less than 7, there are no multiples of 7 4, which can be veriﬁed as 7 4 = 2401 > 2020. Therefore, the least possible value of n is 1 + (288 + 41 + 5) = 335.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2011 SMT General Problem 9",
+   "question": "Two ants begin on opposite corners of a cube. On each move, they can travel along an edge to an adjacent vertex. Find the probability they both return to their starting position after 4 moves.",
+   "choices": null,
+   "answer": "49",
+   "solution": "Answer: 49. Two ants begin on opposite corners of a cube. On each move, they can travel along an edge to an adjacent vertex. Find the probability they both return to their starting position after 4 moves. Answer: 49 729 Let the cube be oriented so that one ant starts at the origin and the other at (1 , 1, 1). Let x,y,z be moves away from the origin and x′,y′,z′ be moves toward the origin in each the respective directions. Any move away from the origin has to at some point be followed by a move back to the origin, and if the ant moves in all three directions, then it can’t get back to its original corner in 4 moves. The number of ways to choose 2 directions is (3 2 ) = 3 and for each pair of directions there are 4! 2!2! = 6 ways to arrange four moves a,a′,b,b′ such that a precedes a′ and b precedes b′. Hence there are 3 · 6 = 18 ways to move in two directions. The ant can also move in a,a′,a,a′ (in other words, make a move, return, repeat the move, return again) in three directions so this gives 18 + 3 = 21 moves. There are 34 = 81 possible moves, 21 of which return the ant for a probability of 21 81 = 7",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2018 SMT General Problem 10",
+   "question": "The sum of the digits of Anna’s age is Carly’s age. In 10 years, Anna will be twice as old as Carly. What is the sum of their ages?",
+   "choices": null,
+   "answer": "34",
+   "solution": "Answer: 34. The sum of the digits of Anna’s age is Carly’s age. In 10 years, Anna will be twice as old as Carly. What is the sum of their ages? Answer: 34 Solution: We begin by assuming that Anna’s age is a 2-digit number. A proof for why this must be true is below. Let us represent Anna’s age as AB, and let us represent Carly’s age as C. The ﬁrst sentence in the problem gives us the equationA+B =C, while the second sentence gives us the equation 10A +B + 10 = 2(C + 10). Eliminating C from both equations yields 8A = 10 +B. Now B must be between 0 and 9 inclusive, so the RHS must be between 10 and 19 inclusive. However, there is only one multiple of 8 in that range, so the only solution isA = 2 andB = 6. Therefore, Anna is 26 and Carly is 8, giving us the answer 26+8 = 34 . For completeness, we now show that Anna’s age must be a 2-digit number. Let x be Anna’s age and y be Carly’s age. Suppose that x has n digits. The smallest n-digit number is 10n−1, so 10n−1≤x. Further- more, the largest sum of digits for an n-digit number occurs when all n digits are 9’s, giving us y≤ 9n. Now in 10 years, Anna will be twice as old as Carly, so x + 10 = 2(y + 10). Plugging in our inequalities, we get 10n−1 + 10≤x + 10 = 2(y + 10)≤ 18n + 20. Therefore, n must satisfy 10n−1≤ 18n + 10. Because 10n−1 grows much faster than 18 n, we can easily see that this inequality is only satisﬁed whenn≤ 2. However, if n = 1, then we getx =y, which impliesx+10 = 2(x+10). Solving yields x =−10, which is absurd, and therefore n = 2.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2012 SMT General Problem 11",
+   "question": "Nikolai and Wolfgang are math professors at a European university, so they enjoy researching math problems. Interestingly, each is able to do math problems at a constant rate. One day, the university gives the math department a problem set to do. Working alone, Nikolai can solve all the problems in 6 hours, while Wolfgang can solve them in 8 hours. When they work together, they are more eﬃcient because they are able to discuss the problems, so their combined output is the sum of their individual outputs plus 2 additional problems per hour. Working together, they complete the problem set in 3 hours. How many problems are on the problem set?",
+   "choices": null,
+   "answer": "48",
+   "solution": "Answer: 48. Nikolai and Wolfgang are math professors at a European university, so they enjoy researching math problems. Interestingly, each is able to do math problems at a constant rate. One day, the university gives the math department a problem set to do. Working alone, Nikolai can solve all the problems in 6 hours, while Wolfgang can solve them in 8 hours. When they work together, they are more eﬃcient because they are able to discuss the problems, so their combined output is the sum of their individual outputs plus 2 additional problems per hour. Working together, they complete the problem set in 3 hours. How many problems are on the problem set? Answer: 48 Solution: Suppose that there are a total of x problems on the problems set. Then Nikolai’s rate is x 6 problems per hour, while Wolfgang’s is x 8 . their combined rate (including the eﬃciency bonus) is x 6 + x 8 + 2, which is given to be equal to x 3 . Solving for x, we obtain x = 48 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2022 SMT General Problem 12",
+   "question": "Let Sn =Pn j=1 j3. Find the smallest positive integer n such that the last three digits of Sn are all zero.",
+   "choices": null,
+   "answer": "24",
+   "solution": "Answer: 24. Let Sn =Pn j=1j3. Find the smallest positive integer n such that the last three digits of Sn are all zero. Answer: 24 Solution: We know that Sn =Pn j=1j3 = (n(n+1) 2 )2 and we want the smallest positive integer n such that 1000|Sn. This means 4000 |n2(n + 1)2. Note that 4000 = 2 5· 53. Since only one of n and (n + 1) is even, either 2 5|n2 or 2 5| (n + 1)2. So, either 8 |n or 8|n + 1. Similarly, only one of n andn + 1 is divisible by 5 and so, either 5 3|n2 or 53| (n + 1)2. This occurs when 25|n or 25|n + 1. A quick observation suggests that n = 24 is the smallest positive integer satisfying this requirement.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2018 SMT General Problem 13",
+   "question": "Consider the sequence a1 = 2, a2 = 3, a3 = 6, a4 = 18, . . ., where an = an−1· an−2. What is the largest k such that 3 k divides a11?",
+   "choices": null,
+   "answer": "55",
+   "solution": "Answer: 55. Consider the sequence a1 = 2, a2 = 3, a3 = 6, a4 = 18, ... , where an =an−1·an−2. What is the largest k such that 3k divides a11? Answer: 55 Solution: Note thatan contains only powers of 2 and 3 for alln≥ 1. This allows us to write an = 2bn3cn for some positive integers bn,cn for alln≥ 1. Because an =an−1·an−2, we have SMT 2018 General Test Solutions February 17, 2018 2bn3cn = 2bn−1+bn−23cn−1+cn−2, which implies that bn =bn−1 +bn−2 andcn =cn−1 +cn−2 for all n≥ 1. Note that the recurrence for cn looks exactly like the recurrence for the sequence of Fibonacci numbers, deﬁned as F1 =F2 = 1 and Fn =Fn−1 +Fn−2. Because c2 =c3 = 1, it is simply the sequence of Fibonacci numbers shifted forwards one term, so we compute c11 =F10 = 55 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2011 SMT General Problem 14",
+   "question": "Let M = (−1, 2) and N = (1, 4) be two points in the plane, and let P be a point moving along the x-axis. When ∠M P N takes on its maximum value, what is the x-coordinate of P ?",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Let M = (−1, 2) and N = (1, 4) be two points in the plane, and let P be a point moving along the x-axis. When ∠MPN takes on its maximum value, what is the x-coordinate of P ? Answer: 1 LetP = (a, 0). Note that ∠MPN is inscribed in the circle deﬁned by points M,P , andN, and that it interceptsMN . Since MN is ﬁxed, it follows that maximizing the measure of ∠MPN is equivalent to minimizing the size of the circle deﬁned by M,P , and N. Since P must be on the x-axis, we therefore want this circle to be tangent to the x-axis. Since the center of this circle must lie on the perpendicular bisector of MN , which is the line y = 3−x, the center of the circle has to be of the form ( a, 3−a), so a has to satisfy (a + 1)2 + (1−a)2 = (a− 3)2. Solving this equation gives a = 1 or a =−7. Clearly choosing a = 1 gives a smaller circle, so our answer is 1.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2022 SMT General Problem 15",
+   "question": "What is the unique perfect cube c of the form c = k3 + k2 + 11k + 1 for some strictly positive integer k?",
+   "choices": null,
+   "answer": "125",
+   "solution": "Answer: 125. What is the unique perfect cube c of the form c =k3 +k2 + 11k + 1 for some strictly positive integerk? Answer: 125 Solution: Clearly, c = (k +n)3 for some n. Note that n cannot be too large; for n = 2 we already have that (k + 2)3 is strictly greater than k3 +k2 + 11k + 1. Setting c = (k + 1)3 we need to solve (k + 1)3 =k3 + 3k2 + 3k + 1 =k3 +k2 + 11k + 1 =⇒ 2k2 = 8k =⇒ k = 4 SMT 2022 General Test Solutions April 16–17, 2022 so substituting this back into k3 +k2 + 11k + 1 gives the unique square to be 125.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2019 SMT General Problem 16",
+   "question": "A hexagon of side length √ 24 and a circle share the same center. The total area of the regions that are inside the circle and outside the hexagon is equal to the total area of the regions that are outside the circle and inside the hexagon. What is the square of the radius of the circle?",
+   "choices": null,
+   "answer": "36",
+   "solution": "Answer: 36. A hexagon of side length √ 24 and a circle share the same center. The total area of the regions that are inside the circle and outside the hexagon is equal to the total area of the regions that are outside the circle and inside the hexagon. What is the square of the radius of the circle? Answer: 36 √ 3 π Solution: Since the area inside the circle and outside the hexagon is equal to the area inside the hexagon and outside the circle, the circle and hexagon must have the same area. Hence, we can calculate that πr2 = 3 √ 3 2 × 24 = 36 √ 3 So, the radius squared is 36 √ 3 π .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2020 SMT General Problem 17",
+   "question": "Let i =√−1. Compute the number of ordered pairs of positive integers ( a, b) such that the complex number z = a + bi satisﬁes|2 + z|2 +|2− z|2 < 50.",
+   "choices": null,
+   "answer": "13",
+   "solution": "Answer: 13. Let i =√−1. Compute the number of ordered pairs of positive integers ( a,b ) such that the complex number z =a +bi satisﬁes|2 +z|2 +|2−z|2< 50. Answer: 13 Solution: The inequality reduces to (2 +z)(2 + ¯z) + (2−z)(2− ¯z)< 50 SMT 2020 General Test Solutions February 22, 2020 ⇒ 4 + 2z + 2¯z +z¯z + 4− 2z− 2¯z +z¯z <50 ⇒ 8 + 2|z|2< 50 ⇒a2 +b2< 21. So we need to compute the number of ordered pairs of positive integers (a,b ) such thata2 +b2<",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2013 SMT General Problem 18",
+   "question": "Caroline wants to plant 10 trees in her orchard. Planting n apple trees requires n2 square meters, planting n apricot trees requires 5n square meters, and planting n plum trees requires n3 square meters. If she is committed to growing only apple, apricot, and plum trees, what is the least amount of space, in square meters, that her garden will take up?",
+   "choices": null,
+   "answer": "40",
+   "solution": "Answer: 40. Caroline wants to plant 10 trees in her orchard. Planting n apple trees requiresn2 square meters, plantingn apricot trees requires 5n square meters, and planting n plum trees requires n3 square meters. If she is committed to growing only apple, apricot, and plum trees, what is the least amount of space, in square meters, that her garden will take up? Answer: 40 Solution: If we plant apple trees, the ﬁrst apple tree requires 1 square meter to grow. The second one requires 3 = 2 2− 12 square meters to grow, the third one requires 5 = 3 2− 22, and the fourth one requires 7 = 4 2− 32. If we plant apricot trees, each tree requires 5 square meters to grow. If we plant plum trees, the ﬁrst plum tree requires 1 square meter whereas each subsequent one will require at least 7 = 2 3− 13 square meters. Thus, to take up the least amount of space, we should plant 3 apple trees, 6 apricot trees, and 1 plum tree for a total of 40 square meters.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2011 SMT General Problem 19",
+   "question": "Five students at a meeting remove their name tags and put them in a hat; the ﬁve students then each randomly choose one of the name tags from the bag. What is the probability that exactly one person gets their own name tag?",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Five students at a meeting remove their name tags and put them in a hat; the ﬁve students then each randomly choose one of the name tags from the bag. What is the probability that exactly one person gets their own name tag? Answer: 3 8 Assume without loss of generality that the ﬁrst person gets a correct nametag. Let’s call the other people B, C, D, and E. We can order the four people in nine ways such that none of the persons gets his own nametag; CBED, CDEB, CEBD, DBEC, DEBC, DECB, EBCD, EDBC, EDCB. Therefore, the desired probability is 9 4! = 3",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "2021 SMT General Problem 20",
+   "question": "If x2 + y2 = 47xy, then log( k(x + y)) = 1 2(log x + log y). Find the value of k.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. If x2 +y2 = 47xy, then log(k(x +y)) = 1 2(logx + logy). Find the value of k. Answer: 1 7 Solution: Note that the logarithmic equation is equivalent to (k(x+y))2 =xy. Then (x+y)2 = x2 +y2 + 2xy = 49xy. Hence, k = 1 7 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "2014 SMT General Problem 21",
+   "question": "The tetrahedral dice printing company has misprogrammed their machines to print either 1, 2, 3, or 4 dots on each face, uniformly at random and independently. Compute the probability that the total number of dots on a random tetrahedral (four-sided) die is greater than 10.",
+   "choices": null,
+   "answer": "53",
+   "solution": "Answer: 53. The tetrahedral dice printing company has misprogrammed their machines to print either 1, 2, 3, or 4 dots on each face, uniformly at random and independently. Compute the probability that the total number of dots on a random tetrahedral (four-sided) die is greater than 10. Answer: 53 128 Solution: Since 10 = 1 + 2 + 3 + 4, by symmetry, the probability that the total number of dots is greater than 10 is equivalent to the probability that the total number is less than 10. The probability that the number is exactly 10 is 4!+(4 1)+(4 2)+(4 2)+(4 1) 44 = 11 64 since the sets of dots that total to 10 is {1, 2, 3, 4},{2, 2, 2, 4},{1, 1, 4, 4},{2, 2, 3, 3}, and{1, 3, 3, 3}. Thus the probability that the total number is greater than 10 is 1− 11 64 2 = 53 128 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "2023 SMT General Problem 22",
+   "question": "If ( a, b) is a point on the circle centered at (5 , 0) with radius 4 in the xy-plane, compute the maximum possible value of a2+7b2 2a2+b2 .",
+   "choices": null,
+   "answer": "121",
+   "solution": "Answer: 121. If ( a,b ) is a point on the circle centered at (5 , 0) with radius 4 in the xy-plane, compute the maximum possible value of a2+7b2 2a2+b2 . Answer: 121 34 Solution: This comes down to computing the maximum of 1+7s 2+s = 7− 13 2+s, where s is a non- negative number denoting (b a)2. In order to maximize this expression, 13 2+s should be minimized, i.e. b a be chosen as large as possible. The value of b a is equal to the slope of the line passing through the origin and ( a,b ). The line with the greatest slope that passes through the origin and meets the circle must be tangent to the circle. Drawing tangent lines through the origin to the circle, one sees that the point ( a,b ) we desire lies at the vertex of the right angle of a right triangle with hypotenuse 5 and a leg of length 4. We find that ( a,b ) = \u0000 9 5, 12 5 \u0001 , so b a = 4",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "2020 SMT General Problem 23",
+   "question": "3 points are randomly selected from the vertices from a regular 2020-gon. What is the probability the three vertices form a scalene triangle?",
+   "choices": null,
+   "answer": "672",
+   "solution": "Answer: 672. 3 points are randomly selected from the vertices from a regular 2020-gon. What is the probability the three vertices form a scalene triangle? Answer: 672 673 Solution: Suppose the points are labelled p0,p 1...p 2019. Without loss of generality, let the points of the triangle be p0,p i,p j where 0<i<j < 2020. Note that this is equivalent to picking an ordered triplet of natural numbers{a,b,c} ={i,j−i, 2020−j} that sum to 2020. Therefore, there are (2019 2 ) total possible triangles. Furthermore, a triangle is scalene if and only ifa⁄=b⁄=c. Note that there are no equilateral triangles as this would require a =b =c, which would require 2020 to be a multiple of 3. Considering triangles that are not scalene (and therefore isosceles), it must follow that exactly one of the following must be true: a =b, b =c, a =c. There are 1009 possible isosceles triangles for each case, as they are symmetric. Therefore, by complementary counting, the probability that a triangle is scalene is 1 − 3·1009 (2019 2 ) = 672 673.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "2011 SMT General Problem 24",
+   "question": "Let P (x) be a polynomial of degree 2011 such that P (1) = 0, P (2) = 1, P (4) = 2, ... , and P (22011) = 2011. Compute the coeﬃcient of the x1 term in P (x).",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2 − 1. Let P (x) be a polynomial of degree 2011 such that P (1) = 0,P (2) = 1,P (4) = 2, ... , and P (22011) = 2011. Compute the coeﬃcient of the x1 term in P (x). Answer: 2 − 1 22010 We analyze Q(x) = P (2x)−P (x). One can observe that Q(x)− 1 has the powers of 2 starting from 1, 2, 4,··· , up to 2 2010 as roots. Since Q has degree 2011, Q(x)− 1 = A(x− 1)(x− 2)··· (x− 22010) for some A. Meanwhile Q(0) =P (0)−P (0) = 0, so Q(0)− 1 =−1 =A(−1)(−2)··· (−22010) =−2(2010·2011)/2A. ThereforeA = 2−(1005·2011). Finally, note that the coeﬃcient of x is same for P andQ− 1, so it equals A(−20)(−21)··· (−22010)((−20) + (−2−1) +··· + (−2−2010)) = A·21005·2011(22011−1) 22010 = 2 − 1 22010 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "2013 SMT General Problem 25",
+   "question": "A 3×6 grid is ﬁlled with the numbers in the list{1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9} accord- ing to the following rules: (1) Both the ﬁrst three columns and the last three columns contain the integers 1 through 9. (2) No number appears more than once in a given row. Let N be the number of ways to ﬁll the grid and let k be the largest positive integer such that 2 k divides N. What is k?",
+   "choices": null,
+   "answer": "13",
+   "solution": "Answer: 13. A 3×6 grid is ﬁlled with the numbers in the list{1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9} accord- ing to the following rules: (1) Both the ﬁrst three columns and the last three columns contain the integers 1 through 9. (2) No number appears more than once in a given row. Let N be the number of ways to ﬁll the grid and let k be the largest positive integer such that 2 k divides N. What is k? Answer: 13 Solution: First, note that we can ﬁll the ﬁrst 3 columns with any permutation of the numbers 1 through 9. Thus, there are 9! ways to do this. Next, we must consider how many ways there are to place numbers in the remaining three columns. This problem can be broken into two parts: splitting the numbers into each of 3 rows, and permuting the numbers in each row. For the ﬁrst part, either the rows switch positions without their contents mixing (2 ways) or each new row has one number from one row and two numbers from another row. In this second option, there are 3 3 = 27 ways to split each original row into a single and a pair, and 2 ways to arrange these singles and pairs. So we have a total of 2 + 27 · 2 = 56 ways. For the second part, we note that each set of 3 elements in a row can be permuted in 3! ways, giving a total of 56 · (3!)3 ways to ﬁll the last 3 columns, given a particular permutation for the ﬁrst three columns. Thus, N = 9!· 56· 63, and therefore N is divisible by 2 k for k≤ 7 + 3 + 3 = 13 .",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

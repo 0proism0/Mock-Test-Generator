@@ -1,0 +1,161 @@
+{
+ "id": "smt_rand_31",
+ "competition": "SMT — Team",
+ "category": "Math",
+ "title": "SMT — Team — Random Mock #31 · 2026-08-27 08:50",
+ "instructions": "15 questions · 50 minutes · No calculator. 15 points total.",
+ "time_limit_min": 50,
+ "total_points": 15,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2022 SMT Team Problem 1",
+   "question": "Square ABCD has side length 2. Let the midpoint of BC be E. What is the area of the overlapping region between the circle centered at E with radius 1 and the circle centered at D with radius 2? (You may express your answer using inverse trigonometry functions of non- common values.)",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3 arctan. Square ABCD has side length 2. Let the midpoint of BC be E. What is the area of the overlapping region between the circle centered at E with radius 1 and the circle centered at D with radius 2? (You may express your answer using inverse trigonometry functions of non- common values.) Answer: 3 arctan \u0000 1 2 \u0001 + π 2 − 2 Solution: We can find the overlapping area by adding together the sector of circle D along minor arc CF and the sector of circle E along minor arc CF, and subtracting CDFE. The area of CDFE is 2 (formed by adding together △CDE and△FDE , each with area 1). Then, the area of the sector of circle D is 2 arcsin \u0010 1√ 5 \u0011 2π · 4π and the area of the sector of circle E is 2 arcsin \u0010 2√ 5 \u0011 2π ·π. Our answer then is 2 arcsin \u0010 1√ 5 \u0011 2π · 4π + 2 arcsin \u0010 2√ 5 \u0011 2π ·π− 2 = 4 arcsin \u0012 1√ 5 \u0013 + arcsin \u0012 2√ 5 \u0013 − 2 = 4 arcsin \u0012 1√ 5 \u0013 + π 2− arcsin \u0012 1√ 5 \u0013 − 2 = 3 arcsin \u0012 1√ 5 \u0013 + π 2− 2 = 3 arctan \u00121 2 \u0013 + π 2− 2. Note that there are other equivalent forms of the answer.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2018 SMT Team Problem 2",
+   "question": "Consider a game played on the integers in the closed interval [1 , n]. The game begins with some tokens placed in [1, n]. At each turn, tokens are added or removed from [1 , n] using the following rule: For each integer k∈ [1, n], if exactly one of k− 1 and k + 1 has a token, place a token at k for the next turn, otherwise leave k blank for the next turn. We call a position static if no changes to the interval occur after one turn. For instance, the trivial position with no tokens is static because no tokens are added or removed after a turn (because there are no tokens). Find all non-trivial static positions.",
+   "choices": null,
+   "answer": "32",
+   "solution": "Answer: 32. Furthermore, in this case the coordinates of each of the points must lie in the set{−1,− 1 2, 0, 1 2, 1}. It remains to construct values for the 5 points that will work. Note that a point is on the surface of the cube if at least one of the coordinates of a point has absolute value 1. We have 6 coordinates with absolute value 1, and only 5 points, so we can easily choose them to lie on the surface of the cube and satisfy the desired properties. For example, the points ( −1, 1 2, 0 ) , ( −1 2, 1,−1 ) , ( 0,−1,−1 2 ) , (1 2, 0, 1 ) , ( 1,−1 2, 1 2 ) satisfy the given conditions. Therefore, the maximum value is 1 2 + 1 2 + 1 2 = 3 2 . EY04 8. Eddy has two blank cubes A and B and a marker. Eddy is allowed to draw a total of 36 dots on cubes A and B to turn them into dice, where each side has an equal probability of appearing, and each side has at least one dot on it. Eddy then rolls dice A twice and dice B once and computes the product of the three numbers. Given that Eddy draws dots on the two dice to maximize his expected product, what is his expected product? Answer: 32 Solution: Suppose the faces of dice A are labeled as a1,...,a 6 and the faces of dice B are labeled as b1,...,b 6. We are given that a1 +··· +a6 +b1 +··· +b6 = 36. We can then write the expected product as 1 63 (a1 +··· +a6)2(b1 +··· +b6). If we let a =a1 +··· +a6 and b =b1 +··· +b6, then we can reduce this to maximizing a2b 63 under the constraint a +b = 36. Note that it suﬃces to maximize a2b, which we can do using AM-GM as follows: a +b 3 = a/2 +a/2 +b 3 ≥ 3 √ a2b 4 where equality (and thus the maximum) holds when a/2 = b. Since a +b = 36, equality occurs whena = 24 andb = 12, giving us a maximum expected value of 242·12 63 = 42·2 = 32 . SMT 2018 Team Test Solutions February 17, 2018 EX03 9. Let ABCD be a square. Point E is chosen inside the square such that AE = 6. Point F is chosen outside the square such that BE = BF = 2 √ 5, ∠ABF = ∠CBE , and AEBF is cyclic. Compute the area of ABCD . Answer: 32 Solution: Since ∠ABF = ∠CBE , we have ∠EBF = ∠CBA = 90◦. Moreover, since BE = BF = 2 √ 5,∆EBF is a 45-45-90 triangle, so EF = 2 √ 5· √ 2 = 2 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2021 SMT Team Problem 3",
+   "question": "He repeats this process, randomly choosing a rod to split into 2 smaller rods. Thus, after two such splits, Jim will have 3 rods of length 1 3, 1 9, and 1 9 . After 3 splits, Jim will either have 4 rods of lengths 1 9, 1 9, 1 9, 1 9 or 1 3, 1 9, 1 27, 1 27, ˙What is the expected value of the total length of the rods after 5 splits?",
+   "choices": null,
+   "answer": "308",
+   "solution": "Answer: 308. He repeats this process, randomly SMT 2021 Team Test Solutions April 17, 2021 choosing a rod to split into 2 smaller rods. Thus, after two such splits, Jim will have 3 rods of length 1 3, 1 9, and 1 9 . After 3 splits, Jim will either have 4 rods of lengths 1 9, 1 9, 1 9, 1 9 or 1 3, 1 9, 1 27, 1 27, ˙What is the expected value of the total length of the rods after 5 splits? Answer: 308 729 Solution: LetE(i) denote the expected value of the total length of the rods after i splits. Then E(0) = 1,E (1) = 2 3,E (2) = 5 9.... Let D(i) denote the expected value of the length removed by the ith split. Thus, D(1) = 1 3,D (2) = 1 9.... Then, we also have that E(i) = E(i− 1)−D(i). Note that D(i) = E(i−1) 3i as the expected length removed is 1/3 the expected length of a single rod in the previous stage. Then, D(3) = E(2) 3∗3 = 5 81.E(3) = E(2)−D(3) = 40 81.D(4) = E(3) 3∗4 = 10 243.E(4) =E(3)−D(4) = 110 243.D(5) = E(4) 3∗5 = 22 729. Lastly,E(5) =E(4)−D(5) = 308 729",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2019 SMT Team Problem 4",
+   "question": "Let D be the midpoint of BC in∆ABC. A line perpendicular to D intersects AB at E. If the area of∆ABC is four times that of the area of ∆BDE, what is ∠ACB in degrees?",
+   "choices": null,
+   "answer": "90",
+   "solution": "Answer: 90. Let D be the midpoint of BC in∆ABC. A line perpendicular to D intersectsAB at E. If the area of∆ABC is four times that of the area of ∆BDE, what is ∠ACB in degrees? Answer: 90 Solution: We have that the area of ∆BDE is 1 2(BD)(ED), and the area of ∆ABC is 1 2(BC)h = (BD)h, where h is the height of the altitude from A to BC. Since the area of ∆ABC is four times that of ∆BDE, we have that h = 2(ED). This is only possible if E is the midpoint of AB. But then AE =BE =CE, so E is the circumcenter of ∆ABC. But E lies on AB, so AB is a diameter of the circumcircle, implying that ∠ACB = 90◦ .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2012 SMT Team Problem 5",
+   "question": "Regular hexagon A1A2A3A4A5A6 has side length 1. For i = 1 , . . . ,6, choose Bi to be a point on the segment AiAi+1 uniformly at random, assuming the convention that Aj+6 = Aj for all integers j. What is the expected value of the area of hexagon B1B2B3B4B5B6?",
+   "choices": null,
+   "answer": "9",
+   "solution": "Answer: 9. Regular hexagon A1A2A3A4A5A6 has side length 1. For i = 1 , . . . ,6, choose Bi to be a point on the segment AiAi+1 uniformly at random, assuming the convention that Aj+6 = Aj for all integers j. What is the expected value of the area of hexagon B1B2B3B4B5B6? Answer: 9 √ 3 8 Solution 1: By symmetry, E[(BiAi+1Bi+1)] = E[(BjAj+1Bj+1)] for all integers i and j. There- fore, applying linearity of expectation, the expected area of B1B2B3B4B5B6 is equal to the area of A1A2A3A4A5A6 minus six times the expected area of B1A2B2. Since the lengths of B1A2 and B2A2 are independent, this expectation is equal to ( 1 2 sin 120◦)E[B1A2]E[B2A2]. It is easy to see that E[B1A2] = E[B2A2] = 1 /2, so E[(A1B2A2)] = √ 3 16 . The area of a unit regular hexagon is 6( √ 3/4), so our answer is 6( √ 3 4 − √ 3 16 ) = 9 √ 3 8 . Solution 2: Since the area of B1B2B3B4B5B6 is linear in the location of Bi for each i, and the Bi are all independent, we can argue that the average case comes when each Bi is a midpoint of AiAi+1.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2012 SMT Team Problem 6",
+   "question": "Compute the area of the smallest regular polygon that has three vertices coinciding with the vertices of the given triangle.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12 + 6. Compute the area of the smallest regular polygon that has three vertices coinciding with the vertices of the given triangle. Answer: 12 + 6 √ 3 Solution: We begin by computing the angles of the triangle; repeated application of the Law of Cosines gives us that the angles of the triangle are 15 ◦, 60 ◦, and 105 ◦. Therefore, since the greatest common divisor of the angles of the triangle is 15 ◦, a dodecagon is the smallest regular polygon that satisﬁes our current constraints. In particular, the dodecagon has side length √ 2, and it remains to compute the area of the dodecagon. The area of a regular dodecagon is 3 cot ( π 12 ) ( √ 2)2 = 12 + 6 √ 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2012 SMT Team Problem 7",
+   "question": "A plane in 3-dimensional space passes through the point ( a1, a2, a3), with a1, a2, and a3 all positive. The plane also intersects all three coordinate axes with intercepts greater than zero (i.e. there exist positive numbers b1, b2, b3 such that ( b1, 0, 0), (0 , b2, 0), and (0 , 0, b3) all lie on this plane). Find, in terms of a1, a2, a3, the minimum possible volume of the tetrahedron formed by the origin and these three intercepts.",
+   "choices": null,
+   "answer": "9",
+   "solution": "Answer: 9. A plane in 3-dimensional space passes through the point ( a1, a2, a3), with a1, a2, and a3 all positive. The plane also intersects all three coordinate axes with intercepts greater than zero (i.e. there exist positive numbers b1, b2, b3 such that ( b1, 0, 0), (0 , b2, 0), and (0 , 0, b3) all lie on this plane). Find, in terms of a1, a2, a3, the minimum possible volume of the tetrahedron formed by the origin and these three intercepts. Answer: 9 2 a1a2a3 Solution: Let the x, y, and z intercepts of the plane be b1, b2, and b3, respectively. The tetrahedron in question has volume 1 6 b1b2b3. The equation of our plane is x b1 + y b2 + z b3 = 1, since these three intercepts determine the plane. Therefore, we are minimizing 1 6 b1b2b3 subject to the constraint a1 b1 + a2 b2 + a3 b3 = 1. By AM-GM, we get that a1a2a3 b1b2b3 ≤ ( a1 b1 + a2 b2 + a3 b3 3 )3 = 1 27 . Therefore, b1b2b3 ≥ 27a1a2a3 with equality if a1 b1 = a2 b2 = a3 b3 = 1 3 , which is attained by choosing bi = 3 ai. Hence, the desired minimum volume is 27a1a2a3 6 = 9 2 a1a2a3 . SMT 2012 Team Test and Solutions February 18, 2012",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2020 SMT Team Problem 8",
+   "question": "Let S be an n-dimensional hypercube of sidelength 1. At each vertex draw a hypersphere of radius 1 2; let Ω be the set of these hyperspheres. Consider a hypersphere Γ centered at the center of the cube that is externally tangent to all the hyperspheres in Ω. For what value of n does the volume of Γ equal to the sum of the volumes of the hyperspheres in Ω.",
+   "choices": null,
+   "answer": "9",
+   "solution": "Answer: 9. Let S be an n-dimensional hypercube of sidelength 1. At each vertex draw a hypersphere of radius 1 2; let Ω be the set of these hyperspheres. Consider a hypersphere Γ centered at the center of the cube that is externally tangent to all the hyperspheres in Ω. For what value of n does the volume of Γ equal to the sum of the volumes of the hyperspheres in Ω. Answer: 9 Solution: Let di denote the diameter of Γ, note that di =√n− 1. We also have that the diameter of the smaller hyperspheres are each 1. Note that Ω contains 2 n hyperspheres. As the ratio of the volumes similar odjects in n-dimensional space is the ratio of the lengths to the nth power, it follows that for the areas to be equal, we must have ( di 1 )n = 2n substituting and solving, we see that di = 2 and n = 9 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2023 SMT Team Problem 9",
+   "question": "Let A be the the area enclosed by the relation x2 +y2≤ 2023. Team Test April 8, 2023 Let B be the area enclosed by the relation x2n +y2n≤ \u0012 A· 7 16π \u0013n/2 . Compute the limit of B as n→∞ for n∈ N.",
+   "choices": null,
+   "answer": "119",
+   "solution": "Answer: 119. Let A be the the area enclosed by the relation x2 +y2≤ 2023. Team Test Solutions April 8, 2023 Let B be the area enclosed by the relation x2n +y2n≤ \u0012 A· 7 16π \u0013n/2 . Compute the limit of B as n→∞ for n∈ N. Answer: 119 Solution: A is the area of a circle with radius of √ 2023, so A is 2023π. The shape described in B is a square with side length 2 \u0000 A· 7 16π \u00011/4. Therefore, B is equal to 4 q 2023π· 7 16π = 4 q\u0000 119 4 \u00012 = 119 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2012 SMT Team Problem 10",
+   "question": "A permutation of the ﬁrst n positive integers is valid if, for all i > 1, i comes after ⌊ i 2 ⌋ in the permutation. What is the probability that a random permutation of the ﬁrst 14 integers is valid?",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. A permutation of the ﬁrst n positive integers is valid if, for all i > 1, i comes after ⌊ i 2 ⌋ in the permutation. What is the probability that a random permutation of the ﬁrst 14 integers is valid? Answer: 1 31752 Solution 1: 1 must be the ﬁrst number in the permutation; this happens with probability 1 14 . 2 must come before 4, 5, 8, 9 10, and 11; this happens with probability 1 7 . 3 must come before 6, 7, 12, 13, and 14; this happens with probability 1 6 . 4 must come before 8 and 9; this happens with probability 1 3 . 5 must come before 10 and 11; this happens with probability 1 3 . 6 must come before 12 and 13; this happens with probability 1 3 . 7 must come before 14; this happens with probability 1 2 . All these events are independent, so the answer is the product of the above probabilities, or 1 31752 . Solution 2: Create a directed graph with vertices labeled 1 through 14, with an arrow from vertex a to vertex b if b has to come after a in a valid permutation. The graph looks like this: 1 points to 2 and 3, 2 points to 4 and 5, 3 points to 6 and 7, 4 points to 8 and 9, 5 points to 10 and 11, 6 points to 12 and 13, 7 points to 14. We want to count the number of ways to merge this graph into a line. There are two ways of ordering 12 and 13 WRT 6. Once this is ﬁxed, there are (5 3 ) = 10 ways of ordering the 6 − 12 − 13 group and the 7 − 14 group WRT 3. Similarly, there are 2 ways of ordering 8 , 9 WRT 4, 2 ways of ordering 10 , 11 WRT 5, and (6 3 ) = 20 ways of ordering the 4 − 8 − 9 group and the 5 − 10 − 11 group WRT 2. Finally, there are (13 6 ) ways of ordering the 2 . . . group and the 3 . . . group WRT 1. This gives 2 · 10 · 2 · 2 · 20 · (13 6 ) valid permutations, and dividing by 14! gives the answer. SMT 2012 Team Test and Solutions February 18, 2012",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2020 SMT Team Problem 11",
+   "question": "Suppose that x,y,z are real positive numbers such that ( 1 +x4y4) ez + ( 1 + 81e4z) x4e−3z = 12x3y. Find all possible values of x +y +z.",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4/3 − ln(3). Suppose that x,y,z are real positive numbers such that ( 1 +x4y4) ez + ( 1 + 81e4z) x4e−3z = 12x3y. Find all possible values of x +y +z. Answer: 4/3 − ln(3) Solution: We can see that ( 1 +x4y4) ez + ( 1 + 81e4z) x4e−3z = 12x3y ⇐⇒ 1 x4 +y4 +e−4z + 81 = 12ye−z x SMT 2020 Team Test Solutions February 22, 2020 We note that ifa4 +b4 +c4 +d4 = 4abcd fora,b,c,d ≥ 0 then a =b =c =d fora,b,c,d positive real numbers. Since AM-GM tells us that a4 +b4 +c4 +d4 4 ≥ 4√ a4b4c4d4 =abcd with equality if and only if a4 = b4 = c4 = d4. Since a,b,c,d are positive this implies that a = b = c = d. So, 1 /x = y = e−z = 3. So, x = 1/3,y = 3,z =− ln(3). So, their sum is 10/3− ln(3) .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2020 SMT Team Problem 12",
+   "question": "Given a large circle with center (x0,y 0), one can place three smaller congruent circles with centers (x1,y 1), (x2,y 2), (x3,y 3) that are pairwise externally tangent to each other and all internally tangent to the outer circle. If this placement makes x0 = x1 and y1 > y0, we call this an “up-split”. Otherwise, if the placement makes x0 =x1 and y1<y 0, we call it a “down-split.” Alice starts at the center of a circle C with radius 1. Alice ﬁrst walks to the center of the upper small circle Cu of an up-slitting of C. Then, Alice turns right to walk to the center of the upper-right small circle of a down-splitting of Cd. Alice continues this process of turning right and walking to the center of a new circle created by alternatingly up- and down-splitting. Alice’s path will form a spiral converging to ( xA,y A). On the otherhand, Bob always up-splits the circle he is in the center of, turns right and ﬁnds the center of the next small circle. His path will converges to (xB,y B). Compute | 1 xA − 1 xB |.",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. Given a large circle with center (x0,y 0), one can place three smaller congruent circles with centers (x1,y 1), (x2,y 2), (x3,y 3) that are pairwise externally tangent to each other and all internally tangent to the outer circle. If this placement makes x0 = x1 and y1 > y0, we call this an “up-split”. Otherwise, if the placement makes x0 =x1 and y1<y 0, we call it a “down-split.” Alice starts at the center of a circle C with radius 1. Alice ﬁrst walks to the center of the upper small circle Cu of an up-slitting of C. Then, Alice turns right to walk to the center of the upper-right small circle of a down-splitting of Cd. Alice continues this process of turning right and walking to the center of a new circle created by alternatingly up- and down-splitting. Alice’s path will form a spiral converging to ( xA,yA). On the otherhand, Bob always up-splits the circle he is in the center of, turns right and ﬁnds the center of the next small circle. His path will converges to (xB,yB). Compute | 1 xA − 1 xB |. Answer: 4 √ 3+6 3 . Solution: Notice that Alice always turns 60 ◦ right so that the angle between incoming and outgoing paths at each circle center is 120 ◦. Moreover, her moves are all along three vectors: v1 = (0, 1),v 2 = ( √ 3 2 , 1 2),v 3 = ( √ 3 2 ,− 1 2). Her ﬁrst move is along v1, second is along v2, third alongv3, fourth along−v1, ﬁfth along−v2, sixth along−v3, and repeat. The ratio between one move and the next is always constant. We call this constant α. Thus, her total movement from ±v1 movements isM(1−α3 +α6−+··· ) = M 1+α3 , whereM is the length of her ﬁrst step and we also calculate this later. Similarly, she moves Mα 1+α3 units from±v2 movements and Mα 3 1+α3 units from±v3 movements. Therefore, xA = M √ 3 2 α+α2 1+α3 = M √ 3 2 α 1−α+α2. Bob always turns 120 ◦ right and moves along the same u1 = v1, along u2 = v3, and along u3 = −v2. Then the calculations for these three movements is the same as Alice’s, except that the denominators are 1 −α3. We ﬁnd that xB = M √ 3 2 α−α2 1−α3 = M √ 3 2 α 1+α+α2 . Therefore, | 1 xA − 1 xB | = 2·2α Mα √ 3 = 4 M √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2013 SMT Team Problem 13",
+   "question": "A board has 2, 4, and 6 written on it. A person repeatedly selects (not necessarily distinct) values for x, y, and z from the board, and writes down xyz +xy +yz +zx +x +y +z if and only if that number is not yet on the board and is also less than or equal to 2013. This person repeats this process until no more numbers can be written. How many numbers will be written at the end of this process?",
+   "choices": null,
+   "answer": "22",
+   "solution": "Answer: 22. A board has 2, 4, and 6 written on it. A person repeatedly selects (not necessarily distinct) values for x, y, and z from the board, and writes down xyz +xy +yz +zx +x +y +z if and only if that number is not yet on the board and is also less than or equal to 2013. This person repeats this process until no more numbers can be written. How many numbers will be written at the end of this process? Answer: 22 Solution: We claim that N can be written on the board if and only if N + 1 has a prime factorization of the form 3a5b7c, where a +b +c is odd. It remains to actually prove this. Note that if we write N = xyz +xy +yz +zx +x +y +z, then we have that N + 1 = (x + 1)(y + 1)(z + 1). Note that the original numbers, 2, 4, and 6, are each less than the primes 3, 5, and 7, respectively. Therefore, we ensure that the only primes which can divide any valid N + 1 are 3, 5, and 7. Furthermore, these numbers each have exponents summing to 1, an odd integer, so therefore since we multiply three integers with an odd sum of exponents, we ensure that all numbers which remain have an odd sum of exponents. It remains to compute all numbers of the form 3 a5b7c, where each number is less than or equal to 2013 and the sum of the exponents is odd. There are 22 such numbers.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2023 SMT Team Problem 14",
+   "question": "A teacher stands at (0 , 10) and has some students, where there is exactly one student at each integer position in the following triangle: ··· Here, the circle denotes the teacher at (0 , 10) and the triangle extends until and includes the column (21,y ). A teacher can see a student ( i,j ) if there is no student in the direct line of sight between the teacher and the position ( i,j ). Compute the number of students the teacher can see (assume that each student has no width—that is, each student is a point).",
+   "choices": null,
+   "answer": "279",
+   "solution": "Answer: 279. A teacher stands at (0 , 10) and has some students, where there is exactly one student at each integer position in the following triangle: ··· Here, the circle denotes the teacher at (0 , 10) and the triangle extends until and includes the column (21,y ). A teacher can see a student ( i,j ) if there is no student in the direct line of sight between the teacher and the position ( i,j ). Compute the number of students the teacher can see (assume that each student has no width—that is, each student is a point). Answer: 279 Solution: We count the number of slopes between (0,n ) and (i,j ). Since each of these radiate from the same point on one end, this will count the number of students the teacher can see. To do so, modify the grid: put the teacher at (0 , 0) and the students at ( x,y ) with 1 ≤ x≤ 21, −20≤y≤ 20 in the triangle shape. Then, the slope of a line is exactly y x. This implies that we are counting the number of reduced fractions y x where (x,y ) are in the triangle. Restrict our attention to the positive triangle: that is, the set of points 1 ≤y <x≤ 21, and let s be the number of reduced fractions. Then, the number of reduced fractions in this set is equal to the number of reduced fractions in the set 1≤x < y≤ 21. Hence, we find that 2 s + 1 is the total number of reduced fractions in the set 1≤x,y≤ 21, which is 21X i=1 21X j=1 1[gcd(i,j ) = 1]. This latter expression is the indicator of the gcd being 1: it is 1 if the gcd is 1 and 0 otherwise. Team Test Solutions April 8, 2023 Furthermore, note that our final answer is 2s + 1 as well (by symmetry and the midline), so we compute this value. Note that since Pn i=1 1[gcd(i,n ) = 1] =φ(n) and 1[gcd(n,n ) = 1] = 0, this implies that we can write nX i=1 nX j=1 1[gcd(i,j ) = 1] = n−1X i=1 n−1X j=1 1[gcd(i,j ) = 1] + 2φ(n). Recursing then yields that 21X i=1 21X j=1 1[gcd(i,j ) = 1] = 1 + 2 21X i=2 φ(i). Computing this last sum is a little bit tedious, but made easier by observing that for odd x, φ(2x) =φ(x) whereas for even x, φ(2x) = 2φ(x). 21X i=2 φ(n) = 1 + 2 + 2 + 4 + 2 + 6 + 4 + 6 + 4 + 10 + 4 + 12 + 6 + 8 + 8 + 16 + 6 + 18 + 8 + 12 = 139. Hence, our answer is 139· 2 + 1 = 279.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2019 SMT Team Problem 15",
+   "question": "Deﬁne f(n) to be the maximum possible least-common-multiple of any sequence of positive integers which sum to n. Find the sum of all possible odd f(n).",
+   "choices": null,
+   "answer": "124",
+   "solution": "Answer: 124. Deﬁne f(n) to be the maximum possible least-common-multiple of any sequence of positive integers which sum to n. Find the sum of all possible odd f(n). Answer: 124 Solution: It is certainly possible to get this answer with a mix of computation and intuition. Here is a formal proof. For convention, let us call a sequence ( s1,s 2,...,s k) of positive integers “optimal for n” if∑ isi =n and LCM (s1,s 2,...,s k) =f(n). We notice a few things. • There exists an optimal arrangement (s1,s 2,...,s k) forn withGCD(s1,s 2,...,s k) = 1. Say that (s1,s 2,...,s k) is an optimal arrangement and assume ∃i,j with si = ab and sj =ac, with a being some positive integer greater than 1 and b andc relatively prime. Then we can replacesj in the list with (a, 1, 1,..., 1) (with 1 repeated (ac)−(a) times). We can continue doing this on any pairs si,sj that are not relatively prime until we have a longer list with elements pairwise relatively prime. Note the LCM is the same so this arrangement is also optimal, and all elements are pairwise relatively prime. Thus, we will continue under the assumption that all optimal arrangements considered consist only of elements which are pairwise relatively prime. (Note, all positive integers are relatively prime to 1). • There exists an optimal arrangement ( s1,s 2,...,s k) for n with all elements powers of primes, or 1. If we have si = pe1 1 pe2 2 , we can simply replace it with the sequence (pe1 1 ,pe2 2 , 1, 1,..., 1), where there arepe1 1 pe2 2 −pe1 1 −pe2 2 repetitions of 1 (it is easy to show that this is nonnegative). We can adopt a similar argument on any elements that are the product of multiple prime powers. Thus, we can repeat this process until we have a list consisting of (pairwise relatively prime) prime powers and 1’s. • Consider an optimal arrangement for n, (s1,s 2,...,s k) with all elements pairwise rel- atively prime prime powers and 1’s. Consider the smallest p such that an element pa appears in the list, with a >0. We show p <5. If p≥ 5 and a = 1, we can replace p with p− 2 and 2. Obviously 2 × (p− 2) > p. Note also that 2 and p− 2 must be pairwise relatively prime to one another because p is prime, and to every other element in the list, because all other elements in the list are prime powers derived from larger primes. So the LCM of 2, p− 2, and the rest of the list is indeed the product of all of SMT 2019 Team Test Solutions March 2, 2019 these numbers. Thus because 2 × (p− 2) > pthis is a contradiction of the fact that the list is optimal for n. Consider now if a > 1. Then, similarly, we can replace pa by the sequence (pa−1,p− 2, 2, 1, 1,..., 1) where there are pa−pa−1−p 1’s. Note that pa−pa−1−p = pa−1(p− 1)−p > 0 for a > 1 and any p. The argument regarding relatively primeness is the same as with a = 1. • From here on, let us consider an optimal arrangement that does not contain any powers of 2 (this is the interesting case - whenf(n) is odd). Now we show that all primes in the list must be raised to the ﬁrst power. Consider some prime p such thatpa is in the list, a> 1. Clearly, there is a power of 2 (call it 2 x) betweenp and 2p. In this case we could replacepa by the sequence (pa−1, 2x, 1, 1, 1..., 1) where there arepa−pa−1−2x 1’s. It is easy to seepa−pa−1−2x≥ 0, becausepa−pa−1−2x>p a−pa−1−2p =pa−1(p−1)−2p and clearly pa−1(p− 1)≥ 2p, because p− 1≥ 2 by assumption p is odd and pa−1≥p by assumption a >1. We are now contributing pa−12x to our LCM instead of pa, but pa−12x>p a which is a contradiction that the arrangement is optimal. Thus all primes must be raised to the ﬁrst power. • Given that we have an optimal arrangement where all elements of the list are odd, we can prove that primes (recall we also proved that they are all raised to power 1) must appear in consecutive order. Say that primes p1 and p3 appear in the list, and they are not consecutive primes (i.e., there is at least 1 prime p2 with p1 < p2 < p3). By Bertrand’s Postulate, we can choose some p2 with p1 < p2 < p3 and p2 > p3/2. Then, we can replace p3 by the sequence (p2,p 3−p2). Because p3−p2 is even, it contributes a factor of 2 to the LCM, and p2 contributes a factor of p2. Thus, we have replaced the factor of p3 in the LCM with (at least) 2 p2, which is larger than p3. This is a contradiction that the arrangement is optimal, thus in an optimal arrangement with all terms odd, no two primes can appear in the list without all of the primes between them also appearing in the list. • Taking all of our results about optimal arrangements and odd optimal arrangements together, we ﬁnd that every odd optimal arrangement is in the form (1, 1,..., 1, 3, 5,... ), continuing up the odd primes consecutively. Our ﬁnal (and most important) result is that the number 11 cannot be included in an odd optimal arrangement. We already proved that all odd optimal arrangements must contain 3 (because the lowest prime must be smaller than 5). So then consider a list that contains 3 and 11. We can replace 3 and 11 with 1, 4, and 9. Note that these replacements leave the optimal arrangement relatively prime, so we can again consider the LCM as the product of elements. And note that 9× 4> 3× 11. Thus we have improved the arrangement, so it is not optimal. So no odd arrangement that contains 11 is optimal. Recall that we proved before that in an odd optimal arrangement, all prime factors must appear consecutively; thus, if an odd optimal arrangement does not contain 11, it cannot contain 13, 17, etc. Thus no odd optimal arrangement contains any terms 11 or greater. • Finally, it is obvious that an odd optimal arrangement cannot contain more than a single 1 - else, we could replace it with a 2 and increase the LCM. Moreover, if we have 3 in our optimal odd arrangement, then we must not have any 1’s: if we have a 1, then we can replace 3 and 1 with 4, which is relatively prime to all odd primes and thus increases the LCM. • Thus the only odd arrangements that we have not ruled out from being optimal are (1), (3), (3, 5), (3, 5, 7). With computation, we can see that these are all optimal and that they yield distinct f(n) of 1, 3, 15, 105. Therefore, the answer is 124 .",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

@@ -11,7 +11,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
          background: #f4f5f7; color: #1c1e21; line-height: 1.55; }
-  .container { max-width: 860px; margin: 0 auto; padding: 24px 16px 80px; }
+  .container { max-width: 1240px; width: 100%; margin: 0 auto; padding: 24px 20px 80px; }
   header.top { background: #2b3a4a; color: #fff; padding: 18px 0; }
   header.top .container { padding: 0 16px; }
   header.top h1 { font-size: 20px; }
@@ -65,34 +65,208 @@
   .score { font-size: 22px; font-weight: 800; }
   .hidden { display: none; }
   .tabs { display: flex; gap: 4px; background: #1f2c3a; padding: 0 16px; }
-  .tabs .container { display: flex; gap: 4px; padding: 0; }
-  .tab { padding: 10px 18px; color: #b8c4d0; cursor: pointer; font-size: 14px;
-         border-bottom: 3px solid transparent; }
+  .tabs .container { display: flex; gap: 2px; padding: 0; align-items: center; }
+  .tab { position: relative; padding: 10px 14px; color: #b8c4d0; cursor: pointer;
+         border-bottom: 3px solid transparent; display: flex; align-items: center; }
+  .tab svg { width: 20px; height: 20px; display: block; }
+  .tab::after { content: attr(data-label); position: absolute; top: calc(100% + 6px); left: 50%;
+                transform: translateX(-50%); background: #1f2c3a; color: #fff; font-size: 12px;
+                padding: 4px 9px; border-radius: 6px; white-space: nowrap; opacity: 0;
+                pointer-events: none; transition: opacity .12s; z-index: 60;
+                box-shadow: 0 3px 10px rgba(0,0,0,.3); }
+  .tab:hover::after { opacity: 1; }
+  .tab-badge { background: #e03131; color: #fff; border-radius: 10px; font-size: 10.5px;
+               padding: 1px 5px; margin-left: 3px; line-height: 1.4; }
+  .tab-badge:empty { display: none; }
   .lang-toggle { margin-left: auto; display: flex; border: 1px solid #4a5a6a; border-radius: 6px; overflow: hidden; }
   .lang-toggle span { padding: 6px 12px; cursor: pointer; font-size: 13px; color: #b8c4d0; }
   .lang-toggle span.on { background: #2b6cb0; color: #fff; }
   .tab:hover { color: #fff; }
-  .tab.active { color: #fff; border-bottom-color: #5ea3f7; font-weight: 600; }
+  .tab.active { color: #fff; border-bottom-color: #5ea3f7; }
   table.stats { width: 100%; border-collapse: collapse; font-size: 14px; }
   table.stats th, table.stats td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; }
   table.stats th { color: #666; font-weight: 600; font-size: 12.5px; }
   .pct-bar { background: #e2e8f0; border-radius: 4px; height: 8px; width: 120px; display: inline-block; vertical-align: middle; }
   .pct-bar > div { background: #2b6cb0; height: 8px; border-radius: 4px; }
   .saved-note { color: #237a23; font-size: 13px; margin-left: 10px; }
+  .auth-box { max-width: 360px; margin: 40px auto; }
+  .auth-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+  .auth-tab { flex: 1; padding: 10px; text-align: center; border-radius: 8px; cursor: pointer; background: #e2e8f0; color: #2d3748; }
+  .auth-tab.active { background: #2b6cb0; color: #fff; }
+  .auth-form { display: flex; flex-direction: column; gap: 12px; }
+  .auth-form input { font-size: 15px; padding: 10px 12px; border: 1.5px solid #dde3ea; border-radius: 8px; }
+  .auth-form .btn { width: 100%; }
+  .auth-msg { font-size: 13px; min-height: 18px; }
+  .auth-msg.err { color: #b02929; }
+  .auth-msg.ok { color: #237a23; }
+  .ann-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 1000; display: flex; align-items: flex-start; justify-content: center; padding-top: 8vh; }
+  .ann-modal { background: #fff; border-radius: 10px; max-width: 560px; width: 92%; max-height: 75vh; overflow-y: auto; padding: 18px 22px; box-shadow: 0 8px 30px rgba(0,0,0,.25); }
+  .ann-title-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .ann-title-bar h3 { margin: 0; }
+  .ann-item { border-top: 1px solid #eee; padding: 10px 0; }
+  .ann-item:first-of-type { border-top: none; }
+  .ann-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .ann-title { font-weight: 600; }
+  .ann-date { color: #999; font-size: 12px; white-space: nowrap; }
+  .ann-body { color: #444; font-size: 14px; margin-top: 4px; white-space: pre-wrap; }
+  .fr-layout { display: grid; grid-template-columns: 320px 1fr; gap: 16px; align-items: start; }
+  @media (max-width: 800px) { .fr-layout { grid-template-columns: 1fr; } }
+  .fr-add { display: flex; gap: 8px; }
+  .fr-add input { flex: 1; }
+  .fr-req { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-top: 1px solid #eee; }
+  .fr-item { display: flex; align-items: center; gap: 8px; padding: 8px 6px; border-top: 1px solid #eee; cursor: pointer; border-radius: 6px; }
+  .fr-item:hover { background: #f5f7fa; }
+  .fr-item.active { background: #eaf1fb; }
+  .fr-name { flex: 1; font-size: 14px; overflow: hidden; text-overflow: ellipsis; }
+  .fr-status { font-size: 12px; color: #999; }
+  .fr-x { color: #bbb; font-size: 12px; padding: 0 4px; }
+  .fr-x:hover { color: #b02929; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #c6ccd4; display: inline-block; flex: none; }
+  .dot.on { background: #2fae5f; }
+  .chat-card { min-height: 420px; display: flex; flex-direction: column; }
+  .chat-head { display: flex; align-items: center; gap: 8px; padding-bottom: 8px; border-bottom: 1px solid #eee; }
+  .chat-msgs { flex: 1; overflow-y: auto; min-height: 260px; max-height: 55vh; padding: 10px 2px; }
+  .chat-row { display: flex; margin: 4px 0; }
+  .chat-row.mine { justify-content: flex-end; }
+  .bubble { max-width: 70%; padding: 7px 11px; border-radius: 12px; background: #eef1f5; font-size: 14px; white-space: pre-wrap; word-break: break-word; }
+  .chat-row.mine .bubble { background: #2f6fb0; color: #fff; }
+  .chat-input { display: flex; gap: 8px; padding-top: 8px; border-top: 1px solid #eee; }
+  .chat-input input { flex: 1; }
+  .btn.sm { padding: 4px 10px; font-size: 12px; }
+  .btn.ghost { background: #e5e9ee; color: #333; }
+  .pk-form { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+  .pk-form select { min-width: 130px; }
+  .pk-row small { color: #555; }
+  .pk-mode-tabs { display: flex; gap: 0; border: 1.5px solid #cbd5e0; border-radius: 10px;
+                  overflow: hidden; margin-bottom: 10px; max-width: 320px; }
+  .pk-mode-tab { flex: 1; padding: 7px 0; text-align: center; font-size: 14px; font-weight: 700;
+                 cursor: pointer; background: #fff; color: #66707c; }
+  .pk-mode-tab.on { background: #2b3a4a; color: #fff; }
+  .race-friends { display: flex; flex-wrap: wrap; gap: 6px; max-height: 120px; overflow-y: auto;
+                  margin-bottom: 8px; }
+  .race-friend { display: flex; align-items: center; gap: 4px; border: 1px solid #cbd5e0;
+                 border-radius: 18px; padding: 4px 10px; font-size: 13px; cursor: pointer; background: #fff; }
+  .race-friend:has(input:checked) { background: #ebf3fb; border-color: #2b6cb0; }
+  .pk-stand-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+                  padding: 3px 0; font-size: 14px; border-top: 1px dashed #eee; }
+  .pk-stand-row:first-child { border-top: none; }
+  .cl-join-box { background: #f0f6ff; border: 1.5px solid #c9dcff; border-radius: 12px; padding: 14px 16px; margin-bottom: 6px; }
+  /* --- games --- */
+  .game-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+  .game-card { cursor: pointer; transition: transform .12s, box-shadow .12s; }
+  .game-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(30,50,80,.12); }
+  .fc-wrap { display: flex; gap: 18px; flex-wrap: wrap; align-items: flex-start; }
+  .fc-board { display: grid; grid-template-columns: repeat(8, 44px); grid-template-rows: repeat(8, 44px);
+              border: 2px solid #8a94a6; border-radius: 6px; overflow: hidden; user-select: none; }
+  .fc-cell { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+             font-size: 26px; cursor: default; }
+  .fc-cell.lit { background: #eef3fb; }
+  .fc-cell.sel { box-shadow: inset 0 0 0 3px #4a7dff; }
+  .fc-cell.tgt { box-shadow: inset 0 0 0 3px #ffb84d; }
+  .fc-you { color: #2b6fe3; } .fc-ai { color: #d3453d; }
+  .fc-side { min-width: 210px; max-width: 260px; }
+  .fc-funcs { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+  .fc-func { font-size: 17px; padding: 9px 12px; border: 1.5px solid #c9d4e4; border-radius: 8px;
+             background: #fff; cursor: pointer; font-family: ui-monospace, Menlo, monospace; }
+  .fc-func:hover:not(:disabled) { border-color: #4a7dff; background: #f0f6ff; }
+  .fc-func:disabled { opacity: .35; cursor: not-allowed; }
+  .gw-wrap { display: flex; gap: 18px; flex-wrap: wrap; align-items: flex-start; }
+  .gw-canvas-box { border: 1.5px solid #c9d4e4; border-radius: 8px; background: #fff; }
+  .gw-ctl { min-width: 230px; max-width: 280px; }
+  .gw-ctl label { font-size: 13px; color: #555; display: block; margin: 8px 0 2px; }
+  .gw-ctl input[type=range] { width: 100%; }
+  .cl-code { font-family: ui-monospace, Menlo, monospace; font-size: 18px; font-weight: 800;
+             background: #f1f4f8; border-radius: 8px; padding: 4px 12px; letter-spacing: 1px; }
+  .cl-students { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .cl-student { display: flex; align-items: center; gap: 5px; background: #f1f4f8; border-radius: 16px;
+                padding: 3px 10px; font-size: 13px; }
+  .cl-reports { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 8px; }
+  .cl-reports th, .cl-reports td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #eee; }
+  .cl-reports th { color: #666; font-weight: 600; font-size: 12px; }
+  /* --- whiteboard --- */
+  .wb-layout { display: grid; grid-template-columns: 310px 1fr; gap: 16px; align-items: start; }
+  @media (max-width: 800px) { .wb-layout { grid-template-columns: 1fr; } }
+  .wb-tools { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+  .wb-tool { padding: 5px 10px; border-radius: 8px; border: 1px solid #cbd5e0; background: #fff;
+             cursor: pointer; font-size: 13px; }
+  .wb-tool:hover { border-color: #2b6cb0; }
+  .wb-tool.on { background: #2b6cb0; color: #fff; border-color: #2b6cb0; }
+  .wb-color { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #fff;
+              box-shadow: 0 0 0 1px #cbd5e0; cursor: pointer; flex: none; }
+  .wb-color.on { box-shadow: 0 0 0 2px #1c1e21; }
+  .wb-sel-row { display: flex; flex-direction: column; gap: 6px; margin-bottom: 4px; }
+  .wb-grp-row { display: flex; gap: 0; margin-bottom: 6px; border: 1.5px solid #dde3ea; border-radius: 8px; overflow: hidden; }
+  .wb-grp { flex: 1; padding: 6px 0; font-size: 13px; font-weight: 600; background: #f1f4f8; color: #555; border: none; cursor: pointer; }
+  .wb-grp.on { background: #fff; color: #1c1e21; box-shadow: inset 0 -2px 0 #4a7dff; }
+  .wb-sel-row select, .wb-search { font-size: 13px; padding: 6px 8px; border: 1.5px solid #dde3ea;
+                                    border-radius: 8px; background: #fff; width: 100%; }
+  .wb-items { max-height: 48vh; overflow-y: auto; display: flex; flex-direction: column; gap: 8px;
+              padding: 4px 2px 4px 0; }
+  .wb-item { border: 1px solid #dde3ea; border-radius: 8px; padding: 6px 9px; cursor: pointer;
+             background: #fff; text-align: left; font-size: 13.5px; line-height: 1.9;
+             overflow-wrap: anywhere; display: flex; align-items: baseline; gap: 6px; }
+  .wb-item:hover { border-color: #2b6cb0; background: #ebf3fb; }
+  .wb-item .wb-tag { flex: none; font-size: 10px; color: #98a2ae; background: #f1f4f8;
+                     border-radius: 4px; padding: 0 4px; align-self: center; }
+  .wb-custom-btn { width: 100%; margin-top: 10px; }
+  .wb-edit { position: absolute; top: -8px; left: -8px; width: 18px; height: 18px; border-radius: 50%;
+             background: #2b6cb0; color: #fff; font-size: 11px; line-height: 17px; text-align: center;
+             cursor: pointer; display: none; }
+  .wb-note:hover .wb-edit { display: block; }
+  .wb-editor { position: absolute; top: 8px; left: 8px; right: 8px; z-index: 5000; background: #fff;
+               border: 1.5px solid #cbd5e0; border-radius: 10px;
+               box-shadow: 0 6px 24px rgba(0,0,0,.18); padding: 10px 12px; }
+  .wb-ed-row { display: flex; gap: 10px; align-items: flex-start; }
+  .wb-ed-tex { flex: 1; min-width: 0; font-size: 14px; padding: 8px 10px; border: 1.5px solid #dde3ea;
+               border-radius: 8px; resize: vertical; font-family: ui-monospace, Menlo, monospace; }
+  .wb-ed-prev { flex: 1; min-width: 0; border: 1px dashed #e2e8f0; border-radius: 8px; padding: 8px 10px;
+                min-height: 42px; max-height: 130px; overflow: auto; font-size: 15px; background: #fafbfc; }
+  .wb-ed-prev.err { color: #b02929; border-color: #f3c2c2; background: #fdf3f3; font-size: 12.5px; }
+  .wb-ed-prev.plain { font-family: inherit; font-size: 14.5px; white-space: pre-wrap; }
+  .wb-ed-btns { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; align-items: center; }
+  .wb-kb { margin-top: 8px; border-top: 1px solid #eee; padding-top: 8px; }
+  .wb-kb.hidden { display: none; }
+  .wb-kb-tabs { display: flex; gap: 4px; margin-bottom: 6px; flex-wrap: wrap; }
+  .wb-kb-tab { padding: 3px 10px; font-size: 12px; border-radius: 14px; border: 1px solid #cbd5e0;
+               background: #fff; cursor: pointer; }
+  .wb-kb-tab.on { background: #2b6cb0; color: #fff; border-color: #2b6cb0; }
+  .wb-kb-keys { display: flex; flex-wrap: wrap; gap: 4px; max-height: 128px; overflow-y: auto; }
+  .wb-key { min-width: 30px; padding: 4px 7px; font-size: 13px; border: 1px solid #dde3ea;
+            border-radius: 6px; background: #fff; cursor: pointer;
+            font-family: ui-monospace, Menlo, monospace; }
+  .wb-key:hover { background: #ebf3fb; border-color: #2b6cb0; }
+  .wb-board-wrap { position: relative; padding: 0; overflow: hidden;
+                   height: calc(100vh - 235px); min-height: 460px; }
+  #wbCanvas { position: absolute; inset: 0; width: 100%; height: 100%; background: #fff;
+              border-radius: 12px; touch-action: none; cursor: crosshair; }
+  .wb-note { position: absolute; cursor: grab; background: #fff; border: 1px solid #cbd5e0;
+             border-radius: 8px; padding: 5px 10px; box-shadow: 0 2px 6px rgba(0,0,0,.14);
+             user-select: none; touch-action: none; }
+  .wb-note:active { cursor: grabbing; }
+  .wb-del { position: absolute; top: -8px; right: -8px; width: 18px; height: 18px; border-radius: 50%;
+            background: #e03131; color: #fff; font-size: 12px; line-height: 17px; text-align: center;
+            cursor: pointer; display: none; }
+  .wb-note:hover .wb-del { display: block; }
 </style>
 </head>
 <body>
 <header class="top"><div class="container">
   <h1>📝 MockTest Maker</h1>
-  <p>Mock exams built from real competition 真题 — numbers modified, difficulty preserved</p>
+  <p id="headerSubtitle">Mock exams built from real competition problems — numbers modified, difficulty preserved</p>
 </div></header>
 <nav class="tabs"><div class="container">
-  <div class="tab active" data-tab="new" onclick="showTab('new')" id="tabNew">🎲 New Test</div>
-  <div class="tab" data-tab="tests" onclick="showTab('tests')" id="tabTests">📋 My Tests <span id="testCount"></span></div>
-  <div class="tab" data-tab="stats" onclick="showTab('stats')" id="tabStats">📊 Stats</div>
+  <div class="tab active" data-tab="new" onclick="showTab('new')" id="tabNew" data-label="New Test"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8.5v7M8.5 12h7"/></svg></div>
+  <div class="tab" data-tab="tests" onclick="showTab('tests')" id="tabTests" data-label="My Tests"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l5 5v15H6z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h4"/></svg><span class="tab-badge" id="testCount"></span></div>
+  <div class="tab" data-tab="stats" onclick="showTab('stats')" id="tabStats" data-label="Stats"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 20v-7M11 20V5M17 20v-4"/><path d="M2 20h20"/></svg></div>
+  <div class="tab" data-tab="wb" onclick="showTab('wb')" id="tabWB" data-label="Whiteboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div>
+  <div class="tab" data-tab="games" onclick="showTab('games')" id="tabGames" data-label="Games"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="3"/><path d="M6 11h4M8 9v4"/><circle cx="16" cy="10.5" r="0.6" fill="currentColor"/><circle cx="18.5" cy="12.5" r="0.6" fill="currentColor"/><path d="M8 7V5M16 7V5"/></svg></div>
+  <div class="tab" data-tab="friends" onclick="showTab('friends')" id="tabFriends" style="display:none" data-label="Friends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.4 3.4-5 6.5-5s5.7 1.6 6.5 5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16.2 15.1c2.7.2 4.6 1.6 5.3 4.4"/></svg></div>
+  <div class="tab" data-tab="pk" onclick="showTab('pk')" id="tabPK" style="display:none" data-label="PK Battle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3l8 8"/><path d="M20 3l-8 8"/><path d="M14 14l3.5 3.5"/><path d="M10 14l-3.5 3.5"/><path d="M12.8 15.2l2.4-2.4"/><path d="M8.8 12.8l2.4 2.4"/></svg><span class="tab-badge" id="pkBadge"></span></div>
+  <div class="tab" data-tab="classes" onclick="showTab('classes')" id="tabClasses" style="display:none" data-label="Classes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10l8-6 8 6v11"/><path d="M2 21h20"/><path d="M10 21v-5h4v5"/></svg></div>
   <div class="lang-toggle"><span id="langEN" onclick="setLang('en')">EN</span><span id="langZH" onclick="setLang('zh')">中文</span></div>
+  <div id="userArea" style="margin-left:auto;display:flex;align-items:center;gap:10px;color:#b8c4d0;font-size:13px"></div>
 </div></nav>
-<div class="leave-warn" id="leaveWarn">⚠ You left the test! It will close in <span id="leaveCount">30</span>s — come back now to keep it.</div>
+<div class="leave-warn" id="leaveWarn"></div>
 <div class="container" id="app">Loading…</div>
 
 <script>
@@ -100,20 +274,55 @@ const app = document.getElementById('app');
 const I18N = {
   en: {
     tabNew: '🎲 New Test', tabTests: '📋 My Tests', tabStats: '📊 Stats',
-    tests: 'tests', problems: 'real problems', problemsModified: 'real problems with various modified questions',
+    tests: 'tests', problems: 'real problems', problemsModified: 'real problems (modified variants)',
     questions: 'questions', minutes: 'minutes', min: 'min',
+    pt: 'pt', pts: 'pts',
     backAll: '‹ Back to all competitions', back: '‹ Back to',
     category: 'Category', timeLimit: 'Time limit', bank: 'Problem bank',
     content: 'Content', generate: 'Generate →', start: 'Start →', retake: 'Retake →',
     currentTests: '📄 Current Tests', pastTests: '📝 Past Tests',
     noTests: 'No tests yet — generate one from the New Test tab.',
     noAttempts: 'No attempts yet.',
+    loading: 'Loading…',
+    headerSubtitle: 'Mock exams built from real competition problems — numbers modified, difficulty preserved',
+    login: 'Log in', register: 'Register', logout: 'Log out',
+    tabFriends: '👥 Friends',
+    addFriend: 'Add friend', friendRequests: 'Friend requests', noFriends: 'No friends yet — add someone by username.',
+    accept: 'Accept', decline: 'Decline', remove: 'Remove', online: 'online', offline: 'offline',
+    selectFriend: 'Select a friend to start chatting.', typeMessage: 'Type a message…', send: 'Send',
+    requestSent: 'Request sent.', userNotFound: 'User not found.',
+    tabPK: '⚔️ PK', tabWhiteboard: 'Whiteboard', tabGames: '🎮 Games',
+    gChess: '♞ Function Chess', gChessDesc: 'Move your pieces with functions — reach the far side or capture them all. Click a piece, then a function.',
+    gGraph: '📈 Graph War', gGraphDesc: 'Pick y = mx + b and fire! The line with more area above the other on [−10, 10] wins the round. First to 3.',
+    gPlay: 'Play', gBack: '‹ Back to games', gYouWin: '🎉 You win!', gAiWin: '🤖 AI wins!', gYourTurn: 'Your turn — pick a piece, then a function',
+    gAiTurn: 'AI is thinking…', gSelectPiece: 'Select one of your pieces (blue)', gInvalid: 'That move is off the board — try another function',
+    gYou: 'You', gAI: 'AI', gRound: 'Round', gFire: '🔥 Fire!',
+    gLineYou: 'Your line', gLineAi: "AI's line", gRoundWin: 'Round won — your line is on top!', gRoundLose: 'Round lost — AI\'s line is on top', gRoundTie: 'Tie round',
+    wbPen: 'Pen', wbEraser: 'Eraser', wbUndo: 'Undo', wbClear: 'Clear',
+    wbCustomPh: 'Type LaTeX, e.g. e^{i\\pi}+1=0', wbAdd: 'Add',
+    wbSearchPh: 'Filter formulas…', wbCustom: 'Custom formula',
+    wbSave: 'Save', wbCancel: 'Cancel', wbKb: 'Keyboard',
+    kbVars: 'Variables', kbGreek: 'Greek', kbOps: 'Operators', kbFuncs: 'Functions',
+    pkChallenge: 'Challenge a friend', pkOpponent: 'Friend',
+    pkCompetition: 'Competition', pkDifficulty: 'Difficulty', pkSend: '⚔️ Challenge!',
+    pkIncoming: 'Challenges for you', pkOutgoing: 'Waiting for opponent', pkActive: 'Battles in progress', pkHistory: 'History',
+    pkAccept: 'Accept', pkDecline: 'Decline', pkTakeTest: 'Take test', pkInProgress: 'in progress',
+    pkYou: 'You', pkWon: 'You won 🎉', pkLost: 'You lost', pkDraw: 'Draw', pkDeclined: 'Declined', pkNoFriends: 'Add friends first to challenge them.',
+    pkModeDuel: '⚔️ 1v1', pkModeRace: '🏁 Race', pkPickFriends: 'Pick friends (2–5):', pkInvite: 'Invite', pkJoined: 'Joined', pkWaiting: 'waiting', pkHost: 'host', pkStartRace: 'Start race', pkStandings: 'Standings', pkRaceWinner: 'Winner', pkExpired: 'Expired',
+    tabClasses: '🏫 Classes', clCreate: 'Create class', clNamePh: 'Class name, e.g. Math 7A', clCodePh: 'Join code', clNoClassesT: 'No classes yet — create your first one above.', clNone: 'Not in any class yet.', clJoin: 'Join with code', clJoinPh: 'Enter class code', clSchool: 'School', clTeacher: 'Teacher', clReports: 'Reports', clNoStudents: 'No students yet — share the join code.', clCode: 'Code', clDate: 'Date', clStudent: 'Student', clTest: 'Test', clScore: 'Score', clTime: 'Time', clNoReports: 'No submissions yet.', authStudent: 'Student', authTeacher: 'Teacher', school: 'School / organization', authConfirm: 'Confirm password', authFillAll: 'Please fill in all fields', authPassMismatch: 'Passwords do not match',
+    announcements: '📢 Announcements', noAnnouncements: 'No announcements yet.',
+    close: 'Close',
+    username: 'Username', password: 'Password',
+    welcome: 'Welcome', welcomeBack: 'Welcome back', guest: 'Guest',
+    authRequired: 'Please log in to save your tests and track progress.',
     submitted: 'submitted', answered: 'answered', proof: 'proof',
     problem: 'Problem', easy: 'Easy', medium: 'Medium', hard: 'Hard',
     modifiedFrom: 'Modified from', realProblem: 'Real problem ·',
     showSolution: 'Show solution', answer: 'Answer', noSolution: 'No solution available yet — see the source link on AoPS.',
     submit: 'Submit', exit: 'Exit', score: 'Score', solutionsRevealed: 'Solutions revealed',
-    savedOk: '✓ saved to My Tests', savedFail: '⚠ save failed',
+    savedOk: '✓ saved to My Tests', savedFail: '⚠ save failed', savedGuest: '✓ done (log in to save results)',
+    saving: 'saving…',
+    generationFailed: 'generation failed',
     testsTaken: 'tests taken', questionsAnswered: 'questions answered', averageScore: 'average score',
     byCompetition: 'By competition', competition: 'Competition', attempts: 'Attempts', average: 'Average', best: 'Best',
     leaveWarn1: '⚠ You left the test! It will close in', leaveWarn2: 's — click here to go back to your test.',
@@ -124,18 +333,53 @@ const I18N = {
     tabNew: '🎲 生成新试卷', tabTests: '📋 我的试卷', tabStats: '📊 统计',
     tests: '套测试', problems: '道真题', problemsModified: '道真题（含改编题）',
     questions: '题', minutes: '分钟', min: '分钟',
+    pt: '分', pts: '分',
     backAll: '‹ 返回全部竞赛', back: '‹ 返回',
     category: '科目类别', timeLimit: '时间限制', bank: '题库',
     content: '内容', generate: '生成 →', start: '开始 →', retake: '重做 →',
     currentTests: '📄 当前试卷', pastTests: '📝 历史试卷',
     noTests: '还没有试卷 — 去“生成新试卷”页生成一套吧。',
     noAttempts: '还没有答题记录。',
+    loading: '加载中…',
+    headerSubtitle: '基于真实竞赛真题的模拟卷 — 数字改写，难度保留',
+    login: '登录', register: '注册', logout: '退出',
+    username: '用户名', password: '密码',
+    welcome: '欢迎', welcomeBack: '欢迎回来', guest: '游客',
+    authRequired: '请登录以保存试卷并跟踪学习进度。',
     submitted: '提交于', answered: '已作答', proof: '证明题',
     problem: '第', easy: '简单', medium: '中等', hard: '困难',
     modifiedFrom: '改编自', realProblem: '真题 ·',
+    announcements: '📢 公告', noAnnouncements: '暂无公告。',
+    close: '关闭',
+    tabFriends: '👥 好友',
+    addFriend: '添加好友', friendRequests: '好友请求', noFriends: '暂无好友 — 输入用户名添加。',
+    accept: '接受', decline: '拒绝', remove: '删除', online: '在线', offline: '离线',
+    selectFriend: '选择好友开始聊天。', typeMessage: '输入消息…', send: '发送',
+    requestSent: '请求已发送。', userNotFound: '用户不存在。',
+    tabPK: '⚔️ 对战', tabWhiteboard: '白板', tabGames: '🎮 小游戏',
+    gChess: '♞ 函数棋', gChessDesc: '用函数走棋子 — 抵达对岸或吃光对方获胜。先点棋子，再选函数。',
+    gGraph: '📈 图像战争', gGraphDesc: '选择 y = mx + b 开炮！在 [−10, 10] 上压在对方上面的面积更大者赢得该回合，先到 3 分获胜。',
+    gPlay: '开始', gBack: '‹ 返回游戏列表', gYouWin: '🎉 你赢了！', gAiWin: '🤖 AI 赢了！', gYourTurn: '你的回合 — 先点棋子，再选函数',
+    gAiTurn: 'AI 思考中…', gSelectPiece: '选择你的棋子（蓝色）', gInvalid: '这步走出棋盘了 — 换个函数试试',
+    gYou: '你', gAI: 'AI', gRound: '回合', gFire: '🔥 开火！',
+    gLineYou: '你的直线', gLineAi: 'AI 的直线', gRoundWin: '本回合你赢了 — 你的线在上方！', gRoundLose: '本回合输了 — AI 的线在上方', gRoundTie: '本回合平局',
+    wbPen: '画笔', wbEraser: '橡皮', wbUndo: '撤销', wbClear: '清空',
+    wbCustomPh: '输入 LaTeX，如 e^{i\\pi}+1=0', wbAdd: '添加',
+    wbSearchPh: '搜索公式…', wbCustom: '自定义公式',
+    wbSave: '保存', wbCancel: '取消', wbKb: '键盘',
+    kbVars: '变量', kbGreek: '希腊字母', kbOps: '运算符', kbFuncs: '函数',
+    pkChallenge: '挑战好友', pkOpponent: '好友',
+    pkCompetition: '竞赛', pkDifficulty: '难度', pkSend: '⚔️ 发起挑战！',
+    pkIncoming: '收到的挑战', pkOutgoing: '等待对方接受', pkActive: '进行中的对战', pkHistory: '历史记录',
+    pkAccept: '接受', pkDecline: '拒绝', pkTakeTest: '进入测试', pkInProgress: '进行中',
+    pkYou: '你', pkWon: '你赢了 🎉', pkLost: '你输了', pkDraw: '平局', pkDeclined: '已拒绝', pkNoFriends: '先添加好友才能挑战。',
+    pkModeDuel: '⚔️ 1v1', pkModeRace: '🏁  Race', pkPickFriends: '选择好友（2–5 人）：', pkInvite: '邀请', pkJoined: '已加入', pkWaiting: '等待中', pkHost: '房主', pkStartRace: '开赛', pkStandings: '排名', pkRaceWinner: '胜者', pkExpired: '已过期',
+    tabClasses: '🏫 班级', clCreate: '创建班级', clNamePh: '班级名称，如 数学 7A', clCodePh: '加入码', clNoClassesT: '还没有班级 — 在上方创建第一个吧。', clNone: '还没有加入任何班级。', clJoin: '用加入码加入', clJoinPh: '输入班级加入码', clSchool: '学校', clTeacher: '教师', clReports: '成绩报告', clNoStudents: '还没有学生 — 把加入码发给他们吧。', clCode: '加入码', clDate: '日期', clStudent: '学生', clTest: '试卷', clScore: '得分', clTime: '用时', clNoReports: '还没有提交记录。', authStudent: '学生', authTeacher: '教师', school: '学校 / 机构', authConfirm: '确认密码', authFillAll: '请填写所有必填项', authPassMismatch: '两次输入的密码不一致',
     showSolution: '显示解答', answer: '答案', noSolution: '暂无解答 — 请查看 AoPS 源链接。',
     submit: '提交', exit: '退出', score: '得分', solutionsRevealed: '已显示解答',
-    savedOk: '✓ 已保存到“我的试卷”', savedFail: '⚠ 保存失败',
+    savedOk: '✓ 已保存到“我的试卷”', savedFail: '⚠ 保存失败', savedGuest: '✓ 已完成（登录后可保存成绩）',
+    saving: '保存中…',
+    generationFailed: '生成失败',
     testsTaken: '已测套数', questionsAnswered: '已答题数', averageScore: '平均得分',
     byCompetition: '按竞赛统计', competition: '竞赛', attempts: '次数', average: '平均分', best: '最高分',
     leaveWarn1: '⚠ 你离开了试卷！将在', leaveWarn2: '秒后关闭 — 点此返回试卷。',
@@ -148,12 +392,26 @@ const t = k => (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k;
 
 function setLang(l) {
   LANG = l;
+  document.documentElement.lang = l === 'zh' ? 'zh-CN' : 'en';
   localStorage.setItem('mt_lang', l);
   document.getElementById('langEN').classList.toggle('on', l === 'en');
   document.getElementById('langZH').classList.toggle('on', l === 'zh');
-  document.getElementById('tabNew').innerHTML = t('tabNew');
-  document.getElementById('tabTests').innerHTML = t('tabTests') + ' <span id="testCount"></span>';
-  document.getElementById('tabStats').innerHTML = t('tabStats');
+  const tip = k => { const s = t(k); const i = s.indexOf(' '); return i < 0 ? s : s.slice(i + 1); };  // strip leading emoji
+  document.getElementById('tabNew').dataset.label = tip('tabNew');
+  document.getElementById('tabTests').dataset.label = tip('tabTests');
+  document.getElementById('tabStats').dataset.label = tip('tabStats');
+  document.getElementById('tabWB').dataset.label = t('tabWhiteboard');
+  const tf = document.getElementById('tabFriends');
+  if (tf) tf.dataset.label = tip('tabFriends');
+  const tp = document.getElementById('tabPK');
+  if (tp) tp.dataset.label = tip('tabPK');
+  const tc = document.getElementById('tabClasses');
+  if (tc) tc.dataset.label = t('tabClasses');
+  const sub = document.getElementById('headerSubtitle');
+  if (sub) sub.textContent = t('headerSubtitle');
+  const app = document.getElementById('app');
+  if (app && app.textContent === 'Loading…' || app.textContent === '加载中…') app.textContent = t('loading');
+  updateUserArea();
   // re-render current view
   if (state.test && document.querySelector('.sticky-bar')) {
     renderTest();
@@ -167,11 +425,676 @@ function setLang(l) {
       // re-apply grading visuals is complex; simplest: re-submit visually
       document.querySelectorAll('.card.submitted').forEach(c => c.classList.remove('submitted'));
     }
+  } else if (!state.user && state.authMode) {
+    renderAuth();
   } else {
     doShowTab(state.tab || 'new');
   }
 }
-let state = { test: null, answers: {}, submitted: false, deadline: null, timerId: null, startedAt: null, tab: 'new' };
+let state = { test: null, answers: {}, submitted: false, deadline: null, timerId: null, startedAt: null, tab: 'new', user: null, authMode: 'login', authRole: 'student', role: 'student', school: '', pkMode: 'duel', badgeTimer: null };
+
+function updateUserArea() {
+  const area = document.getElementById('userArea');
+  if (!area) return;
+  const friendsTab = document.getElementById('tabFriends');
+  const pkTab = document.getElementById('tabPK');
+  if (state.user) {
+    area.innerHTML = `<span style="cursor:pointer" onclick="showAnnouncements()">${t('announcements')}</span><span>${state.user}</span><span style="cursor:pointer" onclick="logout()">${t('logout')}</span>`;
+    if (friendsTab) friendsTab.style.display = '';
+    if (pkTab) pkTab.style.display = '';
+    const clTab = document.getElementById('tabClasses');
+    if (clTab) clTab.style.display = '';
+  } else {
+    area.innerHTML = `<span style="cursor:pointer" onclick="showAuth('login')">${t('login')}</span>`;
+    if (friendsTab) friendsTab.style.display = 'none';
+    if (pkTab) pkTab.style.display = 'none';
+    const clTab2 = document.getElementById('tabClasses');
+    if (clTab2) clTab2.style.display = 'none';
+  }
+}
+
+async function init() {
+  setLang(LANG);
+  const r = await fetch('/api/me', { credentials: 'same-origin' });
+  const data = await r.json();
+  if (data.user) {
+    state.user = data.user;
+    state.role = data.role || 'student';
+    state.school = data.school || '';
+    updateUserArea();
+    updatePkBadge();
+    startBadgePoll();
+    doShowTab('tests');
+  } else {
+    state.tab = 'new';
+    updateUserArea();
+    doShowTab('new');
+  }
+}
+
+function showAuth(mode) {
+  state.authMode = mode;
+  renderAuth();
+}
+
+function renderAuth() {
+  const loginActive = state.authMode === 'login';
+  app.innerHTML = `
+    <div class="card auth-box">
+      <h2 style="text-align:center;margin-bottom:8px">MockTest Maker</h2>
+      <p style="text-align:center;color:#666;font-size:14px">${t('authRequired')}</p>
+      <div class="auth-tabs">
+        <div class="auth-tab ${loginActive ? 'active' : ''}" onclick="showAuth('login')">${t('login')}</div>
+        <div class="auth-tab ${!loginActive ? 'active' : ''}" onclick="showAuth('register')">${t('register')}</div>
+      </div>
+      <div class="auth-tabs" style="margin-bottom:2px">
+        <div class="auth-tab ${state.authRole === 'student' ? 'active' : ''}" onclick="state.authRole='student';renderAuth()">${t('authStudent')}</div>
+        <div class="auth-tab ${state.authRole === 'teacher' ? 'active' : ''}" onclick="state.authRole='teacher';renderAuth()">${t('authTeacher')}</div>
+      </div>
+      <form class="auth-form" onsubmit="event.preventDefault(); ${loginActive ? 'doLogin()' : 'doRegister()'};">
+        <label style="font-size:13px;color:#666">${t('username')}</label>
+        <input type="text" id="authUser" autocomplete="username" required>
+        <label style="font-size:13px;color:#666">${t('password')}</label>
+        <input type="password" id="authPass" autocomplete="${loginActive ? 'current-password' : 'new-password'}" required>
+        ${!loginActive ? `
+        <label style="font-size:13px;color:#666">${t('authConfirm')}</label>
+        <input type="password" id="authPass2" autocomplete="new-password" required>` : ''}
+        ${!loginActive && state.authRole === 'teacher' ? `
+        <label style="font-size:13px;color:#666">${t('school')}</label>
+        <input type="text" id="authSchool" required>` : ''}
+        <button type="submit" class="btn">${loginActive ? t('login') : t('register')}</button>
+      </form>
+      <div class="auth-msg" id="authMsg"></div>
+    </div>`;
+}
+
+async function doLogin() {
+  const username = document.getElementById('authUser').value.trim();
+  const password = document.getElementById('authPass').value;
+  const msg = document.getElementById('authMsg');
+  msg.className = 'auth-msg';
+  msg.textContent = '';
+  if (!username || !password) {
+    msg.className = 'auth-msg err';
+    msg.textContent = t('authFillAll');
+    return;
+  }
+  const r = await fetch('/api/login', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin',
+    body: JSON.stringify({username, password}),
+  });
+  const data = await r.json();
+  if (data.ok) {
+    state.user = data.user;
+    await refreshMe();
+    updateUserArea();
+    updatePkBadge();
+    startBadgePoll();
+    state.authMode = null;
+    doShowTab(state.tab && state.tab !== 'new' ? state.tab : 'tests');
+  } else {
+    msg.className = 'auth-msg err';
+    msg.textContent = data.error || 'login failed';
+  }
+}
+
+async function doRegister() {
+  const username = document.getElementById('authUser').value.trim();
+  const password = document.getElementById('authPass').value;
+  const msg = document.getElementById('authMsg');
+  msg.className = 'auth-msg';
+  msg.textContent = '';
+  const pass2 = document.getElementById('authPass2') ? document.getElementById('authPass2').value : '';
+  const schoolEl = document.getElementById('authSchool');
+  if (!username || !password || (schoolEl && !schoolEl.value.trim())) {
+    msg.className = 'auth-msg err';
+    msg.textContent = t('authFillAll');
+    return;
+  }
+  if (password !== pass2) {
+    msg.className = 'auth-msg err';
+    msg.textContent = t('authPassMismatch');
+    return;
+  }
+  const body = {username, password, role: state.authRole};
+  if (state.authRole === 'teacher' && schoolEl) body.school = schoolEl.value.trim();
+  const r = await fetch('/api/register', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin',
+    body: JSON.stringify(body),
+  });
+  const data = await r.json();
+  if (data.ok) {
+    state.user = data.user;
+    await refreshMe();
+    updateUserArea();
+    updatePkBadge();
+    startBadgePoll();
+    state.authMode = null;
+    doShowTab('tests');
+  } else {
+    msg.className = 'auth-msg err';
+    msg.textContent = data.error || 'register failed';
+  }
+}
+
+async function showAnnouncements() {
+  let items = [];
+  try {
+    const r = await fetch('/api/announcements', {credentials: 'same-origin'});
+    if (r.ok) items = (await r.json()).announcements || [];
+  } catch (e) { /* fall through, show empty state */ }
+  const old = document.getElementById('annOverlay');
+  if (old) old.remove();
+  const rows = items.length
+    ? items.map(a => `
+      <div class="ann-item">
+        <div class="ann-head"><span class="ann-title">${escapeHtml(a.title || '')}</span><span class="ann-date">${escapeHtml(a.date || '')}</span></div>
+        <div class="ann-body">${escapeHtml(a.body || '')}</div>
+      </div>`).join('')
+    : `<p style="color:#666">${t('noAnnouncements')}</p>`;
+  const overlay = document.createElement('div');
+  overlay.id = 'annOverlay';
+  overlay.className = 'ann-overlay';
+  overlay.innerHTML = `
+    <div class="ann-modal">
+      <div class="ann-title-bar"><h3>${t('announcements')}</h3>
+        <button class="btn" onclick="closeAnnouncements()">${t('close')}</button></div>
+      ${rows}
+    </div>`;
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeAnnouncements(); });
+  document.body.appendChild(overlay);
+}
+
+function closeAnnouncements() {
+  const o = document.getElementById('annOverlay');
+  if (o) o.remove();
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+}
+
+async function logout() {
+  stopChatPolling();
+  stopPkPolling();
+  await fetch('/api/logout', {method: 'POST', credentials: 'same-origin'});
+  state.user = null;
+  state.role = 'student';
+  state.school = '';
+  stopBadgePoll();
+  state.test = null; state.answers = {}; state.submitted = false;
+  updateUserArea();
+  doShowTab('new');
+}
+
+// --- identity + PK invite badge ---
+async function refreshMe() {
+  try {
+    const d = await (await fetch('/api/me', {credentials: 'same-origin'})).json();
+    state.role = d.role || 'student';
+    state.school = d.school || '';
+  } catch (e) { state.role = 'student'; }
+}
+async function updatePkBadge() {
+  const b = document.getElementById('pkBadge');
+  if (!b || !state.user) return;
+  if (state.tab === 'pk') { b.textContent = ''; return; }  // invites visible on the PK tab itself
+  try {
+    const d = await (await fetch('/api/pk/invites', {credentials: 'same-origin'})).json();
+    b.textContent = d.count || '';
+  } catch (e) { /* keep old badge */ }
+}
+function startBadgePoll() {
+  stopBadgePoll();
+  state.badgeTimer = setInterval(updatePkBadge, 15000);
+}
+function stopBadgePoll() {
+  if (state.badgeTimer) { clearInterval(state.badgeTimer); state.badgeTimer = null; }
+  const b = document.getElementById('pkBadge');
+  if (b) b.textContent = '';
+}
+
+// ---------- PK (1v1 battle) ----------
+function stopPkPolling() {
+  if (state.pkTimer) { clearInterval(state.pkTimer); state.pkTimer = null; }
+}
+
+async function pk() {
+  const _myTab = state.tab;  // capture: render only if still current
+  stopPkPolling();
+  const [fr, banks, pkData] = await Promise.all([
+    fetch('/api/friends', {credentials: 'same-origin'}).then(r => r.json()),
+    fetch('/api/banks', {credentials: 'same-origin'}).then(r => r.json()),
+    fetch('/api/pk', {credentials: 'same-origin'}).then(r => r.json()),
+  ]);
+  const friends = fr.friends || [];
+  const comps = (banks || []).filter(b => !b.round);
+  const games = pkData.games || [];
+  const duels = games.filter(g => g.mode !== 'race');
+  const races = games.filter(g => g.mode === 'race');
+  const pendingInD = duels.filter(g => g.status === 'pending' && g.role === 'opponent');
+  const pendingOutD = duels.filter(g => g.status === 'pending' && g.role === 'challenger');
+  const pendingInR = races.filter(g => g.status === 'pending' && !g.is_host);
+  const pendingOutR = races.filter(g => g.status === 'pending' && g.is_host);
+  const active = games.filter(g => g.status === 'active' || g.status === 'submitted');
+  const history = games.filter(g => ['done', 'declined', 'expired'].includes(g.status));
+
+  const compName = slug => (comps.find(c => c.slug === slug) || {}).name || slug;
+  const diffName = d => t(d === 'easy' ? 'easy' : d === 'hard' ? 'hard' : 'medium');
+  const fmtDur = s => s == null ? '—' : `${Math.floor(s / 60)}m${String(s % 60).padStart(2, '0')}s`;
+  const scoreLine = g => {
+    const ms = g.my.done ? `${g.my.score}/${g.my.total}` : '—';
+    const ts = g.their.done ? `${g.their.score}/${g.their.total}` : (g.status === 'active' ? t('pkInProgress') : '—');
+    return `${t('pkYou')} <b>${ms}</b> : <b>${ts}</b> ${escapeHtml(g.opponent)}`;
+  };
+  const rowBtns = g => g.status === 'pending'
+    ? (g.role === 'opponent'
+        ? `<button class="btn sm" onclick="pkRespond('${g.id}', true)">${t('pkAccept')}</button>
+           <button class="btn sm ghost" onclick="pkRespond('${g.id}', false)">${t('pkDecline')}</button>`
+        : `<span style="color:#999;font-size:13px">⏳</span>`)
+    : g.status === 'active'
+      ? `<button class="btn sm" onclick="openTest('${g.test_id}')">${t('pkTakeTest')}</button>`
+      : g.status === 'submitted'
+        ? `<span style="color:#999;font-size:13px">⏳ ${t('pkInProgress')}</span>`
+        : '';
+  const resultBadge = g => {
+    if (g.status === 'declined') return `<span style="color:#999">${t('pkDeclined')}</span>`;
+    if (g.status === 'expired') return `<span style="color:#999">${t('pkExpired')}</span>`;
+    if (g.status === 'done') {
+      const w = g.winner === 'me' ? `<span style="color:#237a23">${t('pkWon')}</span>`
+        : g.winner === 'them' ? `<span style="color:#b02929">${t('pkLost')}</span>`
+        : `<span>${t('pkDraw')}</span>`;
+      return `${w} · ${scoreLine(g)}`;
+    }
+    return scoreLine(g);
+  };
+  const gameRow = g => `
+    <div class="fr-req pk-row" data-gid="${g.id}">
+      <span><b>${escapeHtml(g.opponent)}</b> · ${escapeHtml(compName(g.slug))} · ${diffName(g.difficulty)}<br>
+        <small>${resultBadge(g)}</small></span>
+      <span>${rowBtns(g)}</span>
+    </div>`;
+
+  const medals = ['🥇', '🥈', '🥉'];
+  const raceRow = g => {
+    const stand = (g.standings || []).map((s, i) => `
+      <div class="pk-stand-row">
+        <span>${medals[i] || (i + 1) + '.'} <b>${escapeHtml(s.user)}</b>${s.user === state.user ? ` <small>(${t('pkYou')})</small>` : ''}</span>
+        <span>${s.done ? `<b>${s.score}/${s.total}</b> · ${fmtDur(s.duration_s)}` : `<small style="color:#999">${t('pkInProgress')}</small>`}</span>
+      </div>`).join('');
+    let btn = '';
+    if (g.status === 'pending') {
+      btn = g.is_host
+        ? `<button class="btn sm" onclick="pkStart('${g.id}')" ${g.accepted.length >= 2 ? '' : 'disabled'}>${t('pkStartRace')}</button>`
+        : `<button class="btn sm" onclick="pkRespond('${g.id}', true)">${t('pkAccept')}</button>
+           <button class="btn sm ghost" onclick="pkRespond('${g.id}', false)">${t('pkDecline')}</button>`;
+    } else if (g.status === 'active') {
+      const meDone = (g.standings || []).find(s => s.user === state.user && s.done);
+      btn = meDone ? `<span style="color:#237a23;font-size:13px">✓</span>`
+                   : `<button class="btn sm" onclick="openTest('${g.test_id}')">${t('pkTakeTest')}</button>`;
+    }
+    const winnerLine = g.status === 'done' && g.winner
+      ? `<div style="font-size:13.5px;margin:2px 0">${t('pkRaceWinner')}: <b>${escapeHtml(g.winner)}</b>${g.winner === state.user ? ' 🎉' : ''}</div>` : '';
+    return `<div class="card compact" data-gid="${g.id}" style="margin-top:8px">
+      <div class="fr-req"><span><b>🏁 ${t('pkRace')}</b> · ${escapeHtml(compName(g.slug))} · ${diffName(g.difficulty)}${g.is_host ? ` · <small>${t('pkHost')}</small>` : ''}</span><span>${btn}</span></div>
+      <div style="font-size:13px;color:#666;margin:4px 0">${t('pkJoined')}: ${g.accepted.length}/${g.players.length} — ${g.accepted.map(escapeHtml).join(', ')}${g.invited.length ? ` · ${t('pkWaiting')}: ${g.invited.map(escapeHtml).join(', ')}` : ''}</div>
+      ${winnerLine}
+      ${stand ? `<div style="margin-top:4px">${stand}</div>` : ''}
+    </div>`;
+  };
+
+    if (state.tab !== _myTab || (state.test && !state.submitted)) return;  // stale async render
+  const mode = state.pkMode || 'duel';
+  app.innerHTML = `
+    <div class="card">
+      <h3>${t('tabPK')}</h3>
+      <div class="pk-mode-tabs">
+        <div class="pk-mode-tab ${mode === 'duel' ? 'on' : ''}" data-m="duel" onclick="setPkMode('duel')">⚔️ ${t('pkModeDuel')}</div>
+        <div class="pk-mode-tab ${mode === 'race' ? 'on' : ''}" data-m="race" onclick="setPkMode('race')">🏁 ${t('pkModeRace')}</div>
+      </div>
+      <div id="pkDuelForm" class="${mode === 'duel' ? '' : 'hidden'}">
+        <div class="pk-form">
+          <select id="pkFriend">${friends.map(f => `<option value="${escapeHtml(f.username)}">${escapeHtml(f.username)}${f.online ? ' 🟢' : ''}</option>`).join('')}</select>
+          <select id="pkComp">${comps.map(c => `<option value="${escapeHtml(c.slug)}">${escapeHtml(c.name)}</option>`).join('')}</select>
+          <select id="pkDiff">
+            <option value="easy">${t('easy')}</option>
+            <option value="medium" selected>${t('medium')}</option>
+            <option value="hard">${t('hard')}</option>
+          </select>
+          <button class="btn" onclick="pkChallenge()" ${friends.length ? '' : 'disabled'}>${t('pkSend')}</button>
+        </div>
+      </div>
+      <div id="pkRaceForm" class="${mode === 'race' ? '' : 'hidden'}">
+        <div style="font-size:13px;color:#666;margin-bottom:4px">${t('pkPickFriends')}</div>
+        <div class="race-friends">${friends.map(f => `
+          <label class="race-friend"><input type="checkbox" class="race-friend-cb" value="${escapeHtml(f.username)}"> ${escapeHtml(f.username)}${f.online ? ' 🟢' : ''}</label>`).join('') || `<span style="color:#999;font-size:13px">${t('pkNoFriends')}</span>`}</div>
+        <div class="pk-form">
+          <select id="pkRaceComp">${comps.map(c => `<option value="${escapeHtml(c.slug)}">${escapeHtml(c.name)}</option>`).join('')}</select>
+          <select id="pkRaceDiff">
+            <option value="easy">${t('easy')}</option>
+            <option value="medium" selected>${t('medium')}</option>
+            <option value="hard">${t('hard')}</option>
+          </select>
+          <button class="btn" onclick="pkChallenge()" ${friends.length ? '' : 'disabled'}>🏁 ${t('pkInvite')}</button>
+        </div>
+      </div>
+      ${friends.length ? '' : `<p style="color:#999;font-size:13px">${t('pkNoFriends')}</p>`}
+      <div id="pkMsg" class="auth-msg"></div>
+      ${pendingInD.length || pendingInR.length ? `<h4 style="margin:14px 0 6px">${t('pkIncoming')}</h4>${pendingInD.map(gameRow).join('')}${pendingInR.map(raceRow).join('')}` : ''}
+      ${pendingOutD.length || pendingOutR.length ? `<h4 style="margin:14px 0 6px">${t('pkOutgoing')}</h4>${pendingOutD.map(gameRow).join('')}${pendingOutR.map(raceRow).join('')}` : ''}
+      ${active.length ? `<h4 style="margin:14px 0 6px">${t('pkActive')}</h4><div id="pkActiveList">${active.map(g => g.mode === 'race' ? raceRow(g) : gameRow(g)).join('')}</div>` : '<div id="pkActiveList"></div>'}
+      ${history.length ? `<h4 style="margin:14px 0 6px">${t('pkHistory')}</h4>${history.map(g => g.mode === 'race' ? raceRow(g) : gameRow(g)).join('')}` : ''}
+    </div>`;
+  if (active.length) {
+    state.pkTimer = setInterval(pkPoll, 5000);
+  }
+}
+function setPkMode(m) {
+  state.pkMode = m;
+  document.querySelectorAll('.pk-mode-tab').forEach(b => b.classList.toggle('on', b.dataset.m === m));
+  document.getElementById('pkDuelForm').classList.toggle('hidden', m !== 'duel');
+  document.getElementById('pkRaceForm').classList.toggle('hidden', m !== 'race');
+}
+async function pkStart(gid) {
+  const r = await fetch('/api/pk/start', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin', body: JSON.stringify({game_id: gid}),
+  });
+  const d = await r.json();
+  if (r.ok && d.test_id) openTest(d.test_id);
+  else pk();
+}
+async function pkChallenge() {
+  const msg = document.getElementById('pkMsg');
+  const mode = state.pkMode || 'duel';
+  let body;
+  if (mode === 'race') {
+    const opponents = [...document.querySelectorAll('.race-friend-cb:checked')].map(c => c.value);
+    if (!opponents.length) {
+      msg.className = 'auth-msg err';
+      msg.textContent = t('pkPickFriends');
+      return;
+    }
+    body = {mode, opponents,
+            slug: document.getElementById('pkRaceComp').value,
+            difficulty: document.getElementById('pkRaceDiff').value};
+  } else {
+    body = {mode: 'duel',
+            opponent: document.getElementById('pkFriend').value,
+            slug: document.getElementById('pkComp').value,
+            difficulty: document.getElementById('pkDiff').value};
+  }
+  const r = await fetch('/api/pk/challenge', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin', body: JSON.stringify(body),
+  });
+  const d = await r.json();
+  msg.className = 'auth-msg ' + (r.ok ? 'ok' : 'err');
+  msg.textContent = r.ok ? t('requestSent') : (d.error || 'error');
+  if (r.ok) { updatePkBadge(); pk(); }
+}
+
+async function pkRespond(gid, accept) {
+  await fetch('/api/pk/respond', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin', body: JSON.stringify({game_id: gid, accept}),
+  });
+  updatePkBadge();
+  pk();
+}
+
+// ---------- Classes (teacher / student) ----------
+async function classesView() {
+  const _myTab = state.tab;  // capture: render only if still current
+  const d = await (await fetch('/api/classes', {credentials: 'same-origin'})).json();
+  if (state.tab !== _myTab || (state.test && !state.submitted)) return;  // stale async render
+  const isTeacher = state.role === 'teacher';
+  let html = `<div class="card"><h3>${t('tabClasses')}</h3>`;
+  if (isTeacher) {
+    html += `
+      <h4 style="margin:10px 0 6px">${t('clCreate')}</h4>
+      <div class="pk-form">
+        <input type="text" id="clName" placeholder="${t('clNamePh')}" style="flex:1;min-width:120px">
+        <input type="text" id="clCode" placeholder="${t('clCodePh')}" style="width:130px">
+        <button class="btn" onclick="classCreate()">${t('clCreate')}</button>
+      </div>
+      <div class="auth-msg" id="clMsg"></div>
+      <div id="clList">${(d.teaching || []).map(classCardTeacher).join('') || `<p style="color:#999;font-size:13.5px">${t('clNoClassesT')}</p>`}</div>`;
+  } else {
+    html += `
+      <div class="cl-join-box">
+        <h4 style="margin:0 0 8px">${t('clJoin')}</h4>
+        <div class="pk-form" style="margin:0">
+          <input type="text" id="clJoinCode" placeholder="${t('clJoinPh')}" style="width:200px;font-size:15px;padding:9px 10px" autocomplete="off">
+          <button class="btn" style="font-size:15px;padding:9px 20px" onclick="classJoin()">${t('clJoin')} →</button>
+        </div>
+        <div class="auth-msg" id="clMsg"></div>
+      </div>
+      <h4 style="margin:16px 0 6px">${t('tabClasses')}</h4>
+      <div id="clList">${(d.joined || []).map(classCardStudent).join('') || `<p style="color:#999;font-size:13.5px">${t('clNone')}</p>`}</div>`;
+  }
+  html += '</div>';
+  app.innerHTML = html;
+}
+function classCardStudent(c) {
+  return `<div class="card compact" style="margin-top:10px">
+    <h3>${escapeHtml(c.name)}</h3>
+    <div class="meta">${t('clSchool')}: ${escapeHtml(c.school)} · ${t('clTeacher')}: ${escapeHtml(c.teacher || '—')}</div>
+  </div>`;
+}
+function classCardTeacher(c) {
+  return `<div class="card compact" style="margin-top:10px">
+    <div class="fr-req">
+      <div><h3>${escapeHtml(c.name)}</h3>
+        <div class="meta">${escapeHtml(c.school)} · ${t('clCode')}: <span class="cl-code">${escapeHtml(c.code)}</span></div></div>
+      <button class="btn sm" onclick="loadClassReports('${escapeHtml(c.code)}')">${t('clReports')}</button>
+    </div>
+    <div class="cl-students">${(c.students || []).map(s =>
+      `<span class="cl-student">${escapeHtml(s)}</span>`).join('') || `<span style="color:#999;font-size:13px">${t('clNoStudents')}</span>`}</div>
+    <div id="cl-reports-${escapeHtml(c.code)}"></div>
+  </div>`;
+}
+async function classCreate() {
+  const msg = document.getElementById('clMsg');
+  const body = {name: document.getElementById('clName').value.trim(),
+                code: document.getElementById('clCode').value.trim()};
+  const r = await fetch('/api/class/create', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin', body: JSON.stringify(body),
+  });
+  const d = await r.json();
+  msg.className = 'auth-msg ' + (r.ok ? 'ok' : 'err');
+  msg.textContent = r.ok ? `✓ ${d.code}` : (d.error || 'error');
+  if (r.ok) classesView();
+}
+async function classJoin() {
+  const msg = document.getElementById('clMsg');
+  const code = document.getElementById('clJoinCode').value.trim();
+  const r = await fetch('/api/class/join', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin', body: JSON.stringify({code}),
+  });
+  const d = await r.json();
+  msg.className = 'auth-msg ' + (r.ok ? 'ok' : 'err');
+  msg.textContent = r.ok ? `✓ ${escapeHtml(d.name)} (${escapeHtml(d.school)})` : (d.error || 'error');
+  if (r.ok) classesView();
+}
+async function loadClassReports(code) {
+  const box = document.getElementById('cl-reports-' + code);
+  if (!box) return;
+  if (box.innerHTML) { box.innerHTML = ''; return; }  // toggle off
+  box.innerHTML = `<p style="color:#999;font-size:13px">${t('loading')}</p>`;
+  const d = await (await fetch(`/api/class/${encodeURIComponent(code)}/reports`, {credentials: 'same-origin'})).json();
+  const reps = d.reports || [];
+  box.innerHTML = reps.length ? `<table class="cl-reports">
+    <tr><th>${t('clDate')}</th><th>${t('clStudent')}</th><th>${t('clTest')}</th><th>${t('clScore')}</th><th>${t('clTime')}</th></tr>
+    ${reps.map(r => `<tr>
+      <td>${escapeHtml(r.submitted_at || '')}</td>
+      <td><b>${escapeHtml(r.student)}</b></td>
+      <td>${escapeHtml(r.title || r.test_id || '')}</td>
+      <td>${r.pct !== null && r.pct !== undefined ? r.pct + '%' : (r.score ?? '—') + '/' + (r.total ?? '?')}</td>
+      <td>${r.duration_s != null ? Math.floor(r.duration_s / 60) + 'm' + String(r.duration_s % 60).padStart(2, '0') + 's' : '—'}</td>
+    </tr>`).join('')}
+  </table>` : `<p style="color:#999;font-size:13px">${t('clNoReports')}</p>`;
+}
+
+async function pkPoll() {
+  if (state.tab !== 'pk') { stopPkPolling(); return; }
+  try {
+    const d = await (await fetch('/api/pk', {credentials: 'same-origin'})).json();
+    const active = (d.games || []).filter(g => g.status === 'active' || g.status === 'submitted');
+    const list = document.getElementById('pkActiveList');
+    if (!list) { stopPkPolling(); return; }
+    // lightweight refresh: update whole PK view, preserving scroll
+    const scroll = list.parentElement.scrollTop;
+    const sel = {f: document.getElementById('pkFriend') && document.getElementById('pkFriend').value,
+                 c: document.getElementById('pkComp') && document.getElementById('pkComp').value,
+                 d: document.getElementById('pkDiff') && document.getElementById('pkDiff').value};
+    await pk();
+    if (sel.f) { const e = document.getElementById('pkFriend'); if (e) e.value = sel.f; }
+    if (sel.c) { const e = document.getElementById('pkComp'); if (e) e.value = sel.c; }
+    if (sel.d) { const e = document.getElementById('pkDiff'); if (e) e.value = sel.d; }
+  } catch (e) { /* keep polling */ }
+}
+
+// ---------- friends & chat ----------
+function stopChatPolling() {
+  if (state.chatTimer) { clearInterval(state.chatTimer); state.chatTimer = null; }
+  state.chatWith = null;
+}
+
+async function friends() {
+  const _myTab = state.tab;  // capture: render only if still current
+  stopChatPolling();
+  const r = await fetch('/api/friends', {credentials: 'same-origin'});
+  const d = await r.json();
+  const reqs = (d.incoming || []).map(u => `
+    <div class="fr-req">
+      <span>${escapeHtml(u)}</span>
+      <span>
+        <button class="btn sm" onclick="friendAction('accept','${escapeHtml(u)}')">${t('accept')}</button>
+        <button class="btn sm ghost" onclick="friendAction('decline','${escapeHtml(u)}')">${t('decline')}</button>
+      </span>
+    </div>`).join('');
+  const flist = (d.friends || []).map(f => `
+    <div class="fr-item ${state.chatWith === f.username ? 'active' : ''}" onclick="openChat('${escapeHtml(f.username)}')">
+      <span class="dot ${f.online ? 'on' : ''}"></span>
+      <span class="fr-name">${escapeHtml(f.username)}</span>
+      <span class="fr-status">${f.online ? t('online') : t('offline')}</span>
+      <span class="fr-x" onclick="event.stopPropagation(); friendAction('remove','${escapeHtml(f.username)}')" title="${t('remove')}">✕</span>
+    </div>`).join('');
+    if (state.tab !== _myTab || (state.test && !state.submitted)) return;  // stale async render
+app.innerHTML = `
+    <div class="fr-layout">
+      <div class="card">
+        <h3>${t('tabFriends')}</h3>
+        <div class="fr-add">
+          <input type="text" id="friendName" placeholder="username" onkeydown="if(event.key==='Enter')addFriend()">
+          <button class="btn" onclick="addFriend()">${t('addFriend')}</button>
+        </div>
+        <div id="friendMsg" class="auth-msg"></div>
+        ${reqs ? `<h4 style="margin:12px 0 6px">${t('friendRequests')}</h4>${reqs}` : ''}
+        <div id="friendList" style="margin-top:10px">${flist || `<p style="color:#666;font-size:14px">${t('noFriends')}</p>`}</div>
+      </div>
+      <div class="card chat-card" id="chatCard">
+        <div id="chatPane"><p style="color:#666">${t('selectFriend')}</p></div>
+      </div>
+    </div>`;
+}
+
+async function addFriend() {
+  const inp = document.getElementById('friendName');
+  const msg = document.getElementById('friendMsg');
+  const username = inp.value.trim().toLowerCase();
+  if (!username) return;
+  const r = await fetch('/api/friends/request', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin', body: JSON.stringify({username}),
+  });
+  const d = await r.json();
+  msg.className = 'auth-msg ' + (r.ok ? 'ok' : 'err');
+  msg.textContent = r.ok ? t('requestSent') : (d.error || 'error');
+  if (r.ok) inp.value = '';
+}
+
+async function friendAction(action, username) {
+  await fetch('/api/friends/' + action, {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin', body: JSON.stringify({username}),
+  });
+  if (action === 'remove' && state.chatWith === username) {
+    stopChatPolling();
+    const pane = document.getElementById('chatPane');
+    if (pane) pane.innerHTML = `<p style="color:#666">${t('selectFriend')}</p>`;
+  }
+  friends();
+}
+
+async function openChat(username) {
+  stopChatPolling();
+  state.chatWith = username;
+  state.chatSince = 0;
+  document.querySelectorAll('.fr-item').forEach(e => e.classList.remove('active'));
+  const item = [...document.querySelectorAll('.fr-item')].find(e => e.textContent.includes(username));
+  if (item) item.classList.add('active');
+  const pane = document.getElementById('chatPane');
+  if (!pane) return;
+  pane.innerHTML = `
+    <div class="chat-head"><span class="dot" id="chatDot"></span><b>${escapeHtml(username)}</b></div>
+    <div class="chat-msgs" id="chatMsgs"></div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="${t('typeMessage')}" onkeydown="if(event.key==='Enter')sendChat()">
+      <button class="btn" onclick="sendChat()">${t('send')}</button>
+    </div>`;
+  await pollChat();
+  state.chatTimer = setInterval(pollChat, 3000);
+}
+
+async function pollChat() {
+  if (!state.chatWith) return;
+  try {
+    const r = await fetch('/api/chat/' + state.chatWith + '?since=' + (state.chatSince || 0), {credentials: 'same-origin'});
+    if (!r.ok) return;
+    const d = await r.json();
+    const dot = document.getElementById('chatDot');
+    if (dot) dot.className = 'dot' + (d.online ? ' on' : '');
+    const box = document.getElementById('chatMsgs');
+    if (!box) return;
+    for (const m of d.messages || []) {
+      state.chatSince = Math.max(state.chatSince || 0, m.ts);
+      const mine = m.frm === state.user;
+      box.insertAdjacentHTML('beforeend',
+        `<div class="chat-row ${mine ? 'mine' : ''}"><div class="bubble">${escapeHtml(m.text)}</div></div>`);
+    }
+    if (d.messages && d.messages.length) box.scrollTop = box.scrollHeight;
+  } catch (e) { /* transient network error; keep polling */ }
+}
+
+async function sendChat() {
+  const inp = document.getElementById('chatInput');
+  const text = (inp.value || '').trim();
+  if (!text || !state.chatWith) return;
+  inp.value = '';
+  const r = await fetch('/api/chat/' + state.chatWith, {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin', body: JSON.stringify({text}),
+  });
+  if (r.ok) {
+    const d = await r.json();
+    const m = d.message;
+    state.chatSince = Math.max(state.chatSince || 0, m.ts);
+    const box = document.getElementById('chatMsgs');
+    if (box) {
+      box.insertAdjacentHTML('beforeend',
+        `<div class="chat-row mine"><div class="bubble">${escapeHtml(m.text)}</div></div>`);
+      box.scrollTop = box.scrollHeight;
+    }
+  } else {
+    inp.value = text;
+  }
+}
 
 function showTab(tab) {
   // leaving an active test? navigate, but start the 30s close countdown
@@ -185,15 +1108,52 @@ function showTab(tab) {
 
 function doShowTab(tab) {
   state.tab = tab;
+  if (tab !== 'friends') stopChatPolling();
+  if (tab !== 'pk') stopPkPolling();
   document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+  if (['tests', 'stats', 'friends', 'pk', 'classes'].includes(tab) && !state.user) {
+    const titles = {tests: t('tabTests'), stats: t('tabStats'), friends: t('tabFriends'), pk: t('tabPK'), classes: t('tabClasses')};
+    app.innerHTML = `<div class="card"><h3>${titles[tab]}</h3>
+      <p style="color:#666;font-size:14px;margin:10px 0">${t('authRequired')}</p>
+      <button class="btn" onclick="showAuth('login')">${t('login')} / ${t('register')}</button></div>`;
+    return;
+  }
   if (tab === 'new') home();
   else if (tab === 'tests') myTests();
   else if (tab === 'stats') stats();
+  else if (tab === 'friends') friends();
+  else if (tab === 'pk') { updatePkBadge(); pk(); }
+  else if (tab === 'classes') classesView();
+  else if (tab === 'wb') whiteboard();
+  else if (tab === 'games') gamesView();
+}
+
+function sanitizeLatex(s) {
+  if (!s) return s;
+  s = s
+    .replace(/\\begin\{(align|align\*|split|eqnarray|gather)\}/g, '\\begin{aligned}')
+    .replace(/\\end\{(align|align\*|split|eqnarray|gather)\}/g, '\\end{aligned}')
+    .replace(/\\label\{[^}]*\}/g, '')
+    .replace(/\\tag\{[^}]*\}/g, '')
+    .replace(/\\notag/g, '');
+  // escape a trailing unpaired $ (odd count) so it can't swallow following text
+  const dollars = s.match(/(?<!\\)\$/g);
+  if (dollars && dollars.length % 2 === 1) {
+    const i = s.lastIndexOf('$');
+    s = s.slice(0, i) + '\\$' + s.slice(i + 1);
+  }
+  return s;
 }
 
 function renderMath(el) {
   if (window.renderMathInElement) {
-    renderMathInElement(el, { delimiters: [
+    renderMathInElement(el, { throwOnError: false, trust: true,
+      macros: {
+        '\\textsc': '\\text{#1}',
+        '\\overarc': '\\widehat{#1}',
+        '\\ds': '',
+      },
+      delimiters: [
       {left: '$$', right: '$$', display: true},
       {left: '$', right: '$', display: false},
     ]});
@@ -238,7 +1198,7 @@ async function showFamilies() {
       <div class="card compact test-item" onclick="showSubtests('${fam}')">
         <div>
           <h3>${fam}</h3>
-          <div class="meta">${subs.length} ${t('tests')} · ${n_probs} ${t('problemsModified')}</div>
+          <div class="meta">${subs.length} ${t('tests')} · ${subs.some(b => b.real) ? t('realProblem') : t('modifiedFrom')} ${n_probs}+ ${t('problems')}</div>
         </div>
         <button class="btn">›</button>
       </div>`;
@@ -271,7 +1231,7 @@ function showSubtests(fam) {
 function showDetail(slug, round) {
   const b = state.banks.find(x => x.slug === slug && x.round === (round || null));
   if (!b) return;
-  const types = b.total_variants >= 300 ? t('realProblem') : t('modifiedFrom');
+  const types = (b.real || b.total_variants >= 300) ? t('realProblem') : t('modifiedFrom');
   app.innerHTML = `
     <div class="card compact" style="cursor:pointer" onclick="showSubtests('${b.family}')">${t('back')} ${b.family}</div>
     <div class="card">
@@ -280,7 +1240,7 @@ function showDetail(slug, round) {
         <tr><th>${t('category')}</th><td>${b.category}</td></tr>
         <tr><th>${t('questions')}</th><td>${b.n_questions}</td></tr>
         <tr><th>${t('timeLimit')}</th><td>${b.time_limit_min} ${t('minutes')}</td></tr>
-        <tr><th>${t('bank')}</th><td>${b.total_variants} ${t('problemsModified')}</td></tr>
+        <tr><th>${t('bank')}</th><td>${types} ${b.total_variants}+ ${t('problems')}</td></tr>
         <tr><th>${t('content')}</th><td>${types}</td></tr>
       </table>
       <div style="margin-top:18px;display:flex;gap:10px">
@@ -297,10 +1257,12 @@ function catIcon(cat) {
 
 async function generate(slug, round) {
   const r = await (await fetch(`/api/generate/${slug}${round ? '/' + encodeURIComponent(round) : ''}`)).json();
-  if (r.ok) openTest(r.id); else alert(r.error || 'generation failed');
+  if (r.ok) openTest(r.id); else alert(r.error || t('generationFailed'));
 }
 
 async function openTest(id) {
+  stopChatPolling();
+  stopPkPolling();
   const t = await (await fetch(`/api/test/${id}`)).json();
   state = { ...state, test: t, answers: {}, submitted: false,
             deadline: Date.now() + t.time_limit_min * 60000, timerId: null, startedAt: Date.now() };
@@ -343,22 +1305,25 @@ function renderTest() {
         <span class="qnum">${t('problem')} ${q.n}</span>
         <span style="display:flex;gap:6px">
           <span class="diff ${cls}">${label}</span>
-          <span class="badge">${q.type === 'proof' ? t('realProblem') + ' ' + q.source : t('modifiedFrom') + ' ' + q.source}</span>
+          <span class="badge">${q.points || 1} ${(q.points || 1) > 1 ? t('pts') : t('pt')}</span>
+          <span class="badge">${q.type === 'proof' || q.type === 'numeric' ? t('realProblem') + ' ' + q.source : t('modifiedFrom') + ' ' + q.source}</span>
         </span>
       </div>
-      <div class="qtext">${(LANG === 'zh' && q.question_zh) ? q.question_zh : q.question}</div>
+      <div class="qtext">${(LANG === 'zh' && q.question_zh) ? q.question_zh : sanitizeLatex(q.question)}</div>
       ${q.type === 'proof'
         ? `<button class="btn secondary" onclick="document.getElementById('sol${q.n}').style.display='block'; this.style.display='none'">${t('showSolution')}</button>`
         : ''}
-      <div class="choices">${q.choices ? Object.entries(q.choices).map(([L, v]) => `
+      <div class="choices">${q.choices ? Object.entries(q.choices).map(([L, v]) => {
+        const disp = (/\\[a-zA-Z]/.test(v) && !v.includes('$')) ? '$' + v + '$' : sanitizeLatex(v);
+        return `
         <div class="choice" data-q="${q.n}" data-l="${L}" onclick="pick(${q.n},'${L}')">
-          <span class="letter">${L}</span><span>${v}</span>
-        </div>`).join('')
+          <span class="letter">${L}</span><span>${disp}</span>
+        </div>`}).join('')
         : q.type === 'proof' ? ''
-        : `<input class="int-input" id="int${q.n}" type="text" inputmode="numeric" maxlength="3"
-                  placeholder="000–999" oninput="typed(${q.n}, this.value)">`}
+        : `<input class="int-input" id="int${q.n}" type="text" inputmode="${q.type === 'numeric' ? 'decimal' : 'numeric'}" ${q.type === 'numeric' ? '' : 'maxlength="3"'}
+                  placeholder="${q.type === 'numeric' ? (LANG === 'zh' ? '数值答案' : 'number') : '000–999'}" oninput="typed(${q.n}, this.value)">`}
       </div>
-      <div class="solution" id="sol${q.n}">${q.answer ? `<b>${t('answer')}: ${q.answer}.</b> ` : ''}${((LANG === 'zh' && q.solution_zh) ? q.solution_zh : q.solution) || `<i>${t('noSolution')}</i>`}</div>`;
+      <div class="solution" id="sol${q.n}">${q.answer ? `<b>${t('answer')}: ${(/\\[a-zA-Z]|\^/.test(q.answer) && !q.answer.includes('$')) ? '$' + q.answer + '$' : sanitizeLatex(q.answer)}.</b> ` : ''}${((LANG === 'zh' && q.solution_zh) ? q.solution_zh : sanitizeLatex(q.solution)) || `<i>${t('noSolution')}</i>`}</div>`;
     qs.appendChild(div);
     renderMath(div);
   });
@@ -379,7 +1344,7 @@ function pick(n, L) {
     c.classList.toggle('selected', c.dataset.l === L));
   const total = state.test.questions.length;
   document.getElementById('progress').textContent =
-    `${Object.keys(state.answers).length} / ${total} answered`;
+    `${Object.keys(state.answers).length} / ${total} ${t('answered')}`;
 }
 
 function submit() {
@@ -387,14 +1352,10 @@ function submit() {
   state.submitted = true;
   clearInterval(state.timerId);
   stopLeaveWatch();
-  let score = 0, gradable = 0;
+  let score = 0, totalPoints = 0;
   state.test.questions.forEach(q => {
-    if (q.type === 'proof') {
-      const card = document.getElementById('q' + q.n);
-      card.classList.add('submitted');
-      return; // proof questions are not auto-graded
-    }
-    gradable++;
+    const points = q.points || 1;
+    totalPoints += points;
     const card = document.getElementById('q' + q.n);
     card.classList.add('submitted');
     if (q.choices) {
@@ -402,7 +1363,16 @@ function submit() {
         if (c.dataset.l === q.answer) c.classList.add('correct');
         else if (state.answers[q.n] === c.dataset.l) c.classList.add('wrong');
       });
-      if (state.answers[q.n] === q.answer) score++;
+      if (state.answers[q.n] === q.answer) score += points;
+    } else if (q.type === 'numeric') {
+      const given = parseFloat(state.answers[q.n]);
+      const want = parseFloat(q.answer);
+      const inp = document.getElementById('int' + q.n);
+      const ok = !isNaN(given) && !isNaN(want) &&
+        Math.abs(given - want) <= Math.max(0.02 * Math.abs(want), 1e-9);
+      inp.classList.add(ok ? 'correct' : 'wrong');
+      inp.disabled = true;
+      if (ok) score += points;
     } else {
       const inp = document.getElementById('int' + q.n);
       const given = (state.answers[q.n] || '').replace(/^0+(?=\d)/, '');
@@ -410,15 +1380,15 @@ function submit() {
       const ok = given !== '' && given === want;
       inp.classList.add(ok ? 'correct' : 'wrong');
       inp.disabled = true;
-      if (ok) score++;
+      if (ok) score += points;
     }
   });
   const total = state.test.questions.length;
   const bar = document.querySelector('.sticky-bar');
-  const scoreText = gradable === 0
+  const scoreText = totalPoints === 0
     ? t('solutionsRevealed')
-    : `${t('score')}: ${score} / ${gradable}${gradable < total ? ` (+${total - gradable} ${t('proof')})` : ''}`;
-  bar.insertAdjacentHTML('beforeend', `<span class="score">${scoreText}</span><span class="saved-note" id="savedNote">saving…</span>`);
+    : `${t('score')}: ${score} / ${totalPoints}`;
+  bar.insertAdjacentHTML('beforeend', `<span class="score">${scoreText}</span><span class="saved-note" id="savedNote">${t('saving')}</span>`);
   window.scrollTo({top: 0, behavior: 'smooth'});
   // record the attempt
   const duration_s = Math.round((Date.now() - (state.startedAt || Date.now())) / 1000);
@@ -426,23 +1396,24 @@ function submit() {
     method: 'POST', headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
       test_id: state.test.id, title: state.test.title, competition: state.test.competition,
-      score, total: gradable, answered: Object.keys(state.answers).length, duration_s,
+      score, total: totalPoints, answered: Object.keys(state.answers).length, duration_s,
     }),
-  }).then(r => {
-    document.getElementById('savedNote').textContent = t('savedOk');
-  }).catch(() => {
+  }).then(r => r.json().then(d => {
+    document.getElementById('savedNote').textContent = d.guest ? t('savedGuest') : t('savedOk');
+  })).catch(() => {
     document.getElementById('savedNote').textContent = t('savedFail');
   });
 }
 
 async function myTests() {
+  const _myTab = state.tab;  // capture: render only if still current
   clearInterval(state.timerId);
   const [tests, resultsRaw] = await Promise.all([
     (await fetch('/api/tests')).json(),
     (await fetch('/api/results')).json(),
   ]);
   const results = resultsRaw.reverse();
-  document.getElementById('testCount').textContent = tests.length ? `(${tests.length})` : '';
+  document.getElementById('testCount').textContent = tests.length ? tests.length : '';
   let html = '<h2 class="section-title">' + t('currentTests') + '</h2><div class="gen-grid">';
   html += (tests.map(tst => `
     <div class="card compact test-item" onclick="openTest('${tst.id}')">
@@ -472,10 +1443,12 @@ async function myTests() {
       </div>`;
     }).join('');
   }
-  app.innerHTML = html;
+    if (state.tab !== _myTab || (state.test && !state.submitted)) return;  // stale async render
+app.innerHTML = html;
 }
 
 async function stats() {
+  const _myTab = state.tab;  // capture: render only if still current
   clearInterval(state.timerId);
   const s = await (await fetch('/api/stats')).json();
   const rows = s.per_competition.map(c => {
@@ -488,7 +1461,8 @@ async function stats() {
       <td>${best}${c.best_pct !== null ? '%' : ''}</td>
     </tr>`;
   }).join('');
-  app.innerHTML = `
+    if (state.tab !== _myTab || (state.test && !state.submitted)) return;  // stale async render
+app.innerHTML = `
     <div class="card" style="display:flex;gap:32px;flex-wrap:wrap">
       <div><div class="score">${s.total_attempts}</div><div class="meta">${t('testsTaken')}</div></div>
       <div><div class="score">${s.total_questions_answered}</div><div class="meta">${t('questionsAnswered')}</div></div>
@@ -500,8 +1474,964 @@ async function stats() {
     </div>`;
 }
 
-setLang(LANG);
-home();
+// ==================== Whiteboard ====================
+const WB_COLORS = ['#1c1e21', '#e03131', '#2f9e44', '#2b6cb0', '#e8890c', '#9c36b5'];
+const WB_CATS = [
+  { id: 'arith', grp: 'MATH', en: 'Arithmetic & Number Theory', zh: '算术与数论', enShort: 'Arithmetic', zhShort: '算术数论', items: [
+    'a+b=b+a',
+    '(a+b)+c=a+(b+c)',
+    'a(b+c)=ab+ac',
+    'a\\times b=b\\times a',
+    '(ab)c=a(bc)',
+    'a+0=a',
+    'a\\times 1=a',
+    'a\\times 0=0',
+    'a(b-c)=ab-ac',
+    'a\\div b=a\\times\\frac1b',
+    '|a|=\\begin{cases}a & a\\ge 0\\\\ -a & a<0\\end{cases}',
+    '|ab|=|a|\\,|b|',
+    '|a+b|\\le|a|+|b|',
+    'a^2-b^2=(a-b)(a+b)',
+    '(a+b)^2=a^2+2ab+b^2',
+    '(a-b)^2=a^2-2ab+b^2',
+    '(a+b)^3=a^3+3a^2b+3ab^2+b^3',
+    '(a-b)^3=a^3-3a^2b+3ab^2-b^3',
+    'a^3+b^3=(a+b)(a^2-ab+b^2)',
+    'a^3-b^3=(a-b)(a^2+ab+b^2)',
+    'a^n\\times a^m=a^{n+m}',
+    'a^n\\div a^m=a^{n-m}',
+    '(a^n)^m=a^{nm}',
+    '(ab)^n=a^nb^n',
+    'a^0=1\\ (a\\ne0)',
+    'a^{-n}=\\frac1{a^n}',
+    'a^{1/n}=\\sqrt[n]{a}',
+    'a^{m/n}=\\sqrt[n]{a^m}',
+    '\\sqrt{ab}=\\sqrt a\\times\\sqrt b',
+    '\\sqrt{\\frac ab}=\\frac{\\sqrt a}{\\sqrt b}',
+    '\\sqrt a\\times\\sqrt a=a',
+    '(\\sqrt a+\\sqrt b)(\\sqrt a-\\sqrt b)=a-b',
+    '\\frac1{\\sqrt a+\\sqrt b}=\\frac{\\sqrt a-\\sqrt b}{a-b}',
+    '\\log_a(xy)=\\log_ax+\\log_ay',
+    '\\log_a\\frac xy=\\log_ax-\\log_ay',
+  ]},
+  { id: 'alg', grp: 'MATH', en: 'Algebra — Equations & Functions', zh: '代数 — 方程与函数', enShort: 'Algebra', zhShort: '代数', items: [
+    'ax+b=0\\ \\Rightarrow\\ x=-\\frac ba',
+    'ax^2+bx+c=0',
+    'x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}',
+    '\\Delta=b^2-4ac',
+    'x_1+x_2=-\\frac ba',
+    'x_1x_2=\\frac ca',
+    '(x-x_1)(x-x_2)=0',
+    'f(x)=a(x-h)^2+k',
+    'h=-\\frac b{2a}',
+    'k=c-\\frac{b^2}{4a}',
+    '\\text{Slope: } m=\\frac{y_2-y_1}{x_2-x_1}',
+    '\\text{Point-slope: } y-y_1=m(x-x_1)',
+    '\\text{Slope-int: } y=mx+b',
+    'Ax+By=C',
+    '\\text{Parallel: } m_1=m_2',
+    '\\text{Perpendicular: } m_1m_2=-1',
+    'd=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}',
+    'M=\\left(\\frac{x_1+x_2}{2},\\ \\frac{y_1+y_2}{2}\\right)',
+    '|ax+b|=c\\ \\Rightarrow\\ ax+b=\\pm c',
+    '|x|<a\\ \\Rightarrow\\ -a<x<a',
+    '|x|>a\\ \\Rightarrow\\ x<-a\\ \\text{or}\\ x>a',
+    '(f\\circ g)(x)=f(g(x))',
+    'f^{-1}(f(x))=x',
+    "(f^{-1})'(x)=\\frac{1}{f'(f^{-1}(x))}",
+    'a^x=e^{x\\ln a}',
+    'e^{i\\pi}+1=0',
+    'e^{i\\theta}=\\cos\\theta+i\\sin\\theta',
+    '(\\cos\\theta+i\\sin\\theta)^n=\\cos n\\theta+i\\sin n\\theta',
+    'z=a+bi',
+    '|z|=\\sqrt{a^2+b^2}',
+    '\\bar z=a-bi',
+    'z\\bar z=|z|^2',
+    '\\frac1z=\\frac{\\bar z}{|z|^2}',
+    '(a+bi)(c+di)=(ac-bd)+(ad+bc)i',
+    '\\frac{a+bi}{c+di}=\\frac{(ac+bd)+(bc-ad)i}{c^2+d^2}',
+    '\\sum_{i=1}^{n}i=\\frac{n(n+1)}2',
+    '\\sum_{i=1}^{n}i^2=\\frac{n(n+1)(2n+1)}6',
+    '\\sum_{i=1}^{n}i^3=\\left[\\frac{n(n+1)}2\\right]^2',
+    '\\sum_{i=0}^{n}r^i=\\frac{1-r^{n+1}}{1-r}',
+    '\\sum_{i=0}^{\\infty}r^i=\\frac1{1-r},\\ |r|<1',
+    'n!=n(n-1)(n-2)\\cdots1',
+    '\\binom nk=\\frac{n!}{k!(n-k)!}',
+    'P(n,k)=\\frac{n!}{(n-k)!}',
+  ]},
+  { id: 'geo', grp: 'MATH', en: 'Geometry & Trigonometry', zh: '几何与三角', enShort: 'Geometry & Trig', zhShort: '几何三角', items: [
+    'A=\\tfrac12bh',
+    'A=\\sqrt{s(s-a)(s-b)(s-c)}',
+    's=\\frac{a+b+c}2',
+    'A=\\pi r^2',
+    'C=2\\pi r',
+    'A=\\tfrac12r^2\\theta',
+    's=r\\theta',
+    'A=\\tfrac12(a+b)h',
+    'A=bh',
+    'A=\\tfrac12d_1d_2',
+    'V=\\frac43\\pi r^3',
+    'A=4\\pi r^2',
+    'V=\\pi r^2h',
+    'A=2\\pi rh',
+    'V=\\tfrac13\\pi r^2h',
+    'A=\\pi rl',
+    'V=s^3',
+    'A=6s^2',
+    'V=lwh',
+    'V=\\tfrac13Bh',
+    'a^2+b^2=c^2',
+    'd=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}',
+    '\\frac a{\\sin A}=\\frac b{\\sin B}=\\frac c{\\sin C}',
+    'c^2=a^2+b^2-2ab\\cos C',
+    'A=\\tfrac12ab\\sin C',
+    '\\sin^2\\theta+\\cos^2\\theta=1',
+    '1+\\tan^2\\theta=\\sec^2\\theta',
+    '1+\\cot^2\\theta=\\csc^2\\theta',
+    '\\sin(A\\pm B)=\\sin A\\cos B\\pm\\cos A\\sin B',
+    '\\cos(A\\pm B)=\\cos A\\cos B\\mp\\sin A\\sin B',
+    '\\tan(A\\pm B)=\\frac{\\tan A\\pm\\tan B}{1\\mp\\tan A\\tan B}',
+    '\\sin2\\theta=2\\sin\\theta\\cos\\theta',
+    '\\cos2\\theta=\\cos^2\\theta-\\sin^2\\theta',
+    '\\cos2\\theta=1-2\\sin^2\\theta',
+    '\\cos2\\theta=2\\cos^2\\theta-1',
+    '\\tan2\\theta=\\frac{2\\tan\\theta}{1-\\tan^2\\theta}',
+    '\\sin^2\\theta=\\frac{1-\\cos2\\theta}2',
+    '\\cos^2\\theta=\\frac{1+\\cos2\\theta}2',
+    '\\sin\\theta+\\sin\\varphi=2\\sin\\frac{\\theta+\\varphi}2\\cos\\frac{\\theta-\\varphi}2',
+    '\\sin\\theta-\\sin\\varphi=2\\cos\\frac{\\theta+\\varphi}2\\sin\\frac{\\theta-\\varphi}2',
+    '\\cos\\theta+\\cos\\varphi=2\\cos\\frac{\\theta+\\varphi}2\\cos\\frac{\\theta-\\varphi}2',
+    '\\cos\\theta-\\cos\\varphi=-2\\sin\\frac{\\theta+\\varphi}2\\sin\\frac{\\theta-\\varphi}2',
+    'OH^2=9R^2-(a^2+b^2+c^2)',
+    'A=\\tfrac12nR^2\\sin\\frac{2\\pi}n',
+    '(n-2)\\times180^{\\circ}',
+    '\\text{ext. sum}=360^{\\circ}',
+    '\\frac{n(n-3)}2',
+  ]},
+  { id: 'derv', grp: 'MATH', en: 'Calculus — Limits & Derivatives', zh: '微积分 — 极限与导数', enShort: 'Calc · Derivatives', zhShort: '微分学', items: [
+    '\\lim_{x\\to a}f(x)=L',
+    '\\lim_{x\\to0}\\frac{\\sin x}x=1',
+    '\\lim_{x\\to0}\\frac{1-\\cos x}x=0',
+    '\\lim_{x\\to0}\\frac{e^x-1}x=1',
+    '\\lim_{x\\to0}\\frac{\\ln(1+x)}x=1',
+    '\\lim_{x\\to\\infty}\\left(1+\\frac1x\\right)^x=e',
+    '\\lim_{x\\to0}(1+x)^{1/x}=e',
+    "f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}h",
+    '\\frac d{dx}c=0',
+    '\\frac d{dx}x^n=nx^{n-1}',
+    '\\frac d{dx}e^x=e^x',
+    '\\frac d{dx}a^x=a^x\\ln a',
+    '\\frac d{dx}\\ln x=\\frac1x',
+    '\\frac d{dx}\\log_ax=\\frac1{x\\ln a}',
+    '\\frac d{dx}\\sin x=\\cos x',
+    '\\frac d{dx}\\cos x=-\\sin x',
+    '\\frac d{dx}\\tan x=\\sec^2x',
+    '\\frac d{dx}\\cot x=-\\csc^2x',
+    '\\frac d{dx}\\sec x=\\sec x\\tan x',
+    '\\frac d{dx}\\csc x=-\\csc x\\cot x',
+    '\\frac d{dx}\\sin^{-1}x=\\frac1{\\sqrt{1-x^2}}',
+    '\\frac d{dx}\\cos^{-1}x=-\\frac1{\\sqrt{1-x^2}}',
+    '\\frac d{dx}\\tan^{-1}x=\\frac1{1+x^2}',
+    "(uv)'=u'v+uv'",
+    "\\left(\\frac uv\\right)'=\\frac{u'v-uv'}{v^2}",
+    '\\frac{dy}{dx}=\\frac{dy}{du}\\cdot\\frac{du}{dx}',
+    '\\frac d{dx}f(g(x))=f^{\\prime}(g(x))\\,g^{\\prime}(x)',
+    '\\frac{dy}{dx}=-\\frac{F_x}{F_y}',
+    '\\frac d{dx}x^x=x^x(1+\\ln x)',
+    '\\frac d{dx}\\ln f(x)=\\frac{f^{\\prime}(x)}{f(x)}',
+    '\\frac d{dx}e^{f(x)}=f^{\\prime}(x)e^{f(x)}',
+    '\\frac d{dx}\\sinh x=\\cosh x',
+    '\\frac d{dx}\\cosh x=\\sinh x',
+    '\\frac d{dx}\\tanh x=\\operatorname{sech}^2x',
+    '\\frac d{dx}\\operatorname{arsinh}x=\\frac1{\\sqrt{x^2+1}}',
+    '\\frac d{dx}\\operatorname{arcosh}x=\\frac1{\\sqrt{x^2-1}}',
+    '\\frac d{dx}\\operatorname{artanh}x=\\frac1{1-x^2}',
+    'f(x)=\\sum\\frac{f^{(n)}(a)}{n!}(x-a)^n',
+    'f(x)=\\sum\\frac{f^{(n)}(0)}{n!}x^n',
+    'e^x=\\sum\\frac{x^n}{n!}',
+    '\\sin x=\\sum\\frac{(-1)^nx^{2n+1}}{(2n+1)!}',
+    '\\cos x=\\sum\\frac{(-1)^nx^{2n}}{(2n)!}',
+    '\\ln(1+x)=\\sum\\frac{(-1)^{n+1}x^n}n',
+    '\\frac1{1-x}=\\sum x^n',
+    '(1+x)^{\\alpha}=\\sum\\binom{\\alpha}{n}x^n',
+    '\\lim\\frac fg=\\lim\\frac{f^{\\prime}}{g^{\\prime}}',
+    "f'(x)=0",
+    "f''(x)=0",
+    "f''(x)>0\\ \\text{min};\\ \\ f''(x)<0\\ \\text{max}",
+    "f'(c)=\\frac{f(b)-f(a)}{b-a}",
+  ]},
+  { id: 'intg', grp: 'MATH', en: 'Calculus — Integrals', zh: '微积分 — 积分', enShort: 'Calc · Integrals', zhShort: '积分学', items: [
+    '\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}+C',
+    '\\int\\frac{dx}x=\\ln|x|+C',
+    '\\int e^x\\,dx=e^x+C',
+    '\\int a^x\\,dx=\\frac{a^x}{\\ln a}+C',
+    '\\int\\sin x\\,dx=-\\cos x+C',
+    '\\int\\cos x\\,dx=\\sin x+C',
+    '\\int\\tan x\\,dx=-\\ln|\\cos x|+C',
+    '\\int\\cot x\\,dx=\\ln|\\sin x|+C',
+    '\\int\\sec x\\,dx=\\ln|\\sec x+\\tan x|+C',
+    '\\int\\csc x\\,dx=\\ln|\\csc x-\\cot x|+C',
+    '\\int\\sec^2x\\,dx=\\tan x+C',
+    '\\int\\csc^2x\\,dx=-\\cot x+C',
+    '\\int\\sec x\\tan x\\,dx=\\sec x+C',
+    '\\int\\frac{dx}{1+x^2}=\\tan^{-1}x+C',
+    '\\int\\frac{dx}{\\sqrt{1-x^2}}=\\sin^{-1}x+C',
+    '\\int\\frac{dx}{a^2+x^2}=\\frac1a\\tan^{-1}\\frac xa+C',
+    '\\int\\frac{dx}{\\sqrt{a^2-x^2}}=\\sin^{-1}\\frac xa+C',
+    '\\int\\ln x\\,dx=x\\ln x-x+C',
+    '\\int u\\,dv=uv-\\int v\\,du',
+    '\\int f(g(x))g^{\\prime}(x)dx=\\int f(u)\\,du',
+    '\\int_a^b f(x)\\,dx=F(b)-F(a)',
+    '\\int_a^b f\\,dx=-\\int_b^a f\\,dx',
+    '\\int_a^a f\\,dx=0',
+    '\\int_a^b c\\,dx=c(b-a)',
+    '\\int_a^b(f+g)dx=\\int_a^b f\\,dx+\\int_a^b g\\,dx',
+    '\\int_0^{\\infty}e^{-x}dx=1',
+    '\\int_0^{\\infty}x^ne^{-x}dx=n!',
+    '\\int_{-\\infty}^{\\infty}e^{-x^2}dx=\\sqrt\\pi',
+    '\\int_0^{\\pi}\\sin x\\,dx=2',
+    '\\int_0^{2\\pi}\\sin x\\,dx=0',
+    'A=\\int(f-g)\\,dx',
+    'V=\\pi\\int[f(x)]^2dx',
+    'V=2\\pi\\int xf(x)\\,dx',
+    'L=\\int\\sqrt{1+\\left(\\frac{dy}{dx}\\right)^2}dx',
+    'S=2\\pi\\int f(x)\\sqrt{1+(f^{\\prime})^2}\\,dx',
+  ]},
+  { id: 'diffq', grp: 'MATH', en: 'Differential Equations', zh: '微分方程', enShort: 'Diff Eq', zhShort: '微分方程', items: [
+    '\\frac{dy}{dx}=ky\\ \\Rightarrow\\ y=Ce^{kx}',
+    '\\frac{dy}{dx}=f(x)g(y)',
+    '\\frac{dy}{dx}+P(x)y=Q(x)',
+    '\\mu=e^{\\int P\\,dx}',
+    'y=\\frac1\\mu\\int\\mu Q\\,dx',
+    'y=vx',
+    '\\frac{dy}{dx}+Py=Qy^n',
+    'M\\,dx+N\\,dy=0,\\ \\ M_y=N_x',
+    'ay^{\\prime\\prime}+by^{\\prime}+cy=0',
+    'ar^2+br+c=0',
+    'y=C_1e^{r_1x}+C_2e^{r_2x}',
+    'y=(C_1+C_2x)e^{rx}',
+    'y=e^{\\alpha x}(C_1\\cos\\beta x+C_2\\sin\\beta x)',
+    'x^{\\prime\\prime}+2\\gamma x^{\\prime}+\\omega_0^2x=0',
+    'x^{\\prime\\prime}+\\omega_0^2x=F_0\\cos\\omega t',
+    '\\frac{\\partial u}{\\partial t}=\\alpha\\frac{\\partial^2u}{\\partial x^2}',
+    '\\frac{\\partial^2u}{\\partial t^2}=c^2\\frac{\\partial^2u}{\\partial x^2}',
+    '\\frac{\\partial^2u}{\\partial x^2}+\\frac{\\partial^2u}{\\partial y^2}=0',
+    'i\\hbar\\frac{\\partial\\psi}{\\partial t}=\\hat{H}\\psi',
+    '\\rho\\left(\\frac{\\partial\\mathbf v}{\\partial t}+\\mathbf v\\cdot\\nabla\\mathbf v\\right)=-\\nabla p+\\mu\\nabla^2\\mathbf v+\\mathbf f',
+  ]},
+  { id: 'linalg', grp: 'MATH', en: 'Linear Algebra', zh: '线性代数', enShort: 'Linear Algebra', zhShort: '线性代数', items: [
+    '(A+B)_{ij}=a_{ij}+b_{ij}',
+    '(AB)_{ij}=\\sum_ka_{ik}b_{kj}',
+    '(AB)^T=B^TA^T',
+    '(AB)^{-1}=B^{-1}A^{-1}',
+    '\\det(AB)=\\det A\\,\\det B',
+    '\\det(A^T)=\\det A',
+    '\\det(A^{-1})=\\frac1{\\det A}',
+    '\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}=ad-bc',
+    'A^{-1}=\\frac1{\\det A}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}',
+    'x_i=\\frac{\\det A_i}{\\det A}',
+    '\\operatorname{tr}A=\\sum a_{ii}',
+    'A\\mathbf v=\\lambda\\mathbf v',
+    '\\det(A-\\lambda I)=0',
+    '\\sum\\lambda_i=\\operatorname{tr}A',
+    '\\prod\\lambda_i=\\det A',
+    'A=PDP^{-1}',
+    '\\operatorname{rank}A+\\operatorname{nullity}A=n',
+    '\\mathbf a\\cdot\\mathbf b=|\\mathbf a||\\mathbf b|\\cos\\theta',
+    '|\\mathbf a\\times\\mathbf b|=|\\mathbf a||\\mathbf b|\\sin\\theta',
+    '\\mathbf a\\times\\mathbf b=(a_2b_3-a_3b_2,\\ a_3b_1-a_1b_3,\\ a_1b_2-a_2b_1)',
+    '\\mathbf a\\cdot(\\mathbf b\\times\\mathbf c)',
+    '\\operatorname{proj}_{\\mathbf b}\\mathbf a=\\frac{\\mathbf a\\cdot\\mathbf b}{|\\mathbf b|^2}\\mathbf b',
+    '|\\mathbf a\\cdot\\mathbf b|\\le|\\mathbf a||\\mathbf b|',
+    '|\\mathbf a+\\mathbf b|\\le|\\mathbf a|+|\\mathbf b|',
+    '\\mathbf a\\cdot\\mathbf b=0',
+    'Q^TQ=I',
+    'A=U\\Sigma V^T',
+    '\\kappa=\\frac{\\sigma_{\\max}}{\\sigma_{\\min}}',
+    'A=LU',
+  ]},
+  { id: 'prob', grp: 'MATH', en: 'Probability & Statistics', zh: '概率与统计', enShort: 'Prob & Stats', zhShort: '概率统计', items: [
+    'P(A)=\\frac{n(A)}{n(S)}',
+    'P(A^{\\prime})=1-P(A)',
+    'P(A\\cup B)=P(A)+P(B)-P(A\\cap B)',
+    'P(A\\cap B)=P(A)P(B|A)',
+    'P(A\\cap B)=P(A)P(B)',
+    'P(A|B)=\\frac{P(A\\cap B)}{P(B)}',
+    'P(A|B)=\\frac{P(B|A)P(A)}{P(B)}',
+    'P(B)=\\sum P(B|A_i)P(A_i)',
+    '\\mu=\\frac{\\sum x}n',
+    '\\mu=\\frac{\\sum wx}{\\sum w}',
+    '\\sigma^2=\\frac{\\sum(x-\\mu)^2}n',
+    's^2=\\frac{\\sum(x-\\bar x)^2}{n-1}',
+    '\\sigma=\\sqrt{\\sigma^2}',
+    'z=\\frac{x-\\mu}\\sigma',
+    '\\operatorname{Cov}(X,Y)=E[(X-\\mu_x)(Y-\\mu_y)]',
+    '\\rho=\\frac{\\operatorname{Cov}(X,Y)}{\\sigma_x\\sigma_y}',
+    'E[X]=\\sum xP(x)',
+    'E[aX+b]=aE[X]+b',
+    '\\operatorname{Var}(X)=E[X^2]-(E[X])^2',
+    '\\operatorname{Var}(aX+b)=a^2\\operatorname{Var}(X)',
+    'P(X=k)=\\binom nk p^k(1-p)^{n-k}',
+    '\\mu=np',
+    '\\sigma^2=np(1-p)',
+    'P(X=k)=\\frac{\\lambda^ke^{-\\lambda}}{k!}',
+    '\\mu=\\sigma^2=\\lambda',
+    'f(x)=\\frac1{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}',
+    '\\phi(z)=\\frac1{\\sqrt{2\\pi}}e^{-z^2/2}',
+    'f(x)=\\lambda e^{-\\lambda x}',
+    'f(x)=\\frac1{b-a}',
+    '\\frac{\\bar X-\\mu}{\\sigma/\\sqrt n}\\to N(0,1)',
+    '\\bar x\\pm z\\frac{\\sigma}{\\sqrt n}',
+    '\\chi^2=\\sum\\frac{(O-E)^2}E',
+  ]},
+  { id: 'kin', grp: 'PHYSICS', en: 'Classical Mechanics — Kinematics', zh: '经典力学 — 运动学', enShort: 'Mech · Kinematics', zhShort: '运动学', items: [
+    'v=v_0+at',
+    'x=x_0+v_0t+\\tfrac12at^2',
+    'v^2=v_0^2+2a(x-x_0)',
+    'x=x_0+\\tfrac12(v_0+v)t',
+    'v=\\frac{dx}{dt}',
+    'a=\\frac{dv}{dt}=\\frac{d^2x}{dt^2}',
+    'v_{\\text{avg}}=\\frac{\\Delta x}{\\Delta t}',
+    'a_{\\text{avg}}=\\frac{\\Delta v}{\\Delta t}',
+    'v_{AB}=v_A-v_B',
+    'x=v_0\\cos\\theta\\cdot t',
+    'y=v_0\\sin\\theta\\cdot t-\\tfrac12gt^2',
+    'R=\\frac{v_0^2\\sin2\\theta}g',
+    'H=\\frac{v_0^2\\sin^2\\theta}{2g}',
+    'T=\\frac{2v_0\\sin\\theta}g',
+    'a_c=\\frac{v^2}r',
+    'a_c=\\omega^2r',
+    'v=\\omega r',
+    '\\omega=\\frac{2\\pi}T',
+    '\\theta=\\omega t+\\tfrac12\\alpha t^2',
+    '\\omega=\\omega_0+\\alpha t',
+    '\\omega^2=\\omega_0^2+2\\alpha\\theta',
+    'a_t=\\alpha r',
+    'a=\\sqrt{a_t^2+a_c^2}',
+    'L=I\\omega',
+    '\\tau=I\\alpha',
+    '\\boldsymbol\\tau=\\mathbf r\\times\\mathbf F',
+    '\\tau=rF\\sin\\theta',
+    'v=\\omega R',
+    'K=\\tfrac12mv^2+\\tfrac12I\\omega^2',
+  ]},
+  { id: 'force', grp: 'PHYSICS', en: 'Classical Mechanics — Forces, Energy & Momentum', zh: '经典力学 — 力、能量与动量', enShort: 'Forces & Energy', zhShort: '力与能量', items: [
+    'F=ma',
+    'F=\\frac{dp}{dt}',
+    'p=mv',
+    'J=F\\Delta t=\\Delta p',
+    'W=mg',
+    'f=\\mu N',
+    'f_s\\le\\mu_sN',
+    'f_k=\\mu_kN',
+    'F=-kx',
+    'U=\\tfrac12kx^2',
+    'W=Fd\\cos\\theta',
+    'W=\\int\\mathbf F\\cdot d\\mathbf x',
+    'K=\\tfrac12mv^2',
+    'W_{\\text{net}}=\\Delta K',
+    'U=mgh',
+    'U=-\\frac{GMm}r',
+    'E=K+U',
+    'K_1+U_1=K_2+U_2',
+    'P=\\frac Wt',
+    'P=Fv',
+    'P=\\frac{dW}{dt}',
+    'F_c=\\frac{mv^2}r',
+    'F_c=m\\omega^2r',
+    'F=\\frac{GMm}{r^2}',
+    'g=\\frac{GM}{r^2}',
+    'T^2=\\frac{4\\pi^2}{GM}a^3',
+    'v_e=\\sqrt{\\frac{2GM}r}',
+    'v_o=\\sqrt{\\frac{GM}r}',
+    'F\\Delta t=m\\Delta v',
+    'm_1v_1+m_2v_2=m_1v_1^{\\prime}+m_2v_2^{\\prime}',
+    '\\tfrac12m_1v_1^2+\\tfrac12m_2v_2^2=\\tfrac12m_1v_1^{\\prime 2}+\\tfrac12m_2v_2^{\\prime 2}',
+    'v^{\\prime}=\\frac{m_1v_1+m_2v_2}{m_1+m_2}',
+    'e=\\frac{v_2^{\\prime}-v_1^{\\prime}}{v_1-v_2}',
+    'x_{\\text{cm}}=\\frac{\\sum m_ix_i}{\\sum m_i}',
+  ]},
+  { id: 'fluid', grp: 'PHYSICS', en: 'Fluid Mechanics', zh: '流体力学', enShort: 'Fluids', zhShort: '流体', items: [
+    '\\rho=\\frac mV',
+    'P=\\frac FA',
+    'P=P_0+\\rho gh',
+    'P_g=\\rho gh',
+    'F_B=\\rho_{\\text{fluid}}V_{\\text{disp}}g',
+    'A_1v_1=A_2v_2',
+    'P+\\tfrac12\\rho v^2+\\rho gh=\\text{const}',
+    'P_1+\\tfrac12\\rho v_1^2+\\rho gh_1=P_2+\\tfrac12\\rho v_2^2+\\rho gh_2',
+    'v=\\sqrt{2gh}',
+    'Q=\\frac{\\pi r^4\\Delta P}{8\\eta L}',
+    'Re=\\frac{\\rho vD}\\eta',
+    'F=\\gamma L',
+    'h=\\frac{2\\gamma\\cos\\theta}{\\rho gr}',
+    'F_d=\\tfrac12\\rho v^2C_dA',
+    'v_t=\\sqrt{\\frac{2mg}{\\rho AC_d}}',
+  ]},
+  { id: 'thermo', grp: 'PHYSICS', en: 'Thermodynamics', zh: '热力学', enShort: 'Thermo', zhShort: '热力学', items: [
+    'PV=nRT',
+    'PV=NkT',
+    'P_1V_1=P_2V_2',
+    '\\frac{V_1}{T_1}=\\frac{V_2}{T_2}',
+    '\\frac{P_1}{T_1}=\\frac{P_2}{T_2}',
+    '\\frac{P_1V_1}{T_1}=\\frac{P_2V_2}{T_2}',
+    'P_{\\text{total}}=\\sum P_i',
+    'KE_{\\text{avg}}=\\tfrac32kT',
+    'v_{\\text{rms}}=\\sqrt{\\frac{3kT}m}',
+    'v_{\\text{rms}}=\\sqrt{\\frac{3RT}M}',
+    '\\bar v=\\sqrt{\\frac{8RT}{\\pi M}}',
+    'v_p=\\sqrt{\\frac{2RT}M}',
+    '\\Delta U=Q-W',
+    'W=\\int P\\,dV',
+    'Q=mc\\Delta T',
+    'Q=mL',
+    'c=\\frac{Q}{m\\Delta T}',
+    'C_p-C_v=R',
+    '\\gamma=\\frac{C_p}{C_v}',
+    'PV^{\\gamma}=\\text{const}',
+    'TV^{\\gamma-1}=\\text{const}',
+    'W=nRT\\ln\\frac{V_2}{V_1}',
+    'W=\\frac{P_1V_1-P_2V_2}{\\gamma-1}',
+    '\\eta=1-\\frac{T_c}{T_h}',
+    '\\eta=\\frac W{Q_h}',
+    'COP=\\frac{Q_c}W',
+    'COP=\\frac{Q_h}W',
+    '\\Delta S=\\frac QT',
+    '\\Delta S=\\int\\frac{dQ}T',
+    '\\Delta S\\ge0',
+    '\\Delta G=\\Delta H-T\\Delta S',
+  ]},
+  { id: 'waves', grp: 'PHYSICS', en: 'Waves & Oscillations', zh: '波与振动', enShort: 'Waves', zhShort: '波与振动', items: [
+    'v=f\\lambda',
+    'f=\\frac1T',
+    '\\omega=2\\pi f',
+    'k=\\frac{2\\pi}\\lambda',
+    'y=A\\sin(kx-\\omega t)',
+    'y=A\\sin(kx+\\omega t)',
+    'v=\\sqrt{\\frac T\\mu}',
+    'x=A\\cos(\\omega t+\\varphi)',
+    'v=-A\\omega\\sin(\\omega t+\\varphi)',
+    'a=-A\\omega^2\\cos(\\omega t+\\varphi)',
+    'a=-\\omega^2x',
+    '\\omega=\\sqrt{\\frac km}',
+    'T=2\\pi\\sqrt{\\frac mk}',
+    'T=2\\pi\\sqrt{\\frac Lg}',
+    'T=2\\pi\\sqrt{\\frac I{mgd}}',
+    'E=\\tfrac12kA^2',
+    'f_{\\text{beat}}=|f_1-f_2|',
+    'f^{\\prime}=f\\frac{v\\pm v_o}{v\\mp v_s}',
+    '\\lambda_n=\\frac{2L}n',
+    'f_n=\\frac{nv}{2L}',
+    'f_n=\\frac{(2n-1)v}{4L}',
+    'I=\\frac PA',
+    'I=\\frac{I_0}{r^2}',
+    '\\beta=10\\log\\frac I{I_0}',
+  ]},
+  { id: 'circ', grp: 'PHYSICS', en: 'E&M — Electrostatics & Circuits', zh: '电磁学 — 静电与电路', enShort: 'E&M · Circuits', zhShort: '静电电路', items: [
+    'F=\\frac{kq_1q_2}{r^2}',
+    'k=\\frac1{4\\pi\\varepsilon_0}',
+    'E=\\frac Fq',
+    'E=\\frac{kQ}{r^2}',
+    'E=-\\frac{dV}{dx}',
+    'V=\\frac{kQ}r',
+    'U=\\frac{kq_1q_2}r',
+    'U=qV',
+    'C=\\frac QV',
+    'C=\\frac{\\varepsilon_0A}d',
+    'C=\\frac{\\kappa\\varepsilon_0A}d',
+    '\\frac1C=\\sum\\frac1{C_i}',
+    'C=\\sum C_i',
+    'U=\\tfrac12CV^2',
+    'U=\\tfrac12QV=\\frac{Q^2}{2C}',
+    'I=\\frac{dQ}{dt}',
+    'V=IR',
+    'R=\\frac{\\rho L}A',
+    'R=\\sum R_i',
+    '\\frac1R=\\sum\\frac1{R_i}',
+    'P=IV=I^2R=\\frac{V^2}R',
+    '\\sum I_{\\text{in}}=\\sum I_{\\text{out}}',
+    '\\sum V=0',
+    'q=C\\varepsilon\\left(1-e^{-t/RC}\\right)',
+    'q=Q_0e^{-t/RC}',
+    '\\tau=RC',
+  ]},
+  { id: 'mag', grp: 'PHYSICS', en: 'E&M — Magnetism & Induction', zh: '电磁学 — 磁与电磁感应', enShort: 'E&M · Magnetism', zhShort: '磁与感应', items: [
+    'F=qvB\\sin\\theta',
+    '\\mathbf F=q\\mathbf v\\times\\mathbf B',
+    'F=BIL\\sin\\theta',
+    '\\mathbf F=I\\mathbf L\\times\\mathbf B',
+    'd\\mathbf B=\\frac{\\mu_0I\\,d\\mathbf l\\times\\hat{\\mathbf r}}{4\\pi r^2}',
+    'B=\\frac{\\mu_0I}{2\\pi r}',
+    'B=\\frac{\\mu_0I}{2R}',
+    'B=\\mu_0nI',
+    '\\varepsilon=-\\frac{d\\Phi}{dt}',
+    '\\Phi=BA\\cos\\theta',
+    '\\varepsilon=-N\\frac{d\\Phi}{dt}',
+    '\\varepsilon=BLv',
+    '\\varepsilon=-L\\frac{di}{dt}',
+    'L=\\mu_0n^2Al',
+    'U=\\tfrac12LI^2',
+    'i=\\frac{\\varepsilon}{R}\\left(1-e^{-Rt/L}\\right)',
+    '\\tau=\\frac LR',
+    'f=\\frac1{2\\pi\\sqrt{LC}}',
+    'Z=\\sqrt{R^2+(X_L-X_C)^2}',
+    'X_L=\\omega L',
+    'X_C=\\frac1{\\omega C}',
+    'V_{\\text{rms}}=\\frac{V_0}{\\sqrt2}',
+    'I_{\\text{rms}}=\\frac{I_0}{\\sqrt2}',
+    'P_{\\text{avg}}=V_{\\text{rms}}I_{\\text{rms}}\\cos\\varphi',
+    '\\frac{V_2}{V_1}=\\frac{N_2}{N_1}',
+  ]},
+  { id: 'maxwell', grp: 'PHYSICS', en: "Maxwell's Equations & EM Waves", zh: '麦克斯韦方程组与电磁波', enShort: 'Maxwell & EM', zhShort: '麦克斯韦', items: [
+    '\\nabla\\cdot\\mathbf E=\\frac\\rho{\\varepsilon_0}',
+    '\\nabla\\cdot\\mathbf B=0',
+    '\\nabla\\times\\mathbf E=-\\frac{\\partial\\mathbf B}{\\partial t}',
+    '\\nabla\\times\\mathbf B=\\mu_0\\mathbf J+\\mu_0\\varepsilon_0\\frac{\\partial\\mathbf E}{\\partial t}',
+    'c=\\frac1{\\sqrt{\\mu_0\\varepsilon_0}}',
+    'E=cB',
+    'I=\\tfrac12\\varepsilon_0cE_0^2',
+    '\\mathbf S=\\mathbf E\\times\\mathbf H',
+    'P=\\frac Ic',
+  ]},
+  { id: 'optics', grp: 'PHYSICS', en: 'Optics', zh: '光学', enShort: 'Optics', zhShort: '光学', items: [
+    'n_1\\sin\\theta_1=n_2\\sin\\theta_2',
+    'n=\\frac cv',
+    '\\sin\\theta_c=\\frac{n_2}{n_1}',
+    '\\frac1f=\\frac1{d_o}+\\frac1{d_i}',
+    'm=-\\frac{d_i}{d_o}',
+    'm=\\frac{h_i}{h_o}',
+    'd\\sin\\theta=m\\lambda',
+    'a\\sin\\theta=m\\lambda',
+    '\\theta_{\\min}=1.22\\frac\\lambda D',
+    'E=hf=\\frac{hc}\\lambda',
+    'KE_{\\max}=hf-\\phi',
+    '\\lambda=\\frac hp',
+  ]},
+];
+
+let wb;
+try {
+  const s = JSON.parse(localStorage.getItem('mt_wb') || 'null');
+  wb = { strokes: (s && s.strokes) || [], notes: (s && s.notes) || [] };
+} catch (e) { wb = { strokes: [], notes: [] }; }
+wb.seq = Math.max(0, ...wb.strokes.map(s => s.id || 0), ...wb.notes.map(n => n.id || 0));
+wb.z = 10; wb.tool = 'pen'; wb.color = '#1c1e21'; wb.size = 3;
+wb.actions = []; wb.cat = 'arith'; wb.grp = 'MATH'; wb.cur = null; wb.ro = null;
+wb.editing = null; wb.kbTab = 'vars'; wb.kbVisible = true;
+
+function wbSave() {
+  try {
+    localStorage.setItem('mt_wb', JSON.stringify({
+      strokes: wb.strokes,
+      notes: wb.notes.map(n => ({ id: n.id, tex: n.tex, x: n.x, y: n.y })),
+    }));
+  } catch (e) { /* storage full: keep in memory only */ }
+}
+
+function whiteboard() {
+  app.innerHTML = `
+  <div class="wb-layout">
+    <div class="card wb-panel">
+      <div class="wb-tools">
+        <button class="wb-tool on" id="wbPenBtn" onclick="wbSetTool('pen')">${t('wbPen')}</button>
+        <button class="wb-tool" id="wbEraserBtn" onclick="wbSetTool('eraser')">${t('wbEraser')}</button>
+        ${WB_COLORS.map(c => `<span class="wb-color ${c === wb.color ? 'on' : ''}" data-c="${c}" style="background:${c}" onclick="wbSetColor('${c}')"></span>`).join('')}
+        <button class="wb-tool" onclick="wbUndo()">${t('wbUndo')}</button>
+        <button class="wb-tool" onclick="wbClear()">${t('wbClear')}</button>
+      </div>
+      <div class="wb-grp-row" id="wbGrpRow">
+        <button class="wb-grp ${wb.grp === 'MATH' ? 'on' : ''}" data-g="MATH" onclick="wbSetGrp('MATH')">${LANG === 'zh' ? '数学' : 'MATH'}</button>
+        <button class="wb-grp ${wb.grp === 'PHYSICS' ? 'on' : ''}" data-g="PHYSICS" onclick="wbSetGrp('PHYSICS')">${LANG === 'zh' ? '物理' : 'PHYSICS'}</button>
+      </div>
+      <div class="wb-sel-row">
+        <select id="wbCatSel" onchange="wbSetCat(this.value)"></select>
+        <input class="wb-search" id="wbSearch" placeholder="${t('wbSearchPh')}" oninput="wbRenderItems()">
+      </div>
+      <div class="wb-items" id="wbItems"></div>
+      <button class="btn sm wb-custom-btn" onclick="wbOpenEditor(null)">＋ ${t('wbCustom')}</button>
+    </div>
+    <div class="card wb-board-wrap" id="wbWrap">
+      <canvas id="wbCanvas"></canvas>
+    </div>
+  </div>`;
+  wbRenderCats();
+  const cv = document.getElementById('wbCanvas');
+  cv.addEventListener('pointerdown', wbDown);
+  const wrap = document.getElementById('wbWrap');
+  if (window.ResizeObserver) {
+    if (wb.ro) wb.ro.disconnect();
+    wb.ro = new ResizeObserver(() => wbResize());
+    wb.ro.observe(wrap);
+  }
+  requestAnimationFrame(wbResize);
+  wb.notes.forEach(wbAddNoteEl);
+}
+
+function wbRenderCats() {
+  const sel = document.getElementById('wbCatSel');
+  if (!sel) return;
+  document.querySelectorAll('#wbGrpRow .wb-grp').forEach(b => b.classList.toggle('on', b.dataset.g === wb.grp));
+  sel.innerHTML = WB_CATS.filter(c => (c.grp || 'MATH') === wb.grp).map(c =>
+    `<option value="${c.id}" ${c.id === wb.cat ? 'selected' : ''}>${LANG === 'zh' ? c.zh : c.en}</option>`
+  ).join('');
+  wbRenderItems();
+}
+function wbSetGrp(g) {
+  wb.grp = g;
+  const first = WB_CATS.find(c => (c.grp || 'MATH') === g);
+  wb.cat = first ? first.id : wb.cat;
+  const s = document.getElementById('wbSearch');
+  if (s) s.value = '';
+  wbRenderCats();
+}
+function wbSetCat(id) {
+  wb.cat = id;
+  const s = document.getElementById('wbSearch');
+  if (s) s.value = '';
+  wbRenderItems();
+}
+function wbRenderItems() {
+  const box = document.getElementById('wbItems');
+  if (!box) return;
+  const qEl = document.getElementById('wbSearch');
+  const q = ((qEl && qEl.value) || '').trim().toLowerCase();
+  box.innerHTML = '';
+  const addItem = (tex, tag) => {
+    const b = document.createElement('button');
+    b.className = 'wb-item';
+    if (tag) {
+      const s = document.createElement('span');
+      s.className = 'wb-tag'; s.textContent = tag;
+      b.appendChild(s);
+    }
+    const m = document.createElement('span');
+    if (window.katex) katex.render(tex, m, { throwOnError: false });
+    else m.textContent = tex;
+    b.appendChild(m);
+    b.onclick = () => wbAddNote(tex);
+    box.appendChild(b);
+  };
+  if (q) {
+    const norm = s => s.toLowerCase().replace(/\\/g, '');
+    const qq = norm(q);
+    for (const c of WB_CATS) {
+      const tag = LANG === 'zh' ? (c.zhShort || c.zh) : (c.enShort || c.en);
+      c.items.filter(tex => norm(tex).includes(qq)).forEach(tex => addItem(tex, tag));
+    }
+  } else {
+    const cat = WB_CATS.find(c => c.id === wb.cat);
+    if (cat) cat.items.forEach(tex => addItem(tex, null));
+  }
+}
+function wbSetTool(tool) {
+  wb.tool = tool;
+  document.getElementById('wbPenBtn').classList.toggle('on', tool === 'pen');
+  document.getElementById('wbEraserBtn').classList.toggle('on', tool === 'eraser');
+  const cv = document.getElementById('wbCanvas');
+  if (cv) cv.style.cursor = tool === 'pen' ? 'crosshair' : 'cell';
+}
+function wbSetColor(c) {
+  wb.color = c;
+  document.querySelectorAll('.wb-color').forEach(el => el.classList.toggle('on', el.dataset.c === c));
+  if (wb.tool === 'eraser') wbSetTool('pen');
+}
+
+// --- canvas drawing ---
+function wbResize() {
+  const wrap = document.getElementById('wbWrap'), cv = document.getElementById('wbCanvas');
+  if (!wrap || !cv) return;
+  const dpr = window.devicePixelRatio || 1;
+  const w = wrap.clientWidth, h = wrap.clientHeight;
+  if (!w || !h) return;
+  cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+  const ctx = cv.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  wbRedraw();
+}
+function wbRedraw() {
+  const cv = document.getElementById('wbCanvas');
+  if (!cv) return;
+  const ctx = cv.getContext('2d');
+  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  ctx.restore();
+  wb.strokes.forEach(s => wbDrawStroke(ctx, s));
+}
+function wbDrawStroke(ctx, s) {
+  if (s.erase) ctx.globalCompositeOperation = 'destination-out';
+  ctx.strokeStyle = s.color; ctx.lineWidth = s.size;
+  ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  ctx.beginPath();
+  s.pts.forEach((p, i) => i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y));
+  if (s.pts.length === 1) ctx.lineTo(s.pts[0].x + .1, s.pts[0].y);
+  ctx.stroke();
+  ctx.globalCompositeOperation = 'source-over';
+}
+function wbDown(e) {
+  if (wb.editing) return;  // don't draw while the editor is open
+  const cv = document.getElementById('wbCanvas');
+  try { cv.setPointerCapture(e.pointerId); } catch (err) { /* synthetic events */ }
+  const r = cv.getBoundingClientRect();
+  const s = {
+    id: ++wb.seq, erase: wb.tool === 'eraser', color: wb.color,
+    size: wb.tool === 'eraser' ? wb.size * 8 : wb.size,
+    pts: [{ x: e.clientX - r.left, y: e.clientY - r.top }],
+  };
+  wb.strokes.push(s); wb.cur = s;
+  const ctx = cv.getContext('2d');
+  const move = ev => {
+    const p = { x: ev.clientX - r.left, y: ev.clientY - r.top };
+    const last = s.pts[s.pts.length - 1];
+    ctx.save();
+    if (s.erase) ctx.globalCompositeOperation = 'destination-out';
+    ctx.strokeStyle = s.color; ctx.lineWidth = s.size;
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.beginPath(); ctx.moveTo(last.x, last.y); ctx.lineTo(p.x, p.y); ctx.stroke();
+    ctx.restore();
+    s.pts.push(p);
+  };
+  const up = () => {
+    cv.removeEventListener('pointermove', move);
+    cv.removeEventListener('pointerup', up);
+    if (s.pts.length === 1) s.pts.push({ x: s.pts[0].x + .1, y: s.pts[0].y });
+    wb.actions.push({ t: 'stroke', id: s.id });
+    wb.cur = null; wbSave();
+  };
+  cv.addEventListener('pointermove', move);
+  cv.addEventListener('pointerup', up);
+  e.preventDefault();
+}
+
+// --- formula notes ---
+function wbPlaceNote(w, h) {
+  const wrap = document.getElementById('wbWrap');
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+  const rects = wb.notes.map(n => {
+    const el = document.getElementById('wbNote' + n.id);
+    return el ? { x: el.offsetLeft, y: el.offsetTop, w: el.offsetWidth, h: el.offsetHeight } : null;
+  }).filter(Boolean);
+  for (let y = 20; y + h < H - 12; y += 26) {
+    for (let x = 20; x + w < W - 12; x += 26) {
+      const hit = rects.some(r => x < r.x + r.w + 10 && x + w + 10 > r.x && y < r.y + r.h + 10 && y + h + 10 > r.y);
+      if (!hit) return { x, y };
+    }
+  }
+  return { x: 30 + (wb.seq * 37) % 240, y: 30 + (wb.seq * 37) % 200 };
+}
+function wbAddNote(tex) {
+  const note = { id: ++wb.seq, tex, x: 20, y: 20 };
+  wb.notes.push(note);
+  wb.actions.push({ t: 'note', id: note.id });
+  wbAddNoteEl(note);
+  const el = document.getElementById('wbNote' + note.id);
+  if (el) {
+    const p = wbPlaceNote(el.offsetWidth || 120, el.offsetHeight || 40);
+    note.x = p.x; note.y = p.y;
+    el.style.left = p.x + 'px'; el.style.top = p.y + 'px';
+  }
+  wbSave();
+}
+function wbIsPlain(s) { return !/[\\^_{}]/.test(s); }
+function wbRenderTex(el, tex) {
+  el.innerHTML = '';
+  if (window.katex && !wbIsPlain(tex)) {
+    try { katex.render(tex, el, { throwOnError: false }); return; } catch (e) { /* fall through */ }
+  }
+  el.textContent = tex;  // plain text — what you type is what you get
+}
+function wbAddNoteEl(note) {
+  const wrap = document.getElementById('wbWrap');
+  if (!wrap) return;
+  const el = document.createElement('div');
+  el.className = 'wb-note'; el.id = 'wbNote' + note.id;
+  el.style.left = note.x + 'px'; el.style.top = note.y + 'px';
+  el.style.zIndex = ++wb.z;
+  const body = document.createElement('span');
+  body.className = 'wb-body';
+  wbRenderTex(body, note.tex);
+  const del = document.createElement('span');
+  del.className = 'wb-del'; del.textContent = '×';
+  del.onclick = ev => {
+    ev.stopPropagation();
+    el.remove();
+    wb.notes = wb.notes.filter(n => n.id !== note.id);
+    if (wb.editing === note) wbCloseEditor();
+    wbSave();
+  };
+  const edit = document.createElement('span');
+  edit.className = 'wb-edit'; edit.textContent = '✎';
+  edit.onclick = ev => { ev.stopPropagation(); wbOpenEditor(note); };
+  el.appendChild(body); el.appendChild(del); el.appendChild(edit);
+  el.addEventListener('dblclick', e => {
+    if (e.target.classList.contains('wb-del') || e.target.classList.contains('wb-edit')) return;
+    wbOpenEditor(note);
+  });
+  el.addEventListener('pointerdown', e => {
+    if (e.target.classList.contains('wb-del') || e.target.classList.contains('wb-edit')) return;
+    if (wb.editing) return;
+    try { el.setPointerCapture(e.pointerId); } catch (err) { /* synthetic events */ }
+    const off = { dx: e.clientX - el.offsetLeft, dy: e.clientY - el.offsetTop };
+    const move = ev => {
+      let x = ev.clientX - off.dx, y = ev.clientY - off.dy;
+      x = Math.max(0, Math.min(x, wrap.clientWidth - el.offsetWidth));
+      y = Math.max(0, Math.min(y, wrap.clientHeight - el.offsetHeight));
+      el.style.left = x + 'px'; el.style.top = y + 'px';
+    };
+    const up = () => {
+      el.removeEventListener('pointermove', move);
+      el.removeEventListener('pointerup', up);
+      note.x = el.offsetLeft; note.y = el.offsetTop;
+      wbSave();
+    };
+    el.addEventListener('pointermove', move);
+    el.addEventListener('pointerup', up);
+    el.style.zIndex = ++wb.z;
+    e.preventDefault();
+  });
+  wrap.appendChild(el);
+}
+// --- note editor + math keyboard ---
+const WB_KEYS = {
+  vars: { en: 'Variables', zh: '变量', keys: [
+    ['x'], ['y'], ['z'], ['t'], ['a'], ['b'], ['c'], ['n'], ['m'], ['k'], ['u'], ['v'], ['i'], ['e'], ['\\pi', 'π'], ['\\infty', '∞'],
+  ]},
+  greek: { en: 'Greek', zh: '希腊字母', keys: [
+    ['\\alpha', 'α'], ['\\beta', 'β'], ['\\gamma', 'γ'], ['\\delta', 'δ'], ['\\epsilon', 'ε'], ['\\theta', 'θ'], ['\\lambda', 'λ'], ['\\mu', 'μ'], ['\\pi', 'π'], ['\\rho', 'ρ'], ['\\sigma', 'σ'], ['\\tau', 'τ'], ['\\phi', 'φ'], ['\\chi', 'χ'], ['\\psi', 'ψ'], ['\\omega', 'ω'], ['\\Delta', 'Δ'], ['\\Sigma', 'Σ'], ['\\Omega', 'Ω'], ['\\nabla', '∇'],
+  ]},
+  ops: { en: 'Operators', zh: '运算符', keys: [
+    ['+'], ['-'], ['\\times', '×'], ['\\div', '÷'], ['\\cdot', '·'], ['\\pm', '±'], ['\\mp', '∓'], ['^{}', 'xⁿ', 2], ['_{}', 'xₙ', 2], ['\\frac{}{}', 'a/b', 6], ['\\sqrt{}', '√', 6], ['\\sqrt[n]{}', 'ⁿ√', 9], ['\\le', '≤'], ['\\ge', '≥'], ['\\ne', '≠'], ['\\approx', '≈'], ['\\propto', '∝'], ['\\to', '→'], ['\\infty', '∞'], ['\\partial', '∂'], ['\\int', '∫'], ['\\oint', '∮'], ['\\sum', '∑'], ['\\prod', '∏'], ['\\binom{}{}', 'nCk', 7], ['^{\\circ}', '°'], ['\\angle', '∠'],
+  ]},
+  funcs: { en: 'Functions', zh: '函数', keys: [
+    ['\\sin ', 'sin'], ['\\cos ', 'cos'], ['\\tan ', 'tan'], ['\\sec ', 'sec'], ['\\csc ', 'csc'], ['\\cot ', 'cot'], ['\\ln ', 'ln'], ['\\log ', 'log'], ['\\exp ', 'exp'], ['\\lim_{x\\to0} ', 'lim'], ['\\lim_{x\\to\\infty} ', 'lim∞'], ['\\min ', 'min'], ['\\max ', 'max'], ['\\det ', 'det'], ['\\sin^{-1} ', 'sin⁻¹'], ['\\cos^{-1} ', 'cos⁻¹'], ['\\tan^{-1} ', 'tan⁻¹'], ['\\sinh ', 'sinh'], ['\\cosh ', 'cosh'], ['\\tanh ', 'tanh'],
+  ]},
+};
+
+function wbOpenEditor(note) {
+  wbCloseEditor();
+  const wrap = document.getElementById('wbWrap');
+  if (!wrap) return;
+  const bar = document.createElement('div');
+  bar.className = 'wb-editor'; bar.id = 'wbEditor';
+  bar.innerHTML = `
+    <div class="wb-ed-row">
+      <textarea class="wb-ed-tex" id="wbEdTex" rows="2" spellcheck="false"></textarea>
+      <div class="wb-ed-prev" id="wbEdPrev"></div>
+    </div>
+    <div class="wb-kb" id="wbKb"></div>
+    <div class="wb-ed-btns">
+      <button class="btn sm" onclick="wbSaveEditor()">${t('wbSave')}</button>
+      <button class="btn sm ghost" onclick="wbCloseEditor()">${t('wbCancel')}</button>
+      <button class="wb-tool" onclick="wbToggleKb()">${t('wbKb')} ⌨</button>
+    </div>`;
+  wrap.appendChild(bar);
+  const tex = document.getElementById('wbEdTex');
+  tex.value = note ? note.tex : '';
+  wb.editing = note || 'new';
+  wb.kbVisible = true;
+  wbRenderKb();
+  wbEdPreview();
+  tex.addEventListener('input', wbEdPreview);
+  tex.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { e.stopPropagation(); wbCloseEditor(); }
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); wbSaveEditor(); }
+  });
+  tex.focus();
+  tex.setSelectionRange(tex.value.length, tex.value.length);
+}
+function wbCloseEditor() {
+  const bar = document.getElementById('wbEditor');
+  if (bar) bar.remove();
+  wb.editing = null;
+}
+function wbSaveEditor() {
+  const texEl = document.getElementById('wbEdTex');
+  if (!texEl) return;
+  const tex = texEl.value.trim();
+  if (!tex) { wbCloseEditor(); return; }
+  if (wb.editing === 'new') {
+    wbAddNote(tex);
+  } else if (wb.editing) {
+    const note = wb.editing;
+    note.tex = tex;
+    const el = document.getElementById('wbNote' + note.id);
+    const body = el && el.querySelector('.wb-body');
+    if (body) wbRenderTex(body, tex);
+    wbSave();
+  }
+  wbCloseEditor();
+}
+function wbEdPreview() {
+  const texEl = document.getElementById('wbEdTex');
+  const prev = document.getElementById('wbEdPrev');
+  if (!texEl || !prev) return;
+  prev.classList.remove('err');
+  const tex = texEl.value.trim();
+  if (!tex) {
+    prev.innerHTML = '<span style="color:#98a2ae;font-size:12.5px">Preview</span>';
+    return;
+  }
+  if (wbIsPlain(tex)) {
+    prev.classList.add('plain');
+    prev.textContent = tex;
+    return;
+  }
+  prev.classList.remove('plain');
+  try {
+    prev.innerHTML = '';
+    if (window.katex) katex.render(tex, prev, { throwOnError: true, displayMode: false });
+    else prev.textContent = tex;
+  } catch (e) {
+    prev.classList.add('err');
+    prev.textContent = '⚠ ' + String(e.message || e).slice(0, 120);
+  }
+}
+function wbRenderKb() {
+  const kb = document.getElementById('wbKb');
+  if (!kb) return;
+  kb.classList.toggle('hidden', !wb.kbVisible);
+  const tabs = Object.entries(WB_KEYS).map(([id, k]) =>
+    `<button class="wb-kb-tab ${id === wb.kbTab ? 'on' : ''}" onclick="wb.kbTab='${id}';wbRenderKb()">${LANG === 'zh' ? k.zh : k.en}</button>`
+  ).join('');
+  const keys = WB_KEYS[wb.kbTab].keys.map(([tex, label], i) =>
+    `<button class="wb-key" onclick="wbKey(${i})">${label || tex}</button>`
+  ).join('');
+  kb.innerHTML = `<div class="wb-kb-tabs">${tabs}</div><div class="wb-kb-keys">${keys}</div>`;
+}
+function wbKey(i) {
+  const k = WB_KEYS[wb.kbTab].keys[i];
+  const tex = k[0], off = k[2];
+  const ta = document.getElementById('wbEdTex');
+  if (!ta) return;
+  const s = ta.selectionStart != null ? ta.selectionStart : ta.value.length;
+  const e = ta.selectionEnd != null ? ta.selectionEnd : s;
+  ta.value = ta.value.slice(0, s) + tex + ta.value.slice(e);
+  const pos = s + (off !== undefined ? off : tex.length);
+  ta.focus();
+  ta.setSelectionRange(pos, pos);
+  wbEdPreview();
+}
+function wbToggleKb() { wb.kbVisible = !wb.kbVisible; wbRenderKb(); }
+function wbUndo() {
+  const a = wb.actions.pop();
+  if (!a) return;
+  if (a.t === 'stroke') {
+    wb.strokes = wb.strokes.filter(s => s.id !== a.id);
+    wbRedraw();
+  } else if (a.t === 'note') {
+    const i = wb.notes.findIndex(n => n.id === a.id);
+    if (i >= 0) wb.notes.splice(i, 1);
+    const el = document.getElementById('wbNote' + a.id);
+    if (el) el.remove();
+  }
+  wbSave();
+}
+function wbClear() {
+  wb.strokes = []; wb.notes = []; wb.actions = [];
+  document.querySelectorAll('.wb-note').forEach(el => el.remove());
+  wbRedraw(); wbSave();
+}
+
+init();
 
 // --- auto-close a test 30s after the student leaves the test view ---
 let leaveTimer = null, leaveCountdown = null;
@@ -556,6 +2486,243 @@ function exitTest(fromLeave, pendingTab) {
 }
 
 document.addEventListener('visibilitychange', () => {});  // leaving the screen no longer triggers closing
+
+// ===================== GAMES =====================
+function gamesView() {
+  app.innerHTML = `
+  <div class="card">
+    <h3>${t('tabGames')}</h3>
+    <div class="game-list">
+      <div class="card compact game-card" onclick="fcStart()">
+        <h3>${t('gChess')}</h3>
+        <p style="color:#666;font-size:13.5px;margin:6px 0 10px">${t('gChessDesc')}</p>
+        <button class="btn sm">${t('gPlay')} →</button>
+      </div>
+      <div class="card compact game-card" onclick="gwStart()">
+        <h3>${t('gGraph')}</h3>
+        <p style="color:#666;font-size:13.5px;margin:6px 0 10px">${t('gGraphDesc')}</p>
+        <button class="btn sm">${t('gPlay')} →</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ---------- Function Chess (player vs AI) ----------
+const FC_POOL = [
+  {s:'x+2', f:x=>x+2}, {s:'x+1', f:x=>x+1}, {s:'x', f:x=>x},
+  {s:'x−1', f:x=>x-1}, {s:'x−2', f:x=>x-2},
+  {s:'2x', f:x=>2*x}, {s:'2x−1', f:x=>2*x-1}, {s:'3x−3', f:x=>3*x-3},
+];
+let fc = null;
+function fcStart() {
+  const mk = (side) => [1, 3, 5].map(c => ({side, r: side === 'you' ? 7 : 0, c, id: Math.random().toString(36).slice(2)}));
+  fc = {pieces: [...mk('you'), ...mk('ai')], turn: 'you', sel: null, funcs: fcDrawFuncs(), over: false, msg: t('gSelectPiece')};
+  fcRender();
+}
+function fcDrawFuncs() {
+  const pool = [...FC_POOL];
+  const out = [];
+  for (let i = 0; i < 3; i++) out.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
+  return out;
+}
+function fcRender() {
+  let cells = '';
+  for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) {
+    const p = fc.pieces.find(p => p.r === r && p.c === c);
+    const lit = (r + c) % 2 ? '' : 'lit';
+    const sel = fc.sel && fc.sel.r === r && fc.sel.c === c ? 'sel' : '';
+    cells += `<div class="fc-cell ${lit} ${sel}" data-r="${r}" data-c="${c}" onclick="fcCell(${r},${c})">${p ? `<span class="${p.side === 'you' ? 'fc-you' : 'fc-ai'}">♟</span>` : ''}</div>`;
+  }
+  app.innerHTML = `
+  <div class="card">
+    <div class="fr-req" style="border-top:none">
+      <h3>${t('gChess')}</h3>
+      <button class="btn sm ghost" onclick="gamesView()">${t('gBack')}</button>
+    </div>
+    <div class="fc-wrap">
+      <div class="fc-board">${cells}</div>
+      <div class="fc-side">
+        <div style="font-size:14.5px;font-weight:600;margin-bottom:4px">${fc.over ? '' : (fc.turn === 'you' ? '🧑 ' + t('gYourTurn') : '🤖 ' + t('gAiTurn'))}</div>
+        <div class="auth-msg ${fc.msg.startsWith('⚠') ? 'err' : 'ok'}" style="min-height:20px">${fc.msg}</div>
+        <div class="fc-funcs">
+          ${fc.funcs.map((fn, i) => `<button class="fc-func" ${fc.turn !== 'you' || fc.over ? 'disabled' : ''} onclick="fcMove(${i})">f(x) = ${fn.s}</button>`).join('')}
+        </div>
+        <button class="btn sm ghost" onclick="fcStart()">↺ ${t('gPlay')}</button>
+      </div>
+    </div>
+  </div>`;
+}
+function fcCell(r, c) {
+  if (!fc || fc.turn !== 'you' || fc.over) return;
+  const p = fc.pieces.find(p => p.r === r && p.c === c);
+  if (p && p.side === 'you') { fc.sel = p; fc.msg = t('gYourTurn'); fcRender(); }
+}
+function fcApply(p, fn) {
+  const nc = fn.f(p.c);
+  if (nc < 0 || nc > 7) return false;
+  const nr = p.side === 'you' ? p.r - 1 : p.r + 1;
+  const occ = fc.pieces.find(q => q.r === nr && q.c === nc);
+  if (occ && occ.side === p.side) return false;
+  if (occ) fc.pieces = fc.pieces.filter(q => q !== occ);
+  p.r = nr; p.c = nc;
+  return true;
+}
+function fcValidMoves(p) { return fc.funcs.filter(fn => { const nc = fn.f(p.c); if (nc < 0 || nc > 7) return false; const occ = fc.pieces.find(q => q.r === (p.side === 'you' ? p.r - 1 : p.r + 1) && q.c === nc); return !occ || occ.side !== p.side; }); }
+function fcCheckWin() {
+  const you = fc.pieces.filter(p => p.side === 'you'), ai = fc.pieces.filter(p => p.side === 'ai');
+  if (!ai.length || you.some(p => p.r === 0)) { fc.over = true; fc.msg = t('gYouWin'); return true; }
+  if (!you.length || ai.some(p => p.r === 7)) { fc.over = true; fc.msg = t('gAiWin'); return true; }
+  return false;
+}
+function fcMove(i) {
+  if (!fc || fc.turn !== 'you' || fc.over) return;
+  if (!fc.sel) { fc.msg = '⚠ ' + t('gSelectPiece'); fcRender(); return; }
+  if (!fcApply(fc.sel, fc.funcs[i])) { fc.msg = '⚠ ' + t('gInvalid'); fcRender(); return; }
+  fc.sel = null;
+  if (fcCheckWin()) { fc.turn = 'done'; fcRender(); return; }
+  fc.turn = 'ai'; fc.msg = t('gAiTurn'); fcRender();
+  setTimeout(fcAi, 650);
+}
+function fcAi() {
+  if (!fc || fc.over) return;
+  const mine = fc.pieces.filter(p => p.side === 'ai');
+  let moved = false;
+  for (const p of [...mine].sort(() => Math.random() - .5)) {
+    const ok = fcValidMoves(p);
+    if (ok.length) { fcApply(p, ok[Math.floor(Math.random() * ok.length)]); moved = true; break; }
+  }
+  if (!moved) { fc.msg = t('gAiTurn') + ' (skip)'; }
+  if (fcCheckWin()) { fc.turn = 'done'; fcRender(); return; }
+  fc.turn = 'you'; fc.funcs = fcDrawFuncs();
+  const anyValid = fc.pieces.filter(p => p.side === 'you').some(p => fcValidMoves(p).length);
+  fc.msg = anyValid ? t('gYourTurn') : t('gYourTurn') + ' — ' + t('gInvalid');
+  if (!anyValid) fc.funcs = fcDrawFuncs();  // dead hand: redeal
+  fcRender();
+}
+
+// ---------- Graph War (player vs AI) ----------
+let gw = null;
+const GW_W = 520, GW_H = 400;
+function gwStart() {
+  const spots = [];
+  const used = new Set();
+  while (spots.length < 6) {
+    const x = Math.round((Math.random() * 18 - 9) * 2) / 2;
+    const y = Math.round((Math.random() * 16 - 8) * 2) / 2;
+    const k = x + ',' + y;
+    if (!used.has(k)) { used.add(k); spots.push({x, y, alive: true}); }
+  }
+  gw = {targets: spots, shots: [], you: 0, ai: 0, m: 1, b: 0, turn: 'you', over: false, msg: '', left: 5};
+  gwRender();
+}
+function gwXY(x, y) { return [GW_W / 2 + x * (GW_W / 2 - 20) / 10, GW_H / 2 - y * (GW_H / 2 - 20) / 10]; }
+function gwDraw() {
+  const cv = document.getElementById('gwCanvas');
+  if (!cv) return;
+  const ctx = cv.getContext('2d');
+  ctx.clearRect(0, 0, GW_W, GW_H);
+  ctx.strokeStyle = '#e4e9f0'; ctx.lineWidth = 1;
+  for (let i = -10; i <= 10; i += 2) {
+    const [x1, y1] = gwXY(i, -10), [x2, y2] = gwXY(i, 10);
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    const [x3, y3] = gwXY(-10, i), [x4, y4] = gwXY(10, i);
+    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
+  }
+  ctx.strokeStyle = '#8a94a6'; ctx.lineWidth = 1.5;
+  const [ax1, ay1] = gwXY(-10, 0), [ax2, ay2] = gwXY(10, 0);
+  ctx.beginPath(); ctx.moveTo(ax1, ay1); ctx.lineTo(ax2, ay2); ctx.stroke();
+  const [bx1, by1] = gwXY(0, -10), [bx2, by2] = gwXY(0, 10);
+  ctx.beginPath(); ctx.moveTo(bx1, by1); ctx.lineTo(bx2, by2); ctx.stroke();
+  for (const s of gw.shots) {
+    ctx.strokeStyle = s.side === 'you' ? 'rgba(43,111,227,.75)' : 'rgba(211,69,61,.75)';
+    ctx.lineWidth = 2;
+    const [x1, y1] = gwXY(-10, -10 * s.m + s.b), [x2, y2] = gwXY(10, 10 * s.m + s.b);
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+  }
+  if (gw.turn === 'you' && !gw.over) {
+    ctx.strokeStyle = 'rgba(43,111,227,.35)'; ctx.lineWidth = 2; ctx.setLineDash([6, 5]);
+    const [x1, y1] = gwXY(-10, -10 * gw.m + gw.b), [x2, y2] = gwXY(10, 10 * gw.m + gw.b);
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+  for (const tg of gw.targets) {
+    if (!tg.alive) continue;
+    const [x, y] = gwXY(tg.x, tg.y);
+    ctx.fillStyle = '#f5b83d'; ctx.strokeStyle = '#c78d1e'; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.arc(x, y, 9, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#fff'; ctx.font = 'bold 10px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText('★', x, y + .5);
+  }
+}
+function gwRender() {
+  app.innerHTML = `
+  <div class="card">
+    <div class="fr-req" style="border-top:none">
+      <h3>${t('gGraph')}</h3>
+      <button class="btn sm ghost" onclick="gamesView()">${t('gBack')}</button>
+    </div>
+    <div class="gw-wrap">
+      <div class="gw-canvas-box"><canvas id="gwCanvas" width="${GW_W}" height="${GW_H}"></canvas></div>
+      <div class="gw-ctl">
+        <div style="font-size:15px"><b>${t('gYou')}: ${gw.you}</b> · ${t('gAI')}: ${gw.ai} · ⭐ × ${gw.targets.filter(x => x.alive).length} · 🎯 ${gw.left}</div>
+        <div class="auth-msg ${gw.msg.startsWith('⚠') || gw.msg.includes(t('gRoundLose')) ? 'err' : 'ok'}" style="min-height:20px;margin:6px 0">${gw.msg}</div>
+        <label>m = <b id="gwMv">${gw.m}</b> <span style="color:#999">(slope)</span></label>
+        <input type="range" id="gwM" min="-5" max="5" step="0.25" value="${gw.m}" ${gw.turn !== 'you' || gw.over ? 'disabled' : ''} oninput="gw.m=+this.value;document.getElementById('gwMv').textContent=gw.m;gwDraw()">
+        <label>b = <b id="gwBv">${gw.b}</b> <span style="color:#999">(y-intercept)</span></label>
+        <input type="range" id="gwB" min="-10" max="10" step="0.5" value="${gw.b}" ${gw.turn !== 'you' || gw.over ? 'disabled' : ''} oninput="gw.b=+this.value;document.getElementById('gwBv').textContent=gw.b;gwDraw()">
+        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn" ${gw.turn !== 'you' || gw.over ? 'disabled' : ''} onclick="gwFire()">${t('gFire')}</button>
+          <button class="btn sm ghost" onclick="gwStart()">↺ ${t('gPlay')}</button>
+        </div>
+      </div>
+    </div>
+  </div>`;
+  gwDraw();
+}
+function gwHit(m, b) {
+  // distance from point to line y = m x + b  →  |m x − y + b| / sqrt(m² + 1)
+  const den = Math.sqrt(m * m + 1);
+  return gw.targets.filter(tg => tg.alive && Math.abs(m * tg.x - tg.y + b) / den <= 0.38);
+}
+function gwFire() {
+  if (!gw || gw.turn !== 'you' || gw.over) return;
+  const hits = gwHit(gw.m, gw.b);
+  hits.forEach(tg => tg.alive = false);
+  const pts = hits.length >= 3 ? 300 : hits.length === 2 ? 200 : hits.length ? 100 : 0;
+  gw.you += pts;
+  gw.shots.push({m: gw.m, b: gw.b, side: 'you'});
+  gw.left--;
+  gw.msg = hits.length ? `⭐ × ${hits.length} → +${pts}` : '—';
+  if (gwEnd()) { gwRender(); return; }
+  gw.turn = 'ai';
+  gwRender();
+  setTimeout(gwAi, 700);
+}
+function gwAi() {
+  if (!gw || gw.over) return;
+  const alive = gw.targets.filter(tg => tg.alive);
+  const tg = alive[Math.floor(Math.random() * alive.length)];
+  const m = Math.round((Math.random() * 5 - 2.5) * 4) / 4;
+  const b = Math.round((tg.y - m * tg.x + (Math.random() * .5 - .25)) * 2) / 2;
+  const hits = gwHit(m, b);
+  hits.forEach(h => h.alive = false);
+  const pts = hits.length >= 3 ? 300 : hits.length === 2 ? 200 : hits.length ? 100 : 0;
+  gw.ai += pts;
+  gw.shots.push({m, b, side: 'ai'});
+  gw.msg = (hits.length ? `🤖 ⭐ × ${hits.length} → +${pts} · ` : '🤖 — · ') + t('gYourTurn');
+  gw.turn = 'you';
+  gwEnd();
+  gwRender();
+}
+function gwEnd() {
+  const alive = gw.targets.some(tg => tg.alive);
+  if (gw.left <= 0 || !alive) {
+    gw.over = true;
+    gw.msg = (gw.you > gw.ai ? t('gYouWin') : gw.ai > gw.you ? t('gAiWin') : t('gRoundTie')) + `  (${gw.you} : ${gw.ai})`;
+    return true;
+  }
+  return false;
+}
 </script>
 </body>
 </html>

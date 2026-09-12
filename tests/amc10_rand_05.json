@@ -1,0 +1,411 @@
+{
+ "id": "amc10_rand_05",
+ "competition": "AMC 10",
+ "category": "Math",
+ "title": "AMC 10 — Random Mock #5 · 2026-08-25 09:50",
+ "instructions": "25 questions · 75 minutes · No calculator. 150 points total.",
+ "time_limit_min": 75,
+ "total_points": 150,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2016 AMC 10A Problem 1",
+   "question": "What is the value of $$\\dfrac{13!-12!}{11!}?$$",
+   "choices": {
+    "A": "120",
+    "B": "132",
+    "C": "144",
+    "D": "156",
+    "E": "168"
+   },
+   "answer": "C",
+   "solution": "$\\dfrac{13!-12!}{11!}=\\dfrac{12!(13-1)}{11!}=\\dfrac{12\\cdot 12!}{11!}=12\\cdot 12=144$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 2,
+   "source": "2011 AMC 10A Problem 2",
+   "question": "A small tube of sunscreen can hold $40$ milliliters of sunscreen, whereas a large bottle can hold $750$ milliliters of sunscreen. Elena wants to buy the minimum number of small tubes necessary to completely fill a large bottle. How many tubes must she buy?",
+   "choices": {
+    "A": "$15$",
+    "B": "$16$",
+    "C": "$17$",
+    "D": "$18$",
+    "E": "$19$"
+   },
+   "answer": "E",
+   "solution": "With $18$ tubes Elena gets $18\\cdot 40=720$ milliliters, which is less than $750$. With $19$ tubes she gets $19\\cdot 40=760\\geq 750$ milliliters. So she must buy $19$ tubes.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 3,
+   "source": "2012 AMC 10A Problem 3",
+   "question": "A bug crawls along a number line, starting at $3$. It crawls to $-5$, then turns around and crawls to $7$. How many units does the bug crawl altogether?",
+   "choices": {
+    "A": "$18$",
+    "B": "$20$",
+    "C": "$22$",
+    "D": "$24$",
+    "E": "$25$"
+   },
+   "answer": "B",
+   "solution": "From $3$ to $-5$ the bug crawls $|3-(-5)|=8$ units, and from $-5$ to $7$ it crawls $|-5-7|=12$ units. Altogether it crawls $8+12=20$ units.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 4,
+   "source": "2024 AMC 10B Problem 4",
+   "question": "Balls numbered $1, 2, 3, \\dots$ are deposited into $5$ bins labeled A, B, C, D, E following the bouncing pattern $$A, B, C, D, E, D, C, B, A, B, C, D, E, D, C, B, A, \\dots$$ (one ball per bin, in numerical order). Which bin receives ball number $51$?",
+   "choices": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D",
+    "E": "E"
+   },
+   "answer": "C",
+   "solution": "The pattern has period $8$: $A,B,C,D,E,D,C,B$. Since $51 = 6\\cdot 8 + 3$, ball 51 lands in the 3rd position of the cycle, which is bin $C$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 5,
+   "source": "2017 AMC 10A Problem 5",
+   "question": "The sum of two nonzero real numbers is $7$ times their product. What is the sum of the reciprocals of the two numbers?",
+   "choices": {
+    "A": "\\frac{1}{7}",
+    "B": "\\frac{2}{7}",
+    "C": "\\frac{7}{2}",
+    "D": "7",
+    "E": "14"
+   },
+   "answer": "D",
+   "solution": "If $x+y=7xy$, then $\\frac{1}{x}+\\frac{1}{y}=\\frac{x+y}{xy}=\\frac{7xy}{xy}=7$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 6,
+   "source": "2023 AMC 10B Problem 6",
+   "question": "Let $a_1 = 1$, $a_2 = 2$, and $a_{n+2} = a_{n+1} + a_n$ for $n \\geq 1$. How many of the first $30$ terms of the sequence are even?",
+   "choices": {
+    "A": "6",
+    "B": "7",
+    "C": "8",
+    "D": "9",
+    "E": "10"
+   },
+   "answer": "E",
+   "solution": "Parities repeat with period 3: odd, even, odd, odd, even, odd, $\\dots$ — even exactly when $n \\equiv 2 \\pmod 3$. Among the first 30 terms those are $n=2,5,\\dots,29$: $10$ terms.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 7,
+   "source": "2022 AMC 10A Problem 7",
+   "question": "The least common multiple of a positive integer $n$ and $45$ is $315$, and their greatest common divisor is $15$. What is $n$?",
+   "choices": {
+    "A": "45",
+    "B": "90",
+    "C": "105",
+    "D": "135",
+    "E": "210"
+   },
+   "answer": "C",
+   "solution": "Since $\\operatorname{lcm}(a,b)\\cdot\\gcd(a,b)=a\\cdot b$, we get $n = \\frac{315 \\cdot 15}{45} = 105$. Check: $\\gcd(105,45)=15$, $\\operatorname{lcm}(105,45)=315$. ✓",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 8,
+   "source": "2012 AMC 10A Problem 8",
+   "question": "The sums of three whole numbers taken in pairs are $14$, $19$, and $21$. What is the middle number?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "If the numbers are $a<b<c$, then $a+b=14$, $a+c=19$, $b+c=21$. Adding gives $a+b+c=27$, so $c=13$, $b=8$, $a=6$. The middle number is $8$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 9,
+   "source": "2006 AMC 10A Problem 9",
+   "question": "How many sets of two or more consecutive positive integers have a sum of $45$?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "B",
+   "solution": "The sets are $22+23$, $14+15+16$, $7+8+9+10+11$, $5+6+7+8+9+10$, and $1+2+\\cdots+9$: five sets in all.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 10,
+   "source": "2012 AMC 10B Problem 10",
+   "question": "How many ordered pairs of positive integers $(M,N)$ satisfy the equation $\\frac{M}{8}=\\frac{8}{N}$?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "E",
+   "solution": "Cross-multiplying gives $MN=64$. Each positive divisor of $64$ gives a valid $M$ (with $N=64/M$), and $64=2^6$ has $7$ divisors.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 11,
+   "source": "2020 AMC 10A Problem 11",
+   "question": "What is the median of the following list of $2000$ numbers$?$\n$$1, 2, 3, \\ldots, 1000, 1^2, 2^2, 3^2, \\ldots, 1000^2$$",
+   "choices": {
+    "A": "$968.5$",
+    "B": "$969.5$",
+    "C": "$970.5$",
+    "D": "$971.5$",
+    "E": "$972.5$"
+   },
+   "answer": "B",
+   "solution": "For $1\\leq k\\leq 1000$, the number of list entries that are at most $k$ equals $k+\\lfloor\\sqrt{k}\\rfloor$: the entries $1,2,\\dots,k$ plus the $\\lfloor\\sqrt{k}\\rfloor$ perfect squares not exceeding $k$. For $961\\leq k\\leq 1000$ we have $\\lfloor\\sqrt{k}\\rfloor=31$. At $k=968$ the count is $968+31=999$; at $k=969$ it is $1000$; at $k=970$ it is $1001$. So the $1000^{\\text{th}}$ and $1001^{\\text{st}}$ smallest entries are $969$ and $970$, and the median is $\\frac{969+970}{2}=969.5$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 12,
+   "source": "2016 AMC 10B Problem 12",
+   "question": "Two different numbers are selected at random from $\\{1, 2, 3, 4, 5, 6\\}$ and multiplied together. What is the probability that the product is even?",
+   "choices": {
+    "A": "\\frac{2}{3}",
+    "B": "\\frac{11}{15}",
+    "C": "\\frac{4}{5}",
+    "D": "\\frac{13}{15}",
+    "E": "\\frac{14}{15}"
+   },
+   "answer": "C",
+   "solution": "The product is odd only when both numbers are odd. There are $\\binom{3}{2}=3$ odd-odd pairs out of $\\binom{6}{2}=15$ pairs, so the probability of an even product is $1-\\frac{3}{15}=\\frac{4}{5}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 13,
+   "source": "2022 AMC 10B Problem 13",
+   "question": "The positive difference between a pair of primes is equal to $2$, and the positive difference between the cubes of the two primes is $10586$. What is the sum of the digits of the least prime that is greater than those two primes?",
+   "choices": {
+    "A": "$11$",
+    "B": "$8$",
+    "C": "$10$",
+    "D": "$13$",
+    "E": "$16$"
+   },
+   "answer": "A",
+   "solution": "Let the primes be $p$ and $p+2$. Then $(p+2)^3-p^3=6p^2+12p+8=10586$, so $p^2+2p=1763$, giving $p=41$ (since $41^2+2\\cdot 41=1681+82=1763$). Indeed $41$ and $43$ are both prime. The least prime greater than $43$ is $47$, whose digit sum is $4+7=11$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 14,
+   "source": "2002 AMC 10A Problem 14",
+   "question": "Both roots of the quadratic equation $x^2 - 68x + k = 0$ are prime numbers. The number of possible values of $k$ is",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "more than 4"
+   },
+   "answer": "B",
+   "solution": "The roots are primes $p$ and $q$ with $p+q=68$. Checking even/odd: one prime could be $2$ (giving $66$, not prime), so both are odd. The prime pairs summing to $68$ are $(7,61)$ and $(31,37)$, giving $k=427$ or $k=1147$: two values.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 15,
+   "source": "2024 AMC 10A Problem 15",
+   "question": "Let $M$ be the greatest integer such that both $M+1117$ and $M+3357$ are perfect squares. What is the units digit of $M$?",
+   "choices": {
+    "A": "$1$",
+    "B": "$2$",
+    "C": "$4$",
+    "D": "$6$",
+    "E": "$8$"
+   },
+   "answer": "C",
+   "solution": "Write $M+1117=t^2$ and $M+3357=s^2$ with $s>t\\geq 0$. Then $s^2-t^2=2240$, i.e. $(s-t)(s+t)=2240$. Both factors have the same parity, and since their product is even, both are even. To maximize $M$ we maximize $t$, which means making $s+t$ as large as possible: $s-t=2$ and $s+t=1120$, giving $t=559$ and $s=561$. Then $M=559^2-1117=312481-1117=311364$, whose units digit is $4$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 16,
+   "source": "2003 AMC 10A Problem 16",
+   "question": "What is the units digit of $19^{2019}$?",
+   "choices": {
+    "A": "9",
+    "B": "1",
+    "C": "3",
+    "D": "5",
+    "E": "7"
+   },
+   "answer": "A",
+   "solution": "The units digit of powers of $19$ alternates $9,1,9,1,\\ldots$ Since $2019$ is odd, the units digit is $9$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 17,
+   "source": "2017 AMC 10A Problem 17",
+   "question": "How many points with integer coordinates lie on the circle $x^2+y^2=50$?",
+   "choices": {
+    "A": "8",
+    "B": "10",
+    "C": "11",
+    "D": "12",
+    "E": "16"
+   },
+   "answer": "D",
+   "solution": "$a^2+b^2=50$ has solutions $(\\pm1,\\pm7)$, $(\\pm7,\\pm1)$ (8 points) and $(\\pm5,\\pm5)$ (4 points) — $12$ points in total.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 18,
+   "source": "2008 AMC 10A Problem 18",
+   "question": "A right triangle has perimeter $30$ and area $30$. What is the length of its hypotenuse?",
+   "choices": {
+    "A": "5",
+    "B": "10",
+    "C": "12",
+    "D": "12.5",
+    "E": "13"
+   },
+   "answer": "E",
+   "solution": "With legs $a,b$ and hypotenuse $c$: $ab=60$ and $a+b=30-c$. Squaring, $a^2+2ab+b^2=(30-c)^2$, so $c^2+120=900-60c+c^2$, giving $c=13$ (the $5$-$12$-$13$ triangle).",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 19,
+   "source": "2011 AMC 10B Problem 19",
+   "question": "What is the product of all the roots of the equation $$\\sqrt{4 | x | + 15} = \\sqrt{x^2 - 30}?$$",
+   "choices": {
+    "A": "$-45$",
+    "B": "$-81$",
+    "C": "$-16$",
+    "D": "$81$",
+    "E": "$6561$"
+   },
+   "answer": "B",
+   "solution": "Squaring both sides gives $4|x|+15=x^2-30$, so $x^2-4|x|-45=0$. Factoring in $|x|$: $(|x|-9)(|x|+5)=0$, so $|x|=9$ (the root $|x|=-5$ is impossible). Both $x=9$ and $x=-9$ satisfy the original equation, and the product of all roots is $9\\cdot(-9)=-81$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 20,
+   "source": "2007 AMC 10A Problem 20",
+   "question": "Suppose that the number $a$ satisfies the equation $5 = a + a^{-1}$. What is the value of $a^{4} + a^{-4}$?",
+   "choices": {
+    "A": "123",
+    "B": "323",
+    "C": "523",
+    "D": "525",
+    "E": "527"
+   },
+   "answer": "E",
+   "solution": "Squaring: $a^2+a^{-2}=25-2=23$. Squaring again: $a^4+a^{-4}=23^2-2=529-2=527$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 21,
+   "source": "2006 AMC 10A Problem 21",
+   "question": "How many four-digit positive integers have at least one digit that is a $7$?",
+   "choices": {
+    "A": "3168",
+    "B": "3240",
+    "C": "3402",
+    "D": "4131",
+    "E": "5832"
+   },
+   "answer": "A",
+   "solution": "Complementary counting: there are $9000$ four-digit integers. Those with no digit $7$ number $8\\cdot 9\\cdot 9\\cdot 9=5832$. So the answer is $9000-5832=3168$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 22,
+   "source": "2012 AMC 10B Problem 22",
+   "question": "Let $(a_1, a_2, \\ldots, a_{9})$ be a list of the first $9$ positive integers such that for each $2\\le i \\le 9$ either $a_i+1$ or $a_i-1$ or both appear somewhere before $a_i$ in the list. How many such lists are there?",
+   "choices": {
+    "A": "$72$",
+    "B": "$128$",
+    "C": "$192$",
+    "D": "$256$",
+    "E": "$512$"
+   },
+   "answer": "D",
+   "solution": "The condition means that after each step, the values used so far form a block of consecutive integers: each new term must extend the current range by exactly $1$, either one below the current minimum or one above the current maximum. If $a_1=j$, then among the remaining $8$ terms exactly $j-1$ must be new minima and $9-j$ must be new maxima, and any interleaving works, giving $\\binom{8}{j-1}$ lists. Summing over $j=1,\\dots,9$: $\\sum_{j=1}^{9}\\binom{8}{j-1}=2^8=256$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 23,
+   "source": "2007 AMC 10A Problem 23",
+   "question": "How many ordered pairs $(m,n)$ of positive integers, with $m \\ge n$, have the property that their squares differ by $192$?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "D",
+   "solution": "We need $(m-n)(m+n)=192$ with both factors even. The even factor pairs of $192$ are $(2,96),(4,48),(6,32),(8,24),(12,16)$, each giving positive integers $m,n$: five pairs.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 24,
+   "source": "2016 AMC 10B Problem 24",
+   "question": "How many four-digit integers $abcd$, with $a \\neq 0$, have the property that the three two-digit integers $ab>bc>cd$ form a decreasing arithmetic sequence? One such number is $6418$, where $a=6$, $b=4$, $c=1$, and $d=8$.",
+   "choices": {
+    "A": "$16$",
+    "B": "$22$",
+    "C": "$24$",
+    "D": "$26$",
+    "E": "$28$"
+   },
+   "answer": "B",
+   "solution": "The arithmetic sequence condition $2\\cdot\\overline{bc}=\\overline{ab}+\\overline{cd}$ becomes $2(10b+c)=(10a+b)+(10c+d)$, or $19b=10a+8c+d$, and the decreasing condition is $10a>9b+c$ and $10b>9c+d$. Working through the possible values of $b$ from $0$ to $9$, solving $19b=10a+8c+d$ with $a\\in\\{1,\\dots,9\\}$ and $c,d\\in\\{0,\\dots,9\\}$, and keeping only those with $\\overline{ab}>\\overline{bc}>\\overline{cd}$, yields exactly $22$ four-digit numbers (for example, $1109$, $3208$, $4319$, $5432$, $6418$, $9753$, and $9876$ all work).",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 25,
+   "source": "2013 AMC 10A Problem 25",
+   "question": "In how many ways can a $2 \\times 10$ rectangle be completely tiled by $1 \\times 2$ dominoes (which may be rotated)?",
+   "choices": {
+    "A": "89",
+    "B": "55",
+    "C": "76",
+    "D": "123",
+    "E": "144"
+   },
+   "answer": "A",
+   "solution": "The number of tilings $T(n)$ of a $2\\times n$ board satisfies $T(n)=T(n-1)+T(n-2)$ with $T(1)=1$, $T(2)=2$: $1,2,3,5,8,13,21,34,55,89$. Hence $T(10)=89$.",
+   "type": "multiple_choice",
+   "points": 6
+  }
+ ]
+}

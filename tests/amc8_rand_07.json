@@ -1,0 +1,385 @@
+{
+ "id": "amc8_rand_07",
+ "competition": "AMC 8",
+ "category": "Math",
+ "title": "AMC 8 — Random Mock #7 · 2026-08-23 11:24",
+ "instructions": "25 questions · 40 minutes · No calculator. 1 point per correct answer, no penalty for wrong answers.",
+ "time_limit_min": 40,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2008 AMC 8 Problem 1",
+   "question": "Maya had $60$ dollars to spend at the fair. She spent $14$ dollars on food and twice as much on rides. How many dollars did she have left to spend?",
+   "choices": {
+    "A": "16",
+    "B": "18",
+    "C": "32",
+    "D": "46",
+    "E": "60"
+   },
+   "answer": "B",
+   "solution": "Maya spent $14$ dollars on food and $14 \\times 2 = 28$ dollars on rides, for a total of $14+28=42$ dollars. She had $60-42=\\boxed{18}$ dollars left.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 2,
+   "source": "2011 AMC 8 Problem 2",
+   "question": "Pavel's rectangular vegetable garden is $18$ feet by $42$ feet, and Sonia's is $24$ feet by $36$ feet. Whose garden is larger in area, and by how many square feet?",
+   "choices": {
+    "A": "Pavel's, by $108$ square feet",
+    "B": "Sonia's, by $108$ square feet",
+    "C": "Sonia's, by $96$ square feet",
+    "D": "The gardens have the same area",
+    "E": "Pavel's, by $96$ square feet"
+   },
+   "answer": "B",
+   "solution": "Pavel's garden has area $18\\cdot42=756$ square feet, and Sonia's has area $24\\cdot36=864$ square feet. Sonia's garden is larger by $864-756=108$ square feet.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 3,
+   "source": "2012 AMC 8 Problem 3",
+   "question": "On March 3 the newspaper listed the length of daylight as $9$ hours and $48$ minutes and the sunrise as $7\\!:\\!12 \\textsc{am}$. Both listings were correct, but the printed sunset time was wrong. When did the sun really set?",
+   "choices": {
+    "A": "$4\\!:\\!36 \\textsc{pm}$",
+    "B": "$4\\!:\\!48 \\textsc{pm}$",
+    "C": "$5\\!:\\!00 \\textsc{pm}$",
+    "D": "$5\\!:\\!12 \\textsc{pm}$",
+    "E": "$5\\!:\\!24 \\textsc{pm}$"
+   },
+   "answer": "C",
+   "solution": "Add $9$ hours to $7\\!:\\!12\\textsc{am}$ to get $4\\!:\\!12\\textsc{pm}$, then add $48$ minutes to get $5\\!:\\!00\\textsc{pm}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 4,
+   "source": "2013 AMC 8 Problem 4",
+   "question": "Six friends ate at a restaurant and agreed to share the bill equally. Because Priya forgot her money, each of her five friends paid an extra $\\$3$ to cover her portion of the total bill. What was the total bill?",
+   "choices": {
+    "A": "$\\$60$",
+    "B": "$\\$72$",
+    "C": "$\\$75$",
+    "D": "$\\$90$",
+    "E": "$\\$108$"
+   },
+   "answer": "D",
+   "solution": "The five friends paid an extra $5\\cdot3=15$ dollars in all, which exactly covers Priya's share. So each of the six equal shares is $\\$15$, and the total bill is $6\\cdot15=\\$90$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 5,
+   "source": "2003 AMC 8 Problem 5",
+   "question": "If $30\\%$ of a number is $24$, what is $45\\%$ of the same number?",
+   "choices": {
+    "A": "12",
+    "B": "16",
+    "C": "32",
+    "D": "34",
+    "E": "36"
+   },
+   "answer": "E",
+   "solution": "If $30\\%$ of the number is $24$, then $10\\%$ of the number is $8$, so the number is $80$. Then $45\\%$ of $80$ is $0.45 \\cdot 80 = \\boxed{36}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 6,
+   "source": "2015 AMC 8 Problem 6",
+   "question": "In $\\triangle PQR$, $PQ=QR=25$, and $PR=30$. What is the area of $\\triangle PQR$?",
+   "choices": {
+    "A": "240",
+    "B": "260",
+    "C": "300",
+    "D": "330",
+    "E": "375"
+   },
+   "answer": "C",
+   "solution": "The triangle is isosceles, so the altitude from $Q$ to $\\overline{PR}$ bisects $\\overline{PR}$, creating two right triangles with legs $15$ and hypotenuse $25$. The altitude is $\\sqrt{25^2-15^2}=\\sqrt{400}=20$. The area is $\\frac12\\cdot30\\cdot20=300$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 7,
+   "source": "2007 AMC 8 Problem 7",
+   "question": "The average age of $6$ people in a room is $25$ years. A $15$-year-old person leaves the room. What is the average age of the five remaining people?",
+   "choices": {
+    "A": "24",
+    "B": "26",
+    "C": "27",
+    "D": "29",
+    "E": "30"
+   },
+   "answer": "C",
+   "solution": "The total of the six ages is $6 \\cdot 25 = 150$. After the $15$-year-old leaves, the remaining five ages total $150-15=135$, so their average is $\\frac{135}{5}=\\boxed{27}$ years.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 8,
+   "source": "2024 AMC 8 Problem 8",
+   "question": "On Monday, Diego has $\\$1$. Every day, he either gains $\\$2$ or doubles the amount of money he had the previous day. How many different amounts of money could he have after exactly $3$ days?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "B",
+   "solution": "After day 1: $\\{2,3\\}$. Day 2: $\\{4,5,6\\}$. Day 3: from $4$: $6,8$; from $5$: $7,10$; from $6$: $8,12$. The union is $\\{6,7,8,10,12\\}$ — $5$ different amounts.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 9,
+   "source": "2016 AMC 8 Problem 9",
+   "question": "What is the sum of the distinct prime integer divisors of $2025$?",
+   "choices": {
+    "A": "8",
+    "B": "10",
+    "C": "16",
+    "D": "45",
+    "E": "75"
+   },
+   "answer": "A",
+   "solution": "Since $2025 = 81 \\cdot 25 = 3^4 \\cdot 5^2$, the distinct prime divisors are $3$ and $5$. Their sum is $3+5=\\boxed{8}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 10,
+   "source": "2016 AMC 8 Problem 10",
+   "question": "Suppose that $a * b$ means $4a-b.$ What is the value of $x$ if $$3 * (6 * x)=2$$",
+   "choices": {
+    "A": "\\frac{1}{12}",
+    "B": "2",
+    "C": "\\frac{14}{3}",
+    "D": "12",
+    "E": "14"
+   },
+   "answer": "E",
+   "solution": "First, $6 * x = 4(6) - x = 24 - x$. Then $3 * (24 - x) = 4(3) - (24 - x) = 12 - 24 + x = x - 12$. Setting $x - 12 = 2$ gives $x = \\boxed{14}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 11,
+   "source": "2024 AMC 8 Problem 11",
+   "question": "The vertices of $\\triangle ABC$ are $A(2,3)$, $B(8,3)$, and $C(5,y)$ with $y>3$. The area of $\\triangle ABC$ is $15$. What is $y$?",
+   "choices": {
+    "A": "8",
+    "B": "6",
+    "C": "7",
+    "D": "9",
+    "E": "10"
+   },
+   "answer": "A",
+   "solution": "$AB$ is horizontal with length $8-2=6$. From $\\tfrac12\\cdot 6\\cdot h=15$ the height is $h=5$, so $y=3+5=8$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 12,
+   "source": "2020 AMC 8 Problem 12",
+   "question": "For a positive integer $n$, the factorial notation $n!$ represents the product of the integers from $n$ down to $1$. What value of $N$ satisfies the following equation? $$5!\\cdot 7!=15\\cdot N!$$",
+   "choices": {
+    "A": "6",
+    "B": "7",
+    "C": "9",
+    "D": "10",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "Since $5!=120$ and $120=15\\cdot8$, we have $5!\\cdot7!=15\\cdot8\\cdot7!=15\\cdot8!$. Therefore $N=8$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 13,
+   "source": "2015 AMC 8 Problem 13",
+   "question": "How many subsets of two elements can be removed from the set $\\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}$ so that the mean (average) of the remaining numbers is $5$?",
+   "choices": {
+    "A": "4",
+    "B": "2",
+    "C": "3",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "A",
+   "solution": "The numbers $1$ through $9$ sum to $45$. After removing two numbers, $7$ numbers remain with mean $5$, so their sum is $35$ and the two removed numbers must sum to $45-35=10$. The two-element subsets with sum $10$ are $\\{1,9\\},\\{2,8\\},\\{3,7\\},\\{4,6\\}$ (note $\\{5,5\\}$ is not allowed), giving $4$ subsets.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 14,
+   "source": "2010 AMC 8 Problem 14",
+   "question": "What is the sum of the prime factors of $2002$?",
+   "choices": {
+    "A": "20",
+    "B": "31",
+    "C": "33",
+    "D": "43",
+    "E": "91"
+   },
+   "answer": "C",
+   "solution": "The prime factorization of $2002$ is $2 \\cdot 7 \\cdot 11 \\cdot 13$. Adding these factors gives $2+7+11+13=\\boxed{33}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 15,
+   "source": "2020 AMC 8 Problem 15",
+   "question": "Suppose $15\\%$ of $x$ equals $25\\%$ of $y.$ What percentage of $x$ is $y?$",
+   "choices": {
+    "A": "60",
+    "B": "75",
+    "C": "90",
+    "D": "133 \\frac{1}{3}",
+    "E": "300"
+   },
+   "answer": "A",
+   "solution": "Since $25\\% = \\frac{1}{4}$, multiplying both sides of $0.15x = 0.25y$ by $4$ gives $y = 0.60x$. So $y$ is $\\boxed{60}$ percent of $x$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 16,
+   "source": "2012 AMC 8 Problem 16",
+   "question": "Each of the digits $0, 1, 2, 3, 4, 5, 6, 7, 8,$ and $9$ is used only once to make two five-digit numbers so that they have the largest possible sum. Which of the following could be one of the numbers?",
+   "choices": {
+    "A": "76531",
+    "B": "85421",
+    "C": "86420",
+    "D": "86320",
+    "E": "87410"
+   },
+   "answer": "C",
+   "solution": "To maximize the sum, the largest digits must occupy the highest place values: $9$ and $8$ in the ten-thousands places, $7$ and $6$ in the thousands places, $5$ and $4$ in the hundreds places, $3$ and $2$ in the tens places, and $1$ and $0$ in the units places. So a valid number has ten-thousands digit $9$ or $8$, thousands digit $7$ or $6$, hundreds digit $5$ or $4$, tens digit $3$ or $2$, and units digit $1$ or $0$. Only $86420$ satisfies all five conditions (for example, paired with $97531$, whose digits fill the complementary slots).",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 17,
+   "source": "2024 AMC 8 Problem 17",
+   "question": "A chess king attacks every square one step away horizontally, vertically, or diagonally. In how many ways can two identical kings be placed on two different squares of a $2\\times 3$ board so that they do not attack each other?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "5",
+    "D": "4",
+    "E": "6"
+   },
+   "answer": "D",
+   "solution": "There are $\\binom{6}{2}=15$ pairs of squares. Attacking pairs: $8$ across adjacent columns (2 horizontal + 2 diagonal per column pair, times 2 column pairs) plus $3$ vertical pairs, $11$ total. Non-attacking: $15-11=4$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 18,
+   "source": "2005 AMC 8 Problem 18",
+   "question": "How many three-digit numbers are divisible by $11$?",
+   "choices": {
+    "A": "75",
+    "B": "78",
+    "C": "79",
+    "D": "80",
+    "E": "81"
+   },
+   "answer": "E",
+   "solution": "The three-digit multiples of $11$ are $11 \\cdot 10 = 110$ through $11 \\cdot 90 = 990$. The multiplier ranges from $10$ to $90$, giving $90-10+1=\\boxed{81}$ numbers.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 19,
+   "source": "2024 AMC 8 Problem 19",
+   "question": "In a class, $\\frac{3}{4}$ of the students like math and $\\frac{2}{3}$ like science. Every student likes at least one of the two subjects. What fraction of the class likes both subjects?",
+   "choices": {
+    "A": "$\\frac{1}{4}$",
+    "B": "$\\frac{1}{3}$",
+    "C": "$\\frac{1}{2}$",
+    "D": "$\\frac{7}{12}$",
+    "E": "$\\frac{5}{12}$"
+   },
+   "answer": "E",
+   "solution": "Inclusion–exclusion: $\\frac34+\\frac23-\\text{both}=1$, so $\\text{both}=\\frac{9}{12}+\\frac{8}{12}-\\frac{12}{12}=\\frac{5}{12}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 20,
+   "source": "2019 AMC 8 Problem 20",
+   "question": "How many different real numbers $x$ satisfy the equation $$(x^{2}-4)^{2}=25?$$",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "4",
+    "E": "8"
+   },
+   "answer": "C",
+   "solution": "We need $x^2 - 4 = \\pm 5$. If $x^2 - 4 = 5$, then $x^2 = 9$, giving $x = \\pm 3$. If $x^2 - 4 = -5$, then $x^2 = -1$, which has no real solutions. So there are $\\boxed{2}$ real numbers.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 21,
+   "source": "2019 AMC 8 Problem 21",
+   "question": "What is the area of the triangle formed by the lines $y=7$, $y=2+x$, and $y=2-x$?",
+   "choices": {
+    "A": "25",
+    "B": "30",
+    "C": "35",
+    "D": "40",
+    "E": "50"
+   },
+   "answer": "A",
+   "solution": "The lines $y=2+x$ and $y=2-x$ meet at $(0,2)$. They meet $y=7$ at $(5,7)$ and $(-5,7)$. The triangle has base $10$ (along $y=7$) and height $5$, so its area is $\\frac{1}{2} \\cdot 10 \\cdot 5 = \\boxed{25}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 22,
+   "source": "2009 AMC 8 Problem 22",
+   "question": "How many whole numbers between $1$ and $100$ do not contain the digit $1$?",
+   "choices": {
+    "A": "80",
+    "B": "81",
+    "C": "88",
+    "D": "89",
+    "E": "90"
+   },
+   "answer": "A",
+   "solution": "Among one-digit numbers, the $8$ values $2$ through $9$ work. For two-digit numbers, the tens digit has $8$ choices (anything but $0$ or $1$) and the units digit has $9$ choices (anything but $1$), giving $8 \\cdot 9 = 72$. The total is $8 + 72 = \\boxed{80}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 23,
+   "source": "2024 AMC 8 Problem 23",
+   "question": "On a sheet of graph paper, Leo draws the line segment from $(0,6)$ to $(3,0)$. Through how many unit squares of the grid does the segment pass?",
+   "choices": {
+    "A": "6",
+    "B": "4",
+    "C": "5",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "A",
+   "solution": "A segment between opposite corners of an $a\\times b$ grid passes through $a+b-\\gcd(a,b)$ squares: $3+6-\\gcd(3,6)=3+6-3=6$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 24,
+   "source": "2017 AMC 8 Problem 24",
+   "question": "Mr. Alvarez has three grandchildren, who call him regularly. One calls him every three days, one calls him every four days, and one calls him every seven days. All three called him on December 31, 2018. On how many days during the next year did he not receive a phone call from any of his grandchildren?",
+   "choices": {
+    "A": "150",
+    "B": "157",
+    "C": "160",
+    "D": "163",
+    "E": "170"
+   },
+   "answer": "B",
+   "solution": "The next year has $365$ days. By inclusion-exclusion, the number of days with at least one call is $\\left\\lfloor \\frac{365}{3} \\right\\rfloor + \\left\\lfloor \\frac{365}{4} \\right\\rfloor + \\left\\lfloor \\frac{365}{7} \\right\\rfloor - \\left\\lfloor \\frac{365}{12} \\right\\rfloor - \\left\\lfloor \\frac{365}{21} \\right\\rfloor - \\left\\lfloor \\frac{365}{28} \\right\\rfloor + \\left\\lfloor \\frac{365}{84} \\right\\rfloor = 121+91+52-30-17-13+4 = 208$. So he receives no call on $365-208=\\boxed{157}$ days.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 25,
+   "source": "2018 AMC 8 Problem 25",
+   "question": "How many perfect cubes lie between $2^6+1$ and $2^{16}+1$, inclusive?",
+   "choices": {
+    "A": "4",
+    "B": "8",
+    "C": "10",
+    "D": "35",
+    "E": "36"
+   },
+   "answer": "E",
+   "solution": "We have $2^6+1 = 65$ and $2^{16}+1 = 65537$. The smallest cube in range is $5^3 = 125$ and the largest is $40^3 = 64000$ (since $41^3 = 68921$ is too big). The cubes are $5^3, 6^3, \\dots, 40^3$, giving $40 - 5 + 1 = \\boxed{36}$ perfect cubes.",
+   "type": "multiple_choice"
+  }
+ ]
+}

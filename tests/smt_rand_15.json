@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_15",
+ "competition": "SMT — Geometry",
+ "category": "Math",
+ "title": "SMT — Geometry — Random Mock #15 · 2026-08-26 16:33",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2014 SMT Geometry Problem 1",
+   "question": "The coordinates of three vertices of a parallelogram are A(1, 1), B(2, 4), and C(−5, 1). Compute the area of the parallelogram.",
+   "choices": null,
+   "answer": "18",
+   "solution": "Answer: 18. The coordinates of three vertices of a parallelogram are A(1, 1),B(2, 4), andC(−5, 1). Compute the area of the parallelogram. Answer: 18 Solution: Note that the area of the parallelogram is double the area of triangle ABC. If we takeAC as the base of the triangle, the height is 3, so the area is 3·6 2 = 9. Thus, the area of the parallelogram is 18 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2012 SMT Geometry Problem 2",
+   "question": "In trapezoid ABCD , BC ‖ AD, AB = 13, BC = 15, CD = 14, and DA = 30. Find the area of ABCD .",
+   "choices": null,
+   "answer": "252",
+   "solution": "Answer: 252. In trapezoid ABCD , BC ‖ AD, AB = 13, BC = 15, CD = 14, and DA = 30. Find the area of ABCD . Answer: 252 Solution: We can use the standard method of setting up a two-variable system and solving for the height of the trapezoid. However, since one base is half the length of the other, we may take a shortcut. Extend AB and CD until they meet at E. Clearly, BC is a midline of triangle EAD, so we have EA = 2 BA = 26 and ED = 2 CD = 28. The area of EAD is therefore four times that of a standard 13-14-15 triangle, which we know is 1 2 · 14 · 12 = 84 (since the altitude to the side of length 14 splits the triangle into 9-12-15 and 5-12-13 right triangles). The area of the trapezoid is 3 4 the area of EAD by similar triangles, and is therefore 3 · 84 = 252 . A similar solution draws lines from B and C to the midpoint of AD to form three 13 − 14 − 15 triangles.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2022 SMT Geometry Problem 3",
+   "question": "△ABC has side lengths 13, 14, and 15. Let the feet of the altitudes from A, B, and C be D, E, and F, respectively. The circumcircle of △DEF intersects AD, BE, and CF at I, J, and K respectively. What is the area of △IJ K?",
+   "choices": null,
+   "answer": "21",
+   "solution": "Answer: 21. △ABC has side lengths 13, 14, and 15. Let the feet of the altitudes from A,B, andC be D,E, and F, respectively. The circumcircle of △DEF intersects AD,BE, and CF at I,J, and K respectively. What is the area of △IJK ? Answer: 21 Solution: First we can find that the area of △ABC is 84, either by noting that it can be split into 5-12-13 and 9-12-15 triangles, or using Heron’s formula. Let the orthocenter of △ABC be H. The circumcircle of DEF is the 9-point circle of △ABC and thus I,J,K are the midpoints of AH,BH,CH. So, there is a homothety centered at H with factor 1/2 that sends △ABC to △DEF. Then, [DEF ] = (1/2)2[ABC] = 21 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2013 SMT Geometry Problem 4",
+   "question": "ABCD is a regular tetrahedron with side length 1. Find the area of the cross section of ABCD cut by the plane that passes through the midpoints of AB, AC, and CD.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. ABCD is a regular tetrahedron with side length 1. Find the area of the cross section of ABCD cut by the plane that passes through the midpoints of AB, AC, and CD. Answer: 1 4 Solution: First, note that the plane also passes through the midpoint of BD by symmetry, e.g. across the plane containing AD perpendicular to BC. Let M, N, O, and P denote the midpoints of BA, AC, CD, and DB, respectively. MN =NO =OP =PM = 1 2 because they are all midlines of faces of the tetrahedron. Hence, the cross section is a rhombus. Furthermore, MO∼=NP because both equal the distance between midpoints of opposite sides (alternatively, this congruence can be demonstrated by rotating ABCD such that N and P coincide with the previous locations of M and O). Hence, MNOP is a square, and its area is ( 1 2 )2 = 1 4 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2014 SMT Geometry Problem 5",
+   "question": "Let ABC be a triangle where ∠BAC = 30 ◦. Construct D in∆ABC such that ∠ABD = ∠ACD = 30 ◦. Let the circumcircle of ∆ABD intersect AC at X. Let the circumcircle of ∆ACD intersect AB at Y . Given that DB− DC = 10 and BC = 20, ﬁnd AX· AY .",
+   "choices": null,
+   "answer": "150",
+   "solution": "Answer: 150. Let ABC be a triangle where ∠BAC = 30◦. Construct D in∆ABC such that ∠ABD = ∠ACD = 30◦. Let the circumcircle of ∆ABD intersect AC at X. Let the circumcircle of ∆ACD intersectAB at Y . Given that DB−DC = 10 and BC = 20, ﬁnd AX·AY . Answer: 150 Solution: Note that ABDX andACDY are isosceles trapezoids. Thus, AX =DB andAY = DC. Furthermore, ∠BDC = 360◦−(360◦−30◦−30◦−30◦) = 90◦. Thus, DB 2 +DC 2 =BC 2 = 400, and DB−DC = 10, so AX·AY =DB·DC = DB 2 +DC 2− (DB−DC)2 2 = 150 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2021 SMT Geometry Problem 6",
+   "question": "⊙A, centered at point A, has radius 14 and ⊙B, centered at point B, has radius 15. AB = 13. The circles intersect at points C and D. Let E be a point on ⊙A, and F be the point where line EC intersects⊙B again. Let the midpoints of DE and DF be M and N, respectively. Lines AM and BN intersect at point G. If point E is allowed to move freely on ⊙A, what is the radius of the locus of G?",
+   "choices": null,
+   "answer": "65",
+   "solution": "Answer: 65. ⊙A, centered at point A, has radius 14 and ⊙B, centered at point B, has radius 15. AB = 13. The circles intersect at points C and D. Let E be a point on ⊙A, and F be the point where line EC intersects⊙B again. Let the midpoints of DE and DF be M and N, respectively. Lines AM and BN intersect at point G. If point E is allowed to move freely on ⊙A, what is the radius of the locus of G? Answer: 65 8 Solution: In⊙A let minor 6.0ptCD⌢ have measure x◦, and in ⊙B let minor 6.0ptCD⌢ have measurey◦. In∆DEF , ∠DEF = x 2 ◦ and ∠DFE = y 2 ◦, so ∠EDF = 180◦−x 2 ◦−y 2 ◦. In∆ACD, ∠ADC = 90◦− x 2 ◦, and in∆BCD , ∠BDC = 90◦− y 2 ◦. So, ∠ADB = 180◦− x 2 ◦− y 2 ◦ = ∠EDF . Quadrilateral DMGN is cyclic since ∠GMD + ∠GBD = 90◦ + 90◦ = 180◦, so ∠MGN = 180◦− ∠MDN = 180◦− ∠ADB⇒ ∠AGB = 180◦− ∠ADB. SMT 2021 Geometry Test Solutions April 17, 2021 Thus,DAGB is also cyclic. This means that point G always lies on the circumcircle of∆ADB. So, we need to ﬁnd the circumradius of a 13-14-15 triangle. Using Heron’s Formula, the area of the triangle is √( 13+14+15 2 )(−13+14+15 2 )( 13−14+15 2 )( 13+14−15 2 ) = 84. The circumradius is (AB)(AD)(BD) 4[ABD] = (13)(14)(15) 4(84) = 65 8 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2021 SMT Geometry Problem 7",
+   "question": "An n-sided regular polygon with side length 1 is rotated by180 n ◦ about its center. The intersection points of the original polygon and the rotated polygon are the vertices of a 2 n-sided regular polygon with side length 1−tan2 10◦ 2 . What is the value of n?",
+   "choices": null,
+   "answer": "9",
+   "solution": "Answer: 9. An n-sided regular polygon with side length 1 is rotated by180 n ◦ about its center. The intersection points of the original polygon and the rotated polygon are the vertices of a 2 n-sided regular polygon with side length 1−tan2 10◦ 2 . What is the value of n? Answer: 9 Solution: Let us call the center of the polygons O. Consider one of the intersection points of the original polygon and the rotated polygon, which we denote I. Denote the perpendicular foot of the center of the original polygon to the side of the original polygon that I lies on M, and denote the vertex of the original polygon closest to I as N. The length of MN is 1 2, and ∠MON is 180 n ◦, so the length of OM is 1/2 tan 180 n ◦ . Also we have that ∠MOI is 90 n ◦, so the length of MI is OM tan 90 n ◦ = 1 2 tan 90 n ◦ tan 180 n ◦ . Using the double angle formula, we have 180 n ◦ = 2 tan 90 n ◦ 1−tan2 90 n ◦ , so 1 2 tan 90 n ◦ tan 180 n ◦ = 1−tan2 90 n ◦ 4 . Note that the side length of the 2 n-sided polygon is 2 MI , so we get 1−tan2 90 n ◦ 2 , which means that n should be 9 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2022 SMT Geometry Problem 8",
+   "question": "Let Γ and Ω be circles that are internally tangent at a point P such that Γ is contained entirely in Ω. Let A, B be points on Ω such that the lines P B and P A intersect the circle Γ at Y and X respectively, where X, Y ̸= P . Let O1 be the circle with diameter AB and O2 be the circle with diameter XY . Let F be the foot of Y on XP . Let T and M be points on O1 and O2 respectively such that T M is a common tangent to O1 and O2. Let H be the orthocenter of △ABP . Given that P F = 12, F X = 15, T M = 18, P B = 50, find the length of AH.",
+   "choices": null,
+   "answer": "750",
+   "solution": "Answer: 750√. Let Γ and Ω be circles that are internally tangent at a point P such that Γ is contained entirely in Ω. Let A,B be points on Ω such that the lines PB and PA intersect the circle Γ at Y and X respectively, where X,Y ̸= P . Let O1 be the circle with diameter AB and O2 be the circle with diameter XY . Let F be the foot of Y on XP . Let T and M be points on O1 and O2 respectively such that TM is a common tangent to O1 and O2. Let H be the orthocenter of △ABP . Given that PF = 12,FX = 15,TM = 18,PB = 50, find the length of AH. Answer: 750√ 481 Solution: P A B X Y F F1 F2 M T H Since Γ and Ω are tangent at P , there exists a homothety centered at P which maps Γ to Ω. Denote this homothety by h. Let k be its common ratio. We can see that A,B must be the image of the points X,Y under h respectively. Thus, h(O2) = O1. Therefore, the common tangents to O1 and O2 intersect at P . Hence, P,M,T are collinear, since h(M) =T . Observe that the power of the point P with respect to O2 is given byPF·PX = 324. However, PM is tangent to O1, and thus the power of P with respect to O1 is PM 2 =PF ·PX = 324. SMT 2022 Geometry Test Solutions April 16–17, 2022 This gives us thatPM = √ 324 = 18 andPT = 18+18 = 36. Thus, the common ratio of the ho- mothety isk = PT PM = 2. Let F1 be the foot ofB onAP . Then, we have thatPF 1 = 2·PF = 24. Additionally, we can see that PA = 2·PX = 54. Therefore, AF1 = 30. Similarly, we can compute PY since PY = 1 2·PB = 25. Therefore, by the Pythagorean theorem, we obtain FY = p PY 2−PF 2 = p 252− 122 = √ 481. Let F2 be the foot of A onto PB . Then, H is the intersection of AF2 and BF1. Now observe that ∠F1AH = ∠PAF 1 = 90◦− ∠APF 2 = 90◦− ∠FPY = ∠FYP . Thus, by AA, we have △AF1H∼△YFP . Thus, AF1 AH = FY PY =⇒ AH = AF1·PY FY = 30· 25√ 481. Thus,AH = 750√ 481.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2012 SMT Geometry Problem 9",
+   "question": "In quadrilateral ABCD , m∠ABD ∼= m∠BCD and ∠ADB = ∠ABD + ∠BDC . If AB = 8 and AD = 5, ﬁnd BC .",
+   "choices": null,
+   "answer": "39",
+   "solution": "Answer: 39. In quadrilateral ABCD , m∠ABD ∼= m∠BCD and ∠ADB = ∠ABD + ∠BDC . If AB = 8 and AD = 5, ﬁnd BC . Answer: 39 5 Solution: Note that ∠ADB and ∠CBD are supplementary. Therefore, we can extend AD past D to a new point C′ such that ∆DBC ∼= ∆BDC ′ (alternatively, consider ﬂipping ∆DBC over the altitude to BD). Since ∠ABD ∼= ∠AC′B, we have ∆ABD ∼ ∆AC′B, and so AC′ AB = AB AD =⇒ AC′ = AB2 AD = 64 5 . Since AC′ = AD + DC ′, we get DC ′ = BC = 64 5 − 5 = 39 5 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2013 SMT Geometry Problem 10",
+   "question": "Let triangle ABC have side lengths AB = 16, BC = 20, AC = 26. Let ACDE , ABF G, and BCHI be squares that are entirely outside of triangle ABC. Let J be the midpoint of EH , K be the midpoint of DG, and L the midpoint of AC. Find the area of triangle J KL.",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. Let triangle ABC have side lengths AB = 16, BC = 20, AC = 26. Let ACDE , ABFG , and BCHI be squares that are entirely outside of triangle ABC. Let J be the midpoint of EH , K be the midpoint of DG, and L the midpoint of AC. Find the area of triangle JKL . Answer: 5 √ 1023 4 Solution: We ﬁrst prove a lemma. Let M be the midpoint of AB and N be the midpoint of EF . Then KLMN is a square. We do this using vectors. Let v1 =−→CA, v2 =− − →BA, u1 =−−→CD, and u2 =− − →BF . We ﬁrst calculate w =− − →EF . Then w = (v1−v2 +u2)− (u1 +v1) =u2−v2−u1. Now, we calculate−−→CN in two diﬀerent ways. First,−−→CN =u1+v1+ w 2 =v1+ u2 2 + u1 2− v2 2 . Second, −−→CN =v1− v2 2 +−−→MN . Equating these two gives us−−→MN = u2+u1 2 . Taking the dot product of−−→MN with− − →CB =v1−v2 gives v1·u2−v2·u1 2 , which is zero. In addition, note that u1,u 2 are rotations of v1,v 2 such that the angle between v1 and v2 is supplementary to the angle between u1 and u2. Hence, the length of−−→MN is the same as the length of −−→LM = v1−v2 2 . A similar argument on − − →LK gives the same result, and hence KLMN is a square. Now, we see that LK = 1 2BC. Symmetrically, LJ = 1 2AB. Furthermore, angle KLJ is sup- plementary to angle ABC. Hence, the area of triangle JKL is a quarter of the area of triangle ABC, and so is the area of a triangle with side lengths half those of ABC’s. The area of JKL may thus be calculated with Heron’s formula: √ 31 2 · 15 2 · 11 2 · 5 2 = 5 √ 1023 4 . SMT 2013 Geometry Test Solutions February 2, 2013 v1 v2 u1 u2 w B I F L H K J G N A C DE M",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_05",
+ "competition": "SMT — Algebra",
+ "category": "Math",
+ "title": "SMT — Algebra — Random Mock #5 · 2026-08-26 16:33",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2012 SMT Algebra Problem 1",
+   "question": "Compute the minimum possible value of (x − 1)2 + (x − 2)2 + (x − 3)2 + (x − 4)2 + (x − 5)2 for real values of x.",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10. Compute the minimum possible value of (x − 1)2 + (x − 2)2 + (x − 3)2 + (x − 4)2 + (x − 5)2 for real values of x. Answer: 10 Solution: We know that this expression has to be a concave-up parabola (i.e. a parabola that faces upwards), and there is symmetry across the line x = 3. Hence, we conclude that the vertex of the parabola occurs at x = 3. Plugging in, we get 4 + 1 + 0 + 1 + 4 = 10 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2013 SMT Algebra Problem 2",
+   "question": "A tree has 10 pounds of apples at dawn. Every afternoon, a bird comes and eats x pounds of apples. Overnight, the amount of food on the tree increases by 10%. What is the maximum value of x such that the bird can sustain itself indeﬁnitely on the tree without the tree running out of food?",
+   "choices": null,
+   "answer": "168",
+   "solution": "Answer: 168. Answer: 168 Solution: We have thatb is a valid number if and only if (x2+2x+3)−(bx−17) = x2+(2−b)x+20 has exactly one real root. This means that 2 − b =±2 √ 20, so b = 2± 2 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2014 SMT Algebra Problem 3",
+   "question": "Let x1 and x2 be the roots of x2− x− 2014, with x1 < x 2. Let x3 and x4 be the roots of x2− 2x− 2014, with x3 < x 4. Compute ( x4− x2) + (x3− x1).",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Let x1 and x2 be the roots of x2−x− 2014, with x1 < x2. Let x3 and x4 be the roots of x2− 2x− 2014, with x3<x 4. Compute (x4−x2) + (x3−x1). Answer: 1 Solution: Note that x3 +x4 = 2 and x1 +x2 = 1, giving an answer of 1 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2021 SMT Algebra Problem 4",
+   "question": "Let x andy be complex numbers such that x2 +y2 = 31 and x3 +y3 = 154. Find the maximum possible real value of x +y.",
+   "choices": null,
+   "answer": "7",
+   "solution": "Answer: 7. Let x andy be complex numbers such that x2 +y2 = 31 and x3 +y3 = 154. Find the maximum possible real value of x +y. Answer: 7 Solution: Let a =x +y, b =xy. We have: a2 =x2 + 2xy +y2 = 31 + 2b a3 =x3 + 3x2y + 3xy2 +y3 = 154 + 3ab From here, we get b = a2−31 2 , and substituting this in gives: a3 = 154 + 3 2a3− 93 2 a SMT 2021 Algebra Test Solutions April 17, 2021 a3− 93a + 308 = 0 We can see that 4 is a root of this cubic, so we can factorize it completely into: (a− 4)(a− 7)(a + 11) = 0 We want the maximum value of a, so our answer is 7 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2020 SMT Algebra Problem 5",
+   "question": "Suppose f(x) is a monic quadratic polynomial such that there exists an increasing arithmetic sequence x1 < x 2 < x 3 < x 4 where|f(x1)| =|f(x2)| =|f(x3)| =|f(x4)| = 2020. Compute the absolute diﬀerence of the two roots of f(x).",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10. Suppose f(x) is a monic quadratic polynomial such that there exists an increasing arithmetic sequence x1 < x2 < x3 < x4 where|f(x1)| =|f(x2)| =|f(x3)| =|f(x4)| = 2020. Compute the absolute diﬀerence of the two roots of f(x). Answer: 10 √ 101 Solution: Suppose f(x) = (x−h)2−k with vertex (h,k ) where k is non-negative. Since the roots of f(x) are h± √ k, the absolute diﬀerence of the two roots of f(x) is 2 √ k. By symmetry, ifx2 =h−d, thenx3 =h+d, which meansx1 =h−3d andx4 =h+ 3d. Since x1<x 2<h and f(x) is monic, f(x1) =f(x4) must be positive and f(x2) =f(x3) must be negative. Therefore, f(x1) = −f(x2) = 2020. Substituting, 9 d2−k =−(d2−k), which implies k = 5d2. Since f(x1) = 9d2−k = 4d2 = 2020, it follows that k = 5d2 = 5 4(4d2) = 5 4(2020). Therefore, the absolute diﬀerence of the roots of f(x) is 2 √ k = 5 √ 2020 = 10 √ 101.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2014 SMT Algebra Problem 6",
+   "question": "Find the minimum value of 1 x− y + 1 y− z + 1 x− z for reals x > y > z given (x− y)(y− z)(x− z) = 17.",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. Find the minimum value of 1 x−y + 1 y−z + 1 x−z for reals x>y >z given (x−y)(y−z)(x−z) = 17. Answer: 5 3√ 68 Solution: Let x−y =a and y−z =b. Therefore, x−z =a +b. Note that 1 a + 1 b + 1 a +b = 4· (a +b) 4ab + 1 a +b. Applying AM-GM here on these ﬁve fractions, this quantity is greater than or equal to 5 5 √ (a +b)3 256a4b4 . Note that because ab(a +b) = 17, this is equivalent to minimizing 5 √ (a +b)7 256· 174 , which means that we want to minimize a +b, which implies that we want a =b because that is when the inequality is tight. We therefore have that 17 =ab(a +b)≤ (a +b)3 4 because (a +b)2 4 ≥ab by AM-GM. Note that we have equality if and only ifa =b, which implies thata+b = 3√ 68, soa =b = 3√ 68 2 . Plugging this in gives us 5 3√ 68 . SMT 2014 Algebra Test Solutions February 15, 2014",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2019 SMT Algebra Problem 7",
+   "question": "Given that x, y are real numbers satisfying x > y > 0, compute the minimum value of 5x2− 2xy + y2 x2− y2 .",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2 + 2. Given that x,y are real numbers satisfying x>y > 0, compute the minimum value of 5x2− 2xy +y2 x2−y2 . Answer: 2 + 2 √ 2 Solution: We ﬁrst use partial fraction decomposition on this function. Doing so gives us 5x2− 2xy +y2 x2−y2 = 5x2− 2xy +y2 (x +y)(x−y) = 3x2− 2xy + 3y2 + 2(x2−y2) (x +y)(x−y) = x2 + 2xy +y2 + 2(x2− 2xy−y2) (x +y)(x−y) + 2 = (x +y)2 + 2(x−y)2 (x +y)(x−y) + 2 = x +y x−y + 2(x−y) x +y + 2. We can then apply AM-GM to the ﬁrst two terms to get x +y x−y + 2(x−y) x +y ≥ 2 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2014 SMT Algebra Problem 8",
+   "question": "P (x) and Q(x) are two polynomials such that P (P (x)) = P (x)16 + x48 + Q(x). Find the smallest possible degree of Q.",
+   "choices": null,
+   "answer": "35",
+   "solution": "Answer: 35. P (x) and Q(x) are two polynomials such that P (P (x)) =P (x)16 +x48 +Q(x). Find the smallest possible degree of Q. Answer: 35 Solution: Note: we use the notation O(xn) to denote an arbitrary polynomial whose degree is at most n. We ﬁrst try to ﬁnd a Q with degree < 48. It turns out this is feasible. Let d be the degree of P . P (P (x)) has degree d2, and P (x)16 +x48 +Q(x) has degree max(16d, 48). Since 48 is not a perfect square, the degree must be 16 d, which implies d = 16. Now let R(x) =P (x)−x16, so R(P (x)) =x48 +Q(x). Since R applied to a degree-16 polynomial yields a degree-48 polynomial, the degree of R must be 3. So, we have P (x) = x16 +ax3 +O(x2) for some a⁄= 0; we can also show from here that in fact a = 1. Therefore, P (P (x)) =P (x)16 +P (x)3 +O(P (x)2) =P (x)16 +x48 + 3x35 +O(x34). Hence, if the degree of Q is < 48, it must be exactly 35 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2021 SMT Algebra Problem 9",
+   "question": "Let m,n⊂ R and f(m,n ) =m4(8−m4) + 2m2n2(12−m2n2) +n4(18−n4)− 100 Find the smallest possible value for a in which f(m,n )≤a, regardless of the input of f.",
+   "choices": null,
+   "answer": "69",
+   "solution": "Answer: 69. Let m,n⊂ R and f(m,n ) =m4(8−m4) + 2m2n2(12−m2n2) +n4(18−n4)− 100 Find the smallest possible value for a in which f(m,n )≤a, regardless of the input of f. Answer: 69 Solution: Pluggingf into the inequality, distributing, and bringing the constants on the right- hand side gives 8m4−m8 + 24m2n2− 2m4n4 + 18n4−n8≤a + 100 (1) To simplify things a bit, let c =a + 100. Convince yourself, via plugging in (1 , 1), that c must be positive. We can refactor the left hand side: 2(2m2 + 3n2)2− (m4 +n4)2≤c (2) More rearranging yields (2m2 + 3n2)2≤ c + (m4 +n4)2 2 (3) SMT 2021 Algebra Test Solutions April 17, 2021 The left hand side is nonnegative, and the right hand side is positive. Thus, it must also always be true that 2m2 + 3n2≤ √ c + (m4 +n4)2 2 (4) Again, to simplify things a bit, let k2 = c. The right hand side can be seen as the root mean square (RMS) of k and m4 +n4. The root mean square of these two is greater than or equal to their geometric mean (GM), √ k(m4 +n4). But, given (4) and that GM ≤ RMS, what does that tell us about the relation between 2 m2 + 3n2 and GM? Suppose that k is such that there are some cases where 2m2 + 3n2> √ k(m4 +n4) (5) yet (4) always applies. Now, let any point on the mn plane that satisﬁes both (5) and m4 +n4 =k (6) be denoted as (m0,n 0). In the case where m =m0 and n =n0, it must be true that 2m2 0 + 3n2 0> √ k(m4 0 +n4 0) = √ k2 =k (7) Yet, if (4) still applies, it should also be true that 2m2 0 + 3n2 0≤ √ k2 + (m4 0 +n4 0)2 2 = √ 2k2 2 =k (8) This leads to the glaring contradiction that 2m2 0 + 3n2 0< 2m2 0 + 3n2 0 (9) Any point that satisﬁes both (5) and (6) cannot satisfy (4). It follows that if (5) were sometimes true for some k, then (4) cannot always be true for that same k. Conversly, if (4) were always true for some k, then (5) can never be true for that same k. Thus, ﬁnding the minimum k such that (4) always applies is the same as ﬁnding the minimum k such that 2m2 + 3n2≤ √ k(m4 +n4) (10) is always true. Here, we can utilize the Cauchy-Schwarz inequality, where the dot product of two vectors is less than or equal to the product of their magnitudes. Finding a condition for k requires that m4 and n4 have the same coeﬃcient - k. The only way to account for that fact is to write 2m2 + 3n2 as the dot product of ⟨2, 3⟩ and⟨m2,n 2⟩. This results in the inequality 2m2 + 3n2≤ √ (22 + 32)(m4 +n4) = √ 13(m4 +n4) (11) It follows that k≥ 13, c≥ 169, and a≥ 69. Thus, the smallest possible value for a is 69 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2019 SMT Algebra Problem 10",
+   "question": "Let R≥0 be the set of nonnegative real numbers. Consider a continuous function f : R≥0→ R which satisﬁes f(x2) + f(y2) = f ( x2y2− 2xy + 1 x2 + 2xy + y2 ) for x, y positive real numbers with xy > 1. Given that f(0) = 2019 and f(1) = 2019 2 , compute f(3).",
+   "choices": null,
+   "answer": "673",
+   "solution": "Answer: 673. Let R≥0 be the set of nonnegative real numbers. Consider a continuous functionf : R≥0→ R which satisﬁes f(x2) +f(y2) =f (x2y2− 2xy + 1 x2 + 2xy +y2 ) forx,y positive real numbers withxy >1. Given that f(0) = 2019 andf(1) = 2019 2 , compute f(3). Answer: 673 Solution: We begin by deﬁning the functions g(x) = f(x2) so that the original equation becomes g(x) +g(y) =g (xy− 1 x +y ) for allx,y∈ R. The term on the RHS suggests that we deﬁne a new functionh(θ) =g(cotθ), which makes the equation become h(α) +h(β) =h(α +β) for all α,β ∈ R. This is the Cauchy functional equation, which has the family of solutions h(θ) =cθ for some real constant c. Substituting f back in, we get f(cot2θ) =cθ. We solve cot2θ0 = 0 to get θ0 = π 2 +nπ and cot 2θ1 = 1 to get θ1 = π 4 +nπ 2 . Note that because f is continuous, θ is restricted to the domain [ kπ 2 , (k+1)π 2 ] for some integer k. Hence, we must have|θ0−θ1|≤ π 2 and thus,|π 4 + nπ 2|≤ π 2 . So, n = 0 or −1. If n = 0, we see that θ0 = π 2 andθ1 = π 4 satisfy the conditions to give us c = 4038 π . Thus, we see that θ∈ [0, π 2 ], so solving cot2θ = 3 in this interval gives us θ = π 6 , and therefore f(3) =f(cot2 π 6 ) = 4038 π · π 6 = 673 . (If n =−1, then θ0 =−π 2 , θ1 =−π 4 and c = 4038 π with θ∈ [−π 2, 0], giving f(3) = 673 as well.)",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

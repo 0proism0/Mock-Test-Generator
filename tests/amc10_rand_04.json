@@ -1,0 +1,385 @@
+{
+ "id": "amc10_rand_04",
+ "competition": "AMC 10",
+ "category": "Math",
+ "title": "AMC 10 — Random Mock #4 · 2026-08-25 09:49",
+ "instructions": "25 questions · 75 minutes · No calculator. 1 point per correct answer, no penalty for wrong answers.",
+ "time_limit_min": 75,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2010 AMC 10B Problem 1",
+   "question": "What is $50(50-4)-(50\\cdot 50-4)$?",
+   "choices": {
+    "A": "$-196$",
+    "B": "$-204$",
+    "C": "$-96$",
+    "D": "$-4$",
+    "E": "$0$"
+   },
+   "answer": "A",
+   "solution": "Compute each piece: $50(50-4)=50\\cdot 46=2300$ and $50\\cdot 50-4=2500-4=2496$. Therefore the value is $2300-2496=-196$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 2,
+   "source": "2025 AMC 10B Problem 2",
+   "question": "Jerry wrote down the ones digit of each of the first $100$ positive squares: $1, 4, 9, 6, 5, 6, \\dots$. What is the sum of these $100$ digits?",
+   "choices": {
+    "A": "400",
+    "B": "405",
+    "C": "420",
+    "D": "445",
+    "E": "450"
+   },
+   "answer": "E",
+   "solution": "The ones digits of squares repeat every 10: $1,4,9,6,5,6,9,4,1,0$, summing to $45$. Ten complete cycles give $45 \\times 10 = 450$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 3,
+   "source": "2005 AMC 10A Problem 3",
+   "question": "The equations $5x + 13 = 3$ and $bx - 15 = -3$ have the same solution $x$. What is the value of $b$?",
+   "choices": {
+    "A": "-3",
+    "B": "-4",
+    "C": "-5",
+    "D": "-6",
+    "E": "-8"
+   },
+   "answer": "D",
+   "solution": "From $5x+13=3$ we get $x=-2$. Substituting into $bx-15=-3$ gives $-2b=12$, so $b=-6$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 4,
+   "source": "2004 AMC 10A Problem 4",
+   "question": "What is the value of $x$ if $|x-2|=|x-5|$?",
+   "choices": {
+    "A": "3",
+    "B": "\\frac{7}{2}",
+    "C": "4",
+    "D": "\\frac{9}{2}",
+    "E": "5"
+   },
+   "answer": "B",
+   "solution": "The equation says $x$ is equidistant from $2$ and $5$, so $x$ is their midpoint: $x=\\frac{2+5}{2}=\\frac{7}{2}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 5,
+   "source": "2014 AMC 10A Problem 5",
+   "question": "On an algebra quiz, $10\\%$ of the students scored $60$ points, $30\\%$ scored $80$ points, $40\\%$ scored $90$ points, and the rest scored $100$ points. What is the difference between the mean and median score of the students' scores on this quiz?",
+   "choices": {
+    "A": "$2$",
+    "B": "$3$",
+    "C": "$4$",
+    "D": "$5$",
+    "E": "$6$"
+   },
+   "answer": "C",
+   "solution": "The mean score is $0.10(60)+0.30(80)+0.40(90)+0.20(100)=6+24+36+20=86$. Since $10\\%$ scored $60$ and $40\\%$ scored $80$ or less, while $80\\%$ scored $90$ or less, the middle student scored $90$, so the median is $90$. The difference is $90-86=4$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 6,
+   "source": "2023 AMC 10B Problem 6",
+   "question": "Let $a_1 = 1$, $a_2 = 2$, and $a_{n+2} = a_{n+1} + a_n$ for $n \\geq 1$. How many of the first $30$ terms of the sequence are even?",
+   "choices": {
+    "A": "6",
+    "B": "7",
+    "C": "8",
+    "D": "9",
+    "E": "10"
+   },
+   "answer": "E",
+   "solution": "Parities repeat with period 3: odd, even, odd, odd, even, odd, $\\dots$ — even exactly when $n \\equiv 2 \\pmod 3$. Among the first 30 terms those are $n=2,5,\\dots,29$: $10$ terms.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 7,
+   "source": "2016 AMC 10A Problem 7",
+   "question": "The mean, median, and mode of the $7$ data values $20, 150, x, 50, 70, 110, 80$ are all equal to $x$. What is the value of $x$?",
+   "choices": {
+    "A": "$50$",
+    "B": "$60$",
+    "C": "$70$",
+    "D": "$75$",
+    "E": "$80$"
+   },
+   "answer": "E",
+   "solution": "The six known values sum to $20+150+50+70+110+80=480$. Setting the mean equal to $x$ gives $\\frac{480+x}{7}=x$, so $480=6x$ and $x=80$. Check: the sorted list $20,50,70,80,80,110,150$ has median $80$, and $80$ is the only repeated value, so the mode is $80$ as well.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 8,
+   "source": "2017 AMC 10A Problem 8",
+   "question": "At a gathering of $40$ people, there are $25$ people who all know each other and $15$ people who know no one. People who know each other hug, and people who do not know each other shake hands. How many handshakes occur within the group?",
+   "choices": {
+    "A": "$480$",
+    "B": "$375$",
+    "C": "$420$",
+    "D": "$450$",
+    "E": "$510$"
+   },
+   "answer": "A",
+   "solution": "There are $\\binom{40}{2}=780$ pairs of people altogether. The only pairs who know each other (and hence hug) are the $\\binom{25}{2}=300$ pairs within the group of $25$ mutual acquaintances. Every other pair shakes hands, giving $780-300=480$ handshakes.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 9,
+   "source": "2021 AMC 10A Problem 9",
+   "question": "What is the least possible value of $(xy-2)^2+(x+y)^2$ for real numbers $x$ and $y$?",
+   "choices": {
+    "A": "2",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "8"
+   },
+   "answer": "B",
+   "solution": "Let $u=xy$ and $v=x+y$; real $x,y$ require $v^2 \\geq 4u$. On the boundary $v^2=4u$: $(u-2)^2+4u = u^2+4 \\geq 4$, with equality at $u=v=0$ (i.e. $x=y=0$). The minimum is $4$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 10,
+   "source": "2012 AMC 10B Problem 10",
+   "question": "How many ordered pairs of positive integers $(M,N)$ satisfy the equation $\\frac{M}{8}=\\frac{8}{N}$?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "E",
+   "solution": "Cross-multiplying gives $MN=64$. Each positive divisor of $64$ gives a valid $M$ (with $N=64/M$), and $64=2^6$ has $7$ divisors.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 11,
+   "source": "2020 AMC 10A Problem 11",
+   "question": "What is the median of the following list of $2000$ numbers$?$\n$$1, 2, 3, \\ldots, 1000, 1^2, 2^2, 3^2, \\ldots, 1000^2$$",
+   "choices": {
+    "A": "$968.5$",
+    "B": "$969.5$",
+    "C": "$970.5$",
+    "D": "$971.5$",
+    "E": "$972.5$"
+   },
+   "answer": "B",
+   "solution": "For $1\\leq k\\leq 1000$, the number of list entries that are at most $k$ equals $k+\\lfloor\\sqrt{k}\\rfloor$: the entries $1,2,\\dots,k$ plus the $\\lfloor\\sqrt{k}\\rfloor$ perfect squares not exceeding $k$. For $961\\leq k\\leq 1000$ we have $\\lfloor\\sqrt{k}\\rfloor=31$. At $k=968$ the count is $968+31=999$; at $k=969$ it is $1000$; at $k=970$ it is $1001$. So the $1000^{\\text{th}}$ and $1001^{\\text{st}}$ smallest entries are $969$ and $970$, and the median is $\\frac{969+970}{2}=969.5$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 12,
+   "source": "2016 AMC 10B Problem 12",
+   "question": "Two different numbers are selected at random from $\\{1, 2, 3, 4, 5, 6\\}$ and multiplied together. What is the probability that the product is even?",
+   "choices": {
+    "A": "\\frac{2}{3}",
+    "B": "\\frac{11}{15}",
+    "C": "\\frac{4}{5}",
+    "D": "\\frac{13}{15}",
+    "E": "\\frac{14}{15}"
+   },
+   "answer": "C",
+   "solution": "The product is odd only when both numbers are odd. There are $\\binom{3}{2}=3$ odd-odd pairs out of $\\binom{6}{2}=15$ pairs, so the probability of an even product is $1-\\frac{3}{15}=\\frac{4}{5}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 13,
+   "source": "2022 AMC 10B Problem 13",
+   "question": "The positive difference between a pair of primes is equal to $2$, and the positive difference between the cubes of the two primes is $10586$. What is the sum of the digits of the least prime that is greater than those two primes?",
+   "choices": {
+    "A": "$11$",
+    "B": "$8$",
+    "C": "$10$",
+    "D": "$13$",
+    "E": "$16$"
+   },
+   "answer": "A",
+   "solution": "Let the primes be $p$ and $p+2$. Then $(p+2)^3-p^3=6p^2+12p+8=10586$, so $p^2+2p=1763$, giving $p=41$ (since $41^2+2\\cdot 41=1681+82=1763$). Indeed $41$ and $43$ are both prime. The least prime greater than $43$ is $47$, whose digit sum is $4+7=11$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 14,
+   "source": "2002 AMC 10A Problem 14",
+   "question": "Both roots of the quadratic equation $x^2 - 68x + k = 0$ are prime numbers. The number of possible values of $k$ is",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "more than 4"
+   },
+   "answer": "B",
+   "solution": "The roots are primes $p$ and $q$ with $p+q=68$. Checking even/odd: one prime could be $2$ (giving $66$, not prime), so both are odd. The prime pairs summing to $68$ are $(7,61)$ and $(31,37)$, giving $k=427$ or $k=1147$: two values.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 15,
+   "source": "2024 AMC 10A Problem 15",
+   "question": "Let $M$ be the greatest integer such that both $M+1117$ and $M+3357$ are perfect squares. What is the units digit of $M$?",
+   "choices": {
+    "A": "$1$",
+    "B": "$2$",
+    "C": "$4$",
+    "D": "$6$",
+    "E": "$8$"
+   },
+   "answer": "C",
+   "solution": "Write $M+1117=t^2$ and $M+3357=s^2$ with $s>t\\geq 0$. Then $s^2-t^2=2240$, i.e. $(s-t)(s+t)=2240$. Both factors have the same parity, and since their product is even, both are even. To maximize $M$ we maximize $t$, which means making $s+t$ as large as possible: $s-t=2$ and $s+t=1120$, giving $t=559$ and $s=561$. Then $M=559^2-1117=312481-1117=311364$, whose units digit is $4$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 16,
+   "source": "2003 AMC 10A Problem 16",
+   "question": "What is the units digit of $19^{2019}$?",
+   "choices": {
+    "A": "9",
+    "B": "1",
+    "C": "3",
+    "D": "5",
+    "E": "7"
+   },
+   "answer": "A",
+   "solution": "The units digit of powers of $19$ alternates $9,1,9,1,\\ldots$ Since $2019$ is odd, the units digit is $9$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 17,
+   "source": "2007 AMC 10A Problem 17",
+   "question": "Suppose that $m$ and $n$ are positive integers such that $48m = n^{3}$. What is the minimum possible value of $m + n$?",
+   "choices": {
+    "A": "24",
+    "B": "36",
+    "C": "48",
+    "D": "60",
+    "E": "72"
+   },
+   "answer": "C",
+   "solution": "Since $48=2^4\\cdot 3$, for $n^3$ to be a multiple of $48$ the smallest $n$ is $2^2\\cdot 3=12$. Then $m=\\frac{12^3}{48}=36$, and $m+n=48$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 18,
+   "source": "2014 AMC 10B Problem 18",
+   "question": "A list of $11$ positive integers has a mean of $9$, a median of $8$, and a unique mode of $7$. What is the largest possible value of an integer in the list?",
+   "choices": {
+    "A": "$29$",
+    "B": "$30$",
+    "C": "$31$",
+    "D": "$32$",
+    "E": "$33$"
+   },
+   "answer": "D",
+   "solution": "The numbers sum to $11\\cdot 9=99$. In sorted order $a_1\\leq\\cdots\\leq a_{11}$ we need $a_6=8$. To maximize $a_{11}$, minimize the other ten entries. Make $7$ the unique mode by using three $7$'s; then no other value may appear three times. The smallest choice for the five entries below the median is $1,1,7,7,7$ (sum $23$), and $a_6=8$. For $a_7,a_8,a_9,a_{10}$ (each at least $8$), we may use $8$ at most once more and any other value at most twice, so the minimum is $8,9,9,10$ (sum $36$). Then $a_{11}=99-23-8-36=32$, achieved by $1,1,7,7,7,8,8,9,9,10,32$. (Using only two $7$'s forces everything else to appear at most once, giving a smaller maximum of $29$.)",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 19,
+   "source": "2016 AMC 10A Problem 19",
+   "question": "In rectangle $ABCD$, $AB=8$ and $BC=4$. Point $E$ lies on $\\overline{BC}$ with $BE=1$, and point $F$ lies on $\\overline{BC}$ with $FC=1$. What is the area of $\\triangle AEF$?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "$EF = 4-1-1 = 2$. Taking $EF$ as the base, the height from $A$ to line $BC$ equals $AB=8$, so the area is $\\frac12 \\cdot 2 \\cdot 8 = 8$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 20,
+   "source": "2007 AMC 10A Problem 20",
+   "question": "Suppose that the number $a$ satisfies the equation $5 = a + a^{-1}$. What is the value of $a^{4} + a^{-4}$?",
+   "choices": {
+    "A": "123",
+    "B": "323",
+    "C": "523",
+    "D": "525",
+    "E": "527"
+   },
+   "answer": "E",
+   "solution": "Squaring: $a^2+a^{-2}=25-2=23$. Squaring again: $a^4+a^{-4}=23^2-2=529-2=527$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 21,
+   "source": "2006 AMC 10A Problem 21",
+   "question": "How many four-digit positive integers have at least one digit that is a $7$?",
+   "choices": {
+    "A": "3168",
+    "B": "3240",
+    "C": "3402",
+    "D": "4131",
+    "E": "5832"
+   },
+   "answer": "A",
+   "solution": "Complementary counting: there are $9000$ four-digit integers. Those with no digit $7$ number $8\\cdot 9\\cdot 9\\cdot 9=5832$. So the answer is $9000-5832=3168$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 22,
+   "source": "2015 AMC 10B Problem 22",
+   "question": "A regular hexagon has side length $2$. What is the sum of the lengths of all of its diagonals?",
+   "choices": {
+    "A": "$12+6\\sqrt3$",
+    "B": "$18+6\\sqrt3$",
+    "C": "$12+12\\sqrt3$",
+    "D": "$24$",
+    "E": "$12+18\\sqrt3$"
+   },
+   "answer": "C",
+   "solution": "A regular hexagon has $6$ short diagonals (spanning two sides) of length $2\\sqrt3$ and $3$ long diagonals (diameters) of length $4$. Sum $= 6\\cdot 2\\sqrt3 + 3\\cdot 4 = 12\\sqrt3+12$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 23,
+   "source": "2015 AMC 10A Problem 23",
+   "question": "The zeroes of the function $f(x)=x^2-ax+3a$ are integers. What is the sum of the possible values of $a?$",
+   "choices": {
+    "A": "$24$",
+    "B": "$20$",
+    "C": "$18$",
+    "D": "$26$",
+    "E": "$28$"
+   },
+   "answer": "A",
+   "solution": "Let the integer roots be $r$ and $s$. Then $r+s=a$ and $rs=3a=3(r+s)$, so $rs-3r-3s=0$, i.e. $(r-3)(s-3)=9$. The factorizations of $9$ (up to order) are $1\\cdot 9$, $3\\cdot 3$, $(-1)(-9)$, and $(-3)(-3)$, giving $(r,s)=(4,12),(6,6),(2,-6),(0,0)$. The corresponding values of $a=r+s$ are $16, 12, -4, 0$, whose sum is $24$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 24,
+   "source": "2004 AMC 10A Problem 24",
+   "question": "Let $f$ be a function with the following properties: (i) $f(1) = 1$, and (ii) $f(2n) = n \\cdot f(n)$ for any positive integer $n$. What is the value of $f(2^{50})$?",
+   "choices": {
+    "A": "2^{50}",
+    "B": "2^{1225}",
+    "C": "2^{1250}",
+    "D": "2^{1275}",
+    "E": "2^{2500}"
+   },
+   "answer": "B",
+   "solution": "$f(2^{50})=2^{49}\\cdot 2^{48}\\cdots 2^0\\cdot f(1)=2^{0+1+\\cdots+49}=2^{1225}$.",
+   "type": "multiple_choice"
+  },
+  {
+   "n": 25,
+   "source": "2001 AMC 10 Problem 25",
+   "question": "How many positive integers not exceeding $2004$ are multiples of $3$ or $4$ but not $5$?",
+   "choices": {
+    "A": "768",
+    "B": "782",
+    "C": "792",
+    "D": "800",
+    "E": "802"
+   },
+   "answer": "E",
+   "solution": "Multiples of $3$ or $4$: $668+501-167=1002$. Among these, the multiples of $5$ are the multiples of $15$ or $20$: $133+100-33=200$. The answer is $1002-200=802$.",
+   "type": "multiple_choice"
+  }
+ ]
+}

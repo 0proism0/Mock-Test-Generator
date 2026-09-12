@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_16",
+ "competition": "SMT — Geometry",
+ "category": "Math",
+ "title": "SMT — Geometry — Random Mock #16 · 2026-08-26 16:33",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2018 SMT Geometry Problem 1",
+   "question": "Consider a semi-circle with diameter AB. Let points C and D be on diameter AB such that CD forms the base of a square inscribed in the semicircle. Given that CD = 2, compute the length of AB.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. Consider a semi-circle with diameter AB. Let points C andD be on diameter AB such that CD forms the base of a square inscribed in the semicircle. Given that CD = 2, compute the length of AB. Answer: 2 √ 5 Solution: Note that the center of the semi-circle lies on the center of one of the sides of the square. If we draw a line from the center to an opposite corner of the square, we form a right triangle whose side lengths are 1 and 2 and whose hypotenuse is the radius of the semicircle. We can therefore use the Pythagorean Theorem to compute r = √ 12 + 22 = √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2012 SMT Geometry Problem 2",
+   "question": "In trapezoid ABCD , BC ‖ AD, AB = 13, BC = 15, CD = 14, and DA = 30. Find the area of ABCD .",
+   "choices": null,
+   "answer": "252",
+   "solution": "Answer: 252. In trapezoid ABCD , BC ‖ AD, AB = 13, BC = 15, CD = 14, and DA = 30. Find the area of ABCD . Answer: 252 Solution: We can use the standard method of setting up a two-variable system and solving for the height of the trapezoid. However, since one base is half the length of the other, we may take a shortcut. Extend AB and CD until they meet at E. Clearly, BC is a midline of triangle EAD, so we have EA = 2 BA = 26 and ED = 2 CD = 28. The area of EAD is therefore four times that of a standard 13-14-15 triangle, which we know is 1 2 · 14 · 12 = 84 (since the altitude to the side of length 14 splits the triangle into 9-12-15 and 5-12-13 right triangles). The area of the trapezoid is 3 4 the area of EAD by similar triangles, and is therefore 3 · 84 = 252 . A similar solution draws lines from B and C to the midpoint of AD to form three 13 − 14 − 15 triangles.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2014 SMT Geometry Problem 3",
+   "question": "Spencer eats ice cream in a right circular cone with an opening of radius 5 and a height of 10. If Spencer’s ice cream scoops are always perfectly spherical, compute the radius of the largest scoop he can get such that at least half of the scoop is contained within the cone.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. Spencer eats ice cream in a right circular cone with an opening of radius 5 and a height of 10. If Spencer’s ice cream scoops are always perfectly spherical, compute the radius of the largest scoop he can get such that at least half of the scoop is contained within the cone. Answer: 2 √ 5 Solution: Since the cone is symmetric, the points of tangency of the ice cream scoop to the cone make a circle on the inside of the cone. Furthermore, the center of the ice cream scoop must coincide with the center of the base of the cone. The slant height of the cone is √ 52 + 102 = 5 √ 5, so from considering similar right triangles within a cross section of the cone (see above diagram), we get 5 5 √ 5 = r 10 =⇒ r = 2 √ 5 SMT 2014 Geometry Test Solutions February 15, 2014 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2022 SMT Geometry Problem 4",
+   "question": "Let ABC be a triangle with ∠A = 135 2 ◦ and BC = 15. Square W XY Z is drawn inside ABC such that W is on AB, X is on AC, Z is on BC, and triangle ZBW is similar to triangle ABC, but W Z is not parallel to AC. Over all possible triangles ABC, find the maximum area of W XY Z.",
+   "choices": null,
+   "answer": "225",
+   "solution": "Answer: 225. Let ABC be a triangle with ∠A = 135 2 ◦ and BC = 15. Square WXYZ is drawn inside ABC such thatW is on AB,X is on AC,Z is on BC, and triangle ZBW is similar to triangle ABC, but WZ is not parallel to AC. Over all possible triangles ABC, find the maximum area of WXYZ . Answer: 225 √ 2 8 Solution: Let a,b,c be the lengths of sides BC,AC, and AB, respectfully, and let x be the sidelength of squareWXYZ . Note that the given similarity condition implies thatBZ = xc b . By angle chasing, we deduce that ZXC is also similar to ABC, from which we obtain ZC = xb √ 2 c . Therefore, because BZ +ZC =BC, we get x = a c b + b √ 2 c . Because a is fixed, x is maximized when the denominator is minimized. By AM-GM, this occurs when c b = b √ 2 c which gives a value of 2 4√",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2019 SMT Geometry Problem 5",
+   "question": "The bases of a right hexagonal prism are regular hexagons of side length s > 0, and the prism has height h. The prism contains some water, and when it is placed on a ﬂat surface with a hexagonal face on the bottom, the water has depth s √ 3 4 . The water depth doesn’t change when the prism is turned so that a rectangular face is on the bottom. Compute h s .",
+   "choices": null,
+   "answer": "6",
+   "solution": "Answer: 6. The bases of a right hexagonal prism are regular hexagons of side length s > 0, and the prism has height h. The prism contains some water, and when it is placed on a ﬂat surface with a hexagonal face on the bottom, the water has depth s √ 3 4 . The water depth doesn’t change when the prism is turned so that a rectangular face is on the bottom. Compute h s . Answer: 6 √ 3 5 Solution: When a hexagonal face is on the bottom, the volume of the water may be written as depth ( s √ 3 4 ) times the area of the hexagonal base ( 3s2√ 3 2 ), so the volume is 9s3 8 . When SMT 2019 Geometry Test Solutions March 2, 2019 a rectangular face is on the bottom, the volume of the water may be written as the cross- sectional area times the lengthh. The cross-section is an isosceles trapezoid with height s √ 3 4 , one base of length s, and angles 120 ◦ adjacent to this base. The area of this trapezoid is 5s2√ 3 16 . This can be seen by several ways. One way is to extend the trapezoid’s sides past the base of length s to form an equilateral triangle, after which we may use similar triangles. Alternatively, we may notice that we can cut the cross-section into ﬁve equilateral triangles of side length s",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2013 SMT Geometry Problem 6",
+   "question": "ABCD is a rectangle with AB = CD = 2. A circle centered at O is tangent to BC, CD, and AD (and hence has radius 1). Another circle, centered at P , is tangent to circle O at point T and is also tangent to AB and BC. If line AT is tangent to both circles at T , ﬁnd the radius of circle P .",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3−. ABCD is a rectangle with AB =CD = 2. A circle centered at O is tangent to BC, CD, and AD (and hence has radius 1). Another circle, centered at P , is tangent to circle O at point T and is also tangent to AB andBC. If line AT is tangent to both circles at T , ﬁnd the radius of circle P . Answer: 3− √ 5 2 Solution: Let the radius of circle P be r. Draw OP , noting that it is perpendicular to AT at T . Let Q be the point of tangency between circle O and AD. If we drop a perpendicular from P to meet OQ (extended) at R, then we know that OR = 1−r and OP = 1 + r, so by the Pythagorean theorem, PR = 2√r. Thus, AQ = 2√r +r. LetAB be tangent to P atU. By the Two-Tangent Theorem, AQ∼=AT∼=AU. Since UB =r, we have (2√r +r) +r = 2 =⇒ r = 3− √ 5 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2014 SMT Geometry Problem 7",
+   "question": "Let ABC be a triangle with AB = 13, BC = 14, and AC = 15. Let D and E be the feet of the altitudes from A and B, respectively. Find the circumference of the circumcircle of ∆CDE .",
+   "choices": null,
+   "answer": "39",
+   "solution": "Answer: 39π. Let ABC be a triangle with AB = 13, BC = 14, and AC = 15. Let D and E be the feet of the altitudes from A and B, respectively. Find the circumference of the circumcircle of ∆CDE . Answer: 39π 4 Solution: Let X be the intersection of AD and BE. Since ∠CDX = ∠CEX = 90◦, CDXE is a cyclic quadrilateral, and CX is the diameter of the circumcircle of CDE . Using the Law of Cosines on ∠C, we get AB2 =BC 2 +AC2− 2(AB)(BC)(cos ∠C) 169 = 196 + 225− 2(14)(15)(cos ∠C) SMT 2014 Geometry Test Solutions February 15, 2014 cos ∠C = 196 + 225− 169 2(14)(15) = 3 5 Therefore∆CDA and∆CEB are similar to a 3-4-5 triangle, and so is ∆XDB . Thus we have CD = 9, BD = 5, and DX = 15 4 . By the Pythagorean Theorem we have CX = 39 4 , so the circumference of the circumcircle is πd = 39π 4 . It is also possible to use Heron’s Formula to calculate the area of the triangle and then ﬁnd the lengths of the altitudes.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2021 SMT Geometry Problem 8",
+   "question": "In triangle ∆ABC, AB = 5, BC = 7, and CA = 8. Let E and F be the feet of the altitudes from B and C, respectively, and let M be the midpoint of BC. The area of triangle MEF can be expressed as a √ b c for positive integers a, b, and c such that the greatest common divisor of a and c is 1 and b is not divisible by the square of any prime. Compute a +b +c.",
+   "choices": null,
+   "answer": "68",
+   "solution": "Answer: 68. In triangle ∆ABC, AB = 5, BC = 7, and CA = 8. Let E and F be the feet of the altitudes from B and C, respectively, and let M be the midpoint of BC. The area of triangle MEF can be expressed as a √ b c for positive integers a, b, and c such that the greatest common divisor of a and c is 1 and b is not divisible by the square of any prime. Compute a +b +c. Answer: 68 Solution: We ﬁrst observe that quadrilateral EFBC is cyclic with circumcenter M since ∠BEC = ∠CFB = 90◦. Thus, MB = MF = ME = MC = BC/2 = 7/2 as these segments are radii of the circumscribed circle of EFBC , so triangles∆MBF ,∆MEC , and∆MEF are isosceles. From these observations, we deduce that ∠BFM = ∠B and ∠CEM = ∠C, so ∠BMF = 180◦− 2∠B and ∠CME = 180◦− 2∠C. Therefore, ∠EMF = 180◦− (180◦− 2∠B + 180◦− 2∠C) = 2 (∠B + ∠C)− 180◦ = 2 (180◦− ∠A)− 180◦ = 180◦− 2∠A. Now, by the Law of Cosines, we calculate cosA = AB2 +AC2−BC 2 2(AB)(AC) = 52 + 72− 82 2(5)(8) = 25 + 64− 49 80 = 40 80 = 1 2, SMT 2021 Geometry Test Solutions April 17, 2021 so ∠A = 60◦ and ∠EMF = 180◦−2(60◦) = 180◦−120◦ = 60◦ and∆MEF is, in fact, equilateral, with ME =EF =FM = 7",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2019 SMT Geometry Problem 9",
+   "question": "Let ABCD be a quadrilateral with ∠ABC = ∠CDA = 45◦, AB = 7, and BD = 25. If AC is perpendicular to CD, compute the length of BC.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12. Let ABCD be a quadrilateral with ∠ABC = ∠CDA = 45◦, AB = 7, and BD = 25. If AC is perpendicular to CD, compute the length of BC. Answer: 12 √ 2 Solution: Let Γ be the circumcircle of ∆ABC and let line CD intersect Γ at E. Note that ABEC is cyclic and ∠ACE = 90◦ so ∠ABE = 90◦. It follows that ∠AEC = ∠ABC = 45◦ so∆ADE is a 45-45-90 triangle with AD =AE. Let ω be the circumcircle of ∆ACD and let line AB intersectω at F . Note that ACDF is cyclic and ∠ACD = 90◦ so ∠AFD = 90◦. It follows that ∠AFC = ∠ADC = 45◦ so∆BCF is a 45-45-90 triangle with BC =CF . Observe that ∠BEA = 90◦− ∠BAE = ∠FAD . But AE =DA and ∠AFD = 90◦ = ∠EBA, so∆AEB∼=∆DAF . It follows that DF =AB = 7. Then by the Pythagorean Theorem on right triangle BDF , we have that BF = 24. Finally, using the 45-45-90 triangle BCF , we ﬁnd that BC = 12 √ 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2020 SMT Geometry Problem 10",
+   "question": "Three circles with radii 23, 46, and 69 are tangent to each other as shown in the ﬁgure below (ﬁgure is not drawn to scale). SMT 2020 Geometry Test February 22, 2020 Find the radius of the largest circle that can ﬁt inside the shaded region.",
+   "choices": null,
+   "answer": "6",
+   "solution": "Answer: 6. Three circles with radii 23, 46, and 69 are tangent to each other as shown in the ﬁgure below (ﬁgure is not drawn to scale). Find the radius of the largest circle that can ﬁt inside the shaded region. Answer: 6 Solution: Let A,B,C be the center of the three circles with radii a = 23,b = 46,c = 69 respectively and let O andr be the center and the radius of the largest circle that can ﬁt in the shaded region. Hence, we have a triangle ABC with sides 69, 92, and 115 and a point O inside the triangle with distances 23 + r, 46 +r, and 69 +r from A,B,C respectively. Suppose CO intersectsAB at X and let OX =x and AX =y. SMT 2020 Geometry Test Solutions February 22, 2020 Then, by Stewart’s Theorem, we have AO2XC =AC2OX +AX 2OC− (OX)(OC)(XC ), BO 2XC =BC 2OX +BX 2OC− (OX)(OC)(XC ), OX 2AB =OA2XB +OB 2XA− (XB)(XA)(BA). Substituing in the values, (23 +r)2(69 +r +x) = 922x +y2(69 +r)−x(69 +r)(69 +r +x), (46 +r)2(69 +r +x) = 1152x + (69−y)2(69 +r)−x(69 +r)(69 +r +x), x2(69) = (23 +r)2(69−y) + (46 +r)2(y)− (69−y)(y)(69). Solving these equations such that r> 0 yields x = 125 6 ,y = 161 6 ,r = 6 .",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

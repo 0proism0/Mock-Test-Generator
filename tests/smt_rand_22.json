@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_22",
+ "competition": "SMT — Algebra",
+ "category": "Math",
+ "title": "SMT — Algebra — Random Mock #22 · 2026-08-27 08:50",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2011 SMT Algebra Problem 1",
+   "question": "Let a, b∈ C such that a + b = a2 + b2 = 2 √ 3 3 i. Compute | Re(a)|.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1√. Let a,b∈ C such that a +b =a2 +b2 = 2 √ 3 3 i. Compute | Re(a)|. Answer: 1√ 2 From a +b = 2 √ 3 3 i we can let a = √ 3 3 i +x and b = √ 3 3 i−x. Then a2 +b2 = 2(( √ 3 3 i)2 +x2) = 2(x2− 1 3) = 2 √ 3 3 i. So x2 = 1+ √ 3i 3 = 2 3eiπ/3, x =± √ 2√ 3· √ 3+i 2 . Since | Re(a)| =| Re(x)|, the answer is √ 2√ 3· √ 3 2 = 1√",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2013 SMT Algebra Problem 2",
+   "question": "A tree has 10 pounds of apples at dawn. Every afternoon, a bird comes and eats x pounds of apples. Overnight, the amount of food on the tree increases by 10%. What is the maximum value of x such that the bird can sustain itself indeﬁnitely on the tree without the tree running out of food?",
+   "choices": null,
+   "answer": "168",
+   "solution": "Answer: 168. Answer: 168 Solution: We have thatb is a valid number if and only if (x2+2x+3)−(bx−17) = x2+(2−b)x+20 has exactly one real root. This means that 2 − b =±2 √ 20, so b = 2± 2 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2019 SMT Algebra Problem 3",
+   "question": "(The polynomial f(X) is of the form X 2 + bX + c where b, c, X are complex numbers.) If |z| = 1, what is the sum of all possible values of f(z) such that f(z) = f(z)?",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. (The polynomial f(X) is of the form X 2 +bX +c where b,c,X are complex numbers.) If |z| = 1, what is the sum of all possible values of f(z) such that f(z) =f(z)? Answer: 5 3 Solution: We know that f(X) = (X− 1 3)(X− 2 3). From now on, we refer to the roots as r1,r 2. Then we know that f(z) can be written as (z−r1)(z−r2). Notice that by properties of conjugation, we can write f(z) = (z−r1)(z−r2). Expanding and simplifying f(z) =f(z) shows that z2−z(r1 +r2) =z2−z(r1 +r2). This can be rearranged as (z−z)(z +z) = (z−z)(r1 +r2). SMT 2019 Algebra Test Solutions March 2, 2019 If z =z, then z has no imaginary part and thus z is equal to 1 or −1, yielding f(1) = 2 9 or f(−1) = 20 9 . Otherwise, we can cancel ( z−z). Separating the real and imaginary parts of z as x +iy, we see that x = r1+r2 2 and y2 = 1−x2. Notice that f(z) = f(z) means f(z) is real, hence we see that f(z) = Re((x+iy−r1)(x+iy−r2)) =x2−y2−x(r1+r2)+r1r2 =x2−(1−x2)−2x2+r1r2 =−7",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2019 SMT Algebra Problem 4",
+   "question": "Evaluate (350 + 90 √ 15) 1 3 + (350− 90 √ 15) 1 3 .",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10. Evaluate (350 + 90 √ 15) 1 3 + (350− 90 √ 15) 1 3 . Answer: 10 SMT 2019 Algebra Test Solutions March 2, 2019 Solution: Let S = (350 + 90 √ 15) 1 3 + (350− 90 √ 15) 1 3 . Then, S3 = 350 + 90 √ 15 + 3(350 + 90 √ 15) 1 3 (350− 90 √ 15) 1 3 ((350 + 90 √ 15) 1 3 + (350− 90 √ 15) 1 3 ) + 350− 90 √ 15 = 700 + 3(3502− (90 √ 15)2) 1 3S = 700 + 30S. Note that both (350 + 90 √ 15) and (350− 90 √ 15) are positive. Hence, S must be a positive number that satisﬁes S3− 30S− 700 = (S− 10)(S2 + 10S + 70) = 0. In fact, S = 10 is the only real solution to the cubic equation. Therefore, (350+90 √ 15) 1 3 +(350−90 √ 15) 1 3 = 10 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2022 SMT Algebra Problem 5",
+   "question": "x, y, and z are real numbers such that xyz = 10. What is the maximum possible value of x3y3z3− 3x4− 12y2− 12z4?",
+   "choices": null,
+   "answer": "760",
+   "solution": "Answer: 760. x, y, and z are real numbers such that xyz = 10. What is the maximum possible value of x3y3z3− 3x4− 12y2− 12z4? Answer: 760 Solution: We can use the AM-GM inequality to minimize 3x4+12y2+12z4, which will maximize the overall expression. To make all the exponents the same on the geometric mean side, we split 12y2 into 6y2 + 6y2. We have 3 x4 + 6y2 + 6y2 + 12z4≥ 4 4 p 1296x4y4z4 = 24xyz = 240. So, x3y3z3− 3x4− 12y2− 12z4≤ 1000− 240 = 760 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2020 SMT Algebra Problem 6",
+   "question": "Let f : A→ B be a function from A ={0, 1, . . . ,8} to B ={0, 1, . . . ,11} such that the following properties hold: f(x + y mod 9)≡ f(x) + f(y) mod 12 f(xy mod 9)≡ f(x)f(y) mod 12 for all x, y∈ A. Compute the number of functions f that satisfy these conditions.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. Let f :A→B be a function from A ={0, 1,..., 8} toB ={0, 1,..., 11} such that the following properties hold: f(x +y mod 9)≡f(x) +f(y) mod 12 f(xy mod 9)≡f(x)f(y) mod 12 for all x,y∈A. Compute the number of functions f that satisfy these conditions. Answer: 2 Solution: Note f(n)≡ f(1 + 1 +... + 1| {z } n times ) = n∗f(1) mod 12, so f can be completely deter- mined if we know f(1). In addition, f(0) = f(0 + 0)≡f(0) +f(0) mod 12 ⇒f(0) = 0. Now consider f(0) = 0 =f(1 + 1 +... + 1| {z } 9 times )≡ 9f(1) mod 12. Thus f(1) equals 0, 4, or 8. Iff(1) = 0, then f(n) = 0 for all n, which is well-deﬁned. If f(1) = 4, then f(n)≡ 4n mod 12, which is well-deﬁned as f(n)≡f(n + 9) = 4n + 36 mod 12 ≡ 4n, and f(m)∗f(n) = 4m∗ 4n≡ 4mn mod 12 = f(mn). However, if f(1) = 8,f(1) =f(1∗ 1) =f(1)∗f(1) = 8∗ 8⁄≡ 8 mod 12, so this f doesn’t satisfy the second condition. So there are only 2 functions that satisfy the given properties, which are the f deﬁned by f(1) = 0 and f(1) = 4.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2013 SMT Algebra Problem 7",
+   "question": "Evaluate a4 (a− b)(a− c) + b4 (b− c)(b− a) + c4 (c− a)(c− b) .",
+   "choices": null,
+   "answer": "30",
+   "solution": "Answer: 30. Evaluate a4 (a− b)(a− c) + b4 (b− c)(b− a) + c4 (c− a)(c− b) . Answer: 30 Solution: Putting everything over a common denominator, we can rewrite the expression as a4(b− c)− b4(a− c) + c4(a− b) (a− b)(a− c)(b− c) = a4b− ab4− a4c + ac4 + b4c− bc4 (a− b)(a− c)(b− c) . Notice that if a = b, the numerator becomes a5− a5− a4c+ ac4 + a4c− ac4 = 0; similarly if a = c or b = c. This means that the numerator is in fact divisible by ( a− b)(a− c)(b− c). Factoring, we ﬁnd that the above expression is equal to (a− b)(b− c)(a− c)(a2 + b2 + c2 + ab + bc + ac) (a− b)(b− c)(a− c) = a2 + b2 + c2 + ab + bc + ac SMT 2013 Algebra Test Solutions February 2, 2013 as long as the original expression was well-deﬁned. But we have a2 + b2 + c2 + ab + bc + ac = 1 2 ( (a + b)2 + (b + c)2 + (c + a)2) and plugging in the given values of a, b, c gives 1 2 ( (2 √ 7)2 + (2 √ 3)2 + (2 √ 5)2 ) = 2(7 + 3 + 5) = 30 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2020 SMT Algebra Problem 8",
+   "question": "For how many integers n with 3≤ n≤ 2020 does the inequality ⌊(n−1)/4⌋∑ k=0 ( n 4k + 1 ) 9k > 3 ⌊(n−3)/4⌋∑ k=0 ( n 4k + 3 ) 9k hold?",
+   "choices": null,
+   "answer": "672",
+   "solution": "Answer: 672. For how many integers n with 3≤n≤ 2020 does the inequality ⌊(n−1)/4⌋∑ k=0 ( n 4k + 1 ) 9k > 3 ⌊(n−3)/4⌋∑ k=0 ( n 4k + 3 ) 9k hold? SMT 2020 Algebra Test Solutions February 22, 2020 Answer: 672 Solution: By the binomial theorem, we have (1 + √ 3i)n = ∑n k=0 (n k ) ( √ 3i)k, and hence the imaginary part of (1 + √ 3i)n is given by (n 1 )√ 3− (n 3 ) ( √ 3)3 + (n 5 ) ( √ 3)5− (n 7 ) ( √ 3)7 +... = ⌊(n−1)/4⌋∑ k=0 ( n 4k + 1 ) ( √ 3)4k+1− ⌊(n−3)/4⌋∑ k=0 ( n 4k + 3 ) ( √ 3)4k+3 = √ 3   ⌊(n−1)/4⌋∑ k=0 ( n 4k + 1 ) 9k− 3 ⌊(n−3)/4⌋∑ k=0 ( n 4k + 3 ) 9k  . It follows that ∑⌊(n−1)/4⌋ k=0 ( n 4k+1 ) 9k > 3∑⌊(n−3)/4⌋ k=0 ( n 4k+3 ) 9k if and only if the imaginary part of (1 + √ 3i)n is positive. Since 1 + √ 3i = 2(cos(2π/3) +i sin(2π/3)), by de Moivre’s formula we have (1 + √ 3i)n = 2n(cos(2πn/3) +i sin(2πn/3)), and hence the imaginary part of (1 + √ 3i)n is positive if and only if sin(2πn/3)> 0, which is true if and only if n≡ 1, 2 mod 6. So now we ask how many integersn between 3 and 2020, inclusive, satisfy n≡ 1, 2 mod 6. Since 2016/6 = 336, we know there are 2× 336 = 672 integers between 1 and 2016, inclusive, with remainder 1 or 2. Thus there are 670 such integers between 3 and 2016, inclusive. Since 2017 and 2018 also have remainders 1 and 2, the total number of such integers between 3 and 2020 inclusive is 672 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2018 SMT Algebra Problem 9",
+   "question": "Let ( a, b, c, d, e) be an integer solution to the system of equations a + d = 12 b + ad + e = 57 c + bd + ae = 134 cd + be = 156 ce = 72 Find all possible values of b + d.",
+   "choices": null,
+   "answer": "18",
+   "solution": "Answer: 18, 21, 25. Let ( a, b, c, d, e) be an integer solution to the system of equations a + d = 12 b + ad + e = 57 c + bd + ae = 134 cd + be = 156 ce = 72 Find all possible values of b + d. Answer: 18, 21, 25 Solution: After much careful consideration, we notice that the ﬁrst, second, and third equations contain a, b, c, the second, third, and fourth equations contain ad, bd, cd, and the third, fourth, and ﬁfth equations contain ae, be, ce. We also have d and e terms. This suggests that the system of equations was constructed somehow using the product (1 + a + b + c)(1 + d + e). This looks suspiciously like the factorization of the polynomial (x3 + ax2 + bx + c)(x2 + dx + e). In fact, if we expand this polynomial, we get the (semi-magical) x5 + (a + d)x4 + (b + ad + e)x3 + (c + bd + ae)x2 + (cd + be)x + ce. Plugging our values in from our system of equations, we realize that the desired solutions are the diﬀerent factorizations of the polynomial x5 + 12x4 + 57x3 + 134x2 + 156x + 72 = (x + 2)3(x + 3)2 SMT 2018 Algebra Test Solutions February 17, 2018 into the product of a cubic and a quadratic. We can do this in three ways, leading to the solutions [(x + 2)3][(x + 3)2] = (x3 + 6x2 + 12x + 8)(x2 + 6x + 9) =⇒ (6, 12, 8, 6, 9) [(x + 2)2(x + 3)][(x + 2)(x + 3)] = (x3 + 7x2 + 16x + 12)(x2 + 5x + 6) =⇒ (7, 16, 12, 5, 6) [(x + 2)(x + 3)2][(x + 2)2] = (x3 + 8x2 + 21x + 18)(x2 + 4x + 4) =⇒ (8, 21, 18, 4, 4) Therefore, the three possible values of b + d are 18 , 21, 25 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2011 SMT Algebra Problem 10",
+   "question": "How many polynomials P of degree 4 satisfy P (x2) = P (x)P (−x)?",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10. How many polynomials P of degree 4 satisfy P (x2) =P (x)P (−x)? Answer: 10 Note that ifr is a root of P thenr2 is also a root. Therefore r,r 2,r 22 ,r 23 ,··· , are all roots of P . Since P has a ﬁnite number of roots, two of these roots should be equal. Therefore, either r = 0 or rN = 1 for some N >0. If all roots are equal to 0 or 1, then P is of the form axb(x− 1)(4−b) for b = 0,..., 4. Now suppose this is not the case. For such a polynomial, let q denote the largest integer such that r =e2πi·p/q is a root for some integer p coprime to q. We claim that the only suitable q >1 are q = 3 and q = 5. First note that if r is a root then one of √r or−√r is also a root. So if q is even, then one of e2πi·p/2q or e2πi·p+q/2q should also be root of p, and both p/q and (p +q)/2q are irreducible fractions. This contradicts the assumption that q is maximal. Therefore q must be odd. Now, if q > 6, then r−2,r−1,r,r 2,r 4 should be all distinct, so q≤ 6. Therefore q = 5 or 3. If q = 5, then the value of p is not important as P has the complex ﬁfth roots of unity as its roots, so P = a(x4 +x3 +x2 +x + 1). If q = 3, then P is divisible by x2 +x + 1. In this case we let P (x) = a(x2 +x + 1)Q(x) and repeating the same reasoning we can show that Q(x) = x2 +x + 1 or Q(x) is of form xb(x− 1)2−b. Finally, we can show that exactly one member of all 10 resulting families of polynomials ﬁts the desired criteria. Let P (x) = a(x−r)(x−s)(x−t)(x−u). Then, P (x)P (−x) = a2(x2−r2)(x2−s2)(x2− t2)(x2−u2). We now claim that r2, s2, t2, and u2 equal r, s, t, and u in some order. We can prove this noting that the mapping f(x) =x2 maps 0 and 1 to themselves and maps the third and ﬁfth roots of unity to another distinct third or ﬁfth root of unity, respectively. Hence, for these polynomials, P (x)P (−x) =a2(x2−r)(x2−s)(x2−t)(x2−u) =aP (x2), so there exist exactly 10 polynomials that ﬁt the desired criteria, namely the ones from the above 10 families with a = 1.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

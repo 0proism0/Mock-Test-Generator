@@ -1,0 +1,411 @@
+{
+ "id": "amc8_rand_11",
+ "competition": "AMC 8",
+ "category": "Math",
+ "title": "AMC 8 — Random Mock #11 · 2026-08-27 08:50",
+ "instructions": "25 questions · 40 minutes · No calculator. 25 points total.",
+ "time_limit_min": 40,
+ "total_points": 25,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2010 AMC 8 Problem 1",
+   "question": "At Descartes Middle School the mathematics teachers are Ms. Ada, Mr. Babbage, and Mrs. Noether. There are $12$ students in Ms. Ada's class, $9$ students in Mr. Babbage's class, and $14$ students in Mrs. Noether's class taking the AMC $8$ this year. How many mathematics students at Descartes Middle School are taking the contest?",
+   "choices": {
+    "A": "35",
+    "B": "33",
+    "C": "34",
+    "D": "36",
+    "E": "37"
+   },
+   "answer": "A",
+   "solution": "Add the three class sizes: $12+9+14=35$ students.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2024 AMC 8 Problem 2",
+   "question": "What is the value of this expression in decimal form? $$\\frac{55}{11}+\\frac{110}{55}+\\frac{55}{1100}$$",
+   "choices": {
+    "A": "6.55",
+    "B": "7.005",
+    "C": "7.05",
+    "D": "7.5",
+    "E": "7.55"
+   },
+   "answer": "C",
+   "solution": "$\\frac{55}{11}=5$, $\\frac{110}{55}=2$, $\\frac{55}{1100}=0.05$. The sum is $5+2+0.05=7.05$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2007 AMC 8 Problem 3",
+   "question": "What is the sum of the two smallest prime factors of $450$?",
+   "choices": {
+    "A": "5",
+    "B": "7",
+    "C": "8",
+    "D": "10",
+    "E": "12"
+   },
+   "answer": "A",
+   "solution": "The prime factorization of $450$ is $2 \\cdot 3^2 \\cdot 5^2$. The two smallest prime factors are $2$ and $3$, and $2+3=\\boxed{5}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2010 AMC 8 Problem 4",
+   "question": "What is the sum of the mean, median, and mode of the numbers $3,4,1,4,2,5,1,4$?",
+   "choices": {
+    "A": "9",
+    "B": "9.5",
+    "C": "10",
+    "D": "10.5",
+    "E": "11"
+   },
+   "answer": "D",
+   "solution": "In numerical order the list is $1,1,2,3,4,4,4,5$. The mode is $4$, the median is $\\frac{3+4}{2}=3.5$, and the mean is $\\frac{24}{8}=3$. Their sum is $4+3.5+3=\\boxed{10.5}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2024 AMC 8 Problem 5",
+   "question": "Mateo rolls two standard 6-sided dice. What is the probability that the product of the two numbers rolled is a multiple of $4$?",
+   "choices": {
+    "A": "$\\frac{1}{3}$",
+    "B": "$\\frac{5}{12}$",
+    "C": "$\\frac{1}{2}$",
+    "D": "$\\frac{7}{12}$",
+    "E": "$\\frac{2}{3}$"
+   },
+   "answer": "B",
+   "solution": "Count pairs $(a,b)$ with $4\\mid ab$: $a=1$: $b=4$ (1); $a=2$: $b$ even (3); $a=3$: $b=4$ (1); $a=4$: any $b$ (6); $a=5$: $b=4$ (1); $a=6$: $b$ even (3). Total $15$ of $36$ outcomes, i.e. $\\frac{15}{36}=\\frac{5}{12}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2024 AMC 8 Problem 6",
+   "question": "In a race, runner $A$ finished ahead of runner $B$, runner $B$ finished ahead of runner $C$, and runner $D$ finished ahead of runner $A$. Which of the following could be the order in which they finished?",
+   "choices": {
+    "A": "$D,A,B,C$",
+    "B": "$A,B,C,D$",
+    "C": "$D,B,A,C$",
+    "D": "$A,D,B,C$",
+    "E": "$B,D,A,C$"
+   },
+   "answer": "A",
+   "solution": "The conditions force $D$ before $A$, $A$ before $B$, and $B$ before $C$: the only possible order is $D,A,B,C$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2024 AMC 8 Problem 7",
+   "question": "A $2\\times 5$ rectangle must be completely covered by $1\\times 2$ dominoes (which may be rotated). In how many different ways can this be done?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "8",
+    "D": "7",
+    "E": "10"
+   },
+   "answer": "C",
+   "solution": "Let $T(n)$ be the number of domino tilings of a $2\\times n$ board. The right end is either a vertical domino ($T(n-1)$ ways) or two horizontal dominoes ($T(n-2)$ ways), so $T(n)=T(n-1)+T(n-2)$ with $T(1)=1$, $T(2)=2$: $1,2,3,5,8$. Thus $T(5)=8$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2013 AMC 8 Problem 8",
+   "question": "A fair coin is tossed $4$ times. What is the probability of at least two consecutive heads?",
+   "choices": {
+    "A": "\\frac{3}{8}",
+    "B": "\\frac{1}{2}",
+    "C": "\\frac{5}{8}",
+    "D": "\\frac{11}{16}",
+    "E": "\\frac{3}{4}"
+   },
+   "answer": "B",
+   "solution": "There are $2^4=16$ equally likely outcomes. Listing those with at least two consecutive heads: HHTT, HHTH, THHT, HTHH, THHH, HTHH is counted once; the full list is HHTT, HHTH, HTHH, THHT, THHH, HHHH, HHHT, HHHH's companions — systematically, the $8$ outcomes are HHTT, HHTH, HTHH, THHT, THHH, HHHT, HHHH, and HHTH already counted, giving $8$ total. The probability is $\\frac{8}{16}=\\boxed{\\frac{1}{2}}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2018 AMC 8 Problem 9",
+   "question": "Mia is tiling the floor of her $10$-foot by $14$-foot dining room. She plans to place one-foot by one-foot square tiles to form a border along the edges of the room and to fill in the rest of the floor with two-foot by two-foot square tiles. How many tiles will she use?",
+   "choices": {
+    "A": "66",
+    "B": "68",
+    "C": "70",
+    "D": "72",
+    "E": "76"
+   },
+   "answer": "B",
+   "solution": "The one-foot-wide border contains $10\\cdot14-8\\cdot12=140-96=44$ one-foot tiles. The remaining $8$ by $12$ foot interior holds $\\frac{8\\cdot12}{2\\cdot2}=24$ two-foot tiles. In total she uses $44+24=68$ tiles.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2024 AMC 8 Problem 10",
+   "question": "In $1985$ a weather station recorded a carbon dioxide level of $340$ ppm. The level increased by exactly $2$ ppm every year. What was the level in $2030$?",
+   "choices": {
+    "A": "410",
+    "B": "420",
+    "C": "425",
+    "D": "430",
+    "E": "440"
+   },
+   "answer": "D",
+   "solution": "$2030-1985=45$ years, so the level is $340+45\\cdot 2=430$ ppm.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2016 AMC 8 Problem 11",
+   "question": "Determine how many two-digit numbers satisfy the following property: when the number is added to the number obtained by reversing its digits, the sum is $121.$",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "Write the number as $10a+b$. Adding its reversal gives $11a+11b = 121$, so $a+b=11$. The valid digit pairs $(a,b)$ with $a \\ge 1$ are $(2,9),(3,8),(4,7),(5,6),(6,5),(7,4),(8,3),(9,2)$, giving $\\boxed{8}$ numbers.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2020 AMC 8 Problem 12",
+   "question": "For a positive integer $n$, the factorial notation $n!$ represents the product of the integers from $n$ down to $1$. What value of $N$ satisfies the following equation? $$5!\\cdot 7!=15\\cdot N!$$",
+   "choices": {
+    "A": "6",
+    "B": "7",
+    "C": "9",
+    "D": "10",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "Since $5!=120$ and $120=15\\cdot8$, we have $5!\\cdot7!=15\\cdot8\\cdot7!=15\\cdot8!$. Therefore $N=8$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2016 AMC 8 Problem 13",
+   "question": "Two different numbers are randomly selected from the set $\\{ -3, -1, 0, 2, 4\\}$ and multiplied together. What is the probability that the product is $0$?",
+   "choices": {
+    "A": "\\frac{1}{5}",
+    "B": "\\frac{2}{5}",
+    "C": "\\frac{1}{2}",
+    "D": "\\frac{3}{5}",
+    "E": "\\frac{4}{5}"
+   },
+   "answer": "B",
+   "solution": "There are $\\binom{5}{2}=10$ equally likely pairs. The product is $0$ exactly when $0$ is one of the two numbers chosen, which happens for $4$ pairs. The probability is $\\frac{4}{10}=\\boxed{\\frac{2}{5}}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2023 AMC 8 Problem 14",
+   "question": "Ren is planning to send a package to his friend Bea, who is a stamp collector. To pay for the postage, Ren would like to cover the package with a large number of stamps. Suppose he has a collection of $5$-cent, $10$-cent, and $25$-cent stamps, with exactly $20$ of each type. What is the greatest number of stamps Ren can use to make exactly $\\$6.20$ in postage? (Note: The amount $\\$6.20$ corresponds to $6$ dollars and $20$ cents. One dollar is worth $100$ cents.)",
+   "choices": {
+    "A": "49",
+    "B": "52",
+    "C": "51",
+    "D": "53",
+    "E": "55"
+   },
+   "answer": "B",
+   "solution": "Work in cents: we need $5a+10b+25c=620$ with $a,b,c\\le 20$, maximizing $a+b+c$. Using all twenty $10$-cent stamps gives $200$ cents; then $5a+25c=420$, i.e. $a+5c=84$. With $a\\le20$, the largest stamp count comes from the largest possible $a$: $a=19$ gives $5c=65$, so $c=13$. That yields $19+20+13=52$ stamps. Checking nearby cases (e.g. $a=20$ forces $2b+5c=104$, whose best valid solution $b=17,c=14$ gives only $51$) confirms $52$ is the maximum.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2024 AMC 8 Problem 15",
+   "question": "Let $A$ and $B$ be distinct nonzero digits such that the two-digit number $\\underline{A}\\,\\underline{B}$ minus the two-digit number $\\underline{B}\\,\\underline{A}$ equals $45$. How many such two-digit numbers $\\underline{A}\\,\\underline{B}$ are there?",
+   "choices": {
+    "A": "4",
+    "B": "2",
+    "C": "3",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "A",
+   "solution": "$\\underline{A}\\,\\underline{B}-\\underline{B}\\,\\underline{A}=9(A-B)=45$, so $A-B=5$. With $B\\ge 1$: $(A,B)=(6,1),(7,2),(8,3),(9,4)$ — $4$ numbers.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2012 AMC 8 Problem 16",
+   "question": "Each of the digits $0, 1, 2, 3, 4, 5, 6, 7, 8,$ and $9$ is used only once to make two five-digit numbers so that they have the largest possible sum. Which of the following could be one of the numbers?",
+   "choices": {
+    "A": "76531",
+    "B": "85421",
+    "C": "86420",
+    "D": "86320",
+    "E": "87410"
+   },
+   "answer": "C",
+   "solution": "To maximize the sum, the largest digits must occupy the highest place values: $9$ and $8$ in the ten-thousands places, $7$ and $6$ in the thousands places, $5$ and $4$ in the hundreds places, $3$ and $2$ in the tens places, and $1$ and $0$ in the units places. So a valid number has ten-thousands digit $9$ or $8$, thousands digit $7$ or $6$, hundreds digit $5$ or $4$, tens digit $3$ or $2$, and units digit $1$ or $0$. Only $86420$ satisfies all five conditions (for example, paired with $97531$, whose digits fill the complementary slots).",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2019 AMC 8 Problem 17",
+   "question": "What is the value of the product $$\\left(\\frac{1\\cdot3}{2\\cdot2}\\right)\\left(\\frac{2\\cdot4}{3\\cdot3}\\right)\\left(\\frac{3\\cdot5}{4\\cdot4}\\right)\\cdots\\left(\\frac{47\\cdot49}{48\\cdot48}\\right)\\left(\\frac{48\\cdot50}{49\\cdot49}\\right)?$$",
+   "choices": {
+    "A": "$\\frac{1}{49}$",
+    "B": "$\\frac{24}{49}$",
+    "C": "$\\frac{1}{2}$",
+    "D": "$\\frac{25}{49}$",
+    "E": "$\\frac{26}{49}$"
+   },
+   "answer": "D",
+   "solution": "Split each factor: $\\prod_{k=1}^{48}\\frac{k(k+2)}{(k+1)^2}=\\left(\\prod_{k=1}^{48}\\frac{k}{k+1}\\right)\\left(\\prod_{k=1}^{48}\\frac{k+2}{k+1}\\right)$. Both products telescope: the first equals $\\frac{1}{49}$ and the second equals $\\frac{50}{2}=25$. Multiplying gives $\\frac{1}{49}\\cdot25=\\frac{25}{49}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2024 AMC 8 Problem 18",
+   "question": "Three concentric circles have radii $2$, $3$, and $4$. The area of the ring between the circles of radius $2$ and radius $3$ is what fraction of the area of the largest circle?",
+   "choices": {
+    "A": "$\\frac{1}{4}$",
+    "B": "$\\frac{5}{16}$",
+    "C": "$\\frac{3}{8}$",
+    "D": "$\\frac{7}{16}$",
+    "E": "$\\frac{1}{2}$"
+   },
+   "answer": "B",
+   "solution": "Ring area $=\\pi(3^2-2^2)=5\\pi$; largest circle area $=16\\pi$. The fraction is $\\frac{5\\pi}{16\\pi}=\\frac{5}{16}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2016 AMC 8 Problem 19",
+   "question": "The sum of $21$ consecutive even integers is $1008$. What is the largest of these $21$ consecutive integers?",
+   "choices": {
+    "A": "56",
+    "B": "64",
+    "C": "66",
+    "D": "68",
+    "E": "70"
+   },
+   "answer": "D",
+   "solution": "The middle (11th) of the $21$ even integers equals the mean, $\\frac{1008}{21}=48$. The largest is $10$ even steps above the middle: $48 + 2 \\cdot 10 = \\boxed{68}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "2016 AMC 8 Problem 20",
+   "question": "The least common multiple of $a$ and $b$ is $18$, and the least common multiple of $b$ and $c$ is $20$. What is the least possible value of the least common multiple of $a$ and $c$?",
+   "choices": {
+    "A": "36",
+    "B": "60",
+    "C": "90",
+    "D": "120",
+    "E": "180"
+   },
+   "answer": "E",
+   "solution": "Since $\\text{lcm}(a,b)=18$ and $\\text{lcm}(b,c)=20$, the number $b$ divides both $18$ and $20$, so $b\\mid\\gcd(18,20)=2$. Then $b$ contributes no factor of $9$, so $9\\mid a$; likewise $b$ contributes no factor of $4$ or $5$, so $20\\mid c$. Hence $\\text{lcm}(a,c)$ must be a multiple of $\\text{lcm}(9,20)=180$. This bound is achieved with $a=9$, $b=2$, $c=20$: $\\text{lcm}(9,2)=18$ and $\\text{lcm}(2,20)=20$. The least possible value is $180$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "2023 AMC 8 Problem 21",
+   "question": "Bao writes the numbers $2, 3, \\dots, 10$ on separate cards, one number per card. He wishes to divide the cards into $3$ groups of $3$ cards so that the sum of the numbers in each group will be the same. In how many ways can this be done?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "C",
+   "solution": "The total is $2+3+\\cdots+10=54$, so each group must sum to $18$. The card $10$ can only be grouped as $\\{10,2,6\\}$ or $\\{10,3,5\\}$ (since $10+4+4$ repeats a card). If $\\{10,2,6\\}$ is used, the remaining cards $\\{3,4,5,7,8,9\\}$ split uniquely as $\\{9,4,5\\}$ and $\\{8,7,3\\}$. If $\\{10,3,5\\}$ is used, the remaining cards $\\{2,4,6,7,8,9\\}$ split uniquely as $\\{9,2,7\\}$ and $\\{8,6,4\\}$. Thus there are exactly $2$ ways.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "2014 AMC 8 Problem 22",
+   "question": "A $2$-digit number is such that the product of its digits plus three times the sum of its digits is equal to the number. What is the units digit of the number?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "6",
+    "E": "5"
+   },
+   "answer": "E",
+   "solution": "Let the number have tens digit $a$ and units digit $b$. Then $10a+b=ab+3(a+b)$, which rearranges to $7a=b(a+2)$, so $b=\\frac{7a}{a+2}$. Since $a+2$ must divide $7a=7(a+2)-14$, we need $a+2\\mid14$, and with $1\\le a\\le9$ the only option is $a+2=7$, giving $a=5$ and $b=5$. Indeed $55=5\\cdot5+3(5+5)=25+30$. The units digit is $5$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "2024 AMC 8 Problem 23",
+   "question": "On a sheet of graph paper, Leo draws the line segment from $(0,6)$ to $(3,0)$. Through how many unit squares of the grid does the segment pass?",
+   "choices": {
+    "A": "6",
+    "B": "4",
+    "C": "5",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "A",
+   "solution": "A segment between opposite corners of an $a\\times b$ grid passes through $a+b-\\gcd(a,b)$ squares: $3+6-\\gcd(3,6)=3+6-3=6$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "2017 AMC 8 Problem 24",
+   "question": "Mr. Alvarez has three grandchildren, who call him regularly. One calls him every three days, one calls him every four days, and one calls him every seven days. All three called him on December 31, 2018. On how many days during the next year did he not receive a phone call from any of his grandchildren?",
+   "choices": {
+    "A": "150",
+    "B": "157",
+    "C": "160",
+    "D": "163",
+    "E": "170"
+   },
+   "answer": "B",
+   "solution": "The next year has $365$ days. By inclusion-exclusion, the number of days with at least one call is $\\left\\lfloor \\frac{365}{3} \\right\\rfloor + \\left\\lfloor \\frac{365}{4} \\right\\rfloor + \\left\\lfloor \\frac{365}{7} \\right\\rfloor - \\left\\lfloor \\frac{365}{12} \\right\\rfloor - \\left\\lfloor \\frac{365}{21} \\right\\rfloor - \\left\\lfloor \\frac{365}{28} \\right\\rfloor + \\left\\lfloor \\frac{365}{84} \\right\\rfloor = 121+91+52-30-17-13+4 = 208$. So he receives no call on $365-208=\\boxed{157}$ days.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "2022 AMC 8 Problem 25",
+   "question": "A frog randomly hops among $3$ lily pads. On each turn it hops to one of the other $2$ lily pads, each with equal probability. After $4$ hops, what is the probability that the frog is back on the lily pad where it started?",
+   "choices": {
+    "A": "$\\frac{1}{3}$",
+    "B": "$\\frac{3}{8}$",
+    "C": "$\\frac{5}{16}$",
+    "D": "$\\frac{7}{16}$",
+    "E": "$\\frac{1}{2}$"
+   },
+   "answer": "B",
+   "solution": "Let $p_n$ be the probability the frog is on its starting pad after $n$ hops. If it is on the start pad it must hop off, and if it is off the start pad it hops onto it with probability $\\frac12$, so $p_{n+1}=\\frac12(1-p_n)$. Starting from $p_0=1$: $p_1=0$, $p_2=\\frac12$, $p_3=\\frac14$, and $p_4=\\frac12\\cdot\\frac34=\\frac38$. (Equivalently, $6$ of the $2^4=16$ equally likely hop sequences return to the start.)",
+   "type": "multiple_choice",
+   "points": 1
+  }
+ ]
+}

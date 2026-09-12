@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_06",
+ "competition": "SMT — Algebra",
+ "category": "Math",
+ "title": "SMT — Algebra — Random Mock #6 · 2026-08-26 16:33",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2013 SMT Algebra Problem 1",
+   "question": "Nick is a runner, and his goal is to complete four laps around a circuit at an average speed of 10 mph. If he completes the ﬁrst three laps at a constant speed of only 9 mph, what speed does he need to maintain in miles per hour on the fourth lap to achieve his goal?",
+   "choices": null,
+   "answer": "15",
+   "solution": "Answer: 15. Nick is a runner, and his goal is to complete four laps around a circuit at an average speed of 10 mph. If he completes the ﬁrst three laps at a constant speed of only 9 mph, what speed does he need to maintain in miles per hour on the fourth lap to achieve his goal? Answer: 15 Solution: Let d be the length of one lap in miles. Then he needs to complete the four laps in 4d 10 = 2d 5 hours. He has already spent 3d 9 = d 3 hours on the ﬁrst three laps, so he has 2d 5− d 3 = d 15 hours left. Therefore, he must maintain a speed of 15 mph on the ﬁnal lap.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2022 SMT Algebra Problem 2",
+   "question": "Find the sum of the solution(s) x to the equation x = q 2022 + √ 2022 + x. (1)",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1+. Find the sum of the solution(s) x to the equation x = q 2022 + √ 2022 +x. (1) Answer: 1+ √ 8089 2 Solution: Consider the following equations: y = p 2022 +y (∗) x = q 2022 + √ 2022 +x (∗∗) Equation (∗) and Equation (∗∗) have the same solution, since if you plug the definition into the RHS repeatedly, replacing y for the first equation √2022 +y and replacing x in the second equation with√2022 +x, then you arrive atx = q 2022 + p 2022 + √ 2022... =y. To solve for (∗), we simply square on both sides and solve the quadratic. We discard the extraneous solution to get 1 + √ 8089 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2018 SMT Algebra Problem 3",
+   "question": "Compute the minimum value of x2 + 6xy + 18y2 + 12yz + 4z2.",
+   "choices": null,
+   "answer": "18",
+   "solution": "Answer: 18. Compute the minimum value of x2 + 6xy + 18y2 + 12yz + 4z2. Answer: 18 Solution: We ﬁrst complete the square and rewrite our equation as (x + 3y)2 + (3y + 2z)2. We then substitute a = x, b = 3y, and c = 2z to minimize the equivalent sum (a + b)2 + (b + c)2 under the condition abc = 6xyz = 4. Applying AM-GM gives us (a + b)2 + (b + c)2≥ 2(a + b)(b + c). We can apply AM-GM again to a + b and b + c individually via a + b = a 2 + a 2 + b≥ 3 3 √ a2b 4 b + c = b + c 2 + c 2≥ 3 3 √ bc2 4 to get (a + b)2 + (b + c)2≥ 2(a + b)(b + c)≥ 18 3 √ (abc)2 16 = 18 Note that equality holds when a = 2b = c, so a = c = 2, and b = 1, or equivalently when x = 2, y = 1 3, and z = 1. SMT 2018 Algebra Test Solutions February 17, 2018",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2022 SMT Algebra Problem 4",
+   "question": "Let the roots of x2022− 7x2021 + 8x2 + 4x + 2 be r1, r2,··· , r2022, the roots of x2022− 8x2021 + 27x2 + 9x + 3 be s1, s2,··· , s2022, and the roots of x2022− 9x2021 + 64x2 + 16x + 4 be t1, t2,··· , t2022. Compute the value of X 1≤i,j≤2022 risj + X 1≤i,j≤2022 sitj + X 1≤i,j≤2022 tirj.",
+   "choices": null,
+   "answer": "191",
+   "solution": "Answer: 191. Let the roots of x2022− 7x2021 + 8x2 + 4x + 2 be r1,r 2,··· ,r 2022, the roots of x2022− 8x2021 + 27x2 + 9x + 3 be s1,s 2,··· ,s 2022, and the roots of x2022− 9x2021 + 64x2 + 16x + 4 be t1,t 2,··· ,t 2022. Compute the value of X 1≤i,j≤2022 risj + X 1≤i,j≤2022 sitj + X 1≤i,j≤2022 tirj. Answer: 191 Solution: We wish to compute X 1≤i,j≤2022 risj + X 1≤i,j≤2022 sitj + X 1≤i,j≤2022 tirj = 1 2((r1 +r2 +··· +r2022 +s1 +s2 +··· +s2022 +t1 +t2 +··· +t2022)2 −(r2 1 +r2 2 +··· +r2 2022 +s2 1 +s2 2 +··· +s2 2022 +t2 1 +t2 2 +··· +t2 2022)) − X 1≤i<j≤2022 rirj− X 1≤i<j≤2022 sisj− X 1≤i<j≤2022 titj. We haver2 1 +r2 2 +··· +r2 2022 = (r1 +r2 +··· +r2022)2− 2P 1≤i<j≤2022rirj. Substituting this in for each of r,s, and t gives us = 1 2((r1 +r2 +··· +r2022 +s1 +s2 +··· +s2022 +t1 +t2 +··· +t2022)2 −(r1 +r2 +··· +r2022)2− (s1 +s2 +··· +s2022)2− (t1 +t2 +··· +t2022)2). Using Vieta’s formulas, this is equal to 1 2((7 + 8 + 9)2− 72− 82− 92) = 7· 8 + 8· 9 + 9· 7 = 191. SMT 2022 Algebra Test Solutions April 16–17, 2022",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2014 SMT Algebra Problem 5",
+   "question": "a and b are nonnegative real numbers such that sin( ax + b) = sin(29x) for all integers x. Find the smallest possible value of a.",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10 π − 29.. a and b are nonnegative real numbers such that sin( ax +b) = sin(29x) for all integers x. Find the smallest possible value of a. Answer: 10 π − 29. SMT 2014 Algebra Test Solutions February 15, 2014 Solution: First, since sin(b) = sin(0) = 0, we have b = nπ for some integer n. Since sin has period 2π, we need only consider the cases when b = 0 and b =π. Now let b∈{ 0,π} and a be any real number. If for all integers x, sin(ax +b) = sin(29x), then for any integer n, sin((a + 2πn)x +b) = sin(ax +b + 2πnx) = sin(ax +b) = sin(29x) for all integersx as well. Conversely, assume for somea andc that for all integersx, sin(ax+b) = sin(cx +b) = sin(29x). Then, for all integers x, sin(ax) = sin(ax) cos(b) + cos(ax) sin(b) cos(b) = sin(ax +b) cos(b) = sin(cx +b) cos(b) = sin(cx) cos(b) + cos(cx) sin(b) cos(b) = sin(cx), since sin(0) = sin(π) = 0 and cos(0), cos(π)⁄= 0. But then, sin(a) = sin(c) and 2 sin(a) cos(a) = sin(2a) = sin(2c) = 2 sin(c) cos(c) implies cos(a) = cos(c) since sin(a) = sin(c) = sin(29) cos(b) ⁄= 0. Hence, a and c are the same angle, modulo integer multiples of 2 π. Now, we consider the two cases concretely. If b = 0, one valid assignment of a is a = 29, so all possible ones are a = 29 + 2πn for integers n. The smallest positive number we can make this is 29− 8π, since 10π≈ 31.4> 29. Meanwhile, ifb =π, one valid assignment ofa isa =−29, since sin(−29x+π) = sin(−29x) cos(π) + cos(−29x) sin(π) = − sin(−29x) = sin(29 x). So, all possible ones are a =−29 + 2πn for integersn. The smallest positive number we can make this is 10 π− 29 . We can easily see that 29∈ (9π, 10π), so 10π− 29<π < 29− 8π.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2022 SMT Algebra Problem 6",
+   "question": "Compute cot 23X n=1 cot−1 1 + nX k=1 2k !! .",
+   "choices": null,
+   "answer": "25",
+   "solution": "Answer: 25. Compute cot 23X n=1 cot−1 1 + nX k=1 2k !! . Answer: 25 23 Solution: Let the sum inside the cot be S. Then, we have S = 23X n=1 cot−1(1 +n(n + 1)). Note that cot−1a−cot−1b = tan−1a−tan−1b = tan−1 \u0010 1 a− 1 b 1+ 1 ab \u0011 = tan−1 \u0010 b−a ab+1 \u0011 = cot−1 \u0010 ab+1 b−a \u0011 , so cot−1(1 +n(n + 1)) = cot−1 1 n− cot−1 1 n+1. Telescoping, our sum becomes S = cot−1 1 1− cot−1 1 24 = cot−1 25 23, which gives cotS = 25 23 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2011 SMT Algebra Problem 7",
+   "question": "Let P (x) be a polynomial of degree 2011 such that P (1) = 0, P (2) = 1, P (4) = 2, ... , and P (22011) = 2011. Compute the coeﬃcient of the x1 term in P (x).",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2 − 1. Let P (x) be a polynomial of degree 2011 such that P (1) = 0,P (2) = 1,P (4) = 2, ... , and P (22011) = 2011. Compute the coeﬃcient of the x1 term in P (x). Answer: 2 − 1 22010 We analyze Q(x) = P (2x)−P (x). One can observe that Q(x)− 1 has the powers of 2 starting from 1, 2, 4,··· , up to 2 2010 as roots. Since Q has degree 2011, Q(x)− 1 = A(x− 1)(x− 2)··· (x− 22010) for some A. Meanwhile Q(0) =P (0)−P (0) = 0, so Q(0)− 1 =−1 =A(−1)(−2)··· (−22010) =−2(2010·2011)/2A. ThereforeA = 2−(1005·2011). Finally, note that the coeﬃcient of x is same for P andQ− 1, so it equals A(−20)(−21)··· (−22010)((−20) + (−2−1) +··· + (−2−2010)) = A·21005·2011(22011−1) 22010 = 2 − 1 22010 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2018 SMT Algebra Problem 8",
+   "question": "Deﬁne {x} = x−⌊ x⌋, where⌊x⌋ denotes the largest integer not exceeding x. If|x|≤ 8, ﬁnd the number of real solutions to the equation {x} +{x2} = 1.",
+   "choices": null,
+   "answer": "113",
+   "solution": "Answer: 113. Deﬁne {x} = x−⌊ x⌋, where⌊x⌋ denotes the largest integer not exceeding x. If|x|≤ 8, ﬁnd the number of real solutions to the equation {x} +{x2} = 1. Answer: 113 Solution: Since{x} +{x2} = 1, the value x must satisfy x + x2 = n for some integer n. The quadratic equation then gives us x =−1±√1 + 4n 2 . If we consider when 0 ≤ x≤ 8, then we must have −1+√1+4n 2 ≤ 8. Solving the inequality, we ﬁnd that x satisﬁes the equation when 0 ≤ n≤ 72, giving us 73 possibilities. Likewise, when−8≤ x < 0, we must have −1−√1+4n 2 ≥− 8, which has solutions when 0 ≤ n≤ 56, for a total of 57 possibilities. Since{x} +{x2} < 2, we must also eliminate the cases when{x} +{x2} = 0, which happens only when−8≤ x≤ 8 is an integer, for a total of 17 possibilities. Therefore, the total number of solutions is 73 + 57− 17 = 113 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2023 SMT Algebra Problem 9",
+   "question": "Let x,y,z be nonzero numbers, not necessarily real, such that (x−y)2 + (y−z)2 + (z−x)2 = 24yz and x2 yz + y2 zx + z2 xy = 3. Compute x2 yz . Algebra Test April 8, 2023",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. Let x,y,z be nonzero numbers, not necessarily real, such that (x−y)2 + (y−z)2 + (z−x)2 = 24yz and x2 yz + y2 zx + z2 xy = 3. Compute x2 yz . Answer: 5 Solution: Via factoring, we get x2 yz + y2 zx + z2 xy = 3 implies (x +y +z)(x2 +y2 +z2−xy−yz−zx) = 0 or (x +y +z)((x−y)2 + (y−z)2 + (z−x)2) = 24(x +y +z)yz = 0. Algebra Test Solutions April 8, 2023 As y,z ̸= 0, we have x +y +z = 0 or x =−y−z. Then x2 yz = (−y−z)2 yz = y2 + 2yz +z2 yz = y z + z y + 2. Now, substituting−y−z for x in the first equation gives us (−y−z−y)2 + (y−z)2 + (z +y +z)2 = 4y2 + 4yz +z2 +y2− 2yz +z2 +y2 + 4yz + 4z2 = 6y2 + 6z2 + 6yz = 24yz, or \u0010y z \u00112 − 3 \u0010y z \u0011 + 1 = 0. By the Quadratic Formula, we have y z = 3± √ 5 2 . It follows that the answer is y z + z y + 2 = 3− √ 5 2 + 3 + √ 5 2 + 2 = 5 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2014 SMT Algebra Problem 10",
+   "question": "Let x0 = 1, x1 = 0, and xi =−3xi−1 + xi−2 for i≥ 2. Let y0 = 0, y1 = 1, and yi =−3yi−1 + yi−2 for i≥ 2. Compute 2013∑ i=0 (xiy2014− yix2014)2 y2 2014 . You may give your answer in terms of at most ten values of thexi and/or yi (but must otherwise simplify completely).",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3y2014−x2014. Let x0 = 1,x 1 = 0, and xi =−3xi−1 +xi−2 fori≥ 2. Let y0 = 0,y 1 = 1, and yi =−3yi−1 +yi−2 for i≥ 2. Compute 2013∑ i=0 (xiy2014−yix2014)2 y2 2014 . You may give your answer in terms of at most ten values of thexi and/oryi (but must otherwise simplify completely). Answer: 3y2014−x2014 3y2014 = − y2015 3y2014 Solution 1: Let a =−x2014/y2014. We ﬁrst show that xi +ayi> 0 for all i. Solving the linear recurrences gives xi = (−1)i(−3 + √ 13) 2 √ 13 ( 3 + √ 13 2 )i + 3 + √ 13 2 √ 13 ( −3 + √ 13 2 )i , yi =−(−1)i √ 13 ( 3 + √ 13 2 )i + 1√ 13 ( −3 + √ 13 2 )i . By cross-multiplying and cancelling terms, we conclude that xi yi − −3+ √ 13 2 √ 13 − 1√ 13 = (−3 + √ 13)i √ 13 ( − (−1)i √ 13 (3 + √ 13)i + 1√ 13(−3 + √ 13))i ). Since−3 + √ 13 < −3 + √ 16 = 1 and the denominator is 2 iyi √ 13, this number decreases monotonically in magnitude as i increases and alternates in sign. That is, as i increases, xi/yi gets monotonically closer to (3 − √ 13)/2 while alternating between being slightly above and slightly below. This means that −x2i+1/y2i+1<a< −x2i/y2i for all i≤ 1006, as desired. SMT 2014 Algebra Test Solutions February 15, 2014 Hence consider the sequence of rectangles R0,R 1,...,R 2013, whereR2i has heightx2i +ay2i and width 3(x2i +ay2i) andR2i+1 has height 3(x2i+1 +ay2i+1) and widthx2i+1 +ay2i+1. Draw R2i+1 adjacent toR2i to the right with bottom edges aligned, and R2i+2 adjacent toR2i+1 above with left edges aligned. Then the entire drawing exactly forms a rectangle of height 1 and width 3+a, hence area 3 +a. On the other hand the area of the rectangle is clearly 3 times the area of the desired sum. Therefore the sum has value 3+a 3 = 3y2014−x2014 3y2014 . Solution 2: Solving the linear recurrences, plugging in, and expanding results in a sum of a few geometric series. It should be possible to bash through this to get the same answer.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

@@ -1,0 +1,411 @@
+{
+ "id": "amc12_rand_05",
+ "competition": "AMC 12",
+ "category": "Math",
+ "title": "AMC 12 — Random Mock #5 · 2026-08-27 08:50",
+ "instructions": "25 questions · 75 minutes · No calculator. 150 points total.",
+ "time_limit_min": 75,
+ "total_points": 150,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2018 AMC 12A Problem 1",
+   "question": "A large urn contains $120$ balls, of which $25 \\%$ are red and the rest are blue. How many of the blue balls must be removed so that the percentage of red balls in the urn will be $50 \\%$? (No red balls are to be removed.)",
+   "choices": {
+    "A": "40",
+    "B": "50",
+    "C": "60",
+    "D": "70",
+    "E": "90"
+   },
+   "answer": "C",
+   "solution": "The urn contains $0.25 \\cdot 120 = 30$ red balls and $120-30=90$ blue balls. Since no red balls are removed, the $30$ red balls must make up $50\\%$ of the final contents, so the urn must end with $30/0.5 = 60$ balls. Therefore $120-60 = 60$ blue balls must be removed. The answer is $\\boxed{60}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 2,
+   "source": "2025 AMC 12B Problem 2",
+   "question": "Jerry wrote down the ones digit of each of the first $50$ positive squares: $1, 4, 9, 6, 5, 6, \\dots$. What is the sum of these $50$ digits?",
+   "choices": {
+    "A": "205",
+    "B": "210",
+    "C": "215",
+    "D": "220",
+    "E": "225"
+   },
+   "answer": "E",
+   "solution": "The ones digits of squares cycle every 10 with sum $1+4+9+6+5+6+9+4+1+0=45$. Five cycles give $45 \\times 5 = 225$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 3,
+   "source": "2021 AMC 12B Problem 3",
+   "question": "Suppose that $$1+\\frac{1}{2+\\frac{1}{3+\\frac{1}{x}}}=\\frac{16}{11}.$$ What is the value of $x$?",
+   "choices": {
+    "A": "\\frac{1}{4}",
+    "B": "\\frac{3}{8}",
+    "C": "\\frac{2}{5}",
+    "D": "\\frac{1}{2}",
+    "E": "\\frac{2}{3}"
+   },
+   "answer": "D",
+   "solution": "Subtracting $1$ from both sides, $\\frac{1}{2+\\frac{1}{3+1/x}} = \\frac{5}{11}$, so $2+\\frac{1}{3+1/x} = \\frac{11}{5}$. Then $\\frac{1}{3+1/x} = \\frac{1}{5}$, so $3+\\frac{1}{x} = 5$, giving $\\frac{1}{x}=2$ and $x = \\frac{1}{2}$. The answer is $\\boxed{\\frac{1}{2}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 4,
+   "source": "2024 AMC 12B Problem 4",
+   "question": "Balls numbered $1, 2, 3, \\dots$ are deposited into $5$ bins labeled A, B, C, D, E following the bouncing pattern $$A, B, C, D, E, D, C, B, A, B, C, D, E, D, C, B, A, \\dots$$ (one ball per bin, in numerical order). Which bin receives ball number $68$?",
+   "choices": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D",
+    "E": "E"
+   },
+   "answer": "D",
+   "solution": "The pattern has period $8$: $A,B,C,D,E,D,C,B$. Since $68 = 8 \\cdot 8 + 4$, ball 68 lands in the 4th position of the cycle, bin $D$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 5,
+   "source": "2024 AMC 12A Problem 5",
+   "question": "A data set containing $24$ numbers, some of which are $8$, has mean $40$. When all the $8$s are removed, the data set has mean $56$. How many $8$s were in the original data set?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "The $24$ numbers have total $24 \\cdot 40 = 960$. If $k$ of the numbers are $8$s, the remaining $24-k$ numbers total $960 - 8k$ and have mean $56$, so $960 - 8k = 56(24-k) = 1344 - 56k$. Thus $48k = 384$, giving $k = 8$. The answer is $\\boxed{8}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 6,
+   "source": "2017 AMC 12B Problem 6",
+   "question": "The circle having $(0,0)$ and $(6,8)$ as the endpoints of a diameter intersects the $x$-axis at a second point. What is the $x$-coordinate of this point?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "8",
+    "E": "10"
+   },
+   "answer": "C",
+   "solution": "The center of the circle is $(3,4)$ and the radius is $5$. Setting $y=0$ in $(x-3)^2+(y-4)^2 = 25$ gives $(x-3)^2 = 9$, so $x = 0$ or $x = 6$. The origin corresponds to the given endpoint, so the second intersection has $x$-coordinate $6$. The answer is $\\boxed{6}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 7,
+   "source": "2022 AMC 12A Problem 7",
+   "question": "A row of $5$ houses is to be painted, each house red, green, or blue, so that no two adjacent houses have the same color. In how many ways can this be done?",
+   "choices": {
+    "A": "36",
+    "B": "42",
+    "C": "48",
+    "D": "54",
+    "E": "96"
+   },
+   "answer": "C",
+   "solution": "The first house has $3$ choices, and each subsequent house has $2$ choices (anything but its neighbor): $3 \\cdot 2^4 = 48$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 8,
+   "source": "2022 AMC 12B Problem 8",
+   "question": "How many points with integer coordinates lie inside or on the circle $x^2+y^2=9$?",
+   "choices": {
+    "A": "25",
+    "B": "27",
+    "C": "28",
+    "D": "29",
+    "E": "31"
+   },
+   "answer": "D",
+   "solution": "Count by $x$: $x=0$ gives $y=-3..3$ (7 points); $x=\\pm1$ gives $y^2\\le 8$, 5 each (10); $x=\\pm2$ gives $y^2\\le 5$, 5 each (10); $x=\\pm3$ gives $y=0$ only (2). Total $7+10+10+2=29$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 9,
+   "source": "2010 AMC 12B Problem 9",
+   "question": "Let $n$ be the smallest positive integer such that $n$ is divisible by $12$, $n^2$ is a perfect cube, and $n^3$ is a perfect square. What is the number of digits of $n$?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "B",
+   "solution": "If $p^e$ appears in the prime factorization of $n$, then $n^2$ being a cube forces $2e \\equiv 0 \\pmod{3}$, so $3 \\mid e$, and $n^3$ being a square forces $3e$ even, so $2 \\mid e$. Hence $6 \\mid e$ and $n$ is a perfect sixth power. Since $12 = 2^2 \\cdot 3$ divides $n$, the smallest such $n$ is $2^6 \\cdot 3^6 = 6^6 = 46656$, which has $5$ digits. The answer is $\\boxed{5}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 10,
+   "source": "2021 AMC 12B Problem 10",
+   "question": "Two distinct numbers are selected from the set $\\{1,2,3,\\ldots,10\\}$ so that the sum of the remaining eight numbers is $44$. In how many ways can the pair be selected?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "6",
+    "D": "7",
+    "E": "5"
+   },
+   "answer": "E",
+   "solution": "The full sum is $55$, so the selected pair must sum to $11$: $(1,10),(2,9),(3,8),(4,7),(5,6)$ — $5$ pairs.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 11,
+   "source": "2017 AMC 12A Problem 11",
+   "question": "Ravi adds the degree measures of the interior angles of a convex polygon and arrives at a sum of $2170$. He then discovers that he forgot to include one angle. What is the degree measure of the forgotten angle?",
+   "choices": {
+    "A": "150",
+    "B": "160",
+    "C": "170",
+    "D": "175",
+    "E": "110"
+   },
+   "answer": "C",
+   "solution": "The sum of the interior angles of an $n$-gon is $(n-2)\\cdot 180$, so the true sum must be a multiple of $180$ that exceeds $2170$. The candidates are $2340, 2520, \\dots$, with forgotten angle $170, 350, \\dots$. Since the polygon is convex, each angle is less than $180$, so only $170$ works (from $n = 15$). The answer is $\\boxed{170}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 12,
+   "source": "2021 AMC 12A Problem 12",
+   "question": "All the roots of the polynomial $z^6-12z^5+Az^4+Bz^3+Cz^2+Dz+64$ are positive integers, possibly repeated. What is the value of $B$?",
+   "choices": {
+    "A": "-160",
+    "B": "-150",
+    "C": "160",
+    "D": "150",
+    "E": "-120"
+   },
+   "answer": "A",
+   "solution": "By Vieta's formulas, the six roots are positive integers with sum $12$ (the coefficient of $z^5$ is $-e_1=-12$) and product $64$ (the constant term is $(-1)^6 e_6 = 64$). Since $64=2^6$, every root is a power of $2$; write them as $2^{e_1},\\dots,2^{e_6}$ with $e_1+\\cdots+e_6=6$. If some $e_i \\ge 2$, then some $e_j = 0$, and replacing the pair $(e_i, 0)$ by $(e_i-1, 1)$ keeps the exponent sum fixed but strictly decreases the root sum, since $2^{e_i}+1 > 2^{e_i-1}+2$ for $e_i \\ge 2$. Hence the root sum is minimized only when all $e_i=1$, where it equals $6 \\cdot 2 = 12$ — exactly the required sum. So the roots are $2,2,2,2,2,2$ and the polynomial is $(z-2)^6$. The coefficient of $z^3$ is $B = -\\binom{6}{3} \\cdot 2^3 = -20 \\cdot 8 = -160$. The answer is $\\boxed{-160}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 13,
+   "source": "2019 AMC 12A Problem 13",
+   "question": "How many subsets of $\\{1,2,3,\\ldots,8\\}$ (including the empty set) contain no two consecutive integers?",
+   "choices": {
+    "A": "34",
+    "B": "55",
+    "C": "45",
+    "D": "64",
+    "E": "89"
+   },
+   "answer": "B",
+   "solution": "The count $f(n)$ for $\\{1,\\dots,n\\}$ satisfies $f(n)=f(n-1)+f(n-2)$ with $f(1)=2$, $f(2)=3$, giving $2,3,5,8,13,21,34,55$. So $f(8)=55$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 14,
+   "source": "2013 AMC 12A Problem 14",
+   "question": "The solution to the equation $\\log_{3x} 9 = \\log_{2x} 27$, where $x$ is a positive real number other than $\\tfrac{1}{3}$ or $\\tfrac{1}{2}$, can be written as $\\tfrac{p}{q}$ where $p$ and $q$ are relatively prime positive integers. What is $p + q$?",
+   "choices": {
+    "A": "29",
+    "B": "31",
+    "C": "33",
+    "D": "35",
+    "E": "37"
+   },
+   "answer": "B",
+   "solution": "Writing both sides with natural logarithms, $\\frac{\\ln 9}{\\ln 3x} = \\frac{\\ln 27}{\\ln 2x}$, so $2\\ln 3 \\cdot \\ln 2x = 3\\ln 3 \\cdot \\ln 3x$, i.e. $2\\ln 2x = 3\\ln 3x$. Expanding, $2\\ln 2 + 2\\ln x = 3\\ln 3 + 3\\ln x$, so $\\ln x = 2\\ln 2 - 3\\ln 3 = \\ln \\frac{4}{27}$. Hence $x = \\frac{4}{27}$ (and $3x = \\frac{4}{9} \\neq 1$, $2x = \\frac{8}{27} \\neq 1$, so the bases are valid). Then $p+q = 4+27 = 31$. The answer is $\\boxed{31}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 15,
+   "source": "2011 AMC 12B Problem 15",
+   "question": "How many positive two-digit integers are factors of $2^{20}-1$?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "E",
+   "solution": "Factor: $2^{20}-1 = (2^{10}-1)(2^{10}+1) = 1023 \\cdot 1025 = (3 \\cdot 11 \\cdot 31)(5^2 \\cdot 41) = 3 \\cdot 5^2 \\cdot 11 \\cdot 31 \\cdot 41$. The two-digit factors are $11$, $15=3\\cdot 5$, $25=5^2$, $31$, $33=3\\cdot 11$, $41$, $55=5\\cdot 11$, $75=3\\cdot 5^2$, and $93=3\\cdot 31$ — a total of $9$ (any product involving $41$ or $31$ with another prime exceeds $99$, except those listed). The answer is $\\boxed{9}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 16,
+   "source": "2018 AMC 12B Problem 16",
+   "question": "The solutions of $(z+4)^6 = 64$ are plotted in the complex plane and connected to form a convex polygon. What is the area of this polygon?",
+   "choices": {
+    "A": "$6\\sqrt3$",
+    "B": "$3\\sqrt3$",
+    "C": "$4\\sqrt3$",
+    "D": "$8\\sqrt3$",
+    "E": "$12\\sqrt3$"
+   },
+   "answer": "A",
+   "solution": "The roots are the 6th roots of $64$ shifted by $-4$: a regular hexagon with circumradius $64^{1/6}=2$. Area $= \\frac{3\\sqrt3}{2}R^2 = \\frac{3\\sqrt3}{2}\\cdot 4 = 6\\sqrt3$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 17,
+   "source": "2013 AMC 12B Problem 17",
+   "question": "Let $a$, $b$, and $c$ be real numbers such that $$a+b+c=3 \\quad \\text{and} \\quad a^2+b^2+c^2=9.$$ What is the difference between the maximum and minimum possible values of $c$?",
+   "choices": {
+    "A": "4",
+    "B": "3",
+    "C": "5",
+    "D": "\\frac{9}{2}",
+    "E": "6"
+   },
+   "answer": "A",
+   "solution": "Given $c$, we need real $a, b$ with $a+b = 3-c$ and $a^2+b^2 = 9-c^2$. Such $a, b$ exist if and only if $2(a^2+b^2) \\ge (a+b)^2$, i.e. $2(9-c^2) \\ge (3-c)^2$, which simplifies to $3c^2 - 6c - 9 \\le 0$, or $(c-3)(c+1) \\le 0$. So $-1 \\le c \\le 3$, with equality attained: $c=3$ gives $a=b=0$, and $c=-1$ gives $a=b=2$. The difference is $3-(-1) = 4$. The answer is $\\boxed{4}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 18,
+   "source": "2017 AMC 12B Problem 18",
+   "question": "The diameter $\\overline{AB}$ of a circle of radius $3$ is extended past $B$ to a point $D$ with $BD=2$. A tangent from $D$ touches the circle at $T$. What is $DT$?",
+   "choices": {
+    "A": "$2\\sqrt3$",
+    "B": "4",
+    "C": "$3\\sqrt2$",
+    "D": "5",
+    "E": "$2\\sqrt6$"
+   },
+   "answer": "B",
+   "solution": "By the power of point $D$: $DT^2 = DB \\cdot DA = 2 \\cdot (2+6) = 16$, so $DT = 4$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 19,
+   "source": "2019 AMC 12A Problem 19",
+   "question": "In $\\triangle ABC$ with integer side lengths, $\\cos A = \\frac{3}{5}$, $\\cos B = \\frac{5}{13}$, and $\\cos C = \\frac{33}{65}$. What is the least possible perimeter of $\\triangle ABC$?",
+   "choices": {
+    "A": "36",
+    "B": "42",
+    "C": "48",
+    "D": "54",
+    "E": "60"
+   },
+   "answer": "B",
+   "solution": "By the Law of Sines, $a:b:c = \\sin A : \\sin B : \\sin C$. From the given cosines (all angles are angles of a triangle, so sines are positive), $\\sin A = \\frac{4}{5}$, $\\sin B = \\frac{12}{13}$, and $\\sin C = \\sqrt{1-(33/65)^2} = \\frac{56}{65}$. Thus $a:b:c = \\frac{4}{5} : \\frac{12}{13} : \\frac{56}{65} = 52 : 60 : 56 = 13 : 15 : 14$. Since $\\gcd(13,14,15) = 1$, the smallest integer-sided triangle is $13$-$14$-$15$, and indeed the Law of Cosines on this triangle gives exactly the stated cosines. The least perimeter is $13+14+15 = 42$. The answer is $\\boxed{42}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 20,
+   "source": "2016 AMC 12A Problem 20",
+   "question": "A binary operation $\\diamondsuit$ has the properties that $a\\,\\diamondsuit\\, (b\\,\\diamondsuit \\,c) = (a\\,\\diamondsuit \\,b)\\cdot c$ and that $a\\,\\diamondsuit \\,a=1$ for all nonzero real numbers $a, b,$ and $c$. What is the value of $24\\,\\diamondsuit\\,(3\\,\\diamondsuit\\,12)$?",
+   "choices": {
+    "A": "8",
+    "B": "12",
+    "C": "24",
+    "D": "48",
+    "E": "96"
+   },
+   "answer": "E",
+   "solution": "First, $a\\diamondsuit 1 = a\\diamondsuit(a\\diamondsuit a) = (a\\diamondsuit a)\\cdot a = a$. Next, $(a\\diamondsuit b)\\cdot b = a\\diamondsuit(b\\diamondsuit b) = a\\diamondsuit 1 = a$, so $a\\diamondsuit b = \\frac{a}{b}$ for all nonzero $a, b$. Therefore $24\\diamondsuit(3\\diamondsuit 12) = 24 \\diamondsuit \\frac{3}{12} = \\frac{24}{1/4} = 96$. The answer is $\\boxed{96}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 21,
+   "source": "2015 AMC 12A Problem 21",
+   "question": "A circle passes through both foci of the ellipse $\\dfrac{x^2}{25}+\\dfrac{y^2}{9}=1$ and through both endpoints of its minor axis. What is the radius of this circle?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "$\\frac{20}{3}$",
+    "D": "$\\frac{25}{6}$",
+    "E": "$\\frac{13}{2}$"
+   },
+   "answer": "D",
+   "solution": "The foci are $(\\pm4,0)$ (since $c=\\sqrt{25-9}=4$) and the minor endpoints are $(0,\\pm3)$. The circle's center is $(0,k)$ with $16+k^2=(3-k)^2$, giving $k=-\\frac76$ and $r=\\sqrt{16+\\frac{49}{36}}=\\frac{25}{6}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 22,
+   "source": "2015 AMC 12B Problem 22",
+   "question": "Six people are to be seated around a circular table. Seatings that differ only by a rotation are considered the same. In how many distinguishable seatings do two specified people, Ann and Ben, sit next to each other?",
+   "choices": {
+    "A": "24",
+    "B": "36",
+    "C": "48",
+    "D": "60",
+    "E": "72"
+   },
+   "answer": "C",
+   "solution": "Treat Ann and Ben as a block: $4$ remaining individuals plus the block give $(5-1)! = 24$ circular arrangements, and the block can be ordered $2$ ways: $24 \\cdot 2 = 48$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 23,
+   "source": "2014 AMC 12A Problem 23",
+   "question": "The decimal representation of $\\dfrac{1}{37}$ is $0.\\overline{027027\\ldots}$. What is the length of its repeating period?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "6",
+    "D": "9",
+    "E": "27"
+   },
+   "answer": "B",
+   "solution": "Since $37 \\cdot 27 = 999$, we have $\\frac{1}{37} = \\frac{27}{999} = 0.\\overline{027}$, period $3$ (and $10^1 \\not\\equiv 1 \\pmod{37}$, so the period is not smaller).",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 24,
+   "source": "2014 AMC 12B Problem 24",
+   "question": "The polynomial $x^3 - 6x^2 + 11x - 6$ has roots $r$, $s$, and $t$. What is $r^2+s^2+t^2$?",
+   "choices": {
+    "A": "10",
+    "B": "12",
+    "C": "16",
+    "D": "18",
+    "E": "14"
+   },
+   "answer": "E",
+   "solution": "By Vieta's, $r+s+t=6$ and $rs+rt+st=11$. Then $r^2+s^2+t^2 = 6^2 - 2\\cdot 11 = 36-22 = 14$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 25,
+   "source": "2013 AMC 12A Problem 25",
+   "question": "How many complex numbers $z$ satisfy $z^2 = \\overline{z}$, where $\\overline{z}$ denotes the complex conjugate of $z$?",
+   "choices": {
+    "A": "4",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "5"
+   },
+   "answer": "A",
+   "solution": "Write $z = re^{i\\theta}$. Then $r^2 e^{2i\\theta} = re^{-i\\theta}$. Either $r=0$ (giving $z=0$), or $r=1$ and $3\\theta \\equiv 0 \\pmod{2\\pi}$, giving $3$ roots on the unit circle. Total: $4$ numbers.",
+   "type": "multiple_choice",
+   "points": 6
+  }
+ ]
+}

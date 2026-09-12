@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_27",
+ "competition": "SMT — Discrete",
+ "category": "Math",
+ "title": "SMT — Discrete — Random Mock #27 · 2026-08-27 08:50",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2020 SMT Discrete Problem 1",
+   "question": "Katy writes down an odd composite positive integer less than 1000. Katy then generates a new integer by reversing the digits of her initial number. The new number is a multiple of 25 and is also less than her initial number. What was the initial number that Katy wrote down?",
+   "choices": null,
+   "answer": "573",
+   "solution": "Answer: 573. Katy writes down an odd composite positive integer less than 1000. Katy then generates a new integer by reversing the digits of her initial number. The new number is a multiple of 25 and is also less than her initial number. What was the initial number that Katy wrote down? Answer: 573 Solution: Because the reversed number is a multiple of 25, it must end in either 00, 25, 50, or",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2022 SMT Discrete Problem 2",
+   "question": "Call a three-digit number ABC spicy if it satisfies ABC = A3 + B3 + C3. Compute the unique n for which both n and n + 1 are spicy.",
+   "choices": null,
+   "answer": "370",
+   "solution": "Answer: 370. Call a three-digit number ABC spicy if it satisfies ABC = A3 + B3 + C3. Compute the unique n for which both n and n + 1 are spicy. Answer: 370 Solution: We have two cases to consider: either n + 1 = AB(C + 1) or not. In the first case, notice that we must have C = 0. So, we have then that 100 A + 10B = A3 + B3. So, A3 + B3 is divisible by 10. Notice that these pair up: in other words, we must have that A + B = 10. With this in mind, we can compute 13 +9 3 = 730, 23 +8 3 = 520, 33 +7 3 = 370, 43 +6 3 = 280, 53 +5 3 = 250. Of these, A = 3, B = 7, C = 0 satisfies the conditions, yielding an answer of 370 . All that remains is to show that if C carries, then we cannot have both n and n + 1 spicy. Indeed, to have carry, we need C = 9. This implies that B < 9, else B3 + C3≥ 1000. So, n + 1 = A(B + 1)0. Therefore, n = A3 + B3 + 729 and n + 1 = A3 + (B + 1)3. Hence, B3 + 729 = ( B + 1)3, impossible for B≤ 9 as ( B + 1)3− B3 = 3B2 + 3B + 1≤ 7B2≤ 567. Therefore, we have shown our answer is unique.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2023 SMT Discrete Problem 3",
+   "question": "How many trailing zeros does the value 300· 305· 310··· 1090· 1095· 1100 end with?",
+   "choices": null,
+   "answer": "161",
+   "solution": "Answer: 161. How many trailing zeros does the value 300· 305· 310··· 1090· 1095· 1100 end with? Answer: 161 Solution: Rewrite the expression as 300· 305· 310··· 1090· 1095· 1100 = 5161· 220! 59! . By Legendre’s formula, there are \u001659 5 \u0017 + \u001659 25 \u0017 = 13 Discrete Test Solutions April 8, 2023 factors of 5 in 59! and \u001659 2 \u0017 + \u001659 4 \u0017 + \u001659 8 \u0017 + \u001659 16 \u0017 + \u001659 32 \u0017 = 54 factors of 2 in 59!. Morever, there are \u0016220 5 \u0017 + \u0016220 25 \u0017 + \u0016220 125 \u0017 = 53 factors of 5 in 220! and \u0016220 2 \u0017 + \u0016220 4 \u0017 + \u0016220 8 \u0017 + \u0016220 16 \u0017 + \u0016220 32 \u0017 + \u0016220 64 \u0017 + \u0016220 128 \u0017 = 215 factors of 2 in 220!. Thus there are 161 + 53− 13 = 201 factors of 5 in the product and 215− 54 = 161 factors of 2 in the product. Since 161 < 201, it follows the answer is 161 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2019 SMT Discrete Problem 4",
+   "question": "In your drawer you have two red socks and a blue sock. You randomly select socks, without replacement, from the drawer. However, every time you take a sock, another blue sock magically appears in the drawer. You stop taking socks when you have a pair of red socks. At this time, say you have x socks total. What is the expected value of x?",
+   "choices": null,
+   "answer": "9",
+   "solution": "Answer: 9. In your drawer you have two red socks and a blue sock. You randomly select socks, without replacement, from the drawer. However, every time you take a sock, another blue sock magically appears in the drawer. You stop taking socks when you have a pair of red socks. At this time, say you have x socks total. What is the expected value of x? Answer: 9 2 Solution: Let b be the expected number of socks we draw until we have two red socks, given that we currently have one red sock. If we have one red sock already, the drawer must contain two blue socks and one red sock. Thus, we can write b = 2 3(1 +b) + 1 3 because there is a 2 3 probability we draw another blue sock and a 1 3 probability we get the ﬁnal red sock. Solving for b, we get b = 3. Let a be the expected number of socks we draw until we have two red socks, given that we currently have no red socks. Then the drawer must contain two red socks and one blue sock. We then havea = 1 3(1 +a) + 2 3(1 +b) because there is a 1 3 probability of drawing a blue sock and a 2 3 probability we get a red sock. Solving for a, we get a = 9 2 . SMT 2019 Discrete Math Test Solutions March 2, 2019 Solution: Alternatively, recall that expected value is the sum of the values weighted by their probability. So, consider if it takes n socks to get the red pair. We note that n≥ 2 since a pair is two socks. Then we can see the probability it takes n socks is: (1 3 )n−2 · 2 3· 1 3 + (1 3 )n−3 · 2 3· (2 3 )1 1 3 +... + 2 3· (2 3 )n−2 1 3 = 2 3n· n−2∑ i=0 2i = 2n− 2 3n Now we calculate the expected value: E = ∞∑ n=2 n· 2n− 2 3n = 2· ∞∑ n=2 2n− 2 3n + ∞∑ n=3 2n− 2 3n + ∞∑ n=4 2n− 2 3n +... = 2· ( 4/9 1− 2/3− 2/9 1− 1/3 ) + 8/27 1− 2/3− 2/27 1− 1/3 + 16/81 1− 2/3− 2/81 1− 1/3 +... = 2· (4 3− 1 3 ) + 3· 8/27 1− 2/3− 3 2· 2/27 1− 1/3 = 2 + 8 3− 1 6 = 2 + 5/2 = 9 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2022 SMT Discrete Problem 5",
+   "question": "A classroom has 30 seats arranged into 5 rows of 6 seats. Thirty students of distinct heights come to class every day, each sitting in a random seat. The teacher stands in front of all the rows, and if any student seated in front of you (in the same column) is taller than you, then the teacher cannot notice that you are playing games on your phone. What is the expected number of students who can safely play games on their phone?",
+   "choices": null,
+   "answer": "163",
+   "solution": "Answer: 163. A classroom has 30 seats arranged into 5 rows of 6 seats. Thirty students of distinct heights come to class every day, each sitting in a random seat. The teacher stands in front of all the rows, and if any student seated in front of you (in the same column) is taller than you, then the teacher cannot notice that you are playing games on your phone. What is the expected number of students who can safely play games on their phone? Answer: 163 10 Solution: Let S be the total number of safe students. For each seat in row i and column j, let Si,j be the indicator that the person sitting there can play on their smartphone. In particular,Si,j is 1 if the student in seat ( i, j) is safe, and 0 otherwise. Then, we can write S =P5 i=1 P6 j=1 Si,j by summing over each student’s seat. By Linearity of Expectation, we have the the expectation of S is exactly the sum of the expec- tations of the Si,j. So, we compute each of these expectations and sum them to get our answer. Let pi,j be the probability that the student in seat ( i, j) is safe: that is, pi,j is the probability that Si,j = 1. Then, the expectation of Si,j is pi,j. To compute pi,j we make the following observation: a student in row i can only not safely play games on their phone if they are taller than all the students in front of them: that is, in slots (1, j), (2, j), . . . ,(i− 1, j). This occurs with probability 1 i : by symmetry, the tallest of these i students (the i− 1 before them and themself) is equally likely to be in any of the i positions. So, pi,j = 1− 1 i . So, our total sum and answer is 5X i=1 6X j=1 1− 1 i = 30− 5X i=1 6X j=1 1 i = 30− 6 \u0012 1 + 1 2 + 1 3 + 1 4 + 1 5 \u0013 = 163 10 . SMT 2022 Discrete Test Solutions April 16–17, 2022",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2018 SMT Discrete Problem 6",
+   "question": "Elizabeth is at a candy store buying jelly beans. Elizabeth begins with 0 jellybeans. With each scoop, she can increase her jellybean count to the next largest multiple of 30, 70 or 110. (For example, her next scoop after 70 can increase her jellybean count to 90, 110, or 140). What is the smallest number of jellybeans Elizabeth can collect in more than 100 diﬀerent ways?",
+   "choices": null,
+   "answer": "210",
+   "solution": "Answer: 210. Elizabeth is at a candy store buying jelly beans. Elizabeth begins with 0 jellybeans. With each scoop, she can increase her jellybean count to the next largest multiple of 30, 70 or 110. (For example, her next scoop after 70 can increase her jellybean count to 90, 110, or 140). What is the smallest number of jellybeans Elizabeth can collect in more than 100 diﬀerent ways? Answer: 210 Solution: Let J(n) be the number of diﬀerent ways to collectn jellybeans. Note that J(30k) is the sum of all J(n) where 30( k− 1)≤ n < 30k. A similar thing is true for J(70k) and J(110k). We can then compute the following values for J(n): J(0) = 1 J(30) = 1 J(60) = 1 J(70) = J(0) + J(30) + J(60) = 3 J(90) = J(60) + J(70) = 4 J(110) = J(0) + J(30) + J(60) + J(70) + J(90) = 10 J(120) = J(90) + J(110) = 14 J(140) = J(70) + J(90) + J(110) + J(120) = 31 J(150) = J(120) + J(140) = 45 J(180) = J(150) = 45 J(210) = J(140) + J(150) + J(180) > 100 SMT 2018 Discrete Math Test Solutions February 17, 2018 The smallest number is thus 210 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2022 SMT Discrete Problem 7",
+   "question": "Let n0 be the product of the first 25 primes. Now, choose a random divisor n1 of n0, where a choice n1 is taken with probability proportional to φ(n1). (φ(m) is the number of integers less than m which are relatively prime tom.) Given this n1, we let n2 be a random divisor ofn1, again chosen with probability proportional to φ(n2). Compute the probability that n2≡ 0 mod 2310.",
+   "choices": null,
+   "answer": "256",
+   "solution": "Answer: 256. Let n0 be the product of the first 25 primes. Now, choose a random divisor n1 of n0, where a choice n1 is taken with probability proportional to φ(n1). (φ(m) is the number of integers less than m which are relatively prime tom.) Given this n1, we let n2 be a random divisor ofn1, again chosen with probability proportional to φ(n2). Compute the probability that n2≡ 0 mod 2310. Answer: 256 5929 Solution: First, we show that P d|n φ(d) = n. This is true for all n, but we’ll only show it for squarefree n for simplicity. We proceed by induction (all divisors of a squarefreen are themselves squarefree). For any prime p, φ(p) + φ(1) = p. Now, suppose that n = p· n′. Then, we may pair up divisors of n via (d, p· d) with d| n′. So, X d|n φ(d) = X d|n′ φ(d) + φ(p· d) = X d|n′ (1 + (p− 1))φ(d) = pn′ = n as desired. We used that φ(ab) = φ(a)· φ(b) if gcd( a, b) = 1. As a note, to prove the general case, we strengthen the statement to prime powers and strengthen pairs to tuples of divisors. This means that each choice of n1 actually happens with probability φ(n1) n0 , and each choice of n2 happens with probability φ(n2) n1 given a specific n1. To begin, let’s compute the probability that n1≡ 0 mod 2310. Let m = n0 2310. We will need that φ is a multiplicative function: that is, if gcd( m, n) = 1 then φ(mn) = φ(m)φ(n). SMT 2022 Discrete Test Solutions April 16–17, 2022 Then, the probability of getting n1 = 2310d for d a specific divisor of m is exactly φ(2310d) n0 = φ(2310)φ(d) 2310m = φ(2310) 2310 · φ(d) m . So, summing over all choices of d means that the probability that 2310 divides n1 is X d|m φ(2310) 2310 · φ(d) m = φ(2310) 2310 . We’ve finished one step, so what remains is to repeat it. In particular, note that we didn’t care much about what n0 was: all that mattered was that n0 was squarefree and n≡ 0 mod 2310. So, conditioned on n1≡ 0 mod 2310, it follows that the probability that n2≡ 0 mod 2310 is also φ(2310) 2310 . Therefore, our answer is (probability n2≡ 0 mod 2310) =(probability n1≡ 0 mod 2310) · (probability n2≡ 0 mod 2310 given n1≡ 0 mod 2310) = \u0012 φ(2310) 2310 \u00132 = \u00121· 2· 4· 6· 10 2· 3· 5· 7· 11 \u00132 = \u001216 77 \u00132 = 256 5929",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2022 SMT Discrete Problem 8",
+   "question": "Given that 20 22 + 1 has exactly 4 prime divisors p1 < p 2 < p 3 < p 4, determine p1 + p2.",
+   "choices": null,
+   "answer": "490",
+   "solution": "Answer: 490. Given that 20 22 + 1 has exactly 4 prime divisors p1 < p2 < p3 < p4, determine p1 + p2. Answer: 490 Solution: Suppose that p divides 2022 + 1. Then, since 20 22≡− 1 mod p it must follow that 2044≡ 1 mod p. Let k be the minimal positive integer such that 20 k≡ 1 mod p. Then, as k| 44 and k ∤ 22, it follows that either k = 44 or k = 4. As 20 p−1≡ 1 mod p for any p by Fermat’s Little Theorem, the next claim is that 44 | p− 1 if we are in the first case. Indeed, suppose not. Then, write p− 1 = 44k + r, with 0 < r < 44. We have that 20r≡ 1 mod p, but this is impossible as k = 44 is minimal. We may test to see that 20 22≡− 1 mod 89: since 89 · 23 = 2047 and 89 · 7 = 623 we have 244≡ 20484≡ 1 mod 89 and 5 22≡ 25· (625)5≡ 100· 8≡ 88 mod 89. Hence, 20 22≡− 1 mod 89 as desired. Now, suppose that 20 4 ≡ 1 mod p. This implies that 20 4− 1 = 3 · 7· 19· 401≡ 0 mod p. Note that 3 , 7, 19 =±1 mod 20 so 20 22 + 1≡ 2modany of them. However, we may check that 2022 = (−1)11≡− 1 mod 401. So, to finish off, we show that there are no other 44 | p− 1 with p < 401 and 20 22≡− 1 mod p. By divisibility considerations, we end up with having to check that 20 22̸≡− 1 mod{353, 397}. SMT 2022 Discrete Test Solutions April 16–17, 2022 Let’s handle 397 first. Note that 20 22 = 3 11 = 243· 243· 3 = 154 2· 3̸≡− 1 mod 397. One way of showing the last inequivalence is noting that 3 −1 = 2·397−1 3 = 265 and showing that 1542̸≡ 132 mod 397. Now we deal with 353. Note that 2 44 = 24· (−35)4 = 704 = 49002 = 422≡− 1 mod 353. Hence, it suffices to show that 5 22̸≡ 1 mod 353. We may write 5 22− 1 = (511− 1)(511 + 1), but since 511≡ (−81)2· 125≡ 5· 4052≡ 5· 522̸≡ 1,−1 mod 353, we are done. Therefore, our answer is indeed 89 + 401 = 490 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2023 SMT Discrete Problem 9",
+   "question": "Suppose a and b are positive integers with a curious property: ( a3− 3ab + 1 2)n + (b3 + 1 2)n is an integer for at least 3, but at most finitely many different choices of positive integers n. What is the least possible value of a + b?",
+   "choices": null,
+   "answer": "6",
+   "solution": "Answer: 6. Suppose a and b are positive integers with a curious property: ( a3− 3ab + 1 2)n + (b3 + 1 2)n is an integer for at least 3, but at most finitely many different choices of positive integers n. What is the least possible value of a + b? Answer: 6 Solution: Observe that the condition ( a3− 3ab + 1 2)n + (b3 + 1 2)n being an integer is equivalent to (2a3− 6ab + 1)n + (2b3 + 1)n being divisible by 2 n. If n is even, both powers are equal to 1 modulo 4, so the expression is never divisible by 4, contradiction. Discrete Test Solutions April 8, 2023 Meanwhile if n is odd, we can factor out (2a3−6ab+1)+(2 b3+1) from the expression. The other factor is a sum of n odd numbers, thus is odd. We thus demand that (2a3−6ab+1)+(2 b3 +1) = 2(a3 + b3 + 1− 3ab) be divisible by at least 3, but at most finitely many odd powers of 2. If 2n| 2(a3 + b3 + 1− 3ab), of course all powers of 2 less than n also divide 2(a3 + b3 + 1− 3ab). So it suffices to make ( a3 + b3 + 1− 3ab) divisible by 16 (which would mean that 2 , 8, 32 divide 2(a3 + b3 + 1− 3ab)), but nonzero (if the expression is equal to zero, which is the case when (a, b) = (1, 1), an infinite number of powers of 2 will divide it). Factoring, ( a3 + b3 + 1− 3ab) = (a + b + 1)(a2 + b2 + 1− ab− a− b). Because a2− a, b2− b are always even, (a2 + b2 +1− ab− a− b) is even iff ab−1 is even iff a, b are both odd, in which case a+ b+ 1 is odd. So, either 16| a+ b+ 1, or 16| (a2 + b2 + 1− ab− a− b). In the former case, we have a+ b at least 15. In the latter case, setting a = 1 and experimenting, we see that (a, b) = (1, 5) is a valid pair, whereas any pair with smaller sum will not work. Thus 1 + 5 = 6 is the solution desired.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2019 SMT Discrete Problem 10",
+   "question": "Let N be a positive integer that is a product of two primes p, q such that p ≤ q and for all a, a5N ≡ a mod 5N. Find the sum of p over all possible values N.",
+   "choices": null,
+   "answer": "59",
+   "solution": "Answer: 59. Let N be a positive integer that is a product of two primes p,q such that p≤q and for all a, a5N≡a mod 5N. Find the sum of p over all possible values N. Answer: 59 Solution: Note that 25pq = 2 (mod 5) = ⇒ 2pq = 2 (mod 5) = ⇒ 2pq−1 = 1 mod 5 So, we have that ord 5(2) must divide pq− 1 by the last equation. So, we know that p,q are odd. Now let α be a primitive root (mod p) and thenα5pq−1≡ 1 (mod p). So, p−1| 5pq−1, and p− 1| 5pq− 1− 5q(p− 1) = 5q− 1. We can similarly see that q− 1| 5p− 1. If p =q, then p = q = 5 but 6 125≡ 1 (mod 125), a contradiction. So, WLOG p < qand q≥ p + 2. So, 1< 5p− 1 q− 1 ≤ 5q− 1 p + 1 < 5 Then we do case work on 5p−1 q−1 is 2, 3 or 4. Cases: (a) (5p−1)/(q−1) = 2: Then 2q = 5p+1. But p−1|5q−1 = 5(5p+1)/2−1 = 25p/2+3/2 = 1/2(25p + 3). So p− 1 needs to divide (25p + 3)− (25p− 25) = 28. Hence, the options arep− 1 = 2, 4, 7, 14, 28. Since p is prime, havep = 3, 5, 29. Solving for prime q, we see that the only solutions are p = 5,q = 13 and p = 29,q = 73. (b) (5p−1)/(q−1) = 3 implies 3q = 5p+2. But p−1|5q−1 = 5(5p+2)/3−1 = 1/3(25p+7). So,p− 1 divides (25p + 7)− (25p− 25) = 32 giving options p− 1 = 2, 4, 8, 16, 32. Since p is prime, we have p = 3, 5, 17. Solving for prime q, we see that the only solution is p = 17,q = 29. (c) (5p−1)/(q−1) = 4 gives 4q = 5p+3. But p−1|5q−1 = 5(5p+3)/4−1 = 1/4(25p+11). So,p−1 also divides (25p+11)−(25p−25) = 36. So, p−1 can be 2, 3, 4, 6, 9, 12, 18, 36. Sincep is prime, we have p = 3, 5, 7, 13, 19, 37. Solving for prime q, we get p = 5,q = 7, p = 13,q = 17, p = 37,q = 47. We also have the condition that ord 5(2)|pq− 1, and since ord 5(2) = 4, we have that pq≡ 1 (mod 4). Also, we note that if N is 65 then 2 5N≡ 132 mod 5 N. The remaining values of p have the sum of 29 + 17 + 13 = 59",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

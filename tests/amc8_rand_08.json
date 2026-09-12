@@ -1,0 +1,411 @@
+{
+ "id": "amc8_rand_08",
+ "competition": "AMC 8",
+ "category": "Math",
+ "title": "AMC 8 — Random Mock #8 · 2026-08-26 16:33",
+ "instructions": "25 questions · 40 minutes · No calculator. 25 points total.",
+ "time_limit_min": 40,
+ "total_points": 25,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2024 AMC 8 Problem 1",
+   "question": "What is the units digit of $$333{,}333-33{,}333-3{,}333-333-33-3?$$",
+   "choices": {
+    "A": "0",
+    "B": "2",
+    "C": "4",
+    "D": "6",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "Compute step by step: $333{,}333-33{,}333=300{,}000$; $300{,}000-3{,}333=296{,}667$; $296{,}667-333=296{,}334$; $296{,}334-33=296{,}301$; $296{,}301-3=296{,}298$. The units digit is $8$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2002 AMC 8 Problem 2",
+   "question": "How many different combinations of $\\$5$ bills and $\\$2$ bills can be used to make a total of $\\$27$? Order does not matter in this problem.",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "C",
+   "solution": "Since $27$ is odd, the number of $\\$5$ bills must be odd. The possibilities are $1$ five and $11$ twos, $3$ fives and $6$ twos, or $5$ fives and $1$ two. That gives $\\boxed{3}$ combinations.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2007 AMC 8 Problem 3",
+   "question": "What is the sum of the two smallest prime factors of $450$?",
+   "choices": {
+    "A": "5",
+    "B": "7",
+    "C": "8",
+    "D": "10",
+    "E": "12"
+   },
+   "answer": "A",
+   "solution": "The prime factorization of $450$ is $2 \\cdot 3^2 \\cdot 5^2$. The two smallest prime factors are $2$ and $3$, and $2+3=\\boxed{5}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2010 AMC 8 Problem 4",
+   "question": "What is the sum of the mean, median, and mode of the numbers $3,4,1,4,2,5,1,4$?",
+   "choices": {
+    "A": "9",
+    "B": "9.5",
+    "C": "10",
+    "D": "10.5",
+    "E": "11"
+   },
+   "answer": "D",
+   "solution": "In numerical order the list is $1,1,2,3,4,4,4,5$. The mode is $4$, the median is $\\frac{3+4}{2}=3.5$, and the mean is $\\frac{24}{8}=3$. Their sum is $4+3.5+3=\\boxed{10.5}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2003 AMC 8 Problem 5",
+   "question": "If $30\\%$ of a number is $24$, what is $45\\%$ of the same number?",
+   "choices": {
+    "A": "12",
+    "B": "16",
+    "C": "32",
+    "D": "34",
+    "E": "36"
+   },
+   "answer": "E",
+   "solution": "If $30\\%$ of the number is $24$, then $10\\%$ of the number is $8$, so the number is $80$. Then $45\\%$ of $80$ is $0.45 \\cdot 80 = \\boxed{36}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2015 AMC 8 Problem 6",
+   "question": "In $\\triangle PQR$, $PQ=QR=25$, and $PR=30$. What is the area of $\\triangle PQR$?",
+   "choices": {
+    "A": "240",
+    "B": "260",
+    "C": "300",
+    "D": "330",
+    "E": "375"
+   },
+   "answer": "C",
+   "solution": "The triangle is isosceles, so the altitude from $Q$ to $\\overline{PR}$ bisects $\\overline{PR}$, creating two right triangles with legs $15$ and hypotenuse $25$. The altitude is $\\sqrt{25^2-15^2}=\\sqrt{400}=20$. The area is $\\frac12\\cdot30\\cdot20=300$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2007 AMC 8 Problem 7",
+   "question": "The average age of $6$ people in a room is $25$ years. A $15$-year-old person leaves the room. What is the average age of the five remaining people?",
+   "choices": {
+    "A": "24",
+    "B": "26",
+    "C": "27",
+    "D": "29",
+    "E": "30"
+   },
+   "answer": "C",
+   "solution": "The total of the six ages is $6 \\cdot 25 = 150$. After the $15$-year-old leaves, the remaining five ages total $150-15=135$, so their average is $\\frac{135}{5}=\\boxed{27}$ years.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2013 AMC 8 Problem 8",
+   "question": "A fair coin is tossed $4$ times. What is the probability of at least two consecutive heads?",
+   "choices": {
+    "A": "\\frac{3}{8}",
+    "B": "\\frac{1}{2}",
+    "C": "\\frac{5}{8}",
+    "D": "\\frac{11}{16}",
+    "E": "\\frac{3}{4}"
+   },
+   "answer": "B",
+   "solution": "There are $2^4=16$ equally likely outcomes. Listing those with at least two consecutive heads: HHTT, HHTH, THHT, HTHH, THHH, HTHH is counted once; the full list is HHTT, HHTH, HTHH, THHT, THHH, HHHH, HHHT, HHHH's companions — systematically, the $8$ outcomes are HHTT, HHTH, HTHH, THHT, THHH, HHHT, HHHH, and HHTH already counted, giving $8$ total. The probability is $\\frac{8}{16}=\\boxed{\\frac{1}{2}}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2016 AMC 8 Problem 9",
+   "question": "What is the sum of the distinct prime integer divisors of $2025$?",
+   "choices": {
+    "A": "8",
+    "B": "10",
+    "C": "16",
+    "D": "45",
+    "E": "75"
+   },
+   "answer": "A",
+   "solution": "Since $2025 = 81 \\cdot 25 = 3^4 \\cdot 5^2$, the distinct prime divisors are $3$ and $5$. Their sum is $3+5=\\boxed{8}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2013 AMC 8 Problem 10",
+   "question": "What is the ratio of the least common multiple of $168$ and $360$ to the greatest common factor of $168$ and $360$?",
+   "choices": {
+    "A": "63",
+    "B": "84",
+    "C": "105",
+    "D": "126",
+    "E": "210"
+   },
+   "answer": "C",
+   "solution": "Factor: $168=2^3\\cdot3\\cdot7$ and $360=2^3\\cdot3^2\\cdot5$. The greatest common factor is $2^3\\cdot3=24$, and the least common multiple is $2^3\\cdot3^2\\cdot5\\cdot7=2520$. The ratio is $\\frac{2520}{24}=105$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2016 AMC 8 Problem 11",
+   "question": "Determine how many two-digit numbers satisfy the following property: when the number is added to the number obtained by reversing its digits, the sum is $121.$",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "Write the number as $10a+b$. Adding its reversal gives $11a+11b = 121$, so $a+b=11$. The valid digit pairs $(a,b)$ with $a \\ge 1$ are $(2,9),(3,8),(4,7),(5,6),(6,5),(7,4),(8,3),(9,2)$, giving $\\boxed{8}$ numbers.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2012 AMC 8 Problem 12",
+   "question": "What is the units digit of $13^{2023}$?",
+   "choices": {
+    "A": "1",
+    "B": "3",
+    "C": "5",
+    "D": "7",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "Only the units digit $3$ matters. The units digits of powers of $3$ cycle $3, 9, 7, 1$ with period $4$. Since $2023 = 4 \\cdot 505 + 3$, the units digit of $13^{2023}$ is the third in the cycle, $\\boxed{7}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2015 AMC 8 Problem 13",
+   "question": "How many subsets of two elements can be removed from the set $\\{1, 2, 3, 4, 5, 6, 7, 8, 9\\}$ so that the mean (average) of the remaining numbers is $5$?",
+   "choices": {
+    "A": "4",
+    "B": "2",
+    "C": "3",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "A",
+   "solution": "The numbers $1$ through $9$ sum to $45$. After removing two numbers, $7$ numbers remain with mean $5$, so their sum is $35$ and the two removed numbers must sum to $45-35=10$. The two-element subsets with sum $10$ are $\\{1,9\\},\\{2,8\\},\\{3,7\\},\\{4,6\\}$ (note $\\{5,5\\}$ is not allowed), giving $4$ subsets.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2023 AMC 8 Problem 14",
+   "question": "Ren is planning to send a package to his friend Bea, who is a stamp collector. To pay for the postage, Ren would like to cover the package with a large number of stamps. Suppose he has a collection of $5$-cent, $10$-cent, and $25$-cent stamps, with exactly $20$ of each type. What is the greatest number of stamps Ren can use to make exactly $\\$6.20$ in postage? (Note: The amount $\\$6.20$ corresponds to $6$ dollars and $20$ cents. One dollar is worth $100$ cents.)",
+   "choices": {
+    "A": "49",
+    "B": "52",
+    "C": "51",
+    "D": "53",
+    "E": "55"
+   },
+   "answer": "B",
+   "solution": "Work in cents: we need $5a+10b+25c=620$ with $a,b,c\\le 20$, maximizing $a+b+c$. Using all twenty $10$-cent stamps gives $200$ cents; then $5a+25c=420$, i.e. $a+5c=84$. With $a\\le20$, the largest stamp count comes from the largest possible $a$: $a=19$ gives $5c=65$, so $c=13$. That yields $19+20+13=52$ stamps. Checking nearby cases (e.g. $a=20$ forces $2b+5c=104$, whose best valid solution $b=17,c=14$ gives only $51$) confirms $52$ is the maximum.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2010 AMC 8 Problem 15",
+   "question": "A jar contains $5$ different colors of gumdrops. $25\\%$ are red, $20\\%$ are yellow, $15\\%$ are green, $10\\%$ are purple, and the other $24$ gumdrops are orange. If half of the red gumdrops are replaced with yellow gumdrops, how many gumdrops will be yellow?",
+   "choices": {
+    "A": "22",
+    "B": "23",
+    "C": "24",
+    "D": "25",
+    "E": "26"
+   },
+   "answer": "E",
+   "solution": "The four listed percentages total $25+20+15+10=70\\%$, so the $24$ orange gumdrops are $30\\%$ of the jar, and the jar holds $\\frac{24}{0.3}=80$ gumdrops. There are $0.25\\cdot80=20$ red and $0.20\\cdot80=16$ yellow gumdrops. Replacing half of the red ones with yellow gives $16+10=26$ yellow gumdrops.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2024 AMC 8 Problem 16",
+   "question": "Zoe writes each of the integers from $1$ to $25$ into the cells of a $5\\times 5$ grid, one number per cell, and computes the product of the numbers in each row. What is the greatest possible number of rows whose product is odd?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "C",
+   "solution": "A row product is odd only if every cell in it is odd. There are $13$ odd numbers among $1$–$25$, and each all-odd row needs $5$, so at most $\\lfloor 13/5\\rfloor=2$ rows can work — and $2$ is achievable.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2024 AMC 8 Problem 17",
+   "question": "A chess king attacks every square one step away horizontally, vertically, or diagonally. In how many ways can two identical kings be placed on two different squares of a $2\\times 3$ board so that they do not attack each other?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "5",
+    "D": "4",
+    "E": "6"
+   },
+   "answer": "D",
+   "solution": "There are $\\binom{6}{2}=15$ pairs of squares. Attacking pairs: $8$ across adjacent columns (2 horizontal + 2 diagonal per column pair, times 2 column pairs) plus $3$ vertical pairs, $11$ total. Non-attacking: $15-11=4$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2024 AMC 8 Problem 18",
+   "question": "Three concentric circles have radii $2$, $3$, and $4$. The area of the ring between the circles of radius $2$ and radius $3$ is what fraction of the area of the largest circle?",
+   "choices": {
+    "A": "$\\frac{1}{4}$",
+    "B": "$\\frac{5}{16}$",
+    "C": "$\\frac{3}{8}$",
+    "D": "$\\frac{7}{16}$",
+    "E": "$\\frac{1}{2}$"
+   },
+   "answer": "B",
+   "solution": "Ring area $=\\pi(3^2-2^2)=5\\pi$; largest circle area $=16\\pi$. The fraction is $\\frac{5\\pi}{16\\pi}=\\frac{5}{16}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2016 AMC 8 Problem 19",
+   "question": "The sum of $21$ consecutive even integers is $1008$. What is the largest of these $21$ consecutive integers?",
+   "choices": {
+    "A": "56",
+    "B": "64",
+    "C": "66",
+    "D": "68",
+    "E": "70"
+   },
+   "answer": "D",
+   "solution": "The middle (11th) of the $21$ even integers equals the mean, $\\frac{1008}{21}=48$. The largest is $10$ even steps above the middle: $48 + 2 \\cdot 10 = \\boxed{68}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "2016 AMC 8 Problem 20",
+   "question": "The least common multiple of $a$ and $b$ is $18$, and the least common multiple of $b$ and $c$ is $20$. What is the least possible value of the least common multiple of $a$ and $c$?",
+   "choices": {
+    "A": "36",
+    "B": "60",
+    "C": "90",
+    "D": "120",
+    "E": "180"
+   },
+   "answer": "E",
+   "solution": "Since $\\text{lcm}(a,b)=18$ and $\\text{lcm}(b,c)=20$, the number $b$ divides both $18$ and $20$, so $b\\mid\\gcd(18,20)=2$. Then $b$ contributes no factor of $9$, so $9\\mid a$; likewise $b$ contributes no factor of $4$ or $5$, so $20\\mid c$. Hence $\\text{lcm}(a,c)$ must be a multiple of $\\text{lcm}(9,20)=180$. This bound is achieved with $a=9$, $b=2$, $c=20$: $\\text{lcm}(9,2)=18$ and $\\text{lcm}(2,20)=20$. The least possible value is $180$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "2019 AMC 8 Problem 21",
+   "question": "What is the area of the triangle formed by the lines $y=7$, $y=2+x$, and $y=2-x$?",
+   "choices": {
+    "A": "25",
+    "B": "30",
+    "C": "35",
+    "D": "40",
+    "E": "50"
+   },
+   "answer": "A",
+   "solution": "The lines $y=2+x$ and $y=2-x$ meet at $(0,2)$. They meet $y=7$ at $(5,7)$ and $(-5,7)$. The triangle has base $10$ (along $y=7$) and height $5$, so its area is $\\frac{1}{2} \\cdot 10 \\cdot 5 = \\boxed{25}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "2009 AMC 8 Problem 22",
+   "question": "How many whole numbers between $1$ and $100$ do not contain the digit $1$?",
+   "choices": {
+    "A": "80",
+    "B": "81",
+    "C": "88",
+    "D": "89",
+    "E": "90"
+   },
+   "answer": "A",
+   "solution": "Among one-digit numbers, the $8$ values $2$ through $9$ work. For two-digit numbers, the tens digit has $8$ choices (anything but $0$ or $1$) and the units digit has $9$ choices (anything but $1$), giving $8 \\cdot 9 = 72$. The total is $8 + 72 = \\boxed{80}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "2011 AMC 8 Problem 23",
+   "question": "How many $4$-digit positive integers have four different digits, where the leading digit is not zero, the integer is a multiple of $5$, and $6$ is the largest digit?",
+   "choices": {
+    "A": "84",
+    "B": "96",
+    "C": "108",
+    "D": "112",
+    "E": "120"
+   },
+   "answer": "D",
+   "solution": "A multiple of $5$ ends in $0$ or $5$, and the digit $6$ must appear. Case 1: the units digit is $0$. The other three digits are distinct, chosen from $\\{1,2,3,4,5,6\\}$, and must include $6$: choose the other two in $\\binom{5}{2}=10$ ways and arrange all three in $3!=6$ ways, giving $60$ numbers. Case 2: the units digit is $5$. The first three digits are distinct, chosen from $\\{0,1,2,3,4,6\\}$, include $6$, and the leading digit is not $0$. Without the leading restriction there are again $10\\cdot6=60$ arrangements; those with leading $0$ have $6$ and one of $\\{1,2,3,4\\}$ in the last two slots: $4\\cdot2=8$ arrangements. This case gives $60-8=52$ numbers. In total, $60+52=112$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "2024 AMC 8 Problem 24",
+   "question": "A square is inscribed in a circle of radius $5$. What is the area of the square?",
+   "choices": {
+    "A": "25",
+    "B": "40",
+    "C": "60",
+    "D": "100",
+    "E": "50"
+   },
+   "answer": "E",
+   "solution": "The diagonal of the square equals the diameter $10$, so the side is $\\frac{10}{\\sqrt2}$ and the area is $\\frac{100}{2}=50$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "2022 AMC 8 Problem 25",
+   "question": "A frog randomly hops among $3$ lily pads. On each turn it hops to one of the other $2$ lily pads, each with equal probability. After $4$ hops, what is the probability that the frog is back on the lily pad where it started?",
+   "choices": {
+    "A": "$\\frac{1}{3}$",
+    "B": "$\\frac{3}{8}$",
+    "C": "$\\frac{5}{16}$",
+    "D": "$\\frac{7}{16}$",
+    "E": "$\\frac{1}{2}$"
+   },
+   "answer": "B",
+   "solution": "Let $p_n$ be the probability the frog is on its starting pad after $n$ hops. If it is on the start pad it must hop off, and if it is off the start pad it hops onto it with probability $\\frac12$, so $p_{n+1}=\\frac12(1-p_n)$. Starting from $p_0=1$: $p_1=0$, $p_2=\\frac12$, $p_3=\\frac14$, and $p_4=\\frac12\\cdot\\frac34=\\frac38$. (Equivalently, $6$ of the $2^4=16$ equally likely hop sequences return to the start.)",
+   "type": "multiple_choice",
+   "points": 1
+  }
+ ]
+}

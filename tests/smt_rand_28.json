@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_28",
+ "competition": "SMT — Geometry",
+ "category": "Math",
+ "title": "SMT — Geometry — Random Mock #28 · 2026-08-27 08:50",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2023 SMT Geometry Problem 1",
+   "question": "Let A1A2 . . . A12 be a regular dodecagon. Equilateral triangles △A1A2B1,△A2A3B2, . . . , and △A12A1B12 are drawn such that points B1, B2, . . . , and B12 lie outside dodecagon A1A2 . . . A12. Then, equilateral triangles △A1A2C1,△A2A3C2, . . . , and △A12A1C12 are drawn such that points C1, C2, . . . , and C12 lie inside dodecagon A1A2 . . . A12. Compute the ratio of the area of dodecagon B1B2 . . . B12 to the area of dodecagon C1C2 . . . C12.",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4 + 2. Let A1A2...A 12 be a regular dodecagon. Equilateral triangles △A1A2B1,△A2A3B2,..., and △A12A1B12 are drawn such that pointsB1,B 2,..., andB12 lie outside dodecagon A1A2...A 12. Then, equilateral triangles △A1A2C1,△A2A3C2,..., and △A12A1C12 are drawn such that points C1,C 2,..., and C12 lie inside dodecagon A1A2...A 12. Compute the ratio of the area of dodecagon B1B2...B 12 to the area of dodecagon C1C2...C 12. Answer: 4 + 2 √ 3 Solution: Each interior angle of a regular dodecagon has measure 10·180◦ 12 = 150◦. Suppose the side length of A1A2...A 12 is 1. We can compute the side length of B1B2...B 12 by finding B1B2. We have ∠B1A2B2 = 360◦− 150◦− 60◦− 60◦ = 90◦. Then,△B1A2B2 is a 45-45-90 triangle, which gives us B1B2 = √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2023 SMT Geometry Problem 2",
+   "question": "From B and E, altitudes BF and EG are drawn onto side AC. Compute CF CG− AF AG.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. From B and E, altitudes BF and EG are drawn onto side AC. Compute CF CG− AF AG. Geometry Test Solutions April 8, 2023 Answer: 2 Solution: Let ∠BAC = 3a and AB = x. Observe first that, by the angle bisector theorem, AD AC = DE EC , so AD = AC· DE EC = 5· 3 5 = 3. Then, △ADC is a 3-4-5 triangle, so ∠ADC = 90◦. Since AD bisects ∠BAE and is perpendicular to BE, we have that △BAE is isosceles, which gives us BD = 3 2 and AE =AB =x. Now we know that BF = x sin(3a), AF = x cos(3a), EG = x sin(a), and AG = x cos(a). Since BF is parallel to EG, CF CG = BF EG = x sin(3a) x sin(a) = 3− 4 sin2a, using the triple angle formula. Similarly, AF AG = x cos(3a) x cos(a) = 4 cos2a− 3. Then CF CG− AF AG = 3− 4 sin2a− 4 cos2a + 3 = 6− 4 = 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2019 SMT Geometry Problem 3",
+   "question": "In triangle ABC with AB = 10, let D be a point on side BC such that AD bisects ∠BAC. If CD BD = 2 and the area of ABC is 50, compute the value of ∠BAD in degrees.",
+   "choices": null,
+   "answer": "15",
+   "solution": "Answer: 15◦. In triangle ABC with AB = 10, let D be a point on side BC such that AD bisects ∠BAC. If CD BD = 2 and the area of ABC is 50, compute the value of ∠BAD in degrees. Answer: 15◦ Solution: Since AD bisects ∠BAC, we have by the Angle-Bisector Theorem that AB BD = AC CD =⇒ AC = CD BD·AB = 20. Let E be the point on AC such that BE⊥AC. Since the area of ∆ABC is 50, we have AC·BE 2 = 50 =⇒ BE = 5. But ∆ABE is a right triangle and AB = 2BE, so ∆ABE must be a 30-60-90 triangle. It follows that ∠BAC = 30◦ so ∠BAD = 15◦ .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2020 SMT Geometry Problem 4",
+   "question": "Let ABCD be a quadrilateral such that AB = BC = 13, CD = DA = 15 and AC = 24. Let the midpoint of AC be E. What is the area of the quadrilateral formed by connecting the incenters of ABE, BCE , CDE , and DAE?",
+   "choices": null,
+   "answer": "25",
+   "solution": "Answer: 25. Let ABCD be a quadrilateral such thatAB =BC = 13,CD =DA = 15 andAC = 24. Let the midpoint of AC be E. What is the area of the quadrilateral formed by connecting the incenters of ABE, BCE , CDE , and DAE? Answer: 25 Solution: SinceE is the midpoint ofAC,AE =CE = 12. Also, from AB =BC andCD =DA, we see that ABCD is a kite and AC⊥BD. By the Pythagorean Theorem on the four right triangles, we ﬁnd that AE = 5 and DE = 9. LetW ,X,Y , andZ be the incenters of∆ABE,∆BCE ,∆CDE and∆DAE respectively. Note thatWX||AC andYZ||AC and by symmetry,WZ =XY , so WXYZ is an isosceles trapezoid. The semiperimeter of ∆ABE is 5+12+13 2 = 15, so the inradius is 15 − 13 = 2. Similarly, we can compute that the inradius of ∆CDE is 9+12+15 2 − 15 = 3. It follows that WX = 2(2) = 4 and YZ = 2(3) = 6. Drawing perpendiculars from W to AC and Z to AC, we see that these perpdiculars are exactly the inradii of ∆ABE and∆DAE respectively, so the height of the trapezoid is 2 + 3 = 5. Thus, the area of WXYZ is 10(5) 2 = 25 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2018 SMT Geometry Problem 5",
+   "question": "In ∆ABC, ∠ABC = 75 ◦ and ∠BAC is obtuse. Points D and E are on AC and BC, respectively, such that AB BC = DE EC and ∠DEC = ∠EDC . Compute ∠DEC in degrees.",
+   "choices": null,
+   "answer": "85",
+   "solution": "Answer: 85. In ∆ABC, ∠ABC = 75◦ and ∠BAC is obtuse. Points D and E are on AC and BC, respectively, such that AB BC = DE EC and ∠DEC = ∠EDC . Compute ∠DEC in degrees. Answer: 85 Solution: Extend AC past A, and draw F on AC such that AB = FB . Note that AB BC = F B BC = DE EC , and since ∠FBC = ∠DEC we have∆FBC ∼∆DEC . Next, we perform some angle chasing. Let ∠DEC = ∠EDC = x. By similar triangles, we have ∠FBC = ∠BFC =x as well. Furthermore, FB =AB, so∆FAB is isoceles, and thus ∠FAB =x as well. Now ∠ABC = 75◦, so we compute ∠FBA = ∠FBC− ∠ABC =x− 75. The angles of a triangle sum to 180 ◦, giving us the equation 3x− 75 = 180, which solves to x = 85 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2014 SMT Geometry Problem 6",
+   "question": "Let E be an ellipse with major axis length 4 and minor axis length 2. Inscribe an equilateral triangle ABC in E such that A lies on the minor axis and BC is parallel to the major axis. Compute the area of ∆ABC.",
+   "choices": null,
+   "answer": "192",
+   "solution": "Answer: 192. Let E be an ellipse with major axis length 4 and minor axis length 2. Inscribe an equilateral triangle ABC in E such that A lies on the minor axis and BC is parallel to the major axis. Compute the area of ∆ABC. Answer: 192 √ 3 169 Solution: Consider a transformation that scales along the major axis by a factor of 1 2 so that the ellipse becomes a circle of radius 1 and the equilateral triangle becomes an isoceles triangle. Let the transformed triangle be denoted AB′C′. Now, let x = |B′C′| 2 . Then the original length |BC| = 4x and since ∆ABC is equilateral, |AB| =|BC| = 4x. Next, we calculate the altitude dropped from A′ as 1 + √ 1−x2. Applying Pythagoras’s theorem, we get that |AB|2 = (1 + √ 1−x2)2 + 4x2. Substitute |AB| = 4x in and solving for x2, we get that x2 = 48 169. Finally, we calculate the area of ∆ABC. Since ∆ABC is equilateral, its area is given by √ 3 4|BC|2 = √ 3 4 16x2. Substituting in x2 = 48 169 and simplifying, we obtain 192 √ 3 169 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2020 SMT Geometry Problem 7",
+   "question": "Let ABC be an acute triangle with BC = 4 and AC = 5. Let D be the midpoint of BC, E be the foot of the altitude from B to AC, and F be the intersection of the angle bisector of ∠BCA with segment AB. Given that AD, BE, and CF meet at a single point P , compute the area of triangle ABC. Express your answer as a common fraction in simplest radical form.",
+   "choices": null,
+   "answer": "20",
+   "solution": "Answer: 20. Let ABC be an acute triangle with BC = 4 and AC = 5. Let D be the midpoint of BC, E be the foot of the altitude from B toAC, and F be the intersection of the angle bisector of ∠BCA with segment AB. Given that AD,BE, and CF meet at a single point P , compute the area of triangle ABC. Express your answer as a common fraction in simplest radical form. Answer: 20 √ 14/9 Solution: By the Angle Bisector Theorem, BF AF = 4",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2019 SMT Geometry Problem 8",
+   "question": "In the coordinate plane, a point A is chosen on the line y = 3 2 x in the ﬁrst quadrant. Two perpendicular lines l1 and l2 intersect at A where l1 has slope m > 1. Let l1 intersect the x-axis at B, and l2 intersects the x and y axes at C and D, respectively. Suppose that line BD has slope−m and BD = 2. Compute the length of CD.",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3 +. In the coordinate plane, a point A is chosen on the line y = 3 2x in the ﬁrst quadrant. Two perpendicular lines l1 and l2 intersect at A where l1 has slope m >1. Let l1 intersect the x-axis at B, and l2 intersects the x and y axes at C and D, respectively. Suppose that line BD has slope−m and BD = 2. Compute the length of CD. Answer: 3 + √ 13 Solution: LetA′ be the reﬂection of A across the x-axis. Since l1 has slope m and line BD has slope −m, line BD is the image of l1 when reﬂected across the x-axis. It follows that A′ lies on line BD. Moreover, since l2 has slope− 1 m, line A′C has slope 1 m. Therefore, line A′C is perpendicular to line BD. Let ∠A′DC = θ. We have CD = A′D cosθ = A′B+BD cosθ = AB+2 cosθ . From right triangle BAD, we haveAB =BD sinθ = 2 sinθ, so CD = 2(1+sinθ) cosθ . Let O denote the origin. We have ∠BOD = 90◦ = ∠BAD, so ABOD is cyclic. It follows that ∠AOB = ∠ADB =θ. But line OA is deﬁned by the equation y = 3 2x, so sin θ = 3√ 13 and cosθ = 2√",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2014 SMT Geometry Problem 9",
+   "question": "In cyclic quadrilateral ABCD , AB∼= AD. If AC = 6 and AB BD = 3 5, ﬁnd the maximum possible area of ABCD .",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. In cyclic quadrilateral ABCD , AB∼=AD. If AC = 6 and AB BD = 3 5, ﬁnd the maximum possible area of ABCD . Answer: 5 √ 11 Solution: We claim that the area of ABCD is constant, though the shape of ABCD depends on the radius of the circumscribing circle. First, by Ptolemy’s, we have AB×CD +BC×AD =AB(BC +CD) =AC×BD =⇒ BC +CD =AC× BD AB = 10. Now, extend CB past B to a point E such that BE∼=CD. Since ABCD is cyclic, ∠ABC and ∠ADC are supplementary, so ∠ADC∼= ∠ABE. Hence, ∆ADC∼=∆ABE, and so ABCD has the same area as ACE. ACE is isosceles with leg 6 and base CE =CB +BE =CB +DC = 10. Hence, the length of the altitude to the base is √ 62− 52 = √ 11, and the area is 5 √ 11 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2018 SMT Geometry Problem 10",
+   "question": "Let ABC be a triangle with AB = 13, AC = 14, and BC = 15, and let Γ be its incircle with incenter I. Let D and E be the points of tangency between Γ and BC and AC respectively, and let ω be the circle inscribed in CDIE . If Q is the intersection point between Γ and ω and P is the intersection point between CQ and ω, compute the length of P Q.",
+   "choices": null,
+   "answer": "8",
+   "solution": "Answer: 8. Let ABC be a triangle with AB = 13,AC = 14, and BC = 15, and let Γ be its incircle with incenterI. Let D andE be the points of tangency between Γ and BC andAC respectively, and let ω be the circle inscribed in CDIE . If Q is the intersection point between Γ and ω and P is the intersection point between CQ and ω, compute the length of PQ . Answer: 8 √ 6 9 Solution: We can derive that CD =CE = 8. We then compute the inradius r of∆ABC. Using Heron’s Formula or drawing an altitude from B toAC, we can calculate that the area of∆ABC is 84. Since the product of r and the semiperimeter of∆ABC also gives the area, we ﬁnd that r = 4. Let O be the center of ω. Also let ω touch ID at X and CD at Y . Since OXDY is a square, we have∆IXO≃∆OYC . Let x be the radius of ω, giving us XO =YO =x and IX = 4−x andCY = 8−x. This gives us the equation 4−x x = x 8−x, and solving for x yields x = 8",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

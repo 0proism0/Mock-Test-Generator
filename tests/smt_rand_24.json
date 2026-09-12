@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_24",
+ "competition": "SMT — Calculus",
+ "category": "Math",
+ "title": "SMT — Calculus — Random Mock #24 · 2026-08-27 08:50",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2018 SMT Calculus Problem 1",
+   "question": "If f(x) = x2 and g(x) = ln(x), compute f′(1) + g′(1).",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. If f(x) =x2 and g(x) = ln(x), compute f′(1) +g′(1). Answer: 3 Solution: We computef′(x) = 2x and g′(x) = 1 x, so plugging in 1 for both gives us 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2012 SMT Calculus Problem 2",
+   "question": "Find the maximum value of ∫ 3π/2 −π/2 sin(x)f (x) dx subject to the constraint |f (x)| ≤ 5.",
+   "choices": null,
+   "answer": "20",
+   "solution": "Answer: 20. Find the maximum value of ∫ 3π/2 −π/2 sin(x)f (x) dx subject to the constraint |f (x)| ≤ 5. Answer: 20 Solution: Clearly we want to maximize f (x) when sin (x) ≥ 0 and minimize f (x) when sin (x) <",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2014 SMT Calculus Problem 3",
+   "question": "Moor has $1000, and he is playing a gambling game. He gets to pick a number k between 0 and 1 (inclusive). A fair coin is then ﬂipped. If the coin comes up heads, Moor is given 5000 k additional dollars. Otherwise, Moor loses 1000 k dollars. Moor’s happiness is equal to the log of the amount of money that he has after this gambling game. Find the value of k that Moor should select to maximize his expected happiness.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. Moor has $1000, and he is playing a gambling game. He gets to pick a number k between 0 and 1 (inclusive). A fair coin is then ﬂipped. If the coin comes up heads, Moor is given 5000 k additional dollars. Otherwise, Moor loses 1000 k dollars. Moor’s happiness is equal to the log of the amount of money that he has after this gambling game. Find the value of k that Moor should select to maximize his expected happiness. Answer: 2 5 Solution: Suppose that Moor chooses a value ofk. We write down the expected value of Moor’s happiness. If the coin comes up heads, Moor now has 1000 + 1000(5 k) = 1000(5k + 1) dollars. If the coin comes up tails, Moor now has 1000−1000k = 1000(1−k) dollars. Therefore, the expected value of Moor’s happiness is H(k) = 1 2 log(1000(5k + 1)) + 1 2 log(1000(1−k)). We want to maximize this. To do this, we diﬀerentiate, set the derivative equal to zero, and look for critical values. Here, H′(k) = 1 2 ( 5000 1000(5k + 1)− 1000 1000(1−k) ) = 1 2 ( 5 5k + 1− 1 1−k ) = 0 when 5k + 1 = 5(1−k), so 10k = 4, and hence k = 2 5 is the only critical value. The maximal value of H(k) for k∈ [0, 1] must occur either at a critical value or an endpoint. Observe that among the three values H(0), H(1), and H( 2 5), the largest is H( 2 5). Therefore, Moor maximizes his happiness by selecting k = 2 5 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2018 SMT Calculus Problem 4",
+   "question": "Compute ∫ 4 0 dx√ |x− 2| .",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. Compute ∫ 4 0 dx√ |x− 2| . Answer: 4 √ 2 Solution: Note that the function 1√ |x−2| is discontinuous at x = 2. We therefore split the integral into two parts and compute separately: ∫ 2 0 dx√ |x− 2| = ∫ 2 0 dx√2−x =−2 √ 2−x ⏐⏐2 0 = 2 √ 2 ∫ 4 2 dx√ |x− 2| = ∫ 4 2 dx√x− 2 = 2 √ x− 2 ⏐⏐4 2 = 2 √ 2 The answer is therefore 2 √ 2 + 2 √ 2 = 4 √ 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2013 SMT Calculus Problem 5",
+   "question": "Evaluate lim x→0 sin2(5x) tan3(4x) (log(2x + 1))5 .",
+   "choices": null,
+   "answer": "50",
+   "solution": "Answer: 50. Evaluate lim x→0 sin2(5x) tan3(4x) (log(2x + 1))5 . Answer: 50 Solution 1: For any function f with f(0) = 0, we know that lim x→0 f(x) x = lim x→0 f(x)−f(0) x =f′(0). sin(5x), tan(4x), and log(2x + 1) are all 0 at x = 0, and their derivatives at 0 are 5, 4, and 2, respectively. So, divide numerator and denominator by x5 and re-arrange to get lim x→0 sin2(5x) tan3(4x) (log(2x + 1))5 = lim x→0 ( sin(5x) x )2 · ( tan(4x) x )3 ( log(2x+1) x )5 = 52· 43 25 = 50 . Solution 2: Recall from Taylor series that if f(0) = 0, then f(x)≈ f′(0)x when x is small. This allows us to write lim x→0 sin2(5x) tan3(4x) (log(2x + 1))5 = lim x→0 (5x)2(4x)3 (2x)5 = 50 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2014 SMT Calculus Problem 6",
+   "question": "Compute lim x→∞ [ x− x2 ln (1 + x x )] .",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Compute lim x→∞ [ x−x2 ln (1 +x x )] . Answer: 1 2 SMT 2014 Calculus Test Solutions February 15, 2014 Solution: We rewrite this limit in a form that allows us to apply L’Hˆ opital’s Rule. That is, lim x→∞ [ x−x2 ln (1 +x x )] = lim x→∞ 1 x− ln ( 1+x x ) 1 x2 = lim x→∞ − 1 x2− x 1+x(− 1 x2 ) −2 x3 by L’Hˆ opital’s Rule = lim x→∞ 1 2 ( x− x2 1 +x ) = lim x→∞ 1 2 ( x 1 +x ) = lim x→∞ 1 2 ( 1− 1 1 +x ) = 1 2(1− 0) = 1 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2018 SMT Calculus Problem 7",
+   "question": "Compute ∫ 0 −2 x3 + 4x2 + 7x− 20 x2 + 4x + 8 dx + ∫ 2 0 2x3− 7x2 + 9x− 10 x2 + 4 dx.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12. Compute ∫ 0 −2 x3 + 4x2 + 7x− 20 x2 + 4x + 8 dx + ∫ 2 0 2x3− 7x2 + 9x− 10 x2 + 4 dx. Answer: 12 Solution: The polynomials in the denominator are similar, so we rewrite them in the form ∫ 0 −2 x3 + 4x2 + 7x− 20 (x + 2)2 + 4 dx + ∫ 2 0 2x3− 7x2 + 9x− 10 x2 + 4 dx. This suggests we make the u-substution u =x + 2 in the ﬁrst integral, which gives us ∫ 2 0 (u− 2)3 + 4(u− 2)2 + 7(u− 2)− 20 u2 + 4 du + ∫ 2 0 2x3− 7x2 + 9x− 10 x2 + 4 dx which simpliﬁes down to ∫ 2 0 u3− 2u2 + 3u− 26 u2 + 4 du + ∫ 2 0 2x3− 7x2 + 9x− 10 x2 + 4 dx. We can then combine the two integrals into a single integral and combine like terms to get ∫ 2 0 3x3− 9x2 + 12x− 36 x2 + 4 dx = ∫ 2 0 (3x− 9)dx = (3 2x2− 9x )⏐⏐⏐⏐ 2 0 = 3 2(22)− 9· 2 = −12.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2013 SMT Calculus Problem 8",
+   "question": "The function f(x) is deﬁned for all x≥ 0 and is always nonnegative. It has the additional property that if any line is drawn from the origin with any positive slope m, it intersects the graph y = f(x) at precisely one point, which is 1√m units from the origin. Let a be the unique real number for which f takes on its maximum value at x = a (you may assume that such an a exists). Find ∫ a 0 f(x) dx.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1+log(2). The function f(x) is deﬁned for all x≥ 0 and is always nonnegative. It has the additional property that if any line is drawn from the origin with any positive slope m, it intersects the graph y =f(x) at precisely one point, which is 1√m units from the origin. Let a be the unique real number for which f takes on its maximum value at x =a (you may assume that such an a exists). Find ∫ a 0 f(x)dx. Answer: 1+log(2) 4 Solution 1: First, express x and y as functions parametrized by m. We have the system y =mx x2 +y2 = 1 m. Solving for y, we get y = √ m 1+m2 . Hence, maximizing y is equivalent to maximizing m 1+m2. By diﬀerentiating with respect to m, we see that the maximum occurs when m = 1, at the point ( 1√ 2, 1√ 2). Now, we just need to compute the integral. However, this parametric form is not convenient. Instead, by drawing the line y = x, we notice that the integral splits up into a right isosceles triangle, and a region between the line y = x and the y-axis. This suggests that we should convert to polar coordinates. In fact, f(x) is equivalent to the graph r(θ) = 1√ tan(θ), since a line at angle θ to the x-axis has slope tan(θ). The area we wish to compute is ∫ π/2 π/4 1 2r(θ)2dθ = 1 2 ∫ π/2 π/4 cot(θ)dθ = 1 2 [log(sin(θ))]π/2 π/4 = 1 2(0− log(1/ √ 2)) = 1 4 log(2). SMT 2013 Calculus Test Solutions February 2, 2013 We add this area to the area of the triangle, which is 1 2 ( 1√ 2 )2 = 1 4, so our ﬁnal answer is 1 + log(2) 4 . Solution 2: We begin as before to ﬁnd a, but present a diﬀerent method of computing the integral. Solving for x in terms of y, we get that x2 +y2 =x/y =⇒ yx2−x +y3 = 0 =⇒ x = 1± √ 1− 4y4 2y . We only care about the region where 1 ± √ 1− 4y4 = 2xy≤ 1, since x,y≤ 1√",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2013 SMT Calculus Problem 9",
+   "question": "Evaluate ∫ π/2 0 dx(√ sin x +√cos x )4 .",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1/3. Evaluate ∫ π/2 0 dx(√ sinx +√cosx )4. Answer: 1/3 Solution 1: Observe that by pulling a factor of cos2x out of the denominator, we can write the given integral as ∫ π/2 0 dx (1 + √ tanx)4 cos2x = ∫ π/2 0 sec2xdx (1 + √ tanx)4. SMT 2013 Calculus Test Solutions February 2, 2013 We now substitute u = √ tanx + 1: du = sec2x 2 √ tanxdx = sec2x 2(u− 1)dx. Thus, our integral is equal to ∫ ∞ 1 2u− 2 u4 du = ∫ ∞ 1 2u−3− 2u−4du, which simpliﬁes to [ −u−2 + 2 3u−3 ]∞ 1 = 1 3 . Solution 2: Let I be the value of the given integral. Note that 1 2I = 1 2 ∫ π/2 0 ((√ sin(x) + √ cos(x) )−2)2 dx, which is the polar area bounded by the curve r(θ) = (√ sin(θ) + √ cos(θ) )−2 and the x and y axes for θ∈ [0,π/ 2]. Converting to Cartesian coordinates, we get 1 =r (√ sin(θ) + √ cos(θ) )2 = (√ r sin(θ) + √ r cos(θ) )2 =⇒ √x +√y = 1 =⇒ y = (1−√x)2 = 1 +x− 2√x. Therefore, 1 2I = ∫ 1 0 1 +x− 2√xdx = [ x + x2 2 − 4 3x3/2 ]1 0 = 1 + 1 2− 4 3 = 1 6 =⇒ I = 1 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2018 SMT Calculus Problem 10",
+   "question": "Fact: The value ln(2) is not the root of any polynomial with rational coeﬃcients. For any nonnegative integer n, let pn(x) be the unique polynomial with integer coeﬃcients such that pn(ln(2)) = ∫ 2 1 (ln(x))n dx. Compute the value of the sum ∞∑ n=0 1 pn(0) .",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Fact: The value ln(2) is not the root of any polynomial with rational coeﬃcients. For any nonnegative integer n, let pn(x) be the unique polynomial with integer coeﬃcients such that pn(ln(2)) = ∫ 2 1 (ln(x))ndx. Compute the value of the sum ∞∑ n=0 1 pn(0). Answer: 1 e Solution: We ﬁrst attempt to compute the integral pn(ln(2)) = ∫ 2 1 (ln(x))ndx. Using inte- gration by parts with u = (ln(x))n and dv = 1, we get ∫ 2 1 (ln(x))ndx =x(ln(x))n⏐⏐2 1− ∫ 2 1 n(ln(x))n−1dx = 2(ln(2))n−n ∫ 2 1 (ln(x))n−1dx = 2(ln(2))n−npn−1(ln(2)). Because ln(2) is not the root of any polynomial with rational coeﬃcients, we can plug in x = ln(2) to get the recurrence pn(x) = 2xn−npn−1(x). Recall that we are only concerned with the constant terms pn(0), so plugging in x = 0 yields pn(0) =−npn−1(0). Now since p0(ln(2)) = ∫ 2 1 dx = 1, we havep0(x) = 1, and therefore p0(0) = 1. From the recurrence, we deduce that pn(0) = (−1)n·n!. Our desired sum is thus ∞∑ n=0 1 pn(0) = ∞∑ n=0 (−1)n n! = 1 e from the Taylor series expansion of ex at x =−1.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

@@ -1,0 +1,261 @@
+{
+ "id": "smt_rand_04",
+ "competition": "SMT — General",
+ "category": "Math",
+ "title": "SMT — General — Random Mock #4 · 2026-08-26 16:33",
+ "instructions": "25 questions · 110 minutes · No calculator. 25 points total.",
+ "time_limit_min": 110,
+ "total_points": 25,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2021 SMT General Problem 1",
+   "question": "An isosceles triangle has two of its three angles measuring 30 ◦ and x◦. What is the sum of the possible values of x?",
+   "choices": null,
+   "answer": "225",
+   "solution": "Answer: 225 ◦.. An isosceles triangle has two of its three angles measuring 30 ◦ and x◦. What is the sum of the possible values of x? Answer: 225 ◦. Solution: There are three cases. First x = 30 ◦ form the two equal angles. Second, the third angle is 30 ◦ and x = 180◦− 2× 30◦ = 120◦. Finally, the third angle is x◦, so x = 75◦. So, the sum is 225 ◦ .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2013 SMT General Problem 2",
+   "question": "Jimmy runs a successful pizza shop. In the middle of a busy day, he realizes that he is running low on ingredients. Each pizza must have 1 lb of dough, 1 4 lb of cheese, 1 6 lb of sauce, and 1 3 lb of toppings, which include pepperonis, mushrooms, olives, and sausages. Given that Jimmy currently has 200 lbs of dough, 20 lbs of cheese, 20 lbs of sauce, 15 lbs of pepperonis, 5 lbs of mushrooms, 5 lbs of olives, and 10 lbs of sausages, what is the maximum number of pizzas that Jimmy can make?",
+   "choices": null,
+   "answer": "80",
+   "solution": "Answer: 80. Jimmy runs a successful pizza shop. In the middle of a busy day, he realizes that he is running low on ingredients. Each pizza must have 1 lb of dough, 1 4 lb of cheese, 1 6 lb of sauce, and 1 3 lb of toppings, which include pepperonis, mushrooms, olives, and sausages. Given that Jimmy currently has 200 lbs of dough, 20 lbs of cheese, 20 lbs of sauce, 15 lbs of pepperonis, 5 lbs of mushrooms, 5 lbs of olives, and 10 lbs of sausages, what is the maximum number of pizzas that Jimmy can make? Answer: 80 Solution: The limiting factor is the cheese. With only 20 lbs of cheese, the most pizzas that can be made is 20· 4 = 80 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2014 SMT General Problem 3",
+   "question": "David ﬂips a fair coin ﬁve times. Compute the probability that the fourth coin ﬂip is the ﬁrst coin ﬂip that lands heads.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. David ﬂips a fair coin ﬁve times. Compute the probability that the fourth coin ﬂip is the ﬁrst coin ﬂip that lands heads. Answer: 1 16 Solution: David must ﬂip three tails, then heads. This happens with probability (1 2 )4 = 1 16 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2018 SMT General Problem 4",
+   "question": "Katy only owns two types of books: comic books and nature books. 1 /3 of her books are comic books. After going to a booksale, she buys 20 more comic books, so 4 /7 of her books are now comic books. How many books did she have originally?",
+   "choices": null,
+   "answer": "36",
+   "solution": "Answer: 36. Katy only owns two types of books: comic books and nature books. 1 /3 of her books are comic books. After going to a booksale, she buys 20 more comic books, so 4 /7 of her books are now comic books. How many books did she have originally? Answer: 36 Solution: Let x be the number of comic books that Katy started with and let y be the number of nature books that Katy started with. This gives us the system of equations x x +y = 1 3 and x + 20 x +y + 20 = 4",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2014 SMT General Problem 5",
+   "question": "Compute the smallest positive integer x > 100 such that every permutation of the digits of x is prime.",
+   "choices": null,
+   "answer": "113",
+   "solution": "Answer: 113. Compute the smallest positive integer x > 100 such that every permutation of the digits of x is prime. Answer: 113 Solution: Clearly, all digits must be odd. 111 obviously does not work, but 113 does because 113, 131, and 311 are prime.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2019 SMT General Problem 6",
+   "question": "Harry has a chocolate kiss (cone-shaped chocolate) with radius 2 inches and height 4 inches. If he bites oﬀ a cone at the top of the kiss of height 2 inches, what is the volume of the remaining kiss?",
+   "choices": null,
+   "answer": "14",
+   "solution": "Answer: 14π. Harry has a chocolate kiss (cone-shaped chocolate) with radius 2 inches and height 4 inches. If he bites oﬀ a cone at the top of the kiss of height 2 inches, what is the volume of the remaining kiss? Answer: 14π 3 Solution: Using the volume formula for a cone, the original kiss had volume V =πr2h/3 = 16π/3 Using similar triangles, we can see that the cone bitten oﬀ with height 2 inches had radius 1 inch. So, the part bitten oﬀ had volume Vbite =π(1)2(2)/3 = 2π/3 SMT 2019 General Test Solutions March 2, 2019 So, the remaining volume is 14π 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2023 SMT General Problem 7",
+   "question": "If x and y are positive integers that satisfy 43 x + 47y = 2023, compute the minimum possible value of x + y. General Test April 8, 2023",
+   "choices": null,
+   "answer": "45",
+   "solution": "Answer: 45. If x and y are positive integers that satisfy 43 x + 47y = 2023, compute the minimum possible value of x +y. Answer: 45 Solution: Taking modulo 43, one notices that 47 ≡ 4 (mod 43) and 2023 ≡ 2 (mod 43). We rewrite 43x+47y≡ 4y≡ 2 (mod 43). The least y for which this holds isy = 22, and computing, 23· 43 + 22· 47 = 2023. It is impossible to have other positive integer pair solutions because all solutions are given by the form ( x,y ) = (23 + 47k, 22− 43k) for integers k. Therefore, the minimal value is 23 + 22 = 45 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2020 SMT General Problem 8",
+   "question": "Find the smallest real root of 14x4− 2x3 + 13x2− 3x− 12",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1−. Find the smallest real root of 14x4− 2x3 + 13x2− 3x− 12 Answer: 1− √ 113 14 Solution: 14x4− 2x3 + 13x2− 3x− 12 = (2x2 + 3)(7x2−x− 4)",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2013 SMT General Problem 9",
+   "question": "A tree has 10 pounds of apples at dawn. Every afternoon, a bird comes and eats x pounds of apples. Overnight, the amount of food on the tree increases by 10%. What is the maximum value of x such that the bird can sustain itself indeﬁnitely on the tree without the tree running out of food?",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10/11. A tree has 10 pounds of apples at dawn. Every afternoon, a bird comes and eats x pounds of apples. Overnight, the amount of food on the tree increases by 10%. What is the maximum value of x such that the bird can sustain itself indeﬁnitely on the tree without the tree running out of food? Answer: 10/11 Solution: After removing x from 10, and then increasing that amount by 10%, we must end up with at least the amount we started with, 10 pounds. That is, the maximum value of x must satisfy 11 10 (10−x) = 10. Solving for x, we get that x = 10/11 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2020 SMT General Problem 10",
+   "question": "You can buy packets of 5 cookies or packets of 11 cookies. Assuming an inﬁnite amount of money, what is the largest number of cookies that you cannot buy?",
+   "choices": null,
+   "answer": "39",
+   "solution": "Answer: 39. You can buy packets of 5 cookies or packets of 11 cookies. Assuming an inﬁnite amount of money, what is the largest number of cookies that you cannot buy? Answer: 39 Solution: By the Chicken McNugget Theorem, which states that if you buy items in packs of p and q, the largest number of items that you cannot make is p∗q−p−q, our answer is 5∗ 11− 5− 11 = 39 cookies.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2014 SMT General Problem 11",
+   "question": "Alice and Bob are playing a game in which Alice has a 1 3 probability of winning, a 1 2 probability of tying, and a 1 6 probability of losing. Given that Alice and Bob played a game which did not end in a tie, compute the probability that Alice won.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. Alice and Bob are playing a game in which Alice has a 1 3 probability of winning, a 1 2 probability of tying, and a 1 6 probability of losing. Given that Alice and Bob played a game which did not end in a tie, compute the probability that Alice won. Answer: 2 3 Solution: The probability is 1 3 1 3 + 1 6 = 2 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2012 SMT General Problem 12",
+   "question": "ABC is an equilateral triangle with side length 1. Point D lies on AB, point E lies on AC, and points G and F lie on BC , such that DEF G is a square. What is the area of DEF G?",
+   "choices": null,
+   "answer": "21",
+   "solution": "Answer: 21 − 12. ABC is an equilateral triangle with side length 1. Point D lies on AB, point E lies on AC, and points G and F lie on BC , such that DEF G is a square. What is the area of DEF G? Answer: 21 − 12 √ 3 Solution: Let x be the length of a side of square DEF G. Then DE = EF = x. Note that ∆ADE is equilateral since DE ‖ BC and hence ∆ADE ∼ ∆ ABC , so AE = DE = x, and consequently EC = 1 − x. Since ∆ECF is a 30 ◦ − 60◦ − 90◦ triangle, we have the proportion EF EC = x 1 − x = √ 3 2 , SMT 2012 General Test and Solutions February 18, 2012 so x = √ 3 2+ √ 3 = 2 √ 3 − 3. Hence the area of DEF G is x2 = 21 − 12 √ 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2023 SMT General Problem 13",
+   "question": "Two frogs jump along a straight line in the same direction, starting at the same place. Every ten seconds, each frog jumps 2, 4, or 6 feet, with each possibility being equally likely. What is the probability that the frogs have traveled the same distance after thirty seconds?",
+   "choices": null,
+   "answer": "47",
+   "solution": "Answer: 47. Two frogs jump along a straight line in the same direction, starting at the same place. Every ten seconds, each frog jumps 2, 4, or 6 feet, with each possibility being equally likely. What is the probability that the frogs have traveled the same distance after thirty seconds? Answer: 47 243 Solution: If the distance traveled is 6, there is exactly 1 possibility—all jumps of 2. If the distance traveled is 8, each frog has 3 possible sequences, permutations of{2, 2, 4}, giving 3×3 = 9 possibilities. If the distance traveled is 10, each frog has 6 possible sequences, permutations of{2, 2, 6} and{2, 4, 4}, giving 6× 6 = 36 possibilities. If the distance traveled is 12, each frog has 7 possible sequences, permutations of {2, 4, 6} and{4, 4, 4}, giving 7× 7 = 49 possibilities. By symmetry, the number of possibilities for a distance of 18 is the same as that for 6, as well as 16 and 8, and 14 and 10. So, the total number of possibilities for the frogs to travel the same distance is 1 + 9 + 36 + 49 + 36 + 9 + 1 = 141. The total number of possible sequences of jumps for the frogs is (3 2)3 = 729. Finally, we have 141 729 = 47 243 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2012 SMT General Problem 14",
+   "question": "Given a number n in base 10, let g(n) be the base-3 representation of n. Let f (n) be equal to the base-10 number obtained by interpreting g(n) in base 10. Compute the smallest positive integer k ≥ 3 that divides f (k).",
+   "choices": null,
+   "answer": "7",
+   "solution": "Answer: 7. Given a number n in base 10, let g(n) be the base-3 representation of n. Let f (n) be equal to the base-10 number obtained by interpreting g(n) in base 10. Compute the smallest positive integer k ≥ 3 that divides f (k). Answer: 7 Solution: Using brute force, we note that 3, 4, 5, and 6 are invalid, but 7 = 21 3. Thus, the answer is 7 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2023 SMT General Problem 15",
+   "question": "Let A, B, and C be three points on a line (in that order), and let X and Y be two points on the same side of line AC. If△AXB∼△ BY C and the ratio of the area of quadrilateral AXY C to the area of△AXB is 111 : 1, compute BC BA .",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10. Let A,B, andC be three points on a line (in that order), and let X andY be two points on the same side of line AC. If△AXB∼△BYC and the ratio of the area of quadrilateral AXYC to the area of△AXB is 111 : 1, compute BC BA . Answer: 10 Solution: Let BC BA =n. Now, note that BY =nAX, and ∠XBY = 180◦− ∠AXB− ∠CBY = 180◦− ∠AXB− ∠BAX = ∠AXB. Then, by the Law of Sines, we have [XBY ] = 1 2(BX)(BY ) sin∠XBY =n(AX)(BX) sin∠AXB =n[AXB]. Also, [BYC ] =n2[AXB]. It follows [AXYC ] [AXB] =n2 +n + 1 and n2 +n + 1 = 111. By the quadratic formula, n = 10 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2012 SMT General Problem 16",
+   "question": "Given a 1962-digit number that is divisible by 9, let x be the sum of its digits. Let the sum of the digits of x be y. Let the sum of the digits of y be z. Compute the maximum possible value of z.",
+   "choices": null,
+   "answer": "9",
+   "solution": "Answer: 9. Given a 1962-digit number that is divisible by 9, let x be the sum of its digits. Let the sum of the digits of x be y. Let the sum of the digits of y be z. Compute the maximum possible value of z. Answer: 9 Solution: Let the 1962 digit number be a. First of all note that 9 | x, y, z. This is because a = ∑1962 i=1 ai10i ≡ ∑1962 i=1 ai mod 9 = x. Now clearly the largest value of x would be obtained if a = ∑1962 i=1 9(10)i, hence x ≤ 1962(9) = 17658. It follows that, y ≤ 1 + 7 + 6 + 5 + 8 = 36 and ﬁnally that z ≤ 9. However 9 | z so z = 9 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2012 SMT General Problem 17",
+   "question": "A circle with radius 1 has diameter AB. C lies on this circle such that ⌢ AC / ⌢ BC = 4. AC divides the circle into two parts, and we will label the smaller part Region I. Similarly, BC also divides the circle into two parts, and we will denote the smaller one as Region II. Find the positive diﬀerence between the areas of Regions I and II.",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3π. A circle with radius 1 has diameter AB. C lies on this circle such that ⌢ AC / ⌢ BC = 4. AC divides the circle into two parts, and we will label the smaller part Region I. Similarly, BC also divides the circle into two parts, and we will denote the smaller one as Region II. Find the positive diﬀerence between the areas of Regions I and II. Answer: 3π 10 Solution: Let O be the center of the circle. Note that CO bisects AB, so the areas of ∆ACO and ∆BCO are equal. Hence, the desired diﬀerence in segment areas is equal to the diﬀerence SMT 2012 General Test and Solutions February 18, 2012 in the areas of the corresponding sectors. The sector corresponding to ⌢ AC has area 2π 5 , and the sector corresponding to ⌢ BC has area π 10 , so the desired diﬀerence is 3π 10 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2014 SMT General Problem 18",
+   "question": "Spencer eats ice cream in a right circular cone with an opening of radius 5 and a height of 10. If Spencer’s ice cream scoops are always perfectly spherical, compute the radius of the largest scoop he can get such that at least half of the scoop is contained within the cone.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. Spencer eats ice cream in a right circular cone with an opening of radius 5 and a height of 10. If Spencer’s ice cream scoops are always perfectly spherical, compute the radius of the largest scoop he can get such that at least half of the scoop is contained within the cone. Answer: 2 √ 5 Solution: Since the cone is symmetric, the points of tangency of the ice cream scoop to the cone make a circle on the inside of the cone. Furthermore, the center of the ice cream scoop must coincide with the center of the base of the cone. The slant height of the cone is √ 52 + 102 = 5 √ 5, so from considering similar right triangles within a cross section of the cone (see above diagram), we get 5 5 √ 5 = r 10 =⇒ r = 2 √ 5 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2023 SMT General Problem 19",
+   "question": "Bernie has an infinite supply of Nerds and Smarties with the property that eating one Nerd increases his IQ by 10 and eating one Smartie increases his IQ by 14. If Bernie currently has an IQ of 99, how many IQ values between 100 and 200, inclusive, can he achieve by eating Nerds and Smarties?",
+   "choices": null,
+   "answer": "38",
+   "solution": "Answer: 38. Bernie has an infinite supply of Nerds and Smarties with the property that eating one Nerd increases his IQ by 10 and eating one Smartie increases his IQ by 14. If Bernie currently has an IQ of 99, how many IQ values between 100 and 200, inclusive, can he achieve by eating Nerds and Smarties? Answer: 38 Solution: Note that Bernie can only achieve odd IQ values since gcd(10 , 14) = 2. There are 50 odd numbers between 100 and 200. Then, 5 and 7 are relatively prime, so we can apply the Chicken McNugget Theorem to see that the largest even IQ increase that cannot be achieved with Nerds and Smarties is 2(5 · 7− 5− 7) = 46 < 200− 99. Also by the theorem, the number of values that cannot be achieved is (5−1)(7−1) 2 = 12. Thus, the number of different values that can be achieved is 50− 12 = 38 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "2013 SMT General Problem 20",
+   "question": "Ben is throwing darts at a circular target with diameter 10. Ben never misses the target when he throws a dart, but he is equally likely to hit any point on the target. Ben gets ⌈5− x⌉ points for having the dart land x units away from the center of the target. What is the expected number of points that Ben can earn from throwing a single dart? (Note that ⌈y⌉ denotes the smallest integer greater than or equal to y.)",
+   "choices": null,
+   "answer": "11",
+   "solution": "Answer: 11. Ben is throwing darts at a circular target with diameter 10. Ben never misses the target when he throws a dart, but he is equally likely to hit any point on the target. Ben gets ⌈5−x⌉ points for having the dart land x units away from the center of the target. What is the expected number of points that Ben can earn from throwing a single dart? (Note that ⌈y⌉ denotes the smallest integer greater than or equal to y.) Answer: 11 5 Solution: We can split the target into ﬁve concentric circles with radii 1, 2, 3, 4, and 5; the ﬁve corresponding regions have areas of π, 3π, 5π, 7π, 9π and are worth 5, 4, 3, 2, 1 points respectively. Thus the answer is 5·π + 4· 3π + 3· 5π + 2· 7π + 1· 9π 25π = 11 5 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "2019 SMT General Problem 21",
+   "question": "At the start of stage 0, the Meta-Meme-Machine has a pool of i = 7 images and a pool of t = 31 textboxes. In each stage, it creates i× t memes by making all pairs of an image plus a textbox. The pool of images at the start of the next round consists of all previous i images as well as the i× t memes. There are still t textboxes at the start of the next round. What is the ﬁrst stage s starting with a pool of more than 7 million images?",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. At the start of stage 0, the Meta-Meme-Machine has a pool of i = 7 images and a pool of t = 31 textboxes. In each stage, it creates i×t memes by making all pairs of an image plus SMT 2019 General Test Solutions March 2, 2019 a textbox. The pool of images at the start of the next round consists of all previous i images as well as the i×t memes. There are still t textboxes at the start of the next round. What is the ﬁrst stage s starting with a pool of more than 7 million images? Answer: 4 Solution: If the Meta-Meme-Machine has a images and b textboxes at stage t, associate it with the tuple (t,a,b ). Thus, the starting conﬁguration is (0 , 7, 31). Additionally, the state goes from (t,a,b ) to (t + 1,a (b + 1),b ) in the next state, since ab images are added. From this, it is clear that it steps through the stages ( t, 7· 32t, 31) as time progresses. So, the problem reduces to ﬁnding the smallest integer t such that 7· 32t > 7, 000, 000, i.e. 25t> 106. Using the approximation 2 10 = 1024> 103, we see this occurs for t = 4 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "2014 SMT General Problem 22",
+   "question": "For any positive integer x ≥ 2, deﬁne f(x) to be the product of the distinct prime factors of x. For example, f(12) = 2 · 3 = 6. Compute the number of integers 2 ≤ x < 100 such that f(x) < 10.",
+   "choices": null,
+   "answer": "23",
+   "solution": "Answer: 23. For any positive integer x≥ 2, deﬁne f(x) to be the product of the distinct prime factors of x. For example, f(12) = 2 · 3 = 6. Compute the number of integers 2 ≤ x < 100 such that f(x) < 10. Answer: 23 Solution: Clearly, f(x)≤ x, so we can start with 2 , 3, 4, 5, 6, 7, 8, 9. Then, any other x with f(x) < 10 will be one of these numbers multiplied by a prime (or multiple primes) that already divides it. Otherwise, if we multiply by a new prime, then that prime will contribute to f(x) and make it≥ 10. Hence, we can investigate each of our starting numbers in turn. The new numbers in each row are bolded: 2→ 2n→ 4, 8, 16, 32, 64 3→ 3n→ 9, 27, 81 4→ 2n→ 8, 16, 32, 64 5→ 5n→ 25 6→ 2m· 3n→ 12, 18, 24, 36, 48, 54, 72, 96 7→ 7n→ 49 8→ 2n→ 16, 32, 64 9→ 3n→ 27, 81 Hence, we have 2, 3, 4, 5, 6, 7, 8, 9, 12, 16, 18, 24, 25, 27, 32, 36, 48, 49, 54, 64, 72, 81, 96, for a total of 23 numbers that work. SMT 2014 General Test Solutions February 15, 2014",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "2014 SMT General Problem 23",
+   "question": "For a positive integer a, let f(a) be the average of all positive integers b such that x2 + ax + b has integer solutions. Compute the unique value of a such that f(a) = a.",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. For a positive integer a, let f(a) be the average of all positive integers b such that x2 + ax + b has integer solutions. Compute the unique value of a such that f(a) = a. Answer: 5 Solution: Note that we want the average of all cd such that c and d are positive integers and (x + c)(x + d) = x2 + ax + b (so a = c + d and b = cd). For a = 5 , this is the average of 1· 4 = 4 and 2· 3 = 6. For smaller a, the average is smaller than a. For larger a, the average is larger than a.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "2020 SMT General Problem 24",
+   "question": "Suppose the absolute diﬀerence between the area and perimeter of a rectangle with integer side lengths is 2020. What is the minimum possible value of the perimeter of this rectangle?",
+   "choices": null,
+   "answer": "188",
+   "solution": "Answer: 188. Suppose the absolute diﬀerence between the area and perimeter of a rectangle with integer side lengths is 2020. What is the minimum possible value of the perimeter of this rectangle? Answer: 188 Solution: Letl andw respectively be positive integers equal to the length and the width of the triangle,|lw− 2l− 2w| = 2020. Without loss of generality, let l≥ w >0. Since the left-hand side of expression is equal to |(l− 2)(w− 2)− 4|, (l− 2)(w− 2) must either equal −2016 or 2024. If ( l− 2)(w− 2) =−2016, then since l− 2≥ w− 2 >−2, it follows that l− 2 = 2016 and w− 2 = −1, meaning the rectangle has side lengths 1 and 2018 and perimeter 4038. If (l−2)(w−2) = 2024, then the perimeter is minimized when l andw are closer together in value, which occurs when l− 2 = 46 and w− 2 = 44. Since this rectangle has side lengths of 46 and 48 and perimeter 188, which is less than 4038, the minimum possible value of the perimeter is 188.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "2020 SMT General Problem 25",
+   "question": "Find the number of subsets S of{1, 2, . . . ,10} such that no two of the elements in S are consec- utive.",
+   "choices": null,
+   "answer": "144",
+   "solution": "Answer: 144. Find the number of subsets S of{1, 2,..., 10} such that no two of the elements in S are consec- utive. Answer: 144 Solution: We will use casework on the size ofS. We count the number of validk-element subsets in general, using the stars and bars method. Place a bar at each of the k values, yielding k + 1 buckets. We reserve one star for each of thek−1 middle buckets, leaving 10−(k−1)−k = 11−2k stars left to place. The total number of ways to arrange k bars and 11− 2k stars is then (11−2k k ) . Note that k can range from 0 to 5 inclusive. Hence our total is (6 5 ) + (7 4 ) + (8 3 ) + (9 2 ) + (10 1 ) + (11 0 ) = 144.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

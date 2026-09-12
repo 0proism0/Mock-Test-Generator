@@ -1,0 +1,411 @@
+{
+ "id": "amc12_rand_02",
+ "competition": "AMC 12",
+ "category": "Math",
+ "title": "AMC 12 — Random Mock #2 · 2026-08-26 16:33",
+ "instructions": "25 questions · 75 minutes · No calculator. 150 points total.",
+ "time_limit_min": 75,
+ "total_points": 150,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2025 AMC 12A Problem 1",
+   "question": "Carla leaves town at $9{:}00$ AM driving at $50$ km/h. Dan leaves the same town at $9{:}24$ AM, driving at $65$ km/h along the same road. How many minutes after Dan starts does he catch up with Carla?",
+   "choices": {
+    "A": "60",
+    "B": "70",
+    "C": "80",
+    "D": "90",
+    "E": "100"
+   },
+   "answer": "C",
+   "solution": "Carla's head start is $50 \\times 0.4 = 20$ km. Dan gains $65-50=15$ km/h, so he catches up in $\\frac{20}{15}=\\frac43$ hours $= 80$ minutes.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 2,
+   "source": "2025 AMC 12B Problem 2",
+   "question": "Jerry wrote down the ones digit of each of the first $50$ positive squares: $1, 4, 9, 6, 5, 6, \\dots$. What is the sum of these $50$ digits?",
+   "choices": {
+    "A": "205",
+    "B": "210",
+    "C": "215",
+    "D": "220",
+    "E": "225"
+   },
+   "answer": "E",
+   "solution": "The ones digits of squares cycle every 10 with sum $1+4+9+6+5+6+9+4+1+0=45$. Five cycles give $45 \\times 5 = 225$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 3,
+   "source": "2021 AMC 12B Problem 3",
+   "question": "Suppose that $$1+\\frac{1}{2+\\frac{1}{3+\\frac{1}{x}}}=\\frac{16}{11}.$$ What is the value of $x$?",
+   "choices": {
+    "A": "\\frac{1}{4}",
+    "B": "\\frac{3}{8}",
+    "C": "\\frac{2}{5}",
+    "D": "\\frac{1}{2}",
+    "E": "\\frac{2}{3}"
+   },
+   "answer": "D",
+   "solution": "Subtracting $1$ from both sides, $\\frac{1}{2+\\frac{1}{3+1/x}} = \\frac{5}{11}$, so $2+\\frac{1}{3+1/x} = \\frac{11}{5}$. Then $\\frac{1}{3+1/x} = \\frac{1}{5}$, so $3+\\frac{1}{x} = 5$, giving $\\frac{1}{x}=2$ and $x = \\frac{1}{2}$. The answer is $\\boxed{\\frac{1}{2}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 4,
+   "source": "2014 AMC 12A Problem 4",
+   "question": "Suppose that $a$ hens lay $b$ eggs in $c$ days. At this rate, how many eggs will $d$ hens lay in $e$ days?",
+   "choices": {
+    "A": "\\frac{ac}{bde}",
+    "B": "\\frac{bde}{ac}",
+    "C": "\\frac{abde}{c}",
+    "D": "\\frac{bcde}{a}",
+    "E": "\\frac{abc}{de}"
+   },
+   "answer": "B",
+   "solution": "One hen lays $\\frac{b}{a}$ eggs in $c$ days, so one hen lays $\\frac{b}{ac}$ eggs per day. Then $d$ hens lay $\\frac{bd}{ac}$ eggs per day, and in $e$ days they lay $\\frac{bde}{ac}$ eggs. The answer is $\\boxed{\\frac{bde}{ac}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 5,
+   "source": "2024 AMC 12A Problem 5",
+   "question": "A data set containing $24$ numbers, some of which are $8$, has mean $40$. When all the $8$s are removed, the data set has mean $56$. How many $8$s were in the original data set?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "The $24$ numbers have total $24 \\cdot 40 = 960$. If $k$ of the numbers are $8$s, the remaining $24-k$ numbers total $960 - 8k$ and have mean $56$, so $960 - 8k = 56(24-k) = 1344 - 56k$. Thus $48k = 384$, giving $k = 8$. The answer is $\\boxed{8}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 6,
+   "source": "2017 AMC 12B Problem 6",
+   "question": "The circle having $(0,0)$ and $(6,8)$ as the endpoints of a diameter intersects the $x$-axis at a second point. What is the $x$-coordinate of this point?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "8",
+    "E": "10"
+   },
+   "answer": "C",
+   "solution": "The center of the circle is $(3,4)$ and the radius is $5$. Setting $y=0$ in $(x-3)^2+(y-4)^2 = 25$ gives $(x-3)^2 = 9$, so $x = 0$ or $x = 6$. The origin corresponds to the given endpoint, so the second intersection has $x$-coordinate $6$. The answer is $\\boxed{6}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 7,
+   "source": "2014 AMC 12B Problem 7",
+   "question": "For how many positive integers $n$ is $\\frac{n}{24-n}$ also a positive integer?",
+   "choices": {
+    "A": "7",
+    "B": "6",
+    "C": "8",
+    "D": "5",
+    "E": "9"
+   },
+   "answer": "A",
+   "solution": "We need $0 < n < 24$ with $(24-n) \\mid n$. Since $\\frac{n}{24-n} = \\frac{24}{24-n} - 1$, the condition is equivalent to $(24-n) \\mid 24$. As $24-n$ ranges over $1,2,\\dots,23$, the divisors of $24$ in this range are $1,2,3,4,6,8,12$, giving $n = 23, 22, 21, 20, 18, 16, 12$. That is $7$ values. The answer is $\\boxed{7}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 8,
+   "source": "2022 AMC 12B Problem 8",
+   "question": "How many points with integer coordinates lie inside or on the circle $x^2+y^2=9$?",
+   "choices": {
+    "A": "25",
+    "B": "27",
+    "C": "28",
+    "D": "29",
+    "E": "31"
+   },
+   "answer": "D",
+   "solution": "Count by $x$: $x=0$ gives $y=-3..3$ (7 points); $x=\\pm1$ gives $y^2\\le 8$, 5 each (10); $x=\\pm2$ gives $y^2\\le 5$, 5 each (10); $x=\\pm3$ gives $y=0$ only (2). Total $7+10+10+2=29$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 9,
+   "source": "2010 AMC 12B Problem 9",
+   "question": "Let $n$ be the smallest positive integer such that $n$ is divisible by $12$, $n^2$ is a perfect cube, and $n^3$ is a perfect square. What is the number of digits of $n$?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "B",
+   "solution": "If $p^e$ appears in the prime factorization of $n$, then $n^2$ being a cube forces $2e \\equiv 0 \\pmod{3}$, so $3 \\mid e$, and $n^3$ being a square forces $3e$ even, so $2 \\mid e$. Hence $6 \\mid e$ and $n$ is a perfect sixth power. Since $12 = 2^2 \\cdot 3$ divides $n$, the smallest such $n$ is $2^6 \\cdot 3^6 = 6^6 = 46656$, which has $5$ digits. The answer is $\\boxed{5}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 10,
+   "source": "2021 AMC 12B Problem 10",
+   "question": "Two distinct numbers are selected from the set $\\{1,2,3,\\ldots,10\\}$ so that the sum of the remaining eight numbers is $44$. In how many ways can the pair be selected?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "6",
+    "D": "7",
+    "E": "5"
+   },
+   "answer": "E",
+   "solution": "The full sum is $55$, so the selected pair must sum to $11$: $(1,10),(2,9),(3,8),(4,7),(5,6)$ — $5$ pairs.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 11,
+   "source": "2020 AMC 12A Problem 11",
+   "question": "A frog starts at $(0,0)$ and makes a sequence of $6$ jumps, each jump exactly $1$ unit parallel to a coordinate axis. How many different jump sequences end at the point $(2,2)$?",
+   "choices": {
+    "A": "120",
+    "B": "60",
+    "C": "90",
+    "D": "150",
+    "E": "180"
+   },
+   "answer": "A",
+   "solution": "Let the numbers of E, W, N, S jumps be $a,b,c,d$: $a-b=2$, $c-d=2$, $a+b+c+d=6$. Case $(a,b,c,d)=(2,0,3,1)$: $\\frac{6!}{2!3!1!}=60$. Case $(3,1,2,0)$: $\\frac{6!}{3!1!2!}=60$. Total $120$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 12,
+   "source": "2020 AMC 12B Problem 12",
+   "question": "$\\overline{AB}$ is a diameter of a circle with radius $13$. Chord $\\overline{CD}$ is perpendicular to $\\overline{AB}$ and meets it at point $P$ with $AP=8$. What is the length of $\\overline{CD}$?",
+   "choices": {
+    "A": "16",
+    "B": "18",
+    "C": "20",
+    "D": "24",
+    "E": "26"
+   },
+   "answer": "D",
+   "solution": "The center $O$ is the midpoint of $AB$, so $OP = 13-8 = 5$. Half the chord is $\\sqrt{13^2-5^2}=12$, hence $CD=24$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 13,
+   "source": "2020 AMC 12A Problem 13",
+   "question": "There are integers $a$, $b$, and $c$, each greater than $1$, such that $$\\sqrt[a]{N\\sqrt[b]{N\\sqrt[c]{N}}} = \\sqrt[24]{N^{17}}$$ for all $N > 0$ with $N \\neq 1$. What is $b$?",
+   "choices": {
+    "A": "2",
+    "B": "4",
+    "C": "5",
+    "D": "3",
+    "E": "6"
+   },
+   "answer": "D",
+   "solution": "The left side is $N$ raised to the power $\\frac{1}{a}\\left(1+\\frac{1}{b}\\left(1+\\frac{1}{c}\\right)\\right)$, so we need $\\frac{1}{a}\\left(1+\\frac{1}{b}\\left(1+\\frac{1}{c}\\right)\\right) = \\frac{17}{24}$. Since $\\frac{1}{b}(1+\\frac{1}{c}) \\le \\frac{1}{2} \\cdot \\frac{3}{2} = \\frac{3}{4}$, the quantity in parentheses is at most $\\frac{7}{4}$, forcing $a = 2$. Then $\\frac{1}{b}\\left(1+\\frac{1}{c}\\right) = \\frac{17}{12} - 1 = \\frac{5}{12}$, so $b = \\frac{12(c+1)}{5c}$. We need $5 \\mid (c+1)$, and checking $c = 4, 9, 14, \\dots$ shows only $c = 4$ gives an integer $b > 1$, namely $b = \\frac{12 \\cdot 5}{20} = 3$. Indeed $\\frac{1}{2}\\left(1+\\frac{1}{3}\\cdot\\frac{5}{4}\\right) = \\frac{1}{2} \\cdot \\frac{17}{12} = \\frac{17}{24}$. The answer is $\\boxed{3}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 14,
+   "source": "2013 AMC 12A Problem 14",
+   "question": "The solution to the equation $\\log_{3x} 9 = \\log_{2x} 27$, where $x$ is a positive real number other than $\\tfrac{1}{3}$ or $\\tfrac{1}{2}$, can be written as $\\tfrac{p}{q}$ where $p$ and $q$ are relatively prime positive integers. What is $p + q$?",
+   "choices": {
+    "A": "29",
+    "B": "31",
+    "C": "33",
+    "D": "35",
+    "E": "37"
+   },
+   "answer": "B",
+   "solution": "Writing both sides with natural logarithms, $\\frac{\\ln 9}{\\ln 3x} = \\frac{\\ln 27}{\\ln 2x}$, so $2\\ln 3 \\cdot \\ln 2x = 3\\ln 3 \\cdot \\ln 3x$, i.e. $2\\ln 2x = 3\\ln 3x$. Expanding, $2\\ln 2 + 2\\ln x = 3\\ln 3 + 3\\ln x$, so $\\ln x = 2\\ln 2 - 3\\ln 3 = \\ln \\frac{4}{27}$. Hence $x = \\frac{4}{27}$ (and $3x = \\frac{4}{9} \\neq 1$, $2x = \\frac{8}{27} \\neq 1$, so the bases are valid). Then $p+q = 4+27 = 31$. The answer is $\\boxed{31}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 15,
+   "source": "2011 AMC 12B Problem 15",
+   "question": "How many positive two-digit integers are factors of $2^{20}-1$?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "E",
+   "solution": "Factor: $2^{20}-1 = (2^{10}-1)(2^{10}+1) = 1023 \\cdot 1025 = (3 \\cdot 11 \\cdot 31)(5^2 \\cdot 41) = 3 \\cdot 5^2 \\cdot 11 \\cdot 31 \\cdot 41$. The two-digit factors are $11$, $15=3\\cdot 5$, $25=5^2$, $31$, $33=3\\cdot 11$, $41$, $55=5\\cdot 11$, $75=3\\cdot 5^2$, and $93=3\\cdot 31$ — a total of $9$ (any product involving $41$ or $31$ with another prime exceeds $99$, except those listed). The answer is $\\boxed{9}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 16,
+   "source": "2018 AMC 12B Problem 16",
+   "question": "The solutions of $(z+4)^6 = 64$ are plotted in the complex plane and connected to form a convex polygon. What is the area of this polygon?",
+   "choices": {
+    "A": "$6\\sqrt3$",
+    "B": "$3\\sqrt3$",
+    "C": "$4\\sqrt3$",
+    "D": "$8\\sqrt3$",
+    "E": "$12\\sqrt3$"
+   },
+   "answer": "A",
+   "solution": "The roots are the 6th roots of $64$ shifted by $-4$: a regular hexagon with circumradius $64^{1/6}=2$. Area $= \\frac{3\\sqrt3}{2}R^2 = \\frac{3\\sqrt3}{2}\\cdot 4 = 6\\sqrt3$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 17,
+   "source": "2017 AMC 12A Problem 17",
+   "question": "There are $12$ different complex numbers $z$ such that $z^{12}=1$. For how many of them is $z^4$ a real number?",
+   "choices": {
+    "A": "3",
+    "B": "5",
+    "C": "6",
+    "D": "4",
+    "E": "8"
+   },
+   "answer": "D",
+   "solution": "Write $z=e^{2\\pi i k/12}$; then $z^4 = e^{2\\pi i k/3}$ is real iff $3 \\mid k$ (so the angle is a multiple of $\\pi$): $k=0,3,6,9$ — $4$ values.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 18,
+   "source": "2024 AMC 12B Problem 18",
+   "question": "The Fibonacci numbers are defined by $F_1 = 1, F_2 = 1,$ and $F_n = F_{n-1} + F_{n-2}$ for $n \\geq 3.$ What is $${\\frac{F_2}{F_1}} + {\\frac{F_4}{F_2}} + {\\frac{F_6}{F_3}} + \\cdots + {\\frac{F_{16}}{F_8}}?$$",
+   "choices": {
+    "A": "100",
+    "B": "110",
+    "C": "115",
+    "D": "120",
+    "E": "130"
+   },
+   "answer": "D",
+   "solution": "Using the identity $F_{2k} = F_k L_k$, where $L_k$ is the $k$th Lucas number ($L_1 = 1$, $L_2 = 3$, $L_k = L_{k-1}+L_{k-2}$), each term $\\frac{F_{2k}}{F_k}$ equals $L_k$. The sum is $L_1 + L_2 + \\cdots + L_8 = 1+3+4+7+11+18+29+47 = 120$. (One can also verify directly: $F_2/F_1 = 1$, $F_4/F_2 = 3$, $F_6/F_3 = 4$, $F_8/F_4 = 7$, $F_{10}/F_5 = 11$, $F_{12}/F_6 = 18$, $F_{14}/F_7 = 29$, $F_{16}/F_8 = 47$.) The answer is $\\boxed{120}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 19,
+   "source": "2016 AMC 12A Problem 19",
+   "question": "Jerry starts at $0$ on the number line. He tosses a fair coin $6$ times; on heads he moves $+1$ and on tails $-1$. What is the probability that he ends at $0$?",
+   "choices": {
+    "A": "$\\frac{3}{16}$",
+    "B": "$\\frac{1}{4}$",
+    "C": "$\\frac{3}{8}$",
+    "D": "$\\frac{1}{2}$",
+    "E": "$\\frac{5}{16}$"
+   },
+   "answer": "E",
+   "solution": "He needs exactly 3 heads in 6 tosses: $\\frac{\\binom{6}{3}}{2^6} = \\frac{20}{64} = \\frac{5}{16}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 20,
+   "source": "2016 AMC 12A Problem 20",
+   "question": "A binary operation $\\diamondsuit$ has the properties that $a\\,\\diamondsuit\\, (b\\,\\diamondsuit \\,c) = (a\\,\\diamondsuit \\,b)\\cdot c$ and that $a\\,\\diamondsuit \\,a=1$ for all nonzero real numbers $a, b,$ and $c$. What is the value of $24\\,\\diamondsuit\\,(3\\,\\diamondsuit\\,12)$?",
+   "choices": {
+    "A": "8",
+    "B": "12",
+    "C": "24",
+    "D": "48",
+    "E": "96"
+   },
+   "answer": "E",
+   "solution": "First, $a\\diamondsuit 1 = a\\diamondsuit(a\\diamondsuit a) = (a\\diamondsuit a)\\cdot a = a$. Next, $(a\\diamondsuit b)\\cdot b = a\\diamondsuit(b\\diamondsuit b) = a\\diamondsuit 1 = a$, so $a\\diamondsuit b = \\frac{a}{b}$ for all nonzero $a, b$. Therefore $24\\diamondsuit(3\\diamondsuit 12) = 24 \\diamondsuit \\frac{3}{12} = \\frac{24}{1/4} = 96$. The answer is $\\boxed{96}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 21,
+   "source": "2015 AMC 12A Problem 21",
+   "question": "A circle passes through both foci of the ellipse $\\dfrac{x^2}{25}+\\dfrac{y^2}{9}=1$ and through both endpoints of its minor axis. What is the radius of this circle?",
+   "choices": {
+    "A": "4",
+    "B": "5",
+    "C": "$\\frac{20}{3}$",
+    "D": "$\\frac{25}{6}$",
+    "E": "$\\frac{13}{2}$"
+   },
+   "answer": "D",
+   "solution": "The foci are $(\\pm4,0)$ (since $c=\\sqrt{25-9}=4$) and the minor endpoints are $(0,\\pm3)$. The circle's center is $(0,k)$ with $16+k^2=(3-k)^2$, giving $k=-\\frac76$ and $r=\\sqrt{16+\\frac{49}{36}}=\\frac{25}{6}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 22,
+   "source": "2015 AMC 12B Problem 22",
+   "question": "Six people are to be seated around a circular table. Seatings that differ only by a rotation are considered the same. In how many distinguishable seatings do two specified people, Ann and Ben, sit next to each other?",
+   "choices": {
+    "A": "24",
+    "B": "36",
+    "C": "48",
+    "D": "60",
+    "E": "72"
+   },
+   "answer": "C",
+   "solution": "Treat Ann and Ben as a block: $4$ remaining individuals plus the block give $(5-1)! = 24$ circular arrangements, and the block can be ordered $2$ ways: $24 \\cdot 2 = 48$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 23,
+   "source": "2014 AMC 12A Problem 23",
+   "question": "The decimal representation of $\\dfrac{1}{37}$ is $0.\\overline{027027\\ldots}$. What is the length of its repeating period?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "6",
+    "D": "9",
+    "E": "27"
+   },
+   "answer": "B",
+   "solution": "Since $37 \\cdot 27 = 999$, we have $\\frac{1}{37} = \\frac{27}{999} = 0.\\overline{027}$, period $3$ (and $10^1 \\not\\equiv 1 \\pmod{37}$, so the period is not smaller).",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 24,
+   "source": "2023 AMC 12A Problem 24",
+   "question": "Let $K$ be the number of sequences $A_1$, $A_2$, $\\dots$, $A_n$ such that $n$ is a positive integer less than or equal to $5$, each $A_i$ is a subset of $\\{1, 2, 3, 4, 5\\}$, and $A_{i-1} \\subseteq A_i$ for each $i$ between $2$ and $n$, inclusive. What is $K$?",
+   "choices": {
+    "A": "12000",
+    "B": "12200",
+    "C": "12375",
+    "D": "12625",
+    "E": "11875"
+   },
+   "answer": "B",
+   "solution": "Fix $n$ and build the chain $A_1 \\subseteq A_2 \\subseteq \\cdots \\subseteq A_n$ element by element. For each of the $5$ elements of $\\{1,2,3,4,5\\}$, record the first index at which it appears: it may enter at stage $1, 2, \\dots, n$, or never — that is $n+1$ choices per element, and every such assignment determines a unique valid chain. Hence for fixed $n$ there are $(n+1)^5$ chains. Summing over $n = 1, \\dots, 5$: $K = 2^5 + 3^5 + 4^5 + 5^5 + 6^5 = 32 + 243 + 1024 + 3125 + 7776 = 12200$. The answer is $\\boxed{12200}$.",
+   "type": "multiple_choice",
+   "points": 6
+  },
+  {
+   "n": 25,
+   "source": "2015 AMC 12B Problem 25",
+   "question": "A bee starts flying from point $P_0$. She flies $1$ inch due east to point $P_1$. For $j \\ge 1$, once the bee reaches point $P_j$, she turns $90^{\\circ}$ counterclockwise and then flies $j+1$ inches straight to point $P_{j+1}$. How far, in inches, is $P_{20}$ from $P_0$?",
+   "choices": {
+    "A": "5\\sqrt{2}",
+    "B": "8",
+    "C": "10",
+    "D": "8\\sqrt{2}",
+    "E": "10\\sqrt{2}"
+   },
+   "answer": "E",
+   "solution": "The directions cycle east, north, west, south. The east-west displacement is $(1+5+9+13+17) - (3+7+11+15+19) = 45 - 55 = -10$, and the north-south displacement is $(2+6+10+14+18) - (4+8+12+16+20) = 50 - 60 = -10$. So $P_{20} = (-10, -10)$ relative to $P_0$, and the distance is $\\sqrt{10^2+10^2} = 10\\sqrt{2}$. The answer is $\\boxed{10\\sqrt{2}}$.",
+   "type": "multiple_choice",
+   "points": 6
+  }
+ ]
+}

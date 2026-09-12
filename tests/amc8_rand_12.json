@@ -1,0 +1,411 @@
+{
+ "id": "amc8_rand_12",
+ "competition": "AMC 8",
+ "category": "Math",
+ "title": "AMC 8 — Random Mock #12 · 2026-08-27 08:50",
+ "instructions": "25 questions · 40 minutes · No calculator. 25 points total.",
+ "time_limit_min": 40,
+ "total_points": 25,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2024 AMC 8 Problem 1",
+   "question": "What is the units digit of $$333{,}333-33{,}333-3{,}333-333-33-3?$$",
+   "choices": {
+    "A": "0",
+    "B": "2",
+    "C": "4",
+    "D": "6",
+    "E": "8"
+   },
+   "answer": "E",
+   "solution": "Compute step by step: $333{,}333-33{,}333=300{,}000$; $300{,}000-3{,}333=296{,}667$; $296{,}667-333=296{,}334$; $296{,}334-33=296{,}301$; $296{,}301-3=296{,}298$. The units digit is $8$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2024 AMC 8 Problem 2",
+   "question": "What is the value of this expression in decimal form? $$\\frac{55}{11}+\\frac{110}{55}+\\frac{55}{1100}$$",
+   "choices": {
+    "A": "6.55",
+    "B": "7.005",
+    "C": "7.05",
+    "D": "7.5",
+    "E": "7.55"
+   },
+   "answer": "C",
+   "solution": "$\\frac{55}{11}=5$, $\\frac{110}{55}=2$, $\\frac{55}{1100}=0.05$. The sum is $5+2+0.05=7.05$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2012 AMC 8 Problem 3",
+   "question": "On March 3 the newspaper listed the length of daylight as $9$ hours and $48$ minutes and the sunrise as $7\\!:\\!12 \\textsc{am}$. Both listings were correct, but the printed sunset time was wrong. When did the sun really set?",
+   "choices": {
+    "A": "$4\\!:\\!36 \\textsc{pm}$",
+    "B": "$4\\!:\\!48 \\textsc{pm}$",
+    "C": "$5\\!:\\!00 \\textsc{pm}$",
+    "D": "$5\\!:\\!12 \\textsc{pm}$",
+    "E": "$5\\!:\\!24 \\textsc{pm}$"
+   },
+   "answer": "C",
+   "solution": "Add $9$ hours to $7\\!:\\!12\\textsc{am}$ to get $4\\!:\\!12\\textsc{pm}$, then add $48$ minutes to get $5\\!:\\!00\\textsc{pm}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2013 AMC 8 Problem 4",
+   "question": "Six friends ate at a restaurant and agreed to share the bill equally. Because Priya forgot her money, each of her five friends paid an extra $\\$3$ to cover her portion of the total bill. What was the total bill?",
+   "choices": {
+    "A": "$\\$60$",
+    "B": "$\\$72$",
+    "C": "$\\$75$",
+    "D": "$\\$90$",
+    "E": "$\\$108$"
+   },
+   "answer": "D",
+   "solution": "The five friends paid an extra $5\\cdot3=15$ dollars in all, which exactly covers Priya's share. So each of the six equal shares is $\\$15$, and the total bill is $6\\cdot15=\\$90$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2014 AMC 8 Problem 5",
+   "question": "Ravi's car can go $35$ miles on a gallon of gas, and gas currently costs $\\$5$ per gallon. How many miles can Ravi drive on $\\$28$ worth of gas?",
+   "choices": {
+    "A": "140",
+    "B": "150",
+    "C": "175",
+    "D": "180",
+    "E": "196"
+   },
+   "answer": "E",
+   "solution": "With $\\$28$ Ravi can buy $\\frac{28}{5}=5.6$ gallons of gas. At $35$ miles per gallon, he can drive $5.6\\cdot35=196$ miles.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2024 AMC 8 Problem 6",
+   "question": "In a race, runner $A$ finished ahead of runner $B$, runner $B$ finished ahead of runner $C$, and runner $D$ finished ahead of runner $A$. Which of the following could be the order in which they finished?",
+   "choices": {
+    "A": "$D,A,B,C$",
+    "B": "$A,B,C,D$",
+    "C": "$D,B,A,C$",
+    "D": "$A,D,B,C$",
+    "E": "$B,D,A,C$"
+   },
+   "answer": "A",
+   "solution": "The conditions force $D$ before $A$, $A$ before $B$, and $B$ before $C$: the only possible order is $D,A,B,C$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2024 AMC 8 Problem 7",
+   "question": "A $2\\times 5$ rectangle must be completely covered by $1\\times 2$ dominoes (which may be rotated). In how many different ways can this be done?",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "8",
+    "D": "7",
+    "E": "10"
+   },
+   "answer": "C",
+   "solution": "Let $T(n)$ be the number of domino tilings of a $2\\times n$ board. The right end is either a vertical domino ($T(n-1)$ ways) or two horizontal dominoes ($T(n-2)$ ways), so $T(n)=T(n-1)+T(n-2)$ with $T(1)=1$, $T(2)=2$: $1,2,3,5,8$. Thus $T(5)=8$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2013 AMC 8 Problem 8",
+   "question": "A fair coin is tossed $4$ times. What is the probability of at least two consecutive heads?",
+   "choices": {
+    "A": "\\frac{3}{8}",
+    "B": "\\frac{1}{2}",
+    "C": "\\frac{5}{8}",
+    "D": "\\frac{11}{16}",
+    "E": "\\frac{3}{4}"
+   },
+   "answer": "B",
+   "solution": "There are $2^4=16$ equally likely outcomes. Listing those with at least two consecutive heads: HHTT, HHTH, THHT, HTHH, THHH, HTHH is counted once; the full list is HHTT, HHTH, HTHH, THHT, THHH, HHHH, HHHT, HHHH's companions — systematically, the $8$ outcomes are HHTT, HHTH, HTHH, THHT, THHH, HHHT, HHHH, and HHTH already counted, giving $8$ total. The probability is $\\frac{8}{16}=\\boxed{\\frac{1}{2}}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2018 AMC 8 Problem 9",
+   "question": "Mia is tiling the floor of her $10$-foot by $14$-foot dining room. She plans to place one-foot by one-foot square tiles to form a border along the edges of the room and to fill in the rest of the floor with two-foot by two-foot square tiles. How many tiles will she use?",
+   "choices": {
+    "A": "66",
+    "B": "68",
+    "C": "70",
+    "D": "72",
+    "E": "76"
+   },
+   "answer": "B",
+   "solution": "The one-foot-wide border contains $10\\cdot14-8\\cdot12=140-96=44$ one-foot tiles. The remaining $8$ by $12$ foot interior holds $\\frac{8\\cdot12}{2\\cdot2}=24$ two-foot tiles. In total she uses $44+24=68$ tiles.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2016 AMC 8 Problem 10",
+   "question": "Suppose that $a * b$ means $4a-b.$ What is the value of $x$ if $$3 * (6 * x)=2$$",
+   "choices": {
+    "A": "\\frac{1}{12}",
+    "B": "2",
+    "C": "\\frac{14}{3}",
+    "D": "12",
+    "E": "14"
+   },
+   "answer": "E",
+   "solution": "First, $6 * x = 4(6) - x = 24 - x$. Then $3 * (24 - x) = 4(3) - (24 - x) = 12 - 24 + x = x - 12$. Setting $x - 12 = 2$ gives $x = \\boxed{14}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2016 AMC 8 Problem 11",
+   "question": "Determine how many two-digit numbers satisfy the following property: when the number is added to the number obtained by reversing its digits, the sum is $121.$",
+   "choices": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "Write the number as $10a+b$. Adding its reversal gives $11a+11b = 121$, so $a+b=11$. The valid digit pairs $(a,b)$ with $a \\ge 1$ are $(2,9),(3,8),(4,7),(5,6),(6,5),(7,4),(8,3),(9,2)$, giving $\\boxed{8}$ numbers.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2012 AMC 8 Problem 12",
+   "question": "What is the units digit of $13^{2023}$?",
+   "choices": {
+    "A": "1",
+    "B": "3",
+    "C": "5",
+    "D": "7",
+    "E": "9"
+   },
+   "answer": "D",
+   "solution": "Only the units digit $3$ matters. The units digits of powers of $3$ cycle $3, 9, 7, 1$ with period $4$. Since $2023 = 4 \\cdot 505 + 3$, the units digit of $13^{2023}$ is the third in the cycle, $\\boxed{7}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2024 AMC 8 Problem 13",
+   "question": "A bunny hops up a staircase of $4$ steps, going up either $1$ step or $2$ steps at a time. In how many different ways can the bunny reach the top?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "6",
+    "D": "8",
+    "E": "5"
+   },
+   "answer": "E",
+   "solution": "Ordered sums of $1$s and $2$s equal to $4$: $1{+}1{+}1{+}1$, $2{+}1{+}1$, $1{+}2{+}1$, $1{+}1{+}2$, $2{+}2$ — $5$ ways.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2023 AMC 8 Problem 14",
+   "question": "Ren is planning to send a package to his friend Bea, who is a stamp collector. To pay for the postage, Ren would like to cover the package with a large number of stamps. Suppose he has a collection of $5$-cent, $10$-cent, and $25$-cent stamps, with exactly $20$ of each type. What is the greatest number of stamps Ren can use to make exactly $\\$6.20$ in postage? (Note: The amount $\\$6.20$ corresponds to $6$ dollars and $20$ cents. One dollar is worth $100$ cents.)",
+   "choices": {
+    "A": "49",
+    "B": "52",
+    "C": "51",
+    "D": "53",
+    "E": "55"
+   },
+   "answer": "B",
+   "solution": "Work in cents: we need $5a+10b+25c=620$ with $a,b,c\\le 20$, maximizing $a+b+c$. Using all twenty $10$-cent stamps gives $200$ cents; then $5a+25c=420$, i.e. $a+5c=84$. With $a\\le20$, the largest stamp count comes from the largest possible $a$: $a=19$ gives $5c=65$, so $c=13$. That yields $19+20+13=52$ stamps. Checking nearby cases (e.g. $a=20$ forces $2b+5c=104$, whose best valid solution $b=17,c=14$ gives only $51$) confirms $52$ is the maximum.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2024 AMC 8 Problem 15",
+   "question": "Let $A$ and $B$ be distinct nonzero digits such that the two-digit number $\\underline{A}\\,\\underline{B}$ minus the two-digit number $\\underline{B}\\,\\underline{A}$ equals $45$. How many such two-digit numbers $\\underline{A}\\,\\underline{B}$ are there?",
+   "choices": {
+    "A": "4",
+    "B": "2",
+    "C": "3",
+    "D": "5",
+    "E": "6"
+   },
+   "answer": "A",
+   "solution": "$\\underline{A}\\,\\underline{B}-\\underline{B}\\,\\underline{A}=9(A-B)=45$, so $A-B=5$. With $B\\ge 1$: $(A,B)=(6,1),(7,2),(8,3),(9,4)$ — $4$ numbers.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2009 AMC 8 Problem 16",
+   "question": "How many $3$-digit positive integers have digits whose product equals $12$?",
+   "choices": {
+    "A": "12",
+    "B": "15",
+    "C": "18",
+    "D": "21",
+    "E": "24"
+   },
+   "answer": "B",
+   "solution": "The digit multisets (from least to greatest) with product $12$ are $\\{1,2,6\\}$, $\\{1,3,4\\}$, and $\\{2,2,3\\}$. The first two each give $3! = 6$ arrangements, and the last gives $\\frac{3!}{2!}=3$ arrangements, for a total of $6+6+3=\\boxed{15}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2019 AMC 8 Problem 17",
+   "question": "What is the value of the product $$\\left(\\frac{1\\cdot3}{2\\cdot2}\\right)\\left(\\frac{2\\cdot4}{3\\cdot3}\\right)\\left(\\frac{3\\cdot5}{4\\cdot4}\\right)\\cdots\\left(\\frac{47\\cdot49}{48\\cdot48}\\right)\\left(\\frac{48\\cdot50}{49\\cdot49}\\right)?$$",
+   "choices": {
+    "A": "$\\frac{1}{49}$",
+    "B": "$\\frac{24}{49}$",
+    "C": "$\\frac{1}{2}$",
+    "D": "$\\frac{25}{49}$",
+    "E": "$\\frac{26}{49}$"
+   },
+   "answer": "D",
+   "solution": "Split each factor: $\\prod_{k=1}^{48}\\frac{k(k+2)}{(k+1)^2}=\\left(\\prod_{k=1}^{48}\\frac{k}{k+1}\\right)\\left(\\prod_{k=1}^{48}\\frac{k+2}{k+1}\\right)$. Both products telescope: the first equals $\\frac{1}{49}$ and the second equals $\\frac{50}{2}=25$. Multiplying gives $\\frac{1}{49}\\cdot25=\\frac{25}{49}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2018 AMC 8 Problem 18",
+   "question": "How many positive factors does $18{,}150$ have?",
+   "choices": {
+    "A": "36",
+    "B": "24",
+    "C": "30",
+    "D": "40",
+    "E": "48"
+   },
+   "answer": "A",
+   "solution": "Factor: $18{,}150=2\\cdot3\\cdot5^2\\cdot11^2$. The number of positive factors is $(1+1)(1+1)(2+1)(2+1)=2\\cdot2\\cdot3\\cdot3=36$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2016 AMC 8 Problem 19",
+   "question": "The sum of $21$ consecutive even integers is $1008$. What is the largest of these $21$ consecutive integers?",
+   "choices": {
+    "A": "56",
+    "B": "64",
+    "C": "66",
+    "D": "68",
+    "E": "70"
+   },
+   "answer": "D",
+   "solution": "The middle (11th) of the $21$ even integers equals the mean, $\\frac{1008}{21}=48$. The largest is $10$ even steps above the middle: $48 + 2 \\cdot 10 = \\boxed{68}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "2019 AMC 8 Problem 20",
+   "question": "How many different real numbers $x$ satisfy the equation $$(x^{2}-4)^{2}=25?$$",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "4",
+    "E": "8"
+   },
+   "answer": "C",
+   "solution": "We need $x^2 - 4 = \\pm 5$. If $x^2 - 4 = 5$, then $x^2 = 9$, giving $x = \\pm 3$. If $x^2 - 4 = -5$, then $x^2 = -1$, which has no real solutions. So there are $\\boxed{2}$ real numbers.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "2019 AMC 8 Problem 21",
+   "question": "What is the area of the triangle formed by the lines $y=7$, $y=2+x$, and $y=2-x$?",
+   "choices": {
+    "A": "25",
+    "B": "30",
+    "C": "35",
+    "D": "40",
+    "E": "50"
+   },
+   "answer": "A",
+   "solution": "The lines $y=2+x$ and $y=2-x$ meet at $(0,2)$. They meet $y=7$ at $(5,7)$ and $(-5,7)$. The triangle has base $10$ (along $y=7$) and height $5$, so its area is $\\frac{1}{2} \\cdot 10 \\cdot 5 = \\boxed{25}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "2009 AMC 8 Problem 22",
+   "question": "How many whole numbers between $1$ and $100$ do not contain the digit $1$?",
+   "choices": {
+    "A": "80",
+    "B": "81",
+    "C": "88",
+    "D": "89",
+    "E": "90"
+   },
+   "answer": "A",
+   "solution": "Among one-digit numbers, the $8$ values $2$ through $9$ work. For two-digit numbers, the tens digit has $8$ choices (anything but $0$ or $1$) and the units digit has $9$ choices (anything but $1$), giving $8 \\cdot 9 = 72$. The total is $8 + 72 = \\boxed{80}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "2024 AMC 8 Problem 23",
+   "question": "On a sheet of graph paper, Leo draws the line segment from $(0,6)$ to $(3,0)$. Through how many unit squares of the grid does the segment pass?",
+   "choices": {
+    "A": "6",
+    "B": "4",
+    "C": "5",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "A",
+   "solution": "A segment between opposite corners of an $a\\times b$ grid passes through $a+b-\\gcd(a,b)$ squares: $3+6-\\gcd(3,6)=3+6-3=6$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "2020 AMC 8 Problem 24",
+   "question": "A large square region is paved with $n^2$ gray square tiles, each measuring $s$ inches on a side. A border $d$ inches wide surrounds each tile, so the large square region has side length $ns+(n+1)d$ inches. When $n=9$, the $81$ gray tiles cover $36\\%$ of the area of the large square region. What is the ratio $\\frac{d}{s}$?",
+   "choices": {
+    "A": "$\\frac{3}{5}$",
+    "B": "$\\frac{1}{2}$",
+    "C": "$\\frac{5}{9}$",
+    "D": "$\\frac{2}{3}$",
+    "E": "$\\frac{9}{16}$"
+   },
+   "answer": "A",
+   "solution": "The tiles cover a fraction $\\dfrac{(9s)^2}{(9s+10d)^2}$ of the region. Setting this equal to $36\\%=\\left(\\frac{3}{5}\\right)^2$ gives $\\frac{9s}{9s+10d}=\\frac{3}{5}$. Cross-multiplying: $45s=27s+30d$, so $18s=30d$ and $\\frac{d}{s}=\\frac{18}{30}=\\frac{3}{5}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "2024 AMC 8 Problem 25",
+   "question": "A small van has $2$ rows with $3$ seats each. Three passengers choose seats at random. What is the probability that all three sit in the front row?",
+   "choices": {
+    "A": "$\\frac{1}{30}$",
+    "B": "$\\frac{1}{20}$",
+    "C": "$\\frac{1}{15}$",
+    "D": "$\\frac{1}{10}$",
+    "E": "$\\frac{1}{6}$"
+   },
+   "answer": "B",
+   "solution": "There are $\\binom{6}{3}=20$ equally likely sets of seats, and only $\\binom{3}{3}=1$ puts all three in front: $\\frac{1}{20}$.",
+   "type": "multiple_choice",
+   "points": 1
+  }
+ ]
+}

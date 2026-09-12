@@ -1,0 +1,161 @@
+{
+ "id": "smt_rand_17",
+ "competition": "SMT — Team",
+ "category": "Math",
+ "title": "SMT — Team — Random Mock #17 · 2026-08-26 16:33",
+ "instructions": "15 questions · 50 minutes · No calculator. 15 points total.",
+ "time_limit_min": 50,
+ "total_points": 15,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2019 SMT Team Problem 1",
+   "question": "Given x + y = 7, ﬁnd the value of x that minimizes 4 x2 + 12xy + 9y2.",
+   "choices": null,
+   "answer": "21",
+   "solution": "Answer: 21. Given x +y = 7, ﬁnd the value of x that minimizes 4 x2 + 12xy + 9y2. Answer: 21 Solution: Factoring, 4x2 + 12xy + 9y2 = (2x + 3y)2. This is minimized when 2x + 3y = 0. So, 2x + 3(7−x) = 0. Thus, x = 21.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2011 SMT Team Problem 2",
+   "question": "Find all integers x for which|x3 + 6x2 + 2x− 6| is prime.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1, −1. Find all integers x for which|x3 + 6x2 + 2x− 6| is prime. Answer: 1, −1 The whole equation is≡ 0 (mod 3), so x3 + 6x2 + 2x− 6 should be 3 or−3. The equation (x3 + 6x2 + 2x−6)2 = 32 can be rewritten using diﬀerence of squares as (x−1)(x2 +7x−9)(x+1)(x2 +5x−3) = 0, so only 1 and −1 work for x.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2022 SMT Team Problem 3",
+   "question": "Stanford is building a new dorm for students, and they are looking to offer 2 room configurations: • Configuration A: a one-room double, which is a square with side length of x; • Configuration B: a two-room double, which is two connected rooms, each of them squares with a side length of y. To make things fair for everyone, Stanford wants a one-room double (rooms of configuration A) to be exactly 1m 2 larger than the total area of a two-room double. Find the number of possible pairs of side lengths (x,y ), where x∈ N,y∈ N, such that x−y <2022.",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. Stanford is building a new dorm for students, and they are looking to offer 2 room configurations: • Configuration A: a one-room double, which is a square with side length of x; • Configuration B: a two-room double, which is two connected rooms, each of them squares with a side length of y. SMT 2022 Team Test Solutions April 16–17, 2022 To make things fair for everyone, Stanford wants a one-room double (rooms of configuration A) to be exactly 1m 2 larger than the total area of a two-room double. Find the number of possible pairs of side lengths (x,y ), where x∈ N,y∈ N, such that x−y <2022. Answer: 5 Solution: We are looking for solutions to x2− 2y2 = 1. Note that this is an example of Pell’s equation, and so if (x0,y 0) is the smallest possible solution (also called fundamental solution), we can generate an infinite array of solutions via the recurrent formulas xn+1 =x0xn + 2y0yn yn+1 =y0xn +x0yn. It is easy to observe that (3, 2) is the fundamental solution, and from there we can easily build the solutions (3, 2), (17, 12), (17, 12), (99, 50), (497, 348), (2883, 2038), and the next one is (16801, 11880), which is clearly has a difference larger than 2022 (note than the question only asks for the number of solutions, so these need not be precisely calculated). Therefore, the answer is 5.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2020 SMT Team Problem 4",
+   "question": "Let C be the circle of radius 2 centered at (4, 4) and let L be the line x =−2. The set of points equidistant from C and from L can be written as ax2 +by2 +cxy +dx +ey +f = 0 where a,b,c,d,e,f are integers and have no factors in common. What is |a +b +c +d +e +f|?",
+   "choices": null,
+   "answer": "7",
+   "solution": "Answer: 7. Let C be the circle of radius 2 centered at (4, 4) and let L be the line x =−2. The set of points equidistant from C and from L can be written as ax2 +by2 +cxy +dx +ey +f = 0 where a,b,c,d,e,f are integers and have no factors in common. What is |a +b +c +d +e +f|? SMT 2020 Team Test Solutions February 22, 2020 Answer: 7 Solution 1: The distance between point (x,y ) and the circle is √ (x− 4)2 + (y− 4)2− 2. The distance between (x,y ) and the line x =−2 is|x + 2|. Clearly, for any ( x,y ) equidistant from the line and circle, x >−2. Hence, the set of points for which these distances are equal is√ (x− 4)2 + (y− 4)2− 2 = x + 2. Adding 2 to both sides, squaring, and rearranging gives us y2− 16x− 8y + 16 = 0. Thus, our answer is |0 + 1 + 0− 16− 8 + 16| = 7 Solution 2: Notice that for any point P outside of the circle, the distance from P to the circle is precisely 2 less than the distance between P and the center of the circle. Thus, the locus of points is equidistant from the point (4 , 4) and the line x =−4. But this is simply a parabola with focus (4, 4) and directrix x =−4. We can then easily see that the vertex is at (0 , 4) giving us the equation 4 ax = (y− 4)2, where a = 4 is the distance from the vertex to the focus. Expanding and rearranging, we get the equation y2− 8y + 16− 16x, which gives us the answer 7 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2021 SMT Team Problem 5",
+   "question": "A potter makes a bowl, beginning with a sphere of clay and then cutting away the top and bottom of the sphere with two parallel cuts that are equidistant from the center. Finally, he hollows out the remaining shape, leaving a base at one end. Assume that the thickness of the bowl is negligible. If the potter wants the bowl to hold a volume that is 13 27 of the volume of the sphere he started with, the distance from the center at which he makes his cuts should be what fraction of the radius?",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. A potter makes a bowl, beginning with a sphere of clay and then cutting away the top and bottom of the sphere with two parallel cuts that are equidistant from the center. Finally, he hollows out the remaining shape, leaving a base at one end. Assume that the thickness of the bowl is negligible. If the potter wants the bowl to hold a volume that is 13 27 of the volume of the sphere he started with, the distance from the center at which he makes his cuts should be what fraction of the radius? SMT 2021 Team Test Solutions April 17, 2021 Answer: 1 3 Solution: Without loss of generality, we can let the radius of the sphere be 1. If the cuts are made at a distance of a from the center of the sphere, the volume of the bowl can be calculated as ∫ a −a π(1−x2)dx =π ( x− 1 3x3 )⏐⏐⏐ a −a =π ( 2a− 2 3a3 ) . We want this to be equal to 13 27· 4 3π = 52 81π. π ( 2a− 2 3a3 ) = 52 81π ⇒ 6a− 2a3 = 52 27 ⇒a3− 3a + 26 27 = 0. Notice that 3· 1 3− ( 1 3 )3 = 26 27, so 1 3 is a solution to the equation. The polynomial can be factored as 1 27(3a− 1)(9a2 + 3a− 26) = 0. The solutions to the quadratic 9 a2 + 3a− 26 are both not in the range−1≤a≤ 1, so the answer is 1 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2013 SMT Team Problem 6",
+   "question": "How many distinct sets of 5 distinct positive integers A satisfy the property that for any positive integerx≤ 29, a subset of A sums to x?",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. How many distinct sets of 5 distinct positive integers A satisfy the property that for any positive integerx≤ 29, a subset of A sums to x? Answer: 4 Solution: Leta1,...,a 5 denote the 5 elements of A in increasing order. Let S denote∑5 i=1ai. First, note that 1 , 2∈ A because there are no other ways to obtain 1 and 2. Hence, we only have to think about the other three elements of A. Note that there are 2 5− 1 = 31 non-empty subsets of A, so at most two of those subsets are not useful to the subset-sum constraint, either by having sum greater than 29 or being redundant with another subset. We condition on the value of S. This sum is clearly at least 29, and must be at most 31, since S, S− 1, and S− 2 are all achievable subset-sums, so we require S− 2≤ 29. IfS = 31, then A\\{ 1} has sum 30, so each subset has a distinct sum. Therefore, 4 ∈A because the only other way to get 4 would be 1 + 3, but 3 ∈ A would imply there were two diﬀerent ways to get 3, namely 1 + 2 and 3. Similarly, since the subsets of {1, 2, 4} can sum to any positive integer less than 8, 8 ∈A. 16∈A for the same reason for the set {1, 2, 4, 8}, and so A is completely determined. SMT 2013 Team Test Solutions February 2, 2013 IfS = 30, we may have exactly one pair of subsets with the same sum. Hence, we still get 4 ∈A because 3∈A would imply a1 +a2 =a3 and a1 +a2 +a5 =a3 +a5. Similarly, 8∈A. Finally, since we know all elements of A must sum to 30, we choose a5 = 15. If S = 29, then we still have 4 ∈ A because there will be more than two redundant pairs of subsets if 3 ∈ S. In general, we cannot have x +y = z for x,y,z ∈ A because there would be too many redundant sets. Hence, a4≥ 7. It can be at most 8, since otherwise there would be no way to achieve a sum of 8, so there are two cases for a4. Each choice of a4 determines a5 by the condition on S. We can verify that a4 = 7,a 5 = 15 works because{1, 2, 4} can generate all sums≤ 7, so{1, 2, 4, 7} can generate all sums ≤ 14. Adding 15 clearly yields all sums ≤ 29. The other case can be checked trivially. Hence, in total there are 4 viable sets.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2022 SMT Team Problem 7",
+   "question": "Consider the sequence of integers an defined by a1 = 1, ap =p for prime p and amn =man +nam for m,n> 1. Find the smallest n such that an2 2022 is a perfect power of 3.",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3 337. Consider the sequence of integers an defined by a1 = 1, ap =p for prime p and amn =man +nam for m,n> 1. Find the smallest n such that an2 2022 is a perfect power of 3. Answer: 3 337 Solution 1: Dividing by mn on both sides of amn =man +nam we get amn mn = an n + am m. Therefore, we can build up to an1n2...nk n1n2...n k = kX i=1 ani ni Now, if the canonical prime factorization of n is n =Q ipαi i , we get n2 = Y i p2αi i =⇒ an2 n2 = X i 2αiapi pi = 2 X i αi pi Multiplying by n2 on both sides, we can get an expression for an2 as an2 = 2 Y i p2αi i !X i αiapi pi We want an2 2022 to be a perfect power of 3, hence an2 = 2022· 3r = 2· 3r+1· 337. Since 2 is already a factor in an2, we can conclude that n can have at most 2 prime factors, namely 3 and 337. Case 1: n =pα⇔αp2α−1 = 337· 3r+1. Obviously,p̸= 337, since r> 0, and so, p = 3,α = 337, and we get n = 3337. Case 2: n = 3α· 337. It is easy to check that 337 cannot be raised to any power beyond 1. Now we have an2 = 2· 32α−1· 337(337α + 3) = 2· 3r+1· 337 Therefore, we have 337α + 3 = 3t for some t. From here, we can express α = 3t−3 337 , from which follows that 3t−1≡ 1(mod 337). Note that we are looking only for candidate values ofα< 337, or equivalently 5<t< 11. We can quickly check that none of the values for t work (note that the smallest t is 169, i.e. the multiplicative order ord337(3) = 168), and so, the minimum solution is n = 3337. Solution 2: Begin as before, having amn mn = am m + an n . Now, let bn = an n . Then, if n = pe1 1 ·pe2 2 ·... ·pek k , we can see that bn = Pk i=1ek by removing one such factor and inducting. SMT 2022 Team Test Solutions April 16–17, 2022 In addition, bn2 = 2bn so an2 = 2n2bn. Hence, an2 2·3·337 = n2·bn 3·337 . This implies that 337 ∤ n, as otherwise n2 337 would have an extra factor. Hence, n2 = 3 2k for some k, and n2·bn = k· 32k. Therefore, we need k = 337 (since 337|k) for minimality and therefore n = 3337.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2019 SMT Team Problem 8",
+   "question": "Let Rn be the set of vectors ( x1, x2, . . . , xn) where x1, x2, . . . , xn are all real numbers. Let ||(x1, . . . , xn)|| denote √ x2 1 + . . . + x2n. Let S be the set in R9 given by S ={(x, y, z) : x, y, z∈ R3, 1 =||x|| =||y− x|| =||z− y||} If a point ( x, y, z) is uniformly at random from S, what is E[||z||2]?",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Let Rn be the set of vectors ( x1,x 2,...,x n) where x1,x 2,...,x n are all real numbers. Let ||(x1,...,x n)|| denote √ x2 1 +... +x2n. Let S be the set in R9 given by S ={(x,y,z ) :x,y,z ∈ R3, 1 =||x|| =||y−x|| =||z−y||} If a point (x,y,z ) is uniformly at random from S, what is E[||z||2]? Answer: 3 Solution: SMT 2019 Team Test Solutions March 2, 2019 Note that if we write r1 =x,r 2 =y−x,r 3 =z−y, then we have S ={(r1,r 1 +r2,r 1 +r2 +r3) :r1,r 2,r 3∈ R3, 1 =||r1|| =||r2|| =||r3||}. In this case, we have E[||z||2] = E[||r1 +r2 +r3||2]. Note that if ( ri)j is the jth coordinate of ri, then E[(ri)j] = 0 by symmetry. So by linearity of independence, and the fact that r1,r 2,r 3 are independent, we have E[||z||2] =E[(r1)2 1 + (r2)2 1 + (r3)2 1 +...] + 2E[(r1)1(r2)1 + (r1)1(r3)1 + (r2)1(r3)1 +...]. In this expansion, note that we can group the squared terms by ri, i.e. E[(r1)2 1 + (r2)2 1 + (r3)2 1 +...] =E[||r1||2] +E[||r2||2] +E[||r3||2] = 1 + 1 + 1 = 3. The other terms in this expansion are of the form E[(ri)j(rk)𝓁] =E[(ri)j]E[(rk)𝓁] = 0. Thus, we conclude that E[||z||2] =E[||r1||2] +E[||r2||2] +E[||r3||2] = 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2020 SMT Team Problem 9",
+   "question": "Solve for C: 2π 3 = ∫ 1 0 1√ Cx−x2dx. SMT 2020 Team Test February 22, 2020",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. Solve for C: 2π 3 = ∫ 1 0 1√ Cx−x2dx. Answer: 4 3 Solution: 2π 3 = ∫ 1 0 1√ Cx−x2dx = ∫ 1 0 1√ C2 4 − (x− C 2 )2 dx = ∫ 1 0 1 C 2 √ 1− 2 C (x− C 2 )2 dx We make the substitution cosθ = 2 C (x− C 2 ) and convert the limits of integration accordingly. SMT 2020 Team Test Solutions February 22, 2020 2 Cdx =− sinθdθ 2π 3 = ∫ θ2 θ1 − sinθ√ 1− cos2θ dθ = ∫ θ2 θ1 −1dθ =θ1−θ2 θ1 = cos−1 [ 2 C ( 0− C 2 )] =π θ2 = cos−1 [ 2 C ( 1− C 2 )] = cos−1 ( 2 C− 1 ) 2π 3 =π− cos−1 ( 2 C− 1 ) 2 C− 1 = cosπ 3 = 1 2 C = 4 3 ThusC should be 4 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2021 SMT Team Problem 10",
+   "question": "∆ABC has side lengths AB = 5 , AC = 10 , and BC = 9. The median of ∆ABC from A intersects the circumcircle of the triangle again at point D. What is BD + CD?",
+   "choices": null,
+   "answer": "135",
+   "solution": "Answer: 135. ∆ABC has side lengths AB = 5,AC = 10, and BC = 9. The median of ∆ABC from A intersects the circumcircle of the triangle again at point D. What is BD +CD? Answer: 135 13 Solution: Let M be the midpoint of BC and m the length of AM. In the circumcircle, we see that∆BMA∼∆ DMC and∆CMA ∼∆ DMB . This gives us the equations 9 2 m = BD 10 ⇒ BD = 45 m and 9 2 m = CD 5 ⇒CD = 45 2m. Let BD = 2x and CD =x. Using the Law of Cosines, we have cos A = (AB)2+(AC)2−(BC )2 2(AB)(AC) = 52+102−92 2×5×10 = 11",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2023 SMT Team Problem 11",
+   "question": "Define the Fibonacci sequence by F0 = 0, F1 = 1, and Fi =Fi−1 +Fi−2 for i≥ 2. Compute lim n→∞ FFn+1+1 FFn·FFn−1−1 .",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5+3. Define the Fibonacci sequence by F0 = 0, F1 = 1, and Fi =Fi−1 +Fi−2 for i≥ 2. Compute lim n→∞ FFn+1+1 FFn·FFn−1−1 . Answer: 5+3 √ 5 2 Solution: The key step is to recall/rederive that Fn ∼ 1√ 5φn for φ = 1+ √ 5 2 . With these asymptotics, our limit reduces to lim n→∞ FFn+1+1 FFn·FFn−1−1 = lim n→∞ 1√ 5φFn+1+1 1√ 5φFn· 1√ 5φFn−1−1 = √ 5φ2 = 5 + 3 √ 5 2 . Team Test Solutions April 8, 2023",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2019 SMT Team Problem 12",
+   "question": "Let O be the center of the circumcircle of right triangle ABC with ∠ACB = 90◦. Let M be the midpoint of minor arc ˆAC and let N be a point on line BC such that M N⊥ BC. Let P be the intersection of line AN and the Circle O and let Q be the intersection of line BP and M N. If QN = 2 and BN = 8, compute the radius of the Circle O. SMT 2019 Team Test March 2, 2019",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. Let O be the center of the circumcircle of right triangle ABC with ∠ACB = 90◦. Let M be the midpoint of minor arc ˆAC and let N be a point on line BC such that MN ⊥BC. Let P be the intersection of line AN and the Circle O and let Q be the intersection of line BP and MN . If QN = 2 and BN = 8, compute the radius of the Circle O. Answer: 5 Solution: Let X be the intersection between OM and AC. Since M is the midpoint of arc AC, ∠MXC = 90◦. But we also have ∠MNC = 90◦ and ∠NCX = 90◦, so from quadrilateralMNCX we have that ∠NMX = 90◦. It follows that NM is tangent to Circle O. Since P lies on Circle O, ∠APB = 90◦. Then ∠QPN = ∠APB = 90◦ = ∠QNB and ∠NQP = ∠BQN , we have that∆NPQ ∼∆BNQ . Then QN QB = QP QN =⇒ QP (QB) =QN 2. But by Power of a Point, QP (QB) =QM 2, so QM =QN = 2. Thus, MN = 4. From ∠MNB = 90◦ = ∠NMO , we have OM||BN , so BOMN is a trapezoid. Let Y be the perpendicular drawn from O to BC and let r be the radius of Circle O. Then we have BY =BN−NY =BN−MO = 8−r. Also, OY =MN = 4. By the Pythagorean Theorem on right triangle BOY , we have r2 = (8−r)2 + 42. Solving for r, we get r = 5 . SMT 2019 Team Test Solutions March 2, 2019",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2012 SMT Team Problem 13",
+   "question": "How many positive integers n are there such that for any natural numbers a, b, we have n | (a2b + 1) implies n | (a2 + b)? (Note: The symbol | means “divides”; if x | y then y is a multiple of x.)",
+   "choices": null,
+   "answer": "20",
+   "solution": "Answer: 20. How many positive integers n are there such that for any natural numbers a, b, we have n | (a2b + 1) implies n | (a2 + b)? (Note: The symbol | means “divides”; if x | y then y is a multiple of x.) Answer: 20 Solution: Let P represent the property of n such that n | a2b + 1 ⇒ n | a2 + b for all a, b ∈ N. Let Q represent the property of n such that ( a, n) = 1 ⇒ n | a4 − 1 for all a ∈ N. We shall prove that they are equivalent. Proof that P ⇒ Q : Let a be a positive integer with ( a, n) = 1. By B´ ezout’s identity, we can ﬁnd b ∈ N such that n | a2b + 1. By P, n | a2 + b. Then a4 − 1 = a2(a2 + b) − (a2b + 1), so n | a4 − 1. Proof that Q ⇒ P : Let a, b be positive integers with n | a2b + 1. Clearly ( a, n) = 1, so n | a4 − 1. Then a2(a2 + b) = ( a4 − 1) + (a2b + 1). Since a and n are relatively prime, n | a2 + b. Now we wish to ﬁnd all n with property Q. If a is odd, we have a4 − 1 = ( a2 − 1)(a2 + 1), a2 ≡ 1 (mod 8), and a2 + 1 is even, so 16 | a4 − 1. If ( a, 3) = 1, we have a2 ≡ 1 (mod 3), so 3 | a4 − 1. If ( a, 5) = 1, we have 5 | a4 − 1 by Fermat’s Little Theorem. This argument shows that n | 240 is suﬃcient. To show n | 240 is necessary, suppose n has property Q, and let n = 2 a · k, where k is odd. If k > 1, then ( k − 2, n) = 1, so by Q we conclude that n | (k − 2)4 − 1. Then k | (k − 2)4 − 1, but SMT 2012 Team Test and Solutions February 18, 2012 (k − 2)4 ≡ (−2)4 ≡ 16 (mod k), so k | 15. Now, since (11 , n) = 1, n | 114 − 1, so 2 a | 114 − 1, resulting in a ≤ 4. Thus n | 240 is also necessary. The number of natural numbers n such that property P holds is simply the number of positive integer divisors of 240, which is (4 + 1)(1 + 1)(1 + 1) = 20 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2013 SMT Team Problem 14",
+   "question": "You have a 2 meter long string. You choose a point along the string uniformly at random and make a cut. You discard the shorter section. If you still have 0.5 meters or more of string, you repeat. You stop once you have less than 0.5 meters of string. On average, how many cuts will you make before stopping?",
+   "choices": null,
+   "answer": "8",
+   "solution": "Answer: 8− 4 log 2. You have a 2 meter long string. You choose a point along the string uniformly at random and make a cut. You discard the shorter section. If you still have 0.5 meters or more of string, you repeat. You stop once you have less than 0.5 meters of string. On average, how many cuts will you make before stopping? Answer: 8− 4 log 2 Solution: Letf(x) be the average number of cuts you make if you start withx meters of string. Forx∈ [0, 1 2), we have f(x) = 0. To calculatef(x) for x≥ 1 2, say you make 1 cut that brings the length of the string to y. Then you average a total of 1 + f(y) cuts. Note that y is distributed uniformly at random from x 2 to x. So we average 1 + f(y) over y∈ [x 2,x ], which gives us f(x) = 2 x ∫ x x/2 f(y)dy + 1. Now we have an initial condition and recurrence. It can be easily veriﬁed that f(x) =    0, if x∈ [0, 1 2) 4x− 1, if x∈ [ 1 2, 1) 5x− 2x logx− 2, if x∈ [1, 2] satisﬁes the initial condition and recurrence. Therefore the answer is f(2) = 8− 4 log 2. (Note that technically we should also prove that the abovef(x) is the unique solution to the recurrence. We could just look at the recurrence and see that it is completely obvious that it deﬁnes a unique function. If you would like a rigorous proof, read below where we ﬁnd the solution by solving two ODEs. Suﬃciently nice ODEs have unique solutions so the solution is unique.) How did we discover this solution to the recurrence? First, let F (x) = ∫x 0 f(t)dt. In terms of F , the recurrence is F′(x) = 2 x (F (x)−F (x/2)) + 1. SMT 2013 Team Test Solutions February 2, 2013 Forx∈ [ 1 2, 1), the initial condition tells us that F (x/2) = 0, so the recurrence simpliﬁes to F′(x) = 2 xF (x) + 1. Also notice that we have an initial condition F ( 1 2) = 0. Since multiplying by 2 x is the same as diﬀerentiation forx2, we might guess that a degree 2 polynomial solves this diﬀerential equation. If we plug in a general degree 2 polynomial, we ﬁnd that we are correct and that the solution is F (x) = 2x2−x for x∈ [ 1 2, 1). Now that we knowF (x) on x∈ [ 1 2, 1), we can plug that into our original recurrence for F to get the following diﬀerential equation, valid for x∈ [1, 2]: F′(x) = 2 xF (x)−x + 2. This time we could try another degree 2 polynomial, but it won’t work. Speciﬁcally, if we try out F (x) =ax2 +bx we get 2ax +b = (2a− 1)x + 2b + 2. There is no choice of a,b that satisﬁes this. We need to somehow get a term involving x on one side without getting it on the other side in order to balance the x’s on each side. Notice that x2 logx will give us an x when we diﬀerentiate but not when we multiply by 2 x. So that might work. And indeed it does. We can plug in F (x) =ax2 +bx +cx2 logx, solve for the coeﬃcients (keeping in mind the initial condition F (1) = 1 that we get from our previous expression for F ), and get F (x) = 3x2−x2 logx− 2x. Now we know F (x) on all of [0 , 2], so we can diﬀerentiate it to get f(x). The result is exactly the expression for f(x) that we have above.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2014 SMT Team Problem 15",
+   "question": "Marc has a bag containing 10 balls, each with a diﬀerent color. He draws out two balls uniformly at random and then paints the ﬁrst ball he drew to match the color of the second ball. Then he places both balls back in the bag. He repeats until all the balls are the same color. Compute the expected number of times Marc has to perform this procedure before all the balls are the same color.",
+   "choices": null,
+   "answer": "81",
+   "solution": "Answer: 81. Marc has a bag containing 10 balls, each with a diﬀerent color. He draws out two balls uniformly at random and then paints the ﬁrst ball he drew to match the color of the second ball. Then he places both balls back in the bag. He repeats until all the balls are the same color. Compute the expected number of times Marc has to perform this procedure before all the balls are the same color. Answer: 81 Solution 1: We solve the general problem where there are n balls, and claim that the answer is (n− 1)2. Let’s deﬁne some terms. A path is a ﬁxed sequence of moves, as described in the problem statement, that terminates when all the balls are the same color. For example, one possible path might begin, “Make ball 2 color 3. Make ball 5 color 8. Make ball 8 color 1” and so on. For a path p, let l(p) be the length of the path, i.e. how many moves it takes to make all balls the same color. We say that in a path, color i wins if, at the end of that path, all balls are of color i. Each path p also has an associated probability P (p), the probability that the path will occur in this game. Now, by deﬁnition, we are trying to compute ∑ p l(p)P (p). We can break this expression into n parts by rewriting it as n∑ i=1 ∑ p: color i wins in p l(p)P (p). By symmetry, the inner sum has the same value no matter the value of i. Hence, the problem reduces to computing this inner sum, then multiplying that by n. Since we are conditioning on color i winning, all colors not i are indistinguishable. So, this simpliﬁes to the same game, but with just two colors, say colors 1 and 2. The current state can be denoted by an ordered pair ( m,n−m), which denotes how many balls of color 1 and 2, respectively, are present in the bag. We start in state (1,n− 1), i.e. one ball of color 1 and n− 1 balls of color 2, and are interested in ∑ p: starts at (1 ,n−1) and color 1 wins l(p)P (p). Let f(m) = ∑ p: starts at ( m,n−m) and color 1 wins l(p)P (p), so that we want to solve for f(1). Also, let g(m) = ∑ p: starts at ( m,n−m) and color 1 wins P (p), the probability that color 1 wins the two-color game if it starts at state ( m,n−m). We now get some recurrence relations for f and g. For g, it is clear that we have g(n) = 1 and g(0) = 0. Now, for 0 <m<n , we see that g(m) = m(n−m) n(n− 1) g(m− 1) +m(n−m) n(n− 1) g(m + 1) + ( 1− 2m(n−m) n(n− 1) ) g(m), SMT 2014 Team Test Solutions February 15, 2014 since there’s a m(n−m) n(n−1) probability of transitioning to (m− 1,n−m + 1), that same probability of transitioning to (m + 1,n−m− 1), and otherwise you stay at the same state. Rearranging, this becomes 2g(m) =g(m− 1) +g(m + 1). From here, it is clear thatg(m) = m n . The quickest solution is to note thatg(1) = 1 n by symmetry in the original n-color game, and to use this to compute g(2), g(3), etc. Now, for f, it is clear that f(n) = 0 (if you start at ( n, 0), your path immediately halts after zero steps) and f(0) = 0 (because the sum is empty, as color 1 can never win). For 0 <m<n , we have f(m) = ∑ p: starts at ( m,n−m) and color 1 wins l(p)P (p) = m(n−m) n(n− 1) ∑ p: starts at ( m−1,n−m+1) and color 1 wins (l(p) + 1)P (p) + m(n−m) n(n− 1) ∑ p: starts at ( m+1,n−m−1) and color 1 wins (l(p) + 1)P (p) + ( 1− 2m(n−m) n(n− 1) ) ∑ p: starts at ( m,n−m) and color 1 wins (l(p) + 1)P (p). Here, we consider taking one step from the current state. The l(p) terms become l(p) + 1 to account for this step. Recognizing expressions for f andg, and applying our recurrence relation for g, this simpliﬁes to f(m) = m(n−m) n(n− 1) (f(m− 1) +g(m− 1)) +m(n−m) n(n− 1) (f(m + 1) +g(m + 1)) + ( 1− 2m(n−m) n(n− 1) ) (f(m) +g(m)) = m(n−m) n(n− 1) (f(m− 1) +f(m + 1) + 2g(m)) + ( 1− 2m(n−m) n(n− 1) ) (f(m) +g(m)) = m(n−m) n(n− 1) (f(m− 1) +f(m + 1)) + ( 1− 2m(n−m) n(n− 1) ) f(m) +g(m) = m(n−m) n(n− 1) (f(m− 1) +f(m + 1)) + ( 1− 2m(n−m) n(n− 1) ) f(m) +m n. Rearranging terms, we get 2f(m) =f(m− 1) +f(m + 1) + n− 1 n−m. Since our goal is to solve for f(1), we start by eliminating f(n− 1) and work down to f(1). We can do this by multiplying the above equation by the right factor, for each m. In particular, we SMT 2014 Team Test Solutions February 15, 2014 choose 2f(n− 1) =f(n− 2) +f(n) +n− 1 1 2· ( 2f(n− 2) =f(n− 3) +f(n− 1) +n− 1 2 ) 3· ( 2f(n− 3) =f(n− 4) +f(n− 2) +n− 1 3 ) ... (n−m)· ( 2f(m) =f(m− 1) +f(m + 1) + n− 1 n−m ) ... (n− 2)· ( 2f(2) =f(1) +f(3) +n− 1 n− 2 ) (n− 1)· ( 2f(1) =f(0) +f(2) +n− 1 n− 1 ) . Adding these up, note that all the f(m)’s cancel except for f(n), f(1), and f(0). In particular, we are left with nf(1) =f(n) + (n− 1)f(0) + (n− 1)2. Since f(0) = f(n) = 0, we have f(1) = (n−1)2 n . Plugging back into our very ﬁrst equation, we get that the desired answer is nf(1) = (n− 1)2 . Solution 2: Let λ1,...,λ 41 be all the partitions of 10 other than 10. Notice that each coloring of the balls gives rise to a partition. Let A be the matrix whose i,j -th entry is the probability that a bag of balls in state λj becomes a bag of balls in state λi through one iteration of this process. Let x be the vector whosei-th entry is the expected number of repititions starting from state λi. Notice that x satisﬁes the recurrence x = Ax + 1. So all we need to do is solve the linear system (I−A)x = 1. After calculating the 1681 entries of A and solving the linear system in 41 variables, we ﬁnd that the answer is 81 expected repititions from the initial state.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

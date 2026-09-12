@@ -1,0 +1,261 @@
+{
+ "id": "smt_rand_20",
+ "competition": "SMT — General",
+ "category": "Math",
+ "title": "SMT — General — Random Mock #20 · 2026-08-27 08:50",
+ "instructions": "25 questions · 110 minutes · No calculator. 25 points total.",
+ "time_limit_min": 110,
+ "total_points": 25,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2018 SMT General Problem 1",
+   "question": "Eric writes problems at a constant rate of 6 problems per hour, and Elizabeth solves problems at a constant rate of 10 problems per hour. If Eric starts writing problems 2 hours before Elizabeth starts solving problems, how many problems will he have written when Elizabeth ﬁnishes solving all the problems he has written so far?",
+   "choices": null,
+   "answer": "30",
+   "solution": "Answer: 30. Eric writes problems at a constant rate of 6 problems per hour, and Elizabeth solves problems at a constant rate of 10 problems per hour. If Eric starts writing problems 2 hours before Elizabeth starts solving problems, how many problems will he have written when Elizabeth ﬁnishes solving all the problems he has written so far? Answer: 30 Solution: After two hours, Eric will have written 12 problems. Letx be the number of hours that Elizabeth solves problems. Eric will have written 12+6 x problems, while Elizabeth will have solved 10x problems. This gives us the equation 12 + 6x = 10x, which solves to x = 3. Therefore, Elizabeth will have solved 10· 3 = 30 problems.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2023 SMT General Problem 2",
+   "question": "Charlie has a large supply of chocolates, each of which has two properties: the filling can be raspberry or blueberry and the shape can be circular or square. Half of the chocolates have a raspberry filling and the other half have a blueberry filling. Also, 4 9 of the raspberry-filled chocolates are circular and 2 3 of the blueberry-filled chocolates are square. What fraction of the square chocolates are raspberry-filled?",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. After the first turn the ant makes, what is the expected number of turns (not including the first turn) it makes before facing due east again? Answer: 5 Solution: Note that the ant can only face 6 different directions at any point in time. Label them 0, 1,..., 5, with 0 being due east and the rest following in counterclockwise order. Without loss of generality, assume that the first turn the ant makes is in the counterclockwise direction. LetE(i) be the expected number of turns to return to due east when facing directioni. We know that E(0) = 0, and we solve for E(1) using the relations between E(i) and E(i− 1),E (i + 1): E(1) = E(0) 2 + E(2) 2 + 1⇒E(2) = 2E(1)− 2 E(2) = E(1) 2 + E(3) 2 + 1⇒ 2E(1)− 2 = E(1) 2 + E(3) 2 + 1 ⇒E(3) = 3E(1)− 6 E(3) = E(2) 2 + E(4) 2 + 1⇒ 3E(1)− 6 = E(2) 2 + E(4) 2 + 1 ⇒E(4) = 4E(1)− 12. Now, note that E(5) =E(1) by symmetry. We have E(5) = E(4) 2 + E(0) 2 + 1⇒E(1) = 2E(1)− 6 + 1, which gives us E(1) = 5 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2014 SMT General Problem 3",
+   "question": "David ﬂips a fair coin ﬁve times. Compute the probability that the fourth coin ﬂip is the ﬁrst coin ﬂip that lands heads.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. David ﬂips a fair coin ﬁve times. Compute the probability that the fourth coin ﬂip is the ﬁrst coin ﬂip that lands heads. Answer: 1 16 Solution: David must ﬂip three tails, then heads. This happens with probability (1 2 )4 = 1 16 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2012 SMT General Problem 4",
+   "question": "Steve works 40 hours a week at his new job. He usually gets paid 8 dollars an hour, but if he works for more than 8 hours on a given day, he earns 12 dollars an hour for every additional hour over 8 hours. If x is the maximum number of dollars that Steve can earn in one week by working exactly 40 hours, and y is the minimum number of dollars that Steve can earn in one week by working exactly 40 hours, what is x − y?",
+   "choices": null,
+   "answer": "96",
+   "solution": "Answer: 96. Steve works 40 hours a week at his new job. He usually gets paid 8 dollars an hour, but if he works for more than 8 hours on a given day, he earns 12 dollars an hour for every additional hour over 8 hours. If x is the maximum number of dollars that Steve can earn in one week by working exactly 40 hours, and y is the minimum number of dollars that Steve can earn in one week by working exactly 40 hours, what is x − y? Answer: 96 Solution: In the minimum case, Steve can work 8 hours a day for ﬁve days, thereby earning no overtime pay and earning exactly $320. In the maximum case, Steve works 40 hours without a single break. This spans two days; there are 16 hours of work at regular pay and 24 hours of work at overtime pay. Therefore, Steve earns 16 × $8 + 24 × $12 = $416. Therefore, x = 416 and y = 320, so x − y = 96 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2019 SMT General Problem 5",
+   "question": "Maddy wants to create a 10 letter word with using only letters in her name. If she uses m M’s, a A’s, d D’s, and y Y’s where m > a > d > y > 0, what is m· a· d· d· y?",
+   "choices": null,
+   "answer": "48",
+   "solution": "Answer: 48. Maddy wants to create a 10 letter word with using only letters in her name. If she uses m M’s, a A’s, d D’s, and y Y’s where m>a>d>y > 0, what is m·a·d·d·y? Answer: 48 Solution: Note that since all of the numbers are larger than 0 and we have the strict inequality m > a > d > y, we can only have m = 4,a = 3,d = 2,y = 1. So, maddy = 4· 3· 2· 2· 1 = 48 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2018 SMT General Problem 6",
+   "question": "Eric has a 9-sided dice and Harrison has an 11-sided dice. They each roll their respective die. Eric wins if he rolls a number greater or equal to Harrison’s number. What is the probability Eric wins?",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5. Eric has a 9-sided dice and Harrison has an 11-sided dice. They each roll their respective die. Eric wins if he rolls a number greater or equal to Harrison’s number. What is the probability Eric wins? Answer: 5 11 Solution: There are 9· 11 = 99 possible combinations of rolls. We then count the number of ways Eric can win: • If Eric rolls a 1, Harrison must roll a 1. • If Eric rolls a 2, Harrison must roll a 1 or 2. • In general, if Eric rolls an n, then Harrison must roll any number between 1 and n, for a total of n possible rolls. Thus, the number of combinations where Eric wins is 1 + 2 + ··· + 9 = 45. The probability Eric wins is therefore 45 99 = 5 11 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2018 SMT General Problem 7",
+   "question": "A number is formed using the digits {2, 0, 1, 8}, using all 4 digits exactly once. Note that 0218 = 218 is a valid number that can be formed. What is the probability that the resulting number is strictly greater than 2018?",
+   "choices": null,
+   "answer": "11",
+   "solution": "Answer: 11. A number is formed using the digits {2, 0, 1, 8}, using all 4 digits exactly once. Note that 0218 = 218 is a valid number that can be formed. What is the probability that the resulting number is strictly greater than 2018? Answer: 11 24 Solution: There are 4! = 24 total possible permutations of the digits {2, 0, 1, 8}. Next, we count the number of cases where the permutation is greater than 2018. When the leftmost digit is an 8, the permutation must be greater than 2018, and there are 3! = 6 such per- mutations. When the leftmost digit is a 2, the permutation is not greater than 2018 only when the permutation is 2018 itself, since 0 < 1< 8. In this case, there are 3! − 1 = 5 such permutations. Because all other permutations of the digits have a thousands digit which is less than 2, the desired probability is 6+5 24 = 11 24 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2014 SMT General Problem 8",
+   "question": "Ted has 2 red socks, 2 blue socks, and 2 green socks. He grabs three diﬀerent socks at random. Compute the probability that they are all diﬀerent colors.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. Ted has 2 red socks, 2 blue socks, and 2 green socks. He grabs three diﬀerent socks at random. Compute the probability that they are all diﬀerent colors. Answer: 2 5 Solution: Ted ﬁrst draws one sock. With probability 4 5, the second sock he draws will not match the ﬁrst sock. With probability 2 4, the third sock he draws matches neither the ﬁrst sock nor the second sock. Therefore, with probability 4 5· 2 4 = 2 5 , the three socks will all be diﬀerent colors.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2019 SMT General Problem 9",
+   "question": "What is the remainder when 2019 2019 is divided by 7?",
+   "choices": null,
+   "answer": "6",
+   "solution": "Answer: 6. What is the remainder when 2019 2019 is divided by 7? Answer: 6 Solution: Note that 2019≡ 3 mod 7. So, we have 2019 2019≡ 32019 mod 7. Then Fermat’s Little Theorem gives us that 3 a≡ 3b mod 7 if a≡ b mod 6. So, we ﬁnd that 2019 ≡ 3 mod 6. Thus, 2019 2019≡ 27≡ 6 mod 7.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2022 SMT General Problem 10",
+   "question": "You need to bike to class but don’t know where you parked your bike. There are two bike racks, A and B. There is a 1 /5 chance for your bike to be at A; it takes one minute to walk to A and four minutes to bike from A to class. Then, there is a 4 /5 chance for your bike to be at B; it takes three minutes to walk to B and five minutes to bike from B to class. However, if your choice is wrong, you need to walk from your original choice A or B to the other, which takes four minutes, before departing to class from there. SMT 2022 General Test April 16–17, 2022 Suppose you only care about getting to class on time. For a some interval of minutes before class, going to bike rack B first gives a strictly higher chance of making it to class on time. How many minutes long is that interval (i.e. an interval of 15 minutes before class to 21 minutes before class has length 6)?",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. You need to bike to class but don’t know where you parked your bike. There are two bike racks, A and B. There is a 1 /5 chance for your bike to be at A; it takes one minute to walk to A and four minutes to bike from A to class. Then, there is a 4 /5 chance for your bike to be at B; it takes three minutes to walk to B and five minutes to bike from B to class. However, if your choice is wrong, you need to walk from your original choice A or B to the other, which takes four minutes, before departing to class from there. Suppose you only care about getting to class on time. For a some interval of minutes before class, going to bike rack B first gives a strictly higher chance of making it to class on time. How many minutes long is that interval (i.e. an interval of 15 minutes before class to 21 minutes before class has length 6)? Answer: 2 Solution: If you go to bike rack A first, then there is a 1/5 chance that your bike is there and you get to class in 1 + 4 = 5 minutes. Otherwise, there is a 4 /5 chance that your bike is not there, and you get to class in 1 + 4 + 5 = 10 minutes. If you go to bike rack B first, then there is a 4 /5 chance that your bike is there and you get to class in 3 + 5 = 8 minutes. Otherwise, there is a 1/5 chance that your bike is not there, and you get to class in 3 + 4 + 4 = 11 minutes. If there are less than 5 minutes before class, then both options give you no chance of getting to class on time. If there are between 5 and 8 minutes before class, then going to bike rack A gives you a 1/5 chance of making it to class on time, while going to bike rack B gives you no chance of making it to class on time. If there are between 8 and 10 minutes before class, then going to bike rack A still gives you a 1/5 chance of making it to class on time, while going to bike rack B now gives you a 4/5 chance of making it to class on time. If there are more than 10 minutes before class starts, then going to bike rack A will always lead to you making it to class on time, which means going to bike rack B will never give you a strictly greater chance of making it to class on time. Thus, going to bike rack B is better only if there are between 8 and 10 minutes before class, which is an interval of 2 minutes.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2013 SMT General Problem 11",
+   "question": "Sara has an ice cream cone with every meal. The cone has a height of 2 √ 2 inches and the base of the cone has a diameter of 2 inches. Ice cream protrudes from the top of the cone in a perfect hemisphere. Find the surface area of the ice cream cone, ice cream included, in square inches. SMT 2013 General Test February 2, 2013",
+   "choices": null,
+   "answer": "5",
+   "solution": "Answer: 5π. Sara has an ice cream cone with every meal. The cone has a height of 2 √ 2 inches and the base of the cone has a diameter of 2 inches. Ice cream protrudes from the top of the cone in a perfect hemisphere. Find the surface area of the ice cream cone, ice cream included, in square inches. Answer: 5π SMT 2013 General Test Solutions February 2, 2013 Solution: The radius of the cone is 2 2 = 1, so the lateral height of the cone is √ 12 + (2 √ 2)2 = 3 and the lateral surface area of the cone is π· 1· 3 = 3π. Next, the surface area of the hemisphere is 2πr2 = 2π. Thus, the total surface area is 2 π + 3π = 5π .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2013 SMT General Problem 12",
+   "question": "What is the greatest possible value of c such that x2 + 5x + c = 0 has at least one real solution?",
+   "choices": null,
+   "answer": "25",
+   "solution": "Answer: 25. What is the greatest possible value of c such thatx2 + 5x +c = 0 has at least one real solution? Answer: 25 4 Solution: For an equation to have real solutions, the discriminant must be nonnegative. Thus, we haveb2− 4ac = 52− 4c≥ 0 or 25 4 ≥c.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2021 SMT General Problem 13",
+   "question": "Imagine that school starts at 8:00 AM. When you drive at 50 mph, you reach 12 minutes early, but when you drive at 40 mph, you reach at 8:15. How many miles do you live from school?",
+   "choices": null,
+   "answer": "30",
+   "solution": "Answer: 30. Imagine that school starts at 8:00 AM. When you drive at 50 mph, you reach 12 minutes early, but when you drive at 40 mph, you reach at 8:15. How many miles do you live from school? Answer: 30 Solution: We can set up a system of equations where t represents how long it would take you to reach school if you planned to reach exactly at 8 : 00 AM. Since distance = rate * time, we can let d equal the total distance from home to school. Then we have d = 50∗ (t− 1 5) and d = 40∗ (t + 1 4). Solving this, we get that t = 2 and d = 90.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2014 SMT General Problem 14",
+   "question": "Let a 5 digit number be termed a “valley” number if the digits (not necessarily distinct) in the number a b c d e satisfy a > b > c and c < d < e . Compute the number of valley numbers that start with 3. SMT 2014 General Test February 15, 2014",
+   "choices": null,
+   "answer": "100",
+   "solution": "Answer: 100. Let a 5 digit number be termed a “valley” number if the digits (not necessarily distinct) in the number a b c d e satisfy a > b > c and c < d < e . Compute the number of valley numbers that start with 3. Answer: 100 Solution: b, c can be 2 , 1, 2, 0, or 1 , 0. If c = 1, 2≤ d≤ 9 and d + 1≤ e≤ 9 and hence there are 7 + 6 +... + 1 = 28 possibilities (alternately, this is equivalent to choosing two distinct digits in the range 2 through 9 for a total of (8 2 ) = 28 possibilities). Similarly, for c = 0 there are 8 + 7 + ... + 1 = 36 possibilities (or (9 2 ) = 36 possibilities). Since there are two ways to obtain c = 0 and one way to obtain c = 1, there are 28 + 36 + 36 = 100 valley numbers.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2013 SMT General Problem 15",
+   "question": "Given regular hexagon ABCDEF , compute the probability that a randomly chosen point inside the hexagon is inside triangle P QR, where P is the midpoint of AB, Q is the midpoint of CD, and R is the midpoint of EF .",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Given regular hexagon ABCDEF , compute the probability that a randomly chosen point inside the hexagon is inside triangle PQR , where P is the midpoint of AB, Q is the midpoint of CD, and R is the midpoint of EF . Answer: 3 8 Solution: If we partition the hexagon into six equilateral triangles by drawing AD, BE, and CF , we get 6 congruent equilateral triangles. If we then take each equilateral triangle and SMT 2013 General Test Solutions February 2, 2013 partition each one into four smaller equilateral triangles by means of connecting the midpoints of the sides, we note that PQR contains 9 of the small equilateral triangles while ABCDEF contains 24 of the small equilateral triangles. The probability therefore follows as 3 8 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2011 SMT General Problem 16",
+   "question": "If r, s, t, and u denote the roots of the polynomial f(x) = x4 + 3x3 + 3x + 2, ﬁnd 1 r2 + 1 s2 + 1 t2 + 1 u2 .",
+   "choices": null,
+   "answer": "9",
+   "solution": "Answer: 9. If r, s, t, and u denote the roots of the polynomial f(x) =x4 + 3x3 + 3x + 2, ﬁnd 1 r2 + 1 s2 + 1 t2 + 1 u2. Answer: 9 4 First notice that the polynomial g(x) =x4 ( 1 x4 + 3 x3 + 3 x + 2 ) = 2x4 + 3x3 + 3x + 1 is a polynomial with roots 1 r , 1 s, 1 t , 1 u. Therefore, it is suﬃcient to ﬁnd the sum of the squares of the roots of g(x), which we will denote as r1 through r4. Now, note that r2 1 +r2 2 +r2 3 +r2 4 = (r1 +r2 +r3 +r4)2− (r1r2 +r1r3 +r1r4 +r2r3 +r2r4 +r3r4) = (−a3 a4 )2− a2 a4 by Vieta’s Theorem, where an denotes the coeﬃcient of xn in g(x). Plugging in values, we get that our answer is (− 3 2)2− 0 = 9",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2011 SMT General Problem 17",
+   "question": "An icosahedron is a regular polyhedron with 12 vertices, 20 faces, and 30 edges. How many rigid rotations G are there for an icosahedron in R3?",
+   "choices": null,
+   "answer": "60",
+   "solution": "Answer: 60. An icosahedron is a regular polyhedron with 12 vertices, 20 faces, and 30 edges. How many rigid rotations G are there for an icosahedron in R3? Answer: 60 There are 12 vertices, each with 5 neighbors. Any vertex and any of its neighbors can be rotated to any other vertex-neighbor pair in exactly one way. There are 5 · 12 = 60 vertex-neighbor pairs.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2011 SMT General Problem 18",
+   "question": "Pentagon ABCDE is inscribed in a circle of radius 1. If ∠DEA∼= ∠EAB∼= ∠ABC, m∠CAD = 60◦, and BC = 2DE, compute the area of ABCDE .",
+   "choices": null,
+   "answer": "33",
+   "solution": "Answer: 33. Pentagon ABCDE is inscribed in a circle of radius 1. If ∠DEA∼= ∠EAB∼= ∠ABC, m∠CAD = 60◦, and BC = 2DE, compute the area of ABCDE . Answer: 33 √ 3 28 Looking at cyclic quadrilaterals ABCD and ACDF tells us that m∠ACD =m∠ADC, so∆ACD is equilateral and m∠DEA = 120◦. Now, if we let m∠EAD = θ, we see that m∠CAB = 60◦−θ =⇒ m∠ACB =θ =⇒ ∆AED∼=∆CBA. Now all we have to do is calculate side lengths. After creating some 30◦− 60◦− 90◦ triangles, it becomes evident that AC = √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2022 SMT General Problem 19",
+   "question": "Let C1 be the circle of radius 1 centered at (1 , 1) on the xy plane. Define Cn to be the circle tangent to Cn−1, x = 0, and y = 0. What is the area of the shaded region? SMT 2022 General Test April 16–17, 2022",
+   "choices": null,
+   "answer": "8",
+   "solution": "Answer: 8+2π−3π. Let C1 be the circle of radius 1 centered at (1 , 1) on the xy plane. Define Cn to be the circle tangent to Cn−1, x = 0, and y = 0. What is the area of the shaded region? Answer: 8+2π−3π √ 2 8 SMT 2022 General Test Solutions April 16–17, 2022 Solution: Letrn be the radius of Cn. We can see that rn−1( √ 2− 1) =rn( √ 2 + 1). So, we have a geometric progression of rn = √ 2− 1√ 2 + 1 !n−1 = ( √ 2− 1)2n−2. Then the area of circles ∞X n=2 Cn = ∞X n=2 π \u0010√ 2− 1 \u00114n−4 =π ( √ 2− 1)4 1− ( √ 2− 1)4 =π 3 √ 2 8 − 1 2 ! . Thus, we have that the shaded region has area: 1 2− \u0012π 4− 1 2 \u0013 −π 3 √ 2 8 − 1 2 ! = 8 + 2π− 3π √ 2 8",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "2013 SMT General Problem 20",
+   "question": "Ben is throwing darts at a circular target with diameter 10. Ben never misses the target when he throws a dart, but he is equally likely to hit any point on the target. Ben gets ⌈5− x⌉ points for having the dart land x units away from the center of the target. What is the expected number of points that Ben can earn from throwing a single dart? (Note that ⌈y⌉ denotes the smallest integer greater than or equal to y.)",
+   "choices": null,
+   "answer": "11",
+   "solution": "Answer: 11. Ben is throwing darts at a circular target with diameter 10. Ben never misses the target when he throws a dart, but he is equally likely to hit any point on the target. Ben gets ⌈5−x⌉ points for having the dart land x units away from the center of the target. What is the expected number of points that Ben can earn from throwing a single dart? (Note that ⌈y⌉ denotes the smallest integer greater than or equal to y.) Answer: 11 5 Solution: We can split the target into ﬁve concentric circles with radii 1, 2, 3, 4, and 5; the ﬁve corresponding regions have areas of π, 3π, 5π, 7π, 9π and are worth 5, 4, 3, 2, 1 points respectively. Thus the answer is 5·π + 4· 3π + 3· 5π + 2· 7π + 1· 9π 25π = 11 5 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "2011 SMT General Problem 21",
+   "question": "An ant is leashed up to the corner of a solid square brick with side length 1 unit. The length of the ant’s leash is 6 units, and it can only travel on the ground and not through or on the brick. In terms of x = arctan ( 3 4 ) , what is the area of region accessible to the ant?",
+   "choices": null,
+   "answer": "79",
+   "solution": "Answer: 79π. An ant is leashed up to the corner of a solid square brick with side length 1 unit. The length of the ant’s leash is 6 units, and it can only travel on the ground and not through or on the brick. In terms of x = arctan ( 3 4 ) , what is the area of region accessible to the ant? Answer: 79π 2 + 3 2 − 5x Label the top left corner of the square as the origin O. By keeping the leash straight, the ant can travel through 3 4 of a circle of radius 6 (A1 = 3 4× 36π = 27π). The ant can also bend the leash around the two nearest corners of the square to where it is leashed ( A2 = 2× 1 4× 25π = 25 2π). However, this double counts the area enclosed by BCDE, which is equal to two times the area of BCD. To calculate the latter, notice that ACD is the sector of the circle centered at A with radius 5. We can calculate the coordinates of D usign the two equations y =−x (from the symmetry) and x2 + (y + 1)2 = 52 which yieldsD = (4,−4). Since A = (0,−1), the angle of sector ACD is arctan ( 3 4 ) =x. The area of triangle ABD equals 3 2 (base times height) so BCD has area 5 x− 3 2 and BCDE has area 10x− 3. Hence, the total area is A1 +A2− ( 5x− 3 2 ) = 79π 2 + 3 2− 5x.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "2020 SMT General Problem 22",
+   "question": "Given that 1 A345678B0 is a multiple of 2020, compute 10 A + B.",
+   "choices": null,
+   "answer": "64",
+   "solution": "Answer: 64. Given that 1A345678B0 is a multiple of 2020, compute 10 A +B. Answer: 64 SMT 2020 General Test Solutions February 22, 2020 Solution: Note that a number is a multiple of 2020 if and only if it is divisible by both 101 and",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "2018 SMT General Problem 23",
+   "question": "James throws a dart at a dartboard, which is shaped like a regular hexagon of side length 2 feet. What is the probability that James throws the dart within 1 foot of any of the 6 corners of the hexagon?",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2π. James throws a dart at a dartboard, which is shaped like a regular hexagon of side length 2 feet. What is the probability that James throws the dart within 1 foot of any of the 6 corners of the hexagon? Answer: 2π √ 3 18 Solution: The desired probability is the ratio between the circular areas at each of the 6 corners of the hexagon and the area of the hexagon itself. The area of an equilateral triangle of side length 2 is 2 2· √ 3 4 = √ 3, so the area of a regular hexagon of side length 2 is 6 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "2022 SMT General Problem 24",
+   "question": "Consider the sequence of integers {an}n≥1 constructed in the following way. a1≥ 1, and for n≥ 2 we have an = (a2 n−1 + 337an−1) modulo 2022. We define the period of a sequence to be the smallest integer k such that there is an integer N such that for all n≥ N we have an+k = an. Determine the sum of all possible periods of an.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12. Consider the sequence of integers {an}n≥1 constructed in the following way. a1≥ 1, and for n≥ 2 we have an = (a2 n−1 + 337an−1) modulo 2022. We define the period of a sequence to be the smallest integerk such that there is an integerN such that for alln≥N we havean+k =an. Determine the sum of all possible periods of an. Answer: 12 Solution: We will break our problem down using the Chinese Remainder Theorem. Taking our expression in mod 2 and 3, we find that our recursion is an≡a2 n−1 +an−1 (mod 2, 3), which is easily seen to have a period 1 in both residues. Therefore, our period depends only on the sequence in mod 337. Taking our expression mod 337 we have thatan≡a2 n−1 (mod 337). Let k be the period of an. Then there is sufficiently large d such thatad≡ad+k (mod 337). In other words ad≡a2k d =⇒ ord337(ad)|2k−1 (mod 337). But we also have that ord(ad)|ϕ(337) = 336 = 2 4∗ 3∗ 7, which implies that ord( ad)∈{ 1, 3, 7, 21}. Taking the minimumk that satisfy these conditions we have that we can have k = 1, 2, 3, 6. We need only show that these are all possible periods. Clearly a period of length 1 is possible since we could have a1 = 1. To obtain a period of length 2 we note that takinga1 = 128 gives the sequence 128, 208, 128,... . To obtain a period of length 3, observe that taking a1 = 8 gives the sequence 8, 64, 52, 8,... . To obtain a period of length 6, note that taking a1 = 2 gives the sequence 2, 4, 16, 256, 158, 26, 2,... . Hence our answer is 12 . SMT 2022 General Test Solutions April 16–17, 2022",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "2018 SMT General Problem 25",
+   "question": "Let f(x) = x3− n1x2 + (n2− k2)x− (n3− k4). Suppose that n1, n2, and n3 form a geometric sequence with common ratio k and that the roots of f are nonzero and form an arithmetic sequence with common diﬀerence also k. Find k.",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Let f(x) =x3−n1x2 + (n2−k2)x− (n3−k4). Suppose that n1,n2, andn3 form a geometric sequence with common ratio k and that the roots of f are nonzero and form an arithmetic sequence with common diﬀerence also k. Find k. Answer: 3 Solution: Let the roots of f be r1, r2, and r3, where r1≤ r2≤ r3. Because we know the common diﬀerence of this sequence is k, we have r1 =r2−k and r3 =r +k. From Vieta’s formulas, we have n1 = (r2−k) + (r2) + (r2 +k) n2−k2 = (r2)(r2−k) + (r2)(r2 +k) + (r2−k)(r2 +k) n3−k4 = (r2)(r2−k)(r2 +k) Simplifying these equations gives us n1 = 3r2 n2 = 3r2 2 n3 =r3 2−r2k2 +k4 Because n1,n 2,n 3 form a geometric series with common ratio k, we have kn1 = n2 and k2n1 =n3. Plugging in the values above into the ﬁrst equation, we have 3 kr2 = 3kr2 2, which gives us k = r2. Therefore, n3 = k3−k3 +k4 = k4. Plugging these values into k2n1 = n3 gives us k2· (3k) =k4, which solves to give us k = 3 .",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

@@ -1,0 +1,651 @@
+{
+ "id": "physicsbowl_rand_11",
+ "competition": "Physics Bowl",
+ "category": "Physics",
+ "title": "Physics Bowl — Random Mock #11 · 2026-08-27 08:50",
+ "instructions": "40 questions · 45 minutes · No calculator. 40 points total.",
+ "time_limit_min": 45,
+ "total_points": 40,
+ "questions": [
+  {
+   "n": 1,
+   "source": "Modified from 2025 Physics Bowl Problem 1",
+   "question": "Your brother is $40\\,\\mathrm{m}$ ahead of you and walking away at $1.5\\,\\mathrm{m/s}$. You run after him at $3.5\\,\\mathrm{m/s}$. How long does it take you to catch up to him?",
+   "choices": {
+    "A": "$15\\,\\mathrm{s}$",
+    "B": "$18\\,\\mathrm{s}$",
+    "C": "$20\\,\\mathrm{s}$",
+    "D": "$22\\,\\mathrm{s}$",
+    "E": "$25\\,\\mathrm{s}$"
+   },
+   "answer": "C",
+   "solution": "Your closing speed is $3.5 - 1.5 = 2\\,\\mathrm{m/s}$, so the catch-up time is $40/2 = 20\\,\\mathrm{s}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "Modified from 2025 Physics Bowl Problem 2",
+   "question": "Two identical balls roll off the edges of two identical horizontal tabletops at the same time, one at $3\\,\\mathrm{m/s}$ and the other at $5\\,\\mathrm{m/s}$. The faster ball lands $2\\,\\mathrm{m}$ farther from the table's base than the slower one. How high are the tables? (Use $g = 10\\,\\mathrm{m/s^2}$.)",
+   "choices": {
+    "A": "$2.5\\,\\mathrm{m}$",
+    "B": "$4\\,\\mathrm{m}$",
+    "C": "$6\\,\\mathrm{m}$",
+    "D": "$7.5\\,\\mathrm{m}$",
+    "E": "$5\\,\\mathrm{m}$"
+   },
+   "answer": "E",
+   "solution": "The extra range of $2\\,\\mathrm{m}$ comes from the speed difference: $t = 2/(5-3) = 1\\,\\mathrm{s}$. Then $h = \\frac12 g t^2 = 5\\,\\mathrm{m}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "Modified from 2025 Physics Bowl Problem 3",
+   "question": "An object starts moving at $4\\,\\mathrm{m/s}$ and decelerates uniformly to rest in $8\\,\\mathrm{s}$. Which expression gives its velocity $v(t)$ (in $\\mathrm{m/s}$) as a function of time $t$ (in $\\mathrm{s}$)?",
+   "choices": {
+    "A": "$v(t) = 4 - t$",
+    "B": "$v(t) = 4 - 0.5t$",
+    "C": "$v(t) = 4 + 0.5t$",
+    "D": "$v(t) = 8 - 2t$",
+    "E": "$v(t) = 4 - 2t$"
+   },
+   "answer": "B",
+   "solution": "The deceleration is $4/8 = 0.5\\,\\mathrm{m/s^2}$, so $v(t) = 4 - 0.5t$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "Modified from 2025 Physics Bowl Problem 4",
+   "question": "NASA launched Apollo 11 in July 1969. What was unique about this mission?",
+   "choices": {
+    "A": "It was the first mission to orbit the Moon without a crew",
+    "B": "It was the first mission to bring samples from Mars back to Earth",
+    "C": "It was the first crewed mission to land humans on the Moon",
+    "D": "It was the first mission to reach the International Space Station",
+    "E": "It was the longest crewed spaceflight in history"
+   },
+   "answer": "C",
+   "solution": "Apollo 11 (July 1969) was the first mission to land humans on the Moon: Neil Armstrong and Buzz Aldrin walked on the surface.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "Modified from 2025 Physics Bowl Problem 5",
+   "question": "A simple pendulum hangs from the ceiling of a train car and is observed to hang at $15^{\\circ}$ from vertical. What is the train's acceleration? (Use $g = 10\\,\\mathrm{m/s^2}$, $\\tan 15^{\\circ} \\approx 0.27$.)",
+   "choices": {
+    "A": "$2.7\\,\\mathrm{m/s^2}$",
+    "B": "$2.0\\,\\mathrm{m/s^2}$",
+    "C": "$3.5\\,\\mathrm{m/s^2}$",
+    "D": "$4.2\\,\\mathrm{m/s^2}$",
+    "E": "$5.0\\,\\mathrm{m/s^2}$"
+   },
+   "answer": "A",
+   "solution": "In the train's frame, $\\tan\\theta = a/g$, so $a = g\\tan 15^{\\circ} \\approx 10 \\times 0.27 = 2.7\\,\\mathrm{m/s^2}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "Modified from 2025 Physics Bowl Problem 6",
+   "question": "Which of the following pairs of quantities have the same dimensions?",
+   "choices": {
+    "A": "Power and moment of inertia",
+    "B": "Work and angular displacement",
+    "C": "Force and momentum",
+    "D": "Work and torque",
+    "E": "Energy and power"
+   },
+   "answer": "D",
+   "solution": "Work and torque are both measured in newton-meters ($\\mathrm{N\\cdot m}$).",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "Modified from 2025 Physics Bowl Problem 7",
+   "question": "A researcher measures distance $d = 8.0\\,\\mathrm{m} \\pm 0.2\\,\\mathrm{m}$ and time $t = 4.0\\,\\mathrm{s} \\pm 0.2\\,\\mathrm{s}$. What is the percent uncertainty in the computed average speed $v = d/t$?",
+   "choices": {
+    "A": "$2.5\\%$",
+    "B": "$5\\%$",
+    "C": "$10\\%$",
+    "D": "$12.5\\%$",
+    "E": "$7.5\\%$"
+   },
+   "answer": "E",
+   "solution": "Relative uncertainties add: $\\frac{0.2}{8.0} + \\frac{0.2}{4.0} = 2.5\\% + 5\\% = 7.5\\%$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "Modified from 2025 Physics Bowl Problem 8",
+   "question": "A swimmer's speed in still water is $2\\,\\mathrm{m/s}$, and the stream flows at $1\\,\\mathrm{m/s}$. What is her maximum possible speed relative to the shore?",
+   "choices": {
+    "A": "$1\\,\\mathrm{m/s}$",
+    "B": "$2\\,\\mathrm{m/s}$",
+    "C": "$2.5\\,\\mathrm{m/s}$",
+    "D": "$3\\,\\mathrm{m/s}$",
+    "E": "$3.5\\,\\mathrm{m/s}$"
+   },
+   "answer": "D",
+   "solution": "Swimming downstream, her speeds add: $2 + 1 = 3\\,\\mathrm{m/s}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "Modified from 2025 Physics Bowl Problem 9",
+   "question": "A $1000\\,\\mathrm{kg}$ car moving at $20\\,\\mathrm{m/s}$ brakes uniformly to rest over $50\\,\\mathrm{m}$. What is the average braking force?",
+   "choices": {
+    "A": "$4000\\,\\mathrm{N}$",
+    "B": "$2000\\,\\mathrm{N}$",
+    "C": "$3000\\,\\mathrm{N}$",
+    "D": "$5000\\,\\mathrm{N}$",
+    "E": "$6000\\,\\mathrm{N}$"
+   },
+   "answer": "A",
+   "solution": "$v^2 = 2as$ gives $a = 20^2/(2\\cdot 50) = 4\\,\\mathrm{m/s^2}$, so $F = ma = 4000\\,\\mathrm{N}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "Modified from 2025 Physics Bowl Problem 10",
+   "question": "An impulse of $15\\,\\mathrm{N\\cdot s}$ acts on a $3\\,\\mathrm{kg}$ object initially at rest. What is the object's final speed?",
+   "choices": {
+    "A": "$3\\,\\mathrm{m/s}$",
+    "B": "$5\\,\\mathrm{m/s}$",
+    "C": "$7.5\\,\\mathrm{m/s}$",
+    "D": "$10\\,\\mathrm{m/s}$",
+    "E": "$15\\,\\mathrm{m/s}$"
+   },
+   "answer": "B",
+   "solution": "Impulse equals change in momentum: $v = J/m = 15/3 = 5\\,\\mathrm{m/s}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "Modified from 2025 Physics Bowl Problem 11",
+   "question": "A solid disk is released from rest and rolls without slipping down a $10\\,\\mathrm{m}$ long incline at $30^{\\circ}$ to the horizontal. What is its speed at the bottom? (Use $g = 10\\,\\mathrm{m/s^2}$; for a solid disk $I = \\frac12 mR^2$.)",
+   "choices": {
+    "A": "$6.3\\,\\mathrm{m/s}$",
+    "B": "$7.1\\,\\mathrm{m/s}$",
+    "C": "$8.2\\,\\mathrm{m/s}$",
+    "D": "$10\\,\\mathrm{m/s}$",
+    "E": "$11.5\\,\\mathrm{m/s}$"
+   },
+   "answer": "C",
+   "solution": "The drop is $h = 10\\sin 30^{\\circ} = 5\\,\\mathrm{m}$. Energy: $mgh = \\frac12 mv^2 + \\frac12 I\\omega^2 = \\frac34 mv^2$, so $v = \\sqrt{4gh/3} = \\sqrt{200/3} \\approx 8.2\\,\\mathrm{m/s}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "Modified from 2025 Physics Bowl Problem 12",
+   "question": "A simple pendulum has a massless string of length $2.5\\,\\mathrm{m}$. What is its period for small oscillations? (Use $g = 10\\,\\mathrm{m/s^2}$.)",
+   "choices": {
+    "A": "$1.57\\,\\mathrm{s}$",
+    "B": "$2.5\\,\\mathrm{s}$",
+    "C": "$5\\,\\mathrm{s}$",
+    "D": "$6.28\\,\\mathrm{s}$",
+    "E": "$3.14\\,\\mathrm{s}$"
+   },
+   "answer": "E",
+   "solution": "$T = 2\\pi\\sqrt{L/g} = 2\\pi\\sqrt{2.5/10} = 2\\pi \\cdot 0.5 = \\pi \\approx 3.14\\,\\mathrm{s}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "Modified from 2025 Physics Bowl Problem 13",
+   "question": "A box slides along a horizontal surface with initial speed $12\\,\\mathrm{m/s}$ and comes to rest after $8\\,\\mathrm{m}$. What is the coefficient of kinetic friction? (Use $g = 10\\,\\mathrm{m/s^2}$.)",
+   "choices": {
+    "A": "$0.9$",
+    "B": "$0.6$",
+    "C": "$0.75$",
+    "D": "$1.1$",
+    "E": "$1.25$"
+   },
+   "answer": "A",
+   "solution": "$a = v^2/(2s) = 144/16 = 9\\,\\mathrm{m/s^2}$, and $\\mu = a/g = 0.9$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "Modified from 2025 Physics Bowl Problem 14",
+   "question": "Which scientist is credited with first introducing the concept that energy is quantized, laying the foundation for quantum mechanics?",
+   "choices": {
+    "A": "Albert Einstein",
+    "B": "Max Planck",
+    "C": "Niels Bohr",
+    "D": "Erwin Schrödinger",
+    "E": "Werner Heisenberg"
+   },
+   "answer": "B",
+   "solution": "Max Planck introduced the quantum of energy in 1900 to explain blackbody radiation.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "Modified from 2025 Physics Bowl Problem 16",
+   "question": "A $60\\,\\mathrm{kg}$ person stands on a bathroom scale inside an elevator. The scale reads $720\\,\\mathrm{N}$. Which describes the elevator's motion? (Use $g = 10\\,\\mathrm{m/s^2}$.)",
+   "choices": {
+    "A": "Accelerating upward at $2\\,\\mathrm{m/s^2}$",
+    "B": "Accelerating downward at $2\\,\\mathrm{m/s^2}$",
+    "C": "Accelerating upward at $6\\,\\mathrm{m/s^2}$",
+    "D": "Accelerating downward at $6\\,\\mathrm{m/s^2}$",
+    "E": "Moving at constant velocity"
+   },
+   "answer": "A",
+   "solution": "$N = m(g+a)$ gives $a = 720/60 - 10 = 2\\,\\mathrm{m/s^2}$ upward.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "Modified from 2025 Physics Bowl Problem 16",
+   "question": "An object travels $8\\,\\mathrm{m}$ in $2\\,\\mathrm{s}$ at constant velocity. What is its speed?",
+   "choices": {
+    "A": "$2\\,\\mathrm{m/s}$",
+    "B": "$4\\,\\mathrm{m/s}$",
+    "C": "$6\\,\\mathrm{m/s}$",
+    "D": "$8\\,\\mathrm{m/s}$",
+    "E": "$16\\,\\mathrm{m/s}$"
+   },
+   "answer": "B",
+   "solution": "$v = d/t = 8/2 = 4\\,\\mathrm{m/s}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "Modified from 2025 Physics Bowl Problem 17",
+   "question": "A simple pendulum has length $1.0\\,\\mathrm{m}$. What is its period for small oscillations? (Use $g = 10\\,\\mathrm{m/s^2}$.)",
+   "choices": {
+    "A": "$1.0\\,\\mathrm{s}$",
+    "B": "$1.5\\,\\mathrm{s}$",
+    "C": "$2.0\\,\\mathrm{s}$",
+    "D": "$2.5\\,\\mathrm{s}$",
+    "E": "$3.0\\,\\mathrm{s}$"
+   },
+   "answer": "C",
+   "solution": "$T = 2\\pi\\sqrt{L/g} = 2\\pi\\sqrt{0.1} \\approx 2.0\\,\\mathrm{s}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "Modified from 2025 Physics Bowl Problem 18",
+   "question": "A $1200\\,\\mathrm{kg}$ car moves at $15\\,\\mathrm{m/s}$. What is its kinetic energy?",
+   "choices": {
+    "A": "$67.5\\,\\mathrm{kJ}$",
+    "B": "$90\\,\\mathrm{kJ}$",
+    "C": "$135\\,\\mathrm{kJ}$",
+    "D": "$180\\,\\mathrm{kJ}$",
+    "E": "$270\\,\\mathrm{kJ}$"
+   },
+   "answer": "C",
+   "solution": "$K = \\frac12 mv^2 = \\frac12 \\cdot 1200 \\cdot 225 = 135{,}000\\,\\mathrm{J} = 135\\,\\mathrm{kJ}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "Modified from 2025 Physics Bowl Problem 19",
+   "question": "A $9\\,\\mathrm{V}$ battery is connected across a $3\\,\\Omega$ resistor. What current flows through the resistor?",
+   "choices": {
+    "A": "$1\\,\\mathrm{A}$",
+    "B": "$2\\,\\mathrm{A}$",
+    "C": "$3\\,\\mathrm{A}$",
+    "D": "$6\\,\\mathrm{A}$",
+    "E": "$27\\,\\mathrm{A}$"
+   },
+   "answer": "C",
+   "solution": "$I = V/R = 9/3 = 3\\,\\mathrm{A}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "Modified from 2025 Physics Bowl Problem 20",
+   "question": "A block is pushed at constant velocity across a horizontal floor where the coefficient of kinetic friction is $0.2$. Using $g = 10\\,\\mathrm{m/s^2}$, what is the friction force on the block if it weighs $10\\,\\mathrm{N}$?",
+   "choices": {
+    "A": "$0.2\\,\\mathrm{N}$",
+    "B": "$1\\,\\mathrm{N}$",
+    "C": "$2\\,\\mathrm{N}$",
+    "D": "$5\\,\\mathrm{N}$",
+    "E": "$10\\,\\mathrm{N}$"
+   },
+   "answer": "C",
+   "solution": "$f = \\mu N = 0.2 \\cdot 10 = 2\\,\\mathrm{N}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "Modified from 2025 Physics Bowl Problem 21",
+   "question": "A $100\\,\\mathrm{kg}$ crate is lifted $2\\,\\mathrm{m}$ straight up. Using $g = 10\\,\\mathrm{m/s^2}$, how much potential energy does it gain?",
+   "choices": {
+    "A": "$200\\,\\mathrm{J}$",
+    "B": "$1000\\,\\mathrm{J}$",
+    "C": "$2000\\,\\mathrm{J}$",
+    "D": "$4000\\,\\mathrm{J}$",
+    "E": "$20000\\,\\mathrm{J}$"
+   },
+   "answer": "C",
+   "solution": "$U = mgh = 100 \\cdot 10 \\cdot 2 = 2000\\,\\mathrm{J}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "Modified from 2025 Physics Bowl Problem 22",
+   "question": "A $6\\,\\mathrm{kg}$ object moves at $2\\,\\mathrm{m/s}$. What is the magnitude of its momentum?",
+   "choices": {
+    "A": "$3\\,\\mathrm{kg\\cdot m/s}$",
+    "B": "$6\\,\\mathrm{kg\\cdot m/s}$",
+    "C": "$12\\,\\mathrm{kg\\cdot m/s}$",
+    "D": "$18\\,\\mathrm{kg\\cdot m/s}$",
+    "E": "$24\\,\\mathrm{kg\\cdot m/s}$"
+   },
+   "answer": "C",
+   "solution": "$p = mv = 6 \\cdot 2 = 12\\,\\mathrm{kg\\cdot m/s}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "Modified from 2025 Physics Bowl Problem 23",
+   "question": "A machine does $500\\,\\mathrm{J}$ of work in $10\\,\\mathrm{s}$. What is its average power?",
+   "choices": {
+    "A": "$5\\,\\mathrm{W}$",
+    "B": "$50\\,\\mathrm{W}$",
+    "C": "$100\\,\\mathrm{W}$",
+    "D": "$500\\,\\mathrm{W}$",
+    "E": "$5000\\,\\mathrm{W}$"
+   },
+   "answer": "B",
+   "solution": "$P = W/t = 500/10 = 50\\,\\mathrm{W}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "Modified from 2025 Physics Bowl Problem 24",
+   "question": "A $3\\,\\mathrm{N}$ force acts on a $4\\,\\mathrm{kg}$ object for $4\\,\\mathrm{s}$. What impulse does the object receive?",
+   "choices": {
+    "A": "$7\\,\\mathrm{N\\cdot s}$",
+    "B": "$12\\,\\mathrm{N\\cdot s}$",
+    "C": "$16\\,\\mathrm{N\\cdot s}$",
+    "D": "$24\\,\\mathrm{N\\cdot s}$",
+    "E": "$48\\,\\mathrm{N\\cdot s}$"
+   },
+   "answer": "B",
+   "solution": "$J = F\\Delta t = 3 \\cdot 4 = 12\\,\\mathrm{N\\cdot s}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "Modified from 2025 Physics Bowl Problem 25",
+   "question": "Two $4\\,\\Omega$ resistors are connected first in series and then in parallel. What is the ratio of the series equivalent resistance to the parallel equivalent resistance?",
+   "choices": {
+    "A": "$1$",
+    "B": "$2$",
+    "C": "$3$",
+    "D": "$4$",
+    "E": "$8$"
+   },
+   "answer": "D",
+   "solution": "Series: $4+4=8\\,\\Omega$; parallel: $2\\,\\Omega$. Ratio $= 8/2 = 4$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 26,
+   "source": "Modified from 2025 Physics Bowl Problem 26",
+   "question": "A crane lifts a $30{,}000\\,\\mathrm{N}$ load by $10\\,\\mathrm{m}$. How much work does the crane do against gravity?",
+   "choices": {
+    "A": "$3\\,\\mathrm{kJ}$",
+    "B": "$30\\,\\mathrm{kJ}$",
+    "C": "$300\\,\\mathrm{kJ}$",
+    "D": "$3000\\,\\mathrm{kJ}$",
+    "E": "$30\\,\\mathrm{J}$"
+   },
+   "answer": "C",
+   "solution": "$W = Fd = 30000 \\cdot 10 = 300{,}000\\,\\mathrm{J} = 300\\,\\mathrm{kJ}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 27,
+   "source": "Modified from 2025 Physics Bowl Problem 27",
+   "question": "A motor consumes $100\\,\\mathrm{W}$ of electrical power and delivers $60\\,\\mathrm{W}$ of mechanical power. If it runs for $20\\,\\mathrm{s}$, how much energy is lost to heat?",
+   "choices": {
+    "A": "$800\\,\\mathrm{J}$",
+    "B": "$1200\\,\\mathrm{J}$",
+    "C": "$2000\\,\\mathrm{J}$",
+    "D": "$3200\\,\\mathrm{J}$",
+    "E": "$400\\,\\mathrm{J}$"
+   },
+   "answer": "A",
+   "solution": "Power lost $= 100 - 60 = 40\\,\\mathrm{W}$; energy lost $= 40 \\cdot 20 = 800\\,\\mathrm{J}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 28,
+   "source": "Modified from 2025 Physics Bowl Problem 28",
+   "question": "A stone is dropped from a height of $5\\,\\mathrm{m}$. Using $g = 10\\,\\mathrm{m/s^2}$ and neglecting air resistance, how long does it take to reach the ground?",
+   "choices": {
+    "A": "$0.5\\,\\mathrm{s}$",
+    "B": "$1\\,\\mathrm{s}$",
+    "C": "$1.5\\,\\mathrm{s}$",
+    "D": "$2\\,\\mathrm{s}$",
+    "E": "$2.5\\,\\mathrm{s}$"
+   },
+   "answer": "B",
+   "solution": "$t = \\sqrt{2h/g} = \\sqrt{2 \\cdot 5/10} = 1\\,\\mathrm{s}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 29,
+   "source": "Modified from 2025 Physics Bowl Problem 29",
+   "question": "A $4\\,\\mathrm{kg}$ object moves at $3\\,\\mathrm{m/s}$. What is its kinetic energy?",
+   "choices": {
+    "A": "$6\\,\\mathrm{J}$",
+    "B": "$12\\,\\mathrm{J}$",
+    "C": "$18\\,\\mathrm{J}$",
+    "D": "$24\\,\\mathrm{J}$",
+    "E": "$36\\,\\mathrm{J}$"
+   },
+   "answer": "C",
+   "solution": "$K = \\frac12 mv^2 = \\frac12 \\cdot 4 \\cdot 9 = 18\\,\\mathrm{J}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 30,
+   "source": "Modified from 2025 Physics Bowl Problem 30",
+   "question": "A force of $2\\,\\mathrm{N}$ is applied uniformly over an area of $8\\,\\mathrm{m^2}$. What is the pressure?",
+   "choices": {
+    "A": "$4\\,\\mathrm{Pa}$",
+    "B": "$16\\,\\mathrm{Pa}$",
+    "C": "$0.25\\,\\mathrm{Pa}$",
+    "D": "$64\\,\\mathrm{Pa}$",
+    "E": "$2\\,\\mathrm{Pa}$"
+   },
+   "answer": "C",
+   "solution": "$p = F/A = 2/8 = 0.25\\,\\mathrm{Pa}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 31,
+   "source": "Modified from 2025 Physics Bowl Problem 31",
+   "question": "A wave has a frequency of $60\\,\\mathrm{Hz}$ and a wavelength of $0.25\\,\\mathrm{m}$. What is its speed?",
+   "choices": {
+    "A": "$4\\,\\mathrm{m/s}$",
+    "B": "$15\\,\\mathrm{m/s}$",
+    "C": "$60\\,\\mathrm{m/s}$",
+    "D": "$240\\,\\mathrm{m/s}$",
+    "E": "$0.25\\,\\mathrm{m/s}$"
+   },
+   "answer": "B",
+   "solution": "$v = f\\lambda = 60 \\cdot 0.25 = 15\\,\\mathrm{m/s}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 32,
+   "source": "Modified from 2025 Physics Bowl Problem 32",
+   "question": "A $5\\,\\mathrm{kg}$ block sits on a frictionless incline of $30^{\\circ}$. Using $g = 10\\,\\mathrm{m/s^2}$, what force parallel to the incline is needed to hold it at rest?",
+   "choices": {
+    "A": "$12.5\\,\\mathrm{N}$",
+    "B": "$25\\,\\mathrm{N}$",
+    "C": "$43\\,\\mathrm{N}$",
+    "D": "$50\\,\\mathrm{N}$",
+    "E": "$100\\,\\mathrm{N}$"
+   },
+   "answer": "B",
+   "solution": "$F = mg\\sin 30^{\\circ} = 5 \\cdot 10 \\cdot 0.5 = 25\\,\\mathrm{N}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 33,
+   "source": "Modified from 2025 Physics Bowl Problem 33",
+   "question": "A spring is stretched $4\\,\\mathrm{cm}$ by a $12\\,\\mathrm{N}$ force. What is its spring constant?",
+   "choices": {
+    "A": "$3\\,\\mathrm{N/m}$",
+    "B": "$48\\,\\mathrm{N/m}$",
+    "C": "$300\\,\\mathrm{N/m}$",
+    "D": "$480\\,\\mathrm{N/m}$",
+    "E": "$1200\\,\\mathrm{N/m}$"
+   },
+   "answer": "C",
+   "solution": "$k = F/x = 12/0.04 = 300\\,\\mathrm{N/m}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 34,
+   "source": "Modified from 2025 Physics Bowl Problem 34",
+   "question": "A $2\\,\\mathrm{kg}$ object moves in a circle of radius $3\\,\\mathrm{m}$ at $3\\,\\mathrm{m/s}$. What centripetal force is required?",
+   "choices": {
+    "A": "$2\\,\\mathrm{N}$",
+    "B": "$6\\,\\mathrm{N}$",
+    "C": "$12\\,\\mathrm{N}$",
+    "D": "$18\\,\\mathrm{N}$",
+    "E": "$54\\,\\mathrm{N}$"
+   },
+   "answer": "B",
+   "solution": "$F = mv^2/r = 2 \\cdot 9/3 = 6\\,\\mathrm{N}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 35,
+   "source": "Modified from 2025 Physics Bowl Problem 35",
+   "question": "Light travels from air ($n = 1.0$) into glass ($n = 1.5$). By what factor does its speed change?",
+   "choices": {
+    "A": "It becomes $0.5\\times$",
+    "B": "It becomes $\\frac{2}{3}\\times$",
+    "C": "It becomes $1.5\\times$",
+    "D": "It becomes $2\\times$",
+    "E": "It does not change"
+   },
+   "answer": "B",
+   "solution": "$v = c/n$, so the speed becomes $1.0/1.5 = \\frac{2}{3}$ of its original value.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 36,
+   "source": "Modified from 2025 Physics Bowl Problem 36",
+   "question": "A $20\\,\\mathrm{W}$ heater is used for $5\\,\\mathrm{s}$. How much energy does it consume?",
+   "choices": {
+    "A": "$4\\,\\mathrm{J}$",
+    "B": "$25\\,\\mathrm{J}$",
+    "C": "$100\\,\\mathrm{J}$",
+    "D": "$500\\,\\mathrm{J}$",
+    "E": "$2000\\,\\mathrm{J}$"
+   },
+   "answer": "C",
+   "solution": "$E = Pt = 20 \\cdot 5 = 100\\,\\mathrm{J}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 37,
+   "source": "Modified from 2025 Physics Bowl Problem 37",
+   "question": "A wheel with moment of inertia $2\\,\\mathrm{kg\\cdot m^2}$ spins at $4\\,\\mathrm{rad/s}$. What is its rotational kinetic energy?",
+   "choices": {
+    "A": "$4\\,\\mathrm{J}$",
+    "B": "$8\\,\\mathrm{J}$",
+    "C": "$16\\,\\mathrm{J}$",
+    "D": "$32\\,\\mathrm{J}$",
+    "E": "$64\\,\\mathrm{J}$"
+   },
+   "answer": "C",
+   "solution": "$K = \\frac12 I\\omega^2 = \\frac12 \\cdot 2 \\cdot 16 = 16\\,\\mathrm{J}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 38,
+   "source": "Modified from 2025 Physics Bowl Problem 38",
+   "question": "A force of $8\\,\\mathrm{N}$ is applied tangentially at the rim of a wheel of radius $3\\,\\mathrm{m}$. What is the torque on the wheel?",
+   "choices": {
+    "A": "$5\\,\\mathrm{N\\cdot m}$",
+    "B": "$11\\,\\mathrm{N\\cdot m}$",
+    "C": "$24\\,\\mathrm{N\\cdot m}$",
+    "D": "$48\\,\\mathrm{N\\cdot m}$",
+    "E": "$72\\,\\mathrm{N\\cdot m}$"
+   },
+   "answer": "C",
+   "solution": "$\\tau = Fr = 8 \\cdot 3 = 24\\,\\mathrm{N\\cdot m}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 39,
+   "source": "Modified from 2025 Physics Bowl Problem 39",
+   "question": "A $5\\,\\mathrm{kg}$ object hangs from a string. Using $g = 10\\,\\mathrm{m/s^2}$, what is the tension in the string?",
+   "choices": {
+    "A": "$0.5\\,\\mathrm{N}$",
+    "B": "$5\\,\\mathrm{N}$",
+    "C": "$15\\,\\mathrm{N}$",
+    "D": "$50\\,\\mathrm{N}$",
+    "E": "$500\\,\\mathrm{N}$"
+   },
+   "answer": "D",
+   "solution": "$T = mg = 5 \\cdot 10 = 50\\,\\mathrm{N}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 40,
+   "source": "Modified from 2025 Physics Bowl Problem 40",
+   "question": "A circular track has radius $5\\,\\mathrm{m}$. How far does a runner travel in one full lap? (Use $\\pi \\approx 3.14$.)",
+   "choices": {
+    "A": "$15.7\\,\\mathrm{m}$",
+    "B": "$31.4\\,\\mathrm{m}$",
+    "C": "$62.8\\,\\mathrm{m}$",
+    "D": "$78.5\\,\\mathrm{m}$",
+    "E": "$314\\,\\mathrm{m}$"
+   },
+   "answer": "B",
+   "solution": "$C = 2\\pi r = 2 \\cdot 3.14 \\cdot 5 = 31.4\\,\\mathrm{m}$.",
+   "type": "multiple_choice",
+   "points": 1
+  }
+ ]
+}

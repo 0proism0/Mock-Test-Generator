@@ -1,0 +1,411 @@
+{
+ "id": "amc8_rand_14",
+ "competition": "AMC 8",
+ "category": "Math",
+ "title": "AMC 8 — Random Mock #14 · 2026-08-28 11:34",
+ "instructions": "25 questions · 40 minutes · No calculator. 25 points total.",
+ "time_limit_min": 40,
+ "total_points": 25,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2008 AMC 8 Problem 1",
+   "question": "Maya had $60$ dollars to spend at the fair. She spent $14$ dollars on food and twice as much on rides. How many dollars did she have left to spend?",
+   "choices": {
+    "A": "16",
+    "B": "18",
+    "C": "32",
+    "D": "46",
+    "E": "60"
+   },
+   "answer": "B",
+   "solution": "Maya spent $14$ dollars on food and $14 \\times 2 = 28$ dollars on rides, for a total of $14+28=42$ dollars. She had $60-42=\\boxed{18}$ dollars left.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2002 AMC 8 Problem 2",
+   "question": "How many different combinations of $\\$5$ bills and $\\$2$ bills can be used to make a total of $\\$27$? Order does not matter in this problem.",
+   "choices": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "5"
+   },
+   "answer": "C",
+   "solution": "Since $27$ is odd, the number of $\\$5$ bills must be odd. The possibilities are $1$ five and $11$ twos, $3$ fives and $6$ twos, or $5$ fives and $1$ two. That gives $\\boxed{3}$ combinations.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2024 AMC 8 Problem 3",
+   "question": "Four squares with side lengths $2, 5, 6,$ and $9$ are placed side by side in a row so that adjacent squares touch. What is the total width of the row?",
+   "choices": {
+    "A": "18",
+    "B": "22",
+    "C": "20",
+    "D": "21",
+    "E": "24"
+   },
+   "answer": "B",
+   "solution": "The widths add up: $2+5+6+9=22$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2013 AMC 8 Problem 4",
+   "question": "Six friends ate at a restaurant and agreed to share the bill equally. Because Priya forgot her money, each of her five friends paid an extra $\\$3$ to cover her portion of the total bill. What was the total bill?",
+   "choices": {
+    "A": "$\\$60$",
+    "B": "$\\$72$",
+    "C": "$\\$75$",
+    "D": "$\\$90$",
+    "E": "$\\$108$"
+   },
+   "answer": "D",
+   "solution": "The five friends paid an extra $5\\cdot3=15$ dollars in all, which exactly covers Priya's share. So each of the six equal shares is $\\$15$, and the total bill is $6\\cdot15=\\$90$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2014 AMC 8 Problem 5",
+   "question": "Ravi's car can go $35$ miles on a gallon of gas, and gas currently costs $\\$5$ per gallon. How many miles can Ravi drive on $\\$28$ worth of gas?",
+   "choices": {
+    "A": "140",
+    "B": "150",
+    "C": "175",
+    "D": "180",
+    "E": "196"
+   },
+   "answer": "E",
+   "solution": "With $\\$28$ Ravi can buy $\\frac{28}{5}=5.6$ gallons of gas. At $35$ miles per gallon, he can drive $5.6\\cdot35=196$ miles.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2017 AMC 8 Problem 6",
+   "question": "If the degree measures of the angles of a triangle are in the ratio $2:2:5$, what is the degree measure of the largest angle of the triangle?",
+   "choices": {
+    "A": "20",
+    "B": "40",
+    "C": "80",
+    "D": "100",
+    "E": "120"
+   },
+   "answer": "D",
+   "solution": "The sum of the ratio parts is $2+2+5=9$. Since the angles of a triangle sum to $180^{\\circ}$, each part equals $20^{\\circ}$, and the largest angle is $5 \\cdot 20 = \\boxed{100}$ degrees.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2016 AMC 8 Problem 7",
+   "question": "Which of the following numbers is not a perfect square?",
+   "choices": {
+    "A": "$3^{100}$",
+    "B": "$5^{42}$",
+    "C": "$7^{2024}$",
+    "D": "$11^{63}$",
+    "E": "$13^{8}$"
+   },
+   "answer": "D",
+   "solution": "A power of a prime is a perfect square exactly when its exponent is even: $3^{100}=(3^{50})^2$, $5^{42}=(5^{21})^2$, $7^{2024}=(7^{1012})^2$, and $13^8=(13^4)^2$. But $11^{63}$ has an odd exponent, so it is not a perfect square.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2017 AMC 8 Problem 8",
+   "question": "Diego wants to visit Luna after school and knows the street where she lives but doesn't know her house number. She tells him, \"My house number has two digits, and exactly three of the following four statements about it are true.\" (1) It is prime. (2) It is even. (3) It is divisible by $11$. (4) One of its digits is $4$. This information allows Diego to determine Luna's house number. What is its units digit?",
+   "choices": {
+    "A": "4",
+    "B": "2",
+    "C": "6",
+    "D": "8",
+    "E": "9"
+   },
+   "answer": "A",
+   "solution": "A two-digit number cannot be both prime and even, so statements (1) and (2) cannot both be true; hence exactly one of them is false and the other three statements are all true. If (1) were true, the number would be a prime divisible by $11$, and the only such number, $11$, has no digit $4$ — impossible. So (1) is false and (2), (3), (4) are true. The two-digit multiples of $11$ are $11,22,\\dots,99$; the only even one containing the digit $4$ is $44$. Its units digit is $4$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2016 AMC 8 Problem 9",
+   "question": "What is the sum of the distinct prime integer divisors of $2025$?",
+   "choices": {
+    "A": "8",
+    "B": "10",
+    "C": "16",
+    "D": "45",
+    "E": "75"
+   },
+   "answer": "A",
+   "solution": "Since $2025 = 81 \\cdot 25 = 3^4 \\cdot 5^2$, the distinct prime divisors are $3$ and $5$. Their sum is $3+5=\\boxed{8}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2013 AMC 8 Problem 10",
+   "question": "What is the ratio of the least common multiple of $168$ and $360$ to the greatest common factor of $168$ and $360$?",
+   "choices": {
+    "A": "63",
+    "B": "84",
+    "C": "105",
+    "D": "126",
+    "E": "210"
+   },
+   "answer": "C",
+   "solution": "Factor: $168=2^3\\cdot3\\cdot7$ and $360=2^3\\cdot3^2\\cdot5$. The greatest common factor is $2^3\\cdot3=24$, and the least common multiple is $2^3\\cdot3^2\\cdot5\\cdot7=2520$. The ratio is $\\frac{2520}{24}=105$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2024 AMC 8 Problem 11",
+   "question": "The vertices of $\\triangle ABC$ are $A(2,3)$, $B(8,3)$, and $C(5,y)$ with $y>3$. The area of $\\triangle ABC$ is $15$. What is $y$?",
+   "choices": {
+    "A": "8",
+    "B": "6",
+    "C": "7",
+    "D": "9",
+    "E": "10"
+   },
+   "answer": "A",
+   "solution": "$AB$ is horizontal with length $8-2=6$. From $\\tfrac12\\cdot 6\\cdot h=15$ the height is $h=5$, so $y=3+5=8$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2024 AMC 8 Problem 12",
+   "question": "Rosa keeps $66$ fish in $4$ tanks. There is $1$ more fish in the 2nd tank than in the 1st, $2$ more in the 3rd than in the 2nd, and $3$ more in the 4th than in the 3rd. How many fish are in the 4th tank?",
+   "choices": {
+    "A": "17",
+    "B": "18",
+    "C": "19",
+    "D": "22",
+    "E": "20"
+   },
+   "answer": "E",
+   "solution": "The tanks hold $t,\\ t+1,\\ t+3,\\ t+6$ fish. Then $4t+10=66$, so $t=14$, and the 4th tank has $14+6=20$ fish.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2024 AMC 8 Problem 13",
+   "question": "A bunny hops up a staircase of $4$ steps, going up either $1$ step or $2$ steps at a time. In how many different ways can the bunny reach the top?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "6",
+    "D": "8",
+    "E": "5"
+   },
+   "answer": "E",
+   "solution": "Ordered sums of $1$s and $2$s equal to $4$: $1{+}1{+}1{+}1$, $2{+}1{+}1$, $1{+}2{+}1$, $1{+}1{+}2$, $2{+}2$ — $5$ ways.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2024 AMC 8 Problem 14",
+   "question": "One-way roads connect towns as follows: $A\\to B$ is $3$ km, $B\\to C$ is $4$ km, $A\\to C$ is $9$ km, $C\\to D$ is $2$ km, and $B\\to D$ is $8$ km. What is the length in km of the shortest route from $A$ to $D$?",
+   "choices": {
+    "A": "8",
+    "B": "9",
+    "C": "10",
+    "D": "11",
+    "E": "12"
+   },
+   "answer": "B",
+   "solution": "Compare the routes: $A\\to B\\to C\\to D=3+4+2=9$; $A\\to C\\to D=9+2=11$; $A\\to B\\to D=3+8=11$. The shortest is $9$ km.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2020 AMC 8 Problem 15",
+   "question": "Suppose $15\\%$ of $x$ equals $25\\%$ of $y.$ What percentage of $x$ is $y?$",
+   "choices": {
+    "A": "60",
+    "B": "75",
+    "C": "90",
+    "D": "133 \\frac{1}{3}",
+    "E": "300"
+   },
+   "answer": "A",
+   "solution": "Since $25\\% = \\frac{1}{4}$, multiplying both sides of $0.15x = 0.25y$ by $4$ gives $y = 0.60x$. So $y$ is $\\boxed{60}$ percent of $x$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2009 AMC 8 Problem 16",
+   "question": "How many $3$-digit positive integers have digits whose product equals $12$?",
+   "choices": {
+    "A": "12",
+    "B": "15",
+    "C": "18",
+    "D": "21",
+    "E": "24"
+   },
+   "answer": "B",
+   "solution": "The digit multisets (from least to greatest) with product $12$ are $\\{1,2,6\\}$, $\\{1,3,4\\}$, and $\\{2,2,3\\}$. The first two each give $3! = 6$ arrangements, and the last gives $\\frac{3!}{2!}=3$ arrangements, for a total of $6+6+3=\\boxed{15}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2024 AMC 8 Problem 17",
+   "question": "A chess king attacks every square one step away horizontally, vertically, or diagonally. In how many ways can two identical kings be placed on two different squares of a $2\\times 3$ board so that they do not attack each other?",
+   "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "5",
+    "D": "4",
+    "E": "6"
+   },
+   "answer": "D",
+   "solution": "There are $\\binom{6}{2}=15$ pairs of squares. Attacking pairs: $8$ across adjacent columns (2 horizontal + 2 diagonal per column pair, times 2 column pairs) plus $3$ vertical pairs, $11$ total. Non-attacking: $15-11=4$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2024 AMC 8 Problem 18",
+   "question": "Three concentric circles have radii $2$, $3$, and $4$. The area of the ring between the circles of radius $2$ and radius $3$ is what fraction of the area of the largest circle?",
+   "choices": {
+    "A": "$\\frac{1}{4}$",
+    "B": "$\\frac{5}{16}$",
+    "C": "$\\frac{3}{8}$",
+    "D": "$\\frac{7}{16}$",
+    "E": "$\\frac{1}{2}$"
+   },
+   "answer": "B",
+   "solution": "Ring area $=\\pi(3^2-2^2)=5\\pi$; largest circle area $=16\\pi$. The fraction is $\\frac{5\\pi}{16\\pi}=\\frac{5}{16}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2024 AMC 8 Problem 19",
+   "question": "In a class, $\\frac{3}{4}$ of the students like math and $\\frac{2}{3}$ like science. Every student likes at least one of the two subjects. What fraction of the class likes both subjects?",
+   "choices": {
+    "A": "$\\frac{1}{4}$",
+    "B": "$\\frac{1}{3}$",
+    "C": "$\\frac{1}{2}$",
+    "D": "$\\frac{7}{12}$",
+    "E": "$\\frac{5}{12}$"
+   },
+   "answer": "E",
+   "solution": "Inclusion–exclusion: $\\frac34+\\frac23-\\text{both}=1$, so $\\text{both}=\\frac{9}{12}+\\frac{8}{12}-\\frac{12}{12}=\\frac{5}{12}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "2016 AMC 8 Problem 20",
+   "question": "The least common multiple of $a$ and $b$ is $18$, and the least common multiple of $b$ and $c$ is $20$. What is the least possible value of the least common multiple of $a$ and $c$?",
+   "choices": {
+    "A": "36",
+    "B": "60",
+    "C": "90",
+    "D": "120",
+    "E": "180"
+   },
+   "answer": "E",
+   "solution": "Since $\\text{lcm}(a,b)=18$ and $\\text{lcm}(b,c)=20$, the number $b$ divides both $18$ and $20$, so $b\\mid\\gcd(18,20)=2$. Then $b$ contributes no factor of $9$, so $9\\mid a$; likewise $b$ contributes no factor of $4$ or $5$, so $20\\mid c$. Hence $\\text{lcm}(a,c)$ must be a multiple of $\\text{lcm}(9,20)=180$. This bound is achieved with $a=9$, $b=2$, $c=20$: $\\text{lcm}(9,2)=18$ and $\\text{lcm}(2,20)=20$. The least possible value is $180$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "2023 AMC 8 Problem 21",
+   "question": "Bao writes the numbers $2, 3, \\dots, 10$ on separate cards, one number per card. He wishes to divide the cards into $3$ groups of $3$ cards so that the sum of the numbers in each group will be the same. In how many ways can this be done?",
+   "choices": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3",
+    "E": "4"
+   },
+   "answer": "C",
+   "solution": "The total is $2+3+\\cdots+10=54$, so each group must sum to $18$. The card $10$ can only be grouped as $\\{10,2,6\\}$ or $\\{10,3,5\\}$ (since $10+4+4$ repeats a card). If $\\{10,2,6\\}$ is used, the remaining cards $\\{3,4,5,7,8,9\\}$ split uniquely as $\\{9,4,5\\}$ and $\\{8,7,3\\}$. If $\\{10,3,5\\}$ is used, the remaining cards $\\{2,4,6,7,8,9\\}$ split uniquely as $\\{9,2,7\\}$ and $\\{8,6,4\\}$. Thus there are exactly $2$ ways.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "2009 AMC 8 Problem 22",
+   "question": "How many whole numbers between $1$ and $100$ do not contain the digit $1$?",
+   "choices": {
+    "A": "80",
+    "B": "81",
+    "C": "88",
+    "D": "89",
+    "E": "90"
+   },
+   "answer": "A",
+   "solution": "Among one-digit numbers, the $8$ values $2$ through $9$ work. For two-digit numbers, the tens digit has $8$ choices (anything but $0$ or $1$) and the units digit has $9$ choices (anything but $1$), giving $8 \\cdot 9 = 72$. The total is $8 + 72 = \\boxed{80}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "2011 AMC 8 Problem 23",
+   "question": "How many $4$-digit positive integers have four different digits, where the leading digit is not zero, the integer is a multiple of $5$, and $6$ is the largest digit?",
+   "choices": {
+    "A": "84",
+    "B": "96",
+    "C": "108",
+    "D": "112",
+    "E": "120"
+   },
+   "answer": "D",
+   "solution": "A multiple of $5$ ends in $0$ or $5$, and the digit $6$ must appear. Case 1: the units digit is $0$. The other three digits are distinct, chosen from $\\{1,2,3,4,5,6\\}$, and must include $6$: choose the other two in $\\binom{5}{2}=10$ ways and arrange all three in $3!=6$ ways, giving $60$ numbers. Case 2: the units digit is $5$. The first three digits are distinct, chosen from $\\{0,1,2,3,4,6\\}$, include $6$, and the leading digit is not $0$. Without the leading restriction there are again $10\\cdot6=60$ arrangements; those with leading $0$ have $6$ and one of $\\{1,2,3,4\\}$ in the last two slots: $4\\cdot2=8$ arrangements. This case gives $60-8=52$ numbers. In total, $60+52=112$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "2020 AMC 8 Problem 24",
+   "question": "A large square region is paved with $n^2$ gray square tiles, each measuring $s$ inches on a side. A border $d$ inches wide surrounds each tile, so the large square region has side length $ns+(n+1)d$ inches. When $n=9$, the $81$ gray tiles cover $36\\%$ of the area of the large square region. What is the ratio $\\frac{d}{s}$?",
+   "choices": {
+    "A": "$\\frac{3}{5}$",
+    "B": "$\\frac{1}{2}$",
+    "C": "$\\frac{5}{9}$",
+    "D": "$\\frac{2}{3}$",
+    "E": "$\\frac{9}{16}$"
+   },
+   "answer": "A",
+   "solution": "The tiles cover a fraction $\\dfrac{(9s)^2}{(9s+10d)^2}$ of the region. Setting this equal to $36\\%=\\left(\\frac{3}{5}\\right)^2$ gives $\\frac{9s}{9s+10d}=\\frac{3}{5}$. Cross-multiplying: $45s=27s+30d$, so $18s=30d$ and $\\frac{d}{s}=\\frac{18}{30}=\\frac{3}{5}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "2018 AMC 8 Problem 25",
+   "question": "How many perfect cubes lie between $2^6+1$ and $2^{16}+1$, inclusive?",
+   "choices": {
+    "A": "4",
+    "B": "8",
+    "C": "10",
+    "D": "35",
+    "E": "36"
+   },
+   "answer": "E",
+   "solution": "We have $2^6+1 = 65$ and $2^{16}+1 = 65537$. The smallest cube in range is $5^3 = 125$ and the largest is $40^3 = 64000$ (since $41^3 = 68921$ is too big). The cubes are $5^3, 6^3, \\dots, 40^3$, giving $40 - 5 + 1 = \\boxed{36}$ perfect cubes.",
+   "type": "multiple_choice",
+   "points": 1
+  }
+ ]
+}

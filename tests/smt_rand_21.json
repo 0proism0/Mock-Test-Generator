@@ -1,0 +1,261 @@
+{
+ "id": "smt_rand_21",
+ "competition": "SMT — General",
+ "category": "Math",
+ "title": "SMT — General — Random Mock #21 · 2026-08-27 08:50",
+ "instructions": "25 questions · 110 minutes · No calculator. 25 points total.",
+ "time_limit_min": 110,
+ "total_points": 25,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2013 SMT General Problem 1",
+   "question": "Robin goes birdwatching one day. He sees three types of birds: penguins, pigeons, and robins. 2 3 of the birds he sees are robins. 1 8 of the birds he sees are penguins. He sees exactly 5 pigeons. How many robins does Robin see?",
+   "choices": null,
+   "answer": "16",
+   "solution": "Answer: 16. Robin goes birdwatching one day. He sees three types of birds: penguins, pigeons, and robins. 2 3 of the birds he sees are robins. 1 8 of the birds he sees are penguins. He sees exactly 5 pigeons. How many robins does Robin see? Answer: 16 Solution: 1− 2 3− 1 8 = 5 24 of the birds that Robin sees are pigeons. Therefore, Robin sees exactly 5 5 24 = 24 birds, so 2 3· 24 = 16 robins.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2014 SMT General Problem 2",
+   "question": "Upon entering a tall building, you are confronted with a problem that has existed since the late nineteenth century—should you take the stairs, or the elevator? If you decide to take the stairs, it will take you 20 seconds to walk up each ﬂight of stairs. If you decide to take the elevator, you will have to wait for 3 minutes for the elevator to arrive, after which it will take 3 seconds to move up each ﬂoor. Compute the minimum number of ﬂoors for which taking the elevator takes less time than taking the stairs.",
+   "choices": null,
+   "answer": "11",
+   "solution": "Answer: 11. Upon entering a tall building, you are confronted with a problem that has existed since the late nineteenth century—should you take the stairs, or the elevator? If you decide to take the stairs, it will take you 20 seconds to walk up each ﬂight of stairs. If you decide to take the elevator, you will have to wait for 3 minutes for the elevator to arrive, after which it will take 3 seconds to move up each ﬂoor. Compute the minimum number of ﬂoors for which taking the elevator takes less time than taking the stairs. Answer: 11 Solution: Say we want to ascend n ﬂoors. By stairs, this take 20 n seconds; by elevator, this takes 180 + 3n seconds. Solving the inequality 180 + 3 n < 20n, we get 180 < 17n and 180 17 < n. Since 180 17 = 10 10 17, n should be at least 11 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2012 SMT General Problem 3",
+   "question": "The Tribonacci numbers Tn are deﬁned as follows: T0 = 0, T1 = 1, and T2 = 1. For all n ≥ 3, we have Tn = Tn−1 + Tn−2 + Tn−3. Compute the smallest Tribonacci number greater than 100 which is prime.",
+   "choices": null,
+   "answer": "149",
+   "solution": "Answer: 149. The Tribonacci numbers Tn are deﬁned as follows: T0 = 0, T1 = 1, and T2 = 1. For all n ≥ 3, we have Tn = Tn−1 + Tn−2 + Tn−3. Compute the smallest Tribonacci number greater than 100 which is prime. Answer: 149 Solution: The ﬁrst few Tribonacci numbers are 0, 1, 1, 2, 4, 7, 13, 24, 44, 81, 149. 149 is the smallest Tribonacci number greater than 100, and it also turns out to be prime, so that is our answer.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2012 SMT General Problem 4",
+   "question": "Steve works 40 hours a week at his new job. He usually gets paid 8 dollars an hour, but if he works for more than 8 hours on a given day, he earns 12 dollars an hour for every additional hour over 8 hours. If x is the maximum number of dollars that Steve can earn in one week by working exactly 40 hours, and y is the minimum number of dollars that Steve can earn in one week by working exactly 40 hours, what is x − y?",
+   "choices": null,
+   "answer": "96",
+   "solution": "Answer: 96. Steve works 40 hours a week at his new job. He usually gets paid 8 dollars an hour, but if he works for more than 8 hours on a given day, he earns 12 dollars an hour for every additional hour over 8 hours. If x is the maximum number of dollars that Steve can earn in one week by working exactly 40 hours, and y is the minimum number of dollars that Steve can earn in one week by working exactly 40 hours, what is x − y? Answer: 96 Solution: In the minimum case, Steve can work 8 hours a day for ﬁve days, thereby earning no overtime pay and earning exactly $320. In the maximum case, Steve works 40 hours without a single break. This spans two days; there are 16 hours of work at regular pay and 24 hours of work at overtime pay. Therefore, Steve earns 16 × $8 + 24 × $12 = $416. Therefore, x = 416 and y = 320, so x − y = 96 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2019 SMT General Problem 5",
+   "question": "Maddy wants to create a 10 letter word with using only letters in her name. If she uses m M’s, a A’s, d D’s, and y Y’s where m > a > d > y > 0, what is m· a· d· d· y?",
+   "choices": null,
+   "answer": "48",
+   "solution": "Answer: 48. Maddy wants to create a 10 letter word with using only letters in her name. If she uses m M’s, a A’s, d D’s, and y Y’s where m>a>d>y > 0, what is m·a·d·d·y? Answer: 48 Solution: Note that since all of the numbers are larger than 0 and we have the strict inequality m > a > d > y, we can only have m = 4,a = 3,d = 2,y = 1. So, maddy = 4· 3· 2· 2· 1 = 48 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2022 SMT General Problem 6",
+   "question": "What are the last two digits of 2022 20222022 ?",
+   "choices": null,
+   "answer": "56",
+   "solution": "Answer: 56. What are the last two digits of 2022 20222022 ? Answer: 56 Solution: We wish to compute 2022 20222022 mod 100, or in other words, we wish to compute the exponent modulo φ(100) = 40. We can go one step further: in particular, 202220222022 mod 100 = 202220222022 mod 40 mod 100 = 202220222022 mod 16 mod 40 mod 100 Since 2016 ≡ 0 mod 16, we have to compute 2022 6 mod 40. Notice that 2022 6 ≡ 0 mod 8, and 2022 6 ≡ 4 mod 5. So, 2022 6 ≡ 24 mod 40. Therefore, it suffices to compute 2022 24 ≡ 2224 mod 100. To this end, again note that 22 24≡ 0 mod 4 and 2224≡ 224≡ (−3)4≡ 6 mod 25. So, 2224≡ 56 mod 100. SMT 2022 General Test Solutions April 16–17, 2022",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2022 SMT General Problem 7",
+   "question": "On December 9, 2004, Tracy McGrady scored 13 points in 33 seconds to beat the San Antonio Spurs. Given that McGrady never misses and that each shot made counts for 2, 3, or 4 points, how many shot sequences could McGrady have taken to achieve such a feat assuming that order matters?",
+   "choices": null,
+   "answer": "52",
+   "solution": "Answer: 52. On December 9, 2004, Tracy McGrady scored 13 points in 33 seconds to beat the San Antonio Spurs. Given that McGrady never misses and that each shot made counts for 2, 3, or 4 points, how many shot sequences could McGrady have taken to achieve such a feat assuming that order matters? Answer: 52 Solution: We first narrow down our search by noticing that since 13 is an odd number, each sequence must have an odd number of 3-pointers to reach 13. So, we must have 1 or 3 3-pointers. If there is 1 3-pointer, then the number of 2-pointers, 3-pointers, and 4-pointers written as ordered triples can be (5, 1, 0), (3, 1, 1), or (1, 1, 2). This gives us 6! 5!1!0! + 5! 3!1!1! + 4! 1!1!2! = 6 + 20 + 12 = 38 possibilities. If there are 3 3-pointers, then the number of 2-pointers, 3-pointers, and 4-pointers written as ordered triples can be (2, 3, 0) or (0, 3, 1). This gives us 5! 2!3!0! + 4! 0!3!1! = 10 + 4 = 14 possibilities. In total, we have 38 + 14 = 52 possibilities.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2018 SMT General Problem 8",
+   "question": "A regular hexagon with side length 1 has a circle inscribed in it. Then another regular hexagon is inscribed in the circle. What is the area of the inner hexagon?",
+   "choices": null,
+   "answer": "9",
+   "solution": "Answer: 9. A regular hexagon with side length 1 has a circle inscribed in it. Then another regular hexagon is inscribed in the circle. What is the area of the inner hexagon? Answer: 9 √ 3 8 Solution: Notice that the diameter of the inscribed circle is the height of the outer hexagon. If we decompose the inner and outer hexagons into 6 equilateral triangles, we see that the side length of one of the inner triangles is equal to the height of one of the outer triangles. Because the side length of an outer equilateral triangle is 1, its height is √ 3 2 , so the side length of the inner hexagon is also √ 3 2 . It is known that the area of an equilateral triangle with side length s is √ 3 4 s2, so the area of the inner hexagon is therefore 6 · √ 3 4 · (√ 3 2 )2 = 9 √ 3 8 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2020 SMT General Problem 9",
+   "question": "Colleen and Colin in total have 100 skittles. After Halloween, the number of skittles Colleen has is twice the amount that Colin has. Colin and Colleen got identical candy collections from trick-or-treating. How many possible pairs of number of skittles can Colin and Colleen start with?",
+   "choices": null,
+   "answer": "34",
+   "solution": "Answer: 34. Colleen and Colin in total have 100 skittles. After Halloween, the number of skittles Colleen has is twice the amount that Colin has. Colin and Colleen got identical candy collections from trick-or-treating. How many possible pairs of number of skittles can Colin and Colleen start with? Answer: 34 Solution: Colin and Colleen started with 100. We have x + 3y = 100, and the only feasible solutions are when we let y range from 0− 33. So there are 34 choices.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2011 SMT General Problem 10",
+   "question": "An unfair coin has a 2 /3 probability of landing on heads. If the coin is ﬂipped 50 times, what is the probability that the total number of heads is even?",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1+(1/3)50. An unfair coin has a 2 /3 probability of landing on heads. If the coin is ﬂipped 50 times, what is the probability that the total number of heads is even? Answer: 1+(1/3)50 2 The coin can turn up heads 0,2,4,..., or 50 times to satisfy the problem. Hence the probability is P = (50 0 )( 2 3 )0(1 3 )50 + (50 2 )( 2 3 )2(1 3 )48 +··· + (50 50 )( 2 3 )50(1 3 )0 . Note that this sum is the sum of the even-powered terms of the expansion (1 /3 + 2/3)50. To isolate these terms, we note that the odd-powered terms of (1 /3− 2/3)50 are negative. So by adding (1 /3 + 2/3)50 + (1/3− 2/3)50, we get rid of the odd-powered terms and we are left with two times the sum of the even terms. Hence the probability is P = (1/3 + 2/3)50 + (1/3− 2/3)50 2 = 1 + (1/3)50 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2019 SMT General Problem 11",
+   "question": "Let n be an integer such that n4− 2n3− n2 + 2n + 2 is a prime number. What is the sum of all possible n?",
+   "choices": null,
+   "answer": "2",
+   "solution": "Answer: 2. Let n be an integer such that n4− 2n3−n2 + 2n + 2 is a prime number. What is the sum of all possible n? Answer: 2 Solution: We can see that this expression must be an even number since n4 andn2 are the same parity. The only even prime is 2. So, we solve solutions to n4− 2n3−n2 + 2n = 0 and use Vieta to see the sum must be 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2018 SMT General Problem 12",
+   "question": "Let ABCDE be a regular pentagon. Label points F on BC and G on ED such that AF G is an equilateral triangle and F G‖ CD. Compute ∠AF B.",
+   "choices": null,
+   "answer": "48",
+   "solution": "Answer: 48. Let ABCDE be a regular pentagon. Label points F on BC and G on ED such that AFG is an equilateral triangle and FG‖CD. Compute ∠AFB . Answer: 48 Solution: Using the formula for computing the sum of the interior angles of a polygon, the interior angle sum for a regular pentagon is (5 − 2)· 180◦ = 540◦. Therefore, each interior angle is 540◦ 5 = 108◦. Now because FG‖CD, we have ∠GFC + ∠FCD = 180◦, so ∠GFC = 180◦− 108◦ = 72◦. Next, we have ∠AFB + ∠AFG + ∠GFC = 180◦, and because ∆AFG is equilateral, we have ∠AFG = 60◦. Plugging in values for ∠AFG and ∠GFC , we solve to get ∠AFB = 180◦− 60◦− 72◦ = 48◦ .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2019 SMT General Problem 13",
+   "question": "The number Nb is the number such that when written in base b, it is 123. What is the smallest b such that Nb is a cube of a positive integer?",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. The number Nb is the number such that when written in base b, it is 123. What is the smallest b such that Nb is a cube of a positive integer? Answer: 4 Solution: If we write out base notation, Nb = 123b =b2 + 2b + 3. Then know from the base representation that b≥ 4, so we guess b = 4. We see that b2 + 2b + 3 = 27 which is a perfect cube.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2020 SMT General Problem 14",
+   "question": "How many factors of 20 20 are greater than 2020?",
+   "choices": null,
+   "answer": "827",
+   "solution": "Answer: 827. How many factors of 20 20 are greater than 2020? Answer: 827 Solution: Since 20 20 = 240· 520, it has 41· 21 = 861 factors. Since 34 of these factors are less than or equal to 2020, there are 827 factors greater than 2020. SMT 2020 General Test Solutions February 22, 2020",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2021 SMT General Problem 15",
+   "question": "January 1, 2021 is a Friday. Let p be the probability that a randomly chosen day in the year 2021 is a Friday the 13th given that it is a Friday. Let q be the probability that a randomly chosen day in the year 2021 is a Friday the 13th given that it is the 13th of a month. What is p q ?",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12. January 1, 2021 is a Friday. Let p be the probability that a randomly chosen day in the year 2021 is a Friday the 13th given that it is a Friday. Let q be the probability that a randomly chosen day in the year 2021 is a Friday the 13th given that it is the 13th of a month. What is p q ? SMT 2021 General Test Solutions April 17, 2021 Answer: 12 53 Solution: Notep =(number of Friday the 13th)/(number of Fridays) andq =(number of Friday the 13th)/(number of 13ths). Then p q =(number of 13ths)/(number of Fridays)= 12 53",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2022 SMT General Problem 16",
+   "question": "Consider the parabola y = x2. Let a circle centered at (0 , a) be tangent to the parabola at ( b, c) such that a+ c = (2b−1)(2b+1) . If a > 0, find the area of the finite region between the parabola and the circle.",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Consider the parabola y =x2. Let a circle centered at (0,a ) be tangent to the parabola at (b,c ) such thata+c = (2b−1)(2b+1). Ifa> 0, find the area of the finite region between the parabola and the circle. Answer: 3 √ 3 4 − π 3 Solution: Ifb = 0, thenc = 0 anda =−1, which isn’t allowed, sob̸= 0. WLOG b> 0. Denote (0,a ) byC and (b,c ) byP . Then the slope of CP is c−a b , and the tangent atP has slope 2b. If the circle is tangent to the parabola at P , then its radius CP must be perpendicular to the tangent of the parabola, hence c−a b =− 1 2b, i.e. c =b2 =a− 1",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2018 SMT General Problem 17",
+   "question": "Two squares of side length 3 overlap so that the shared region is a square of side length 1. Compute the area of the smallest hexagon that covers the 2 squares.",
+   "choices": null,
+   "answer": "21",
+   "solution": "Answer: 21. Two squares of side length 3 overlap so that the shared region is a square of side length 1. Compute the area of the smallest hexagon that covers the 2 squares. Answer: 21 Solution: The area of the squares themselves is 2·32−12 = 17, since we have to consider the area of the overlapping section. Next, we observe that the desired hexagon adds 2 additional right triangles to the area, with each right triangle having a base of 3 − 1 = 2 and a height of 3− 1 = 2. Therefore, the total area is 17 + 2 · 2·2 2 = 21 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2019 SMT General Problem 18",
+   "question": "Peter has 18 colored gumballs composed of 3 red, 4 blue, 5 yellow, and 6 green where same colored gumballs are indistinguishable. What is the probability that if he chooses four gumballs at random, the gumballs that he chooses consist of at least two colors and at most three colors?",
+   "choices": null,
+   "answer": "893",
+   "solution": "Answer: 893. Peter has 18 colored gumballs composed of 3 red, 4 blue, 5 yellow, and 6 green where same colored gumballs are indistinguishable. What is the probability that if he chooses four gumballs at random, the gumballs that he chooses consist of at least two colors and at most three colors? Answer: 893 1020 Solution: Utilizing complementary counting, ﬁnd the probability of choosing only one color or four colors. Number of ways to choose one color (only red, blue, yellow, or green): 0+ (4 4 ) + (5 4 ) + (6 4 ) = 0 + 1 + 5 + 15 = 21 Number of ways to choose four colors (red, blue, yellow and green): 3 ∗ 4∗ 5∗ 6 = 360 Total ways: 21 + 360 = 381 The probability of choosing one or four colors: 381 (18 4 ) = 3×127 18×17×16×15 4×3×2×1 = 3×127 6×17×2×15 = 127 1020 Thus, the desired probability is 1− 127 1020 = 893 1020 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2019 SMT General Problem 19",
+   "question": "How many rational numbers can be written in the form a b such that a and b are relatively prime positive integers and the product of a and b is (25!)?",
+   "choices": null,
+   "answer": "512",
+   "solution": "Answer: 512. How many rational numbers can be written in the form a b such that a and b are relatively prime positive integers and the product of a and b is (25!)? Answer: 512 Solution: From gcd(a,b ) = 1, we note that for each prime p dividing 25!, either p|a or p|b. As a result, for each prime p dividing 25!, we have two ways to choose which of a or b it divides. Since there are nine primes less than 25, the answer is 2 9 = 512 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "2021 SMT General Problem 20",
+   "question": "If x2 + y2 = 47xy, then log( k(x + y)) = 1 2(log x + log y). Find the value of k.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. If x2 +y2 = 47xy, then log(k(x +y)) = 1 2(logx + logy). Find the value of k. Answer: 1 7 Solution: Note that the logarithmic equation is equivalent to (k(x+y))2 =xy. Then (x+y)2 = x2 +y2 + 2xy = 49xy. Hence, k = 1 7 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "2012 SMT General Problem 21",
+   "question": "In trapezoid ABCD , BC ‖ AD, AB = 13, BC = 15, CD = 14, and DA = 30. Find the area of ABCD .",
+   "choices": null,
+   "answer": "252",
+   "solution": "Answer: 252. In trapezoid ABCD , BC ‖ AD, AB = 13, BC = 15, CD = 14, and DA = 30. Find the area of ABCD . Answer: 252 Solution: We can use the standard method of setting up a two-variable system and solving for the height of the trapezoid. However, since one base is half the length of the other, we may take a shortcut. Extend AB and CD until they meet at E. Clearly, BC is a midline of triangle EAD, so we have EA = 2 BA = 26 and ED = 2 CD = 28. The area of EAD is therefore four times that of a standard 13-14-15 triangle, which we know is 1 2 · 14 · 12 = 84 (since the altitude SMT 2012 General Test and Solutions February 18, 2012 to the side of length 14 splits the triangle into 9-12-15 and 5-12-13 right triangles). The area of the trapezoid is 3 4 the area of EAD by similar triangles, and is therefore 3 · 84 = 252 . A similar solution draws lines from B and C to the midpoint of AD to form three 13 − 14 − 15 triangles.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "2013 SMT General Problem 22",
+   "question": "The set A ={1, 2, 3, . . . ,10} contains the numbers 1 through 10. A subset of A of size n is competent if it contains n as an element. A subset of A is minimally competent if it itself is competent, but none of its proper subsets are. Find the total number of minimally competent subsets of A.",
+   "choices": null,
+   "answer": "55",
+   "solution": "Answer: 55. The set A ={1, 2, 3,..., 10} contains the numbers 1 through 10. A subset of A of size n is competent if it contains n as an element. A subset of A is minimally competent if it itself is competent, but none of its proper subsets are. Find the total number of minimally competent subsets of A. Answer: 55 Solution: There is clearly 1 minimally competent subset of size 1, which is just {1}. For size 2, any minimally competent subset must contain 2 and then one of 3 through 10 (not 1, because then the minimally competent subset of size 1 would be a proper subset), so there are 8 possibilities. For size k in general, we can see that a minimally competent subset of size k must containk and then k− 1 numbers, each larger than k. Thus, a minimally competent subset can contain at most 5 numbers. The answer is then ∑5 k=1 (10−k k−1 ) , which can be computed directly as 55 . We can also argue by induction that the number is equal to F10 (the 10th Fibonacci number), which may be easier to compute.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "2011 SMT General Problem 23",
+   "question": "Let ABC be any triangle, and D, E, F be points on BC, CA, AB such that CD = 2BD, AE = 2CE and BF = 2AF . AD and BE intersect at X, BE and CF intersect at Y , and CF and AD intersect at Z. Find Area(∆ABC ) Area(∆XY Z ).",
+   "choices": null,
+   "answer": "7",
+   "solution": "Answer: 7. Let ABC be any triangle, and D,E,F be points on BC, CA, AB such that CD = 2BD, AE = 2CE and BF = 2AF . AD and BE intersect at X, BE and CF intersect at Y , and CF and AD intersect at Z. Find Area(∆ABC ) Area(∆XYZ ). SMT 2011 General Test and Solutions February 19, 2011 Answer: 7 Using Menelaus’s Theorem on ∆ABD with collinear points F,X,C and the provided ratios gives DX/XA = 4/3. Using Menelaus’s Theorem on∆ADC with collinear pointsB,Y,E givesAY/YD = 6. We conclude that AX,XY,YD are in length ratio 3 : 3 : 1. By symmetry, this also applies to the segmentsCZ,ZX,XF andBY,YZ,ZE . Repeatedly using the fact that the area ratio of two triangles of equal height is the ratio of their bases, we ﬁnd [ ABC] = (3 /2)[ADC] = (3 /2)(7/3)[XYC ] = (3/2)(7/3)(2)[XYZ ] = 7[XYZ ], or [ABC]/[XYZ ] = 7. Alternate Solution Stretching the triangle will preserve ratios between lengths and ratios between areas, so we may assume that∆ABC is equilateral with side length 3. We now use mass points to ﬁnd the length ofXY . Assign a mass of 1 to A. In order to have X be the fulcrum of ∆ABC, C have mass 2 and B must have mass 4. Hence, BX : XE = 4 : 3 and AX : XD = 6 : 1, the latter of which also equals BY : YE by symmetry. Hence, XY = 3 7BE. To ﬁnd BE, we apply the Law of Cosines to ∆CBE to get that BE 2 = 12 + 32− 2· 1· 3· cos 60◦ = 7 =⇒ XY = 3 √ 7 7 . Since∆XYZ must be equilateral by symmetry, the desired ratio equals ( AB XY )2 = 7.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "2023 SMT General Problem 24",
+   "question": "Equilateral triangle △ABC has side length 12 and equilateral triangles of side lengths a, b, c < 6 are each cut from a vertex of △ABC, leaving behind an equiangular hexagon A1A2B1B2C1C2, where A1 lies on AC, A 2 lies on AB, and the rest of the vertices are similarly defined. Let A3 be the midpoint of A1A2 and define B3, C3 similarly. Let the center of △ABC be O. Note that OA3, OB3, OC3 split the hexagon into three pentagons. If the sum of the areas of the equilateral triangles cut out is 18 √ 3 and the ratio of the areas of the pentagons is 5 : 6 : 7 , what is the value of abc?",
+   "choices": null,
+   "answer": "64",
+   "solution": "Answer: 64. Equilateral triangle △ABC has side length 12 and equilateral triangles of side lengths a,b,c< 6 are each cut from a vertex of △ABC, leaving behind an equiangular hexagon A1A2B1B2C1C2, where A1 lies on AC, A2 lies on AB, and the rest of the vertices are similarly defined. Let A3 be the midpoint of A1A2 and define B3,C 3 similarly. Let the center of △ABC be O. Note that OA3,OB 3,OC 3 split the hexagon into three pentagons. If the sum of the areas of the equilateral triangles cut out is 18 √ 3 and the ratio of the areas of the pentagons is 5 : 6 : 7 , what is the value of abc? General Test Solutions April 8, 2023 Answer: 64 √ 3 Solution: For the pentagon determined byOA3 andOB3, we can split it into△OA3A2,△OA2B1,△OB1B3 and determine its area as 1 2· a 2· 4 √ 3− a √ 3 2 ! + 1 2· 2 √ 3· (12−a−b) + 1 2· b 2· 4 √ 3− b √ 3 2 ! = √ 3 8 (96−a2−b2). Similarly, the areas of the other pentagons are √ 3 8 (96−b2−c2) and √ 3 8 (96−c2−a2). From the fact that the sum of the areas of the equilateral triangles cut out is 18 √ 3, we find that a2 +b2 +c2 = 4√ 3· 18 √ 3 = 72. Then, 96−a2−b2 + 96−b2−c2 + 96−c2−a2 = 288− 2(a2 +b2 +c2) = 288− 144 = 144. Dividing 144 into the ratio 5 : 6 : 7 gives 40, 48, 56 as values for 96−a2−b2, 96−b2−c2, 96−c2−a2. Then, we have 56, 48, 40 for the values of a2 +b2,b 2 +c2,c 2 +a2, which we can use along with a2 +b2 +c2 = 72 to find that a,b,c are 4, 2 √ 6, 4 √ 2 (in any order). Then, abc = 4· 2 √ 6· 4 √ 2 = 64 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "2014 SMT General Problem 25",
+   "question": "Let ABC be a triangle such that AB = 3, BC = 4, and AC = 5. Let X be a point in the triangle. Compute the minimal possible value of AX 2 + BX 2 + CX 2.",
+   "choices": null,
+   "answer": "50",
+   "solution": "Answer: 50. Let ABC be a triangle such that AB = 3, BC = 4, and AC = 5. Let X be a point in the triangle. Compute the minimal possible value of AX 2 + BX 2 + CX 2. Answer: 50 3 Solution: Let the perpendicular distance from X to BC and BA be x and y, respectively. Then AX 2 + BX 2 + CX 2 = x2 + y2 + (3− x)2 + (4− y)2 + x2 + y2 Completing the square gives 3 ( y− 4 3 )2 + 3(x− 1)2 + 50 3 , which has minimum 50 3 .",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

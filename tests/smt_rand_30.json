@@ -1,0 +1,161 @@
+{
+ "id": "smt_rand_30",
+ "competition": "SMT — Team",
+ "category": "Math",
+ "title": "SMT — Team — Random Mock #30 · 2026-08-27 08:50",
+ "instructions": "15 questions · 50 minutes · No calculator. 15 points total.",
+ "time_limit_min": 50,
+ "total_points": 15,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2013 SMT Team Problem 1",
+   "question": "Let f1(n) be the number of divisors that n has, and deﬁne fk(n) = f1(fk−1(n)). Compute the smallest integer k such that fk(20132013) = 2.",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. Let f1(n) be the number of divisors that n has, and deﬁne fk(n) = f1(fk−1(n)). Compute the smallest integer k such that fk(20132013) = 2. Answer: 4 Solution: We know that 2013 2013 = 3 2013· 112013· 612013. Therefore, f1(20132013) = 2014 3. 2014 = 2· 19· 53, so 2014 3 has 4 3 = 64 divisors. f1(64) = 7, and f1(7) = 2. This means that f4(20132013) = 2, so k = 4 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2020 SMT Team Problem 2",
+   "question": "Given a convex equiangular hexagon with consecutive side lengths of 9,a, 10, 5, 5,b , wherea and b are whole numbers, ﬁnd the area of the hexagon.",
+   "choices": null,
+   "answer": "97",
+   "solution": "Answer: 97. Given a convex equiangular hexagon with consecutive side lengths of 9,a, 10, 5, 5,b , wherea and b are whole numbers, ﬁnd the area of the hexagon. Answer: 97 √ 3 2 Solution: Since the hexagon is equiangular, and each angle must measure 120 degrees, we can extend its side lengths to form three smaller equilateral triangles and one large equilateral triangle composed of the hexagon and the three smaller triangles. Since the side lengths of this large triangle must all be equal, we can set up a system of equations whereb+9+a =a+10+5 = 5+5+b. Solving this, we get that a = 1 andb = 6. Therefore, the large triangle has a side length of 16, giving it a total area of 64 √",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2013 SMT Team Problem 3",
+   "question": "Nine people are practicing the triangle dance, which is a dance that requires a group of three people. During each round of practice, the nine people split oﬀ into three groups of three people each, and each group practices independently. Two rounds of practice are diﬀerent if there exists some person who does not dance with the same pair in both rounds. How many diﬀerent rounds of practice can take place?",
+   "choices": null,
+   "answer": "280",
+   "solution": "Answer: 280. Nine people are practicing the triangle dance, which is a dance that requires a group of three people. During each round of practice, the nine people split oﬀ into three groups of three people each, and each group practices independently. Two rounds of practice are diﬀerent if there exists some person who does not dance with the same pair in both rounds. How many diﬀerent rounds of practice can take place? Answer: 280 Solution 1: Given a permutation of nine people, let us have the ﬁrst three people be in one group, the second three people in another group, and the last three people in a third group. We want to compute how many permutations generate the same group. Note that there are (3!) 3 ways to permute people within each group, and there are 3! ways to permute the overall groups, so the answer is 9! (3!)4 = 280 . Solution 2: Note that if three people are doing this, there is trivially exactly one unique iteration. If six people are doing this, then arbitrarily label one person. There are (5 2 ) groups that can be created with this person, and then the other three people are forced to be in a group, so there are (5 2 ) iterations for six people. If nine people are doing this, then arbitrarily label one person. There are (8 2 ) groups that can be created with this person, and then the other six people can form groups in (5 2 ) ways, so there are (5 2 ) · (8 2 ) = 280 iterations for nine people.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2019 SMT Team Problem 4",
+   "question": "Let D be the midpoint of BC in∆ABC. A line perpendicular to D intersects AB at E. If the area of∆ABC is four times that of the area of ∆BDE, what is ∠ACB in degrees?",
+   "choices": null,
+   "answer": "90",
+   "solution": "Answer: 90. Let D be the midpoint of BC in∆ABC. A line perpendicular to D intersectsAB at E. If the area of∆ABC is four times that of the area of ∆BDE, what is ∠ACB in degrees? Answer: 90 Solution: We have that the area of ∆BDE is 1 2(BD)(ED), and the area of ∆ABC is 1 2(BC)h = (BD)h, where h is the height of the altitude from A to BC. Since the area of ∆ABC is four times that of ∆BDE, we have that h = 2(ED). This is only possible if E is the midpoint of AB. But then AE =BE =CE, so E is the circumcenter of ∆ABC. But E lies on AB, so AB is a diameter of the circumcircle, implying that ∠ACB = 90◦ .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2019 SMT Team Problem 5",
+   "question": "Deﬁne the sequence c0, c1, . . . with c0 = 2 and ck = 8ck−1 + 5 for k > 0. Find limk→∞ ck 8k .",
+   "choices": null,
+   "answer": "19",
+   "solution": "Answer: 19. Deﬁne the sequence c0,c 1,... with c0 = 2 and ck = 8ck−1 + 5 for k> 0. Find limk→∞ ck 8k . Answer: 19 7 Solution 1: Notice that ck+1 = 8ck + 5, so ck+1−ck = 8ck− 8ck−1. This gives us a homogenous linear recurrence with characteristic polynomial x2− 9x + 8 = 0, which has roots 8, 1. This means that ck =a8k +b1k for some constantsa,b . Using c0 = 2 andc1 = 21, we can solve for a and b to ﬁnd ck = 19 7 8k− 5",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2012 SMT Team Problem 6",
+   "question": "Compute the area of the smallest regular polygon that has three vertices coinciding with the vertices of the given triangle.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12 + 6. Compute the area of the smallest regular polygon that has three vertices coinciding with the vertices of the given triangle. Answer: 12 + 6 √ 3 Solution: We begin by computing the angles of the triangle; repeated application of the Law of Cosines gives us that the angles of the triangle are 15 ◦, 60 ◦, and 105 ◦. Therefore, since the greatest common divisor of the angles of the triangle is 15 ◦, a dodecagon is the smallest regular polygon that satisﬁes our current constraints. In particular, the dodecagon has side length √ 2, and it remains to compute the area of the dodecagon. The area of a regular dodecagon is 3 cot ( π 12 ) ( √ 2)2 = 12 + 6 √ 3 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2014 SMT Team Problem 7",
+   "question": "Let ABC be a triangle with AB = 7, AC = 8, and BC = 9. Let the angle bisector of A intersect BC at D. Let E be the foot of the perpendicular from C to line AD. Let M be the midpoint of BC. Find M E.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Let ABC be a triangle withAB = 7,AC = 8, andBC = 9. Let the angle bisector of A intersect BC at D. Let E be the foot of the perpendicular from C to line AD. Let M be the midpoint of BC. Find ME . Answer: 1 2 Solution: ExtendCE andAB until they intersect atF . Note that AE is both an angle bisector and an altitude of∆ACF , so∆ACF is isosceles with AF∼=AC, and E is the midpoint of CF . M is the midpoint of BC, so ME is a midline of ∆CBF . Since AC = AF = AB +BF , we haveBF = 8− 7 = 1. Hence, ME = 1 2BF = 1 2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2014 SMT Team Problem 8",
+   "question": "Call a function g lower-approximating for f on the interval [ a, b] if for all x∈ [a, b], f(x)≥ g(x). Find the maximum possible value of ∫ 2 1 g(x)dx where g(x) is a linear lower-approximating function for f(x) = xx on [1, 2].",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Call a function g lower-approximating for f on the interval [ a,b ] if for all x∈ [a,b ], f(x)≥ g(x). Find the maximum possible value of ∫ 2 1 g(x)dx whereg(x) is a linear lower-approximating function for f(x) =xx on [1, 2]. Answer: 3 √ 6 4 Solution: We note that, because g is linear, the integral is actually the area of a trapezoid. The area of a trapezoid is given by A = 1 2h(b1 +b2) =hM whereM is the length of the midline. Next, g(x)≤f(x) for all x∈ [1, 2], and the midline has length g( 3 2)≤f( 3 2) = (3/2)3/2 = 3 √ 6 4 . Then ∫ 2 1 g(x)dx≤hM = 3 √ 6 4 . We note that this maximum is achieved, for example, when g(x) is the tangent line to f(x) at x = 3 2 (which works because f is convex), so the answer must be 3 √ 6 4 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2019 SMT Team Problem 9",
+   "question": "Let f(x) be the unique integer between 0 and x− 1, inclusive, that is equivalent modulo x to (∑2 i=0 (x−1 i ) ((x− 1− i)! + i!) ) . Let S be the set of primes between 3 and 30, inclusive. Find∑ x∈S f(x).",
+   "choices": null,
+   "answer": "59",
+   "solution": "Answer: 59. Let f(x) be the unique integer between 0 and x− 1, inclusive, that is equivalent modulo x to (∑2 i=0 (x−1 i ) ((x− 1−i)! +i!) ) . Let S be the set of primes between 3 and 30, inclusive. Find∑ x∈Sf(x). Answer: 59 Solution: Expanding, we have that ( 2∑ i=0 (x− 1 i ) ((x− 1−i)! +i!) ) = 2(x− 1)! + (x− 1)! 2 + 1 + (x− 1) + (x− 1)(x− 2). By Wilson’s, if x is a prime, then (x− 1)!≡− 1 mod x, hence we take the equation mod x to get−2− 2−1 + 1− 1 + 2 =−2−1, where 2−1 denotes the multiplicative inverse of 2 mod n. If x is an odd prime, then 2−1 is x+1 2 and hence f(x) = x−1 2 . The primes between 3 and 30 are 3, 5, 7, 11, 13, 17, 19, 23, and 29. Therefore, we compute that the desired sum is 59 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2014 SMT Team Problem 10",
+   "question": "Let a and b be real numbers chosen uniformly and independently at random from the interval [−10, 10]. Find the probability that the polynomial x5+ax+b has exactly one real root (ignoring multiplicity).",
+   "choices": null,
+   "answer": "45",
+   "solution": "Answer: 45−8 4√. Let a and b be real numbers chosen uniformly and independently at random from the interval [−10, 10]. Find the probability that the polynomialx5+ax+b has exactly one real root (ignoring multiplicity). Answer: 45−8 4√ 2 45 SMT 2014 Team Test Solutions February 15, 2014 Solution: Letf(x) =x5−ax +b (ﬂipping the sign of a makes the analysis a bit easier without changing the answer), and consider f′(x) = 5x4−a. First, if f is monotonically increasing, it must have one real root. This case occurs if and only if a≤ 0. We now considera> 0, and for simplicity letα = (a/5)1/4, the positive root off′. f is increasing on (−∞,−α), decreasing on (−α,α ), and increasing on (α,∞). Hence, the only way it can have more than one root is if one such root occurs in the range [ −α,α ]. This will happen if and only if 0∈ [f(α),f (−α)], by the Intermediate Value Theorem. Rewritef(x) as (5x4−a)x+b−4x5, so that we can easily see thatf(α) =b−4α5,f(−α) =b+4α5. f has multiple roots if and only if b− 4α5≤ 0 and b + 4α5≥ 0, i.e. b∈ [−4α5, 4α5]. We can ﬁnd the probability that b falls in this range, then take the complement to ﬁnd the probability that f has exactly one root. The area of the region satisfying this condition is twice the area under the curveg(a) = 4(a/5)5/4 from a = 0 to a = 10 (note that g(10) = 4· 25/4 < 10 because (5/4)4 = 625 256 > 2, so this is all within the valid range for b). Thus, we ﬁnd 2· 4 ∫ 10 0 (a 5 )5/4 da = 8 55/4· 4 9109/4 = 640 9 4√",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2021 SMT Team Problem 11",
+   "question": "A subset of ﬁve distinct positive integers is chosen uniformly at random from the set{1, 2, . . . ,11}. The probability that the subset does not contain three consecutive integers can be written as m n , where m and n are relatively prime positive integers. Find m + n.",
+   "choices": null,
+   "answer": "52",
+   "solution": "Answer: 52. A subset of ﬁve distinct positive integers is chosen uniformly at random from the set{1, 2,..., 11}. The probability that the subset does not contain three consecutive integers can be written as m n , where m and n are relatively prime positive integers. Find m +n. Answer: 52 Solution: We proceed by PIE and complementary counting, ﬁnding the number of ways to select ﬁve integers from the given set such that there is at least one triplet of consecutive integers. The ﬁve chosen integers divide the remaining six into six distinct groups. Thus, we wish to determine the number of solutions to a1 +a2 +a3 +a4 +a5 +a6 = 6 with at least one pair (ai,ai+1) equal to (0, 0) for 2≤i≤ 5. LetA be the set of solutions in whicha2 =a3 = 0,B be the set of solutions in whicha3 =a4 = 0, andC be the set of solutions in whicha4 =a5 = 0. Note that by setting twoai to 0, the equation reduces to four variables summing to 6. So by stars-and-bars, |A| =|B| =|C| = (6+4−1 4−1 ) = (9 3 ) . SMT 2021 Team Test Solutions April 17, 2021 By a similar argument, we have|A∩B| =|B∩C| = (6+3−1 3−1 ) = (8 2 ) and|A∩C| = (6+2−1 2−1 ) = (7 1 ) . Finally,|A∩B∩C| = (6+2−1 2−1 ) = (7 1 ) , so by PIE, |A∪B∪C| = 3 (9 3 ) − 2 (8 2 ) − (7 1 ) + (7 1 ) = 3× 84− 2× 28 = 252− 56 = 196. And since there are (11 5 ) ways to select ﬁve integers from the set {1, 2,..., 11}, the probability that no three are consecutive is 1− 196(11 5 ) = 1− 196× 5× 4× 3× 2× 1 11× 10× 9× 8× 7 = 1− 14 33 = 19",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2021 SMT Team Problem 12",
+   "question": "Compute 1∫ −1 (x2 + x + √ 1− x2)2dx.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12. Compute 1∫ −1 (x2 +x + √ 1−x2)2dx. Answer: 12 5 + π 4 Solution: First, expand to get (x2 +x + √ 1−x2)2 =x4 + 1 + 2x(x2 + √ 1−x2) + 2x2√ 1−x2. Therefore, the integral is equal to 1∫ −1 (x4 + 1)dx + 1∫ −1 2x(x2 + √ 1−x2)dx + 1∫ −1 2x2√ 1−x2dx. Evaluating the ﬁrst integral and noting that the integral of an odd function from −1 to 1 is equal to 0, the integral is equal to [x5 5 +x ]1 −1 + 1∫ −1 2x2√ 1−x2dx = 12 5 + 1∫ −1 2x2√ 1−x2dx. To solve for the remaining integral, substitutingx =sin(u) and applying trigonometric identities yields 1∫ −1 2x2√ 1−x2dx = 2 π 2∫ −π 2 sin2(u)cos2(u)du = 1 2 π 2∫ −π 2 sin2(2u)du = 1 2 π 2∫ −π 2 1−cos(4u) 2 du. Solving, this is equal to 1 4 π 2∫ −π 2 1−cos(4u)du = [u 4− sin(4u) 16 ]π 2 −π 2 = π",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2020 SMT Team Problem 13",
+   "question": "Compute the sum of all natural numbers b less than 100 such that b is divisible by the number of factors of the base-10 representation of 2020 b.",
+   "choices": null,
+   "answer": "152",
+   "solution": "Answer: 152. Compute the sum of all natural numbers b less than 100 such that b is divisible by the number of factors of the base-10 representation of 2020 b. Answer: 152 SMT 2020 Team Test Solutions February 22, 2020 Solution: Supposeb = 2k·n, wheren is an odd integer. Then 2020b = 2b(b2+1) = 2k+1(n)(b2+ 1). Due to the multiplicty of τ andb2 + 1 being relatively prime to both 2 and n, it follows that the number of factors of 2020b,τ(2020b), is equal toτ(2k+1)·τ(n)·τ(b2+1). Since τ(2k+1) =k+2, the condition is satisﬁed if and only if b (k+2)τ (n)τ (b2+1) is an integer. Because b = 2k·n, k must be between 0 and 6 inclusive. Doing casework on the value of k yields several cases. In the case where k = 0,b must be a multiple of 0 + 2 = 2, which can never happen as b is an odd number. Similarly, in the case where k = 2,b = 4n must be a multiple of 2 + 2 = 4, meaning n is a multiple of τ(b2 + 1). However, since b2 + 1 is never a perfect square whenb is a natural number,τ(b2 + 1) must be even, which meansn is not a multiple ofτ(b2 + 1) as n is odd. Therefore, there are no solutions when k = 0 or when k = 2. In the case where k = 1, b must be a multiple of 1 + 2 = 3. Since b = 2n< 100, n must be an odd multiple of 3 that is also less than 50. Furthermore, since τ(b2 + 1) must be even,τ(n) must be odd, implying n is a perfect square. Taking both of these conditions into account, the only number that is a perfect square, a multiple of 3, and less than 50 is n = 9. However, this means thatb = 18 andb2+1 = 325 = 52·13, which has 6 factors. Because b (k+2)τ (n)τ (b2+1) = 18 (3)(3)(6) = 1 3 is not an integer, 18 is not a solution. In the case where k = 3, b must be a multiple of 3 + 2 = 5. Since b is less than 100, the only number that ﬁts these conditions is b = 40, which occurs when n = 5. Because b2 + 1 = 1601 is prime, b (k+2)τ (n)τ (b2+1) = 40 (5)(2)(2) = 2, which means 40 is a solution. In the case where k = 4, b must be a multiple of 4 + 2 = 6, meaning n must be a multiple of",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2023 SMT Team Problem 14",
+   "question": "A teacher stands at (0 , 10) and has some students, where there is exactly one student at each integer position in the following triangle: ··· Here, the circle denotes the teacher at (0 , 10) and the triangle extends until and includes the column (21,y ). A teacher can see a student ( i,j ) if there is no student in the direct line of sight between the teacher and the position ( i,j ). Compute the number of students the teacher can see (assume that each student has no width—that is, each student is a point).",
+   "choices": null,
+   "answer": "279",
+   "solution": "Answer: 279. A teacher stands at (0 , 10) and has some students, where there is exactly one student at each integer position in the following triangle: ··· Here, the circle denotes the teacher at (0 , 10) and the triangle extends until and includes the column (21,y ). A teacher can see a student ( i,j ) if there is no student in the direct line of sight between the teacher and the position ( i,j ). Compute the number of students the teacher can see (assume that each student has no width—that is, each student is a point). Answer: 279 Solution: We count the number of slopes between (0,n ) and (i,j ). Since each of these radiate from the same point on one end, this will count the number of students the teacher can see. To do so, modify the grid: put the teacher at (0 , 0) and the students at ( x,y ) with 1 ≤ x≤ 21, −20≤y≤ 20 in the triangle shape. Then, the slope of a line is exactly y x. This implies that we are counting the number of reduced fractions y x where (x,y ) are in the triangle. Restrict our attention to the positive triangle: that is, the set of points 1 ≤y <x≤ 21, and let s be the number of reduced fractions. Then, the number of reduced fractions in this set is equal to the number of reduced fractions in the set 1≤x < y≤ 21. Hence, we find that 2 s + 1 is the total number of reduced fractions in the set 1≤x,y≤ 21, which is 21X i=1 21X j=1 1[gcd(i,j ) = 1]. This latter expression is the indicator of the gcd being 1: it is 1 if the gcd is 1 and 0 otherwise. Team Test Solutions April 8, 2023 Furthermore, note that our final answer is 2s + 1 as well (by symmetry and the midline), so we compute this value. Note that since Pn i=1 1[gcd(i,n ) = 1] =φ(n) and 1[gcd(n,n ) = 1] = 0, this implies that we can write nX i=1 nX j=1 1[gcd(i,j ) = 1] = n−1X i=1 n−1X j=1 1[gcd(i,j ) = 1] + 2φ(n). Recursing then yields that 21X i=1 21X j=1 1[gcd(i,j ) = 1] = 1 + 2 21X i=2 φ(i). Computing this last sum is a little bit tedious, but made easier by observing that for odd x, φ(2x) =φ(x) whereas for even x, φ(2x) = 2φ(x). 21X i=2 φ(n) = 1 + 2 + 2 + 4 + 2 + 6 + 4 + 6 + 4 + 10 + 4 + 12 + 6 + 8 + 8 + 16 + 6 + 18 + 8 + 12 = 139. Hence, our answer is 139· 2 + 1 = 279.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2011 SMT Team Problem 15",
+   "question": "Find the smallest α> 0 such that there existsm> 0 making the following equation hold for all positive integersa,b≥ 2: ( 1 gcd(a,b− 1) + 1 gcd(a− 1,b ) ) (a +b)α≥m.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Find the smallest α> 0 such that there existsm> 0 making the following equation hold for all positive integersa,b≥ 2: ( 1 gcd(a,b− 1) + 1 gcd(a− 1,b ) ) (a +b)α≥m. Answer: 1 2 Note that both gcd(a,b− 1) and gcd(a− 1,b ) divide a +b− 1. Also they are relatively prime, since gcd(a,b− 1)| a and gcd(a− 1,b )| a− 1. So their product is less than or equal to a +b− 1, and therefore by the AM-GM inequality we have 1 gcd(a,b− 1) + 1 gcd(a− 1,b )≥ 2 √ 1 gcd(a,b− 1)· gcd(a− 1,b )≥ 2√ a +b− 1. Thusα = 1 2 and m = 2 suﬃce. To show that there is no such m for smaller α, let b = (a− 1)2. Then gcd(a,b− 1) =a and gcd(a− 1,b ) =a− 1, so ( 1 gcd(a,b− 1) + 1 gcd(a− 1,b ) ) (a +b)α = (2a− 1)(a2−a + 1)α a(a− 1) and the limit when a goes to∞ is zero if α< 1 2.",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}

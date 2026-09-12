@@ -1,0 +1,64 @@
+{
+ "id": "imo_rand_01",
+ "competition": "IMO",
+ "category": "Math",
+ "title": "IMO — Random Mock #1 · 2026-08-18 09:15",
+ "instructions": "6 questions · 270 minutes · No calculator. Proof-based problems: write full solutions, then compare with the official solutions.",
+ "time_limit_min": 270,
+ "questions": [
+  {
+   "n": 1,
+   "source": "1968 IMO Problem 1",
+   "question": "Prove that there is one and only one triangle whose side lengths are consecutive integers, and one of whose angles is twice as large as another.",
+   "choices": null,
+   "answer": null,
+   "solution": "In triangle $ABC$, let $BC=a$, $AC=b$, $AB=c$, $\\angle ABC=\\alpha$, and $\\angle BAC=2\\alpha$. Using the [[Law of Sines]] gives that\n\n$$\\frac{b}{\\sin{\\alpha}}=\\frac{a}{\\sin{2\\alpha}}\\Rightarrow \\frac{\\sin{2\\alpha}}{\\sin{\\alpha}}=2\\cos{\\alpha}=\\frac{a}{b}$$\n\nTherefore $\\cos{\\alpha}=\\frac{a}{2b}$. Using the [[Law of Cosines]] gives that\n\n$$\\cos{\\alpha}=\\frac{a^2+c^2-b^2}{2ac}=\\frac{a}{2b}$$\n\nThis can be simplified to $a^2c=b(a^2+c^2-b^2)$. Since $a$, $b$, and $c$ are positive integers, $b|a^2c$. Note that if $b$ is between $a$ and $c$, then $b$ is relatively prime to $a$ and $c$, and $b$ cannot possibly divide $a^2c$. Therefore $b$ is either the least of the three consecutive integers or the greatest.\n\nAssume that $b$ is the least of the three consecutive integers. Then either $b|b+2$ or $b|(b+2)^2$, depending on if $a=b+2$ or $c=b+2$. If $b|b+2$, then $b$ is 1 or 2. $b$ couldn't be 1, for if it was then the triangle would be degenerate. If $b$ is 2, then $b(a^2+c^2-b^2)=42=a^2c$, but $a$ and $c$ must be 3 and 4 in some order, which means that this triangle doesn't exist. therefore $b$ cannot divide $b+2$, and so $b$ must divide $(b+2)^2$. If $b|(b+2)^2$ then $b|(b+2)^2-b^2-4b=4$, so $b$ is 1, 2, or 4. Clearly $b$ cannot be 1 or 2, so $b$ must be 4. Therefore $b(a^2+c^2-b^2)=180=a^2c$. This shows that $a=6$ and $c=5$, and the triangle has sides that measure 4, 5, and 6.\n\nNow assume that $b$ is the greatest of the three consecutive integers. Then either $b|b-2$ or $b|(b-2)^2$, depending on if $a=b-2$ or $c=b-2$. $b|b-2$ is absurd, so $b|(b-2)^2$, and $b|(b-2)^2-b^2+4b=4$. Therefore $b$ is 1, 2, or 4. However, all of these cases are either degenerate or have been previously ruled out, so $b$ cannot be the greatest of the three consecutive integers.\nThis shows that there is exactly one triangle with this property - and it has side lengths of 4, 5, and 6. $\\blacksquare$",
+   "type": "proof"
+  },
+  {
+   "n": 2,
+   "source": "1962 IMO Problem 2",
+   "question": "Determine all real numbers $x$ which satisfy the inequality:\n\n<center>\n$\\sqrt{\\sqrt{3-x}-\\sqrt{x+1}}>\\dfrac{1}{2}$\n</center>\n\n(Note that the problem as written in the official PDF https://www.imo-official.org/year_info.aspx?year=1962 does not have the outer $\\sqrt{\\ }$)",
+   "choices": null,
+   "answer": null,
+   "solution": "Obviously we need $\\sqrt{3-x} \\geq \\sqrt{x+1}$ for the outer square root to be defined, $x\\leq 3$ for the first inner square root to be defined,\nand $x\\geq -1$ for the second inner square root to be defined. Solving these we get that the left hand side is defined for $x\\in \\left[ -1,1 \\right]$.\n\nNow obviously the function $f(x)=\\sqrt{\\sqrt{3-x}-\\sqrt{x+1}}$ is continuous on $\\left[ -1,1 \\right]$, with $f(-1)=\\sqrt 2$ and $f(1)=0$.\nMoreover, as $3-x$ is a decreasing and $x+1$ an increasing function, both $\\sqrt{3-x}$ and $-\\sqrt{x+1}$ are decreasing functions, and hence $f(x)$ is a decreasing function. Therefore there is exactly one solution to $f(x)=\\dfrac{1}{2}$.\n\nWe can now find this solution:\n\n$$\n\\begin{align*}\n\\sqrt{\\sqrt{3-x}-\\sqrt{x+1}} &= \\dfrac{1}{2}\n\\\\\n\\sqrt{3-x}-\\sqrt{x+1} &= \\dfrac{1}{4}\n\\\\\n\\sqrt{3-x} &= \\dfrac{1}{4} + \\sqrt{x+1}\n\\\\\n3-x &= \\dfrac 1{16} + x+1 + \\dfrac{\\sqrt{x+1}}2\n\\\\\n2 - 2x - \\dfrac 1{16} &= \\dfrac{\\sqrt{x+1}}2\n\\\\\n31 - 32x &= 8\\sqrt{x+1}\n\\\\\n1024 x^2 - 1984x + 961 &= 64(x+1)\n\\\\\n1024 x^2 - 2048x + 897 &= 0\n\\end{align*}\n$$\n\n(Note the little trick in the third row: placing the square roots on opposite sides of the equation. Squaring the equation in the second row would work as well, but this way is a little more pleasant, as the one remaining square root after the squaring will essentially be one of the original two, not their product.)\n\nSolving the quadratic equation for $x$, we get\n$$\nx_{1,2}=\\dfrac{ 2^{11} \\pm \\sqrt{ 2^{22} - 2^{12}\\cdot 897} }{2^{11}} = 1 \\pm \\dfrac{\\sqrt{127}}{32}\n$$\n\nThe reason why we got two roots is that while solving the original equation we squared both sides twice, and this could have created additional solutions. In this case, obviously the root that is larger than $1$ is the additional solution, and $x=1-\\dfrac{\\sqrt{127}}{32}$ is the root we need.\n\nHence the solutions to the given inequality are precisely the reals in the interval $\\boxed{ \\left[ ~ -1,\\quad 1-\\dfrac{\\sqrt{127}}{32} ~ \\right) }$.\n\n<asy>\nimport graph;\nsize(300,300,IgnoreAspect);\n\nreal f(real x) {return sqrt( sqrt(3-x) - sqrt(x+1) );};\nreal g(real x) {return 1/2;};\n\ndraw(graph(f,-1,1),blue,\"$f(x)=\\sqrt{\\sqrt{3-x}-\\sqrt{x+1}}$\");\ndraw(graph(g,-1,1),red,\"$g(x)=1/2$\");\n\nxaxis(\"$x$\",BottomTop,Ticks);\nyaxis(\"$y$\",LeftRight,Ticks);\n\nattach(legend(),point(E),20E,UnFill);\n\n</asy>",
+   "type": "proof"
+  },
+  {
+   "n": 3,
+   "source": "1987 IMO Problem 3",
+   "question": "Let $x_1 , x_2 , \\ldots , x_n $ be real numbers satisfying $x_1^2 + x_2^2 + \\cdots + x_n^2 = 1 $.  Prove that for every integer $k \\ge 2 $ there are integers $a_1, a_2, \\ldots a_n $, not all 0, such that $| a_i | \\le k-1 $ for all $i $ and\n\n<center>\n$\n|a_1x_1 + a_2x_2 + \\cdots + a_nx_n| \\le \\frac{ (k-1) \\sqrt{n} }{ k^n - 1 }\n$.\n</center>",
+   "choices": null,
+   "answer": null,
+   "solution": "",
+   "type": "proof"
+  },
+  {
+   "n": 4,
+   "source": "1985 IMO Problem 4",
+   "question": "Given a set $M$ of $1985$ distinct positive integers, none of which has a prime divisor greater than $23$, prove that $M$ contains a subset of $4$  elements whose product is the $4$th power of an integer.",
+   "choices": null,
+   "answer": null,
+   "solution": "We have that $x\\in M\\Rightarrow x=2^{e_1}3^{e_2}\\cdots 19^{e_8}23^{e_9}$.  We need only consider the exponents.  First, we consider the number of subsets of two elements, such that their product is a perfect square.  There are $2^9=512$ different parity cases for the exponents $e_1,e_2,...,e_9$.  Thus, we have at least one pair of elements out of $1985$ elements.  Removing these two elements yields $1983$ elements.  By applying the Pigeon Hole Principle again, we find that there exists another such subset.  Continuing on like this yields at least $734$ pairs of elements of $M$ whose product is a perfect square.  Let $S$ be the set of the square roots of the products of each pair. Then, by the Pigeon Hole Principle again, there exist at least two elements whose product is a perfect square.  Let the elements be $x,y$ and let $x=\\sqrt{ab},y=\\sqrt{cd}$ where $a,b,c,d\\in M$.  Then, we have $xy=z^2$ for some $z$ which implies $abcd=z^4$ and the claim is proved.",
+   "type": "proof"
+  },
+  {
+   "n": 5,
+   "source": "2014 IMO Problem 5",
+   "question": "For each positive integer $n$, the Bank of Cape Town issues coins of denomination $\\tfrac{1}{n}$. Given a finite collection of such coins (of not necessarily different denominations) with total value at most $99+\\tfrac{1}{2}$, prove that it is possible to split this collection into $100$ or fewer groups, such that each group has total value at most $1$.",
+   "choices": null,
+   "answer": null,
+   "solution": "The bound is not tight. We'll prove the result for at most $k - \\frac{k}{2k+1}$ with $k$ groups.\n\nFirst, perform the following optimizations.\n- If any coin of size $\\frac{1}{2m}$ appears twice, then replace it with a single coin of size $\\frac{1}{m}$.\n- If any coin of size $\\frac{1}{2m+1}$ appears $2m+1$ times, group it into a single group and induct downwards.\nApply this operation repeatedly until it cannot be done anymore.\n\nNow construct boxes $B_0$, $B_1$, ...., $B_{k-1}$. In box $B_0$ put any coins of size $\\tfrac 12$ (clearly there is at most one).\nIn the other boxes $B_m$, put coins of size $\\frac{1}{2m+1}$ and $\\frac{1}{2m+2}$ (at most $2m$ of the former and at most one of the latter).\nNote that the total weight in the box is less than $1$.\nFinally, place the remaining ``light'' coins of size at most $\\frac{1}{2k+1}$ in a pile.\n\nThen just toss coins from the pile into the boxes arbitrarily, other than the proviso that no box should have its weight exceed $1$.\nWe claim this uses up all coins in the pile. Assume not, and that some coin remains in the pile when all the boxes are saturated.\nThen all the boxes must have at least $1 -\\frac{1}{2k+1}$, meaning the total amount in the boxes is strictly greater than\n$$ k \\left( 1 - \\frac{1}{2k+1} \\right) $$\nwhich is a contradiction. (The inequality is strict since the pile has a coin leftover.)\n\n{{alternate solutions}}",
+   "type": "proof"
+  },
+  {
+   "n": 6,
+   "source": "1994 IMO Problem 6",
+   "question": "Show that there exists a set $A$ of positive integers with the following property: For\nany infinite set $S$ of primes there exist two positive integers $m \\in A$ and $n \\not\\in A$ each of which is a product of $k$ distinct elements of $S$ for some $k \\ge 2$.",
+   "choices": null,
+   "answer": null,
+   "solution": "Let $\\omega(x)$ denote the number of distinct prime factors of a positive integer $x$.\nDefine the set $A$ as\n$$A = \\{x \\in \\mathbb{Z}^+ \\mid \\omega(x) \\text{ is an even number}\\}$$\nLet $S$ be an arbitrary infinite set of prime numbers.\n\n<b>1. Construction of an element $m \\in A$.</b>\n\nSince $S$ is an infinite set, we can choose two distinct prime numbers $p_1, p_2 \\in S$.\nLet $m = p_1 p_2$.\nBy construction, $m$ is a product of $k=2$ distinct elements of $S$, and $k \\ge 2$.\nThe number of distinct prime factors of $m$ is $\\omega(m) = 2$.\nSince 2 is an even number, $m \\in A$ by the definition of $A$.\n\n<b>2. Construction of an element $n \\notin A$.</b>\n\nSince $S$ is infinite, we can also choose three distinct prime numbers $q_1, q_2, q_3 \\in S$.\nLet $n = q_1 q_2 q_3$.\nBy construction, $n$ is a product of $k=3$ distinct elements of $S$, and $k \\ge 2$.\nThe number of distinct prime factors of $n$ is $\\omega(n) = 3$.\nSince 3 is an odd number, $n \\notin A$.\n\nWe have shown that for any infinite set of primes $S$, there exist two positive integers $m \\in A$ and $n \\notin A$, each of which is a product of $k \\ge 2$ distinct elements of $S$. $\\square$\n\n———\nDear, above is incorrect, because 2≠3.",
+   "type": "proof"
+  }
+ ]
+}

@@ -1,0 +1,662 @@
+{
+ "competition": "AIME",
+ "set": "allq",
+ "variants": [
+  {
+   "position": 12,
+   "source": "1983 AIME Problem 12",
+   "question": "Diameter $AB$ of a circle has length a $2$-digit integer (base ten). Reversing the digits gives the length of the perpendicular chord $CD$. The distance from their intersection point $H$ to the center $O$ is a positive rational number. Determine the length of $AB$.",
+   "choices": null,
+   "answer": "65",
+   "solution": "Let $AB=10x+y$ and $CD=10y+x$. It follows that $CO=\\frac{AB}{2}=\\frac{10x+y}{2}$ and $CH=\\frac{CD}{2}=\\frac{10y+x}{2}$. Scale up this triangle by 2 to ease the arithmetic. Applying the Pythagorean Theorem on $2CO$, $2OH$ and $2CH$, we deduce\n$$(2OH)^2=\\left(10x+y\\right)^2-\\left(10y+x\\right)^2=99(x+y)(x-y)$$ \n\nBecause $OH$ is a positive rational number and $x$ and $y$ are integral, the quantity $99(x+y)(x-y)$ must be a perfect square. Hence either $x-y$ or $x+y$ must be a multiple of $11$, but as $x$ and $y$ are different digits, $1+0=1 \\leq x+y \\leq 9+9=18$, so the only possible multiple of $11$ is $11$ itself. However, $x-y$ cannot be 11, because both must be digits. Therefore, $x+y$ must equal $11$ and $x-y$ must be a perfect square. The only pair $(x,y)$ that satisfies this condition is $(6,5)$, so our answer is $\\boxed{065}$. (Therefore $CD = 56$ and $OH = \\frac{33}{2}$.)"
+  },
+  {
+   "position": 14,
+   "source": "1983 AIME Problem 14",
+   "question": "In the adjoining figure, two circles with radii $8$ and $6$ are drawn with their centers $12$ units apart. At $P$, one of the points of intersection, a line is drawn in such a way that the chords $QP$ and $PR$ have equal length. Find the square of the length of $QP$.",
+   "choices": null,
+   "answer": "130",
+   "solution": "Let A and B denote the centers of the left and right circles respectively and $QP = PR = x.$ Observe that $\\Delta AQP$ and $\\Delta AQR$ share a common angle $\\angle{AQP}.$ Using the law of cosines on both triangles, we get:\n\n$$(1)\\quad 64=x^2+64-16x\\cos{\\angle{AQP}}$$\n$$(2)\\quad 324=4x^2+64-32x\\cos{\\angle{AQP}}$$\n\nSubtracting $2*(1)$ from $(2),$ we get $196=2x^2-64,$ which gives $x^2=\\boxed{130}$"
+  },
+  {
+   "position": 4,
+   "source": "1985 AIME Problem 4",
+   "question": "A small  square is constructed inside a square of area 1 by dividing each side of the unit square into $n$ equal parts, and then connecting the  vertices to the division points closest to the opposite vertices. Find the value of $n$ if the the area of the small square is exactly $\\frac1{1985}$.",
+   "choices": null,
+   "answer": "32",
+   "solution": "The lines passing through $A$ and $C$ divide the square into three parts, two right triangles and a parallelogram.  Using the smaller side of the parallelogram, $1/n$, as the base, where the height is 1, we find that the area of the parallelogram is $A = \\frac{1}{n}$.  By the Pythagorean Theorem, the longer base of the parallelogram has length $l = \\sqrt{1^2 + \\left(\\frac{n - 1}{n}\\right)^2} = \\frac{1}{n}\\sqrt{2n^2 - 2n + 1}$, so the parallelogram has height $h = \\frac{A}{l} = \\frac{1}{\\sqrt{2n^2 - 2n + 1}}$.  But the height of the parallelogram is the side of the little square, so $2n^2 - 2n + 1 = 1985$.  Solving this quadratic equation gives $n = \\boxed{32}$."
+  },
+  {
+   "position": 9,
+   "source": "1985 AIME Problem 9",
+   "question": "In a circle, parallel chords of lengths 2, 3, and 4 determine central angles of $\\alpha$, $\\beta$, and $\\alpha + \\beta$ radians, respectively, where $\\alpha + \\beta < \\pi$. If $\\cos \\alpha$, which is a positive rational number, is expressed as a fraction in lowest terms, what is the sum of its numerator and denominator?",
+   "choices": null,
+   "answer": "49",
+   "solution": "Using the first diagram above,\n$$\\sin \\frac{\\alpha}{2} = \\frac{1}{r}$$\n$$\\sin \\frac{\\beta}{2} = \\frac{1.5}{r}$$\n$$\\sin(\\frac{\\alpha}{2}+\\frac{\\beta}{2})=\\frac{2}{r}$$\nby the Pythagorean trig identities,\n$$\\cos\\frac{\\alpha}{2}=\\sqrt{1-\\frac{1}{r^2}}$$\n$$\\cos\\frac{\\beta}{2}=\\sqrt{1-\\frac{2.25}{r^2}}$$\nso by the composite sine identity\n$$\\frac{2}{r}=\\frac{1}{r}\\sqrt{1-\\frac{2.25}{r^2}}+\\frac{1.5}{r}\\sqrt{1-\\frac{1}{r^2}}$$\nmultiply both sides by $2r$, then subtract $\\sqrt{4-\\frac{9}{r^2}}$ from both sides\nsquaring both sides, we get\n$$16 - 8\\sqrt{4-\\frac{9}{r^2}} + 4 - \\frac{9}{r^2}=9 - \\frac{9}{r^2}$$\n$$\\Longrightarrow 16+4=9+8\\sqrt{4-\\frac{9}{r^2}}\\Longrightarrow\\frac{11}{8}=\\sqrt{4-\\frac{9}{r^2}}\\Longrightarrow\\frac{121}{64}=4-\\frac{9}{r^2}$$\n$$\\Longrightarrow\\frac{(256-121)r^2}{64}=9\\Longrightarrow r^2= \\frac{64}{15}$$\nplugging this back in,\n$$\\cos^2(\\frac{\\alpha}{2})=1-\\frac{15}{64}=\\frac{49}{64}$$\nso\n$$\\cos(\\alpha)=2(\\frac{49}{64})-1=\\frac{34}{64}=\\frac{17}{32}$$\nand the answer is $17+32=\\boxed{049}$"
+  },
+  {
+   "position": 6,
+   "source": "1986 AIME Problem 6",
+   "question": "The pages of a book are numbered $1_^$ through $n_^$. When the page numbers of the book were added, one of the page numbers was mistakenly added twice, resulting in an incorrect sum of $1986_^$. What was the number of the page that was added twice?",
+   "choices": null,
+   "answer": "33",
+   "solution": "Denote the page number as $x$, with $x < n$. The sum formula shows that $\\frac{n(n + 1)}{2} + x = 1986$. Since $x$ cannot be very large, disregard it for now and solve $\\frac{n(n+1)}{2} = 1986$. The positive root for $n \\approx \\sqrt{3972} \\approx 63$. Quickly testing, we find that $63$ is too large, but if we plug in $62$ we find that our answer is $\\frac{62(63)}{2} + x = 1986 \\Longrightarrow x = \\boxed{033}$."
+  },
+  {
+   "position": 9,
+   "source": "1987 AIME Problem 9",
+   "question": "Triangle $ABC$ has right angle at $B$, and contains a point $P$ for which $PA = 10$, $PB = 6$, and $\\angle APB = \\angle BPC = \\angle CPA$.  Find $PC$.",
+   "choices": null,
+   "answer": "33",
+   "solution": "Let $PC = x$. Since $\\angle APB = \\angle BPC = \\angle CPA$, each of them is equal to $120^\\circ$.  By the Law of Cosines applied to triangles $\\triangle APB$, $\\triangle BPC$ and $\\triangle CPA$ at their respective angles $P$, remembering that $\\cos 120^\\circ = -\\frac12$, we have\n\n$$AB^2 = 36 + 100 + 60 = 196, BC^2 = 36 + x^2 + 6x, CA^2 = 100 + x^2 + 10x$$\n\nThen by the Pythagorean Theorem, $AB^2 + BC^2 = CA^2$, so \n\n$$x^2 + 10x + 100 = x^2 + 6x + 36 + 196$$ \n\nand\n\n$$4x = 132 \\Longrightarrow x = \\boxed{033}.$$"
+  },
+  {
+   "position": 6,
+   "source": "1989 AIME Problem 6",
+   "question": "Two skaters, Allie and Billie, are at points $A$ and $B$, respectively, on a flat, frozen lake. The distance between $A$ and $B$ is $100$ meters. Allie leaves $A$ and skates at a speed of $8$ meters per second on a straight line that makes a $60^\\circ$ angle with $AB$. At the same time Allie leaves $A$, Billie leaves $B$ at a speed of $7$ meters per second and follows the straight path that produces the earliest possible meeting of the two skaters, given their speeds. How many meters does Allie skate before meeting Billie?",
+   "choices": null,
+   "answer": "160",
+   "solution": "Drop the altitude from $M$ to $AB$, and call it $P$. $\\triangle AMP$ is a $30-60-90$ triangle, so $AP = 4t$ and $MP = 4\\sqrt{3}t$, and by the Pythagorean theorem on $\\triangle MPB$, $PB = t$. $AP + BP = AB$, so $t=20$. Therefore, $8t = \\boxed{160}$."
+  },
+  {
+   "position": 7,
+   "source": "1990 AIME Problem 7",
+   "question": "A triangle has vertices $P_^=(-8,5)$, $Q_^=(-15,-19)$, and $R_^=(1,-7)$. The equation of the bisector of $\\angle P$ can be written in the form $ax+2y+c=0_^$. Find $a+c_^$.\n\n__TOC__",
+   "choices": null,
+   "answer": "89",
+   "solution": "Use the distance formula to determine the lengths of each of the sides of the triangle. We find that it has lengths of side $15,\\ 20,\\ 25$, indicating that it is a $3-4-5$ right triangle. At this point, we just need to find another point that lies on the bisector of $\\angle P$."
+  },
+  {
+   "position": 8,
+   "source": "1990 AIME Problem 8",
+   "question": "In a shooting match, eight clay targets are arranged in two hanging columns of three targets each and one column of two targets. A marksman is to break all the targets according to the following rules: \n\n1) The marksman first chooses a column from which a target is to be broken. \n\n2) The marksman must then break the lowest remaining target in the chosen column. \n\nIf the rules are followed, in how many different orders can the eight targets be broken?",
+   "choices": null,
+   "answer": "560",
+   "solution": "Clearly, the marksman must shoot the left column three times, the middle column two times, and the right column three times.\n\nFrom left to right, suppose that the columns are labeled $L,M,$ and $R,$ respectively. We consider the string $LLLMMRRR:$\n\nSince the letter arrangements of $LLLMMRRR$ and the shooting orders have one-to-one correspondence, we count the letter arrangements: $$\\binom{8}{3,2,3} = \\frac{8!}{3!\\cdot2!\\cdot3!} = \\boxed{560}.$$"
+  },
+  {
+   "position": 3,
+   "source": "1991 AIME Problem 3",
+   "question": "Expanding $(1+0.2)^{1000}_$ by the binomial theorem and doing no further manipulation gives\n\n${1000 \\choose 0}(0.2)^0+{1000 \\choose 1}(0.2)^1+{1000 \\choose 2}(0.2)^2+\\cdots+{1000 \\choose 1000}(0.2)^{1000}$\n$= A_0 + A_1 + A_2 + \\cdots + A_{1000},$\nwhere $A_k = {1000 \\choose k}(0.2)^k$ for $k = 0,1,2,\\ldots,1000$. For which $k_^$ is $A_k^$ the largest?",
+   "choices": null,
+   "answer": "166",
+   "solution": "Notice the relation between $A_m$ and $A_{m+1}$. We have that: $A_{m+1}  = A_m \\cdot \\frac{1}{5} \\cdot \\frac{1000-m}{m+1}$. This is true because from $A_m$ to $A_{m+1}$ we have to multiply by $\\frac{1}{5}=0.2$ once,and then we must resolve the factorial issue. To do this, we must realize that \n\n$$ {1000 \\choose m+1} = \\frac{1000!}{(m+1)!(1000-m-1)!} = \\frac{1000 \\cdots (1001-m)(1000-m)}{(m+1)!}$$\nand that\n$$ {1000 \\choose m} = \\frac{1000!}{m!(1000-m)!} = \\frac{1000 \\cdots (1001-m)}{m!}$$\n\n$$\\Longrightarrow {1000 \\choose m} \\cdot \\frac{1000-m}{m+1}$$\n\nSo now, we must find out for which $m$ is $1000-m A_{m+1}$) Then we find that for all $m > 165.833333$, the above inequality ($1000-m< 5 \\cdot (m+1)$) holds, so then $m=165$ so $k=m+1= \\boxed{166}$."
+  },
+  {
+   "position": 13,
+   "source": "1991 AIME Problem 13",
+   "question": "A drawer contains a mixture of red socks and blue socks, at most $1991$ in all. It so happens that, when two socks are selected randomly without replacement, there is a probability of exactly $\\frac{1}{2}$ that both are red or both are blue. What is the largest possible number of red socks in the drawer that is consistent with this data?",
+   "choices": null,
+   "answer": "990",
+   "solution": "Let $r$ and $b$ denote the red socks and blue socks, respectively. Thus the equation in question is:\n\n$\\frac{r(r-1)+b(b-1)}{(r+b)(r+b-1)}=\\frac{1}{2}$\n\n$\\Rightarrow 2r^2-2r+2b^2-2b=r^2+2rb+b^2-r-b$\n\n$\\Rightarrow r^2+b^2-r-b-2rb=0$\n\n$\\Rightarrow (r-b)^2=r+b\\le 1991$\n\nBecause we wish to maximize $r$, we have $r\\ge b$ and thus $r-b\\le 44$ as both $r$ and $b$ must be integers and ${44}^2=1936$ is the largest square less than or equal to $1991$. We now know that the maximum difference between the number of socks is $44$. Now we return to an earlier equation:\n\n$r^2+b^2-r-b-2rb=0$\n\n$\\Rightarrow r^2-(2b+1)r+(b^2-b)=0$\n\nSolving by the Quadratic formula, we have:\n\n$r=\\frac{2b+1\\pm\\sqrt{4b^2+4b+1-4b^2+4b}}{2}$\n\n$\\Rightarrow r=\\frac{2b+1\\pm\\sqrt{8b+1}}{2}$\n\n$\\Rightarrow r-b=\\frac{1\\pm\\sqrt{8b+1}}{2}$\n\n$\\Rightarrow 44\\ge r-b=\\frac{1\\pm\\sqrt{8b+1}}{2}$\n\n$\\Rightarrow 44\\ge\\frac{1\\pm\\sqrt{8b+1}}{2}$\n\n$\\Rightarrow \\pm\\sqrt{8b+1}\\le 87$\n\n$\\Rightarrow b\\le 946$ (Here we use the positive sign to maximize $r$.)\n\nThus the optimal case would be $b=946$ as $r$ increases only when $b$ increases. In addition, $\\sqrt{8b+1}=87$ as we are using the equality case. We then plug back in:\n\n$r=\\frac{2b+1\\pm\\sqrt{8b+1}}{2}$\n\n$\\Rightarrow r=\\frac{1893+87}{2}$ (using the established $\\sqrt{8b+1}=87$)\n\n$\\Rightarrow r=\\frac{1980}{2}$\n\n$\\Rightarrow r=\\boxed{990}$"
+  },
+  {
+   "position": 9,
+   "source": "1993 AIME Problem 9",
+   "question": "Two thousand points are given on a circle. Label one of the points $1$. From this point, count $2$ points in the clockwise direction and label this point $2$. From the point labeled $2$, count $3$ points in the clockwise direction and label this point $3$. (See figure.) Continue this process until the labels $1,2,3\\dots,1993\\,$ are all used. Some of the points on the circle will have more than one label and some points will not have a label. What is the smallest integer that labels the same point as $1993$?",
+   "choices": null,
+   "answer": "118",
+   "solution": "Two labels $a$ and $b$ occur on the same point if $\\ a(a+1)/2\\equiv \\ b(b+1)/2\\pmod{2000}$. If we assume the final answer be $n$, then we have $\\frac12(n)(n + 1)\\equiv \\frac12(1993)(1994) \\pmod{2000}$.\n\nMultiply $2$ on both side we have $(1993)(1994) - (n)(n + 1) = (1993 - n)(1994 + n)\\equiv 0\\pmod{4000}$. As they have different parities, the even one must be divisible by $32$. As $ (1993 - n)+(1994 + n)\\equiv 2\\pmod{5}$, one of them is divisible by $5$, which indicates it's divisible by $125$.\n\nWhich leads to four different cases: $1993-n\\equiv 0\\pmod{4000}$ ; $1994+n\\equiv 0\\pmod{4000}$ ; $1993-n\\equiv 0\\pmod{32}$ and $1994+n\\equiv 0\\pmod{125}$ ; $1993-n\\equiv 0\\pmod{125}$ and $1994+n\\equiv 0\\pmod{32}$. Which leads to $n\\equiv 1993,2006,3881$ and $118\\pmod{4000}$ respectively, and only $n=118$ satisfied.Therefore answer is $\\boxed{118}$.(by ZJY)"
+  },
+  {
+   "position": 13,
+   "source": "1993 AIME Problem 13",
+   "question": "Jenny and Kenny are walking in the same direction, Kenny at 3 feet per second and Jenny at 1 foot per second, on parallel paths that are 200 feet apart. A tall circular building 100 feet in diameter is centered midway between the paths. At the instant when the building first blocks the line of sight between Jenny and Kenny, they are 200 feet apart. Let $t\\,$ be the amount of time, in seconds, before Jenny and Kenny can see each other again. If $t\\,$ is written as a fraction in lowest terms, what is the sum of the numerator and denominator?\n\n__TOC__",
+   "choices": null,
+   "answer": "163",
+   "solution": "Let the point where Jenny started be $A = (0,0)$. Then let $D = (t,0)$ the point Jenny is when she can see Kenny. Similarly, let $B = (0,200)$ be where Kenny started, and let $C = (3t,200)$ the point Kenny is when she can see Jenny. Then the equation of the line passing through $C, D$ is $100x-ty-100t=0$. Now, note that the center of the building is at $O = (50,100)$, and the distance from $O$ to $CD$ is $50$, so, using the distance from a point to a line formula, we get $$\\frac{\\sqrt{10000+a^2}} = 50,$$\nwhich simplifies to $15a^2-800a = 0$ from clearing denominators, squaring to remove absolute value and radical, then cancelling and rearranging. But this is equivalent to $a = \\frac{160}{3}$, so our answer is $\\boxed{163}$."
+  },
+  {
+   "position": 2,
+   "source": "1994 AIME Problem 2",
+   "question": "A circle with diameter $\\overline{PQ}$ of length 10 is internally tangent at $P$ to a circle of radius 20. Square $ABCD$ is constructed with $A$ and $B$ on the larger circle, $\\overline{CD}$ tangent at $Q$ to the smaller circle, and the smaller circle outside $ABCD$. The length of $\\overline{AB}$ can be written in the form $m + \\sqrt{n}$, where $m$ and $n$ are integers. Find $m + n$.\n\nNote: The diagram was not given during the actual contest.",
+   "choices": null,
+   "answer": "312",
+   "solution": "Call the center of the larger circle $O$. Extend the diameter $\\overline{PQ}$ to the other side of the square (at point $E$), and draw $\\overline{AO}$. We now have a right triangle, with hypotenuse of length $20$. Since $OQ = OP - PQ = 20 - 10 = 10$, we know that $OE = AB - OQ = AB - 10$. The other leg, $AE$, is just $\\frac 12 AB$. \n\nApply the Pythagorean Theorem: \n\n:$(AB - 10)^2 + \\left(\\frac 12 AB\\right)^2 = 20^2$\n:$AB^2 - 20 AB + 100 + \\frac 14 AB^2 - 400 = 0$\n:$AB^2 - 16 AB - 240 = 0$\n\nThe quadratic formula shows that the answer is $\\frac{16 \\pm \\sqrt{16^2 + 4 \\cdot 240}}{2} = 8 \\pm \\sqrt{304}$. Discard the negative root, so our answer is $8 + 304 = \\boxed{312}$."
+  },
+  {
+   "position": 1,
+   "source": "1995 AIME Problem 1",
+   "question": "Square $S_{1}$ is $1\\times 1.$  For $i\\ge 1,$ the lengths of the sides of square $S_{i+1}$ are half the lengths of the sides of square $S_{i},$ two adjacent sides of square $S_{i}$ are perpendicular bisectors of two adjacent sides of square $S_{i+1},$ and the other two sides of square $S_{i+1},$ are the perpendicular bisectors of two adjacent sides of square $S_{i+2}.$  The total area enclosed by at least one of $S_{1}, S_{2}, S_{3}, S_{4}, S_{5}$ can be written in the form $m/n,$ where $m$ and $n$ are relatively prime positive integers.  Find $m-n.$",
+   "choices": null,
+   "answer": "255",
+   "solution": "The sum of the areas of the squares if they were not interconnected is a geometric sequence: \n\n:$1^2 + \\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{1}{4}\\right)^2 + \\left(\\frac{1}{8}\\right)^2 + \\left(\\frac{1}{16}\\right)^2$\n\nThen subtract the areas of the intersections, which is $\\left(\\frac{1}{4}\\right)^2 + \\ldots + \\left(\\frac{1}{32}\\right)^2$:\n\n:$1^2 + \\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{1}{4}\\right)^2 + \\left(\\frac{1}{8}\\right)^2 + \\left(\\frac{1}{16}\\right)^2 - \\left[\\left(\\frac{1}{4}\\right)^2 + \\left(\\frac{1}{8}\\right)^2 + \\left(\\frac{1}{16}\\right)^2 + \\left(\\frac{1}{32}\\right)^2\\right]$\n:$= 1 + \\frac{1}{2}^2 - \\frac{1}{32}^2$\n\nThe majority of the terms cancel, leaving $1 + \\frac{1}{4} - \\frac{1}{1024}$, which simplifies down to $\\frac{1024 + \\left(256 - 1\\right)}{1024}$. Thus, $m-n =  \\boxed{255}$.\n\nAlternatively, take the area of the first square and add $\\,\\frac{3}{4}$ of the areas of  the remaining squares. This results in $1+ \\frac{3}{4}\\left[\\left(\\frac{1}{2}\\right)^2 + \\ldots + \\left(\\frac{1}{16}\\right)^2\\right]$, which when simplified will produce the same answer."
+  },
+  {
+   "position": 4,
+   "source": "1995 AIME Problem 4",
+   "question": "Circles of radius $3$ and $6$ are externally tangent to each other and are internally tangent to a circle of radius $9$. The circle of radius $9$ has a chord that is a common external tangent of the other two circles. Find the square of the length of this chord.",
+   "choices": null,
+   "answer": "224",
+   "solution": "We label the points as following: the centers of the circles of radii $3,6,9$ are $O_3,O_6,O_9$ respectively, and the endpoints of the chord are $P,Q$. Let $A_3,A_6,A_9$ be the feet of the perpendiculars from $O_3,O_6,O_9$ to $\\overline{PQ}$ (so $A_3,A_6$ are the points of tangency). Then we note that $\\overline{O_3A_3} \\parallel \\overline{O_6A_6} \\parallel \\overline{O_9A_9}$, and $O_6O_9 : O_9O_3 = 3:6 = 1:2$. Thus, $O_9A_9 = \\frac{2 \\cdot O_6A_6 + 1 \\cdot O_3A_3}{3} = 5$ (consider similar triangles). Applying the Pythagorean Theorem to $\\triangle O_9A_9P$, we find that \n$$PQ^2 = 4(A_9P)^2 = 4[(O_9P)^2-(O_9A_9)^2] = 4[9^2-5^2] = \\boxed{224}$$"
+  },
+  {
+   "position": 9,
+   "source": "1995 AIME Problem 9",
+   "question": "Triangle $ABC$ is isosceles, with $AB=AC$ and altitude $AM=11.$  Suppose that there is a point $D$ on $\\overline{AM}$ with $AD=10$ and $\\angle BDC=3\\angle BAC.$  Then the perimeter of $\\triangle ABC$ may be written in the form $a+\\sqrt{b},$ where $a$ and $b$ are integers.  Find $a+b.$",
+   "choices": null,
+   "answer": "616",
+   "solution": "Let $x=\\angle CAM$, so $3x=\\angle CDM$. Then, $\\frac{\\tan 3x}{\\tan x}=\\frac{CM/1}{CM/11}=11$. Expanding $\\tan 3x$ using the angle sum identity gives $$\\tan 3x=\\tan(2x+x)=\\frac{3\\tan x-\\tan^3x}{1-3\\tan^2x}.$$ \nThus, $\\frac{3-\\tan^2x}{1-3\\tan^2x}=11$. Solving, we get $\\tan x= \\frac 12$. Hence, $CM=\\frac{11}2$ and $AC= \\frac{11\\sqrt{5}}2$ by the Pythagorean Theorem. The total perimeter is $2(AC + CM) = \\sqrt{605}+11$. The answer is thus $a+b=\\boxed{616}$."
+  },
+  {
+   "position": 15,
+   "source": "1995 AIME Problem 15",
+   "question": "Let $p_$ be the probability that, in the process of repeatedly flipping a fair coin, one will encounter a run of $5$ heads before one encounters a run of $2$ tails.  Given that $p_$ can be written in the form $m/n$ where $m_$ and $n_$ are relatively prime positive integers, find $m+n$.\n\n__TOC__",
+   "choices": null,
+   "answer": "37",
+   "solution": "There can be 1-4 heads and 1 tails in any grouping, so we write $h_5,th_5,h_nth_5,th_nth_5,\u2026$ etc., where $1\\leq n\\leq 4$ and subscript $n$ means there are $n$ of that state in a row. We see that this gives us 2 geometric sequences: one with first term $\\frac{1}{2^5}$ and common ratio $\\frac{1}{2}*\\left(1/2+1/4+1/8+1/16\\right)$ and one with first term $\\frac{1}{2^6}$ and the same common ratio. Therefore we get $\\frac{3}{34}$ or $\\fbox{037}$"
+  },
+  {
+   "position": 1,
+   "source": "1996 AIME Problem 1",
+   "question": "In a magic square, the sum of the three entries in any row, column, or diagonal is the same value. The figure shows four of the entries of a magic square. Find $x$.",
+   "choices": null,
+   "answer": "200",
+   "solution": "Use the table from above. Obviously $c = 114$. Hence $a+e = 115$. Similarly, $1+a = 96 + e \\Rightarrow a = 95+e$.\n\nSubstitute that into the first to get $2e = 20 \\Rightarrow e=10$, so $a=105$, and so the value of $x$ is just $115+x = 210 + 105 \\Rightarrow x = \\boxed{200}$"
+  },
+  {
+   "position": 14,
+   "source": "1997 AIME Problem 14",
+   "question": "Let $v$ and $w$ be distinct, randomly chosen roots of the equation $z^{1997}-1=0$.  Let $\\frac{m}{n}$ be the probability that $\\sqrt{2+\\sqrt{3}}\\le\\left|v+w\\right|$, where $m$ and $n$ are relatively prime positive integers.  Find $m+n$.",
+   "choices": null,
+   "answer": "582",
+   "solution": "Let \\(v = \\operatorname{cis}\\left(\\frac{2\\pi k}{1997}\\right)\\) and  \n\\(w = \\operatorname{cis}\\left(\\frac{2\\pi c}{1997}\\right)\\), where \\(\\operatorname{cis}\\left(\\theta\\right) = \\cos(\\theta) + i\\sin(\\theta)\\), \\(v \\neq w\\), and \\(k,c \\in \\{0,1,2,\\dots,1996\\}\\)\n\nWe are given\n$$\\sqrt{2+\\sqrt{3}} \\le |v+w|.$$\nSquaring both sides gives\n$$2+\\sqrt{3} \\le |v+w|^2.$$\n\nExpanding \\(v+w\\), we obtain\n$$v+w = \\cos\\!\\left(\\tfrac{2\\pi k}{1997}\\right) + \\cos\\!\\left(\\tfrac{2\\pi c}{1997}\\right) + i\\!\\left(\\sin\\!\\left(\\tfrac{2\\pi k}{1997}\\right) + \\sin\\!\\left(\\tfrac{2\\pi c}{1997}\\right)\\right).$$\n\nUsing sum-to-product identities,\n$$v+w = 2\\cos\\!\\left(\\tfrac{2\\pi(k+c)}{1997}\\right)\\cos\\!\\left(\\tfrac{2\\pi(k-c)}{1997}\\right) + i\\!\\left(2\\sin\\!\\left(\\tfrac{2\\pi(k+c)}{1997}\\right)\\cos\\!\\left(\\tfrac{2\\pi(k-c)}{1997}\\right)\\right).$$\n\nThus,\n$$|v+w|^2 = 4\\cos^2\\!\\left(\\tfrac{2\\pi(k-c)}{1997}\\right) \\left(\\cos^2\\!\\left(\\tfrac{2\\pi(k+c)}{1997}\\right) + \\sin^2\\!\\left(\\tfrac{2\\pi(k+c)}{1997}\\right)\\right).$$\n\nSince \\(\\sin^2\\theta+\\cos^2\\theta=1\\), we have\n$$|v+w|^2 = 4\\cos^2\\!\\left(\\tfrac{2\\pi(k-c)}{1997}\\right).$$\n\nSubstituting into the inequality gives\n$$2+\\sqrt{3} \\le 4\\cos^2\\!\\left(\\tfrac{2\\pi(k-c)}{1997}\\right).$$\n\nTaking square roots,\n$$\\sqrt{2+\\sqrt{3}} \\le 2\\cos\\!\\left(\\tfrac{2\\pi(k-c)}{1997}\\right) \\quad \\text{or} \\quad-\\sqrt{2+\\sqrt{3}} \\ge 2\\cos\\!\\left(\\tfrac{2\\pi(k-c)}{1997}\\right).$$\n\nDividing by \\(2\\),\n$$\\sqrt{\\frac{2+\\sqrt{3}}{4}} \\le \\cos\\!\\left(\\tfrac{2\\pi(k-c)}{1997}\\right) \\quad \\text{or} \\quad  -\\sqrt{\\frac{2+\\sqrt{3}}{4}} \\ge \\cos\\!\\left(\\tfrac{2\\pi(k-c)}{1997}\\right).$$\n\nNoting that\n$$\\sqrt{\\frac{2+\\sqrt{3}}{4}} = \\cos \\frac{\\pi}{12},$$\nwe conclude that\n$$-\\frac{\\pi}{12} \\le \\frac{2\\pi(k-c)}{1997} \\le \\frac{\\pi}{12} \\quad \\text{or} \\quad \\frac{11\\pi}{12} \\le \\frac{2\\pi(k-c)}{1997} \\le \\frac{13\\pi}{12}.$$\n\nThese two cases are symmetric, so we consider the first and double the result.  \nSimplifying,\n$$-\\frac{1997}{24} \\le k-c \\le \\frac{1997}{24}.$$\n\nSince \\(k-c\\) is an integer,\n$$-83 \\le k-c \\le 83.$$\n\nBecause \\(k \\neq c\\), for each fixed \\(k\\) there are exactly \\(166\\) valid values of \\(c\\).\nThis works modulo \\(1997\\) since the arguments lie on a circle (e.g. \\(\\cos(\\frac{\\pi}{12})=\\cos(\\frac{-23\\pi}{12})\\)).\n\nThus, the probability for one case is \\(\\frac{166}{1996}\\), and doubling gives \\(\\frac{332}{1996} = \\frac{83}{499}.\\) The problem asks for \\(m+n\\), so \\(83+499=\\boxed{582}.\\)"
+  },
+  {
+   "position": 4,
+   "source": "1998 AIME Problem 4",
+   "question": "Nine tiles are numbered $1, 2, 3, \\cdots, 9,$ respectively.  Each of three players randomly selects and keeps three of the tiles, and sums those three values.  The probability that all three players obtain an odd sum is $m/n,$ where $m$ and $n$ are relatively prime positive integers.  Find $m+n.$",
+   "choices": null,
+   "answer": "17",
+   "solution": "In order for a player to have an odd sum, he must have an odd number of odd tiles: that is, he can either have three odd tiles, or two even tiles and an odd tile.  Thus, since there are $5$ odd tiles and $4$ even tiles, the only possibility is that one player gets $3$ odd tiles and the other two players get $2$ even tiles and $1$ odd tile.  We count the number of ways this can happen. (We will count assuming that it matters in what order the people pick the tiles; the final answer is the same if we assume the opposite, that order doesn't matter.)\n\n$\\dbinom{5}{3} = 10$ choices for the tiles that he gets.  The other two odd tiles can be distributed to the other two players in $2$ ways, and the even tiles can be distributed between them in $\\dbinom{4}{2} \\cdot \\dbinom{2}{2} = 6$ ways.  This gives us a total of  $10 \\cdot 2 \\cdot 6 = 120$ possibilities in which all three people get odd sums.\n\nIn order to calculate the probability, we need to know the total number of possible distributions for the tiles.  The first player needs three tiles which we can give him in $\\dbinom{9}{3} = 84$ ways, and the second player needs three of the remaining six, which we can give him in $\\dbinom{6}{3} = 20$ ways. Finally, the third player will simply take the remaining tiles in $1$ way. So, there are $\\dbinom{9}{3} \\cdot \\dbinom{6}{3} \\cdot 1 = 84 \\cdot 20 = 1680$ ways total to distribute the tiles.\n\nWe must multiply the probability by 3, since any of the 3 players can have the 3 odd tiles.Thus, the total probability is $\\frac{360}{1680} = \\frac{3}{14},$ so the answer is $3 + 14 = \\boxed{017}$."
+  },
+  {
+   "position": 4,
+   "source": "1999 AIME Problem 4",
+   "question": "The two squares shown share the same center $O_$ and have sides of length 1. The length of $\\overline{AB}$ is $43/99$ and the area of octagon $ABCDEFGH$ is $m/n,$ where $m_$ and $n_$ are relatively prime positive integers.  Find $m+n.$",
+   "choices": null,
+   "answer": "185",
+   "solution": "Triangles $AOB$, $BOC$, $COD$, etc. are congruent by symmetry (you can prove it rigorously by using the power of a point to argue that exactly two chords of length $1$ in the circumcircle of the squares pass through $B$, etc.), and each area is $\\frac{\\frac{43}{99}\\cdot\\frac{1}{2}}{2}$. Since the area of a triangle is $bh/2$, the area of all $8$ of them is $\\frac{86}{99}$ and the answer is $\\boxed{185}$."
+  },
+  {
+   "position": 4,
+   "source": "2000 AIME I Problem 4",
+   "question": "The diagram shows a rectangle that has been dissected into nine non-overlapping squares. Given that the width and the height of the rectangle are relatively prime positive integers, find the perimeter of the rectangle.",
+   "choices": null,
+   "answer": "260",
+   "solution": "We set the side length of the smallest square to 1, and set the side length of square $a_4$ in the previous question to a. We do some \"side length chasing\" and get $4a - 4 = 2a + 5$. Solving, we get $a = 4.5$ and the side lengths are $61$ and $69$. Thus, the perimeter of the rectangle is $2(61 + 69) = \\boxed{260}.$"
+  },
+  {
+   "position": 14,
+   "source": "2001 AIME I Problem 14",
+   "question": "A mail carrier delivers mail to the nineteen houses on the east side of Elm Street. The carrier notices that no two adjacent houses ever get mail on the same day, but that there are never more than two houses in a row that get no mail on the same day. How many different patterns of mail delivery are possible?",
+   "choices": null,
+   "answer": "351",
+   "solution": "Let $a_n$ be the number of ways if the first house has mail, and let $b_n$ be the number of ways if the first house does not get mail.\n\n$a_n=a_{n-2}+a_{n-3}$ because if the first house gets mail, the next house that gets mail must either be the third or fourth house.\n\n$b_n=a_{n-1}+a_{n-2}$ because if the first house does not get mail, the next house that gets mail must either be the second or third house.\n\nNote that we only need list out values of $a_n$ as $b$ depends on $a$. $a_1=1, a_2=1, a_3=2, a_4=2, \\ldots$.\n\n$a_{19}+b_{19}=a_{17}+a_{16}+a_{18}+a_{17}=a_{16}+2\\cdot a_{17}+a_{18}=65+2\\cdot 86+114=\\boxed{351}$."
+  },
+  {
+   "position": 4,
+   "source": "2002 AIME II Problem 4",
+   "question": "Patio blocks that are hexagons $1$ unit on a side are used to outline a garden by placing the blocks edge to edge with $n$ on each side. The diagram indicates the path of blocks around the garden when $n=5$.\n\nIf $n=202$, then the area of the garden enclosed by the path, not including the path itself, is $m\\left(\\sqrt3/2\\right)$ square units, where $m$ is a positive integer. Find the remainder when $m$ is divided by $1000$.",
+   "choices": null,
+   "answer": "803",
+   "solution": "Note that this is just the definition for a centered hexagonal number, and  the formula for $(n-1)^{th}$ term is $3n(n+1)+1$. Applying this for $200$ as we want the inner area gives $120601$. Then continue as above."
+  },
+  {
+   "position": 7,
+   "source": "2004 AIME I Problem 7",
+   "question": "Let $ C $ be the coefficient of $ x^2 $ in the expansion of the product $ (1 - x)(1 + 2x)(1 - 3x)\\cdots(1 + 14x)(1 - 15x). $ Find $ |C|. $\n\n__TOC__",
+   "choices": null,
+   "answer": "588",
+   "solution": "Notice a pattern betweenthe x cooeficient and the x^2\n\nx {-1,1, -2, 2, -3, 3..}\n\nAnd then we can bash out the x^2 terms absolute value:\n\nx^2={0, -2, -5, -13,....} you get $\\boxed{588}$"
+  },
+  {
+   "position": 1,
+   "source": "2004 AIME II Problem 1",
+   "question": "A chord of a circle is perpendicular to a radius at the midpoint of the radius. The ratio of the area of the larger of the two regions into which the chord divides the circle to the smaller can be expressed in the form $ \\frac{a\\pi+b\\sqrt{c}}{d\\pi-e\\sqrt{f}}, $ where $ a, b, c, d, e, $ and $ f $ are positive integers, $ a $ and $ e $ are relatively prime, and neither $ c $ nor $ f $ is  divisible by the square of any prime. Find the remainder when the product $ abcdef $ is divided by 1000.",
+   "choices": null,
+   "answer": "592",
+   "solution": "Let $r$ be the length of the radius of the circle.  A right triangle is formed by half of the chord, half of the radius (since the chord bisects it), and the radius. Thus, it is a $30^\\circ$ - $60^\\circ$ - $90^\\circ$ triangle, and the area of two such triangles is $2 \\cdot \\frac{1}{2} \\cdot \\frac{r}{2} \\cdot \\frac{r\\sqrt{3}}{2} = \\frac{r^2\\sqrt{3}}{4}$. The central angle which contains the entire chord is $60 \\cdot 2 = 120$ degrees, so the area of the sector is $\\frac{1}{3}r^2\\pi$; the rest of the area of the circle is then equal to $\\frac{2}{3}r^2\\pi$.\n\nThe smaller area cut off by the chord is equal to the area of the sector minus the area of the triangle. The larger area is equal to the area of the circle not within the sector and the area of the triangle. Thus, the desired ratio is $\\frac{\\frac{2}{3}r^2\\pi + \\frac{r^2\\sqrt{3}}{4}}{\\frac{1}{3}r^2\\pi - \\frac{r^2\\sqrt{3}}{4}} =  \\frac{8\\pi + 3\\sqrt{3}}{4\\pi - 3\\sqrt{3}}$\n\nTherefore, $abcdef = 2^53^4 = 2592 \\Longrightarrow \\boxed{592}$."
+  },
+  {
+   "position": 14,
+   "source": "2004 AIME II Problem 14",
+   "question": "Consider a string of $ n $ $ 7 $'s, $ 7777\\cdots77, $ into which $ + $ signs are inserted to produce an arithmetic expression. For example, $ 7+77+777+7+7=875 $ could be obtained from eight $ 7 $'s in this way. For how many values of $ n $ is it possible to insert $ + $ signs so that the resulting expression has value $ 7000 $?",
+   "choices": null,
+   "answer": "108",
+   "solution": "First, we note that by the sun of digits and modulo 9 formula, $n \\equiv 1000 \\equiv 1 \\pmod {9}$. Obviously, $1000 = 111+111+111+111+111+111+111+111+111+1$ with $n=28$ is the smallest possible $n$. Now, $111=10 \\cdot 11 +1$, $11= 11 \\cdot 1$. The first equation applied on a representation with $n$ 1's (i.e. replacing a $111$, if available, with 10 $11$'s and one 1) will increase $n$ by 18, while the second equation applied onto a representation will increase $n$ by 9 only. Thus, there are representations of $n= 46,55,64, \\dots , 1000$, since for $46$ we can just replace a $111$ in $n=28$ representation with 10 $11$'s and one 1, and for the rest we use the first equation $111= 10 \\cdot 11 +1$ to \"increase the range\" and the second equation to \"fill in the gaps\" of the first equation. Essentially we use the first equation for every other multiple of nine and the second for the other multiples of nine and for once the $111$'s run out. Next, obviously $n=1000$ is the maximum $n$ one can achieve. Thus, the solutions $n=28,46,55,64, \\dots ,1000$ is all the solutions (one can check there are $\\boxed{108}$) if we can show $37$ is impossible. But it is, since $a+b+c=37, 111a+11b+c=1000$ have no Diophantine solution, so we're done."
+  },
+  {
+   "position": 1,
+   "source": "2005 AIME I Problem 1",
+   "question": "Six congruent circles form a ring with each circle externally tangent to two circles adjacent to it. All circles are internally tangent to a circle $ C $ with radius 30. Let $ K $ be the area of the region inside circle $ C $ and outside of the six circles in the ring. Find $ \\lfloor K \\rfloor$ (the floor function).",
+   "choices": null,
+   "answer": "942",
+   "solution": "Define the radii of the six congruent circles as $r$. If we draw all of the radii to the points of external tangency, we get a regular hexagon. If we connect the vertices of the hexagon to the center of the circle $C$, we form several equilateral triangles. The length of each side of the triangle is $2r$. Notice that the radius of circle $C$ is equal to the length of the side of the triangle plus $r$. Thus, the radius of $C$ has a length of $3r = 30$, and so $r = 10$. $K = 30^2\\pi - 6(10^2\\pi) = 300\\pi$, so $\\lfloor 300\\pi \\rfloor = \\boxed{942}$."
+  },
+  {
+   "position": 10,
+   "source": "2005 AIME I Problem 10",
+   "question": "Triangle $ ABC $ lies in the cartesian plane and has an area of $70$. The coordinates of $ B $ and $ C $ are $ (12,19) $ and $ (23,20), $ respectively, and the coordinates of $ A $ are $ (p,q). $ The line containing the  median to side $ BC $ has slope $ -5. $ Find the largest possible value of $ p+q. $",
+   "choices": null,
+   "answer": "47",
+   "solution": "Plug points into the Shoelace Theorem. This will provide you with the equation $|-p - 197 + 11q| = 140$. The find the midpoint of the line $BC$ which is $(17.5,19.5)$. Now using this post and the given slope of the median, $-5$, using basic algebra we can find the equation of the median which is $q = -5p + 107$. Now that we have been given $q$ in terms of $p$ plug this equation back into $|-p - 197 + 11q| = 140$. The result is the equation $|980 - 56p| = 140$. Solve this equation for two possible answers $p = 15, 20$. Plugging into $q = -5p + 107$ these inputs produce $q$ values $32$ and $7$. Obviously $15 + 32$ is the greater sum so the answer is $47$ and we are done."
+  },
+  {
+   "position": 11,
+   "source": "2005 AIME I Problem 11",
+   "question": "A semicircle with diameter $ d $ is contained in a  square whose sides have length 8. Given the maximum value of $ d $ is $ m - \\sqrt{n},$ find $ m+n. $",
+   "choices": null,
+   "answer": "544",
+   "solution": "We note that aligning the base of the semicircle with a side of the square is certainly non-optimal.  If the semicircle is tangent to only one side of the square, we will have \"wiggle-room\" to increase its size.  Once it is tangent to two adjacent sides of the square, we will maximize its size when it touches both other sides of the square.  This can happen only when it is arranged so that the center of the semicircle lies on one diagonal of the square.\n\nNow, let the square be $ABCD$, and let $E \\in AB$ and $F \\in DA$ be the points at which the \"corners\" of the semicircle touch the square. Let $O$ be the center of the semicircle."
+  },
+  {
+   "position": 9,
+   "source": "2005 AIME II Problem 9",
+   "question": "For how many positive integers $ n $ less than or equal to $1000$ is $ (\\sin t + i \\cos t)^n = \\sin nt + i \\cos nt $ true for all real $ t $?",
+   "choices": null,
+   "answer": "250",
+   "solution": "$(\\sin\\theta + i\\cos\\theta)^{n} = i^{n} (\\cos\\theta - i\\sin\\theta)^n$\n\nHence the required condition is just $i^{n} = i$ which is true for exactly 1 in 4 consecutive numbers. Thus $\\boxed{250}$"
+  },
+  {
+   "position": 8,
+   "source": "2006 AIME II Problem 8",
+   "question": "There is an unlimited supply of congruent equilateral triangles made of colored paper. Each triangle is a solid color with the same color on both sides of the paper. A large equilateral triangle is constructed from four of these paper triangles. Two large triangles are considered distinguishable if it is not possible to place one on the other, using translations, rotations, and/or reflections, so that their corresponding small triangles are of the same color.\n\nGiven that there are six different colors of triangles from which to choose, how many distinguishable large equilateral triangles may be formed?",
+   "choices": null,
+   "answer": "336",
+   "solution": "There are $6$ choices for the center triangle. Note that given any $3$ colors, there is a unique way to assign them to the corner triangles. We have $6$ different colors to choose from, so the number of ways to color the corner triangles is the same as the number of ways to arrange $6 - 1 = 5$ dividers and $3$ identical items. Therefore, our answer is $$6 \\binom{5 + 3}{3} = 6\\binom{8}{3} = \\boxed{336}.$$\n\n-MP8148\n\nExplanation of the bijection by WIlliamgolly:\nLet 1,2,3,4,5,6 be the colors, and WLOG assume that the middle triangle has a color of 6.  Now, the color bijection can be formed as follows: Pick the colors to the immediate right of a divider.  If there is no color to the immediate right of a divider, then that color is 6.  \n\nFor example, ||12345| would represent the colors 1,1,6 as the colors chosen. Note for any three colors, there is only one way to fix it on the triangle, thus forming our stars and bars bijection."
+  },
+  {
+   "position": 13,
+   "source": "2007 AIME II Problem 13",
+   "question": "A triangular array of squares has one square in the first row, two in the second, and in general, $k$ squares in the $k$th row for $1 \\leq k \\leq 11.$ With the exception of the bottom row, each square rests on two squares in the row immediately below (illustrated in the given diagram). In each square of the eleventh row, a $0$ or a $1$ is placed. Numbers are then placed into the other squares, with the entry for each square being the sum of the entries in the two squares below it. For how many initial distributions of $0$'s and $1$'s in the bottom row is the number in the top square a multiple of $3$?",
+   "choices": null,
+   "answer": "640",
+   "solution": "If we label the bottom row of values $a_1,a_2,\u2026,a_11$ then the sum of the bottom row is $a_1+\u2026+a_11$, the sum of the second row is $a_1+2(a_2+\u2026+a_10)+a_11$ and this pattern continues until the top element is $(a_1+a_11)+2(a_2+a_10)+\u2026+4(a_5+a_7)+5a_6$. Then, the terms with coefficient 0 mod 3 can be anything, and we do casework on the other solutions mod 3. We get 640."
+  },
+  {
+   "position": 13,
+   "source": "2008 AIME I Problem 13",
+   "question": "Let\n\n$$p(x,y) = a_0 + a_1x + a_2y + a_3x^2 + a_4xy + a_5y^2 + a_6x^3 + a_7x^2y + a_8xy^2 + a_9y^3.$$\n\nSuppose that \n\n$$p(0,0) = p(1,0) = p( - 1,0) = p(0,1) = p(0, - 1)\\\\ = p(1,1) = p(1, - 1) = p(2,2) = 0.$$\n\nThere is a point $\\left(\\frac {a}{c},\\frac {b}{c}\\right)$ for which $p\\left(\\frac {a}{c},\\frac {b}{c}\\right) = 0$ for all such polynomials, where $a$, $b$, and $c$ are positive integers, $a$ and $c$ are relatively prime, and $c > 1$.  Find $a + b + c$.",
+   "choices": null,
+   "answer": "40",
+   "solution": "We can plug in the values to obtain \n\n$$p(0,0)=0\\Longrightarrow a_0=0$$\n\n$$p(1,0)=0\\Longrightarrow a_1+a_3+a_6=0$$\n\n$$p(0,1)=0\\Longrightarrow a_2+a_5+a_9=0$$\n\n$$p(-1,0)=0\\Longrightarrow a_1-a_3+a_6=0$$\n\n$$p(0,-1)=0\\Longrightarrow a_2-a-5+a_9=0$$\n\n$$p(1,1)=0\\Longrightarrow a_4+a_7+a_8=0$$\n\n$$p(1,-1)=0\\Longrightarrow a_4+a_7-a_8=0$$\n\n$$p(2,2)=0\\Longrightarrow2a_4=3a_6+3a_9\\Leftrightarrow2a_4+3a_1+3a_2=0.$$ \n\nNow, this means that \n\n$$p(x,y)=a_1x+a_2y+a_4xy-a_1x^3+a_7x^2y+a_8xy^2-a_2y^3.$$ \n\nAfter some simplifying, we obtain \n\n$$p(x,y)=a_1(x-x^3)+a_2(y-y^3)+a_4xy(1-x).$$ \n\nSince $p(x,y)=0$, $3a_1+3a_2+2a_4=0,$ and we suspect that:\n\n$$x-x^3=y-y^3$$ \n\nand \n\n$$\\frac{x-x^3}{xy(1-x)}=\\frac{3}{2}\\Leftrightarrow\\frac{1+x}{y}=\\frac{3}{2} \\Leftrightarrow\\frac{2}{3}+\\frac{2x}{3}=y$$.\n\nPlugging this into the first equation, and factoring, and cancelling $(x+1)$, and simplifying, we get $19x^2 -43x+10=0$, so we find that $(x,y)=\\left(\\frac{5}{19},\\frac{16}{19}\\right)\\Longrightarrow a+b+c=5+16+19=\\boxed{40}.$"
+  },
+  {
+   "position": 14,
+   "source": "2008 AIME I Problem 14",
+   "question": "Let $\\overline{AB}$ be a diameter of circle $\\omega$. Extend $\\overline{AB}$ through $A$ to $C$. Point $T$ lies on $\\omega$ so that line $CT$ is tangent to $\\omega$. Point $P$ is the foot of the perpendicular from $A$ to line $CT$. Suppose $\\overline{AB} = 18$, and let $m$ denote the maximum possible length of segment $BP$. Find $m^{2}$.",
+   "choices": null,
+   "answer": "432",
+   "solution": "(Diagram Credits to Solution 2)\n\nWe can see that $AP = \\frac{9x}{x+9}$. From the Law of Cosines, we can now find the length of BP.\n\n$BP^2 = (\\frac{9x}{x+9})^2 + 18^2 - 2(18)(\\frac{9x}{x+9})(-\\frac{9}{x+9})$\n\n$BP^2 = 81(\\frac{x^2}{(x+9)^2} + 4 + \\frac{36x}{(x+9)^2})$\n\n$BP^2 = 81(\\frac{x^2+36x}{(x+9)^2}+4)$\n\nFrom here, we see that the value we need to maximize is $\\frac{x^2+36x}{(x+9)^2}$. We shall now do some calculus. Let $f(x) = \\frac{x^2+36x}{(x+9)^2}$. We need to find the first derivative. Using the quotient rule $(\\frac{u}{v})' = \\frac{u'v - uv'}{v^2}$, we can find the derivative which is:\n\n$f'(x) = \\frac{(2x+36)(x+9)^2-(x^2+36x)(2)(x+9)}{((x+9)^2)^2}$\n\nThis simplifies to\n\n$f'(x) = \\frac{-18x+324}{(x+9)^3}$\n\nNow we find the critical point by setting $f'(x)$ to zero and solve for x.\n\n$-18x + 324 = 0$\n\n$-18x = -324$\n\n$x = 18$\n\nWe now plug this value of x back into the function to find the max value of f(x)\n\n$f(18) = \\frac{18^2+36(18)}{27^2}$\n\n$f(18) = \\frac{4}{3}$\n\nWe now go back to the formula for $BP^2$ and plug in $\\frac{4}{3}$ for that ugly fraction.\n\n$BP^2 = 81(\\frac{4}{3}+4)$\n\n$BP^2 = 81(\\frac{16}{3})$\n\n$BP^2 = 432$\n\nThus, the value of $m^2$ (or $BP^2$) with the maximum value of $m$ is $\\boxed{432}$."
+  },
+  {
+   "position": 5,
+   "source": "2008 AIME II Problem 5",
+   "question": "In trapezoid $ABCD$ with $\\overline{BC}\\parallel\\overline{AD}$, let $BC = 1000$ and $AD = 2008$. Let $\\angle A = 37^\\circ$, $\\angle D = 53^\\circ$, and $M$ and $N$ be the midpoints of $\\overline{BC}$ and $\\overline{AD}$, respectively. Find the length $MN$.",
+   "choices": null,
+   "answer": "504",
+   "solution": "Draw line $ME$ from point $M$ parallel to $CD$ that intersects $AD$. Draw $MF$ from point $M$ parallel to $BA$ that intersects $AD$. Note that triangle $EMF$ is a right triangle because $\\angle BAC' = 90^{\\circ}$. $EN$ has length $DN - CM = 1004 - 500 = 504$ because $CDEM$ is a parallelogram. Similarly, $FN$ has length $AN - BM = 504$ so N is the midpoint of the hypotenuse of right triangle $EMF$. The midpoint of the hypotenuse in a right triangle is equidistant from all three vertices, so $MN = \\boxed{504}$."
+  },
+  {
+   "position": 14,
+   "source": "2008 AIME II Problem 14",
+   "question": "Let $a$ and $b$ be positive real numbers with $a\\ge b$. Let $\\rho$ be the maximum possible value of $\\frac {a}{b}$ for which the system of equations\n$$\na^2 + y^2 = b^2 + x^2 = (a - x)^2 + (b - y)^2\n$$\nhas a solution in $(x,y)$ satisfying $0\\le x < a$ and $0\\le y < b$. Then $\\rho^2$ can be expressed as a fraction $\\frac {m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",
+   "choices": null,
+   "answer": "7",
+   "solution": "As the previous solutions pointed out, we have that the triangle with vertices $(0,0),$ $(a,y),$ and $(x,b)$ is equilateral. Then, note that that equilateral triangle is inscribed in a rectangle with vertices $(0,0),$ $(a,0),$ $(a,b),$ and $(0,b).$ Thus, our objective is to find the most \"oblique\" rectangle that has an equilateral triangle inscribed in it. \n\nThis is when a side of the equilateral triangle coincides with a side of the rectangle, and therefore an axis. We see this because if we rotate it so that it is no longer the case, the longer side decreases in length while the shorter side increases in length. Rotating it to coincides with the other axis, it is just the original rectangle reflected over $y=x.$ WLOG let the side length of the equilateral triangle be $1.$ Then, by our above argument, $$(a,b)=\\left(1,\\dfrac{\\sqrt{3}}{2}\\right)$$ is optimal, so our answer is\n$$\\left(\\dfrac{2}{\\sqrt{3}}\\right)^2=\\dfrac{4}{3}\\implies \\boxed{007}.$$"
+  },
+  {
+   "position": 5,
+   "source": "2009 AIME II Problem 5",
+   "question": "Equilateral triangle $T$ is inscribed in circle $A$, which has radius $10$. Circle $B$ with radius $3$ is internally tangent to circle $A$ at one vertex of $T$. Circles $C$ and $D$, both with radius $2$, are internally tangent to circle $A$ at the other two vertices of $T$. Circles $B$, $C$, and $D$ are all externally tangent to circle $E$, which has radius $\\dfrac mn$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+   "choices": null,
+   "answer": "32",
+   "solution": "Let $X$ be the intersection of the circles with centers $B$ and $E$, and $Y$ be the intersection of the circles with centers $C$ and $E$. Since the radius of $B$ is $3$, $AX =4$. Assume $AE$ = $p$. Then $EX$ and $EY$ are radii of circle $E$ and have length $4+p$. $AC = 8$, and angle $CAE = 60$ degrees because we are given that triangle $T$ is equilateral. Using the Law of Cosines on triangle $CAE$, we obtain\n\n$(6+p)^2 =p^2 + 64 - 2(8)(p) \\cos 60$.\n\nThe $2$ and the $\\cos 60$ terms cancel out:\n\n$p^2 + 12p +36 = p^2 + 64 - 8p$\n\n$12p+ 36 = 64 - 8p$\n\n$p =\\frac {28}{20} = \\frac {7}{5}$. The radius of circle $E$ is $4 + \\frac {7}{5} = \\frac {27}{5}$, so the answer is $27 + 5 = \\boxed{032}$."
+  },
+  {
+   "position": 7,
+   "source": "2009 AIME II Problem 7",
+   "question": "Define $n!!$ to be $n(n-2)(n-4)\\cdots 3\\cdot 1$ for $n$ odd and $n(n-2)(n-4)\\cdots 4\\cdot 2$ for $n$ even. When $\\sum_{i=1}^{2009} \\frac{(2i-1)!!}{(2i)!!}$ is expressed as a fraction in lowest terms, its denominator is $2^ab$ with $b$ odd. Find $\\dfrac{ab}{10}$.",
+   "choices": null,
+   "answer": "401",
+   "solution": "Using the steps of the previous solution we get $c = \\sum_{i=1}^{2009} {2i\\choose i} \\cdot 2^{2\\cdot 2009 - 2i}$ and if you do the small cases(like $1, 2, 3, 4, 5, 6$) you realize that you can \"thin-slice\" the problem and simply look at the cases where $i=2009, 2008$(they're nearly identical in nature but one has $4$ with it) since $\\dbinom{2i}{I}$ hardly contains any powers of $2$ or in other words it's very inefficient and the inefficient cases hold all the power so you can just look at the highest powers of $2$ in $\\dbinom{4018}{2009}$ and $\\dbinom{4016}{2008}$ and you get the minimum power of $2$ in either expression is $8$ so the answer is $\\frac{4010}{10} \\implies \\boxed{401}$ since it would violate the rules of the AIME and the small cases if $b>1$."
+  },
+  {
+   "position": 8,
+   "source": "2011 AIME I Problem 8",
+   "question": "In triangle $ABC$, $BC = 23$, $CA = 27$, and $AB = 30$. Points $V$ and $W$ are on $\\overline{AC}$ with $V$ on $ \\overline{AW} $, points $X$ and $Y$ are on $ \\overline{BC} $ with $X$ on $ \\overline{CY} $, and points $Z$ and $U$ are on $ \\overline{AB} $ with $Z$ on $ \\overline{BU} $. In addition, the points are positioned so that $ \\overline{UV}\\parallel\\overline{BC} $, $ \\overline{WX}\\parallel\\overline{AB} $, and $ \\overline{YZ}\\parallel\\overline{CA} $. Right angle folds are then made along $ \\overline{UV} $, $ \\overline{WX} $, and $ \\overline{YZ} $. The resulting figure is placed on a leveled floor to make a table with triangular legs. Let $h$ be the maximum possible height of a table constructed from triangle $ABC$ whose top is parallel to the floor. Then $h$ can be written in the form $ \\frac{k\\sqrt{m}}{n} $, where $k$ and $n$ are relatively prime positive integers and $m$ is a positive integer that is not divisible by the square of any prime. Find $k+m+n$.",
+   "choices": null,
+   "answer": "318",
+   "solution": "Note that the area is given by Heron's formula and it is $20\\sqrt{221}$. Let $h_i$ denote the length of the altitude dropped from vertex i. It follows that $h_b = \\frac{40\\sqrt{221}}{27}, h_c  = \\frac{40\\sqrt{221}}{30}, h_a = \\frac{40\\sqrt{221}}{23}$. From similar triangles we can see that $\\frac{27h}{h_a}+\\frac{27h}{h_c} \\le 27 \\rightarrow h \\le \\frac{h_ah_c}{h_a+h_c}$. We can see this is true for any combination of a,b,c and thus the minimum of the upper bounds for h yields $h = \\frac{40\\sqrt{221}}{57} \\rightarrow \\boxed{318}$."
+  },
+  {
+   "position": 7,
+   "source": "2012 AIME I Problem 7",
+   "question": "At each of the sixteen circles in the network below stands a student. A total of $3360$ coins are distributed among the sixteen students. All at once, all students give away all their coins by passing an equal number of coins to each of their neighbors in the network. After the trade, all students have the same number of coins as they started with. Find the number of coins the student standing at the center circle had originally.",
+   "choices": null,
+   "answer": "280",
+   "solution": "Since the students give the same number of gifts of coins as they receive and still end up the same number of coins, we can assume that every gift of coins has the same number of coins. Let $x$ be the number of coins in each gift of coins. There $10$ people who give $4$ gifts of coins, $5$ people who give $3$ gifts of coins, and $1$ person who gives $5$ gifts of coins. Thus,\n\n$$\n\\begin{align*}\n10(4x)+5(3x)+5x &= 3360\\\\\n40x+15x+5x &= 3360\\\\\n60x &= 3360\\\\\nx &= 56\n\\end{align*}\n$$\nTherefore the answer is $5(56) = \\boxed{280}.$"
+  },
+  {
+   "position": 5,
+   "source": "2012 AIME II Problem 5",
+   "question": "In the accompanying figure, the outer square $S$ has side length $40$. A second square $S'$ of side length $15$ is constructed inside $S$ with the same center as $S$ and with sides parallel to those of $S$. From each midpoint of a side of $S$, segments are drawn to the two closest vertices of $S'$. The result is a four-pointed starlike figure inscribed in $S$. The star figure is cut out and then folded to form a pyramid with base $S'$. Find the volume of this pyramid.",
+   "choices": null,
+   "answer": "750",
+   "solution": "The volume of this pyramid can be found by the equation $V=\\frac{1}{3}bh$, where $b$ is the base and $h$ is the height. The base is easy, since it is a square and has area $15^2=225$.\n\nTo find the height of the pyramid, the height of the four triangles is needed, which will be called $h^\\prime$. By drawing a line through the middle of the larger square, we see that its length is equal to the length of the smaller rectangle and two of the triangle's heights. Then $40=2h^\\prime +15$, which means that  $h^\\prime=12.5$.\n\nWhen the pyramid is made, you see that the height is the one of the legs of a right triangle, with the hypotenuse equal to $h^\\prime$ and the other leg having length equal to half of the side length of the smaller square, or $7.5$. So, the Pythagorean Theorem can be used to find the height.\n\n$h=\\sqrt{12.5^2-7.5^2}=\\sqrt{100}=10$ \n\nFinally, $V=\\frac{1}{3}bh=\\frac{1}{3}(225)(10)=\\boxed{750}$."
+  },
+  {
+   "position": 9,
+   "source": "2013 AIME I Problem 9",
+   "question": "A paper equilateral triangle $ABC$ has side length $12$. The paper triangle is folded so that vertex $A$ touches a point on side $\\overline{BC}$ a distance $9$ from point $B$. The length of the line segment along which the triangle is folded can be written as $\\frac{m\\sqrt{p}}{n}$, where $m$, $n$, and $p$ are positive integers, $m$ and $n$ are relatively prime, and $p$ is not divisible by the square of any prime. Find $m+n+p$.",
+   "choices": null,
+   "answer": "113",
+   "solution": "Proceed with the same labeling as in Solution 1. \n\n$\\angle B = \\angle C = \\angle A = \\angle PDQ = 60^\\circ$\n\n$\\angle PDB + \\angle PDQ + \\angle QDC = \\angle QDC + \\angle CQD + \\angle C = 180^\\circ$\n\nTherefore, $\\angle PDB = \\angle CQD$.\n\nSimilarly, $\\angle BPD = \\angle QDC$.\n\nNow, $\\bigtriangleup BPD$ and $\\bigtriangleup CDQ$ are similar triangles, so\n\n$\\frac{3}{12-a} = \\frac{12-b}{9} = \\frac{b}{a}$.\n\nSolving this system of equations yields $a = \\frac{39}{5}$ and $b = \\frac{39}{7}$.\n\nUsing the Law of Cosines on $APQ$:\n\n$x^{2} = a^{2} + b^{2} - 2ab \\cos{60}$\n\n$x^{2} = (\\frac{39}{5})^2 + (\\frac{39}{7})^2 - (\\frac{39}{5} \\times \\frac{39}{7})$\n\n$x = \\frac{39 \\sqrt{39}}{35}$\n\nThe solution is $39 + 39 + 35 = \\boxed{113}$."
+  },
+  {
+   "position": 13,
+   "source": "2014 AIME I Problem 13",
+   "question": "On square $ABCD$, points $E,F,G$, and $H$ lie on sides $\\overline{AB},\\overline{BC},\\overline{CD},$ and $\\overline{DA},$ respectively, so that $\\overline{EG} \\perp \\overline{FH}$ and $EG=FH = 34$. Segments $\\overline{EG}$ and $\\overline{FH}$ intersect at a point $P$, and the areas of the quadrilaterals $AEPH, BFPE, CGPF,$ and $DHPG$ are in the ratio $269:275:405:411.$ Find the area of square $ABCD$.",
+   "choices": null,
+   "answer": "850",
+   "solution": "Continue in the same way as solution 1 to get that $POK$ has area $3a$, and $OK = \\frac{d}{10}$. You can then find $PK$ has length $\\frac 32$.\n\nThen, if we drop a perpendicular from $H$ to $BC$ at $L$, We get $\\triangle HLF \\sim \\triangle OPK$.\n\nThus, $LF = \\frac{15\\cdot 34}{d}$, and we know $HL = d$, and $HF = 34$. Thus, we can set up an equation in terms of $d$ using the Pythagorean theorem.\n\n$$\\frac{15^2 \\cdot 34^2}{d^2} + d^2 = 34^2$$\n\n$$d^4 - 34^2 d^2 + 15^2 \\cdot 34^2 = 0$$\n\n$$(d^2 - 34 \\cdot 25)(d^2 - 34 \\cdot 9) = 0$$\n\n$d^2 = 34 \\cdot 9$ is extraneous, so $d^2 = 34 \\cdot 25$. Since the area is $d^2$, we have it is equal to $34 \\cdot 25 = \\boxed{850}$\n\n-Alexlikemath"
+  },
+  {
+   "position": 15,
+   "source": "2015 AIME I Problem 15",
+   "question": "A block of wood has the shape of a right circular cylinder with radius $6$ and height $8$, and its entire surface has been painted blue.  Points $A$ and $B$ are chosen on the edge of one of the circular faces of the cylinder so that $\\widehat{AB}$ on that face measures $120^\\circ$.  The block is then sliced in half along the plane that passes through point $A$, point $B$, and the center of the cylinder, revealing a flat, unpainted face on each half.  The area of one of these unpainted faces is $a\\cdot\\pi + b\\sqrt{c}$, where $a$, $b$, and $c$ are integers and $c$ is not divisible by the square of any prime.  Find $a+b+c$.\n\n--Credit to Royalreter1 and chezbgone2 For The Diagram--",
+   "choices": null,
+   "answer": "53",
+   "solution": "Label the points where the plane intersects the top face of the cylinder as $C$ and $D$, and the center of the cylinder as $O$, such that $C,O,$ and $A$ are collinear. Let $N$ be the center of the bottom face, and $M$ the midpoint of $\\overline{AB}$. Then $ON=4$, $MN=3$ (because of the 120 degree angle), and so $OM=5$. \n\nProject $C$ and $D$ onto the bottom face to get $X$ and $Y$, respectively. Then the section $ABCD$ (whose area we need to find), is a stretching of the section $ABXY$ on the bottom face. The ratio of stretching is $\\frac{OM}{MN}=\\frac{5}{3}$, and we do not square this value when finding the area because it is only stretching in one direction*. Using 30-60-90 triangles and circular sectors, we find that the area of the section $ABXY$ is $18\\sqrt{3}\\ + 12 \\pi$. Thus, the area of section $ABCD$ is $20\\pi + 30\\sqrt{3}$, and so our answer is $20+30+3=\\boxed{053}$."
+  },
+  {
+   "position": 9,
+   "source": "2015 AIME II Problem 9",
+   "question": "A cylindrical barrel with radius $4$ feet and height $10$ feet is full of water. A solid cube with side length $8$ feet is set into the barrel so that the diagonal of the cube is vertical. The volume of water thus displaced is $v$ cubic feet. Find $v^2$.",
+   "choices": null,
+   "answer": "384",
+   "solution": "First, note the diagonal is vertical so that the tetrahedron of cube in water is similar to the largest tetrahedron in the bottom of this cube. So we are trying to find their volume ratio by discovering their side length ration.\n\nIn the equilateral triangle at the cylinder's top, we can find its side is $$ s_{1} = 2 * R * \\sin(60^{\\circ}) = 4\\sqrt{3}$$ as the base side of this tetrahedron.\n\nFor the largest tetrahedron in the cube, its side length is just $$s_{2} = 8\\sqrt{2}$$ a diagonal of one of the face. And its volume is $$v_{2} = 8 * 8 * \\frac{1}{2} * 8 * \\frac{1}{3} = \\frac{8^3}{6}$$.\n\nTherefore, $$v_{1} = v_{2} * (\\frac{s_{1}}{s_{2}})^3 = 8\\sqrt{6}$$\n$$v_{1}^2 = 384$$"
+  },
+  {
+   "position": 15,
+   "source": "2015 AIME II Problem 15",
+   "question": "Circles $\\mathcal{P}$ and $\\mathcal{Q}$ have radii $1$ and $4$, respectively, and are externally tangent at point $A$. Point $B$ is on $\\mathcal{P}$ and point $C$ is on $\\mathcal{Q}$ so that line $BC$ is a common external tangent of the two circles. A line $\\ell$ through $A$ intersects $\\mathcal{P}$ again at $D$ and intersects $\\mathcal{Q}$ again at $E$. Points $B$ and $C$ lie on the same side of $\\ell$, and the areas of $\\triangle DBA$ and $\\triangle ACE$ are equal. This common area is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+   "choices": null,
+   "answer": "129",
+   "solution": "Let $K$ be the intersection of $BC$ and $AE$. Since the radii of the two circles are 1:4, so we have $AD:AE=1:4$, and the distance from $B$ to line $l$ and the distance from $C$ to line $l$ are in a ratio of 4:1, so $BK:CK=4:1$. We can easily calculate the length of $BC$ to be 4, so $CK=\\frac{4}{3}$. Let $J$ be the foot of perpendicular line from $A$ to $BC$, we can know that $BJ:CJ=1:4$, so $BJ = 0.8$, $CJ=3.2$, $AJ=1.6$, and $AK=\\sqrt{1.6^2+\\left(3.2+\\frac{4}{3}\\right)^2}=\\frac{4}{3}\\sqrt{13}$. Since $CK^2 = EK\\cdot AK$, so $EK=\\frac{4}{39}\\sqrt{13}$, and $AE = \\frac{4}{3}\\sqrt{13} - \\frac{4}{39}\\sqrt{13}= \\frac{16}{13}\\sqrt{13}$. $\\sin\\angle AKB=\\frac{AJ}{AK} = \\frac{1.6}{\\frac{4}{3}\\sqrt{13}}=\\frac{1.2}{\\sqrt{13}}$, so the distance from $C$ to line $l$ is $d=CK\\cdot \\sin\\angle AKB = \\frac{4}{3}\\cdot \\frac{1.2}{\\sqrt{13}}=\\frac{1.6}{\\sqrt{13}}$. so the area is\n$$\n[ACE] = \\frac{1}{2}\\cdot AE\\cdot d = \\frac{1}{2}\\cdot\\frac{16}{13}\\sqrt{13}\\frac{1.6}{\\sqrt{13}} = \\frac{64}{65}\n$$\nThe final answer is $\\boxed{129}$.\n\n--- by Dan Li"
+  },
+  {
+   "position": 10,
+   "source": "2017 AIME I Problem 10",
+   "question": "Let $z_1=18+83i,~z_2=18+39i,$ and $z_3=78+99i,$ where $i=\\sqrt{-1}.$ Let $z$ be the unique complex number with the properties that $\\frac{z_3-z_1}{z_2-z_1}~\\cdot~\\frac{z-z_2}{z-z_3}$ is a real number and the imaginary part of $z$ is the greatest possible. Find the real part of $z$.",
+   "choices": null,
+   "answer": "56",
+   "solution": "We will just bash. Let $z=a+bi$ where $a,b\\in\\mathbb{R}$. We see that $\\frac{z_3-z_1}{z_2-z_1}=\\frac{-4+15i}{11}$ after doing some calculations. We also see that $\\frac{[(a-18)+(b-39)i][(a-78)-(b-99)i]}{\\text{some real stuff}}.$ We note that $[(a-18)+(b-39)i][(a-78)-(b-99)i]$ is a multiple of $-4-15i$ because the numerator has to be real. Thus, expanding it out, we see that $(a-18)(a-78)+(b-39)(b-99)=-4k \\\\ (a-78)(b-39)-(a-18)(b-99)=-15k.$ Hence, $(a-18)(a-78)+(b-39)(b-99)=\\frac{4}{15}[(a-78)(b-39)-(a-18)(b-99)] \\implies a^2-96a+b^2-138b+5265=16a-16b+336 \\\\ (a-56)^2+(b-61)^2=1928.$ To maximize the imaginary part, $(a-56)^2$ must equal $0$ so hence, $a=\\boxed{056}$."
+  },
+  {
+   "position": 12,
+   "source": "2018 AIME I Problem 12",
+   "question": "For every subset $T$ of $U = \\{ 1,2,3,\\ldots,18 \\}$, let $s(T)$ be the sum of the elements of $T$, with $s(\\emptyset)$ defined to be $0$. If $T$ is chosen at random among all subsets of $U$, the probability that $s(T)$ is divisible by $3$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m$.",
+   "choices": null,
+   "answer": "683",
+   "solution": "Consider the elements of $U$ modulo $3.$\n\nIgnore the $0$'s because we're gonna multiply $\\binom{6}{0}+..+\\binom{6}{6}=2^6$ at the end. Let $a$ be the $1's$ and $b$ be the $2's$. The key here is that $2 \\equiv -1 \\pmod{3}$ so the difference between the number of $a$ and $b$ is a multiple of $3$.\n\n1. Counted twice because $a$ and $b$ can be switched:\n\n$6a$\n\n$6a,3b$\n\n$5a,2b$\n\n$4a,b$\n\n$3a$\n\n2. Counted once:\n\n$6a,6b$\n...\n$0a,0b$\n\nBy  Vandermonde's Identity on the second case, this is $2^6 \\left( 2\\left(1+20+90+90+20\\right) + \\binom{12}{6} \\right)\\implies \\boxed{683}$"
+  },
+  {
+   "position": 15,
+   "source": "2018 AIME II Problem 15",
+   "question": "Find the number of functions $f$ from $\\{0, 1, 2, 3, 4, 5, 6\\}$ to the integers such that $f(0) = 0$, $f(6) = 12$, and\n$$|x - y| \\leq |f(x) - f(y)| \\leq 3|x - y|$$\nfor all $x$ and $y$ in $\\{0, 1, 2, 3, 4, 5, 6\\}$.",
+   "choices": null,
+   "answer": "185",
+   "solution": "Based on the conditions for $d_k$ obtained in Solution 1, followed by some well-known stars & bars techniques to reduce the case work. To recap, the conditions for $d_k = f(k) - f(k-1)$ are:\n$$ \\sum_{k=1}^6 d_k = 12$$\n$$ d_k = -1, \\hspace{0.1cm} \\mbox{or} \\hspace{0.2cm}  1 \\leq d_k \\leq 3$$\n$$ d_k + d_{k+1} \\geq 2$$\n\nCase 1: $d_k = -1$ for some $k$. Since $d_i + d_{i+1} \\geq 2$, $d_{k+1}$ and $d_{k-1}$ must both be 3. \n\nCase 1a: $d_1 = -1$ or $d_6 = -1$. In this case, we have $d_2=3$ or $d_5=3$, respectively. So the remaining four $d_i$ values add up to 10 with each value ranging between 1 and 3. This stars and bars problem is equivalent to $a+b+c+d =2$ with $a,b,c,d$ between 0 and 2, so the number of possibilities is ${5 \\choose 3} $ each.\n\nCase 1b: $d_k = -1$ for $k=2,3,4,5$. In this case, $d_{k+1}=d_{k-1} =3$. So the remaining 3 $d_i$ values add up to 7 with each value ranging between 1 and 3. This stars and bars problem is equivalent to $a+b+c =2$ with $a,b,c,d$ between 0 and 2, so the number of possibilities is ${4 \\choose 2} $ each.\n\nSo the total for Case 1 is $2{5 \\choose 3} + 4 {4 \\choose 2} = 44$.\n\nCase 2: $1 \\leq d_k \\leq 3$ for all $k$. $\\sum_{k=1}^{6} d_k = 12$. Let $g_k = 3-d_k$ we get $\\sum_{k=1}^{6} g_k = 6$ for $0 \\leq g_k \\leq 2$. This is a stars and bars problem with maximum capacity and the solution is given by applying PIE:\n$${11 \\choose 5} - 6{8 \\choose 5} + {6 \\choose 2} = 141$$.\nNow the final answer is $44 + 141 = 185$.\n\n-mathdummy"
+  },
+  {
+   "position": 11,
+   "source": "2021 AIME I Problem 11",
+   "question": "Let $ABCD$ be a cyclic quadrilateral with $AB=4,BC=5,CD=6,$ and $DA=7.$ Let $A_1$ and $C_1$ be the feet of the perpendiculars from $A$ and $C,$ respectively, to line $BD,$ and let $B_1$ and $D_1$ be the feet of the perpendiculars from $B$ and $D,$ respectively, to line $AC.$ The perimeter of $A_1B_1C_1D_1$ is $\\frac mn,$ where $m$ and $n$ are relatively prime positive integers. Find $m+n.$",
+   "choices": null,
+   "answer": "301",
+   "solution": "The angle $\\theta$ between diagonals satisfies $$\\tan{\\frac{\\theta}{2}}=\\sqrt{\\frac{(s-b)(s-d)}{(s-a)(s-c)}}$$ (see https://en.wikipedia.org/wiki/Cyclic_quadrilateral#Angle_formulas).\nThus, $$\\tan{\\frac{\\theta}{2}}=\\sqrt{\\frac{(11-4)(11-6)}{(11-5)(11-7)}}\\text{ or }\\tan{\\frac{\\theta}{2}}=\\sqrt{\\frac{(11-5)(11-7)}{(11-4)(11-6)}}.$$\nThat is, $\\tan^2{\\frac{\\theta}{2}}=\\frac{1-\\cos^2{\\frac{\\theta}{2}}}{\\cos^2{\\frac{\\theta}{2}}}=\\frac{24}{35}$ or $\\frac{35}{24}$. Thus, $\\cos^2{\\frac{\\theta}{2}}=\\frac{35}{59}$ or $\\frac{24}{59}$. So,\n$$\\cos{\\theta}=2\\cos^2{\\frac{\\theta}{2}}-1=\\pm\\frac{11}{59}.$$\nIn this context, $\\cos{\\theta}>0$. Thus, $\\cos{\\theta}=\\frac{11}{59}$. The perimeter of $A_1B_1C_1D_1$ is\n$$22\\cdot\\cos{\\theta}=22\\cdot\\frac{11}{59}=\\frac{242}{59},$$ and the answer is $m+n=242+59=\\boxed{301}$."
+  },
+  {
+   "position": 15,
+   "source": "2021 AIME I Problem 15",
+   "question": "Let $S$ be the set of positive integers $k$ such that the two parabolas$$y=x^2-k~~\\text{and}~~x=2(y-20)^2-k$$intersect in four distinct points, and these four points lie on a circle with radius at most $21$. Find the sum of the least element of $S$ and the greatest element of $S$.",
+   "choices": null,
+   "answer": "285",
+   "solution": "$\\textbf{Min}:$\n\nWhen $k = 4$:\n\n$20 = x^2-4$ $x=-\\sqrt{24}$\n\n$-\\sqrt{24}<-4$ $\\times$ \n\nWhen $k = 5$:\n\n$20 = x^2-5$ $x=-5$\n\n$-5 = -5$ $\\checkmark$ \n\n$\\textbf{Max}:$\n\n\\begin{align*}\n\\{ & \\left.\\begin{aligned}\ny &= x^2-k \\\\\nx &= 2y^2-80y+800-k\n\\end{aligned} \\right.\n\\end{align*}\n\n$x = 2y^2+2y-82y+800-k$\n\n$x = 2y^2+2x^2-2k-82y+800-k$\n\n$2x^2+2y^2-x-82y+800-3k=0$\n\n$x^2+y^2-\\frac{x}{2}-41y+400-\\frac{3}{2}k = 0$\n\n$(x-\\frac{1}{4})^2+(y-\\frac{41}{2})^2+400-(\\frac{1}{4})^2-(\\frac{41}{2})^2 - \\frac{3}{2}k = 0$\n\n$(x-\\frac{1}{4})^2+(y-\\frac{41}{2})^2 = (\\frac{1}{4})^2+(\\frac{41}{2})^2 + \\frac{3}{2}k - 400 \\leq 441$\n\n$\\frac{1}{16}+\\frac{1681}{4}+\\frac{3}{2}k \\leq 841$\n\n$1+6724+24k \\leq 13456$\n\n$24k \\leq 6631$\n\n$k \\leq \\frac{6631}{24}, \\quad k_{max} = 280$\n\nTherefore the answer is $280+5 = \\boxed{285}$\n\n-cassphe\n\nThe provided solution was incorrect because of a calculation error; I have corrected the answer and fixed latex typos."
+  },
+  {
+   "position": 2,
+   "source": "2021 AIME II Problem 2",
+   "question": "Equilateral triangle $ABC$ has side length $840$. Point $D$ lies on the same side of line $BC$ as $A$ such that $\\overline{BD} \\perp \\overline{BC}$. The line $\\ell$ through $D$ parallel to line $BC$ intersects sides $\\overline{AB}$ and $\\overline{AC}$ at points $E$ and $F$, respectively. Point $G$ lies on $\\ell$ such that $F$ is between $E$ and $G$, $\\triangle AFG$ is isosceles, and the ratio of the area of $\\triangle AFG$ to the area of $\\triangle BED$ is $8:9$. Find $AF$.",
+   "choices": null,
+   "answer": "336",
+   "solution": "Draw the perpendicular segment from $A$ to $BC$. Call its intersection with $EF$ as point $H$ and its intersection with $BC$ as point $I$. Because $AFH$ is a $30-60-90$ triangle, $AH = \\frac{\\sqrt{3}}{2}x$. Call $DB = HI$ as $h$. Because $ABI$ is a $30-60-90$ triangle, $AI = \\frac{\\sqrt{3}}{2}x + h = 420\\sqrt{3}$. $DE = \\frac{h}{\\sqrt{3}}$ because $DBE$ is a $30-60-90$ triangle. We know from the problem statement that $9[AFG]= \\frac{9}{2}(\\frac{\\sqrt{3}}{2}x^2) = \\frac{8}{2\\sqrt{3}}h^2 = 8[BED]$. By simplifying this equation, $h = \\frac{3\\sqrt{3}x}{4}$. Substituting $h$ into the first equation yields $x = \\boxed{336}$.\n\n-unhappyfarmer"
+  },
+  {
+   "position": 8,
+   "source": "2021 AIME II Problem 8",
+   "question": "An ant makes a sequence of moves on a cube where a move consists of walking from one vertex to an adjacent vertex along an edge of the cube. Initially the ant is at a vertex of the bottom face of the cube and chooses one of the three adjacent vertices to move to as its first move. For all moves after the first move, the ant does not return to its previous vertex, but chooses to move to one of the other two adjacent vertices. All choices are selected at random so that each of the possible moves is equally likely. The probability that after exactly $8$ moves that ant is at a vertex of the top face on the cube is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n.$",
+   "choices": null,
+   "answer": "49",
+   "solution": "Note that we don't care which exact vertex the ant is located at, just which level (either top face or bottom face).\nConsider the ant to be on any of the two levels and having moved at least one move. Define $p_i$ to be the probability that after $i$ moves, the ant ends up on the level it started on.\n\nOn the first move, the ant can stay on the bottom level with $\\frac{2}{3}$ chance and $7$ moves left. Or, it can move to the top level with $\\frac{1}{3}$ chance and $6$ moves left (it has to spend another on the top as it can not return immediately). So the requested probability is $P = \\frac{2}{3}(1 - p_7) + \\frac{1}{3}p_6$. \n\nConsider when the ant has $i$ moves left (and it's not the ant's first move). It can either stay on its current level with $\\frac{1}{2}$ chance and $i - 1$ moves left, or travel to the opposite level with $\\frac{1}{2}$ chance, then move to another vertex on the opposite level, to have $i - 2$ moves left. Thus we obtain the recurrence\n$$p_i = \\frac{1}{2}p_{i - 1} + \\frac{1}{2}(1 - p_{i - 2})$$\n\nComputing $p_i$ with the starting conditions $p_0 = 1$ and $p_1 = \\frac{1}{2}$, we obtain $p_6 = \\frac{33}{64}$ and $p_7 = \\frac{59}{128}$. Hence $P = \\frac{2}{3}(1 - p_7) + \\frac{1}{3}p_6= \\frac{17}{32}$ as desired; $\\boxed{049}$."
+  },
+  {
+   "position": 10,
+   "source": "2021 AIME II Problem 10",
+   "question": "Two spheres with radii $36$ and one sphere with radius $13$ are each externally tangent to the other two spheres and to two different planes $\\mathcal{P}$ and $\\mathcal{Q}$. The intersection of planes $\\mathcal{P}$ and $\\mathcal{Q}$ is the line $\\ell$. The distance from line $\\ell$ to the point where the sphere with radius $13$ is tangent to plane $\\mathcal{P}$ is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",
+   "choices": null,
+   "answer": "335",
+   "solution": "The centers of the three spheres form a $49$-$49$-$72$ triangle. Consider the points at which the plane is tangent to the two bigger spheres; the line segment connecting these two points should be parallel to the $72$ side of this triangle. Take its midpoint $M$, which is $36$ away from the midpoint $A$ of the $72$ side, and connect these two midpoints.\n\nNow consider the point at which the plane is tangent to the small sphere, and connect $M$ with the small sphere's tangent point $B$. Extend $\\overline{MB}$ through $B$ until it hits the ray from $A$ through the center of the small sphere (convince yourself that these two intersect). Call this intersection $D$, the center of the small sphere $C$, we want to find $BD$.\n\nBy Pythagoras, $AC=\\sqrt{49^2-36^2}=\\sqrt{1105}$, and we know that $MA=36$ and $BC=13$. We know that $\\overline{MA}$ and $\\overline{BC}$ must be parallel, using ratios we realize that $CD=\\frac{13}{23}\\sqrt{1105}$. Apply the Pythagorean theorem to $\\triangle BCD$, $BD=\\frac{312}{23}$, so $312 + 23 = \\boxed{335}$."
+  },
+  {
+   "position": 9,
+   "source": "2022 AIME I Problem 9",
+   "question": "Ellina has twelve blocks, two each of red ($\\textbf{R}$), blue ($\\textbf{B}$), yellow ($\\textbf{Y}$), green ($\\textbf{G}$), orange ($\\textbf{O}$), and purple ($\\textbf{P}$). Call an arrangement of blocks $\\textit{even}$ if there is an even number of blocks between each pair of blocks of the same color. For example, the arrangement\n$$\\textbf{R B B Y G G Y R O P P O}$$\nis even. Ellina arranges her blocks in a row in random order. The probability that her arrangement is even is $\\frac{m}{n},$ where $m$ and $n$ are relatively prime positive integers. Find $m+n.$",
+   "choices": null,
+   "answer": "247",
+   "solution": "Use constructive counting, as per above. WLOG, place the red blocks first. There are 11 ways to place them with distance 0, 9 ways them to place with distance 2, so on, so the way to place red blocks is $11+9+7+5+3+1=36$. Then place any other block similarly, with $25$ ways (basic counting). You get then $6!^2$ ways to place the blocks evenly, and $12!/64$ ways to place the blocks in any way, so you get $\\frac{16}{231}=247$ by simplifying.\n\n-drag00n"
+  },
+  {
+   "position": 12,
+   "source": "2022 AIME I Problem 12",
+   "question": "For any finite set $X$, let $| X |$ denote the number of elements in $X$. Define\n$$\nS_n = \\sum | A \\cap B | ,\n$$\nwhere the sum is taken over all ordered pairs $(A, B)$ such that $A$ and $B$ are subsets of $\\left\\{ 1 , 2 , 3,  \\cdots , n \\right\\}$ with $|A| = |B|$.\nFor example, $S_2 = 4$ because the sum is taken over the pairs of subsets\n$$\n(A, B) \\in \\left\\{ (\\emptyset, \\emptyset) , ( \\{1\\} , \\{1\\} ), ( \\{1\\} , \\{2\\} ) , ( \\{2\\} , \\{1\\} ) , ( \\{2\\} , \\{2\\} ) , ( \\{1 , 2\\} , \\{1 , 2\\} ) \\right\\} ,\n$$\ngiving $S_2 = 0 + 1 + 0 + 0 + 1 + 2 = 4$.\nLet $\\frac{S_{2022}}{S_{2021}} = \\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find the remainder when $p + q$ is divided by\n1000.",
+   "choices": null,
+   "answer": "245",
+   "solution": "We take cases based on the number of values in each of the subsets in the pair. Suppose we have $k$ elements in each of the subsets in a pair (for a total of n elements in the set). The expected number of elements in any random pair will be $n \\cdot \\frac{k}{n} \\cdot \\frac{k}{n}$ by linearity of expectation because for each of the $n$ elements, there is a $\\frac{k}{n}$ probability that the element will be chosen. To find the sum over all such values, we multiply this quantity by  $\\binom{n}{k}^2$. Summing, we get $$\\sum_{k=1}^{n} \\frac{k^2}{n} \\binom{n}{k}^2$$ Notice that we can rewrite this as $$\\sum_{k=1}^{n} \\frac{1}{n} \\left(\\frac{k \\cdot n!}{(k)!(n - k)!}\\right)^2 = \\sum_{k=1}^{n} \\frac{1}{n} n^2 \\left(\\frac{(n-1)!}{(k - 1)!(n - k)!}\\right)^2 = n \\sum_{k=1}^{n} \\binom{n - 1}{k - 1}^2 = n \\sum_{k=1}^{n} \\binom{n - 1}{k - 1}\\binom{n - 1}{n - k}$$ We can simplify this using Vandermonde's identity to get $n \\binom{2n - 2}{n - 1}$. Evaluating this for $2022$ and $2021$ gives $$\\frac{2022\\binom{4042}{2021}}{2021\\binom{4040}{2020}} = \\frac{2022 \\cdot 4042 \\cdot 4041}{2021^3} = \\frac{2022 \\cdot 2 \\cdot 4041}{2021^2}$$ Evaluating the numerators and denominators mod $1000$ gives $804 + 441 = 1\\boxed{245}$\n\n- pi_is_3.14"
+  },
+  {
+   "position": 14,
+   "source": "2022 AIME I Problem 14",
+   "question": "Given $\\triangle ABC$ and a point $P$ on one of its sides, call line $\\ell$ the $\\textit{splitting line}$ of $\\triangle ABC$ through $P$ if $\\ell$ passes through $P$ and divides $\\triangle ABC$ into two polygons of equal perimeter. Let $\\triangle ABC$ be a triangle where $BC = 219$ and $AB$ and $AC$ are positive integers. Let $M$ and $N$ be the midpoints of $\\overline{AB}$ and $\\overline{AC},$ respectively, and suppose that the splitting lines of $\\triangle ABC$ through $M$ and $N$ intersect at $30^\\circ.$ Find the perimeter of $\\triangle ABC.$",
+   "choices": null,
+   "answer": "459",
+   "solution": "We wish to solve the Diophantine equation $a^2+ab+b^2=3^2 \\cdot 73^2$. It can be shown that $3|a$ and $3|b$, so we make the substitution $a=3x$ and $b=3y$ to obtain $x^2+xy+y^2=73^2$ as our new equation to solve for. \n\nNotice that $r^2+r+1=(r-\\omega)(r-{\\omega}^2)$, where $\\omega=e^{i\\frac{2\\pi}{3}}$. Thus,\n$$x^2+xy+y^2 = y^2((x/y)^2+(x/y)+1) = y^2 (\\frac{x}{y}-\\omega)(\\frac{x}{y}-{\\omega}^2) = (x-y\\omega)(x-y{\\omega}^2).$$\n\nNote that $8^2+1^2+8 \\cdot 1=73$. Thus, $(8-\\omega)(8-{\\omega}^2)=73$. Squaring both sides yields \n$$\\begin{align}\n(8-\\omega)^2(8-{\\omega}^2)^2&=73^2\\\\\n(63-17\\omega)(63-17{\\omega}^2)&=73^2.\n\\end{align}$$\nThus, by $(2)$, $(63, 17)$ is a solution to $x^2+xy+y^2=73^2$. This implies that $a=189$ and $b=51$, so our final answer is $189+51+219=\\boxed{459}$."
+  },
+  {
+   "position": 9,
+   "source": "2022 AIME II Problem 9",
+   "question": "Let $\\ell_A$ and $\\ell_B$ be two distinct parallel lines. For positive integers $m$ and $n$, distinct points $A_1, A_2, \\allowbreak A_3, \\allowbreak \\ldots, \\allowbreak A_m$ lie on $\\ell_A$, and distinct points $B_1, B_2, B_3, \\ldots, B_n$ lie on $\\ell_B$. Additionally, when segments $\\overline{A_iB_j}$ are drawn for all $i=1,2,3,\\ldots, m$ and $j=1,\\allowbreak 2,\\allowbreak 3, \\ldots, \\allowbreak n$, no point strictly between $\\ell_A$ and $\\ell_B$ lies on more than 2 of the segments. Find the number of bounded regions into which this figure divides the plane when $m=7$ and $n=5$. The figure shows that there are 8 regions when $m=3$ and $n=2$.",
+   "choices": null,
+   "answer": "244",
+   "solution": "We want to derive a general function $f(m,n)$ that indicates the number of bounded regions. Observing symmetry, we know this is a symmetric function about $m$ and $n$. Now let's focus on $f(m+1, n)-f(m, n)$, which is the difference caused by adding one point to the existing $m$ points of line $\\ell_A$. This new point, call it #m, when connected to point #1 on $\\ell_B$, crosses $m*(n-1)$ lines, thus making additional $m*(n-1)+1$ bounded regions; when connected to point #2 on $\\ell_B$, it crosses $m*(n-2)$ lines, thus making additional $m*(n-2)+1$ bounded regions; etc. By simple algebra/recursion methods, we see\n\n$f(m+1, n)-f(m, n)=m*\\frac{n(n-1)}{2} +n$\n\nNotice $f(1,n)=n-1$. Not very difficult to figure out:\n\n$f(m, n)=\\frac{m(m-1)n(n-1)}{4} +mn-1$\n\nThe fact that $f(3,2)=8$ makes us more confident about the formula. Now plug in $m=5, n=7$, we get the final answer of $\\boxed{244}$."
+  },
+  {
+   "position": 14,
+   "source": "2022 AIME II Problem 14",
+   "question": "For positive integers $a$, $b$, and $c$ with $a < b < c$, consider collections of postage stamps in denominations $a$, $b$, and $c$ cents that contain at least one stamp of each denomination. If there exists such a collection that contains sub-collections worth every whole number of cents up to $1000$ cents, let $f(a, b, c)$ be the minimum number of stamps in such a collection. Find the sum of the three least values of $c$ such that $f(a, b, c) = 97$ for some choice of $a$ and $b$.",
+   "choices": null,
+   "answer": "188",
+   "solution": "Notice that we must have $a = 1$; otherwise $1$ cent stamp cannot be represented. At least $b-1$ numbers of $1$ cent stamps are needed to represent the values less than $b$. Using at most $c-1$ stamps of value $1$ and $b$, it can have all the values from $1$ to $c-1$ cents. Plus $\\lfloor \\frac{999}{c} \\rfloor$ stamps of value $c$, every value up to $1000$ can be represented."
+  },
+  {
+   "position": 14,
+   "source": "2023 AIME I Problem 14",
+   "question": "The following analog clock has two hands that can move independently of each other.\n\nInitially, both hands point to the number $12$. The clock performs a sequence of hand movements so that on each movement, one of the two hands moves clockwise to the next number on the clock face while the other hand does not move.\n\nLet $N$ be the number of sequences of $144$ hand movements such that during the sequence, every possible positioning of the hands appears exactly once, and at the end of the $144$ movements, the hands have returned to their initial position. Find the remainder when $N$ is divided by $1000$.",
+   "choices": null,
+   "answer": "608",
+   "solution": "This is more of a solution sketch and lacks rigorous proof for interim steps, but illustrates some key observations that lead to a simple solution.\n\nNote that one can visualize this problem as walking on a $N \\times N$ grid where the edges warp. Your goal is to have a single path across all nodes on the grid leading back to $(0,\\ 0)$. For convenience, any grid position are presumed to be in $\\mod N$.\n\nNote that there are exactly two ways to reach node $(i,\\ j)$, namely $(i - 1,\\ j)$ and $(i,\\ j - 1)$. \n\nAs a result, if a path includes a step from $(i,\\ j)$ to $(i + 1,\\ j)$, there cannot be a step from $(i,\\ j)$ to $(i,\\ j + 1)$. However, a valid solution must reach $(i,\\ j + 1)$, and the only valid step is from $(i - 1,\\ j + 1)$.\n\nSo a solution that includes a step from $(i,\\ j)$ to $(i + 1,\\ j)$ dictates a step from $(i - 1,\\ j + 1)$ to $(i,\\ j + 1)$ and by extension steps from $(i - a,\\ j + a)$ to $(i - a + 1,\\ j + a)$. We observe the equivalent result for steps in the orthogonal direction.\n\nThis means that in constructing a valid solution, taking one step in fact dictates N steps, thus it's sufficient to count valid solutions with $N = a + b$ moves of going right $a$ times and $b$ times up the grid. The number of distinct solutions can be computed by permuting 2 kinds of indistinguishable objects $\\binom{N}{a}$.\n\nHere we observe, without proof, that if $\\gcd(a, b) \\neq 1$, then we will return to the origin prematurely. For $N = 12$, we only want to count the number of solutions associated with $12 = 1 + 11 = 5 + 7 = 7 + 5 = 11 + 1$.\n\n(For those attempting a rigorous proof, note that $\\gcd(a, b) = \\gcd(a + b, b) = \\gcd(N, b) = \\gcd(N, a)$).\n\nThe total number of solutions, noting symmetry, is thus\n\n$$2\\cdot\\left(\\binom{12}{1} + \\binom{12}{5}\\right) = 1608$$\n\nThis yields $\\boxed{\\textbf{608}}$ as our desired answer."
+  },
+  {
+   "position": 11,
+   "source": "2023 AIME II Problem 11",
+   "question": "Find the number of collections of $16$ distinct subsets of $\\{1,2,3,4,5\\}$ with the property that for any two subsets $X$ and $Y$ in the collection, $X \\cap Y \\not= \\emptyset.$",
+   "choices": null,
+   "answer": "81",
+   "solution": "Denote the $A$ as $\\{ 1,2,3,4,5 \\}$ and the collection of subsets as $S$. \n\nCase 1: There are only sets of size $3$ or higher in $S$:  \nAny two sets in $S$ must have at least one element common to both of them (since $3+3>5$). Since there are $16$ subsets of $A$ that have size $3$ or higher, there is only one possibility for this case.\n\nCase 2: There are only sets of size $2$ or higher in $S$:  \nFirstly, there cannot be a no size $2$ set $S$, or it will be overcounting the first case.\n\nIf there is only one such size $2$ set, there are $10$ ways to choose it. That size $2$ set, say $X$, cannot be in $S$ with $Y = A/X$ (a three element set). Thus, there are only $15$ possible size $3$ subsets that can be in $S$, giving us $10$ for this case.\n\nIf there are two sets with size $2$ in $S$, we can choose the common elements of these two subsets in $5$ ways, giving us a total of $5\\cdot 6 = 30$.\n\nIf there are three sets with size $2$, they can either share one common element, which can be done in $5 \\cdot 4 = 20$ ways, or they can share pairwise common elements (sort of like a cycle), which can be done $\\binom{5}{2} = 10$ ways. In total, we have $30$ possibilities.\n\nIf there are four sets with size $2$, they all have to share one common element, which can be done in $5\\cdot 1$ ways.\n\nThus, summing everything up, this will give us $75$ possible sets $S$\n\nCase 3: There is a set with size $1$ in $S$:  \nNotice that be at most one size $1$ subset. There are $5$ ways to choose that single element set. Say it's $\\{ 1\\}$. All other subsets in $S$ must have a $1$ in them, but there are only $2^4-1 = 15$ of them. Thus this case yields $5\\cdot 1 = 5$ possibilities.\n\nThus, the total number of sets $S$ would be $1+75+5 = \\boxed{\\textbf{(081)}}$."
+  },
+  {
+   "position": 1,
+   "source": "2024 AIME I Problem 1",
+   "question": "Every morning Aya goes for a $9$-kilometer-long walk and stops at a coffee shop afterwards. When she walks at a constant speed of $s$ kilometers per hour, the walk takes her 4 hours, including $t$ minutes spent in the coffee shop. When she walks $s+2$ kilometers per hour, the walk takes her 2 hours and 24 minutes, including $t$ minutes spent in the coffee shop. Suppose Aya walks at $s+\\frac{1}{2}$ kilometers per hour. Find the number of minutes the walk takes her, including the $t$ minutes spent in the coffee shop.",
+   "choices": null,
+   "answer": "204",
+   "solution": "$\\frac{9}{s} + t = 4$ in hours and $\\frac{9}{s+2} + t = 2.4$ in hours.\n\nSubtracting the second equation from the first, we get, \n\n$\\frac{9}{s} - \\frac{9}{s+2} = 1.6$\n\nMultiplying by $(s)(s+2)$, we get \n\n$9s+18-9s=18=1.6s^{2} + 3.2s$\n\nMultiplying by 5/2 on both sides, we get\n\n$0 = 4s^{2} + 8s - 45$\n\nFactoring gives us \n\n$(2s-5)(2s+9) = 0$, of which the solution we want is $s=2.5$.\n\nSubstituting this back to the first equation, we can find that $t = 0.4$ hours.\n\nLastly, $s + \\frac{1}{2} = 3$ kilometers per hour, so\n\n$\\frac{9}{3} + 0.4 = 3.4$ hours, or $\\framebox{204}$ minutes\n\n-Failure.net"
+  },
+  {
+   "position": 5,
+   "source": "2024 AIME I Problem 5",
+   "question": "Rectangles $ABCD$ and $EFGH$ are drawn such that $D,E,C,F$ are collinear. Also, $A,D,H,G$ all lie on a circle. If $BC=16$,$AB=107$,$FG=17$, and $EF=184$, what is the length of $CE$?",
+   "choices": null,
+   "answer": "104",
+   "solution": "Since ADHG is cyclic, AH*DG=AD*HG+DH*AG,let DE be x, we represent the equation in terms of x,and you get $x=3, 107-3= \\boxed{104.}$\n\nPs: extremely time consuming, do not use on the test"
+  },
+  {
+   "position": 8,
+   "source": "2024 AIME I Problem 8",
+   "question": "Eight circles of radius $34$ are sequentially tangent, and two of the circles are tangent to $AB$ and $BC$ of triangle $ABC$, respectively. $2024$ circles of radius $1$ can be arranged in the same manner. The inradius of triangle $ABC$ can be expressed as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+   "choices": null,
+   "answer": "197",
+   "solution": "Let $x = \\cot{\\frac{B}{2}} + \\cot{\\frac{C}{2}}$. By representing $BC$ in two ways, we have the following:\n$$34x + 7\\cdot 34\\cdot 2 = BC$$\n$$x + 2023 \\cdot 2 = BC$$\n\nSolving we find $x = \\frac{1190}{11}$. \nNow draw the inradius, let it be $r$. We find that $rx =BC$, hence \n$$xr = x + 4046 \\implies r-1 = \\frac{11}{1190}\\cdot 4046 = \\frac{187}{5}.$$\nThus $$r = \\frac{192}{5} \\implies \\boxed{197}.$$"
+  },
+  {
+   "position": 8,
+   "source": "2024 AIME II Problem 8",
+   "question": "Torus $T$ is the surface produced by revolving a circle with radius $3$ around an axis in the plane of the circle that is a distance $6$ from the center of the circle (so like a donut). Let $S$ be a sphere with a radius $11$. When $T$ rests on the inside of $S$, it is internally tangent to $S$ along a circle with radius $r_i$, and when $T$ rests on the outside of $S$, it is externally tangent to $S$ along a circle with radius $r_o$. The difference $r_i-r_o$ can be written as $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+   "choices": null,
+   "answer": "127",
+   "solution": "$$OC = OD = 11, AC = BD =  3, EC' = FD' = 6.$$\n$$\\frac {CC'}{C'E} = \\frac{AC}{OA} \\implies CC' = \\frac {3 \\cdot 6}{11-3}$$\n$$\\frac {DD'}{DB} = \\frac{FD'}{OB} \\implies DD' = \\frac {3 \\cdot 6}{11+3}$$\n$$CC' + DD' = \\frac {9}{4}+\\frac {9}{7} = \\frac {99}{28}.$$\n'''vladimir.shelomovskii@gmail.com, vvsss'''"
+  },
+  {
+   "position": 12,
+   "source": "2024 AIME II Problem 12",
+   "question": "Let \\(O=(0,0)\\), \\(A=\\left(\\tfrac{1}{2},0\\right)\\), and \\(B=\\left(0,\\tfrac{\\sqrt{3}}{2}\\right)\\) be points in the coordinate plane. Let \\(\\mathcal{F}\\) be the family of segments \\(\\overline{PQ}\\) of unit length lying in the first quadrant with \\(P\\) on the \\(x\\)-axis and \\(Q\\) on the \\(y\\)-axis. There is a unique point \\(C\\) on \\(\\overline{AB}\\), distinct from \\(A\\) and \\(B\\),  that does not belong to any segment from \\(\\mathcal{F}\\) other than \\(\\overline{AB}\\). Then \\(OC^2=\\tfrac{p}{q}\\), where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p+q\\).",
+   "choices": null,
+   "answer": "23",
+   "solution": "$y=-(\\tan \\theta) x+\\sin \\theta=-\\sqrt{3}x+\\frac{\\sqrt{3}}{2}, x=\\frac{\\sqrt{3}-2\\sin \\theta}{2\\sqrt{3}-2\\tan \\theta}$\n\nNow, we want to find $\\lim_{\\theta\\to\\frac{\\pi}{3}}\\frac{\\sqrt{3}-2\\sin \\theta}{2\\sqrt{3}-2\\tan \\theta}$. By L'H\u00f4pital's rule, we get $x=\\lim_{\\theta\\to\\frac{\\pi}{3}}\\frac{\\sqrt{3}-2\\sin \\theta}{2\\sqrt{3}-2\\tan \\theta}=\\lim_{\\theta\\to\\frac{\\pi}{3}}\\cos^3{\\theta}=\\frac{1}{8}$. This means that $y=\\frac{3\\sqrt{3}}{8}\\implies OC^2=\\frac{7}{16}$, so we get $\\boxed{023}$."
+  },
+  {
+   "position": 1,
+   "source": "2025 AIME I Problem 1",
+   "question": "Find the sum of all integer bases $b>9$ for which $17_b$ is a divisor of $97_b.$",
+   "choices": null,
+   "answer": "70",
+   "solution": "This means that $a(b+7)=9b+7$ where $a$ is a natural number. Rearranging we get $(a-9)(b+7)=-56$. Since $b>9$, $b=49,21$. Thus the answer is $49+21=\\boxed{070}$"
+  },
+  {
+   "position": 2,
+   "source": "2025 AIME I Problem 2",
+   "question": "On $\\triangle ABC$ points $A$, $D$, $E$, and $B$ lie in that order on side $\\overline{AB}$ with $AD = 4$, $DE = 16$, and $EB = 8$. Points $A$, $F$, $G$, and $C$ lie in that order on side $\\overline{AC}$ with $AF = 13$, $FG = 52$, and $GC = 26$. Let $M$ be the reflection of $D$ through $F$, and let $N$ be the reflection of $G$ through $E$. Quadrilateral $DEGF$ has area $288$. Find the area of heptagon $AFNBCEM$.",
+   "choices": null,
+   "answer": "588",
+   "solution": "By area lemma, we can see that the areas of the shaded areas are equivalent to the areas of the unshaded areas. Thus, we see that the desired area is equivalent to the area of the triangle $\\triangle ABC$. Since $AF : FG : GC = 1 : 4 : 2$, we have $[ADF]:[AEG]:[ABC] = 1:25:49$, meaning $[ADF]:[DEGF]:[BEGC] = 1:24:24$. Thus, since $\\frac{[DEGF]}{ABC} = \\frac{24}{49}$, we can calculate $[ABC] = 588$."
+  },
+  {
+   "position": 10,
+   "source": "2025 AIME I Problem 10",
+   "question": "The $27$ cells of a $3 \\times 9$ grid are filled in using the numbers $1$ through $9$ so that each row contains $9$ different numbers, and each of the three $3 \\times 3$ blocks heavily outlined in the example below contains $9$ different numbers, as in the first three rows of a Sudoku puzzle. \n\nThe number of different ways to fill such a grid can be written as $p^a \\cdot q^b \\cdot r^c \\cdot s^d$ where $p$, $q$, $r$, and $s$ are distinct prime numbers and $a$, $b$, $c$, $d$ are positive integers. Find $p \\cdot a + q \\cdot b + r \\cdot c + s \\cdot d$.",
+   "choices": null,
+   "answer": "81",
+   "solution": "We will fill out the grid row by row. Note that there are $9!=2^7\\cdot 3^4\\cdot 5\\cdot 7$ ways to fill out the first row. For the second row, we will consider a little casework. WLOG let the first row be $123 | 456 | 789$ (bars indicate between the $3\\times 3$ squares).\n\nCase 1: Every number from the first square goes to the second square. Then there is $1$ way along with $6^3$ orderings giving us $6^3$ cases.\n\nCase 2: Two of the first numbers go in the second square and the last number goes in the third. This results in $3\\cdot3\\cdot3$ ways to put the numbers along with $6^3$ orderings. Thus there are $27\\cdot 6^3$ cases.\n\nNote that we didn't consider $2$ cases but these are symmetric so the number of ways to fill the second row is $56\\cdot 6^3$.\n\nThere is $1$ way to place the last numbers in with $6^3$ orderings. Thus there are $2^7\\cdot 3^4\\cdot 5\\cdot 7 \\cdot 56\\cdot 6^3 \\cdot 6^3 = 2^{16}\\cdot 3^{10}\\cdot 5^1\\cdot 7^2$ ways to fill out our mini Sudoku puzzle. Thus the answer is $2\\cdot 16+3\\cdot 10 + 5\\cdot 1+7\\cdot 2 = \\boxed{081}.$"
+  },
+  {
+   "position": 11,
+   "source": "2025 AIME I Problem 11",
+   "question": "A piecewise linear function is defined by $$f(x) = \\begin{cases} x & \\operatorname{if} ~ -1 \\leq x < 1 \\\\ 2 - x & \\operatorname{if} ~ 1 \\leq x < 3\\end{cases}$$ and $f(x + 4) = f(x)$ for all real numbers $x$. The graph of $f(x)$ has the sawtooth pattern depicted below.\n\nThe parabola $x = 34y^{2}$ intersects the graph of $f(x)$ at finitely many points. The sum of the $y$-coordinates of all these intersection points can be expressed in the form $\\tfrac{a + b\\sqrt{c}}{d}$, where $a$, $b$, $c$, and $d$ are positive integers such that $a$, $b$, $d$ have greatest common divisor equal to $1$, and $c$ is not divisible by the square of any prime. Find $a + b + c + d$.",
+   "choices": null,
+   "answer": "259",
+   "solution": "Note that the part of $f(x)$ in the first and fourth quadrants consists of lines of the form $y = x - 4k$ and $y = 4k + 2 - x$ for integers $k \\geq 0$. \nPlugging in $x = 34y^2$ for $y = x - 4k$, we get $-34y^2 + y + 4k = 0,$ so the sum of the roots is $\\tfrac{1}{34}$ by Vieta\u2019s. Similarly, in the second equation, we get a sum of $-\\tfrac{1}{34}.$ \n\nThe top peaks of the graph form the line $y = 1$ and the bottom peaks form $y = -1.$ So the parabola will cross the positive line once it reaches the point $(34,1),$ and it will cross the negative line at $(34, -1).$\nFor $y = x - 4k,$ we find $k = \\frac{33}{4}$ for the positive $y$ values and $k = \\frac{35}{4}$ for the negative y values. Both round down to $8,$ so the parabola will stop intersecting $y = x - 4k$ entirely after $k = 8.$\n\nNow, for $y = 4k + 2 - x,$ we find $k = \\frac{33}{4}$ for the positive y values and $k = \\frac{31}{4}$ for the negative y values. $\\frac{33}{4}$ rounds down to $8,$ but $\\frac{31}{4}$ rounds down to $7,$ so the parabola will stop intersecting the negative $y$ values of $y = 4k + 2 - x$ after $k = 7,$ but it will intersect the positive $y$ values until $k = 8.$ \n\nThere are $8$ values of $k$ from $0 - 7,$ so the sum contributed by $y = 4k + 2 - x$ until $k = 7$ is $-\\frac{8}{34}.$ There are $9$ values of $k$ from $0 - 8,$ so the sum contributed by $y = x - 4k$ until $k = 8$ is $\\frac{9}{34}.$ Adding these together we get $\\frac{1}{34}.$ \n\nNow all that's left is to figure out the positive $y$ value at $k = 8$ for the line $y = 4k + 2 - x.$ We get $$34-34y^2 = y.$$ $$y = \\frac{-1 \\pm \\sqrt{68^2 + 1}}{68} = \\frac{-1 + 5 \\sqrt{185}}{68}.$$ Adding our $\\tfrac{1}{34}$ from earlier finally gives us $\\frac{1 + 5 \\sqrt{185}}{68} \\implies \\boxed{259}$."
+  },
+  {
+   "position": 15,
+   "source": "2025 AIME I Problem 15",
+   "question": "Let $N$ denote the number of ordered triples of positive integers $(a, b, c)$ such that $a, b, c \\leq 3^6$ and $a^3 + b^3 + c^3$ is a multiple of $3^7$. Find the remainder when $N$ is divided by $1000$.",
+   "choices": null,
+   "answer": "735",
+   "solution": "We are given that\n$\nN = \\#\\{(a,b,c) \\in [1,3^6]^3 : 3^7 \\mid (a^3+b^3+c^3)\\},\n$\nand we wish to compute the remainder when \\(N\\) is divided by 1000.\n\nSince \\(3^6=729\\) and \\(3^7=2187\\), the variables \\(a\\), \\(b\\), and \\(c\\) range over the set \\(\\{1,2,\\dots,729\\}\\).\n\nA standard approach is to use exponential sums to detect the divisibility condition. For any integer \\(n\\) we have the identity\n$\n\\frac{1}{3^7}\\sum_{t=0}^{3^7-1} e^{\\frac{2\\pi i\\,t\\,n}{3^7}} =\n\\begin{cases}\n1, & \\text{if } 3^7\\mid n,\\\\[1mm]\n0, & \\text{otherwise.}\n\\end{cases}\n$\n$$$$Thus, we can write\n$\nN = \\frac{1}{3^7}\\sum_{t=0}^{3^7-1} \\sum_{a=1}^{3^6} e^{\\frac{2\\pi i\\,t\\,a^3}{3^7}} \\sum_{b=1}^{3^6} e^{\\frac{2\\pi i\\,t\\,b^3}{3^7}} \\sum_{c=1}^{3^6} e^{\\frac{2\\pi i\\,t\\,c^3}{3^7}}.\n$\nDefine\n$\nS(t)=\\sum_{a=1}^{3^6} e^{\\frac{2\\pi i\\,t\\,a^3}{3^7}}.\n$\nThen,\n$\nN=\\frac{1}{3^7}\\sum_{t=0}^{3^7-1} \\bigl(S(t)\\bigr)^3.\n$\n\n$\\medskip$\n\nNotice that when \\(t=0\\) we have\n$\nS(0)=\\sum_{a=1}^{3^6} 1=3^6.\n$\nThus, the \\(t=0\\) term contributes\n$\n\\frac{1}{3^7}(3^6)^3 = \\frac{3^{18}}{3^7}=3^{11}.\n$\n\nIt turns out that for \\(t\\not\\equiv 0\\pmod{3^7}\\), one can show (using properties of cubic residues modulo \\(3^7\\)) that\n$\nS(t)=0.\n$ ['''Note: I don't believe this is true.  Try it manually for the modulo $3^2$ case.''']\n\nTherefore, only the \\(t=0\\) term contributes to the sum, and we obtain\n$\nN=3^{11}.\n$\n\nSince\n$\n3^{11}=177147,\n$\nwe compute\n$\n(5 \\cdot 177147) \\mod 1000 = 735.\n$ [''Note: The multiplication by 5 isn't justified. The computed $N$ above is simply wrong by a factor of 5. Unfortunately, I don't know how to fix this approach.'']\n(context: he chat gptd the solution like recently after the test was finished so we didnt know what the real answer was. i bashed with a simple program and determined his solution was off by a factor of 5 so he just did that at the end ;-;)"
+  },
+  {
+   "position": 2,
+   "source": "2025 AIME II Problem 2",
+   "question": "Find the sum of all positive integers $n$ such that $n + 2$ divides the product $3(n + 3)(n^2 + 9)$.",
+   "choices": null,
+   "answer": "49",
+   "solution": "For $n+2$ to be a divisor, the remainder needs to be divisible by $n+2$. Using polynomial remainder theorem, we can plug in $-2$ to get $39$ as our remainder. $\\frac{39}{n+2}$ is an integer only when $n = 1, 11, 37$. Hence, the sum of all possible $n$ is $1 + 11 + 37 = \\boxed{049}$."
+  },
+  {
+   "position": 10,
+   "source": "2025 AIME II Problem 10",
+   "question": "Sixteen chairs are arranged in a row. Eight people each select a chair in which to sit so that no person sits next to two other people. Let $N$ be the number of subsets of $16$ chairs that could be selected. Find the remainder when $N$ is divided by $1000$.",
+   "choices": null,
+   "answer": "907",
+   "solution": "Let $n$ be the number of groups of adjacent people.\n\nClearly, there will be $8-n$ groups with $2$ people, and there are $\\binom{n}{8-n}$ ways to select these groups.\n\nNow, we use the stars-and-bars technique to find the number of ways to distribute the $8$ remaining chairs around the $8$ people. Since the $n$ groups are separated, we must choose $n-1$ chairs to place in between beforehand, leaving $8-(n-1)=9-n$ chairs to distribute among $n+1$ spots. Using stars-and-bars, we find that the number of ways to do this is $\\binom{9}{9-n}$.\n\nThus, the total number of arrangements is $\\binom{n}{8-n} \\binom{9}{9-n}$. Summing this from $n=4$ to $n=8$ yields $\\sum_{n=4}^{8} \\binom{n}{8-n} \\binom{9}{9-n} = 2907 \\equiv \\boxed{907} \\pmod{1000}$."
+  },
+  {
+   "position": 12,
+   "source": "2025 AIME II Problem 12",
+   "question": "Let $A_1A_2\\dots A_{11}$ be a non-convex $11$-gon such that\n\n\u2022 The area of $A_iA_1A_{i+1}$ is $1$ for each $2 \\le i \\le 10$,\n\n\u2022 $\\cos(\\angle A_iA_1A_{i+1})=\\frac{12}{13}$ for each $2 \\le i \\le 10$,\n\n\u2022 The perimeter of $A_1A_2\\dots A_{11}$ is $20$.\n\nIf $A_1A_2+A_1A_{11}$ can be expressed as $\\frac{m\\sqrt{n}-p}{q}$ for positive integers $m,n,p,q$ with $n$ squarefree and $\\gcd(m,p,q)=1$, find $m+n+p+q$.",
+   "choices": null,
+   "answer": "19",
+   "solution": "Set $A_1A_2 = x$ and $A_1A_3 = y$. By the first condition, we have $\\frac{1}{2}xy\\sin\\theta = 1$, where $\\theta = \\angle A_2 A_1 A_3$. Since $\\cos\\theta = \\frac{12}{13}$, we have $\\sin\\theta = \\frac{5}{13}$, so $xy = \\frac{26}{5}$. Repeating this process for $\\triangle A_i A_1 A_{i+1}$, we get $A_1A_2 = A_1A_4 = \\ldots A_1A_{10} = x$ and $A_1A_3 = A_1A_5 = \\ldots A_1A_{11} = y$. Since the included angle of these $9$ triangles is $\\theta$, the square of the third side is \n$$x^2 + y^2 - 2xy\\cos\\theta = x^2 + y^2 - \\frac{52}{5}\\cdot \\frac{12}{13} = x^2 + y^2 - \\frac{48}{5} = (x+y)^2 - 20.$$\nThus the third side has length $\\sqrt{(x+y)^2 - 20}.$ The perimeter is constructed from $9$ of these lengths, plus $A_{11}A_1 + A_1A_2 = x + y$, so $9\\sqrt{(x+y)^2 - 20} + x + y = 20$. We seek the value of $x + y,$ so let $x + y = a$ so \n$$\n\\begin{align*}\n9\\sqrt{a^2 - 20} + a &= 20\\\\\n81(a^2 - 20) &= 400 - 40a + a^2\\\\\n4a^2 + 2a - 101 &= 0 \\\\\na &= \\frac{-2 \\pm \\sqrt{1620}}{8} = \\frac{-1 \\pm \\sqrt{405}}{4} = \\frac{-1 \\pm 9\\sqrt{5}}{4}.\n\\end{align*}\n$$\nTaking the positive solution gives $m + n + p + q = 1 + 9 + 5 + 4 = \\boxed{\\textbf{(019)}}.$\n\n-Benedict T (countmath1)"
+  },
+  {
+   "position": 8,
+   "source": "2026 AIME I Problem 8",
+   "question": "Let $N$ be the number of positive integer divisors of $17017^{17}$ that leave a remainder of $5$ upon division by $12$. Find the remainder when $N$ is divided by $1000$.",
+   "choices": null,
+   "answer": "244",
+   "solution": "Note $17017=17\\cdot1001=7\\cdot11\\cdot13\\cdot17$.\n\nBy taking each of the factors mod $12$ we get:\n\n$7\\equiv-5\\pmod{12}$, $11\\equiv-1\\pmod{12}$, $13\\equiv1\\pmod{12}$, $17\\equiv5\\pmod{12}$.\n\nLet a factor $n=7^a11^b13^c17^d$.\n\nBy noting $5^2\\equiv1\\pmod{12}$ and $(-1)^2\\equiv1\\pmod{12}$ and the fact that we want $n\\equiv5\\pmod{12}$, we need $a+d$ to be odd and $a+b$ to be even. From here, we compute that for a fixed $a$, there are $9$ options for $b$ and $9$ options for $d$. As $a$ and $c$ may be $18$ options, the answer is $9\\cdot9\\cdot18\\cdot18=26244$. The requested remainder is $244$."
+  },
+  {
+   "position": 9,
+   "source": "2026 AIME I Problem 9",
+   "question": "Joanne has a blank fair six-sided die and six stickers each displaying a different integer from $1$ to $6$. Joanne rolls the die and then places the sticker labeled $1$ on the top face of the die. She then rolls the die again, places the sticker labeled $2$ on the top face, and continues this process to place the rest of the stickers in order. If the die ever lands with a sticker already on its top face, the new sticker is placed to cover the old sticker. Let $p$ be the conditional probability that at the end of the process exactly one face has been left blank, given that all the even-numbered stickers are visible on faces of the die. Then $p$ can be written as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+   "choices": null,
+   "answer": "29",
+   "solution": "Before we continue, let's rephrase the problem as such: There are six slots labeled \"$A, B, C, D, E, F$\" to put plates in (it's just easier to think about it as a row instead of a die). We know that $2, 4, 6$ must be the top plates. WLOG, let them be the top plates of slots $A, B, C$. The game mechanics make it so that if, say, plates $1, 2,$ and $5$ are in a particular slot, we must have plate $1$ underneath plate $2$ underneath plate $5$ (because she puts the stickers on from lowest number to highest). \n\nLet's count the total number of ways we can have $2,4,6$ showing on the top. Plate $5$ has $4$ options: hide under plate $6$ or take an empty spot. Similarly, plate $3$ has $5$ options and plate $1$ has all $6$ options, making $120$ total ways. For there to be exactly one face left blank, we have three simple cases:\n\n1. Plates $1$ and $3$ occupy the unused spaces: $6\\cdot 1=6$\n\n2. Plates $1$ and $5$ occupy the unused spaces: $6\\cdot 3=18$\n\n3. Plates $3$ and $5$ occupy the unused spaces: $6\\cdot 5=30$\n\nHence the answer is $\\frac{6+18+30}{120}=\\frac{9}{20}\\implies \\boxed{\\textbf{029}}$."
+  },
+  {
+   "position": 14,
+   "source": "2026 AIME I Problem 14",
+   "question": "In an equiangular pentagon, the sum of the squares of the side lengths equals $308$, and the sum of the squares of the diagonal lengths equals $800$. The square of the perimeter of the pentagon can be expressed as $m\\sqrt{n}$, where $m$ and $n$ are positive integers and $n$ is not divisible by the square of any prime. Find $m+n$.",
+   "choices": null,
+   "answer": "681",
+   "solution": "Let the vertices of the pentagon be $A, B, C, D,$ and $E$. Since the pentagon is equiangular, each interior angle is $108^\\circ$. Let $a=AB, b=BC, c=CD, d=DE, e=EA$.We define the following:$\\phi = \\frac{1+\\sqrt{5}}{2}$ is the golden ratio, satisfying $\\phi^2 = \\phi + 1$ and $\\phi^3 = 2\\phi + 1$.$J = ab+bc+cd+de+ea$ is the sum of the products of adjacent sides. $K = ac+bd+ce+da+eb$ is the sum of the products of non-adjacent sides (diagonals). The idea will be to use the law of cosines and take cyclic sums. We want $(a+b+c+d+e)^2 = a^2 + b^2 + c^2 + d^2 + e^2 + 2J + 2K = 308 + 2J + 2K$."
+  },
+  {
+   "position": 15,
+   "source": "2026 AIME I Problem 15",
+   "question": "Let $a, b,$ and $n$ be positive integers with both $a$ and $b$ greater than or equal to $2$ and less than or equal to $2n.$ Define an $a \\times b$ cell loop in a $2n \\times 2n$ grid of cells to be the $2a + 2b - 4$ cells that surround an $(a - 2) \\times (b - 2)$ (possibly empty) rectangle of cells in the grid. For example, the following diagram shows a way to partition a $6 \\times 6$ grid of cells into $4$ cell loops.\n\nFind the number of ways to partition a $10\\times10$ grid of cells into $5$ cell loops so that every cell of the grid belongs to exactly one cell loop.",
+   "choices": null,
+   "answer": "83",
+   "solution": "After building some intuition for this problem, we can see that all loops must be either \"vertical\" (with $a\\geq b$ or \"horizontal\" (with $b\\geq a$), except for the case where 5 loops are all nested within each other (which has both). We may do this using an area argument: [it's hard to state but just trust me. placeholder box] Each loop may complete 2 rows or 2 columns at maximum. Therefore we may consider the vertical case.\n\nWe may then pose an equivalent problem:  Let us represent each loop as a pair of parentheses. For example, ()()()()() represents 5 loops such that none are nested, ((((())))) represents all the loops being nested. Then, this is the same as the 5th Catalan number which is $42$. The answer is therefore $42\\cdot2-1=\\boxed{083}.$"
+  },
+  {
+   "position": 3,
+   "source": "2026 AIME II Problem 3",
+   "question": "Let $ABCDE$ be a nonconvex pentagon with internal angles $\\angle A = \\angle E = 90^\\circ$ and $\\angle B = \\angle D = 45^\\circ$. Suppose that $DE < AB$, $AE = 20$, $BC = 14\\sqrt2$, and points $B$, $C$, and $D$ lie on the same side of line $AE$. Suppose further that $AB$ is an integer with $AB < 2026$ and the area of pentagon $ABCDE$ is an integer multiple of $16$. Find the number of possible values of $AB$.",
+   "choices": null,
+   "answer": "503",
+   "solution": "Construct line $FG$ such that it passes through point $C$ and is parallel to line $AE$. Since $FG||AE$, $\\angle BFC = \\angle A = 90^\\circ.$ Since $\\angle B = 45^\\circ$, triangle $\\triangle BFC$ is a $45-45-90$ triangle, meaning that $FC=14,$ and $CG=6.$ Since $\\angle B = 45^\\circ$ and $\\angle DGC=90^\\circ$ from parallel lines, triangle $\\triangle DCG \\sim{\\triangle BCF}.$ Therefore, $BF=FC=14$, and $CG=GD=6.$ If we set the length of segment $AF$ to $x$, we can get the area of pentagon $ABCDE$ as $116+20x.$ Since $116+20x$ must be a multiple of $16, x\\equiv 3\\mod{4}.$ Since $x+14<2026, x<2012.$ We can express $x$ as $4y+3,$ so therefore $4y+3<2012,$ so $4y<2009.$ Because $y\\le0$ solving the first inequality gives $y<502\\frac{1}{4},$ meaning that $0\\le y \\le 502.$ Since $y$ must be an integer, there are $503$ values of $y,$ giving $\\boxed{503}$ possible values of $AB.$"
+  },
+  {
+   "position": 12,
+   "source": "2026 AIME II Problem 12",
+   "question": "Consider a tetrahedron with two isosceles triangle faces with side lengths $5\\sqrt{10}, \\,5\\sqrt{10},$ and $10$ and two isosceles triangle faces with side lengths $5\\sqrt{10},\\, 5\\sqrt{10},$ and $18.$ The four vertices of the tetrahedron lie on a sphere with center $S,$ and the four faces of the tetrahedron are tangent to a sphere with center $R.$ The distance $RS$ can be written as $\\tfrac mn,$ where $m$ and $n$ are relatively prime positive integers. Find $m + n.$",
+   "choices": null,
+   "answer": "223",
+   "solution": "We let $AB$ be the side of length $10$ and $CD$ of length $18$. Call midpoints of side $AB$ and $CD$ as $M$ and $N$. The faces of our tetrahedron are isosceles triangle so $AM=5$ and $CN=9$, along with $MN\\perp AB$ and $MN\\perp CD$. By symmetry we know both $R$ and $S$ locate on the segment $MN$.\n\nFor the position of $R$, we set $MR=x$. By isosceles we also have $CM\\perp AB$ so the plane $DMC$ is perpendicular to the place $ABC$. The distance from $R$ to the plance $ABC$ is the same as the distance between $R$ and the line $CM$. The same happens for the distance between $R$ and the line $AN$. In the triangle $ABC$, we know $CM=\\sqrt{25\\cdot 10-25}=15$. Then $EF=\\sqrt{15^2-9^2}=12$ in the triangle $CMD$. Draw altitude from $R$ to $CM$ and call the foot as $E$. We get $\\triangle MRE\\sim \\triangle MCN$ so $RE=\\dfrac{3}{5}x$. In $\\triangle ABN$, we also use $RN=12-x$ and similar triangles to get the distance between $R$ and $AN$ is $\\dfrac{5}{13}(12-x)$. The two distances are equal so $\\dfrac{3}{5}x=\\dfrac{5}{13}(12-x)$ and $MR=x=\\dfrac{75}{16}$.\n\nFor the position of $S$, we set $MS=y$. In $\\triangle AMS$ we know $AS=\\sqrt{25+y^2}$. In $\\triangle CNS$ we know $CS=\\sqrt{(12-y)^2+9^2}$. Setting $AS=CS$ we solve $MS=y=\\dfrac{25}{3}$.\n\nIn summary, $RS=MS-MR=\\dfrac{25}{3}-\\dfrac{75}{16}=\\dfrac{175}{48}$ so $m+n=\\boxed{223}$."
+  }
+ ]
+}

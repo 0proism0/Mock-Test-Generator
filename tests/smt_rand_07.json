@@ -1,0 +1,111 @@
+{
+ "id": "smt_rand_07",
+ "competition": "SMT — Algebra",
+ "category": "Math",
+ "title": "SMT — Algebra — Random Mock #7 · 2026-08-26 16:33",
+ "instructions": "10 questions · 50 minutes · No calculator. 10 points total.",
+ "time_limit_min": 50,
+ "total_points": 10,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2014 SMT Algebra Problem 1",
+   "question": "Alice and Bob are painting a house. If Alice and Bob do not take any breaks, they will ﬁnish painting the house in 20 hours. If, however, Bob stops painting once the house is half-ﬁnished, then the house takes 30 hours to ﬁnish. Given that Alice and Bob paint at a constant rate, compute how many hours it will take for Bob to paint the entire house if he does it by himself.",
+   "choices": null,
+   "answer": "40",
+   "solution": "Answer: 40. Alice and Bob are painting a house. If Alice and Bob do not take any breaks, they will ﬁnish painting the house in 20 hours. If, however, Bob stops painting once the house is half-ﬁnished, then the house takes 30 hours to ﬁnish. Given that Alice and Bob paint at a constant rate, compute how many hours it will take for Bob to paint the entire house if he does it by himself. Answer: 40 Solution: In 10 hours, Alice and Bob paint half the house. Therefore, Alice can paint half the house in 20 hours. This means Alice painted a quarter of the house in 10 hours, which means Bob paints a quarter of the house in 10 hours, so Bob takes 40 hours to paint the entire house.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2023 SMT Algebra Problem 2",
+   "question": "Compute the number of values of x in the interval [−11π,−2π] that satisfy 5 cos(x)+4 5 sin(x)+3 = 0.",
+   "choices": null,
+   "answer": "4",
+   "solution": "Answer: 4. Compute the number of values of x in the interval [−11π,−2π] that satisfy 5 cos(x)+4 5 sin(x)+3 = 0. Answer: 4 Solution: The fraction is equal to zero when its numerator is equal to zero and its denominator is not equal to zero. The solutions to 5 cos(x) + 4 = 0 are of the formx =± arccos(−4/5) + 2πk for integer k. The solutions to 5 sin( x) + 3 = 0 are of the form x =± arcsin(−3/5) + 2πk for integerk. We see that every interval of the form [2 kπ, (2k + 1)π] has one solution to the given equation and intervals of the form [(2 k + 1)π, (2k + 2)π] have no solutions. Thus, there are 4 solutions in the interval [−11π,−2π].",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2012 SMT Algebra Problem 3",
+   "question": "Express 23−1 23+1 × 33−1 33+1 × 43−1 43+1 × · · · × 163−1 163+1 as a fraction in lowest terms.",
+   "choices": null,
+   "answer": "91",
+   "solution": "Answer: 91. Express 23−1 23+1 × 33−1 33+1 × 43−1 43+1 × · · · × 163−1 163+1 as a fraction in lowest terms. Answer: 91 136 Solution: We note k∏ n=2 n3 − 1 n3 + 1 = k∏ n=2 (n − 1)(n2 + n + 1) (n + 1)(n2 − n + 1) = ( k∏ n=2 n − 1 n + 1 )( k∏ n=2 n2 + n + 1 n2 − n + 1 ) . Each product telescopes, yielding 1·2 k·(k+1) · k2+k+1 3 . Evaluating at k = 16 yields 91 136 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2014 SMT Algebra Problem 4",
+   "question": "For any 4-tuple ( a1, a2, a3, a4) where each entry is either 0 or 1, call it quadratically satisﬁable if there exist real numbers x1, . . . , x4 such that x1x2 4 + x2x4 + x3 = 0 and for each i = 1, . . . ,4, xi is positive if ai = 1 and negative if ai = 0. Find the number of quadratically satisﬁable 4-tuples.",
+   "choices": null,
+   "answer": "12",
+   "solution": "Answer: 12. For any 4-tuple (a1,a 2,a 3,a 4) where each entry is either 0 or 1, call it quadratically satisﬁable if there exist real numbersx1,...,x 4 such thatx1x2 4 +x2x4 +x3 = 0 and for eachi = 1,..., 4,xi is positive if ai = 1 and negative if ai = 0. Find the number of quadratically satisﬁable 4-tuples. Answer: 12 Solution: First, we may assume a1 = 1 without loss of generality and multiply our answer by 2 at the end, since ax2 +bx +c = 0⇔−ax2−bx−c = 0. We can furthermore assume x1 = 1, since we can always divide the whole equation by x1 (since x1> 0). Hence, we now consider equations of the form x2 4 +bx4 +c = 0 in which b andc are constrained to be either positive or negative. This yields four cases: Case 1: If b and c are both positive, the two roots have positive product but negative sum, so they must both be negative i.e. x4 < 0. Furthermore, x4 < 0 is possible, e.g. x2 4 + 2x4 + 1 = 0 =⇒ x4 =−1. Case 2: If b is positive and c is negative, x4 may be positive or negative e.g. x2 4 +x4− 2 =⇒ x4∈{− 2, 1}. Case 3: If b is negative and c is positive, the two roots have positive product and positive sum, so they must both be positive i.e. x4 > 0. Furthermore, x4 > 0 is possible e.g. x2 4− 2x4 + 1 =⇒ x4 = 1. Case 4: If b and c are both negative, x4 may be positive or negative e.g. x2 4−x4− 2 =⇒ x4∈ {−1, 2}. Putting these cases together, we conclude that the answer is 12 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2023 SMT Algebra Problem 5",
+   "question": "Suppose α,β,γ ∈{− 2, 3} are chosen such that M = max x∈R min y∈R≥0 αx +βy +γxy is finite and positive (note: R≥0 is the set of nonnegative real numbers). What is the sum of the possible values of M?",
+   "choices": null,
+   "answer": "13",
+   "solution": "Answer: 13. Suppose α,β,γ ∈{− 2, 3} are chosen such that M = max x∈R min y∈R≥0 αx +βy +γxy is finite and positive (note: R≥0 is the set of nonnegative real numbers). What is the sum of the possible values of M? Answer: 13 2 Solution: We have max x∈R min y∈R≥0 αx +βy +γxy = max x∈R min y∈R≥0 αx +y(β +γx) Note that if β +γx < 0, then by increasing y, the minimum could be arbitrarily small, so to maximize the value, it is never a good strategy to pick such an x. Thus, we will choose x such that β +γx≥ 0, and this forces y = 0 as the best choice for y. This gives us max x∈R min y∈R≥0 αx +y(β +γx) = max x∈R,β+γx≥0 αx. The constraintβ +γx≥ 0 is equivalent toγx≥−β. Note that α andγ must not have the same sign, as otherwise by making x very large with the same sign as α and γ, we can satisfy the constraint and cause the value of αx to diverge. In order for M to be positive, α and x must have the same sign. Then, γx is 0 or a negative value. From the constraintγx≥−β., we see that we must haveβ≥ 0, i.e. β = 3. The maximum possible value of x that satisfies the constraint is −β γ , which gives us max x∈R,β+γx≥0 αx =−αβ γ . Algebra Test Solutions April 8, 2023 The possible values of α/γ are−2/3 and −3/2. Therefore, the possible values of M are 2 or 9/2, whose sum is 13 /2 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2018 SMT Algebra Problem 6",
+   "question": "Let ak =±1 for all integers 1≤ k≤ 2018. The sum ∑ 1≤i<j≤2018 aiaj can take on both positive and negative values. Find the smallest positive value of the sum.",
+   "choices": null,
+   "answer": "49",
+   "solution": "Answer: 49. Let ak =±1 for all integers 1≤ k≤ 2018. The sum ∑ 1≤i<j≤2018 aiaj can take on both positive and negative values. Find the smallest positive value of the sum. Answer: 49 Solution: Observe that: 2 ∑ 1≤i<j≤2018 aiaj = (a1 + a2 + ... + a2018)2− (a2 1 + a2 2 + ... + a2 2018) = (a1 + a2 + ... + a2018)2− 2018 Because ak =±1, we know that a1 + a2 + ... + a2018 is an integer between −2018 and 2018 inclusive. Furthermore, there are an even number of terms, each of which is odd, so this sum is even. Therefore, the minimum positive integer value of (a1 + a2 + ...+ a2018)2−2018 is 462−2018 = 98, obtained when a1 + a2 + ... + a2018 =±46. This can be attained when a1 = a2 = ... = a46 = 1 and the rest of the terms a47, a48, ..., a2018 contain an equal number of 1’s and -1’s. Therefore, the least positive value is 98 2 = 49 .",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2022 SMT Algebra Problem 7",
+   "question": "Let M ={0, 1, 2, ...,2022} and let f : M× M→ M such that for any a, b∈ M, f(a, f(b, a)) = b and f(x, x)̸= x for each x∈ M. How many possible functions f are there (mod 1000)?",
+   "choices": null,
+   "answer": "0",
+   "solution": "Answer: 0. Let M ={0, 1, 2,..., 2022} and let f :M×M→M such that for any a,b∈M, f(a,f (b,a )) =b and f(x,x )̸=x for each x∈M. How many possible functions f are there (mod 1000)? Answer: 0 Solution: No such functions f exist. Suppose otherwise. Write f(b,a ) = c. Then by the condition in the problem, f(a,c ) = b and f(c,b ) =f(c,f (a,c )) =a. Consider the set S ={(x,y,z )|f(x,y ) =z, x,y,z ∈M} By our observation above, ( x,y,z )∈ S if and only if ( y,z,x )∈ S. Hence we may partition S into set of the form {(x,y,z ), (y,z,x ), (z,x,y )} for x,y,z not all equal (since it is known (x,x,x ) /∈ S). Hence 3 divides |S|. Then, |S| =|M|2 = 2023 2, as to form elements in S, we can arbitrarily choose x andy whilez is then determined. This is a contradiction as 3 does not divide 20232. SMT 2022 Algebra Test Solutions April 16–17, 2022",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2022 SMT Algebra Problem 8",
+   "question": "For all positive integers m > 102022, determine the maximum number of real solutions x > 0 of the equation mx = \u0004 x11/10\u0005 .",
+   "choices": null,
+   "answer": "10",
+   "solution": "Answer: 10. For all positive integers m> 102022, determine the maximum number of real solutions x> 0 of the equation mx = \u0004 x11/10\u0005 . Answer: 10 Solution: We claim that there can never be more than 10 solutions. Clearly, x will never be very small, since m is so large. Let x = (k10 +ϵ) for some small ϵ and some positive integer k as large as possible. Then we may Taylor Expand k11<m (k10 +ϵ)< (k10 +ϵ)11/10 =k11 + 11 10kϵ + 1 2· 11 10· 1 10k−9ϵ2 +··· It is clear that \u0004 x11/10\u0005 = \u0004 k11 + 11 10kϵ \u0005 , since because k is much larger than ϵ, the remaining terms in the summation will be negligible decimals. Using the fact that k is an integer, we may write m(k10 +ϵ) = j (k10 +ϵ)11/10 k = \u0016 k11 + 11 10kϵ \u0017 =k11 + 11 10kϵ− \u001a11 10kϵ \u001b (m−k)(k10 +ϵ) = 1 10kϵ− \u001a11 10kϵ \u001b Now since the LHS is on the order of k10, it must in fact be 0 (we could obtain this by bounding it below my removing the epsilon and getting a contradicting inequality), and so 1 10kϵ = \u001a11 10kϵ \u001b Therefore, 11 10kϵ− \u0004 11 10kϵ \u0005 = 1 10kϵ and so \u0004 11 10kϵ \u0005 =kϵ, and so kϵ is an integer. Taking the floor of the expression above, we find that \u0004 1 10kϵ \u0005 = 0. Therefore, kϵ can only take on the values 0, 1, 2,..., 9, and we have achieved 10 solutions, as desired. We can additionally show this is achievable. It is not hard to see thatx = (102022+1)10+ r 102022+1 for r = 0, 1, 2,..., 9 all satisfy this equation for m = 102022 + 1.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2012 SMT Algebra Problem 9",
+   "question": "Find the minimum value of xy, given that x2 + y2 + z2 = 7, xy + xz + yz = 4, and x, y, z are real numbers.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Answer: 1. Find the minimum value of xy, given that x2 + y2 + z2 = 7, xy + xz + yz = 4, and x, y, z are real numbers. Answer: 1 4 Solution 1: Note that 4 xy = (x + y − z)2 + 2(xy + xz + yz) − (x2 + y2 + z2). Since ( x + y − z)2 is non-negative, it follows that 4 xy is at least 2 · 4 − 7 = 1, so xy is at least 1 /4. We now aim to ﬁnd a solution for which xy = 1 /4 (thereby proving our lower bound to be tight). We have seen that xy = 1/4 implies that x + y − z = 0, or z = x + y. Substituting into xy + xz + yz = 4, we obtain x2 + 3xy + y2 = 4. Subtracting xy = 1/4 and 5 xy = 5/4 from this equation yields ( x + y)2 = 15/4 and ( x − y)2 = 11/4. Thus, one solution is x + y = √ 15 2 , x − y =√ 11 2 , or x = √ 15+ √ 11 4 , y = √ 15− √ 11 4 , z = √ 15 2 . Solution 2: We have (x + y + z)2 = x2 + y2 + z2 + 2xy + 2xz + 2yz = 7 + 2 · 4 = 15. Note that minimizing xy is equivalent to maximizing xz + yz = ( x + y)z. Also note that this maximum value of ( x + y)z is certainly positive, and in fact we can assume x + y and z are both positive, since otherwise we can replace x, y, z with −x, −y, −z without changing any of our quantities. We can then apply AM-GM to ﬁnd that √ (x + y)z ≤ x+y+z 2 , or ( x + y)z ≤ (x+y+z)2 4 = 15 4 . Hence xy ≥ 4 − 15 4 = 1 4 and we proceed as in the ﬁrst solution.",
+   "type": "integer_answer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2023 SMT Algebra Problem 10",
+   "question": "Suppose that p(x),q (x) are monic polynomials with nonnegative integer coefficients such that 1 5x≥ 1 q(x)− 1 p(x)≥ 1 3x2 for all integers x≥ 2. Compute the minimum possible value of p(1)·q(1).",
+   "choices": null,
+   "answer": "3",
+   "solution": "Answer: 3. Suppose that p(x),q (x) are monic polynomials with nonnegative integer coefficients such that 1 5x≥ 1 q(x)− 1 p(x)≥ 1 3x2 for all integers x≥ 2. Compute the minimum possible value of p(1)·q(1). Answer: 3 Solution: Rearranging the right side, we have that 3 x2(p(x)−q(x))≥ p(x)q(x). By degree matching, it must be the case that deg p≥ degq and degq≤ 2. Suppose first that deg q = 1: that is, q(x) =x +k for some k. Then, we need 1 10≥ 1 k + 2− 1 p(2)≥ 1",
+   "type": "integer_answer",
+   "points": 1
+  }
+ ]
+}
