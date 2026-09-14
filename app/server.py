@@ -868,7 +868,7 @@ class Handler(BaseHTTPRequestHandler):
             if not user:
                 self._send('{"error": "login required"}', code=401)
             else:
-                n = 0
+                invites = []
                 if PK_DIR.exists():
                     for f in PK_DIR.glob("*.json"):
                         try:
@@ -877,8 +877,24 @@ class Handler(BaseHTTPRequestHandler):
                             continue
                         g = _pk_maybe_expire(g)
                         if g.get("status") == "pending" and _pk_pending_for(g, user):
-                            n += 1
-                self._send(json.dumps({"count": n}))
+                            if g.get("mode") == "race":
+                                others = [p for p in g.get("players", [])
+                                          if p not in (user, g.get("host"))]
+                                invites.append({"game_id": g["id"], "mode": "race",
+                                                "from": g.get("host"), "others": others,
+                                                "slug": g.get("slug"), "difficulty": g.get("difficulty")})
+                            else:
+                                invites.append({"game_id": g["id"], "mode": "duel",
+                                                "from": g.get("challenger"),
+                                                "slug": g.get("slug"), "difficulty": g.get("difficulty")})
+                invites.sort(key=lambda i: i["game_id"])
+                self._send(json.dumps({"count": len(invites), "invites": invites}))
+        elif path == "/api/friends/badge":
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                mine = _friend_entry(_read_friends(), user)
+                self._send(json.dumps({"count": len(mine.get("incoming", []))}))
         elif m := re.match(r"^/api/pk/([a-z0-9_]+)$", path):
             if not user:
                 self._send('{"error": "login required"}', code=401)

@@ -260,7 +260,7 @@
   <div class="tab" data-tab="stats" onclick="showTab('stats')" id="tabStats" data-label="Stats"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 20v-7M11 20V5M17 20v-4"/><path d="M2 20h20"/></svg></div>
   <div class="tab" data-tab="wb" onclick="showTab('wb')" id="tabWB" data-label="Whiteboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div>
   <div class="tab" data-tab="games" onclick="showTab('games')" id="tabGames" data-label="Games"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="3"/><path d="M6 11h4M8 9v4"/><circle cx="16" cy="10.5" r="0.6" fill="currentColor"/><circle cx="18.5" cy="12.5" r="0.6" fill="currentColor"/><path d="M8 7V5M16 7V5"/></svg></div>
-  <div class="tab" data-tab="friends" onclick="showTab('friends')" id="tabFriends" style="display:none" data-label="Friends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.4 3.4-5 6.5-5s5.7 1.6 6.5 5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16.2 15.1c2.7.2 4.6 1.6 5.3 4.4"/></svg></div>
+  <div class="tab" data-tab="friends" onclick="showTab('friends')" id="tabFriends" style="display:none" data-label="Friends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.4 3.4-5 6.5-5s5.7 1.6 6.5 5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16.2 15.1c2.7.2 4.6 1.6 5.3 4.4"/></svg><span class="tab-badge" id="friendsBadge"></span></div>
   <div class="tab" data-tab="pk" onclick="showTab('pk')" id="tabPK" style="display:none" data-label="PK Battle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3l8 8"/><path d="M20 3l-8 8"/><path d="M14 14l3.5 3.5"/><path d="M10 14l-3.5 3.5"/><path d="M12.8 15.2l2.4-2.4"/><path d="M8.8 12.8l2.4 2.4"/></svg><span class="tab-badge" id="pkBadge"></span></div>
   <div class="tab" data-tab="classes" onclick="showTab('classes')" id="tabClasses" style="display:none" data-label="Classes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10l8-6 8 6v11"/><path d="M2 21h20"/><path d="M10 21v-5h4v5"/></svg></div>
   <div class="lang-toggle"><span id="langEN" onclick="setLang('en')">EN</span><span id="langZH" onclick="setLang('zh')">中文</span></div>
@@ -292,8 +292,17 @@ const I18N = {
     selectFriend: 'Select a friend to start chatting.', typeMessage: 'Type a message…', send: 'Send',
     requestSent: 'Request sent.', userNotFound: 'User not found.',
     tabPK: '⚔️ PK', tabWhiteboard: 'Whiteboard', tabGames: '🎮 Games',
-    gChess: '♞ Function Chess', gChessDesc: 'Move your pieces with functions — reach the far side or capture them all. Click a piece, then a function.',
-    gGraph: '📈 Graph War', gGraphDesc: 'Pick y = mx + b and fire! The line with more area above the other on [−10, 10] wins the round. First to 3.',
+    gChess: '♞ Function Chess', gChessDesc: 'The enemy places points on the graph — write a function that passes through ALL of them, or you lose. Round 1 has 1 point, round 2 has 2, and so on.',
+    gGraph: '📈 Graph War', gGraphDesc: 'Fire lines y = mx + b to hit the enemy\'s red points (+100). Don\'t hit your own blue shields (−100). The AI is aiming at yours — 4 shots each.',
+    gFcPlacing: 'Enemy is placing {0} point(s)…', gFcYourMove: 'Your move — fit a function through every point!',
+    gFcRound: 'Round {0}', gFcBest: 'Best: {0}', gFcHint: 'Use x, numbers, + − * / ^ and parentheses, e.g. 2x^2 − 3x + 1',
+    gFcSubmit: 'Submit', gFcGiveUp: 'Give up', gFcCleared: 'Round {0} cleared!', gFcBadExpr: 'Invalid expression — use x, numbers, + − * / ^ ( )',
+    gFcWrong: 'You lose! One function that fits: f(x) = {0}',
+    gGwYourPts: 'Your points: {0}', gGwEnemyPts: 'Enemy points: {0}', gGwYourTurn: 'Your turn — aim and fire!',
+    gGrid: 'Grid', gGwRound: 'Round {0}/5',
+    gGwTask: 'Fire from YOUR blue point #N and hit the ENEMY red point #N — one function through both!',
+    gGwHit: 'Direct hit on point {0}! +100', gGwMiss: 'Missed point {0}!', gGwNext: 'next: point {0}',
+    gInvDuel: '{0} invited you to PK!', gInvRace: '{0} invited you to a Race!', gInvAlso: 'also invited: {0}',
     gPlay: 'Play', gBack: '‹ Back to games', gYouWin: '🎉 You win!', gAiWin: '🤖 AI wins!', gYourTurn: 'Your turn — pick a piece, then a function',
     gAiTurn: 'AI is thinking…', gSelectPiece: 'Select one of your pieces (blue)', gInvalid: 'That move is off the board — try another function',
     gYou: 'You', gAI: 'AI', gRound: 'Round', gFire: '🔥 Fire!',
@@ -357,8 +366,17 @@ const I18N = {
     selectFriend: '选择好友开始聊天。', typeMessage: '输入消息…', send: '发送',
     requestSent: '请求已发送。', userNotFound: '用户不存在。',
     tabPK: '⚔️ 对战', tabWhiteboard: '白板', tabGames: '🎮 小游戏',
-    gChess: '♞ 函数棋', gChessDesc: '用函数走棋子 — 抵达对岸或吃光对方获胜。先点棋子，再选函数。',
-    gGraph: '📈 图像战争', gGraphDesc: '选择 y = mx + b 开炮！在 [−10, 10] 上压在对方上面的面积更大者赢得该回合，先到 3 分获胜。',
+    gChess: '♞ 函数棋', gChessDesc: '敌方在图上放置点 — 你必须写出一个经过所有点的函数，否则判负。第 1 关 1 个点，第 2 关 2 个，依此类推。',
+    gGraph: '📈 图像战争', gGraphDesc: '用 y = mx + b 开炮击中敌方红点（+100)，别打中自己的蓝色护盾（−100)。AI 也在瞄准你的点 — 双方各 4 炮。',
+    gFcPlacing: '敌方正在放置 {0} 个点…', gFcYourMove: '轮到你了 — 写一个经过所有点的函数！',
+    gFcRound: '第 {0} 关', gFcBest: '最佳纪录：{0}', gFcHint: '可用 x、数字、+ − * / ^ 和括号，如 2x^2 − 3x + 1',
+    gFcSubmit: '提交', gFcGiveUp: '认输', gFcCleared: '第 {0} 关通过！', gFcBadExpr: '表达式无效 — 只能用 x、数字、+ − * / ^ ( )',
+    gFcWrong: '你输了！一个可行解：f(x) = {0}',
+    gGwYourPts: '你的点：{0}', gGwEnemyPts: '敌方点：{0}', gGwYourTurn: '轮到你了 — 调整准星开炮！',
+    gGrid: '网格', gGwRound: '第 {0}/5 回合',
+    gGwTask: '从蓝色 #N 点发射，命中红色 #N 号点 — 写一个同时经过两点的函数！',
+    gGwHit: '命中 {0} 号点！+100', gGwMiss: '未命中 {0} 号点！', gGwNext: '下一发：{0} 号点',
+    gInvDuel: '{0} 邀请你对战！', gInvRace: '{0} 邀请你参加竞速赛！', gInvAlso: '同时受邀：{0}',
     gPlay: '开始', gBack: '‹ 返回游戏列表', gYouWin: '🎉 你赢了！', gAiWin: '🤖 AI 赢了！', gYourTurn: '你的回合 — 先点棋子，再选函数',
     gAiTurn: 'AI 思考中…', gSelectPiece: '选择你的棋子（蓝色）', gInvalid: '这步走出棋盘了 — 换个函数试试',
     gYou: '你', gAI: 'AI', gRound: '回合', gFire: '🔥 开火！',
@@ -388,7 +406,7 @@ const I18N = {
   },
 };
 let LANG = localStorage.getItem('mt_lang') || 'en';
-const t = k => (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k;
+const t = (k, ...a) => { let s = (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k; a.forEach((v, i) => { s = s.split('{' + i + '}').join(v); }); return s; };
 
 function setLang(l) {
   LANG = l;
@@ -431,7 +449,9 @@ function setLang(l) {
     doShowTab(state.tab || 'new');
   }
 }
-let state = { test: null, answers: {}, submitted: false, deadline: null, timerId: null, startedAt: null, tab: 'new', user: null, authMode: 'login', authRole: 'student', role: 'student', school: '', pkMode: 'duel', badgeTimer: null };
+let state = { test: null, answers: {}, submitted: false, deadline: null, timerId: null, startedAt: null, tab: 'new', user: null, authMode: 'login', authRole: 'student', role: 'student', school: '', pkMode: 'duel', badgeTimer: null, seenInvites: [], inviteDismissed: [] };
+let inviteQueue = [];
+let inviteShowing = false;
 
 function updateUserArea() {
   const area = document.getElementById('userArea');
@@ -462,7 +482,7 @@ async function init() {
     state.role = data.role || 'student';
     state.school = data.school || '';
     updateUserArea();
-    updatePkBadge();
+    updateBadges();
     startBadgePoll();
     doShowTab('tests');
   } else {
@@ -529,7 +549,7 @@ async function doLogin() {
     state.user = data.user;
     await refreshMe();
     updateUserArea();
-    updatePkBadge();
+    updateBadges();
     startBadgePoll();
     state.authMode = null;
     doShowTab(state.tab && state.tab !== 'new' ? state.tab : 'tests');
@@ -569,7 +589,7 @@ async function doRegister() {
     state.user = data.user;
     await refreshMe();
     updateUserArea();
-    updatePkBadge();
+    updateBadges();
     startBadgePoll();
     state.authMode = null;
     doShowTab('tests');
@@ -640,15 +660,34 @@ async function refreshMe() {
 async function updatePkBadge() {
   const b = document.getElementById('pkBadge');
   if (!b || !state.user) return;
-  if (state.tab === 'pk') { b.textContent = ''; return; }  // invites visible on the PK tab itself
+  if (state.tab === 'pk') { b.textContent = ''; }  // invites visible on the PK tab itself
   try {
     const d = await (await fetch('/api/pk/invites', {credentials: 'same-origin'})).json();
+    if (state.tab !== 'pk') b.textContent = d.count || '';
+    // surface new invites as a fullscreen modal
+    for (const inv of (d.invites || [])) {
+      if (!state.seenInvites.includes(inv.game_id)) {
+        state.seenInvites.push(inv.game_id);
+        if (!state.inviteDismissed.includes(inv.game_id)) inviteQueue.push(inv);
+      }
+    }
+    inviteQueue = inviteQueue.filter(inv => (d.invites || []).some(i => i.game_id === inv.game_id));
+    showInviteModal();
+  } catch (e) { /* keep old badge */ }
+}
+async function updateFriendsBadge() {
+  const b = document.getElementById('friendsBadge');
+  if (!b || !state.user) return;
+  if (state.tab === 'friends') { b.textContent = ''; return; }
+  try {
+    const d = await (await fetch('/api/friends/badge', {credentials: 'same-origin'})).json();
     b.textContent = d.count || '';
   } catch (e) { /* keep old badge */ }
 }
+function updateBadges() { updatePkBadge(); updateFriendsBadge(); }
 function startBadgePoll() {
   stopBadgePoll();
-  state.badgeTimer = setInterval(updatePkBadge, 15000);
+  state.badgeTimer = setInterval(updateBadges, 10000);
 }
 function stopBadgePoll() {
   if (state.badgeTimer) { clearInterval(state.badgeTimer); state.badgeTimer = null; }
@@ -833,7 +872,7 @@ async function pkChallenge() {
   const d = await r.json();
   msg.className = 'auth-msg ' + (r.ok ? 'ok' : 'err');
   msg.textContent = r.ok ? t('requestSent') : (d.error || 'error');
-  if (r.ok) { updatePkBadge(); pk(); }
+  if (r.ok) { updateBadges(); pk(); }
 }
 
 async function pkRespond(gid, accept) {
@@ -1121,8 +1160,8 @@ function doShowTab(tab) {
   if (tab === 'new') home();
   else if (tab === 'tests') myTests();
   else if (tab === 'stats') stats();
-  else if (tab === 'friends') friends();
-  else if (tab === 'pk') { updatePkBadge(); pk(); }
+  else if (tab === 'friends') { document.getElementById('friendsBadge').textContent = ''; friends(); }
+  else if (tab === 'pk') { updateBadges(); pk(); }
   else if (tab === 'classes') classesView();
   else if (tab === 'wb') whiteboard();
   else if (tab === 'games') gamesView();
@@ -1182,6 +1221,7 @@ async function home() {
 async function showFamilies() {
   const banks = await (await fetch('/api/banks')).json();
   state.banks = banks;
+  window._comps = (banks || []).filter(b => !b.round);
   const catOrder = ['Math', 'Physics', 'Chemistry', 'Biology', 'Informatics', 'Astronomy & Earth', 'Economics', 'Linguistics', 'Other'];
   // group by category -> family
   const fams = {};
@@ -2488,6 +2528,49 @@ function exitTest(fromLeave, pendingTab) {
 document.addEventListener('visibilitychange', () => {});  // leaving the screen no longer triggers closing
 
 // ===================== GAMES =====================
+// ---------- fullscreen PK invite modal ----------
+const pkCompName = slug => ((window._comps || []).find(c => c.slug === slug) || {}).name || slug;
+const pkDiffName = d => t(d === 'easy' ? 'easy' : d === 'hard' ? 'hard' : 'medium');
+function showInviteModal() {
+  if (inviteShowing || !inviteQueue.length) return;
+  if (state.test && !state.submitted) return;   // don't block an active test; resurfaces after
+  if (document.getElementById('pkInvOverlay')) return;
+  const inv = inviteQueue[0];
+  inviteShowing = true;
+  const title = inv.mode === 'race' ? t('gInvRace', inv.from) : t('gInvDuel', inv.from);
+  const also = (inv.others && inv.others.length) ? `<div style="font-size:13px;color:#888;margin-top:4px">${t('gInvAlso', inv.others.join(', '))}</div>` : '';
+  const ov = document.createElement('div');
+  ov.id = 'pkInvOverlay';
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(12,22,38,.78);z-index:9999;display:flex;align-items:center;justify-content:center';
+  ov.innerHTML = `
+    <div class="card" style="max-width:430px;width:92%;text-align:center;padding:30px 26px">
+      <div style="font-size:44px">${inv.mode === 'race' ? '🏁' : '⚔️'}</div>
+      <h2 style="margin:10px 0 4px">${title}</h2>
+      ${also}
+      <div style="color:#666;font-size:14px;margin:6px 0 18px">${escapeHtml(pkCompName(inv.slug))} · ${pkDiffName(inv.difficulty)}</div>
+      <div style="display:flex;gap:10px;justify-content:center">
+        <button class="btn" style="font-size:16px;padding:10px 26px" onclick="inviteRespond(true)">${t('pkAccept')}</button>
+        <button class="btn ghost" style="font-size:16px;padding:10px 26px" onclick="inviteRespond(false)">${t('pkDecline')}</button>
+      </div>
+    </div>`;
+  document.body.appendChild(ov);
+}
+async function inviteRespond(accept) {
+  const inv = inviteQueue.shift();
+  const ov = document.getElementById('pkInvOverlay');
+  if (ov) ov.remove();
+  inviteShowing = false;
+  if (!inv) return;
+  if (!accept) state.inviteDismissed.push(inv.game_id);
+  await fetch('/api/pk/respond', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin', body: JSON.stringify({game_id: inv.game_id, accept}),
+  });
+  updateBadges();
+  showTab('pk');
+  if (inviteQueue.length) setTimeout(showInviteModal, 400);
+}
+
 function gamesView() {
   app.innerHTML = `
   <div class="card">
@@ -2507,171 +2590,257 @@ function gamesView() {
   </div>`;
 }
 
-// ---------- Function Chess (player vs AI) ----------
-const FC_POOL = [
-  {s:'x+2', f:x=>x+2}, {s:'x+1', f:x=>x+1}, {s:'x', f:x=>x},
-  {s:'x−1', f:x=>x-1}, {s:'x−2', f:x=>x-2},
-  {s:'2x', f:x=>2*x}, {s:'2x−1', f:x=>2*x-1}, {s:'3x−3', f:x=>3*x-3},
-];
+// ---------- shared: expression compiler + coordinate grid ----------
+function evCompile(s) {
+  s = String(s || '').trim().toLowerCase().replace(/\s+/g, '').replace(/−/g, '-').replace(/×/g, '*').replace(/÷/g, '/').replace(/\^/g, '**');
+  if (!s || !/^[0-9x+\-*/().]*$/.test(s)) throw new Error('bad');
+  s = s.replace(/(\d)x/g, '$1*x').replace(/(\d)\(/g, '$1*(')
+       .replace(/x\(/g, 'x*(').replace(/\)(?=[0-9x(])/g, ')*');
+  const fn = new Function('x', 'return (' + s + ');');
+  return x => { const v = fn(x); return (typeof v === 'number' && isFinite(v)) ? v : NaN; };
+}
+const GW_W = 920, GWH = 700;
+function gwXY(x, y) { return [GW_W / 2 + x * (GW_W / 2 - 24) / 10, GWH / 2 - y * (GWH / 2 - 24) / 10]; }
+function drawGrid(ctx, W, H, gridOn) {
+  ctx.clearRect(0, 0, W, H);
+  if (!gridOn) return;
+  ctx.strokeStyle = '#e4e9f0'; ctx.lineWidth = 1;
+  for (let i = -10; i <= 10; i += 2) {
+    let a = gwXY(i, -10), b = gwXY(i, 10);
+    ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke();
+    a = gwXY(-10, i); b = gwXY(10, i);
+    ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke();
+  }
+  ctx.strokeStyle = '#8a94a6'; ctx.lineWidth = 1.5;
+  let a = gwXY(-10, 0), b = gwXY(10, 0);
+  ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke();
+  a = gwXY(0, -10); b = gwXY(0, 10);
+  ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke();
+}
+function drawCurve(ctx, fn, color, dash) {
+  ctx.strokeStyle = color; ctx.lineWidth = 2.2;
+  if (dash) ctx.setLineDash([7, 5]);
+  ctx.beginPath();
+  let started = false;
+  for (let px = 0; px <= GW_W; px += 2) {
+    const x = -10 + 20 * px / GW_W;
+    const y = fn(x);
+    if (!isFinite(y) || Math.abs(y) > 14) { started = false; continue; }
+    const [cx, cy] = gwXY(x, y);
+    if (!started) { ctx.moveTo(cx, cy); started = true; } else ctx.lineTo(cx, cy);
+  }
+  ctx.stroke();
+  ctx.setLineDash([]);
+}
+
+// ---------- Function Chess: enemy places points, you must fit a function ----------
 let fc = null;
 function fcStart() {
-  const mk = (side) => [1, 3, 5].map(c => ({side, r: side === 'you' ? 7 : 0, c, id: Math.random().toString(36).slice(2)}));
-  fc = {pieces: [...mk('you'), ...mk('ai')], turn: 'you', sel: null, funcs: fcDrawFuncs(), over: false, msg: t('gSelectPiece')};
-  fcRender();
+  fc = {round: 1, best: +(localStorage.getItem('mt_fc_best') || 0), over: false,
+        pts: [], ans: '', poly: '', placing: false, msg: '', grid: true};
+  fcDeal();
 }
-function fcDrawFuncs() {
-  const pool = [...FC_POOL];
-  const out = [];
-  for (let i = 0; i < 3; i++) out.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
-  return out;
+function fcPoly() {
+  // hidden "nice" polynomial the enemy uses to place points
+  const d = Math.min(fc.round - 1, 4);
+  const coef = [];
+  for (let i = 0; i <= d; i++) coef.push(Math.floor(Math.random() * 9) - 4);
+  if (coef[d] === 0) coef[d] = 1 + Math.floor(Math.random() * 3);
+  return coef; // coef[i] * x^i
+}
+function fcEvalPoly(coef, x) { return coef.reduce((s, c, i) => s + c * Math.pow(x, i), 0); }
+function fcPolyStr(coef) {
+  const T = ['', 'x', 'x^2', 'x^3', 'x^4'];
+  let parts = [];
+  for (let i = coef.length - 1; i >= 0; i--) {
+    const c = coef[i];
+    if (!c) continue;
+    const sign = c < 0 ? '−' : '+';
+    const a = Math.abs(c);
+    const term = i === 0 ? String(a) : (a === 1 ? T[i] : a + T[i]);
+    parts.push((parts.length ? sign : (c < 0 ? '−' : '')) + term);
+  }
+  return parts.join(' ') || '0';
+}
+function fcDeal() {
+  const coef = fcPoly();
+  const pts = [];
+  const used = new Set();
+  let guard = 0;
+  while (pts.length < fc.round && guard++ < 500) {
+    const x = Math.round((Math.random() * 16 - 8) * 2) / 2;
+    if (used.has(x)) continue;
+    const y = Math.round(fcEvalPoly(coef, x) * 2) / 2;
+    if (y < -9 || y > 9) continue;
+    used.add(x); pts.push({x, y, shown: false});
+  }
+  if (pts.length < fc.round) { fcDeal(); return; }  // retry (poly blew up)
+  fc.pts = pts; fc.ans = ''; fc.poly = fcPolyStr(coef); fc.placing = true;
+  fc.msg = `🎯 ${t('gFcPlacing', fc.round)}`;
+  fcRender();
+  // stagger the enemy "placing" animation
+  let i = 0;
+  const place = () => {
+    if (!fc) return;
+    if (i < fc.pts.length) { fc.pts[i++].shown = true; fcDraw(); setTimeout(place, 450); }
+    else { fc.placing = false; fc.msg = t('gFcYourMove'); fcRender(); }
+  };
+  setTimeout(place, 400);
+}
+function fcCanvasHtml() {
+  return `<div class="gw-canvas-box"><canvas id="fcCanvas" width="${GW_W}" height="${GWH}" style="max-width:100%"></canvas></div>`;
+}
+function fcDraw() {
+  const cv = document.getElementById('fcCanvas');
+  if (!cv || !fc) return;
+  const ctx = cv.getContext('2d');
+  drawGrid(ctx, GW_W, GWH, fc.grid !== false);
+  if (fc.ans) { try { drawCurve(ctx, evCompile(fc.ans), 'rgba(43,111,227,.8)'); } catch (e) {} }
+  for (const p of fc.pts) {
+    if (!p.shown) continue;
+    const [x, y] = gwXY(p.x, p.y);
+    ctx.fillStyle = '#d3453d'; ctx.strokeStyle = '#fff'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(x, y, 8, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+  }
 }
 function fcRender() {
-  let cells = '';
-  for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) {
-    const p = fc.pieces.find(p => p.r === r && p.c === c);
-    const lit = (r + c) % 2 ? '' : 'lit';
-    const sel = fc.sel && fc.sel.r === r && fc.sel.c === c ? 'sel' : '';
-    cells += `<div class="fc-cell ${lit} ${sel}" data-r="${r}" data-c="${c}" onclick="fcCell(${r},${c})">${p ? `<span class="${p.side === 'you' ? 'fc-you' : 'fc-ai'}">♟</span>` : ''}</div>`;
-  }
   app.innerHTML = `
   <div class="card">
     <div class="fr-req" style="border-top:none">
       <h3>${t('gChess')}</h3>
       <button class="btn sm ghost" onclick="gamesView()">${t('gBack')}</button>
     </div>
-    <div class="fc-wrap">
-      <div class="fc-board">${cells}</div>
-      <div class="fc-side">
-        <div style="font-size:14.5px;font-weight:600;margin-bottom:4px">${fc.over ? '' : (fc.turn === 'you' ? '🧑 ' + t('gYourTurn') : '🤖 ' + t('gAiTurn'))}</div>
-        <div class="auth-msg ${fc.msg.startsWith('⚠') ? 'err' : 'ok'}" style="min-height:20px">${fc.msg}</div>
-        <div class="fc-funcs">
-          ${fc.funcs.map((fn, i) => `<button class="fc-func" ${fc.turn !== 'you' || fc.over ? 'disabled' : ''} onclick="fcMove(${i})">f(x) = ${fn.s}</button>`).join('')}
+    <div style="font-size:14.5px;margin-bottom:8px">
+      ${t('gFcRound', fc.round)} · ${t('gFcBest', fc.best)}
+    </div>
+    <div class="gw-wrap">
+      ${fcCanvasHtml()}
+      <div class="gw-ctl">
+        <div class="auth-msg ${fc.over || fc.msg.startsWith('⚠') ? 'err' : 'ok'}" style="min-height:20px;margin-bottom:8px">${fc.msg}</div>
+        <label>f(x) =</label>
+        <input type="text" id="fcAns" placeholder="e.g. x^2 - 2x + 1" value="${escapeHtml(fc.ans)}"
+               style="width:100%;font-size:16px;padding:9px 10px;border:1.5px solid #c9d4e4;border-radius:8px;font-family:ui-monospace,Menlo,monospace"
+               ${fc.over || fc.placing ? 'disabled' : ''} oninput="fc.ans=this.value;fcDraw()">
+        <div style="font-size:12px;color:#999;margin-top:4px">${t('gFcHint')}</div>
+        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn" ${fc.over || fc.placing ? 'disabled' : ''} onclick="fcSubmit()">${t('gFcSubmit')}</button>
+          <button class="btn sm ghost" ${fc.over || fc.placing ? 'disabled' : ''} onclick="fcGiveUp()">${t('gFcGiveUp')}</button>
+          <button class="btn sm ghost" onclick="fcToggleGrid()">${fc.grid !== false ? '▦' : '▢'} ${t('gGrid')}</button>
+          ${fc.over ? `<button class="btn sm" onclick="fcStart()">↺ ${t('gPlay')}</button>` : ''}
         </div>
-        <button class="btn sm ghost" onclick="fcStart()">↺ ${t('gPlay')}</button>
       </div>
     </div>
   </div>`;
+  const inp = document.getElementById('fcAns');
+  if (inp && !fc.over && !fc.placing) { inp.focus(); }
+  fcDraw();
 }
-function fcCell(r, c) {
-  if (!fc || fc.turn !== 'you' || fc.over) return;
-  const p = fc.pieces.find(p => p.r === r && p.c === c);
-  if (p && p.side === 'you') { fc.sel = p; fc.msg = t('gYourTurn'); fcRender(); }
-}
-function fcApply(p, fn) {
-  const nc = fn.f(p.c);
-  if (nc < 0 || nc > 7) return false;
-  const nr = p.side === 'you' ? p.r - 1 : p.r + 1;
-  const occ = fc.pieces.find(q => q.r === nr && q.c === nc);
-  if (occ && occ.side === p.side) return false;
-  if (occ) fc.pieces = fc.pieces.filter(q => q !== occ);
-  p.r = nr; p.c = nc;
-  return true;
-}
-function fcValidMoves(p) { return fc.funcs.filter(fn => { const nc = fn.f(p.c); if (nc < 0 || nc > 7) return false; const occ = fc.pieces.find(q => q.r === (p.side === 'you' ? p.r - 1 : p.r + 1) && q.c === nc); return !occ || occ.side !== p.side; }); }
-function fcCheckWin() {
-  const you = fc.pieces.filter(p => p.side === 'you'), ai = fc.pieces.filter(p => p.side === 'ai');
-  if (!ai.length || you.some(p => p.r === 0)) { fc.over = true; fc.msg = t('gYouWin'); return true; }
-  if (!you.length || ai.some(p => p.r === 7)) { fc.over = true; fc.msg = t('gAiWin'); return true; }
-  return false;
-}
-function fcMove(i) {
-  if (!fc || fc.turn !== 'you' || fc.over) return;
-  if (!fc.sel) { fc.msg = '⚠ ' + t('gSelectPiece'); fcRender(); return; }
-  if (!fcApply(fc.sel, fc.funcs[i])) { fc.msg = '⚠ ' + t('gInvalid'); fcRender(); return; }
-  fc.sel = null;
-  if (fcCheckWin()) { fc.turn = 'done'; fcRender(); return; }
-  fc.turn = 'ai'; fc.msg = t('gAiTurn'); fcRender();
-  setTimeout(fcAi, 650);
-}
-function fcAi() {
-  if (!fc || fc.over) return;
-  const mine = fc.pieces.filter(p => p.side === 'ai');
-  let moved = false;
-  for (const p of [...mine].sort(() => Math.random() - .5)) {
-    const ok = fcValidMoves(p);
-    if (ok.length) { fcApply(p, ok[Math.floor(Math.random() * ok.length)]); moved = true; break; }
+function fcSubmit() {
+  if (!fc || fc.over || fc.placing) return;
+  let fn;
+  try { fn = evCompile(document.getElementById('fcAns').value); }
+  catch (e) { fc.msg = '⚠ ' + t('gFcBadExpr'); fcRender(); return; }
+  const ok = fc.pts.every(p => Math.abs(fn(p.x) - p.y) <= 0.26);
+  if (ok) {
+    const cleared = fc.round;
+    fc.best = Math.max(fc.best, cleared);
+    localStorage.setItem('mt_fc_best', fc.best);
+    fc.round++;
+    fc.msg = `✓ ${t('gFcCleared', cleared)}`;
+    fcRender();
+    setTimeout(() => { if (fc && !fc.over) fcDeal(); }, 900);
+  } else {
+    fc.over = true;
+    fc.msg = `☠ ${t('gFcWrong', fc.poly)}`;
+    fcRender();
   }
-  if (!moved) { fc.msg = t('gAiTurn') + ' (skip)'; }
-  if (fcCheckWin()) { fc.turn = 'done'; fcRender(); return; }
-  fc.turn = 'you'; fc.funcs = fcDrawFuncs();
-  const anyValid = fc.pieces.filter(p => p.side === 'you').some(p => fcValidMoves(p).length);
-  fc.msg = anyValid ? t('gYourTurn') : t('gYourTurn') + ' — ' + t('gInvalid');
-  if (!anyValid) fc.funcs = fcDrawFuncs();  // dead hand: redeal
+}
+function fcGiveUp() {
+  if (!fc || fc.over) return;
+  fc.over = true;
+  fc.msg = `🏳 ${t('gFcWrong', fc.poly)}`;
   fcRender();
 }
+function fcToggleGrid() { if (fc) { fc.grid = fc.grid === false; fcRender(); } }
 
-// ---------- Graph War (player vs AI) ----------
+// ---------- Graph War: fire from your point N to the enemy's point N ----------
 let gw = null;
-const GW_W = 520, GW_H = 400;
 function gwStart() {
-  const spots = [];
+  const yours = [], enemys = [];
   const used = new Set();
-  while (spots.length < 6) {
-    const x = Math.round((Math.random() * 18 - 9) * 2) / 2;
-    const y = Math.round((Math.random() * 16 - 8) * 2) / 2;
-    const k = x + ',' + y;
-    if (!used.has(k)) { used.add(k); spots.push({x, y, alive: true}); }
+  const mk = (arr) => {
+    let guard = 0;
+    while (arr.length < 5 && guard++ < 500) {
+      const x = Math.round((Math.random() * 16 - 8) * 2) / 2;
+      const y = Math.round((Math.random() * 16 - 8) * 2) / 2;
+      const k = x + ',' + y;
+      if (used.has(k)) continue;
+      used.add(k);
+      arr.push({x, y, hit: false});
+    }
+  };
+  mk(yours); mk(enemys);
+  // every round needs a well-defined line: the two points must differ in x
+  for (let i = 0; i < 5; i++) {
+    if (yours[i].x === enemys[i].x) {
+      for (let j = 0; j < 5; j++) {
+        if (yours[i].x !== enemys[j].x && yours[j].x !== enemys[i].x) {
+          [enemys[i], enemys[j]] = [enemys[j], enemys[i]];
+          break;
+        }
+      }
+    }
   }
-  gw = {targets: spots, shots: [], you: 0, ai: 0, m: 1, b: 0, turn: 'you', over: false, msg: '', left: 5};
+  gw = {yours, enemys, round: 1, you: 0, ai: 0, ans: '', over: false, msg: '', grid: true, firing: false};
   gwRender();
 }
-function gwXY(x, y) { return [GW_W / 2 + x * (GW_W / 2 - 20) / 10, GW_H / 2 - y * (GW_H / 2 - 20) / 10]; }
+function gwPt(side, n) { return (side === 'you' ? gw.yours : gw.enemys)[n - 1]; }
 function gwDraw() {
   const cv = document.getElementById('gwCanvas');
-  if (!cv) return;
+  if (!cv || !gw) return;
   const ctx = cv.getContext('2d');
-  ctx.clearRect(0, 0, GW_W, GW_H);
-  ctx.strokeStyle = '#e4e9f0'; ctx.lineWidth = 1;
-  for (let i = -10; i <= 10; i += 2) {
-    const [x1, y1] = gwXY(i, -10), [x2, y2] = gwXY(i, 10);
-    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
-    const [x3, y3] = gwXY(-10, i), [x4, y4] = gwXY(10, i);
-    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
-  }
-  ctx.strokeStyle = '#8a94a6'; ctx.lineWidth = 1.5;
-  const [ax1, ay1] = gwXY(-10, 0), [ax2, ay2] = gwXY(10, 0);
-  ctx.beginPath(); ctx.moveTo(ax1, ay1); ctx.lineTo(ax2, ay2); ctx.stroke();
-  const [bx1, by1] = gwXY(0, -10), [bx2, by2] = gwXY(0, 10);
-  ctx.beginPath(); ctx.moveTo(bx1, by1); ctx.lineTo(bx2, by2); ctx.stroke();
-  for (const s of gw.shots) {
-    ctx.strokeStyle = s.side === 'you' ? 'rgba(43,111,227,.75)' : 'rgba(211,69,61,.75)';
-    ctx.lineWidth = 2;
-    const [x1, y1] = gwXY(-10, -10 * s.m + s.b), [x2, y2] = gwXY(10, 10 * s.m + s.b);
-    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
-  }
-  if (gw.turn === 'you' && !gw.over) {
-    ctx.strokeStyle = 'rgba(43,111,227,.35)'; ctx.lineWidth = 2; ctx.setLineDash([6, 5]);
-    const [x1, y1] = gwXY(-10, -10 * gw.m + gw.b), [x2, y2] = gwXY(10, 10 * gw.m + gw.b);
-    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
-    ctx.setLineDash([]);
-  }
-  for (const tg of gw.targets) {
-    if (!tg.alive) continue;
-    const [x, y] = gwXY(tg.x, tg.y);
-    ctx.fillStyle = '#f5b83d'; ctx.strokeStyle = '#c78d1e'; ctx.lineWidth = 1.5;
-    ctx.beginPath(); ctx.arc(x, y, 9, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-    ctx.fillStyle = '#fff'; ctx.font = 'bold 10px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillText('★', x, y + .5);
+  drawGrid(ctx, GW_W, GWH, gw.grid !== false);
+  if (gw.ans) { try { drawCurve(ctx, evCompile(gw.ans), 'rgba(43,111,227,.8)'); } catch (e) {} }
+  for (let i = 1; i <= 5; i++) {
+    for (const side of ['you', 'ai']) {
+      const p = gwPt(side, i);
+      if (p.hit) continue;
+      const isNow = i === gw.round && !gw.over;
+      const [x, y] = gwXY(p.x, p.y);
+      ctx.globalAlpha = isNow ? 1 : .45;
+      ctx.fillStyle = side === 'you' ? '#2b6fe3' : '#d3453d';
+      ctx.strokeStyle = '#fff'; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(x, y, isNow ? 12 : 9, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = '#fff'; ctx.font = `bold ${isNow ? 13 : 10}px sans-serif`;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(String(i), x, y + .5);
+      ctx.globalAlpha = 1;
+    }
   }
 }
 function gwRender() {
+  const r = Math.min(gw.round, 5);
   app.innerHTML = `
   <div class="card">
     <div class="fr-req" style="border-top:none">
       <h3>${t('gGraph')}</h3>
       <button class="btn sm ghost" onclick="gamesView()">${t('gBack')}</button>
     </div>
+    <div style="font-size:14.5px;margin-bottom:8px">
+      ${t('gGwRound', r)} · <b style="color:#2b6fe3">${t('gYou')}: ${gw.you}</b> · <b style="color:#d3453d">${t('gAI')}: ${gw.ai}</b>
+    </div>
     <div class="gw-wrap">
-      <div class="gw-canvas-box"><canvas id="gwCanvas" width="${GW_W}" height="${GW_H}"></canvas></div>
+      <div class="gw-canvas-box"><canvas id="gwCanvas" width="${GW_W}" height="${GWH}" style="max-width:100%"></canvas></div>
       <div class="gw-ctl">
-        <div style="font-size:15px"><b>${t('gYou')}: ${gw.you}</b> · ${t('gAI')}: ${gw.ai} · ⭐ × ${gw.targets.filter(x => x.alive).length} · 🎯 ${gw.left}</div>
-        <div class="auth-msg ${gw.msg.startsWith('⚠') || gw.msg.includes(t('gRoundLose')) ? 'err' : 'ok'}" style="min-height:20px;margin:6px 0">${gw.msg}</div>
-        <label>m = <b id="gwMv">${gw.m}</b> <span style="color:#999">(slope)</span></label>
-        <input type="range" id="gwM" min="-5" max="5" step="0.25" value="${gw.m}" ${gw.turn !== 'you' || gw.over ? 'disabled' : ''} oninput="gw.m=+this.value;document.getElementById('gwMv').textContent=gw.m;gwDraw()">
-        <label>b = <b id="gwBv">${gw.b}</b> <span style="color:#999">(y-intercept)</span></label>
-        <input type="range" id="gwB" min="-10" max="10" step="0.5" value="${gw.b}" ${gw.turn !== 'you' || gw.over ? 'disabled' : ''} oninput="gw.b=+this.value;document.getElementById('gwBv').textContent=gw.b;gwDraw()">
+        <div class="auth-msg ${gw.msg.startsWith('⚠') || gw.over && gw.ai > gw.you ? 'err' : 'ok'}" style="min-height:20px;margin-bottom:8px">${gw.msg}</div>
+        <div style="font-size:13.5px;color:#555;margin-bottom:6px">${t('gGwTask')}</div>
+        <label>f(x) =</label>
+        <input type="text" id="gwAns" placeholder="e.g. 0.5x + 3" value="${escapeHtml(gw.ans)}"
+               style="width:100%;font-size:16px;padding:9px 10px;border:1.5px solid #c9d4e4;border-radius:8px;font-family:ui-monospace,Menlo,monospace"
+               ${gw.over || gw.firing ? 'disabled' : ''} oninput="gw.ans=this.value;gwDraw()">
         <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-          <button class="btn" ${gw.turn !== 'you' || gw.over ? 'disabled' : ''} onclick="gwFire()">${t('gFire')}</button>
+          <button class="btn" ${gw.over || gw.firing ? 'disabled' : ''} onclick="gwFire()">${t('gFire')}</button>
+          <button class="btn sm ghost" onclick="gw.grid = gw.grid === false; gwRender()">▦ ${t('gGrid')}</button>
           <button class="btn sm ghost" onclick="gwStart()">↺ ${t('gPlay')}</button>
         </div>
       </div>
@@ -2679,44 +2848,33 @@ function gwRender() {
   </div>`;
   gwDraw();
 }
-function gwHit(m, b) {
-  // distance from point to line y = m x + b  →  |m x − y + b| / sqrt(m² + 1)
-  const den = Math.sqrt(m * m + 1);
-  return gw.targets.filter(tg => tg.alive && Math.abs(m * tg.x - tg.y + b) / den <= 0.38);
-}
 function gwFire() {
-  if (!gw || gw.turn !== 'you' || gw.over) return;
-  const hits = gwHit(gw.m, gw.b);
-  hits.forEach(tg => tg.alive = false);
-  const pts = hits.length >= 3 ? 300 : hits.length === 2 ? 200 : hits.length ? 100 : 0;
-  gw.you += pts;
-  gw.shots.push({m: gw.m, b: gw.b, side: 'you'});
-  gw.left--;
-  gw.msg = hits.length ? `⭐ × ${hits.length} → +${pts}` : '—';
-  if (gwEnd()) { gwRender(); return; }
-  gw.turn = 'ai';
+  if (!gw || gw.over || gw.firing) return;
+  const r = Math.min(gw.round, 5);
+  let fn;
+  try { fn = evCompile(document.getElementById('gwAns').value); }
+  catch (e) { gw.msg = '⚠ ' + t('gFcBadExpr'); gwRender(); return; }
+  const a = gwPt('you', r), b = gwPt('ai', r);
+  const ok = Math.abs(fn(a.x) - a.y) <= 0.26 && Math.abs(fn(b.x) - b.y) <= 0.26;
+  gw.firing = true;
+  if (ok) { b.hit = true; gw.you += 100; gw.msg = `🎯 ${t('gGwHit', r)}`; }
+  else gw.msg = `💨 ${t('gGwMiss', r)}`;
   gwRender();
-  setTimeout(gwAi, 700);
-}
-function gwAi() {
-  if (!gw || gw.over) return;
-  const alive = gw.targets.filter(tg => tg.alive);
-  const tg = alive[Math.floor(Math.random() * alive.length)];
-  const m = Math.round((Math.random() * 5 - 2.5) * 4) / 4;
-  const b = Math.round((tg.y - m * tg.x + (Math.random() * .5 - .25)) * 2) / 2;
-  const hits = gwHit(m, b);
-  hits.forEach(h => h.alive = false);
-  const pts = hits.length >= 3 ? 300 : hits.length === 2 ? 200 : hits.length ? 100 : 0;
-  gw.ai += pts;
-  gw.shots.push({m, b, side: 'ai'});
-  gw.msg = (hits.length ? `🤖 ⭐ × ${hits.length} → +${pts} · ` : '🤖 — · ') + t('gYourTurn');
-  gw.turn = 'you';
-  gwEnd();
-  gwRender();
+  setTimeout(() => {
+    if (!gw) return;
+    // AI takes its shot at your point #r with ~65% accuracy
+    if (Math.random() < 0.65) { a.hit = true; gw.ai += 100; gw.msg += ` · 🤖 🎯+100`; }
+    else gw.msg += ' · 🤖 💨';
+    gw.round++;
+    gw.firing = false;
+    if (gw.round > 5 || gwEnd()) { gwRender(); return; }
+    gw.msg += ` — ${t('gGwNext', gw.round)}`;
+    gw.ans = '';
+    gwRender();
+  }, 900);
 }
 function gwEnd() {
-  const alive = gw.targets.some(tg => tg.alive);
-  if (gw.left <= 0 || !alive) {
+  if (gw.round > 5) {
     gw.over = true;
     gw.msg = (gw.you > gw.ai ? t('gYouWin') : gw.ai > gw.you ? t('gAiWin') : t('gRoundTie')) + `  (${gw.you} : ${gw.ai})`;
     return true;
