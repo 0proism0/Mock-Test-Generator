@@ -11,11 +11,29 @@ across generated tests (tracked in `tests/*_rand_*.json`).
 
 ## Run the web app
 
-The backend is a single stdlib-Python file; the frontend is a vanilla-JS single page inlined in `app/static/index.html`.
-No `npm`, no `requirements.txt`, and no virtual-env packages are required for the app itself.
+The backend is a single stdlib-Python file (`app/server.py`) and needs no packages.
+The UI is a React + TypeScript app in `app/web/` (Vite); `server.py` serves its build
+output (`app/web/dist`) at `/`. If that build is missing, the server falls back to the
+legacy single-page UI in `app/static/index.html` (also available at `/legacy`).
+
+Fastest — no Node required (serves the legacy UI):
 
 ```bash
 python app/server.py    # then open http://localhost:8000
+```
+
+Full React UI (needs Node 20+):
+
+```bash
+pwsh scripts/build.ps1     # or: sh scripts/build.sh   (cd app/web && npm ci && npm run build)
+python app/server.py       # http://localhost:8000 now serves the React app
+```
+
+Development:
+
+```bash
+pwsh scripts/start.ps1 -Dev   # Python API on :8000 + Vite dev server (HMR) on :5173
+pwsh scripts/watch.ps1        # or: rebuild app/web/dist on every change
 ```
 
 Or, if you prefer a venv:
@@ -31,7 +49,10 @@ python -m venv .venv
 - `bank/` — question pools (`<slug>_<set>.json`): variants + real problems with sources
 - `bank_real/` — archived raw scrapes (real problems, reference)
 - `tests/` — generated mock tests (JSON)
-- `app/` — stdlib Python server + single-page exam UI (KaTeX loaded from CDN)
+- `app/` — stdlib Python server (`server.py`) + static assets
+- `app/web/` — React + TypeScript front-end (Vite); build output `app/web/dist` is served by `server.py`
+- `app/static/index.html` — legacy vanilla-JS UI (fallback when `app/web/dist` isn't built)
+- `scripts/` — build/start/watch helpers (`.ps1` + `.sh`)
 - `scraper/` — collection pipelines (AoPS wiki via browser, official PDFs/TeX/HTML)
 - `raw/` — raw downloads (wikitext, PDFs, TeX)
 - `data/` — clean per-competition JSON of AMC/AIME 真题
@@ -84,7 +105,7 @@ They are base64-encoded official PDFs (mostly MATHCOUNTS Chapter/State and USAPh
 
 ### Why is there no `requirements.txt`?
 
-The core web app is intentionally dependency-free: `app/server.py` uses only the Python standard library, and `app/static/index.html` is a plain HTML/CSS/JS single-page app (no React/Vue build step). Only a few scraper helpers need third-party packages (`pypdf` for `build_mathcounts.py`, `requests` for `push_github.py`). Install those ad-hoc when you actually run the scrapers, e.g.:
+The core web app is intentionally dependency-free: `app/server.py` uses only the Python standard library. The React front-end lives in `app/web/` and needs Node only to build; the legacy `app/static/index.html` needs nothing. Only a few scraper helpers need third-party packages (`pypdf` for `build_mathcounts.py`, `requests` for `push_github.py`). Install those ad-hoc when you actually run the scrapers, e.g.:
 
 ```bash
 pip install pypdf requests
@@ -92,4 +113,7 @@ pip install pypdf requests
 
 ### Is there a frontend framework?
 
-No separate frontend project. The UI is a single self-contained `index.html` with vanilla JavaScript; `server.py` just serves it and exposes a small JSON API. KaTeX is pulled from a CDN for math rendering.
+Yes — the UI is a React + TypeScript app in `app/web/` (built with Vite). `npm run build`
+emits `app/web/dist`, which `server.py` serves at `/`; the legacy single-file vanilla-JS UI
+(`app/static/index.html`) is kept as a fallback and at `/legacy`. Math is rendered with
+KaTeX, bundled locally (no CDN). The Python backend stays dependency-free.
