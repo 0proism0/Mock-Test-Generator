@@ -5,6 +5,7 @@ Stdlib only. Serves tests from tests/*.json, generates new tests from bank/<slug
 """
 import hashlib
 import json
+import mimetypes
 import os
 import random
 import re
@@ -23,6 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TESTS = ROOT / "tests"
 BANK = ROOT / "bank"
 STATIC = ROOT / "app" / "static"
+WEB_DIST = ROOT / "app" / "web" / "dist"  # built React app (see app/web); legacy STATIC is the fallback
 RESULTS = ROOT / "results.jsonl"
 USERS_DIR = ROOT / "users"
 USERS_FILE = ROOT / "users.json"
@@ -271,7 +273,7 @@ def _read_pk(gid):
     if not f.exists():
         return None
     try:
-        return json.loads(f.read_text())
+        return json.loads(f.read_text(encoding="utf-8"))
     except Exception:
         return None
 
@@ -279,7 +281,7 @@ def _read_pk(gid):
 def _write_pk(game):
     PK_DIR.mkdir(exist_ok=True)
     with _store_lock:
-        _pk_game_path(game["id"]).write_text(json.dumps(game, ensure_ascii=False))
+        _pk_game_path(game["id"]).write_text(json.dumps(game, ensure_ascii=False), encoding="utf-8")
 
 
 def _pk_result_for(user, test_id):
@@ -439,7 +441,7 @@ def build_pk_test(game):
         }
         tdir = _tests_dir(username)
         tdir.mkdir(parents=True, exist_ok=True)
-        (tdir / f"{test_id}.json").write_text(json.dumps(test, ensure_ascii=False))
+        (tdir / f"{test_id}.json").write_text(json.dumps(test, ensure_ascii=False), encoding="utf-8")
     game["test_id"] = test_id
     game["status"] = "active"
     game["started_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -464,7 +466,7 @@ def read_messages(a, b, since=0, limit=200):
         return []
     out = []
     with _store_lock:
-        for line in MESSAGES_FILE.read_text().splitlines():
+        for line in MESSAGES_FILE.read_text(encoding="utf-8").splitlines():
             if not line.strip():
                 continue
             try:
@@ -480,7 +482,7 @@ def read_messages(a, b, since=0, limit=200):
 def append_message(frm, to, text):
     m = {"ts": time.time(), "frm": frm, "to": to, "text": text}
     with _store_lock:
-        with MESSAGES_FILE.open("a") as f:
+        with MESSAGES_FILE.open("a", encoding="utf-8") as f:
             f.write(json.dumps(m, ensure_ascii=False) + "\n")
     return m
 
@@ -558,7 +560,7 @@ def list_tests(user=None):
         if f.name.endswith(".meta.json"):
             continue
         try:
-            d = json.loads(f.read_text())
+            d = json.loads(f.read_text(encoding="utf-8"))
             if str(d.get("id", "")).startswith("pk_"):
                 continue  # PK battles live in the PK tab, not My Tests
             out.append({
@@ -576,7 +578,7 @@ def used_sources(user=None):
     tests_dir = _tests_dir(user)
     for f in tests_dir.glob("*_rand_*.json"):
         try:
-            d = json.loads(f.read_text())
+            d = json.loads(f.read_text(encoding="utf-8"))
             for q in d.get("questions", []):
                 if q.get("source"):
                     used.add(q["source"])
@@ -625,7 +627,7 @@ def load_bank(slug, round_name=None):
         out = []
         for f in sorted(BANK.glob(f"{slug}_*.json")):
             try:
-                d = json.loads(f.read_text())
+                d = json.loads(f.read_text(encoding="utf-8"))
                 variants = d.get("variants", [])
                 allow_proof = round_allows_proofs(variants)
                 out.extend(wrap_variant(v) for v in variants if is_eligible(v, allow_proof=allow_proof))
@@ -747,7 +749,9 @@ def generate_test(slug, round_name=None, user=None):
         "total_points": total_points,
         "questions": questions,
     }
-    (tests_dir / f"{test['id']}.json").write_text(json.dumps(test, ensure_ascii=False, indent=1))
+    (tests_dir / f"{test['id']}.json").write_text(
+        json.dumps(test, ensure_ascii=False, indent=1), encoding="utf-8"
+    )
     test["reused_positions"] = reused
     return test
 
@@ -757,7 +761,7 @@ def read_results(user=None):
     if not rfile.exists():
         return []
     out = []
-    for line in rfile.read_text().splitlines():
+    for line in rfile.read_text(encoding="utf-8").splitlines():
         if line.strip():
             try:
                 out.append(json.loads(line))
@@ -813,6 +817,26 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(data)
 
+    def _send_file(self, f):
+        ctype = mimetypes.guess_type(str(f))[0] or "application/octet-stream"
+        if ctype.startswith("text/") or ctype in ("application/javascript", "application/json"):
+            ctype += "; charset=utf-8"
+        self._send(f.read_bytes(), ctype)
+
+    def _serve_web(self, path):
+        """Serve the built React app from app/web/dist; unknown paths fall back to its index.html (SPA routing)."""
+        index = WEB_DIST / "index.html"
+        if not index.exists():
+            return False
+        rel = path.lstrip("/") or "index.html"
+        target = (WEB_DIST / rel).resolve()
+        try:
+            target.relative_to(WEB_DIST.resolve())
+        except ValueError:
+            return False  # path traversal attempt
+        self._send_file(target if target.is_file() else index)
+        return True
+
     def _user(self):
         return current_user(self.headers.get("Cookie"))
 
@@ -829,6 +853,12 @@ class Handler(BaseHTTPRequestHandler):
         path = self.path.split("?")[0]
         user = self._user()
         if path == "/":
+            index = WEB_DIST / "index.html"
+            if index.exists():
+                self._send_file(index)
+            else:
+                self._send((STATIC / "index.html").read_bytes(), "text/html; charset=utf-8")
+        elif path == "/legacy":
             self._send((STATIC / "index.html").read_bytes(), "text/html; charset=utf-8")
         elif path == "/api/me":
             info = {"user": user}
@@ -855,7 +885,7 @@ class Handler(BaseHTTPRequestHandler):
             else:
                 f = ROOT / "announcements.json"
                 try:
-                    items = json.loads(f.read_text()) if f.exists() else []
+                    items = json.loads(f.read_text(encoding="utf-8")) if f.exists() else []
                 except Exception:
                     items = []
                 self._send(json.dumps({"announcements": items}))
@@ -896,7 +926,7 @@ class Handler(BaseHTTPRequestHandler):
                 if PK_DIR.exists():
                     for f in sorted(PK_DIR.glob("*.json")):
                         try:
-                            g = json.loads(f.read_text())
+                            g = json.loads(f.read_text(encoding="utf-8"))
                         except Exception:
                             continue
                         if _pk_user_in(g, user):
@@ -915,7 +945,7 @@ class Handler(BaseHTTPRequestHandler):
                 if PK_DIR.exists():
                     for f in PK_DIR.glob("*.json"):
                         try:
-                            g = json.loads(f.read_text())
+                            g = json.loads(f.read_text(encoding="utf-8"))
                         except Exception:
                             continue
                         g = _pk_maybe_expire(g)
@@ -976,7 +1006,7 @@ class Handler(BaseHTTPRequestHandler):
                 else:
                     reps = []
                     if CLASS_REPORTS_FILE.exists():
-                        for line in CLASS_REPORTS_FILE.read_text().splitlines():
+                        for line in CLASS_REPORTS_FILE.read_text(encoding="utf-8").splitlines():
                             if not line.strip():
                                 continue
                             try:
@@ -1046,6 +1076,8 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(f.read_bytes())
             else:
                 self._send('{"error": "not found"}', code=404)
+        elif not path.startswith("/api/") and self._serve_web(path):
+            pass  # React SPA asset or client-side route
         else:
             self._send('{"error": "not found"}', code=404)
 
@@ -1118,7 +1150,7 @@ class Handler(BaseHTTPRequestHandler):
                     "user": user,
                 }
                 rfile.parent.mkdir(parents=True, exist_ok=True)
-                with rfile.open("a") as f:
+                with rfile.open("a", encoding="utf-8") as f:
                     f.write(json.dumps(rec, ensure_ascii=False) + "\n")
                 # push a report copy to every class this student belongs to
                 try:
@@ -1127,7 +1159,7 @@ class Handler(BaseHTTPRequestHandler):
                         total = rec.get("total")
                         pct = round(rec["score"] / total * 100, 1) if total else None
                         with _store_lock:
-                            with CLASS_REPORTS_FILE.open("a") as f:
+                            with CLASS_REPORTS_FILE.open("a", encoding="utf-8") as f:
                                 for c in mine:
                                     rep = {"class_id": c["code"], "student": user,
                                            "test_id": rec.get("test_id"), "title": rec.get("title"),

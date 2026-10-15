@@ -11,6 +11,9 @@ __pycache__/
 scraper/state.json
 scraper/download.log
 scraper/verification/
+dist/
+.omo/
+app/web/dist/
 
 # user data & secrets — never commit
 users.json
