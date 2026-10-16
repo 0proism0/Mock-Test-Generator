@@ -25,6 +25,7 @@ class_reports.jsonl
 school_docs.json
 school_docs/
 users/
+worksheets/
 pk/
 log
 *.log

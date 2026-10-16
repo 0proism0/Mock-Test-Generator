@@ -264,6 +264,141 @@ def _doc_visible_to(doc, school_norm):
     return _norm_school(doc.get("school")) == school_norm
 
 
+# ---------- worksheets (upload a text/json file -> printable worksheet) ----------
+WORKSHEETS_DIR = ROOT / "worksheets"
+WS_MAX_BYTES = 1024 * 1024  # 1 MB raw — text files only
+WS_EXTS = ("txt", "md", "json")
+WS_Q_RE = re.compile(r"^\s*(?:#{1,6}\s*)?(?:q(?:uestion)?\s*)?(\d{1,3})[.)]\s+", re.I)
+WS_CHOICE_RE = re.compile(r"^\s*([A-E])[.)]\s+")
+WS_ANS_SECTION_RE = re.compile(r"^\s*#*\s*(?:answers?|answer key|keys?)\s*:?\s*$", re.I)
+WS_ANS_ENTRY_RE = re.compile(r"^\s*(\d{1,3})[.)]\s+(.+)$")
+WS_INLINE_ANS_RE = re.compile(r"^\s*\**\s*answer\s*:\s*\**\s*(.+?)\s*$", re.I)
+
+
+def parse_worksheet_text(text, fallback_title):
+    """Parse numbered questions from plain text / markdown.
+
+    Questions start with '1.' / '2)' / 'Q3.' / '## 4.'; choices are lines 'A.'–'E.';
+    an 'Answers:' section ('1. B', '2) 42') or an inline 'Answer: …' last line
+    fills in answers. Returns (title, items).
+    """
+    title = None
+    questions = {}   # original number -> {"lines": [], "choices": {letter: text}}
+    answers = {}     # original number -> answer text
+    section = None   # None | "answers"
+    order = []
+    for raw in text.splitlines():
+        line = raw.rstrip()
+        if title is None:
+            m_head = re.match(r"^\s*#\s+(.+)$", line)
+            if m_head:
+                title = m_head.group(1).strip()[:120]
+                continue
+        if WS_ANS_SECTION_RE.match(line):
+            section = "answers"
+            continue
+        m_ans = WS_ANS_ENTRY_RE.match(line)
+        if section == "answers" and m_ans:
+            answers[int(m_ans.group(1))] = m_ans.group(2).strip()
+            continue
+        m_q = WS_Q_RE.match(line)
+        if m_q and section != "answers":
+            n = int(m_q.group(1))
+            if n not in questions:
+                questions[n] = {"lines": [], "choices": {}}
+                order.append(n)
+            rest = line[m_q.end():].strip()
+            if rest:
+                questions[n]["lines"].append(rest)
+            continue
+        m_c = WS_CHOICE_RE.match(line)
+        if section != "answers" and order and m_c:
+            questions[order[-1]]["choices"][m_c.group(1)] = line[m_c.end():].strip()
+            continue
+        if section != "answers" and order:
+            questions[order[-1]]["lines"].append(line)
+    items = []
+    for n in order:
+        q = questions[n]
+        lines = list(q["lines"])
+        while lines and not lines[-1].strip():
+            lines.pop()
+        ans = answers.get(n, "")
+        if lines:
+            m_inline = WS_INLINE_ANS_RE.match(lines[-1])
+            if m_inline:
+                ans = ans or m_inline.group(1).strip()
+                lines.pop()
+        body = "\n".join(lines).strip()
+        if not body and not q["choices"]:
+            continue
+        letters = sorted(q["choices"])
+        choices = [q["choices"][L] for L in letters] if letters else []
+        items.append({"question": body, "choices": choices, "answer": ans,
+                      "solution": "", "points": 1})
+    if not items:
+        raise ValueError("no questions found — number your questions 1. 2. 3. …")
+    return (title or fallback_title), items
+
+
+def parse_worksheet_json(text, fallback_title):
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError as e:
+        raise ValueError(f"invalid JSON: {e}")
+    raw = data.get("questions") if isinstance(data, dict) else data
+    if not isinstance(raw, list) or not raw:
+        raise ValueError('JSON must be a list of questions or {"questions": [...]}')
+    items = []
+    for i, q in enumerate(raw, 1):
+        if not isinstance(q, dict) or not str(q.get("question", "")).strip():
+            raise ValueError(f"question {i} is missing a non-empty 'question' field")
+        choices = q.get("choices") or []
+        if not isinstance(choices, list):
+            raise ValueError(f"question {i}: 'choices' must be a list")
+        pts = q.get("points")
+        items.append({
+            "question": str(q["question"]).strip(),
+            "choices": [str(c).strip() for c in choices if str(c).strip()],
+            "answer": str(q.get("answer", "")).strip(),
+            "solution": str(q.get("solution", "")).strip(),
+            "points": pts if isinstance(pts, (int, float)) else 1,
+        })
+    title = ""
+    if isinstance(data, dict):
+        title = str(data.get("title", "")).strip()[:120]
+    return (title or fallback_title), items
+
+
+def generate_worksheet(filename, blob, owner):
+    ext = filename.rsplit(".", 1)[1].lower() if "." in filename else ""
+    if ext not in WS_EXTS:
+        raise ValueError(f"file type .{ext or '?'} not supported — use .txt, .md or .json")
+    if len(blob) > WS_MAX_BYTES:
+        raise ValueError("file too large (max 1 MB)")
+    try:
+        text = blob.decode("utf-8")
+    except UnicodeDecodeError:
+        raise ValueError("file must be UTF-8 text")
+    fallback = re.sub(r"\.(txt|md|json)$", "", filename, flags=re.I).replace("_", " ").strip()[:120] or "Worksheet"
+    if ext == "json":
+        title, items = parse_worksheet_json(text, fallback)
+    else:
+        title, items = parse_worksheet_text(text, fallback)
+    ws = {
+        "id": secrets.token_hex(8),
+        "title": title,
+        "owner": owner,
+        "created_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "questions": [dict(n=i, **it) for i, it in enumerate(items, 1)],
+        "total_points": sum(it["points"] for it in items),
+    }
+    WORKSHEETS_DIR.mkdir(exist_ok=True)
+    (WORKSHEETS_DIR / f"{ws['id']}.json").write_text(
+        json.dumps(ws, ensure_ascii=False, indent=1), encoding="utf-8")
+    return ws
+
+
 def _pk_game_path(gid):
     return PK_DIR / f"{gid}.json"
 
@@ -551,6 +686,12 @@ def _results_file(user=None):
     _, rfile = user_paths(user)
     rfile.parent.mkdir(parents=True, exist_ok=True)
     return rfile
+
+
+def _practice_file(user):
+    base = ROOT / "users" / user
+    base.mkdir(parents=True, exist_ok=True)
+    return base / "practice.json"
 
 
 def list_tests(user=None):
@@ -984,6 +1125,11 @@ class Handler(BaseHTTPRequestHandler):
             results = [r for r in read_results(user)
                        if not str(r.get("test_id", "")).startswith("pk_")]
             self._send(json.dumps(results))
+        elif path == "/api/practice":
+            if not user:
+                self._send('{"guest": true}')
+            else:
+                self._send(json.dumps(_load_json(_practice_file(user), {})))
         elif path == "/api/classes":
             if not user:
                 self._send('{"error": "login required"}', code=401)
@@ -1073,6 +1219,27 @@ class Handler(BaseHTTPRequestHandler):
         elif m := re.match(r"^/api/test/([a-z0-9_]+)$", path):
             f = self._test_file(m.group(1), user)
             if f and f.exists():
+                self._send(f.read_bytes())
+            else:
+                self._send('{"error": "not found"}', code=404)
+        elif path == "/api/worksheets":
+            out = []
+            if user and WORKSHEETS_DIR.exists():
+                files = sorted(WORKSHEETS_DIR.glob("*.json"),
+                               key=lambda p: p.stat().st_mtime, reverse=True)
+                for f in files:
+                    try:
+                        d = json.loads(f.read_text(encoding="utf-8"))
+                    except Exception:
+                        continue
+                    if d.get("owner") == user:
+                        out.append({"id": d["id"], "title": d["title"],
+                                    "n_questions": len(d.get("questions", [])),
+                                    "created_at": d.get("created_at", "")})
+            self._send(json.dumps(out, ensure_ascii=False))
+        elif m := re.match(r"^/api/worksheet/([a-f0-9]{8,16})$", path):
+            f = WORKSHEETS_DIR / f"{m.group(1)}.json"
+            if f.exists():
                 self._send(f.read_bytes())
             else:
                 self._send('{"error": "not found"}', code=404)
@@ -1495,6 +1662,43 @@ class Handler(BaseHTTPRequestHandler):
                         except OSError:
                             pass
                         self._send('{"ok": true}')
+        elif path == "/api/worksheet/generate":
+            try:
+                import base64
+                data = self._read_body()
+                raw_name = os.path.basename(data.get("filename") or "")[:120]
+                blob = base64.b64decode(data.get("data_b64") or "", validate=True)
+                ws = generate_worksheet(raw_name, blob, user or "")
+                self._send(json.dumps(ws, ensure_ascii=False))
+            except Exception as e:
+                self._send(json.dumps({"error": str(e)}), code=400)
+        elif path == "/api/practice":
+            if not user:
+                self._send('{"ok": true, "guest": true}')
+                return
+            data = self._read_body()
+            drill = re.sub(r"[^a-z]", "", str(data.get("drill", "")))[:20]
+            level = str(data.get("level", ""))[:10]
+            pct = float(data.get("pct") or 0)
+            time_s = float(data.get("time_s") or 0)
+            if not drill or level not in ("easy", "medium", "hard"):
+                self._send(json.dumps({"error": "bad request"}), code=400)
+                return
+            pfile = _practice_file(user)
+            with _store_lock:
+                stats = _load_json(pfile, {})
+                d = stats.setdefault(drill, {}).setdefault(level, {
+                    "best_pct": 0, "best_time": None, "sessions": 0, "streak": 0})
+                new_best_pct = pct > d["best_pct"]
+                new_best_time = d["best_time"] is None or (pct >= 100 and time_s < d["best_time"])
+                d["best_pct"] = max(d["best_pct"], pct)
+                if new_best_time:
+                    d["best_time"] = time_s
+                d["sessions"] += 1
+                d["streak"] = d["streak"] + 1 if pct >= 80 else 0
+                _save_json(pfile, stats)
+            self._send(json.dumps({"ok": True, "stats": stats,
+                                   "new_best_pct": new_best_pct, "new_best_time": new_best_time}))
         else:
             self._send('{"error": "not found"}', code=404)
 
