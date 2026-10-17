@@ -46,7 +46,7 @@ COMP_META = {  # slug -> (display name, n_q, tlim, category, rounds, family)
     "smt": ("SMT", 25, 110, "Math", {"General": (25, 110), "Algebra": (10, 50), "Calculus": (10, 50), "Discrete": (10, 50), "Geometry": (10, 50), "Team": (15, 50)}, "SMT"),
     "pumac": ("PUMaC", 8, 60, "Math", {"Algebra": (8, 60), "Geometry": (8, 60), "Combinatorics": (8, 60), "Number Theory": (8, 60), "Individual Finals": (4, 60), "Team": (15, 90), "Power": (11, 90)}, "PUMaC"),
     "bmt": ("BMT", 25, 90, "Math", {"General": (25, 90), "Algebra": (11, 60), "Calculus": (11, 60), "Discrete": (11, 60), "Geometry": (11, 60), "Guts": (27, 75), "Power": (3, 60), "Individual": (25, 60), "Team": (24, 60)}, "BMT"),
-    "bmmt": ("BMMT", 25, 60, "Math", None, "BMMT"),
+    "bmmt": ("BMMT", 20, 60, "Math", {"Individual": (20, 60), "Team": (19, 60)}, "BMMT"),
     "cmimc": ("CMIMC", 10, 60, "Math", {"Algebra": (10, 50), "Combinatorics": (10, 50), "Geometry": (10, 50), "Computer Science": (10, 50), "Team": (10, 30)}, "CMIMC"),
     "comc": ("COMC", 8, 150, "Math", None, "COMC"),
     "cmo": ("CMO", 5, 180, "Math", None, "CMO"),
@@ -73,6 +73,7 @@ ROUND_PATTERNS = {  # slug -> regex extracting round name from a variant's sourc
     "smt": r"SMT (\w+) Problem",
     "pumac": r"PUMaC ([\w ]+?) Problem",
     "bmt": r"(?:BMT|BmMT) (\w+) Problem",
+    "bmmt": r"BMMT (\w+) Problem",
     "cmimc": r"CMIMC ([\w ]+?) Problem",
 }
 
