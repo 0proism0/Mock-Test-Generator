@@ -38,6 +38,19 @@ export function Worksheet() {
   const [error, setError] = useState<string | null>(null)
   const [showKey, setShowKey] = useState(false)
   const fileRef = useRef<HTMLInputElement>(null)
+  const [dragOver, setDragOver] = useState(false)
+
+  function pickFiles(f: FileList | null) {
+    setFile(f?.[0] ?? null)
+    setError(null)
+    if (fileRef.current) fileRef.current.value = '' // allow re-picking the same file
+  }
+
+  function onDrop(e: React.DragEvent) {
+    e.preventDefault()
+    setDragOver(false)
+    pickFiles(e.dataTransfer.files)
+  }
 
   // deep link: /worksheet?id=...
   useEffect(() => {
@@ -156,29 +169,36 @@ export function Worksheet() {
 
   return (
     <>
-      <section className="card">
+      <section
+        className={`card ws-drop${dragOver ? ' over' : ''}`}
+        onDragOver={(e) => {
+          e.preventDefault()
+          setDragOver(true)
+        }}
+        onDragLeave={() => setDragOver(false)}
+        onDrop={onDrop}
+      >
         <h3>{t('tabWorksheet')}</h3>
         <p className="muted">{t('wsDesc')}</p>
+        <input
+          ref={fileRef}
+          id="ws-file"
+          type="file"
+          accept=".txt,.md,.json"
+          className="ws-file-input"
+          onChange={(e) => pickFiles(e.target.files)}
+        />
         <div className="ws-upload">
-          <label className="muted" htmlFor="ws-file">
-            {t('wsFile')}:
-          </label>
-          <input
-            ref={fileRef}
-            id="ws-file"
-            type="file"
-            accept=".txt,.md,.json"
-            onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          />
+          <button type="button" className="btn" disabled={busy} onClick={() => fileRef.current?.click()}>
+            {t('wsChoose')}
+          </button>
+          <span className="muted">
+            {file ? `${file.name} · ${Math.round(file.size / 1024)} KB` : t('wsDropHint')}
+          </span>
           <button type="button" className="btn" disabled={busy} onClick={() => void onGenerate()}>
             {busy ? t('loading') : t('wsGenerate')}
           </button>
         </div>
-        {file && (
-          <p className="meta">
-            {file.name} · {Math.round(file.size / 1024)} KB
-          </p>
-        )}
         {error && <p className="status err">{error}</p>}
       </section>
       <section className="card">

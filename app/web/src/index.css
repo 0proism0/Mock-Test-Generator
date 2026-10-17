@@ -1419,3 +1419,25 @@ table.stats th {
   justify-content: center;
   margin-top: 16px;
 }
+
+/* worksheet upload: hidden native input + full-card drop zone */
+.ws-file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.ws-drop {
+  position: relative;
+  border: 2px dashed transparent;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.ws-drop.over {
+  border-color: var(--accent, #2f6fd0);
+  background: rgba(47, 111, 208, 0.06);
+}
+.ws-upload {
+  align-items: center;
+}
