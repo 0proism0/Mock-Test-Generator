@@ -45,8 +45,8 @@ COMP_META = {  # slug -> (display name, n_q, tlim, category, rounds, family)
     "mathcounts": ("MATHCOUNTS", 30, 40, "Math", {"Sprint": (30, 40), "Target": (8, 24), "Team": (10, 20)}, "MATHCOUNTS"),
     "smt": ("SMT", 25, 110, "Math", {"General": (25, 110), "Algebra": (10, 50), "Calculus": (10, 50), "Discrete": (10, 50), "Geometry": (10, 50), "Team": (15, 50)}, "SMT"),
     "pumac": ("PUMaC", 8, 60, "Math", {"Algebra": (8, 60), "Geometry": (8, 60), "Combinatorics": (8, 60), "Number Theory": (8, 60), "Individual Finals": (4, 60), "Team": (15, 90), "Power": (11, 90)}, "PUMaC"),
-    "bmt": ("BMT", 25, 90, "Math", {"General": (25, 90), "Algebra": (11, 60), "Calculus": (11, 60), "Discrete": (11, 60), "Geometry": (11, 60), "Guts": (27, 75), "Power": (3, 60)}, "BMT"),
-    "bmmt": ("BMMT", 25, 60, "Math", None, "BMMT"),
+    "bmt": ("BMT", 25, 90, "Math", {"General": (25, 90), "Algebra": (11, 60), "Calculus": (11, 60), "Discrete": (11, 60), "Geometry": (11, 60), "Guts": (27, 75), "Power": (3, 60), "Individual": (25, 60), "Team": (24, 60)}, "BMT"),
+    "bmmt": ("BMMT", 20, 60, "Math", {"Individual": (20, 60), "Team": (19, 60)}, "BMMT"),
     "cmimc": ("CMIMC", 10, 60, "Math", {"Algebra": (10, 50), "Combinatorics": (10, 50), "Geometry": (10, 50), "Computer Science": (10, 50), "Team": (10, 30)}, "CMIMC"),
     "comc": ("COMC", 8, 150, "Math", None, "COMC"),
     "cmo": ("CMO", 5, 180, "Math", None, "CMO"),
@@ -73,6 +73,7 @@ ROUND_PATTERNS = {  # slug -> regex extracting round name from a variant's sourc
     "smt": r"SMT (\w+) Problem",
     "pumac": r"PUMaC ([\w ]+?) Problem",
     "bmt": r"(?:BMT|BmMT) (\w+) Problem",
+    "bmmt": r"BMMT (\w+) Problem",
     "cmimc": r"CMIMC ([\w ]+?) Problem",
 }
 
@@ -219,6 +220,184 @@ def _read_classes():
 
 def _write_classes(d):
     _save_json(CLASSES_FILE, d)
+
+
+# --- school documents storage ---
+SCHOOL_DOCS_FILE = ROOT / "school_docs.json"
+SCHOOL_DOCS_DIR = ROOT / "school_docs"
+DOC_MAX_BYTES = 25 * 1024 * 1024  # 25 MB raw
+DOC_CATEGORIES = ["science", "physics", "chemistry", "biology", "math",
+                  "computer science", "english", "history", "geography", "other"]
+DOC_MIME = {
+    "pdf": "application/pdf", "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "doc": "application/msword", "pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "ppt": "application/vnd.ms-powerpoint",
+    "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "xls": "application/vnd.ms-excel", "csv": "text/csv", "txt": "text/plain; charset=utf-8",
+    "md": "text/markdown; charset=utf-8", "png": "image/png", "jpg": "image/jpeg", "jpeg": "image/jpeg",
+}
+
+
+def _read_school_docs():
+    return _load_json(SCHOOL_DOCS_FILE, {})
+
+
+def _write_school_docs(d):
+    _save_json(SCHOOL_DOCS_FILE, d)
+
+
+def _doc_file(doc):
+    return SCHOOL_DOCS_DIR / f"{doc['id']}.{doc['ext']}"
+
+
+def _norm_school(s):
+    return " ".join((s or "").split()).casefold()
+
+
+def _user_school_entry(user):
+    """(display_name, normalized) of the user's school, or (None, None)."""
+    u = _read_users().get(user) or {}
+    s = (u.get("school") or "").strip()
+    return (s, _norm_school(s)) if s else (None, None)
+
+
+def _doc_visible_to(doc, school_norm):
+    return _norm_school(doc.get("school")) == school_norm
+
+
+# ---------- worksheets (upload a text/json file -> printable worksheet) ----------
+WORKSHEETS_DIR = ROOT / "worksheets"
+WS_MAX_BYTES = 1024 * 1024  # 1 MB raw — text files only
+WS_EXTS = ("txt", "md", "json")
+WS_Q_RE = re.compile(r"^\s*(?:#{1,6}\s*)?(?:q(?:uestion)?\s*)?(\d{1,3})[.)]\s+", re.I)
+WS_CHOICE_RE = re.compile(r"^\s*([A-E])[.)]\s+")
+WS_ANS_SECTION_RE = re.compile(r"^\s*#*\s*(?:answers?|answer key|keys?)\s*:?\s*$", re.I)
+WS_ANS_ENTRY_RE = re.compile(r"^\s*(\d{1,3})[.)]\s+(.+)$")
+WS_INLINE_ANS_RE = re.compile(r"^\s*\**\s*answer\s*:\s*\**\s*(.+?)\s*$", re.I)
+
+
+def parse_worksheet_text(text, fallback_title):
+    """Parse numbered questions from plain text / markdown.
+
+    Questions start with '1.' / '2)' / 'Q3.' / '## 4.'; choices are lines 'A.'–'E.';
+    an 'Answers:' section ('1. B', '2) 42') or an inline 'Answer: …' last line
+    fills in answers. Returns (title, items).
+    """
+    title = None
+    questions = {}   # original number -> {"lines": [], "choices": {letter: text}}
+    answers = {}     # original number -> answer text
+    section = None   # None | "answers"
+    order = []
+    for raw in text.splitlines():
+        line = raw.rstrip()
+        if title is None:
+            m_head = re.match(r"^\s*#\s+(.+)$", line)
+            if m_head:
+                title = m_head.group(1).strip()[:120]
+                continue
+        if WS_ANS_SECTION_RE.match(line):
+            section = "answers"
+            continue
+        m_ans = WS_ANS_ENTRY_RE.match(line)
+        if section == "answers" and m_ans:
+            answers[int(m_ans.group(1))] = m_ans.group(2).strip()
+            continue
+        m_q = WS_Q_RE.match(line)
+        if m_q and section != "answers":
+            n = int(m_q.group(1))
+            if n not in questions:
+                questions[n] = {"lines": [], "choices": {}}
+                order.append(n)
+            rest = line[m_q.end():].strip()
+            if rest:
+                questions[n]["lines"].append(rest)
+            continue
+        m_c = WS_CHOICE_RE.match(line)
+        if section != "answers" and order and m_c:
+            questions[order[-1]]["choices"][m_c.group(1)] = line[m_c.end():].strip()
+            continue
+        if section != "answers" and order:
+            questions[order[-1]]["lines"].append(line)
+    items = []
+    for n in order:
+        q = questions[n]
+        lines = list(q["lines"])
+        while lines and not lines[-1].strip():
+            lines.pop()
+        ans = answers.get(n, "")
+        if lines:
+            m_inline = WS_INLINE_ANS_RE.match(lines[-1])
+            if m_inline:
+                ans = ans or m_inline.group(1).strip()
+                lines.pop()
+        body = "\n".join(lines).strip()
+        if not body and not q["choices"]:
+            continue
+        letters = sorted(q["choices"])
+        choices = [q["choices"][L] for L in letters] if letters else []
+        items.append({"question": body, "choices": choices, "answer": ans,
+                      "solution": "", "points": 1})
+    if not items:
+        raise ValueError("no questions found — number your questions 1. 2. 3. …")
+    return (title or fallback_title), items
+
+
+def parse_worksheet_json(text, fallback_title):
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError as e:
+        raise ValueError(f"invalid JSON: {e}")
+    raw = data.get("questions") if isinstance(data, dict) else data
+    if not isinstance(raw, list) or not raw:
+        raise ValueError('JSON must be a list of questions or {"questions": [...]}')
+    items = []
+    for i, q in enumerate(raw, 1):
+        if not isinstance(q, dict) or not str(q.get("question", "")).strip():
+            raise ValueError(f"question {i} is missing a non-empty 'question' field")
+        choices = q.get("choices") or []
+        if not isinstance(choices, list):
+            raise ValueError(f"question {i}: 'choices' must be a list")
+        pts = q.get("points")
+        items.append({
+            "question": str(q["question"]).strip(),
+            "choices": [str(c).strip() for c in choices if str(c).strip()],
+            "answer": str(q.get("answer", "")).strip(),
+            "solution": str(q.get("solution", "")).strip(),
+            "points": pts if isinstance(pts, (int, float)) else 1,
+        })
+    title = ""
+    if isinstance(data, dict):
+        title = str(data.get("title", "")).strip()[:120]
+    return (title or fallback_title), items
+
+
+def generate_worksheet(filename, blob, owner):
+    ext = filename.rsplit(".", 1)[1].lower() if "." in filename else ""
+    if ext not in WS_EXTS:
+        raise ValueError(f"file type .{ext or '?'} not supported — use .txt, .md or .json")
+    if len(blob) > WS_MAX_BYTES:
+        raise ValueError("file too large (max 1 MB)")
+    try:
+        text = blob.decode("utf-8")
+    except UnicodeDecodeError:
+        raise ValueError("file must be UTF-8 text")
+    fallback = re.sub(r"\.(txt|md|json)$", "", filename, flags=re.I).replace("_", " ").strip()[:120] or "Worksheet"
+    if ext == "json":
+        title, items = parse_worksheet_json(text, fallback)
+    else:
+        title, items = parse_worksheet_text(text, fallback)
+    ws = {
+        "id": secrets.token_hex(8),
+        "title": title,
+        "owner": owner,
+        "created_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "questions": [dict(n=i, **it) for i, it in enumerate(items, 1)],
+        "total_points": sum(it["points"] for it in items),
+    }
+    WORKSHEETS_DIR.mkdir(exist_ok=True)
+    (WORKSHEETS_DIR / f"{ws['id']}.json").write_text(
+        json.dumps(ws, ensure_ascii=False, indent=1), encoding="utf-8")
+    return ws
 
 
 def _pk_game_path(gid):
@@ -510,6 +689,12 @@ def _results_file(user=None):
     return rfile
 
 
+def _practice_file(user):
+    base = ROOT / "users" / user
+    base.mkdir(parents=True, exist_ok=True)
+    return base / "practice.json"
+
+
 def list_tests(user=None):
     out = []
     tests_dir = _tests_dir(user)
@@ -586,8 +771,14 @@ def load_bank(slug, round_name=None):
             try:
                 d = json.loads(f.read_text(encoding="utf-8"))
                 variants = d.get("variants", [])
-                allow_proof = round_allows_proofs(variants)
-                out.extend(wrap_variant(v) for v in variants if is_eligible(v, allow_proof=allow_proof))
+                # Proof eligibility is per-round, not per-file: a bank file can mix
+                # answer-key rounds (proofs excluded) with proof-based rounds (Power).
+                groups = {}
+                for v in variants:
+                    groups.setdefault(round_of(slug, v.get("source", "")), []).append(v)
+                for vs in groups.values():
+                    allow_proof = round_allows_proofs(vs)
+                    out.extend(wrap_variant(v) for v in vs if is_eligible(v, allow_proof=allow_proof))
             except Exception:
                 continue
         _bank_cache[slug] = out
@@ -941,6 +1132,11 @@ class Handler(BaseHTTPRequestHandler):
             results = [r for r in read_results(user)
                        if not str(r.get("test_id", "")).startswith("pk_")]
             self._send(json.dumps(results))
+        elif path == "/api/practice":
+            if not user:
+                self._send('{"guest": true}')
+            else:
+                self._send(json.dumps(_load_json(_practice_file(user), {})))
         elif path == "/api/classes":
             if not user:
                 self._send('{"error": "login required"}', code=401)
@@ -973,11 +1169,84 @@ class Handler(BaseHTTPRequestHandler):
                             if r.get("class_id") == c["code"]:
                                 reps.append(r)
                     self._send(json.dumps({"reports": list(reversed(reps))[:200]}))
+        elif path == "/api/schools":
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                seen = {}
+                for u in _read_users().values():
+                    if u.get("role", "student") == "teacher" and (u.get("school") or "").strip():
+                        seen.setdefault(_norm_school(u["school"]), u["school"].strip())
+                self._send(json.dumps({"schools": sorted(seen.values(), key=str.casefold)}))
+        elif path == "/api/school/docs":
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                _, norm = _user_school_entry(user)
+                if not norm:
+                    self._send('{"error": "join a school first"}', code=403)
+                else:
+                    from urllib.parse import parse_qs, urlparse
+                    qs = parse_qs(urlparse(self.path).query)
+                    cat = (qs.get("category", [""])[0] or "").strip().lower()
+                    docs = [d for d in _read_school_docs().values() if _doc_visible_to(d, norm)]
+                    if cat:
+                        docs = [d for d in docs if d.get("category") == cat]
+                    docs.sort(key=lambda d: (d.get("category", ""), d.get("chapter", "").casefold(),
+                                             d.get("title", "").casefold(), d.get("uploaded_at", "")))
+                    self._send(json.dumps({"categories": DOC_CATEGORIES, "docs": docs}))
+        elif m := re.match(r"^/api/school/docs/([a-f0-9]+)/download$", path):
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                doc = _read_school_docs().get(m.group(1))
+                _, norm = _user_school_entry(user)
+                if not doc or not norm or not _doc_visible_to(doc, norm):
+                    self._send('{"error": "not found"}', code=404)
+                else:
+                    f = _doc_file(doc)
+                    if not f.exists():
+                        self._send('{"error": "file missing"}', code=404)
+                    else:
+                        from urllib.parse import parse_qs, urlparse
+                        qs = parse_qs(urlparse(self.path).query)
+                        inline = qs.get("inline", [""])[0] == "1" and doc["ext"] in ("pdf", "png", "jpg", "jpeg", "txt", "md")
+                        disp = "inline" if inline else "attachment"
+                        name = doc.get("filename") or f"{doc['title']}.{doc['ext']}"
+                        name = name.replace("\\", "_").replace('"', "_")
+                        data = f.read_bytes()
+                        self.send_response(200)
+                        self.send_header("Content-Type", DOC_MIME.get(doc["ext"], "application/octet-stream"))
+                        self.send_header("Content-Length", str(len(data)))
+                        self.send_header("Content-Disposition", f'{disp}; filename="{name}"')
+                        self.end_headers()
+                        self.wfile.write(data)
         elif path == "/api/stats":
             self._send(json.dumps(compute_stats(user)))
         elif m := re.match(r"^/api/test/([a-z0-9_]+)$", path):
             f = self._test_file(m.group(1), user)
             if f and f.exists():
+                self._send(f.read_bytes())
+            else:
+                self._send('{"error": "not found"}', code=404)
+        elif path == "/api/worksheets":
+            out = []
+            if user and WORKSHEETS_DIR.exists():
+                files = sorted(WORKSHEETS_DIR.glob("*.json"),
+                               key=lambda p: p.stat().st_mtime, reverse=True)
+                for f in files:
+                    try:
+                        d = json.loads(f.read_text(encoding="utf-8"))
+                    except Exception:
+                        continue
+                    if d.get("owner") == user:
+                        out.append({"id": d["id"], "title": d["title"],
+                                    "n_questions": len(d.get("questions", [])),
+                                    "created_at": d.get("created_at", "")})
+            self._send(json.dumps(out, ensure_ascii=False))
+        elif m := re.match(r"^/api/worksheet/([a-f0-9]{8,16})$", path):
+            f = WORKSHEETS_DIR / f"{m.group(1)}.json"
+            if f.exists():
                 self._send(f.read_bytes())
             else:
                 self._send('{"error": "not found"}', code=404)
@@ -1266,6 +1535,177 @@ class Handler(BaseHTTPRequestHandler):
                         self._send(json.dumps({"ok": True, "test_id": game["test_id"]}))
                     else:
                         self._send('{"error": "could not build test for this competition"}', code=400)
+        elif path == "/api/school/join":
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                data = self._read_body()
+                want = (data.get("school") or "").strip()[:80]
+                if not want:
+                    self._send('{"error": "school name required"}', code=400)
+                else:
+                    want_norm = _norm_school(want)
+                    display = None
+                    for u in _read_users().values():
+                        if u.get("role", "student") == "teacher" and _norm_school(u.get("school")) == want_norm:
+                            display = u["school"].strip()
+                            break
+                    if not display:
+                        self._send('{"error": "no teacher found for that school — check the name"}', code=404)
+                    else:
+                        with _store_lock:
+                            users = _read_users()
+                            users[user]["school"] = display
+                            _write_users(users)
+                        self._send(json.dumps({"ok": True, "school": display}))
+        elif path == "/api/school/leave":
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                with _store_lock:
+                    users = _read_users()
+                    users[user].pop("school", None)
+                    _write_users(users)
+                self._send('{"ok": true}')
+        elif path == "/api/school/docs/upload":
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                u = _read_users().get(user) or {}
+                if u.get("role", "student") != "teacher":
+                    self._send('{"error": "teacher account required"}', code=403)
+                else:
+                    school, norm = _user_school_entry(user)
+                    if not norm:
+                        self._send('{"error": "teacher account has no school"}', code=400)
+                    else:
+                        try:
+                            import base64
+                            data = self._read_body()
+                            category = (data.get("category") or "").strip().lower()
+                            chapter = (data.get("chapter") or "").strip()[:80]
+                            title = (data.get("title") or "").strip()[:120]
+                            raw_name = os.path.basename(data.get("filename") or "")[:120]
+                            ext = raw_name.rsplit(".", 1)[1].lower() if "." in raw_name else ""
+                            if category not in DOC_CATEGORIES:
+                                self._send(json.dumps({"error": "invalid category"}), code=400)
+                            elif not chapter:
+                                self._send(json.dumps({"error": "chapter required"}), code=400)
+                            elif ext not in DOC_MIME:
+                                self._send(json.dumps({"error": "file type not allowed"}), code=400)
+                            else:
+                                blob = base64.b64decode(data.get("data_b64") or "", validate=True)
+                                if not blob:
+                                    self._send(json.dumps({"error": "empty file"}), code=400)
+                                elif len(blob) > DOC_MAX_BYTES:
+                                    self._send(json.dumps({"error": "file too large (max 25 MB)"}), code=400)
+                                else:
+                                    doc_id = secrets.token_hex(8)
+                                    doc = {"id": doc_id, "school": school, "category": category,
+                                           "chapter": chapter,
+                                           "title": title or raw_name.rsplit(".", 1)[0] or doc_id,
+                                           "filename": raw_name, "ext": ext, "size": len(blob),
+                                           "uploader": user,
+                                           "uploaded_at": time.strftime("%Y-%m-%d %H:%M:%S")}
+                                    SCHOOL_DOCS_DIR.mkdir(exist_ok=True)
+                                    _doc_file(doc).write_bytes(blob)
+                                    with _store_lock:
+                                        docs = _read_school_docs()
+                                        docs[doc_id] = doc
+                                        _write_school_docs(docs)
+                                    self._send(json.dumps({"ok": True, "id": doc_id}))
+                        except Exception as e:
+                            self._send(json.dumps({"error": str(e)}), code=400)
+        elif m := re.match(r"^/api/school/docs/([a-f0-9]+)/edit$", path):
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                u = _read_users().get(user) or {}
+                if u.get("role", "student") != "teacher":
+                    self._send('{"error": "teacher account required"}', code=403)
+                else:
+                    _, norm = _user_school_entry(user)
+                    docs = _read_school_docs()
+                    doc = docs.get(m.group(1))
+                    if not doc or not norm or not _doc_visible_to(doc, norm):
+                        self._send('{"error": "not found"}', code=404)
+                    else:
+                        data = self._read_body()
+                        category = (data.get("category") or doc["category"]).strip().lower()
+                        if category not in DOC_CATEGORIES:
+                            self._send(json.dumps({"error": "invalid category"}), code=400)
+                        else:
+                            doc["category"] = category
+                            if "chapter" in data:
+                                doc["chapter"] = (data.get("chapter") or "").strip()[:80] or doc["chapter"]
+                            if "title" in data:
+                                doc["title"] = (data.get("title") or "").strip()[:120] or doc["title"]
+                            with _store_lock:
+                                docs = _read_school_docs()
+                                if m.group(1) in docs:
+                                    docs[m.group(1)] = doc
+                                    _write_school_docs(docs)
+                            self._send('{"ok": true}')
+        elif m := re.match(r"^/api/school/docs/([a-f0-9]+)/delete$", path):
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                u = _read_users().get(user) or {}
+                if u.get("role", "student") != "teacher":
+                    self._send('{"error": "teacher account required"}', code=403)
+                else:
+                    _, norm = _user_school_entry(user)
+                    docs = _read_school_docs()
+                    doc = docs.get(m.group(1))
+                    if not doc or not norm or not _doc_visible_to(doc, norm):
+                        self._send('{"error": "not found"}', code=404)
+                    else:
+                        with _store_lock:
+                            docs = _read_school_docs()
+                            docs.pop(m.group(1), None)
+                            _write_school_docs(docs)
+                        try:
+                            _doc_file(doc).unlink()
+                        except OSError:
+                            pass
+                        self._send('{"ok": true}')
+        elif path == "/api/worksheet/generate":
+            try:
+                import base64
+                data = self._read_body()
+                raw_name = os.path.basename(data.get("filename") or "")[:120]
+                blob = base64.b64decode(data.get("data_b64") or "", validate=True)
+                ws = generate_worksheet(raw_name, blob, user or "")
+                self._send(json.dumps(ws, ensure_ascii=False))
+            except Exception as e:
+                self._send(json.dumps({"error": str(e)}), code=400)
+        elif path == "/api/practice":
+            if not user:
+                self._send('{"ok": true, "guest": true}')
+                return
+            data = self._read_body()
+            drill = re.sub(r"[^a-z]", "", str(data.get("drill", "")))[:20]
+            level = str(data.get("level", ""))[:10]
+            pct = float(data.get("pct") or 0)
+            time_s = float(data.get("time_s") or 0)
+            if not drill or level not in ("easy", "medium", "hard"):
+                self._send(json.dumps({"error": "bad request"}), code=400)
+                return
+            pfile = _practice_file(user)
+            with _store_lock:
+                stats = _load_json(pfile, {})
+                d = stats.setdefault(drill, {}).setdefault(level, {
+                    "best_pct": 0, "best_time": None, "sessions": 0, "streak": 0})
+                new_best_pct = pct > d["best_pct"]
+                new_best_time = d["best_time"] is None or (pct >= 100 and time_s < d["best_time"])
+                d["best_pct"] = max(d["best_pct"], pct)
+                if new_best_time:
+                    d["best_time"] = time_s
+                d["sessions"] += 1
+                d["streak"] = d["streak"] + 1 if pct >= 80 else 0
+                _save_json(pfile, stats)
+            self._send(json.dumps({"ok": True, "stats": stats,
+                                   "new_best_pct": new_best_pct, "new_best_time": new_best_time}))
         else:
             self._send('{"error": "not found"}', code=404)
 

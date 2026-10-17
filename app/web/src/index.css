@@ -1267,3 +1267,177 @@ table.stats th {
 
 
 
+
+/* ---------- worksheet ---------- */
+.ws-upload {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+.ws-example {
+  background: #f4f6fa;
+  border: 1px solid #e0e6ef;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+.ws-head {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.ws-questions {
+  margin: 14px 0 0;
+  padding-left: 24px;
+}
+.ws-q {
+  margin: 14px 0;
+  break-inside: avoid;
+}
+.ws-q-text {
+  font-size: 15.5px;
+}
+.ws-choices {
+  margin: 6px 0 0;
+  padding-left: 24px;
+}
+.ws-choices li {
+  margin: 3px 0;
+}
+.ws-ans {
+  margin: 6px 0 0;
+  color: #2e7d4f;
+  font-size: 14px;
+}
+.ws-mine {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ws-mine li {
+  margin: 6px 0;
+}
+.ws-link {
+  background: none;
+  border: none;
+  color: #2f6fd0;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+}
+.ws-link:hover {
+  text-decoration: underline;
+}
+
+@media print {
+  header.top,
+  nav.tabs,
+  .no-print,
+  .btn {
+    display: none !important;
+  }
+  .card {
+    box-shadow: none;
+    border: none;
+  }
+  .ws-q {
+    break-inside: avoid;
+  }
+}
+
+/* ---------- practice drills ---------- */
+.dr-levels {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.dr-run {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+.dr-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+.dr-q {
+  font-size: 26px;
+  margin: 22px 0;
+  min-height: 48px;
+}
+.dr-fb {
+  min-height: 32px;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.dr-ok {
+  color: #2e9e5b;
+}
+.dr-bad {
+  color: #d05555;
+}
+.dr-input {
+  font-size: 22px;
+  text-align: center;
+  padding: 10px;
+  width: 220px;
+  border: 2px solid #cdd5e0;
+  border-radius: 10px;
+}
+.dr-exit {
+  margin-top: 16px;
+}
+.dr-summary {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+.dr-emoji {
+  font-size: 52px;
+  margin: 14px 0 4px;
+}
+.dr-scoreline {
+  font-size: 22px;
+  margin: 4px 0;
+}
+.dr-newbest {
+  color: #c98a1b;
+  font-weight: 600;
+  margin: 8px 0;
+}
+.dr-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* worksheet upload: hidden native input + full-card drop zone */
+.ws-file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.ws-drop {
+  position: relative;
+  border: 2px dashed transparent;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.ws-drop.over {
+  border-color: var(--accent, #2f6fd0);
+  background: rgba(47, 111, 208, 0.06);
+}
+.ws-upload {
+  align-items: center;
+}

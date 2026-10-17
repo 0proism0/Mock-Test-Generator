@@ -35,6 +35,40 @@ export interface TestSummary {
   time_limit_min?: number | null
 }
 
+export interface WorksheetQuestion {
+  n: number
+  question: string
+  choices: string[]
+  answer: string
+  solution: string
+  points: number
+}
+
+export interface Worksheet {
+  id: string
+  title: string
+  owner: string
+  created_at: string
+  questions: WorksheetQuestion[]
+  total_points: number
+}
+
+export interface WorksheetSummary {
+  id: string
+  title: string
+  n_questions: number
+  created_at: string
+}
+
+export interface PracticeLevelStats {
+  best_pct: number
+  best_time: number | null
+  sessions: number
+  streak: number
+}
+
+export type PracticeStats = Record<string, Record<string, PracticeLevelStats>>
+
 export interface Announcement {
   title?: string
   date?: string
@@ -250,4 +284,18 @@ export const api = {
   classCreate: (name: string, code: string) => post<{ ok: boolean; code: string }>('/api/class/create', { name, code }),
   classJoin: (code: string) => post<{ ok: boolean; name: string; school: string }>('/api/class/join', { code }),
   classReports: (code: string) => request<{ reports: ClassReport[] }>(`/api/class/${code}/reports`),
+
+  // worksheets (upload a txt/md/json file -> printable worksheet)
+  worksheetGenerate: (body: { filename: string; data_b64: string }) =>
+    post<Worksheet>('/api/worksheet/generate', body),
+  worksheet: (id: string) => request<Worksheet>(`/api/worksheet/${id}`),
+  worksheets: () => request<WorksheetSummary[]>('/api/worksheets'),
+
+  // practice drills
+  practice: () => request<PracticeStats | { guest: true }>('/api/practice'),
+  practiceSave: (body: { drill: string; level: string; pct: number; time_s: number; correct: number; total: number }) =>
+    post<{ ok: boolean; stats: PracticeStats; new_best_pct: boolean; new_best_time: boolean }>(
+      '/api/practice',
+      body,
+    ),
 }
