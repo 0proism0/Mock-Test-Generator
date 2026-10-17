@@ -45,7 +45,7 @@ COMP_META = {  # slug -> (display name, n_q, tlim, category, rounds, family)
     "mathcounts": ("MATHCOUNTS", 30, 40, "Math", {"Sprint": (30, 40), "Target": (8, 24), "Team": (10, 20)}, "MATHCOUNTS"),
     "smt": ("SMT", 25, 110, "Math", {"General": (25, 110), "Algebra": (10, 50), "Calculus": (10, 50), "Discrete": (10, 50), "Geometry": (10, 50), "Team": (15, 50)}, "SMT"),
     "pumac": ("PUMaC", 8, 60, "Math", {"Algebra": (8, 60), "Geometry": (8, 60), "Combinatorics": (8, 60), "Number Theory": (8, 60), "Individual Finals": (4, 60), "Team": (15, 90), "Power": (11, 90)}, "PUMaC"),
-    "bmt": ("BMT", 25, 90, "Math", {"General": (25, 90), "Algebra": (11, 60), "Calculus": (11, 60), "Discrete": (11, 60), "Geometry": (11, 60), "Guts": (27, 75), "Power": (3, 60)}, "BMT"),
+    "bmt": ("BMT", 25, 90, "Math", {"General": (25, 90), "Algebra": (11, 60), "Calculus": (11, 60), "Discrete": (11, 60), "Geometry": (11, 60), "Guts": (27, 75), "Power": (3, 60), "Individual": (25, 60), "Team": (24, 60)}, "BMT"),
     "bmmt": ("BMMT", 25, 60, "Math", None, "BMMT"),
     "cmimc": ("CMIMC", 10, 60, "Math", {"Algebra": (10, 50), "Combinatorics": (10, 50), "Geometry": (10, 50), "Computer Science": (10, 50), "Team": (10, 30)}, "CMIMC"),
     "comc": ("COMC", 8, 150, "Math", None, "COMC"),
@@ -770,8 +770,14 @@ def load_bank(slug, round_name=None):
             try:
                 d = json.loads(f.read_text(encoding="utf-8"))
                 variants = d.get("variants", [])
-                allow_proof = round_allows_proofs(variants)
-                out.extend(wrap_variant(v) for v in variants if is_eligible(v, allow_proof=allow_proof))
+                # Proof eligibility is per-round, not per-file: a bank file can mix
+                # answer-key rounds (proofs excluded) with proof-based rounds (Power).
+                groups = {}
+                for v in variants:
+                    groups.setdefault(round_of(slug, v.get("source", "")), []).append(v)
+                for vs in groups.values():
+                    allow_proof = round_allows_proofs(vs)
+                    out.extend(wrap_variant(v) for v in vs if is_eligible(v, allow_proof=allow_proof))
             except Exception:
                 continue
         _bank_cache[slug] = out
