@@ -212,6 +212,8 @@ const I18N: Record<Lang, Record<string, string>> = {
     closedWarn: '⚠ Test closed because you were away for 30 seconds. Your answers were discarded.',
     disclaimer:
       '<b>Disclaimer:</b> For <b>AMC 8, AMC 10, AMC 12, AIME, and Math Kangaroo</b>, we use <b>modified questions</b> — real problems with numbers changed and answers recomputed (marked <i>Modified from …</i>). For <b>all other competitions</b>, mock tests use the <b>original official past problems</b> (marked <i>Real problem · …</i>), which their organizers publish free for practice.',
+    themeToDark: 'Switch to dark mode',
+    themeToLight: 'Switch to light mode',
   },
   zh: {
     tabNew: '🎲 生成新试卷',
@@ -418,6 +420,8 @@ const I18N: Record<Lang, Record<string, string>> = {
     closedWarn: '⚠ 试卷已关闭：你离开了 30 秒，作答已被丢弃。',
     disclaimer:
       '<b>声明：</b>对于 <b>AMC 8、AMC 10、AMC 12、AIME 和袋鼠数学</b>，我们使用<b>改编题</b> — 修改数字并重算答案的真题（标记为 <i>Modified from …</i>）。对于<b>其他所有竞赛</b>，模拟卷使用<b>官方原始真题</b>（标记为 <i>Real problem · …</i>），这些真题由主办方免费公开发布。',
+    themeToDark: '切换到深色模式',
+    themeToLight: '切换到浅色模式',
   },
 }
 

@@ -3,6 +3,31 @@
 export const GW_W = 920
 export const GW_H = 700
 
+/**
+ * Read a theme token at draw time. A <canvas> can't resolve `var(--x)` itself, so every
+ * painter asks the document element for the live value; the light-mode colour is the
+ * fallback for the first paint before index.css has been applied.
+ */
+export function cssVar(name: string, fallback: string): string {
+  const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim()
+  return v || fallback
+}
+
+/** `#rgb` / `#rrggbb` → `rgba(r,g,b,a)`. Anything else (e.g. an already-translucent
+ *  colour) is returned untouched so a surprise token can't blank out a curve. */
+export function withAlpha(color: string, alpha: number): string {
+  const hex = color.trim().replace(/^#/, '')
+  const full = hex.length === 3 ? hex.replace(/./g, (c) => c + c) : hex
+  if (!/^[0-9a-f]{6}$/i.test(full)) return color
+  const n = parseInt(full, 16)
+  return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${alpha})`
+}
+
+/** "You" / "AI" plot colours, resolved from the theme tokens at draw time. */
+export function plotColor(who: 'you' | 'ai'): string {
+  return who === 'you' ? cssVar('--plot-you', '#2b6fe3') : cssVar('--plot-ai', '#d3453d')
+}
+
 /** World (math) coords → canvas pixels. */
 export function gwXY(x: number, y: number): [number, number] {
   return [GW_W / 2 + (x * (GW_W / 2 - 24)) / 10, GW_H / 2 - (y * (GW_H / 2 - 24)) / 10]
@@ -39,7 +64,7 @@ export function compile(input: string): (x: number) => number {
 export function drawGrid(ctx: CanvasRenderingContext2D, W: number, H: number, gridOn: boolean): void {
   ctx.clearRect(0, 0, W, H)
   if (!gridOn) return
-  ctx.strokeStyle = '#e4e9f0'
+  ctx.strokeStyle = cssVar('--plot-grid', '#e4e9f0')
   ctx.lineWidth = 1
   for (let i = -10; i <= 10; i += 2) {
     let a = gwXY(i, -10)
@@ -55,7 +80,7 @@ export function drawGrid(ctx: CanvasRenderingContext2D, W: number, H: number, gr
     ctx.lineTo(b[0], b[1])
     ctx.stroke()
   }
-  ctx.strokeStyle = '#8a94a6'
+  ctx.strokeStyle = cssVar('--plot-axis', '#8a94a6')
   ctx.lineWidth = 1.5
   let a = gwXY(-10, 0)
   let b = gwXY(10, 0)

@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowLeft, Grid, RotateCcw } from '../../components/icons'
 import { useI18n } from '../../lib/i18n'
-import { GW_H, GW_W, compile, drawCurve, drawGrid, gwXY } from './engine'
+import { useTheme } from '../../lib/theme'
+import { GW_H, GW_W, compile, cssVar, drawCurve, drawGrid, gwXY, plotColor, withAlpha } from './engine'
 import { StatusLine } from './StatusLine'
 
 interface Pt {
@@ -42,6 +43,7 @@ function polyStr(coef: number[]): string {
 /** Function Chess: the enemy reveals points one by one; fit a function through all of them. */
 export function FunctionChess({ onBack }: { onBack: () => void }) {
   const { t, tip } = useI18n()
+  const { theme } = useTheme()
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const timerRef = useRef<number | null>(null)
 
@@ -121,26 +123,35 @@ export function FunctionChess({ onBack }: { onBack: () => void }) {
     if (!cv) return
     const ctx = cv.getContext('2d')
     if (!ctx) return
-    drawGrid(ctx, GW_W, GW_H, grid)
-    if (ans) {
-      try {
-        drawCurve(ctx, compile(ans), 'rgba(43,111,227,.8)')
-      } catch {
-        /* invalid while typing */
+    // Deferred one frame so the provider's <html data-theme> stamp has landed before the
+    // tokens are read — child effects flush before the provider's own effect.
+    const raf = requestAnimationFrame(() => {
+      drawGrid(ctx, GW_W, GW_H, grid)
+      if (ans) {
+        try {
+          drawCurve(ctx, compile(ans), withAlpha(plotColor('you'), 0.8))
+        } catch {
+          /* invalid while typing */
+        }
       }
-    }
-    for (const p of pts) {
-      if (!p.shown) continue
-      const [x, y] = gwXY(p.x, p.y)
-      ctx.fillStyle = '#d3453d'
-      ctx.strokeStyle = '#fff'
-      ctx.lineWidth = 2
-      ctx.beginPath()
-      ctx.arc(x, y, 8, 0, Math.PI * 2)
-      ctx.fill()
-      ctx.stroke()
-    }
-  }, [pts, ans, grid])
+      // The ring is knocked out to the plot background rather than hard-coded white: on the
+      // light plot it was always white-on-white, and in dark mode a white ring would halo
+      // the dot. This way the dot sits cleanly on both.
+      const ring = cssVar('--plot-bg', '#ffffff')
+      for (const p of pts) {
+        if (!p.shown) continue
+        const [x, y] = gwXY(p.x, p.y)
+        ctx.fillStyle = plotColor('ai')
+        ctx.strokeStyle = ring
+        ctx.lineWidth = 2
+        ctx.beginPath()
+        ctx.arc(x, y, 8, 0, Math.PI * 2)
+        ctx.fill()
+        ctx.stroke()
+      }
+    })
+    return () => cancelAnimationFrame(raf)
+  }, [pts, ans, grid, theme])
 
   function submit() {
     if (over || placing) return
@@ -203,7 +214,7 @@ export function FunctionChess({ onBack }: { onBack: () => void }) {
             disabled={over || placing}
             onChange={(e) => setAns(e.target.value)}
           />
-          <div style={{ fontSize: 12, color: '#999', marginTop: 4 }}>{t('gFcHint')}</div>
+          <div style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 4 }}>{t('gFcHint')}</div>
           <div style={{ marginTop: 12, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             <button className="btn" type="button" disabled={over || placing} onClick={submit}>
               {t('gFcSubmit')}

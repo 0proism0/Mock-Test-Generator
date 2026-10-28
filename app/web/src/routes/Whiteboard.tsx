@@ -10,7 +10,8 @@ import {
 } from 'react'
 import { AlertTriangle, Edit3, Keyboard, Plus, X } from '../components/icons'
 import { useI18n } from '../lib/i18n'
-import { WB_CATS, WB_COLORS } from './whiteboard/data'
+import { useTheme } from '../lib/theme'
+import { WB_CATS, WB_COLORS, WB_INK, wbPaintColor } from './whiteboard/data'
 import { WB_KEYS, type WbKey } from './whiteboard/keys'
 
 interface Stroke {
@@ -69,6 +70,7 @@ function loadState(): { strokes: Stroke[]; notes: Note[]; seq: number } {
 /** Legacy "Whiteboard" tab: canvas drawing, a formula library, and draggable LaTeX notes. */
 export function Whiteboard() {
   const { t, lang } = useI18n()
+  const { theme } = useTheme()
   const initial = useMemo(() => loadState(), [])
 
   const strokesRef = useRef<Stroke[]>(initial.strokes)
@@ -117,7 +119,8 @@ export function Whiteboard() {
 
   function drawStroke(ctx: CanvasRenderingContext2D, s: Stroke) {
     if (s.erase) ctx.globalCompositeOperation = 'destination-out'
-    ctx.strokeStyle = s.color
+    // Stored colours are theme-independent; only the ink swatch is remapped on paint.
+    ctx.strokeStyle = wbPaintColor(s.color)
     ctx.lineWidth = s.size
     ctx.lineCap = 'round'
     ctx.lineJoin = 'round'
@@ -163,6 +166,15 @@ export function Whiteboard() {
     requestAnimationFrame(() => resize())
     return () => ro.disconnect()
   }, [])
+
+  // A theme flip changes what --ink resolves to, so the sheet has to be repainted from the
+  // stroke list (the same path undo uses). Deferred one frame because the provider stamps
+  // <html data-theme> from its own effect and child effects flush first: reading the tokens
+  // before that stamp lands would repaint the sheet with the previous palette.
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => redraw())
+    return () => cancelAnimationFrame(raf)
+  }, [theme])
 
   // First free slot for a new note (legacy wbPlaceNote).
   function findFreeSpot(w: number, h: number, excludeId: number): { x: number; y: number } {
@@ -242,7 +254,7 @@ export function Whiteboard() {
     const last = s.pts[s.pts.length - 1]
     ctx.save()
     if (s.erase) ctx.globalCompositeOperation = 'destination-out'
-    ctx.strokeStyle = s.color
+    ctx.strokeStyle = wbPaintColor(s.color)
     ctx.lineWidth = s.size
     ctx.lineCap = 'round'
     ctx.lineJoin = 'round'
@@ -386,7 +398,7 @@ export function Whiteboard() {
   const editorTrim = editorText.trim()
   let previewNode: ReactNode
   if (!editorTrim) {
-    previewNode = <span style={{ color: '#98a2ae', fontSize: 12.5 }}>Preview</span>
+    previewNode = <span style={{ color: 'var(--ink-3)', fontSize: 12.5 }}>Preview</span>
   } else if (isPlain(editorTrim)) {
     previewClass += ' plain'
     previewNode = editorTrim
@@ -430,7 +442,8 @@ export function Whiteboard() {
             <span
               key={c}
               className={`wb-color${c === color ? ' on' : ''}`}
-              style={{ background: c }}
+              // The ink swatch shows the live theme ink; the others are fixed hues.
+              style={{ background: c === WB_INK ? 'var(--ink)' : c }}
               onClick={() => {
                 setColor(c)
                 if (tool === 'eraser') setTool('pen')

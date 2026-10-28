@@ -290,7 +290,7 @@ export function TestRunner() {
           </button>
         </div>
       </div>
-      <div className="card" style={{ fontSize: 13.5, color: '#555' }}>
+      <div className="card" style={{ fontSize: 13.5, color: 'var(--ink-2)' }}>
         {test.instructions}
       </div>
       {test.questions.map((q) => (
