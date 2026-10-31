@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowLeft, Flame, Grid, RotateCcw } from '../../components/icons'
 import { useI18n } from '../../lib/i18n'
-import { GW_H, GW_W, compile, drawCurve, drawGrid, gwXY } from './engine'
+import { useTheme } from '../../lib/theme'
+import { GW_H, GW_W, compile, cssVar, drawCurve, drawGrid, gwXY, plotColor, withAlpha } from './engine'
 import { StatusLine } from './StatusLine'
 
 interface GPoint {
@@ -72,6 +73,7 @@ function initGw(msg: string): GwState {
 /** Graph War: fire a line through your point #N and the enemy's point #N. */
 export function GraphWar({ onBack }: { onBack: () => void }) {
   const { t, tip } = useI18n()
+  const { theme } = useTheme()
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const timerRef = useRef<number | null>(null)
   const [s, setS] = useState<GwState>(() => initGw(''))
@@ -87,37 +89,47 @@ export function GraphWar({ onBack }: { onBack: () => void }) {
     if (!cv) return
     const ctx = cv.getContext('2d')
     if (!ctx) return
-    drawGrid(ctx, GW_W, GW_H, s.grid)
-    if (s.ans) {
-      try {
-        drawCurve(ctx, compile(s.ans), 'rgba(43,111,227,.8)')
-      } catch {
-        /* invalid while typing */
+    // Deferred one frame so the provider's <html data-theme> stamp has landed before the
+    // tokens are read — child effects flush before the provider's own effect.
+    const raf = requestAnimationFrame(() => {
+      drawGrid(ctx, GW_W, GW_H, s.grid)
+      if (s.ans) {
+        try {
+          drawCurve(ctx, compile(s.ans), withAlpha(plotColor('you'), 0.8))
+        } catch {
+          /* invalid while typing */
+        }
       }
-    }
-    for (let i = 1; i <= 5; i++) {
-      for (const side of ['you', 'ai'] as const) {
-        const p = (side === 'you' ? s.yours : s.enemys)[i - 1]
-        if (!p || p.hit) continue
-        const isNow = i === s.round && !s.over
-        const [x, y] = gwXY(p.x, p.y)
-        ctx.globalAlpha = isNow ? 1 : 0.45
-        ctx.fillStyle = side === 'you' ? '#2b6fe3' : '#d3453d'
-        ctx.strokeStyle = '#fff'
-        ctx.lineWidth = 2
-        ctx.beginPath()
-        ctx.arc(x, y, isNow ? 12 : 9, 0, Math.PI * 2)
-        ctx.fill()
-        ctx.stroke()
-        ctx.fillStyle = '#fff'
-        ctx.font = `bold ${isNow ? 13 : 10}px sans-serif`
-        ctx.textAlign = 'center'
-        ctx.textBaseline = 'middle'
-        ctx.fillText(String(i), x, y + 0.5)
-        ctx.globalAlpha = 1
+      // Ring and number are both knocked out to the plot background instead of hard-coded
+      // white: in light mode that is exactly what the old #fff did, and in dark mode it keeps
+      // the 10–13px digit legible on the lighter dark-mode dots (white on #6ba4ff is ~2.5:1;
+      // the plot background on it is ~7:1).
+      const knockout = cssVar('--plot-bg', '#ffffff')
+      for (let i = 1; i <= 5; i++) {
+        for (const side of ['you', 'ai'] as const) {
+          const p = (side === 'you' ? s.yours : s.enemys)[i - 1]
+          if (!p || p.hit) continue
+          const isNow = i === s.round && !s.over
+          const [x, y] = gwXY(p.x, p.y)
+          ctx.globalAlpha = isNow ? 1 : 0.45
+          ctx.fillStyle = plotColor(side)
+          ctx.strokeStyle = knockout
+          ctx.lineWidth = 2
+          ctx.beginPath()
+          ctx.arc(x, y, isNow ? 12 : 9, 0, Math.PI * 2)
+          ctx.fill()
+          ctx.stroke()
+          ctx.fillStyle = knockout
+          ctx.font = `bold ${isNow ? 13 : 10}px sans-serif`
+          ctx.textAlign = 'center'
+          ctx.textBaseline = 'middle'
+          ctx.fillText(String(i), x, y + 0.5)
+          ctx.globalAlpha = 1
+        }
       }
-    }
-  }, [s])
+    })
+    return () => cancelAnimationFrame(raf)
+  }, [s, theme])
 
   function fire() {
     if (s.over || s.firing) return
@@ -182,8 +194,8 @@ export function GraphWar({ onBack }: { onBack: () => void }) {
         </button>
       </div>
       <div style={{ fontSize: 14.5, marginBottom: 8 }}>
-        {t('gGwRound', Math.min(s.round, 5))} · <b style={{ color: '#2b6fe3' }}>{t('gYou')}: {s.you}</b> ·{' '}
-        <b style={{ color: '#d3453d' }}>{t('gAI')}: {s.ai}</b>
+        {t('gGwRound', Math.min(s.round, 5))} · <b style={{ color: 'var(--plot-you)' }}>{t('gYou')}: {s.you}</b> ·{' '}
+        <b style={{ color: 'var(--plot-ai)' }}>{t('gAI')}: {s.ai}</b>
       </div>
       <div className="gw-wrap">
         <div className="gw-canvas-box">
@@ -191,7 +203,7 @@ export function GraphWar({ onBack }: { onBack: () => void }) {
         </div>
         <div className="gw-ctl">
           <StatusLine tone={s.tone}>{s.msg}</StatusLine>
-          <div style={{ fontSize: 13.5, color: '#555', marginBottom: 6 }}>{t('gGwTask')}</div>
+          <div style={{ fontSize: 13.5, color: 'var(--ink-2)', marginBottom: 6 }}>{t('gGwTask')}</div>
           <label>f(x) =</label>
           <input
             className="gw-input"

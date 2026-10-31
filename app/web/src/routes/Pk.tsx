@@ -206,7 +206,7 @@ export function Pk() {
     } else if (g.status === 'active') {
       const meDone = standings.find((s) => s.user === user && s.done)
       btn = meDone ? (
-        <Check size={16} color="#237a23" />
+        <Check size={16} style={{ color: 'var(--success)' }} />
       ) : (
         <button className="btn sm" type="button" onClick={() => navigate(`/test/${g.test_id}`)}>
           {t('pkTakeTest')}
@@ -230,7 +230,7 @@ export function Pk() {
           </span>
           <span>{btn}</span>
         </div>
-        <div style={{ fontSize: 13, color: '#666', margin: '4px 0' }}>
+        <div style={{ fontSize: 13, color: 'var(--ink-2)', margin: '4px 0' }}>
           {t('pkJoined')}: {g.accepted.length}/{g.players.length} — {g.accepted.join(', ')}
           {g.invited.length ? (
             <>
@@ -351,7 +351,7 @@ export function Pk() {
 
       {mode === 'race' && (
         <>
-          <div style={{ fontSize: 13, color: '#666', marginBottom: 4 }}>{t('pkPickFriends')}</div>
+          <div style={{ fontSize: 13, color: 'var(--ink-2)', marginBottom: 4 }}>{t('pkPickFriends')}</div>
           <div className="race-friends">
             {friends.length ? (
               friends.map((f) => (

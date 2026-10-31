@@ -45,7 +45,9 @@ export {
   Gamepad2,
   Keyboard,
   Languages,
+  Moon,
   School,
+  Sun,
   Swords,
   Telescope,
 } from 'lucide-react'

@@ -20,7 +20,7 @@ export function Games() {
           <h3>
             <Target size={18} /> {tip('gChess')}
           </h3>
-          <p style={{ color: '#666', fontSize: 13.5, margin: '6px 0 10px' }}>{t('gChessDesc')}</p>
+          <p style={{ color: 'var(--ink-2)', fontSize: 13.5, margin: '6px 0 10px' }}>{t('gChessDesc')}</p>
           <button className="btn sm" type="button">
             {t('gPlay')} <ArrowRight size={13} />
           </button>
@@ -29,7 +29,7 @@ export function Games() {
           <h3>
             <TrendingUp size={18} /> {tip('gGraph')}
           </h3>
-          <p style={{ color: '#666', fontSize: 13.5, margin: '6px 0 10px' }}>{t('gGraphDesc')}</p>
+          <p style={{ color: 'var(--ink-2)', fontSize: 13.5, margin: '6px 0 10px' }}>{t('gGraphDesc')}</p>
           <button className="btn sm" type="button">
             {t('gPlay')} <ArrowRight size={13} />
           </button>

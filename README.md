@@ -25,15 +25,15 @@ python app/server.py    # then open http://localhost:8000
 Full React UI (needs Node 20+):
 
 ```bash
-pwsh scripts/build.ps1     # or: sh scripts/build.sh   (cd app/web && npm ci && npm run build)
+pwsh scripts/build.ps1     # or: scripts\build.bat / sh scripts/build.sh  (npm ci && npm run build)
 python app/server.py       # http://localhost:8000 now serves the React app
 ```
 
 Development:
 
 ```bash
-pwsh scripts/start.ps1 -Dev   # Python API on :8000 + Vite dev server (HMR) on :5173
-pwsh scripts/watch.ps1        # or: rebuild app/web/dist on every change
+pwsh scripts/start.ps1 -Dev   # or: scripts\start.bat dev  - API on :8000 + Vite (HMR) on :5173
+pwsh scripts/watch.ps1        # or: scripts\watch.bat  - rebuild app/web/dist on every change
 ```
 
 Or, if you prefer a venv:
@@ -52,7 +52,7 @@ python -m venv .venv
 - `app/` — stdlib Python server (`server.py`) + static assets
 - `app/web/` — React + TypeScript front-end (Vite); build output `app/web/dist` is served by `server.py`
 - `app/static/index.html` — legacy vanilla-JS UI (fallback when `app/web/dist` isn't built)
-- `scripts/` — build/start/watch helpers (`.ps1` + `.sh`)
+- `scripts/` — build/start/watch helpers (`.ps1` + `.bat` + `.sh`)
 - `scraper/` — collection pipelines (AoPS wiki via browser, official PDFs/TeX/HTML)
 - `raw/` — raw downloads (wikitext, PDFs, TeX)
 - `data/` — clean per-competition JSON of AMC/AIME 真题
