@@ -1,0 +1,261 @@
+{
+ "id": "bmt_rand_03",
+ "competition": "BMT — Individual",
+ "category": "Math",
+ "title": "BMT — Individual — Random Mock #3 · 2026-10-17 09:13",
+ "instructions": "25 questions · 60 minutes · No calculator. 25 points total.",
+ "time_limit_min": 60,
+ "total_points": 25,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2020 BMT Individual Problem 1",
+   "question": "Justin throws a standard six-sided die three times in a row and notes the number of dots on the top face after each roll. How many diﬀerent sequences of outcomes could he get?",
+   "choices": null,
+   "answer": "216",
+   "solution": "There are 6 possible outcomes each time Justin rolls the die. Since he rolls it three times, there are 6 3 = 216 diﬀerent sequences of outcomes.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2020 BMT Individual Problem 2",
+   "question": "Let m be the answer to this question. What is the value of 2 m− 5?",
+   "choices": null,
+   "answer": "5",
+   "solution": "We must have that m = 2m− 5, so m = 5 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2020 BMT Individual Problem 3",
+   "question": "At Zoom University, people’s faces appear as circles on a rectangular screen. The radius of one’s face is directly proportional to the square root of the area of the screen it is displayed on. Haydn’s face has a radius of 2 on a computer screen with area 36. What is the radius of his face on a 16× 9 computer screen?",
+   "choices": null,
+   "answer": "4",
+   "solution": "We want to ﬁnd the radius of Haydn’s face on a computer screen with area 16 × 9 = 144. On this screen, his face has a radius of 2√ 36· √ 144 = 4 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2020 BMT Individual Problem 4",
+   "question": "Let a, b, and c be integers that satisfy 2a + 3b = 52, 3b +c = 41, and bc = 60. Find a +b +c.",
+   "choices": null,
+   "answer": "25",
+   "solution": "First, note that c = 60 b from the third equation; we substitute this expression for c into the second. Then 3 b + 60 b = 41. We multiply this equation by b to get 3b2 + 60 = 41b. Subtracting 41b from both sides and using the quadratic formula to solve for b, we get that b = 12 or 5 3. Since b is an integer, b must equal 12. Plugging b into the ﬁrst two equations gives us a = 8 and c = 5, so a +b +c = 25 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2020 BMT Individual Problem 5",
+   "question": "A Yule log is shaped like a right cylinder with height 10 and diameter 5. Freya cuts it parallel to its bases into 9 right cylindrical slices. After Freya cut it, the combined surface area of the slices of the Yule log increased by aπ. Compute a.",
+   "choices": null,
+   "answer": "100",
+   "solution": "In order to create the 9 slices, Freya makes 8 cuts, each of which is parallel to the bases of the cylinder. Each cut creates two new surfaces, which are circles with diameter 5. The increase in surface area, therefore, is 16 ( π·52 4 ) = 100π, and our answer is 100 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2020 BMT Individual Problem 6",
+   "question": "Haydn picks two diﬀerent integers between 1 and 100, inclusive, uniformly at random. The probability that their product is divisible by 4 can be expressed in the form m n , where m and n are relatively prime positive integers. Compute m +n.",
+   "choices": null,
+   "answer": "3",
+   "solution": "If the ﬁrst integer is congruent to 1 or 3 (mod 4), then the second must be a multiple of 4. This case occurs with probability 1 2· 25 99 = 25 198. If the ﬁrst integer is congruent to 2 (mod 4), the only requirement for the second integer is that it be even, which occurs with probability 1 4· 49 99 = 49 396. Finally, if the ﬁrst integer is a multiple of 4, the product is guaranteed to be a multiple of 4 (probability 1 4 of this case happening). Hence, the total probability is 25 198 + 49 396 + 1 4 = 1 2, and our answer is 3 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2020 BMT Individual Problem 7",
+   "question": "A square has coordinates at (0, 0), (4, 0), (0, 4), and (4, 4). Rohith is interested in circles of radius r centered at the point (1, 2). There is a range of radii a<r<b where Rohith’s circle intersects the square at exactly 6 points, where a and b are positive real numbers. Then b−a can be written in the form m +√n, where m and n are integers. Compute m +n.",
+   "choices": null,
+   "answer": "3",
+   "solution": "After some experimentation, we can ﬁnd that circles of radius 2 and radius √ 5 create 4 points of intersection and that circles with r < 2 and r > √ 5 produce at most 4 points of intersection. The range 2 < r < √ 5 produces two intersections on the x- and y-axes and two more intersections on the top side of the square, so b−a = √ 5− 2, and our answer is 3 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2020 BMT Individual Problem 8",
+   "question": "By default, iPhone passcodes consist of four base-10 digits. However, Freya decided to be unconventional and use hexadecimal (base-16) digits instead of base-10 digits! (Recall that 1016 = 1610.) She sets her passcode such that exactly two of the hexadecimal digits are prime. How many possible passcodes could she have set?",
+   "choices": null,
+   "answer": "21600",
+   "solution": "There are 6 prime numbers less than 16: 2, 3, 5, 7, B = 11 10, and D = 13 10. Therefore, there are 16 − 6 = 10 non-prime numbers less than 16. There are (4 2 ) = 6 ways to choose which two hexadecimal digits are prime, so she can set a total of 6 · 62· 102 = 21600 possible passcodes.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2019 BMT Individual Problem 9",
+   "question": "Define an almost-palindrome as a string of letters that is not a palindrome but can become a palindrome if one of its letters is changed. For example, TRUST is an almost-palindrome because the R can be changed to an S to produce a palindrome, but TRIVIAL is not an almost- palindrome because it cannot be changed into a palindrome by swapping out only one letter (both the A and the L are out of place). How many almost-palindromes contain fewer than 4 letters?",
+   "choices": null,
+   "answer": "17550",
+   "solution": "No almost-palindrome can contain only 1 letter because all 1-letter strings are palin- dromes. In order for a 2-letter string to be an almost-palindrome, it must contain distinct letters; there are 26· 25 of those. The 3-letter strings that are almost-palindromes either have 3 distinct letters or have 2 of the same letter in a row (and 1 other letter tacked on). In the former case, there are 26· 25· 24 almost-palindromes; in the latter, there are 2· 26· 25 (to account for order). Thus, there are a total of 26·25+26·25·24+2·26·25 = 27·26·25 = 17550 almost-palindromes with fewer than 4 letters.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2020 BMT Individual Problem 10",
+   "question": "Given that p and p4 + 34 are both prime numbers, compute p.",
+   "choices": null,
+   "answer": "5",
+   "solution": "By Fermat’s Little Theorem, 5 dividesp4 +34 for all p not divisible by 5. So if p4 +34 is prime, then 5|p, but if p is prime, it must equal 5 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2020 BMT Individual Problem 11",
+   "question": "Equilateral triangle ABC has side length 2. A semicircle is drawn with diameter BC such that it lies outside the triangle, and minor arc ˆBC is drawn so that it is part of a circle centered atA. The area of the “lune” that is inside the semicircle but outside sector ABC can be expressed in the form√p− qπ r , where p,q, and r are positive integers such that q andr are relatively prime. Compute p +q +r. A B C 2",
+   "choices": null,
+   "answer": "10",
+   "solution": "The desired area is the sum of the areas of triangle ABC and the semicircle, minus the area of sector ABC. This area is equal to √ 3 +π 2− 1 6(4π) = √ 3− π 6 , and our answer is 10 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2020 BMT Individual Problem 12",
+   "question": "Compute the remainder when 98! is divided by 101.",
+   "choices": null,
+   "answer": "50",
+   "solution": "Let the remainder be 0 ≤x≤ 100. By Wilson’s Theorem, 100! ≡− 1 (mod 101), so 100· 99· 98!≡ 100· 99·x≡− 1 (mod 101). Since 100 ≡− 1 (mod 101) and 99 ≡− 2 (mod 101), it remains to solve for x such that 2x≡− 1≡ 100 (mod 101) which gives 50 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2020 BMT Individual Problem 13",
+   "question": "Sheila is making a regular-hexagon-shaped sign with side length 1. Let ABCDEF be the regular hexagon, and let R,S,T and U be the midpoints of FA,BC,CD and EF , respectively. Sheila splits the hexagon into four regions of equal width: trapezoids ABSR,RSCF,FCTU , and UTDE . She then paints the middle two regions gold. The fraction of the total hexagon that is gold can be written in the form m n , where m andn are relatively prime positive integers. Compute m +n. E D C BA F R S TU",
+   "choices": null,
+   "answer": "19",
+   "solution": "We can split the hexagon into 24 equilateral triangles with side length 1 2. Note that the gold region is an area consisting of exactly 14 triangles. Then the fraction that is painted is 14 24 = 7 12, and our answer is 19 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2020 BMT Individual Problem 14",
+   "question": "Let B,M, andT be the three roots of the equation x3 + 20x2− 18x− 19 = 0. What is the value of|(B + 1)(M + 1)(T + 1)|?",
+   "choices": null,
+   "answer": "18",
+   "solution": "Notice that (B + 1), (M + 1), and (T + 1) are the roots of the polynomial (x− 1)3 + 20(x− 1)2− 18(x− 1)− 19. To ﬁnd (B + 1)(M + 1)(T + 1), we need to ﬁnd the constant term of that polynomial according to Vieta’s Formulas. Expanding, we get that the constant term of (x− 1)3 + 20(x− 1)2− 18(x− 1)− 19 is−1 + 20 + 18− 19 = 18, so the desired product is 18 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2020 BMT Individual Problem 15",
+   "question": "The graph of the degree 2021 polynomial P (x), which has real coeﬃcients and leading coeﬃcient 1, meets the x-axis at the points (1 , 0), (2, 0), (3, 0),..., (2020, 0) and nowhere else. The mean of all possible values of P (2021) can be written in the form a!/b, where a and b are positive integers and a is as small as possible. Compute a +b.",
+   "choices": null,
+   "answer": "2023",
+   "solution": "Since P (x) has degree 2021 and has real roots 1 , 2,..., 2020, the 2021st root must also be real and hence be an element of the set {1, 2,..., 2020}. That is, one of the numbers 1, 2,··· , 2020 is a double root. Let this double root be r. Then P (x) = (x− 1)(x− 2)··· (x− 2020)· (x−r), so P (2021) = 2020· 2019· 2018····· 1· (2021−r) = 2020!· (2021−r). Because r is taken from{1, 2,··· , 2020}, the average of the possible values of P (2021) is 1 2020· 2020∑ r=1 2020!·(2021−r) = 1 2020·2020!·(2020+2019+··· +2+1) = 1 2020·2020!·2020· 2021 2 = 2021! 2 . Hence, we have a = 2021 and b = 2, and a +b = 2021 + 2 = 2023 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2019 BMT Individual Problem 16",
+   "question": "Let ABC be a triangle with AB = 26,BC = 51, and CA = 73, and let O be an arbitrary point in the interior of △ABC. Lines l1, l2, and l3 pass through O and are parallel to AB, BC, and CA, respectively. The intersections of l1, l2, and l3 and the sides of △ABC form a hexagon whose area is A. Compute the minimum value of A.",
+   "choices": null,
+   "answer": "280",
+   "solution": "First realize that the minimum area of the hexagon is2 3 that of the triangle, regardless of the angle measures of the triangle. This can be proven using arguments regarding parallel lines and similar triangles. Proof: Notation: l1 intersectsAC at D, BC at G; l2 intersectsAB at F , AC at I; l3 intersectsAB at E, BC at H. Then DEFGHI is the hexgon whose minimum area is wanted. By tracing parallel lines and similar triangles, we have AEF O AABC + AOGH AABC + ADOI AABC = \u0012FO BC \u00132 + \u0012GH BC \u00132 + \u0012OI BC \u00132 = \u0012BG BC \u00132 + \u0012GH BC \u00132 + \u0012HC BC \u00132 ≥ 1 3 \u0012BG BC + GH BC + HC BC \u00132 = 1 3 Where the last line follows from Cauchy-Schwarz inequality. Hence we have AEF O +AOGH + ADOI≥ 1 3AABC, and from there AAED +AF BG +AIHC≤ 1 2(1− 1 3)AABC = 1 3AABC. Therefore, the area of the hexgon ADEF GHI =AABC− (AAED +AF BG +AIHC )≥ 1− 1 3 = 2 3. The equality is reached when O is the centroid of triangle ABC. Use Heron’s formula and we can get the area of the triangle is √ 75· 49· 24· 2 = 420. Thus the minimum area of the hexagon is 420 3 · 2 = 280",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2020 BMT Individual Problem 17",
+   "question": "Shrek throws 5 balls into 5 empty bins, where each ball’s target is chosen uniformly at random. After Shrek throws the balls, the probability that there is exactly one empty bin can be written in the form m n , where m and n are relatively prime positive integers. Compute m +n.",
+   "choices": null,
+   "answer": "173",
+   "solution": "In order to have exactly one empty bin, we must have 1 bin with 2 balls and 3 bins with 1 ball. There are 5 ways to choose the empty bin, 4 ways to choose the bin with 2 balls, and (5 2 ) = 10 ways to choose the 2 balls that go into one bin. Moreover, there are 3! = 6 ways to throw the remaining balls into distinct bins. There are 5 5 total outcomes, so the desired probability is 5·4·10·6 55 = 48 125, and our answer is 173 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2020 BMT Individual Problem 18",
+   "question": "Let x and y be integers between 0 and 5, inclusive. For the system of modular congruences { x + 3y≡ 1 (mod 2) 4x + 5y≡ 2 (mod 3) , ﬁnd the sum of all distinct possible values of x +y.",
+   "choices": null,
+   "answer": "25",
+   "solution": "The ﬁrst equation reduces to x + 3y =x + (y + 2y)≡x +y≡ 1 (mod 2), so x and y are of diﬀerent parities. The second equation similarly reduces to x + 2y≡ 2 (mod 3). By the Chinese Remainder Theorem, we want solutions ( x,y ) (mod 6), and we get that y≡x + 1 (mod 6). Thus, our sum becomes 1 + 3 + 5 + 7 + 9 = 25 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2020 BMT Individual Problem 19",
+   "question": "Alice is standing on the circumference of a large circular room of radius 10. There is a circular pillar in the center of the room of radius 5 that blocks Alice’s view. The total area in the room Alice can see can be expressed in the form mπ n +p√q, wherem andn are relatively prime positive integers and p andq are integers such that q is square-free. Compute m +n +p +q. (Note that the pillar is not included in the total area of the room.) A 5 5",
+   "choices": null,
+   "answer": "156",
+   "solution": "A 5 5 60◦ 60◦ The region is composed of a 120◦ sector of the annulus plus two 60◦ sectors with radius 10, minus two 30-60-90 triangles of side lengths 5 , 5 √ 3, and 10 (see diagram). The area of the annulus sector is 120 360π(102− 52) = 25π, the total area of the two triangles is 2 · 25 √ 3 2 = 25 √ 3, and the total area of the 60◦ sectors is 2· 60 360·π· 102 = 100π 3 . Adding and subtracting in the right order gives an area of 25π− 25 √ 3 + 100π 3 = 175π 3 − 25 √ 3 and thus our ﬁnal answer is 156 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "2020 BMT Individual Problem 20",
+   "question": "Compute the number of positive integers n≤ 1890 such that n leaves an odd remainder when divided by all of 2, 3, 5, and 7.",
+   "choices": null,
+   "answer": "54",
+   "solution": "There are 1·1·2·3 = 6 possible combinations of remainders when divided by 2, 3, 5, 7. By the Chinese Remainder Theorem, there are 6 values of n every block of lcm(2, 3, 5, 7) = 210. Up to 210· 9 = 1890, there are 6· 9 = 54 values of n.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "2020 BMT Individual Problem 21",
+   "question": "Let P be the probability that the product of 2020 real numbers chosen independently and uniformly at random from the interval [ −1, 2] is positive. The value of 2 P− 1 can be written in the form (m n )b, where m,n andb are positive integers such that m andn are relatively prime and b is as large as possible. Compute m +n +b.",
+   "choices": null,
+   "answer": "2024",
+   "solution": "We require that an even number of real numbers are negative (or equivalently, positive), which occurs with probability 1 32020 + (2020 2 ) 22 32020 +··· + (2020 2020 )22020 32020. Observe that the binomial expansion of (1 3 + 2 3 )2020 contains this sum; by symmetry, adding (1 3− 2 3 )2020 produces twice the desired sum. Simplifying, we get that P = 1 2 + 1 2·32020 , so 2P− 1 = 1 32020 , and our answer is 2024 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "2020 BMT Individual Problem 22",
+   "question": "Three lights are placed horizontally on a line on the ceiling. All the lights are initially oﬀ. Every second, Neil picks one of the three lights uniformly at random to switch: if it is oﬀ, he switches it on; if it is on, he switches it oﬀ. When a light is switched, any lights directly to the left or right of that light also get turned on (if they were oﬀ) or oﬀ (if they were on). The expected number of lights that are on after Neil has ﬂipped switches three times can be expressed in the form m n , where m and n are relatively prime positive integers. Compute m +n.",
+   "choices": null,
+   "answer": "82",
+   "solution": "By symmetry, the probability that the rightmost light is on is the same as the probability that the leftmost light is on. The leftmost light changes state if either it or the middle light is switched, which happens with probability 2 3. The probability that it is on after three seconds is then ( 2 3 )3 + 3· 2 3· ( 1 3 )2 = 14 27. Further, the middle light changes state no matter what. Now the expected number of lights on after three seconds, by linearity of expectation, is 14 27 + 1 + 14 27 = 55 27 and our answer is 82 as desired.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "2020 BMT Individual Problem 23",
+   "question": "Circle Γ has radius 10, center O, and diameter AB. Point C lies on Γ such that AC = 12. Let P be the circumcenter of∆AOC. Line←→AP intersects Γ atQ, whereQ is diﬀerent fromA. Then the value of AP AQ can be expressed in the form m n , where m and n are relatively prime positive integers. Compute m +n.",
+   "choices": null,
+   "answer": "89",
+   "solution": "OA B C Q P 12 25 4 10 10 Note that∆AOC is isosceles, with AO = CO = 10 and AC = 12. Then draw the altitude of ∆AOC from AC, and using the Law of Sines, deduce that AP , which is the circumradius of ∆AOC, is 25 4 . To ﬁnd AQ, observe that since ∆AOP and∆AOC are isosceles (two sides are circumradii), and ∠PAO ∼= ∠POA ∼= ∠POC ∼= ∠ABC since ∠AOC is an exterior angle to isosceles triangle∆BOC . Then since ∠ABC∼= ∠BAQ, and∆ABC and∆BAQ are both right (they are both inscribed in a semicircle), they’re congruent, so AQ = BC = √ 202− 122 = 16 by the Pythagorean Theorem. Then AP AQ = 25 4 16 = 25 64, and our answer is 89 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "2020 BMT Individual Problem 24",
+   "question": "Let N be the number of non-empty subsets T of S ={1, 2, 3, 4,..., 2020} satisfying max(T )> 1000. Compute the largest integer k such that 3k divides N.",
+   "choices": null,
+   "answer": "2",
+   "solution": "There are 2 2020 subsets of S, and 2 1000 subsets of S′ ={1, 2,··· , 1000}. The subsets of S′ are precisely the subsets of S that don ’thave max(T )> 1000, so we have N = 22020− 21000 = 21000(21020− 1). Now by Euler’s theorem (noting that ϕ(27) = 18), 218≡ 1 (mod 27) = ⇒ 21008≡ 1 (mod 27) = ⇒ 21020≡ 4096≡ 19 (mod 27) . It follows that 2 1020− 1≡ 18 (mod 27), so k = 2 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "2020 BMT Individual Problem 25",
+   "question": "Let f : R+→ R+ be a function such that for all x,y ∈ R+, f(x)f(y) = f(xy) +f (x y ) , where R+ represents the positive real numbers. Given that f(2) = 3, compute the last two digits of f ( 222020 ) .",
+   "choices": null,
+   "answer": "47",
+   "solution": "Observe that, setting x =y, we have f(x)2 =f(x2) +f(1). Also, setting x = 2 and y = 1 gives f(2)f(1) =f(2) +f(2), so 3f(1) = 6 and f(1) = 2. It follows that f(x)2 =f(x2) + 2, sof(x2) =f(x)2− 2. Using this recurrence, we ﬁnd that f ( 220 ) = 3≡ 3 (mod 100) f ( 221 ) = 7≡ 7 (mod 100) f ( 222 ) = 47≡ 47 (mod 100) f ( 223 ) = 2207≡ 7 (mod 100) f ( 224 ) ≡ 72− 2 = 47 (mod 100) f ( 225 ) ≡ 472− 2≡ 7 (mod 100) ... For a even, f ( 22a) ≡ 47 (mod 100). In particular, for a = 2020, we ﬁnd that the last two digits of f ( 222020 ) are 47 . For good measure, we show that a function f satisfying the criteria presented in the problem statement exists. We note that for a,x,y > 0, we have ( xa +x−a)( ya +y−a) = (xy)a + (x y )a + (y x )a + ( 1 xy )a = (xy)a + (xy)−a + (x y )a + (x y )−a , so the function f(x) =xa +x−a satisﬁes the given functional equation whenever a is positive (a could be negative as well, but sincea and−a yield the same function f, we can assume just as well that a> 0). Now we need only solve for a such that f(2) = 3. This gives 3 = 2a + 2−a =⇒ (2a)2− 3 (2a) + 1 = 0 =⇒ 2a = 3± √ 5 2 . Only one of these roots makes a> 0, so we have a = log2 3 + √ 5 2 = 2 log2ϕ, where ϕ is the gold",
+   "type": "integer",
+   "points": 1
+  }
+ ]
+}

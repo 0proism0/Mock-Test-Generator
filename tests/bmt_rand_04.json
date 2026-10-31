@@ -1,0 +1,121 @@
+{
+ "id": "bmt_rand_04",
+ "competition": "BMT — Algebra",
+ "category": "Math",
+ "title": "BMT — Algebra — Random Mock #4 · 2026-10-17 09:13",
+ "instructions": "11 questions · 60 minutes · No calculator. 11 points total.",
+ "time_limit_min": 60,
+ "total_points": 11,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2019 BMT Algebra Problem 1",
+   "question": "How many integers x satisfy x2− 9x + 18< 0?",
+   "choices": null,
+   "answer": "2",
+   "solution": "We factor the left side as (x− 6)(x− 3). For it to be negative, exactly one of the two factors must be negative; it follows that x must be strictly between 3 and 6. Thus, x can be 4 or 5, meaning that there are 2 integers that satisfy x2− 9x + 18< 0.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2022 BMT Algebra Problem 2",
+   "question": "The equation 4x− 5· 2x+1 + 16 = 0 has two integer solutions for x. Find their sum.",
+   "choices": null,
+   "answer": "4",
+   "solution": "Define y = 2x. Then our equation can be rewritten as y2− 10y + 16 = (y− 2)(y− 8) = 0. This gives y = 2 or y = 8, which means x = 1 or x = 3. Therefore, the sum of the solutions for x is 4 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2023 BMT Algebra Problem 3",
+   "question": "Consider two geometric sequences 16 , a1, a2, . . . and 56, b1, b2, . . . with the same common nonzero ratio. Given that a2023 = b2020, compute b6− a6.",
+   "choices": null,
+   "answer": "490",
+   "solution": "Let r represent the common ratio of both sequences. Then, a2023 = b2020 implies 16· r2023 = 56 · r2020. Because r ̸= 0, this means r3 = r2023 r2020 = 56 16 = 7 2. Then we have a6 = 16·r6 = 16· \u0000 r3\u00012 = 16· \u0000 7 2 \u00012 = 196. Similarly, b6 = 56·r6 = 56· \u0000 r3\u00012 = 56· \u0000 7 2 \u00012 = 686. Finally, we get that b6−a6 = 686− 196 = 490 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2023 BMT Algebra Problem 4",
+   "question": "Let f(x) be a continuous function over the real numbers such that for every integer n, f(n) = n2 and f(x) is linear over the interval [ n, n + 1]. There exists a unique two-variable polynomial g such that g(x,⌊x⌋) = f(x) for all x. Compute g(20, 23). (Here, ⌊x⌋ is defined as the greatest integer less than or equal to x. For example,⌊2⌋ = 2 and⌊−3.5⌋ =−4.)",
+   "choices": null,
+   "answer": "388",
+   "solution": "We wish to construct the function f so that over every interval [n,n + 1],f(n) =n2, f(n + 1) = n2 + 2n + 1, and f(x) is linear with these endpoints. Utilizing the equation for a line gives the general formula f(x) = n2 + (x−n)(2n + 1) over [n,n + 1]. Since n =⌊x⌋, we can simply plug this in to our equation for the general formula to get f(x) =⌊x⌋2 + (x− ⌊x⌋)(2⌊x⌋+1) =−⌊x⌋2 +2x⌊x⌋−⌊x⌋+x. Thus, if we let a =x andb =⌊x⌋, the polynomial g is g(a,b ) =−b2 + 2ab−b +a. Hence, our answer is g(20, 23) =−232 + 2· 20· 23− 23 + 20 = 388 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2019 BMT Algebra Problem 5",
+   "question": "Find the sum of all real solutions to ( x2− 10x− 12)x2+5x+2 = 1",
+   "choices": null,
+   "answer": "15",
+   "solution": "For this to be true x2− 10x− 12 has to be either 1 or −1 or x2 + 5x + 2 has to be 0. The first case has two solutions that sum to 10. The second case has x2−10x−12 =−1 whenx is 11 or−1. Note that the exponent must be an even in this case. Both of these solutions work as well, and these also sum to 10. Finally, for the third case we see that there are two solutions that sum to−5. Our total is thus 10 + 10 + (−5) = 15.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2020 BMT Algebra Problem 6",
+   "question": "Given that (n k ) = n! k!(n−k)!, the value of 10∑ n=3 (n 2 ) (n 3 )(n+1 3 ) can be written in the form m n , where m and n are relatively prime positive integers. Compute m + n.",
+   "choices": null,
+   "answer": "329",
+   "solution": "Notice using Pascal’s identity that (n 2 ) (n 3 )(n+1 3 ) = (n+1 3 ) − (n 3 ) (n 3 )(n+1 3 ) = 1(n 3 )− 1(n+1 3 ), so 10∑ n=3 (n 2 ) (n 3 )(n+1 3 ) = ( 1(3 3 )− 1(4 3 ) ) + ( 1(4 3 )− 1(5 3 ) ) +··· + ( 1(10 3 )− 1(11 3 ) ) = 1(3 3 )− 1(11 3 ) = 164 165, and therefore, our answer is 329 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2025 BMT Algebra Problem 7",
+   "question": "Letω=e 2iπ 5 . Compute 5Y i=1 5Y j=i+1 (ωi−ω j)2.",
+   "choices": null,
+   "answer": "3125",
+   "solution": "Recall that ω1,ω 2,ω 3,ω 4,ω 5 are the roots of z5− 1, so we can factor z5− 1 = (z− 1)(z4 +z3 +z2 +z + 1) =Q5 i=1(z−ωi). Then the numbers ω1,...,ω 4 are the roots of z4 +z3 +z2 +z + 1 = 4X n=0 zn so the numbers (1−ω),..., (1−ω4) are the roots of 4X n=0 (1−z)n. The constant term of this polynomial is 5 and the coefficient of the z4 term is 1, so 4Y i=1 (1−ωi) = 5 by Vieta’s. For each j∈{ 1, 2, 3, 4, 5}, we have Y 1≤i≤5,i̸=j (ωj−ωi) = 4Y i=1 (ωj−ωi+j) =ω4j 4Y i=1 (1−ωi) = 5ω4j = 5 ωj. Taking the product of the far LHS and far RHS over all j∈{ 1, 2, 3, 4, 5} gives Y 1≤i̸=j≤5 (ωj−ωi) = 55 Q5 j=1ωj = 55. Finally, 5Y i=1 5Y j=i+1 (ωi−ωj)2 = Y 1≤i<j≤5 (ωi−ωj)2 = (−1)10 Y 1≤i̸=j≤5 (ωi−ωj) = 55 = 3125 . 4",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2019 BMT Algebra Problem 8",
+   "question": "A biased coin has a 6+2 √ 3 12 chance of landing heads, and a 6−2 √ 3 12 chance of landing tails. What is the probability that the number of times the coin lands heads after being flipped 100 times is a multiple of 4? The answer can be expressed as 1 4 + 1+ab c·de wherea,b,c,d,e are positive integers. Find the minimal possible value of a +b +c +d +e.",
+   "choices": null,
+   "answer": "67",
+   "solution": "Leta be the probability of landing heads and let b be the probability of landing tails. We need to find the sum of the terms of ( a +b)100 that have exponents that are a multiple of 4. We first note that the sum of the even exponent terms is equal to (a+b)100+(a−b)100 2 . We then note that the alternating sum of even exponent terms is the real part of ( a +ib)100. Thus our desired answer is 1 2( (a+b)100+(a−b)100 2 + real[(a +ib)100]). We know a +b = 1 and a−b = √ 3 3 . Furthermore, we note that a = √ 6 3 cos( π 12) and b = √ 6 3 sin( π 12). Thus a +ib = √ 6 3 ei π 12 . We can then compute (a +ib)100 to be 250 350eiπ 3 . The real part of this is equal to 249 350 . We then compute our final probability which turns out to be 1 4 + 1+250 4·350 = 1 4 + 1+425 4·925 . Thus, our final answer is 4 + 25 + 4 + 9 + 25 = 67.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2025 BMT Algebra Problem 9",
+   "question": "Distinct complex numbersa, b,andceach have integer real part and satisfy the equations ab+bc+ca= 300, (a−b) 5 + (b−c) 5 + (c−a) 5 = 0. Compute the sum of the three least possible positive real values ofabc. 1",
+   "choices": null,
+   "answer": "2000",
+   "solution": "Note that (a−b)5 + (b−c)5 + (c−a)5 = 0 whenever a = b, b = c, or c = a, so (a−b)(b−c)(c−a) divides (a−b)5 + (b−c)5 + (c−a)5. Thus, we expect a factorization (a−b)5 + (b−c)5 + (c−a)5 = (a−b)(b−c)(c−a)P (a,b,c ) 7 for some symmetric 3-variable polynomial P . Let x =a−b and y =b−c. Then we can factor as follows: (a−b)5 + (b−c)5 + (c−a)5 =x5 +y5 + (−x−y)5 =−5x4y− 10x3y2− 10x2y3− 5xy4 =−5xy(x3 + 2x2y + 2xy2 +y3) =−5xy(x +y)(x2 +xy +y2) = 5(a−b)(b−c)(c−a)((a−b)2 + (a−b)(b−c) + (b−c)2) = 5(a−b)(b−c)(c−a)(a2 +b2 +c2−ab−bc−ca). Since a,b,c are distinct, we have a2 +b2 +c2−ab−bc−ca = 0, or a2 +b2 +c2 = 300. Then (a +b +c)2 =a2 +b2 +c2 + 2(ab +bc +ca) = 900, so either a +b +c = 30 or a +b +c =−30. First suppose a +b +c = 30, and suppose that abc = k is a positive real number. Then a,b,c are solutions to the equation x3− 30x2 + 300x−k = 0. We can rewrite the equation as k− 1000 =x3− 30x2 + 300x− 1000 = (x− 10)3. So if we let ω = −1 2 + √ 3 2 i be a third root of unity, then a,b,c = 10 + 3√ k− 1000, 10 + ω 3√ k− 1000, 10 + ω2 3√ k− 1000. Then a,b,c have integer real parts if 3√ k− 1000 is an even integer. Since 3√ k− 1000>−10, the first few possible values of k in this case are 1000 − 83 = 488,",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2025 BMT Algebra Problem 10",
+   "question": "Complex numbersa 1, a2, . . . , a10 satisfy the following property for each 1≤k≤10: 10X i=1 a9 i = 10a10 k +a 9 k−2 9. Givena 1a2···a 10 =− m n for relatively prime positive integersmandn, compute the sum of the digits ofm+n. 2",
+   "choices": null,
+   "answer": "89",
+   "solution": "For each index k, 1 10 10X i=1 a9 i−a9 k + 29 ! =a10 k . 8 We can rearrange this as a10 k + 1 10a9 k− 1 10 10X i=1 a9 i + 29 ! = 0. LetPk =P10 i=1ak i for each positive integerk. Then a1,a 2,...,a 10 are the roots of the polynomial x10 + 1 10x9− 1 10(29 +P9). Vieta’s formulas give P1 =P10 i=1ai =− 1 10,Q10 i=1ai =− 1 10(29 +P9), and all other symmetric sums are 0. So, we can apply Newton’s sums to evaluate P2,P 3,...,P 9: P2 =− 1 10P1− 2(0) = 1 100 P3 =− 1 10P2− 0P1 + 3(0) =− 1 1000 ... Pk =− 1 10Pk−1 = (−1)k 1 10k ... P9 =− 1 10P8 =− 1 109 Finally, 10Y i=1 ai =− 1 10(29 +P9) =−29· 109 1010 + 1 1010 =−511999999999 10000000000 . So, m +n = 521999999999, whose sum of digits is 5 + 2 + 1 + 9· 9 = 89 . 9",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2022 BMT Algebra Problem 11",
+   "question": "Suppose that ( i− 1)11 is a root of the quadratic x2 + Ax + B for integers A and B, where i =√−1. Compute the value of A + B.",
+   "choices": null,
+   "answer": "1984",
+   "solution": "Recall cis(θ) = cosθ +i sinθ. By Euler’s formula, (i− 1)11 = ( √ 2· cis(3π/4))11 = 211/2· cis(π/4) = 32 + 32i. Because A and B are real, it follows that x2 +Ax +B has roots 32 ± 32i since the complex conjugate must also be a root. By Vieta’s formulas, A =−64 andB = 2048, so A +B = 1984 .",
+   "type": "integer",
+   "points": 1
+  }
+ ]
+}

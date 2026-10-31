@@ -1,0 +1,201 @@
+{
+ "id": "bmmt_rand_02",
+ "competition": "BMMT — Team",
+ "category": "Math",
+ "title": "BMMT — Team — Random Mock #2 · 2026-10-17 20:00",
+ "instructions": "19 questions · 60 minutes · No calculator. 19 points total.",
+ "time_limit_min": 60,
+ "total_points": 19,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2021 BMMT Team Problem 1",
+   "question": "What is the area of a triangle with side lengths 6, 8, and 10?",
+   "choices": null,
+   "answer": "24",
+   "solution": "Note that this triangle is right since 6 2 + 82 = 102. Thus, the area is 6·8 2 = 24 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2022 BMMT Team Problem 2",
+   "question": "Richard and Alex are competing in a 150-meter race. If Richard runs at a constant speed of 5 meters per second and Alex runs at a constant speed of 3 meters per second, how many more seconds does it take for Alex to ﬁnish the race?",
+   "choices": null,
+   "answer": "20",
+   "solution": "The units for speed is m s , and we are given the speeds for both runners. We also have the length of the race, which is in units of m. To get an answer that will give us units of seconds, notice that m m/s will give units of s. We know that Alex is slower than Richard, so the amount of time it would take for Alex to ﬁnish the test will be longer than Richard’s time, so subtracting Richard’s time from Alex’s will give us our answer. We see that 150m 3m/s− 150m 5m/s = 20 seconds.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2022 BMMT Team Problem 3",
+   "question": "David and Emma are playing a game with a chest of 100 gold coins. They alternate turns, taking one gold coin if the chest has an odd number of gold coins or taking exactly half of the gold coins if the chest has an even number of gold coins. The game ends when there are no more gold coins in the chest. If Emma goes ﬁrst, how many gold coins does Emma have at the end?",
+   "choices": null,
+   "answer": "59",
+   "solution": "We follow the process: • Emma takes half of the 100 coins, or 50 coins. There are 50 coins left. • David takes half of the 50 coins, or 25 coins. There are 25 coins left. • Emma takes 1 coin, leaving 24 coins. • David takes half of the 24 coins, or 12 coins. There are 12 coins left. • Emma takes half of the 12 coins, or 6 coins. There are 6 coins left. • David takes half of the 6 coins, or 3 coins. There are 3 coins left. • Emma takes 1 coin, leaving 2 coins. • David takes half of the 2 coins, or 1 coin. There is 1 coin left. • Emma takes 1 coin, leaving 0 coins. The game ends. At the end of the game, Emma has 50 + 1 + 6 + 1 + 1 = 59 coins.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2024 BMMT Team Problem 4",
+   "question": "Oski the bear wears a sock on each of his four distinguishable paws, where each paw has either a white sock or a black sock. If his four socks are not all the same color, find the number of different sock combinations Oski can wear.",
+   "choices": null,
+   "answer": "14",
+   "solution": "For each paw, there are 2 possible colors for the sock. Therefore, there are 2 4 = 16 possible sock combinations. However, there are 2 combinations that are not allowed: the all- black and all-white sock combinations, so we ultimately have 16 − 2 = 14 combinations.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2025 BMMT Team Problem 5",
+   "question": "How many positive even numbers less than 50 are there whose digits sum to an even number?",
+   "choices": null,
+   "answer": "14",
+   "solution": "The problem says “positive” and “less than 50”, so the numbers are from 1 to 49. You could list out the numbers from 1 to 49 and see how many satisfy this property: 1 2 3 4 5 6 7 8 9 40 41 42 43 44 45 46 47 48 49 30 31 32 33 34 35 36 37 38 39 20 21 22 23 24 25 26 27 28 29 10 11 12 13 14 15 16 17 18 19 2 4 6 8 40 42 44 46 48 20 22 24 26 28 2 There are 14 even numbers whose digits also sum to an even number.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "2022 BMMT Team Problem 6",
+   "question": "Water enters at the left end of a pipe at a rate of 1 liter per 35 seconds. Some of the water exits the pipe through a leak in the middle. The rest of the water exits from the right end of the pipe at a rate of 1 liter per 36 seconds. How many minutes does it take for the pipe to leak a liter of water?",
+   "choices": null,
+   "answer": "21",
+   "solution": "The water enters at a rate of 1 35 liters per second, and exits at a rate of 1 36 liters per second. The diﬀerence, 1 35− 1 36, is the number of liters per second leaked by the pipe. This evaluates to 1 35− 1 36 = 36 35· 36− 35 35· 36 = 36− 35 35· 36 = 1 35· 36 liters per second, so the pipe leaks a liter of water every 35·36 seconds, which is 35·36 60 = 7·3 = 21 minutes.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2024 BMMT Team Problem 7",
+   "question": "Kiran has two buckets, Bucket A and Bucket B, each with lots of water, and a hose that can add water at a fixed rate to the buckets. Kiran punctures a hole into Bucket A so it leaks out water at a constant rate into Bucket B. If Kiran uses the hose to add water to Bucket A, Bucket A will first be holding 1 more gallon of water 48 seconds later. If he instead uses the hose to directly add water to Bucket B, Bucket B will first be holding 1 more gallon of water 16 seconds later. How many seconds does it take for a gallon of water to leak from Bucket A into Bucket B?",
+   "choices": null,
+   "answer": "48",
+   "solution": "Let d denote a gallon of watter, s denote the rate that the hose adds water to the buckets and w be the amount of water that leaks out of Bucket A, both in gallons per second. We can write two equations to represent that distance speed = time, namely d s−w = 48 and d s+w = 16. After cross-multiplying, we get 16 s + 16w = d and 48s− 48w = d. From these equations, we can eliminate the s variable to get w = d 48, or d w = 48 seconds. Alternatively, this could be recognized as a harmonic mean problem, solving with d w = 2·48·16 48+16 = 24, and substituting to get 48 seconds.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2024 BMMT Team Problem 8",
+   "question": "Mary has a box that is 7 inches long and wide and 4 inches tall. What is the maximum number of 2 inch by 2 inch by 1 inch blocks she can fit inside the box without it overflowing?",
+   "choices": null,
+   "answer": "48",
+   "solution": "First, note that if any block is placed with sides not parallel to the sides of the box, it is impossible to tile the whole box with blocks as there will have to be polyhedra without 2 parallel faces on the edges of the box, which can’t have the same shape as the blocks we want to fit in the box. If all blocks have sides parallel to the sides of the box, then we claim we will always miss out on at least 4 cubic inches of volume, meaning that our answer is at most 48 blocks. If we take a specific block and project it to one of the 2D faces of the box, it will always have even area: it either has a 2x2 profile or a 2x1 profile. In order to tile a 7 × 7× 1 region, the blocks must all be on the same layer, but projecting a valid tiling onto the 7 × 7 square would have the odd area of 49. This is impossible because the sum of all of the even areas would be even, meaning the maximal possible area is 48, so we are limited to 48 units of volume per 7 × 7× 1 layer. Now, we show that you can actually fit 48 blocks in the box: In order to do so, place 9 blocks in a 6 × 6× 1 grid, and stack 4 such grids on top of each other to fit in a 6 × 6× 4 volume. Then, we have two 6× 1× 4 slices remainin",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2022 BMMT Team Problem 9",
+   "question": "In pentagon ABCDE , AB = 54, AE = 45, DE = 18, ∠A = ∠C = ∠E, D is on line segment BE, and line←→BD bisects angle ∠ABC, as shown in the diagram below. What is the perimeter of pentagon ABCDE ? A B C D E45 54 18",
+   "choices": null,
+   "answer": "183",
+   "solution": "Because∆ABE is an isosceles triangle, BE = 54, and because D lies between B and E, then BD =BE−DE = 54− 18 = 36. By AA similarity,∆ABE∼∆CBD , so ∠BDC = ∠C,DC = 45· 36 54 = 30, andBC =BD = 36. Thus, the perimeter of the pentagon is 54 + 36 + 30 + 18 + 45 = 183 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2021 BMMT Team Problem 10",
+   "question": "The sum of two positive integers is 2021 less than their product. If one of them is a perfect square, compute the sum of the two numbers.",
+   "choices": null,
+   "answer": "679",
+   "solution": "Let the two numbers be m2 and n, where m and n are positive integers. Then m2n− m2− n = 2021, which gives us (m2− 1)(n− 1) = 2022. Since 2022 = 2× 3× 337, the only possible ordered pair ( m, n) that satisﬁes this equation is (2 , 675), so m2 + n = 22 + 675 = 679 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2022 BMMT Team Problem 11",
+   "question": "Hilda and Marianne play a game with a shuﬄed deck of 10 cards, numbered from 1 to 10. Hilda draws ﬁve cards, and Marianne picks up the ﬁve remaining cards. Hilda observes that she does not have any pair of consecutive cards - that is, no two cards have numbers that diﬀer by exactly",
+   "choices": null,
+   "answer": "13",
+   "solution": "The total sum of the cards in the deck is 1 + 2 + ... + 10 = 55. If Hilda’s sum is x, then Marianne’s sum is x + 1, and so all of the cards together is x + (x + 1) = 2x + 1, which is equal to 55. Solving the equation 2 x + 1 = 55 gives x = 27. To ﬁnd what cards Hilda can have, one approach is to observe that if we pair up 1-2, 3-4, 5-6, 7-8, and 9-10, she must have exactly one of each of these cards since these pairs are adjacent. Furthermore, at some point, we transition from picking the smaller number in these pairs to the larger number in these pairs. The least possible sum of Hilda’s cards is then 1 + 3 + 5 + 7 + 9 = 25, and the greatest possible sum is 2 + 4 + 6 + 8 + 10 = 30. To get the sums in between, we can swap out numbers from the pairs in a limited fashion, and get that 1 + 3 + 5 + 8 + 10 = 27, so Hilda has the cards 1, 3, 5, 8 and 10. That means that Marianne has the cards 2, 4, 6, 7 and 9. The consecutive pair that Marianne has is the 6 and 7, with a sum of 13 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2021 BMMT Team Problem 12",
+   "question": "Compute the number of positive integers n≤ 2020 for which nk+1 is a factor of (1+2+3+··· +n)k for some positive integer k.",
+   "choices": null,
+   "answer": "1",
+   "solution": "Observe that 1 + 2 + 3 + ··· + n = n(n+1) 2 , so nk+1 must be a factor of nk(n+1)k 2k . Thus, we require that n be a factor of (n+1)k 2k , which implies that (n+1)k 2k·n is an integer. If n was even, the numerator would not be a multiple of 2, so, n must be odd. However, ( n + 1)k is not a multiple of n for any n other than 1, since gcd( n, n + 1) = 1. Then there is only 1 solution: n = 1.",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2023 BMMT Team Problem 13",
+   "question": "An increasing sequence of 3-digit positive integers satisfies the following properties: • Each number is a multiple of 2, 3, or 5. • Adjacent numbers differ by only one digit and are relatively prime. (Note that positive integers x and y are relatively prime if they share no common divisors other than 1.) What is the maximum possible length of the sequence?",
+   "choices": null,
+   "answer": "7",
+   "solution": "Our main claim is that only the units digit may change in the sequence. Each number in the sequence is either a multiple of 3, or has a units digit of 0, 2, 4, 5, 6, or 8. We therefore have the following two cases: 5 • If a term in the sequence is divisible by 2 or by 5, then the next term cannot be divisible by 2 or by 5 (respectively), so the units digit must change and will thus be the only digit that changes. • Otherwise, a term in the sequence is divisible by 3 but not by 2 nor by 5, so we see that the next term must be divisible by 2 or by 5, which again requires adjusting the units digit. Now, because only the units digit may change, we know that the multiples of 3 may end in 0, 3, 6, 9; or 1, 4, 7; or 2, 5, 8. We now do casework. • Choosing the sequence 0, 3, 6, 9, we would like to add multiples of 2 and 5. The digits we have to work with are 0, 2, 3, 4, 5, 6, 8, 9, but we cannot have both 0 and 2 nor both 6 and 8, so our sequence has a length of at most six. • Choosing the sequence 1, 4, 7, we again would like to add multiples of 2 and 5. The digits we have to work with are 0, 1, 2, 4, 5, 6, 7, 8, but we cannot have both 2 and 4, so our sequence has a length of at most sev",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2021 BMMT Team Problem 14",
+   "question": "Compute the sum of all possible integer values for n such that n2− 2n− 120 is a positive prime number.",
+   "choices": null,
+   "answer": "2",
+   "solution": "Since we can factor n2− 2n− 120 = (n− 12)(n + 10), for this to be prime, one of the factors must be±1. This gives that n− 12 =±1 or n + 10 =±1, which gives the possible values of n as−11,−9, 11, or 13. Plugging these values in for n gives 23,−21,−21, and 23, respectively, so the only values of n that return a positive prime number are n =−11 and n = 13. Thus, the sum of all possible values is −11 + 13 = 2 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2022 BMMT Team Problem 15",
+   "question": "Suppose x1, x2, . . . , x2022 is a sequence of real numbers such that: x1 + x2 = 1 x2 + x3 = 2 ... x2021 + x2022 = 2021. If x1 + x499 + x999 + x1501 = 222, then what is the value of x2022?",
+   "choices": null,
+   "answer": "1330",
+   "solution": "We are given that xi +xi+1 = i and xi+1 +xi+2 = i + 1, so subtracting the ﬁrst equation from the second,xi+2−xi = 1 for alli from 1 to 2020. This means thatx1,x 3,··· ,x 2021 forms an arithmetic sequence with common diﬀerence of 1 . We are given that x1 +x499 +x999 +x1501 = 222. Notice that, by the properties of arithmetic sequences, x1 +x1501 = 2×x751 and x499 +x999 = 2×x749. Therefore, x749 +x751 = 111. And because x751 =x749 + 1, then x751 = 111+1 2 = 56. Next, we ﬁnd x2021. By the properties of arithmetic sequences, x2021 = x751 + 2021−751 2 = 56 + 635 = 691. Finally, we know that x2021 +x2022 = 2021, so x2022 = 2021− 691 = 1330 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2021 BMMT Team Problem 16",
+   "question": "Let f(x) = 1 + x3 + x10 1 + x10 . Compute f(−20) + f(−19) + f(−18) +··· + f(20).",
+   "choices": null,
+   "answer": "41",
+   "solution": "We can express f(x) as f(x) = 1 + x3 + x10 1 + x10 = 1 + x3 1 + x10 , and note that f(−x) = 1 + (−x)3 1 + (−x)10 = 1− x3 1 + x10 . Thus, f(x) + f(−x) = 2. Therefore, f(−20) + f(−19) + f(−18) +··· + f(20) = (f(−20) + f(20)) + (f(−19) + f(19)) +··· + (f(−1) + f(1)) + f(0) = 2· 20 + 1 = 41 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2021 BMMT Team Problem 17",
+   "question": "Leanne and Jing Jing are walking around the xy-plane. In one step, Leanne can move from any point ( x, y) to ( x + 1, y) or ( x, y + 1) and Jing Jing can move from ( x, y) to ( x− 2, y + 5) or (x + 3, y− 1). The number of ways that Leanne can move from (0 , 0) to (20 , 20) is equal to the number of ways that Jing Jing can move from (0, 0) to (a, b), where a and b are positive integers. Compute the minimum possible value of a + b.",
+   "choices": null,
+   "answer": "100",
+   "solution": "Note that the only way for Leanne to get to the point (20 , 20) is to go from ( x, y) to (x + 1, y) 20 times and to ( x, y + 1) 20 times, and the number of ways to do this is the number of orders she can do these two kinds of 20 moves in, or (40 20 ) . Similarly, if to get to some point (a, b) Jing Jing has to go from ( x, y) to (x− 2, y + 5) r times and to ( x + 3, y− 1) s times, then the number of ways to get to this point is the number of ways to order these two kinds of r + s moves, or (r+s r ) . Thus, we want (r + s r ) = (40 20 ) . We have that ( a, b) = (0 + r·− 2 + s· 3, 0 + r· 5 + s·− 1) = (−2r + 3s, 5r− s), so we wish to minimize a + b = 3r + 2s. A solution for this is ( r, s) = (20 , 20), and we show below that this is minimal. Therefore, ( a, b) = (0 + 20·− 2 + 20· 3, 0 + 20· 5 + 20·− 1) = (20, 80). This means that a + b = 100 . We now show that ( r, s) = (20, 20) is minimal. In other words, we show that there is no other solution (r, s) such that 3r + 2s≤ 100. First, note that if r + s > 40, then r < 20, so then (r+s r ) would contain a factor of 41, which is not okay. Thus, we need r + s < 40 to ﬁnd another valid solution. But then we need r > 20. If r≥ 23, then we do",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2022 BMMT Team Problem 18",
+   "question": "Let r, s, and t be the three roots of P (x) = x3− 9x− 9. Compute the value of (r3 + r2− 10r− 8)(s3 + s2− 10s− 8)(t3 + t2− 10t− 8).",
+   "choices": null,
+   "answer": "271",
+   "solution": "Since r is a root of P (x), r3 = 9r + 9. Thus, r3 +r2− 10r− 8 = (9r + 9) +r2− 10r− 8 =r2−r + 1. Note that r2−r + 1 = r3+1 r+1 . This can be further simpliﬁed to r2−r + 1 = 9r + 10 r + 1 = 9·− 10 9 −r −1−r . The same applies to s and t. Thus (r3 +r2− 10r− 8)(s3 +s2− 10s− 8)(t3 +t2− 10t− 8) = ( 9·− 10 9 −r −1−r )( 9·− 10 9 −s −1−s )( 9·− 10 9 −s −1−s ) = 93· P ( − 10 9 ) P (−1) = 729·− 271 729 −1 = 271 .",
+   "type": "integer",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2023 BMMT Team Problem 19",
+   "question": "Eight chairs are set around a circular table. Among these chairs, two are red, two are blue, two are green, and two are yellow. Chairs that are the same color are identical. If rotations and reflections of arrangements of chairs are considered distinct, how many arrangements of chairs satisfy the property that each pair of adjacent chairs are different colors?",
+   "choices": null,
+   "answer": "744",
+   "solution": "We conduct a count by the Principle of Inclusion-Exclusion. • Ignoring the different-color adjacency condition, there are 8! 2!2!2!2! = 2520 arrangements of chairs. • We now subtract off each of the arrangements that have a specific chair pair adjacent for each of the 4 colors: we “glue” the pair of chairs together and arrange them. For each of the 4 colors, there are 8 ways to place the glued pair of chairs, and 6! 2!2!2! = 90 ways to place the other chairs in the remaining spaces, for a total of 4 · 8 · 90 = 2880 cases to subtract. • We now add back each of the arrangements which have 2 specific chair pairs adjacent, for each combination of 2 colors. Again, we “glue” each pair of chairs together. Then for each of the (4 2 ) = 6 pairs of colors, there are 8 · 5 = 40 ways to place the two pairs of glued chairs, and 4! 2!2! = 6 ways to place the other chairs, for a total of 6 · 40 · 6 = 1440 cases to add back. • We then subtract off each of the arrangements that have 3 specific chair pairs adjacent, for each combination of 3 colors. Again, we “glue” each pair of chairs together. There are(4 3 ) = 4 combinations of 3 colors whose chairs will be glued together. This time, the easier a",
+   "type": "integer",
+   "points": 1
+  }
+ ]
+}
