@@ -6,6 +6,7 @@ import { useTheme } from '../lib/theme'
 import { RouteFallback } from './RouteFallback'
 import {
   BarChart2,
+  BookOpen,
   Edit3,
   FileText,
   Gamepad2,
@@ -16,6 +17,7 @@ import {
   School,
   Sun,
   Swords,
+  Target,
   Users,
 } from './icons'
 
@@ -30,6 +32,8 @@ interface Tab {
 
 const tabs: Tab[] = [
   { to: '/', labelKey: 'tabNew', icon: <PlusSquare size={18} />, end: true },
+  { to: '/worksheet', labelKey: 'tabWorksheet', icon: <BookOpen size={18} /> },
+  { to: '/practice', labelKey: 'tabPractice', icon: <Target size={18} /> },
   { to: '/tests', labelKey: 'tabTests', icon: <FileText size={18} /> },
   { to: '/stats', labelKey: 'tabStats', icon: <BarChart2 size={18} /> },
   { to: '/whiteboard', labelKey: 'tabWhiteboard', icon: <Edit3 size={18} /> },

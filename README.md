@@ -18,6 +18,11 @@ legacy single-page UI in `app/static/index.html` (also available at `/legacy`).
 
 Fastest — no Node required (serves the legacy UI):
 
+Accounts can be students or teachers. Teachers get classes (join-code groups with per-class result reports)
+and a school-wide **School** tab: they upload documents (PDF/Office/images/text, ≤25 MB) organized by
+category → chapter into `school_docs/` (indexed by `school_docs.json`), and students who joined the same
+school can browse, preview, and download them.
+
 ```bash
 python app/server.py    # then open http://localhost:8000
 ```

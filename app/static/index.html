@@ -235,10 +235,16 @@
             border-radius: 6px; background: #fff; cursor: pointer;
             font-family: ui-monospace, Menlo, monospace; }
   .wb-key:hover { background: #ebf3fb; border-color: #2b6cb0; }
-  .wb-board-wrap { position: relative; padding: 0; overflow: hidden;
-                   height: calc(100vh - 235px); min-height: 460px; }
-  #wbCanvas { position: absolute; inset: 0; width: 100%; height: 100%; background: #fff;
-              border-radius: 12px; touch-action: none; cursor: crosshair; }
+  .wb-board-wrap { position: relative; padding: 0; overflow: auto;
+                   height: calc(100vh - 235px); min-height: 460px; background: #d7dee6; }
+  #wbCanvas { display: block; width: 3200px; height: 2400px; background: #fff;
+              touch-action: none; cursor: crosshair; }
+  .wb-selbox { position: absolute; border: 1.5px dashed #2b6cb0; z-index: 4000; pointer-events: none; }
+  .wb-seldel { position: absolute; top: -20px; right: -8px; width: 16px; height: 16px; border-radius: 50%;
+               background: #e03131; color: #fff; font-size: 11px; line-height: 15px; text-align: center;
+               cursor: pointer; pointer-events: auto; }
+  .wb-hd { position: absolute; width: 10px; height: 10px; background: #fff; border: 1.5px solid #2b6cb0;
+           border-radius: 2px; pointer-events: auto; }
   .wb-note { position: absolute; cursor: grab; background: #fff; border: 1px solid #cbd5e0;
              border-radius: 8px; padding: 5px 10px; box-shadow: 0 2px 6px rgba(0,0,0,.14);
              user-select: none; touch-action: none; }
@@ -263,6 +269,7 @@
   <div class="tab" data-tab="friends" onclick="showTab('friends')" id="tabFriends" style="display:none" data-label="Friends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.4 3.4-5 6.5-5s5.7 1.6 6.5 5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16.2 15.1c2.7.2 4.6 1.6 5.3 4.4"/></svg><span class="tab-badge" id="friendsBadge"></span></div>
   <div class="tab" data-tab="pk" onclick="showTab('pk')" id="tabPK" style="display:none" data-label="PK Battle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3l8 8"/><path d="M20 3l-8 8"/><path d="M14 14l3.5 3.5"/><path d="M10 14l-3.5 3.5"/><path d="M12.8 15.2l2.4-2.4"/><path d="M8.8 12.8l2.4 2.4"/></svg><span class="tab-badge" id="pkBadge"></span></div>
   <div class="tab" data-tab="classes" onclick="showTab('classes')" id="tabClasses" style="display:none" data-label="Classes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10l8-6 8 6v11"/><path d="M2 21h20"/><path d="M10 21v-5h4v5"/></svg></div>
+  <div class="tab" data-tab="school" onclick="showTab('school')" id="tabSchool" style="display:none" data-label="School"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10l8-6 8 6v11"/><path d="M2 21h20"/><path d="M10 21v-5h4v5"/></svg></div>
   <div class="lang-toggle"><span id="langEN" onclick="setLang('en')">EN</span><span id="langZH" onclick="setLang('zh')">中文</span></div>
   <div id="userArea" style="margin-left:auto;display:flex;align-items:center;gap:10px;color:#b8c4d0;font-size:13px"></div>
 </div></nav>
@@ -311,6 +318,7 @@ const I18N = {
     wbCustomPh: 'Type LaTeX, e.g. e^{i\\pi}+1=0', wbAdd: 'Add',
     wbSearchPh: 'Filter formulas…', wbCustom: 'Custom formula',
     wbSave: 'Save', wbCancel: 'Cancel', wbKb: 'Keyboard',
+    wbLine: 'Line', wbRect: 'Rect', wbEllipse: 'Ellipse', wbSelect: 'Select', wbDel: 'Delete',
     kbVars: 'Variables', kbGreek: 'Greek', kbOps: 'Operators', kbFuncs: 'Functions',
     pkChallenge: 'Challenge a friend', pkOpponent: 'Friend',
     pkCompetition: 'Competition', pkDifficulty: 'Difficulty', pkSend: '⚔️ Challenge!',
@@ -319,6 +327,8 @@ const I18N = {
     pkYou: 'You', pkWon: 'You won 🎉', pkLost: 'You lost', pkDraw: 'Draw', pkDeclined: 'Declined', pkNoFriends: 'Add friends first to challenge them.',
     pkModeDuel: '⚔️ 1v1', pkModeRace: '🏁 Race', pkPickFriends: 'Pick friends (2–5):', pkInvite: 'Invite', pkJoined: 'Joined', pkWaiting: 'waiting', pkHost: 'host', pkStartRace: 'Start race', pkStandings: 'Standings', pkRaceWinner: 'Winner', pkExpired: 'Expired',
     tabClasses: '🏫 Classes', clCreate: 'Create class', clNamePh: 'Class name, e.g. Math 7A', clCodePh: 'Join code', clNoClassesT: 'No classes yet — create your first one above.', clNone: 'Not in any class yet.', clJoin: 'Join with code', clJoinPh: 'Enter class code', clSchool: 'School', clTeacher: 'Teacher', clReports: 'Reports', clNoStudents: 'No students yet — share the join code.', clCode: 'Code', clDate: 'Date', clStudent: 'Student', clTest: 'Test', clScore: 'Score', clTime: 'Time', clNoReports: 'No submissions yet.', authStudent: 'Student', authTeacher: 'Teacher', school: 'School / organization', authConfirm: 'Confirm password', authFillAll: 'Please fill in all fields', authPassMismatch: 'Passwords do not match',
+    tabSchool: '🏫 School', schJoin: 'Join school', schJoinPh: 'Type your school name', schLeave: 'Leave school', schMySchool: 'School', schNoSchools: 'No schools yet — a teacher account creates one by registering with a school name.', schUpload: 'Upload document', schFile: 'File', schCategory: 'Category', schChapter: 'Chapter', schChapterPh: 'e.g. Chapter 3 — Forces', schTitlePh: 'Title (defaults to file name)', schSend: 'Upload →', schAll: 'All', schNoDocs: 'No documents here yet.', schBy: 'by', schEdit: 'Edit', schDelete: 'Delete', schSave: 'Save', schCancel: 'Cancel', schConfirmDel: 'Delete this document?', schJoined: 'Joined', schTooBig: 'File too large (max 25 MB).', schDocs: 'Documents', schDownload: 'Download',
+    schCat_science: 'Science', schCat_physics: 'Physics', schCat_chemistry: 'Chemistry', schCat_biology: 'Biology', schCat_math: 'Math', 'schCat_computer science': 'Computer Science', schCat_english: 'English', schCat_history: 'History', schCat_geography: 'Geography', schCat_other: 'Other',
     announcements: '📢 Announcements', noAnnouncements: 'No announcements yet.',
     close: 'Close',
     username: 'Username', password: 'Password',
@@ -385,6 +395,7 @@ const I18N = {
     wbCustomPh: '输入 LaTeX，如 e^{i\\pi}+1=0', wbAdd: '添加',
     wbSearchPh: '搜索公式…', wbCustom: '自定义公式',
     wbSave: '保存', wbCancel: '取消', wbKb: '键盘',
+    wbLine: '直线', wbRect: '矩形', wbEllipse: '椭圆', wbSelect: '选择', wbDel: '删除',
     kbVars: '变量', kbGreek: '希腊字母', kbOps: '运算符', kbFuncs: '函数',
     pkChallenge: '挑战好友', pkOpponent: '好友',
     pkCompetition: '竞赛', pkDifficulty: '难度', pkSend: '⚔️ 发起挑战！',
@@ -393,6 +404,8 @@ const I18N = {
     pkYou: '你', pkWon: '你赢了 🎉', pkLost: '你输了', pkDraw: '平局', pkDeclined: '已拒绝', pkNoFriends: '先添加好友才能挑战。',
     pkModeDuel: '⚔️ 1v1', pkModeRace: '🏁  Race', pkPickFriends: '选择好友（2–5 人）：', pkInvite: '邀请', pkJoined: '已加入', pkWaiting: '等待中', pkHost: '房主', pkStartRace: '开赛', pkStandings: '排名', pkRaceWinner: '胜者', pkExpired: '已过期',
     tabClasses: '🏫 班级', clCreate: '创建班级', clNamePh: '班级名称，如 数学 7A', clCodePh: '加入码', clNoClassesT: '还没有班级 — 在上方创建第一个吧。', clNone: '还没有加入任何班级。', clJoin: '用加入码加入', clJoinPh: '输入班级加入码', clSchool: '学校', clTeacher: '教师', clReports: '成绩报告', clNoStudents: '还没有学生 — 把加入码发给他们吧。', clCode: '加入码', clDate: '日期', clStudent: '学生', clTest: '试卷', clScore: '得分', clTime: '用时', clNoReports: '还没有提交记录。', authStudent: '学生', authTeacher: '教师', school: '学校 / 机构', authConfirm: '确认密码', authFillAll: '请填写所有必填项', authPassMismatch: '两次输入的密码不一致',
+    tabSchool: '🏫 学校资源', schJoin: '加入学校', schJoinPh: '输入学校名称', schLeave: '退出学校', schMySchool: '学校', schNoSchools: '还没有学校 — 教师账号注册时填写学校名称后即自动创建。', schUpload: '上传资料', schFile: '文件', schCategory: '学科分类', schChapter: '章节', schChapterPh: '如：第三章 — 力', schTitlePh: '标题（默认为文件名）', schSend: '上传 →', schAll: '全部', schNoDocs: '这里还没有资料。', schBy: '上传者', schEdit: '编辑', schDelete: '删除', schSave: '保存', schCancel: '取消', schConfirmDel: '确定删除这份资料吗？', schJoined: '已加入', schTooBig: '文件过大（最大 25 MB）。', schDocs: '资料库', schDownload: '下载',
+    schCat_science: '科学', schCat_physics: '物理', schCat_chemistry: '化学', schCat_biology: '生物', schCat_math: '数学', 'schCat_computer science': '计算机科学', schCat_english: '英语', schCat_history: '历史', schCat_geography: '地理', schCat_other: '其他',
     showSolution: '显示解答', answer: '答案', noSolution: '暂无解答 — 请查看 AoPS 源链接。',
     submit: '提交', exit: '退出', score: '得分', solutionsRevealed: '已显示解答',
     savedOk: '✓ 已保存到“我的试卷”', savedFail: '⚠ 保存失败', savedGuest: '✓ 已完成（登录后可保存成绩）',
@@ -425,6 +438,8 @@ function setLang(l) {
   if (tp) tp.dataset.label = tip('tabPK');
   const tc = document.getElementById('tabClasses');
   if (tc) tc.dataset.label = t('tabClasses');
+  const ts = document.getElementById('tabSchool');
+  if (ts) ts.dataset.label = t('tabSchool');
   const sub = document.getElementById('headerSubtitle');
   if (sub) sub.textContent = t('headerSubtitle');
   const app = document.getElementById('app');
@@ -464,12 +479,16 @@ function updateUserArea() {
     if (pkTab) pkTab.style.display = '';
     const clTab = document.getElementById('tabClasses');
     if (clTab) clTab.style.display = '';
+    const schTab = document.getElementById('tabSchool');
+    if (schTab) schTab.style.display = '';
   } else {
     area.innerHTML = `<span style="cursor:pointer" onclick="showAuth('login')">${t('login')}</span>`;
     if (friendsTab) friendsTab.style.display = 'none';
     if (pkTab) pkTab.style.display = 'none';
     const clTab2 = document.getElementById('tabClasses');
     if (clTab2) clTab2.style.display = 'none';
+    const schTab2 = document.getElementById('tabSchool');
+    if (schTab2) schTab2.style.display = 'none';
   }
 }
 
@@ -979,6 +998,170 @@ async function loadClassReports(code) {
   </table>` : `<p style="color:#999;font-size:13px">${t('clNoReports')}</p>`;
 }
 
+// ---------- School documents (teachers upload / students download) ----------
+function schCatName(c) { return t('schCat_' + c); }
+function schCatOptions(sel) {
+  return ['science', 'physics', 'chemistry', 'biology', 'math', 'computer science',
+          'english', 'history', 'geography', 'other']
+    .map(c => `<option value="${c}" ${c === sel ? 'selected' : ''}>${schCatName(c)}</option>`).join('');
+}
+function fmtSize(n) {
+  if (n == null) return '';
+  if (n < 1024) return n + ' B';
+  if (n < 1024 * 1024) return (n / 1024).toFixed(1) + ' KB';
+  return (n / 1024 / 1024).toFixed(1) + ' MB';
+}
+
+async function schoolView() {
+  const _myTab = state.tab;  // capture: render only if still current
+  if (!state.schCat) state.schCat = 'all';
+  let d;
+  try {
+    d = await (await fetch('/api/school/docs', {credentials: 'same-origin'})).json();
+  } catch (e) { return; }
+  if (state.tab !== _myTab || (state.test && !state.submitted)) return;  // stale async render
+  if (d.error) {
+    // not in a school yet — show join UI
+    const s = await (await fetch('/api/schools', {credentials: 'same-origin'})).json();
+    if (state.tab !== _myTab) return;
+    const opts = (s.schools || []).map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('');
+    app.innerHTML = `<div class="card"><h3>${t('tabSchool')}</h3>
+      <h4 style="margin:10px 0 6px">${t('schJoin')}</h4>
+      <div class="pk-form">
+        <input type="text" id="schName" list="schList" placeholder="${t('schJoinPh')}" style="flex:1;min-width:180px" autocomplete="off">
+        <datalist id="schList">${opts}</datalist>
+        <button class="btn" onclick="schoolJoin()">${t('schJoin')} →</button>
+      </div>
+      <div class="auth-msg" id="schMsg"></div>
+      ${(s.schools || []).length ? '' : `<p style="color:#999;font-size:13px;margin-top:12px">${t('schNoSchools')}</p>`}
+    </div>`;
+    return;
+  }
+  const isTeacher = state.role === 'teacher';
+  const cat = state.schCat;
+  const cats = d.categories || [];
+  const docs = (d.docs || []).filter(x => cat === 'all' || x.category === cat);
+  // group by chapter
+  const groups = {};
+  docs.forEach(x => { (groups[x.chapter] = groups[x.chapter] || []).push(x); });
+  const chips = [`<button class="btn sm ${cat === 'all' ? '' : 'ghost'}" onclick="schoolFilter('all')">${t('schAll')}</button>`]
+    .concat(cats.map(c => `<button class="btn sm ${cat === c ? '' : 'ghost'}" onclick="schoolFilter('${c}')">${schCatName(c)}</button>`)).join(' ');
+  const rows = Object.keys(groups).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())).map(ch => `
+    <h4 style="margin:16px 0 6px">📂 ${escapeHtml(ch)}</h4>
+    ${groups[ch].map(docRow).join('')}`).join('');
+  let html = `<div class="card"><h3>${t('tabSchool')} <span class="meta" style="font-weight:normal;font-size:13px">· ${escapeHtml(state.school)}</span>
+    <button class="btn sm ghost" style="float:right" onclick="schoolLeave()">${t('schLeave')}</button></h3>
+    <div style="margin:8px 0 4px;line-height:2.2">${chips}</div>`;
+  if (isTeacher) {
+    html += `
+      <h4 style="margin:16px 0 6px">${t('schUpload')}</h4>
+      <div class="pk-form" style="flex-wrap:wrap">
+        <input type="file" id="schFile" style="flex:1;min-width:200px;color:#b8c4d0">
+        <select id="schCat" style="padding:9px 10px;border-radius:8px;background:#1c2733;color:#e8eef5;border:1px solid #33475c">${schCatOptions(cat !== 'all' ? cat : 'science')}</select>
+        <input type="text" id="schChapter" placeholder="${t('schChapterPh')}" style="flex:1;min-width:160px">
+        <input type="text" id="schTitle" placeholder="${t('schTitlePh')}" style="flex:1;min-width:140px">
+        <button class="btn" onclick="schoolUpload()">${t('schSend')}</button>
+      </div>
+      <div class="auth-msg" id="schMsg"></div>`;
+  }
+  html += `<div id="schList">${rows || `<p style="color:#999;font-size:13.5px;margin-top:14px">${t('schNoDocs')}</p>`}</div></div>`;
+  app.innerHTML = html;
+}
+function docRow(doc) {
+  const isTeacher = state.role === 'teacher';
+  const inline = ['pdf', 'png', 'jpg', 'jpeg', 'txt', 'md'].includes(doc.ext);
+  return `<div class="card compact" style="margin-top:8px" id="doc-${doc.id}">
+    <div class="fr-req">
+      <div><h3 style="font-size:15px">📄 ${escapeHtml(doc.title)} <span class="meta" style="font-size:12px">.${doc.ext} · ${fmtSize(doc.size)} · ${escapeHtml(doc.category ? schCatName(doc.category) : '')}</span></h3>
+        <div class="meta">${t('schBy')} ${escapeHtml(doc.uploader)} · ${escapeHtml(doc.uploaded_at || '')}</div></div>
+      <span>
+        ${inline ? `<button class="btn sm ghost" onclick="window.open('/api/school/docs/${doc.id}/download?inline=1','_blank')">👁</button>` : ''}
+        <a class="btn sm" href="/api/school/docs/${doc.id}/download" download>${t('schDownload')}</a>
+        ${isTeacher ? `<button class="btn sm ghost" onclick="schoolEditBox('${doc.id}')">${t('schEdit')}</button>
+        <button class="btn sm ghost" onclick="schoolDelete('${doc.id}')">${t('schDelete')}</button>` : ''}
+      </span>
+    </div>
+    <div id="doc-edit-${doc.id}"></div>
+  </div>`;
+}
+function schoolFilter(c) { state.schCat = c; schoolView(); }
+async function schoolJoin() {
+  const msg = document.getElementById('schMsg');
+  const school = document.getElementById('schName').value.trim();
+  const r = await fetch('/api/school/join', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin', body: JSON.stringify({school}),
+  });
+  const d = await r.json();
+  msg.className = 'auth-msg ' + (r.ok ? 'ok' : 'err');
+  msg.textContent = r.ok ? `✓ ${d.school}` : (d.error || 'error');
+  if (r.ok) { state.school = d.school; schoolView(); }
+}
+async function schoolLeave() {
+  await fetch('/api/school/leave', {method: 'POST', credentials: 'same-origin'});
+  state.school = '';
+  schoolView();
+}
+async function schoolUpload() {
+  const msg = document.getElementById('schMsg');
+  const f = document.getElementById('schFile').files[0];
+  if (!f) { msg.className = 'auth-msg err'; msg.textContent = t('schFile') + ' ?'; return; }
+  if (f.size > 25 * 1024 * 1024) { msg.className = 'auth-msg err'; msg.textContent = t('schTooBig'); return; }
+  msg.className = 'auth-msg'; msg.textContent = t('saving');
+  const b64 = await new Promise((res, rej) => {
+    const rd = new FileReader();
+    rd.onload = () => res(String(rd.result).split(',')[1] || '');
+    rd.onerror = rej;
+    rd.readAsDataURL(f);
+  });
+  const r = await fetch('/api/school/docs/upload', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin',
+    body: JSON.stringify({
+      category: document.getElementById('schCat').value,
+      chapter: document.getElementById('schChapter').value.trim(),
+      title: document.getElementById('schTitle').value.trim(),
+      filename: f.name, data_b64: b64,
+    }),
+  });
+  const d = await r.json();
+  msg.className = 'auth-msg ' + (r.ok ? 'ok' : 'err');
+  msg.textContent = r.ok ? '✓' : (d.error || 'error');
+  if (r.ok) schoolView();
+}
+function schoolEditBox(id) {
+  const box = document.getElementById('doc-edit-' + id);
+  if (!box) return;
+  if (box.innerHTML) { box.innerHTML = ''; return; }
+  const row = document.getElementById('doc-' + id);
+  const title = row ? row.querySelector('h3').textContent.replace(/^📄 /, '').replace(/ \..*$/, '') : '';
+  box.innerHTML = `<div class="pk-form" style="margin-top:8px;flex-wrap:wrap">
+    <select id="ed-cat-${id}" style="padding:8px 10px;border-radius:8px;background:#1c2733;color:#e8eef5;border:1px solid #33475c">${schCatOptions(state.schCat !== 'all' ? state.schCat : 'science')}</select>
+    <input type="text" id="ed-ch-${id}" placeholder="${t('schChapter')}" style="flex:1;min-width:140px">
+    <input type="text" id="ed-ti-${id}" value="${escapeHtml(title)}" placeholder="${t('schTitlePh')}" style="flex:1;min-width:140px">
+    <button class="btn sm" onclick="schoolEditSave('${id}')">${t('schSave')}</button>
+    <button class="btn sm ghost" onclick="document.getElementById('doc-edit-${id}').innerHTML=''">${t('schCancel')}</button>
+  </div>`;
+}
+async function schoolEditSave(id) {
+  const r = await fetch(`/api/school/docs/${id}/edit`, {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    credentials: 'same-origin',
+    body: JSON.stringify({
+      category: document.getElementById('ed-cat-' + id).value,
+      chapter: document.getElementById('ed-ch-' + id).value.trim(),
+      title: document.getElementById('ed-ti-' + id).value.trim(),
+    }),
+  });
+  if (r.ok) schoolView();
+  else { const d = await r.json(); alert(d.error || 'error'); }
+}
+async function schoolDelete(id) {
+  if (!confirm(t('schConfirmDel'))) return;
+  const r = await fetch(`/api/school/docs/${id}/delete`, {method: 'POST', credentials: 'same-origin'});
+  if (r.ok) schoolView();
+}
+
 async function pkPoll() {
   if (state.tab !== 'pk') { stopPkPolling(); return; }
   try {
@@ -1150,8 +1333,8 @@ function doShowTab(tab) {
   if (tab !== 'friends') stopChatPolling();
   if (tab !== 'pk') stopPkPolling();
   document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
-  if (['tests', 'stats', 'friends', 'pk', 'classes'].includes(tab) && !state.user) {
-    const titles = {tests: t('tabTests'), stats: t('tabStats'), friends: t('tabFriends'), pk: t('tabPK'), classes: t('tabClasses')};
+  if (['tests', 'stats', 'friends', 'pk', 'classes', 'school'].includes(tab) && !state.user) {
+    const titles = {tests: t('tabTests'), stats: t('tabStats'), friends: t('tabFriends'), pk: t('tabPK'), classes: t('tabClasses'), school: t('tabSchool')};
     app.innerHTML = `<div class="card"><h3>${titles[tab]}</h3>
       <p style="color:#666;font-size:14px;margin:10px 0">${t('authRequired')}</p>
       <button class="btn" onclick="showAuth('login')">${t('login')} / ${t('register')}</button></div>`;
@@ -1163,6 +1346,7 @@ function doShowTab(tab) {
   else if (tab === 'friends') { document.getElementById('friendsBadge').textContent = ''; friends(); }
   else if (tab === 'pk') { updateBadges(); pk(); }
   else if (tab === 'classes') classesView();
+  else if (tab === 'school') schoolView();
   else if (tab === 'wb') whiteboard();
   else if (tab === 'games') gamesView();
 }
@@ -2049,32 +2233,39 @@ const WB_CATS = [
   ]},
 ];
 
+const WB_W = 3200, WB_H = 2400;  // logical board size (scrollable)
 let wb;
 try {
   const s = JSON.parse(localStorage.getItem('mt_wb') || 'null');
-  wb = { strokes: (s && s.strokes) || [], notes: (s && s.notes) || [] };
-} catch (e) { wb = { strokes: [], notes: [] }; }
-wb.seq = Math.max(0, ...wb.strokes.map(s => s.id || 0), ...wb.notes.map(n => n.id || 0));
+  wb = { strokes: (s && s.strokes) || [], notes: (s && s.notes) || [], shapes: (s && s.shapes) || [] };
+} catch (e) { wb = { strokes: [], notes: [], shapes: [] }; }
+wb.seq = Math.max(0, ...wb.strokes.map(s => s.id || 0), ...wb.notes.map(n => n.id || 0), ...wb.shapes.map(s => s.id || 0));
 wb.z = 10; wb.tool = 'pen'; wb.color = '#1c1e21'; wb.size = 3;
 wb.actions = []; wb.cat = 'arith'; wb.grp = 'MATH'; wb.cur = null; wb.ro = null;
-wb.editing = null; wb.kbTab = 'vars'; wb.kbVisible = true;
+wb.editing = null; wb.kbTab = 'vars'; wb.kbVisible = true; wb.sel = null;
 
 function wbSave() {
   try {
     localStorage.setItem('mt_wb', JSON.stringify({
       strokes: wb.strokes,
+      shapes: wb.shapes,
       notes: wb.notes.map(n => ({ id: n.id, tex: n.tex, x: n.x, y: n.y })),
     }));
   } catch (e) { /* storage full: keep in memory only */ }
 }
 
 function whiteboard() {
+  wb.sel = null;
   app.innerHTML = `
   <div class="wb-layout">
     <div class="card wb-panel">
       <div class="wb-tools">
         <button class="wb-tool on" id="wbPenBtn" onclick="wbSetTool('pen')">${t('wbPen')}</button>
         <button class="wb-tool" id="wbEraserBtn" onclick="wbSetTool('eraser')">${t('wbEraser')}</button>
+        <button class="wb-tool" id="wbLineBtn" title="${t('wbLine')}" onclick="wbSetTool('line')">╱ ${t('wbLine')}</button>
+        <button class="wb-tool" id="wbRectBtn" title="${t('wbRect')}" onclick="wbSetTool('rect')">▭ ${t('wbRect')}</button>
+        <button class="wb-tool" id="wbEllipseBtn" title="${t('wbEllipse')}" onclick="wbSetTool('ellipse')">◯ ${t('wbEllipse')}</button>
+        <button class="wb-tool" id="wbSelectBtn" title="${t('wbSelect')}" onclick="wbSetTool('select')">⬚ ${t('wbSelect')}</button>
         ${WB_COLORS.map(c => `<span class="wb-color ${c === wb.color ? 'on' : ''}" data-c="${c}" style="background:${c}" onclick="wbSetColor('${c}')"></span>`).join('')}
         <button class="wb-tool" onclick="wbUndo()">${t('wbUndo')}</button>
         <button class="wb-tool" onclick="wbClear()">${t('wbClear')}</button>
@@ -2165,10 +2356,15 @@ function wbRenderItems() {
 }
 function wbSetTool(tool) {
   wb.tool = tool;
-  document.getElementById('wbPenBtn').classList.toggle('on', tool === 'pen');
-  document.getElementById('wbEraserBtn').classList.toggle('on', tool === 'eraser');
+  ['pen', 'eraser', 'line', 'rect', 'ellipse', 'select'].forEach(t => {
+    const b = document.getElementById('wb' + t[0].toUpperCase() + t.slice(1) + 'Btn');
+    if (b) b.classList.toggle('on', t === tool);
+  });
   const cv = document.getElementById('wbCanvas');
-  if (cv) cv.style.cursor = tool === 'pen' ? 'crosshair' : 'cell';
+  if (!cv) return;
+  cv.style.cursor = tool === 'pen' || tool === 'line' || tool === 'rect' || tool === 'ellipse'
+    ? 'crosshair' : tool === 'eraser' ? 'cell' : 'default';
+  if (tool !== 'select') wbDeselect();
 }
 function wbSetColor(c) {
   wb.color = c;
@@ -2178,12 +2374,10 @@ function wbSetColor(c) {
 
 // --- canvas drawing ---
 function wbResize() {
-  const wrap = document.getElementById('wbWrap'), cv = document.getElementById('wbCanvas');
-  if (!wrap || !cv) return;
+  const cv = document.getElementById('wbCanvas');
+  if (!cv) return;
   const dpr = window.devicePixelRatio || 1;
-  const w = wrap.clientWidth, h = wrap.clientHeight;
-  if (!w || !h) return;
-  cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+  cv.width = Math.round(WB_W * dpr); cv.height = Math.round(WB_H * dpr);
   const ctx = cv.getContext('2d');
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   wbRedraw();
@@ -2196,6 +2390,8 @@ function wbRedraw() {
   ctx.clearRect(0, 0, cv.width, cv.height);
   ctx.restore();
   wb.strokes.forEach(s => wbDrawStroke(ctx, s));
+  wb.shapes.forEach(s => wbDrawShape(ctx, s));
+  wbUpdateSelBox();
 }
 function wbDrawStroke(ctx, s) {
   if (s.erase) ctx.globalCompositeOperation = 'destination-out';
@@ -2207,20 +2403,40 @@ function wbDrawStroke(ctx, s) {
   ctx.stroke();
   ctx.globalCompositeOperation = 'source-over';
 }
+function wbDrawShape(ctx, s) {
+  ctx.strokeStyle = s.color; ctx.lineWidth = s.size;
+  ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  ctx.beginPath();
+  if (s.kind === 'line') {
+    ctx.moveTo(s.x1, s.y1); ctx.lineTo(s.x2, s.y2);
+  } else {
+    const x = Math.min(s.x1, s.x2), y = Math.min(s.y1, s.y2);
+    const w = Math.abs(s.x2 - s.x1), h = Math.abs(s.y2 - s.y1);
+    if (s.kind === 'rect') ctx.rect(x, y, w, h);
+    else ctx.ellipse(x + w / 2, y + h / 2, w / 2, h / 2, 0, 0, Math.PI * 2);
+  }
+  ctx.stroke();
+}
+function wbPoint(e, cv) {
+  const r = cv.getBoundingClientRect();
+  return { x: e.clientX - r.left, y: e.clientY - r.top };
+}
 function wbDown(e) {
   if (wb.editing) return;  // don't draw while the editor is open
   const cv = document.getElementById('wbCanvas');
   try { cv.setPointerCapture(e.pointerId); } catch (err) { /* synthetic events */ }
-  const r = cv.getBoundingClientRect();
+  const p0 = wbPoint(e, cv);
+  if (wb.tool === 'line' || wb.tool === 'rect' || wb.tool === 'ellipse') return wbShapeDown(e, cv, p0);
+  if (wb.tool === 'select') return wbSelectDown(e, cv, p0);
   const s = {
     id: ++wb.seq, erase: wb.tool === 'eraser', color: wb.color,
     size: wb.tool === 'eraser' ? wb.size * 8 : wb.size,
-    pts: [{ x: e.clientX - r.left, y: e.clientY - r.top }],
+    pts: [p0],
   };
   wb.strokes.push(s); wb.cur = s;
   const ctx = cv.getContext('2d');
   const move = ev => {
-    const p = { x: ev.clientX - r.left, y: ev.clientY - r.top };
+    const p = wbPoint(ev, cv);
     const last = s.pts[s.pts.length - 1];
     ctx.save();
     if (s.erase) ctx.globalCompositeOperation = 'destination-out';
@@ -2242,10 +2458,143 @@ function wbDown(e) {
   e.preventDefault();
 }
 
+// --- shapes: draw ---
+function wbShapeDown(e, cv, p0) {
+  wbDeselect();
+  const s = { id: ++wb.seq, kind: wb.tool, color: wb.color, size: wb.size,
+              x1: p0.x, y1: p0.y, x2: p0.x, y2: p0.y };
+  const ctx = cv.getContext('2d');
+  const move = ev => {
+    const p = wbPoint(ev, cv);
+    s.x2 = p.x; s.y2 = p.y;
+    wbRedraw();
+    wbDrawShape(ctx, s);  // live preview
+  };
+  const up = () => {
+    cv.removeEventListener('pointermove', move);
+    cv.removeEventListener('pointerup', up);
+    const moved = Math.abs(s.x2 - s.x1) + Math.abs(s.y2 - s.y1);
+    if (moved < 3) {
+      wbRedraw();  // discard tiny accidental drags
+    } else {
+      wb.shapes.push(s);
+      wb.actions.push({ t: 'shape', id: s.id });
+      wb.sel = s;  // keep it selected for immediate move/resize
+      wbSetTool('select');
+      wbRedraw(); wbSave();
+    }
+  };
+  cv.addEventListener('pointermove', move);
+  cv.addEventListener('pointerup', up);
+  e.preventDefault();
+}
+
+// --- shapes: select / move / resize / delete ---
+function wbBBox(s) {
+  return { x: Math.min(s.x1, s.x2), y: Math.min(s.y1, s.y2),
+           w: Math.abs(s.x2 - s.x1), h: Math.abs(s.y2 - s.y1) };
+}
+function wbHitShape(x, y) {
+  for (let i = wb.shapes.length - 1; i >= 0; i--) {
+    const s = wb.shapes[i];
+    if (s.kind === 'line') {
+      const dx = s.x2 - s.x1, dy = s.y2 - s.y1;
+      const len2 = dx * dx + dy * dy;
+      const tt = len2 ? Math.max(0, Math.min(1, ((x - s.x1) * dx + (y - s.y1) * dy) / len2)) : 0;
+      const px = s.x1 + tt * dx, py = s.y1 + tt * dy;
+      if (Math.hypot(x - px, y - py) <= Math.max(8, s.size)) return s;
+    } else {
+      const b = wbBBox(s);
+      if (x >= b.x - 5 && x <= b.x + b.w + 5 && y >= b.y - 5 && y <= b.y + b.h + 5) return s;
+    }
+  }
+  return null;
+}
+function wbSelectDown(e, cv, p0) {
+  const hit = wbHitShape(p0.x, p0.y);
+  if (!hit) { wbDeselect(); return; }
+  wb.sel = hit;
+  wbUpdateSelBox();
+  const off = { dx: p0.x - hit.x1, dy: p0.y - hit.y1 };
+  const move = ev => {
+    const p = wbPoint(ev, cv);
+    const dx = p.x - off.dx - hit.x1, dy = p.y - off.dy - hit.y1;
+    hit.x1 += dx; hit.x2 += dx; hit.y1 += dy; hit.y2 += dy;
+    wbRedraw();
+  };
+  const up = () => {
+    cv.removeEventListener('pointermove', move);
+    cv.removeEventListener('pointerup', up);
+    wbSave();
+  };
+  cv.addEventListener('pointermove', move);
+  cv.addEventListener('pointerup', up);
+  e.preventDefault();
+}
+function wbDeselect() {
+  wb.sel = null;
+  const box = document.getElementById('wbSelBox');
+  if (box) box.remove();
+}
+function wbUpdateSelBox() {
+  let box = document.getElementById('wbSelBox');
+  if (!wb.sel) { if (box) box.remove(); return; }
+  const wrap = document.getElementById('wbWrap');
+  if (!wrap) return;
+  if (!box) {
+    box = document.createElement('div');
+    box.className = 'wb-selbox'; box.id = 'wbSelBox';
+    wrap.appendChild(box);
+  }
+  const b = wbBBox(wb.sel);
+  box.style.left = (b.x - 4) + 'px'; box.style.top = (b.y - 4) + 'px';
+  box.style.width = (b.w + 8) + 'px'; box.style.height = (b.h + 8) + 'px';
+  // handles: line → endpoints; rect/ellipse → 8
+  const hs = wb.sel.kind === 'line'
+    ? [['x1', 'y1', 'move'], ['x2', 'y2', 'move']]
+    : [['x1', 'y1', 'nwse-resize'], ['x2', 'y1', 'nesw-resize'], ['x1', 'y2', 'nesw-resize'], ['x2', 'y2', 'nwse-resize'],
+       [null, 'y1', 'ns-resize'], [null, 'y2', 'ns-resize'], ['x1', null, 'ew-resize'], ['x2', null, 'ew-resize']];
+  box.innerHTML = `<span class="wb-seldel" title="${t('wbDel')}">×</span>` +
+    hs.map(([hx, hy, cur]) => {
+      const px = hx ? wb.sel[hx] : (b.x + b.w / 2);
+      const py = hy ? wb.sel[hy] : (b.y + b.h / 2);
+      return `<span class="wb-hd" data-hx="${hx || ''}" data-hy="${hy || ''}"
+        style="left:${px - b.x + 4}px;top:${py - b.y + 4}px;cursor:${cur}"></span>`;
+    }).join('');
+  box.querySelector('.wb-seldel').onclick = () => { wbDeleteShape(wb.sel); };
+  box.querySelectorAll('.wb-hd').forEach(hd => {
+    hd.addEventListener('pointerdown', ev => {
+      ev.stopPropagation();
+      ev.preventDefault();
+      const hx = hd.dataset.hx, hy = hd.dataset.hy;
+      const s = wb.sel;
+      // NOTE: listen on window — wbRedraw() replaces the handle DOM during the drag
+      const move = mv => {
+        const p = wbPoint(mv, document.getElementById('wbCanvas'));
+        const lo = (v, hi) => Math.max(0, Math.min(v, hi));
+        if (hx) s[hx] = lo(p.x, WB_W);
+        if (hy) s[hy] = lo(p.y, WB_H);
+        wbRedraw();
+      };
+      const up = () => {
+        window.removeEventListener('pointermove', move);
+        window.removeEventListener('pointerup', up);
+        wbSave();
+      };
+      window.addEventListener('pointermove', move);
+      window.addEventListener('pointerup', up);
+    });
+  });
+}
+function wbDeleteShape(s) {
+  wb.shapes = wb.shapes.filter(x => x !== s);
+  if (wb.sel === s) wb.sel = null;
+  wbRedraw(); wbSave();
+}
+
 // --- formula notes ---
 function wbPlaceNote(w, h) {
-  const wrap = document.getElementById('wbWrap');
-  const W = wrap.clientWidth, H = wrap.clientHeight;
+  const W = WB_W, H = WB_H;
   const rects = wb.notes.map(n => {
     const el = document.getElementById('wbNote' + n.id);
     return el ? { x: el.offsetLeft, y: el.offsetTop, w: el.offsetWidth, h: el.offsetHeight } : null;
@@ -2313,8 +2662,8 @@ function wbAddNoteEl(note) {
     const off = { dx: e.clientX - el.offsetLeft, dy: e.clientY - el.offsetTop };
     const move = ev => {
       let x = ev.clientX - off.dx, y = ev.clientY - off.dy;
-      x = Math.max(0, Math.min(x, wrap.clientWidth - el.offsetWidth));
-      y = Math.max(0, Math.min(y, wrap.clientHeight - el.offsetHeight));
+      x = Math.max(0, Math.min(x, WB_W - el.offsetWidth));
+      y = Math.max(0, Math.min(y, WB_H - el.offsetHeight));
       el.style.left = x + 'px'; el.style.top = y + 'px';
     };
     const up = () => {
@@ -2457,6 +2806,11 @@ function wbUndo() {
   if (a.t === 'stroke') {
     wb.strokes = wb.strokes.filter(s => s.id !== a.id);
     wbRedraw();
+  } else if (a.t === 'shape') {
+    const s = wb.shapes.find(x => x.id === a.id);
+    if (s && wb.sel === s) wb.sel = null;
+    wb.shapes = wb.shapes.filter(x => x.id !== a.id);
+    wbRedraw();
   } else if (a.t === 'note') {
     const i = wb.notes.findIndex(n => n.id === a.id);
     if (i >= 0) wb.notes.splice(i, 1);
@@ -2466,7 +2820,7 @@ function wbUndo() {
   wbSave();
 }
 function wbClear() {
-  wb.strokes = []; wb.notes = []; wb.actions = [];
+  wb.strokes = []; wb.notes = []; wb.actions = []; wb.shapes = []; wb.sel = null;
   document.querySelectorAll('.wb-note').forEach(el => el.remove());
   wbRedraw(); wbSave();
 }
