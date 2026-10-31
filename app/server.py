@@ -4,12 +4,16 @@ Run:  .venv/bin/python app/server.py  (then open http://localhost:8000)
 Stdlib only. Serves tests from tests/*.json, generates new tests from bank/<slug>_*.json.
 """
 import hashlib
+import io
 import json
 import mimetypes
 import os
 import random
 import re
 import secrets
+import shutil
+import subprocess
+import tempfile
 import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -265,10 +269,13 @@ def _doc_visible_to(doc, school_norm):
     return _norm_school(doc.get("school")) == school_norm
 
 
-# ---------- worksheets (upload a text/json file -> printable worksheet) ----------
+# ---------- worksheets (upload a text/json/pdf/image file -> printable worksheet) ----------
 WORKSHEETS_DIR = ROOT / "worksheets"
-WS_MAX_BYTES = 1024 * 1024  # 1 MB raw — text files only
-WS_EXTS = ("txt", "md", "json")
+WS_MAX_BYTES = 10 * 1024 * 1024  # 10 MB raw (pdf/images)
+WS_TEXT_MAX_BYTES = 1024 * 1024  # 1 MB for text files
+WS_EXTS = ("txt", "md", "json", "pdf", "png", "jpg", "jpeg", "webp", "bmp", "tif", "tiff")
+WS_TEXT_EXTS = ("txt", "md", "json")
+WS_IMAGE_EXTS = ("png", "jpg", "jpeg", "webp", "bmp", "tif", "tiff")
 WS_Q_RE = re.compile(r"^\s*(?:#{1,6}\s*)?(?:q(?:uestion)?\s*)?(\d{1,3})[.)]\s+", re.I)
 WS_CHOICE_RE = re.compile(r"^\s*([A-E])[.)]\s+")
 WS_ANS_SECTION_RE = re.compile(r"^\s*#*\s*(?:answers?|answer key|keys?)\s*:?\s*$", re.I)
@@ -371,17 +378,69 @@ def parse_worksheet_json(text, fallback_title):
     return (title or fallback_title), items
 
 
+def extract_pdf_text(blob):
+    """Pull the embedded text layer out of a PDF (no OCR).
+
+    Needs the optional 'pypdf' package (same ad-hoc dep as the scrapers).
+    Scanned PDFs have no text layer — raise with a clear hint instead of
+    silently producing garbage.
+    """
+    try:
+        from pypdf import PdfReader
+    except ImportError:
+        raise ValueError("PDF support needs pypdf — run: pip install pypdf")
+    try:
+        reader = PdfReader(io.BytesIO(blob))
+    except Exception as e:
+        raise ValueError(f"could not read PDF: {e}")
+    text = "\n".join((page.extract_text() or "") for page in reader.pages)
+    if not text.strip():
+        raise ValueError("this PDF has no text layer (it looks scanned) — "
+                         "upload a text-based PDF or a .txt/.md file instead")
+    return text
+
+
+def extract_image_text(blob, ext):
+    """OCR an image with the Tesseract CLI (no tokens, no extra Python deps).
+
+    Math OCR is rough — fractions/exponents often come out mangled — so the
+    result still goes through the normal text parser and may need cleanup.
+    """
+    if not shutil.which("tesseract"):
+        raise ValueError("image OCR needs the Tesseract CLI — install it, e.g.: brew install tesseract")
+    with tempfile.NamedTemporaryFile(suffix=f".{ext}", delete=False) as f:
+        f.write(blob)
+        tmp = f.name
+    try:
+        proc = subprocess.run(["tesseract", tmp, "stdout", "--psm", "6"],
+                              capture_output=True, timeout=120)
+    except subprocess.TimeoutExpired:
+        raise ValueError("OCR timed out")
+    finally:
+        os.unlink(tmp)
+    if proc.returncode != 0 or not proc.stdout.strip():
+        raise ValueError("OCR found no text in this image")
+    return proc.stdout.decode("utf-8", "replace")
+
+
 def generate_worksheet(filename, blob, owner):
     ext = filename.rsplit(".", 1)[1].lower() if "." in filename else ""
     if ext not in WS_EXTS:
-        raise ValueError(f"file type .{ext or '?'} not supported — use .txt, .md or .json")
-    if len(blob) > WS_MAX_BYTES:
-        raise ValueError("file too large (max 1 MB)")
-    try:
-        text = blob.decode("utf-8")
-    except UnicodeDecodeError:
-        raise ValueError("file must be UTF-8 text")
-    fallback = re.sub(r"\.(txt|md|json)$", "", filename, flags=re.I).replace("_", " ").strip()[:120] or "Worksheet"
+        raise ValueError(f"file type .{ext or '?'} not supported — use "
+                         f"{', '.join('.' + e for e in WS_EXTS)}")
+    limit = WS_TEXT_MAX_BYTES if ext in WS_TEXT_EXTS else WS_MAX_BYTES
+    if len(blob) > limit:
+        raise ValueError(f"file too large (max {limit // (1024 * 1024)} MB)")
+    if ext in WS_TEXT_EXTS:
+        try:
+            text = blob.decode("utf-8")
+        except UnicodeDecodeError:
+            raise ValueError("file must be UTF-8 text")
+    elif ext == "pdf":
+        text = extract_pdf_text(blob)
+    else:
+        text = extract_image_text(blob, ext)
+    fallback = re.sub(r"\.([a-z0-9]+)$", "", filename, flags=re.I).replace("_", " ").strip()[:120] or "Worksheet"
     if ext == "json":
         title, items = parse_worksheet_json(text, fallback)
     else:

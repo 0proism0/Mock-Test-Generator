@@ -5,7 +5,7 @@ import { api, type Worksheet as WorksheetData, type WorksheetSummary } from '../
 import { useAuth } from '../lib/auth'
 import { useI18n } from '../lib/i18n'
 
-const MAX_BYTES = 1024 * 1024 // keep in sync with WS_MAX_BYTES in server.py
+const MAX_BYTES = 10 * 1024 * 1024 // keep in sync with WS_MAX_BYTES in server.py
 
 const EXAMPLE = `1. What is $2x + 3x$ when $x = 4$?
 A. 12
@@ -184,7 +184,7 @@ export function Worksheet() {
           ref={fileRef}
           id="ws-file"
           type="file"
-          accept=".txt,.md,.json"
+          accept=".txt,.md,.json,.pdf,.png,.jpg,.jpeg,.webp,.bmp,.tif,.tiff"
           className="ws-file-input"
           onChange={(e) => pickFiles(e.target.files)}
         />

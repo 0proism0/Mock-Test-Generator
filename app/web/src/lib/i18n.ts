@@ -174,7 +174,7 @@ const I18N: Record<Lang, Record<string, string>> = {
     close: 'Close',
     tabWorksheet: '📄 Worksheet',
     wsDesc:
-      'Upload a .txt, .md or .json file with questions and get a printable worksheet with an answer key.',
+      'Upload a .txt, .md, .json, .pdf or image file with questions and get a printable worksheet with an answer key.',
     wsFile: 'Question file',
     wsChoose: 'Choose file…',
     wsDropHint: '…or drag a file anywhere onto this card',
@@ -184,7 +184,7 @@ const I18N: Record<Lang, Record<string, string>> = {
     wsHowToTxt:
       'Number your questions (1. 2. 3. …). Put choices on lines “A.”–“E.”. Add an “Answers:” section at the end (“1. B”, “2) 42”) or finish a question with “Answer: …”. LaTeX like $x^2$ works.',
     wsExample: 'Example',
-    wsTooBig: 'File too large (max 1 MB)',
+    wsTooBig: 'File too large (max 10 MB)',
     wsQuestions: '{0} questions',
     wsPoints: '{0} pts',
     wsPrint: '🖨 Print',
@@ -399,7 +399,7 @@ const I18N: Record<Lang, Record<string, string>> = {
     noAnnouncements: '暂无公告。',
     close: '关闭',
     tabWorksheet: '📄 练习卷',
-    wsDesc: '上传包含题目的 .txt、.md 或 .json 文件，生成可打印的练习卷（含答案）。',
+    wsDesc: '上传包含题目的 .txt、.md、.json、.pdf 或图片文件，生成可打印的练习卷（含答案）。',
     wsFile: '题目文件',
     wsChoose: '选择文件…',
     wsDropHint: '……或把文件拖到这张卡片上',
@@ -409,7 +409,7 @@ const I18N: Record<Lang, Record<string, string>> = {
     wsHowToTxt:
       '题目请编号（1. 2. 3. …），选项写成 “A.”–“E.” 单独一行。可在末尾加 “Answers:” 段落（“1. B”、“2) 42”），或在题目末行写 “Answer: …”。支持 LaTeX，如 $x^2$。',
     wsExample: '示例',
-    wsTooBig: '文件过大（最大 1 MB）',
+    wsTooBig: '文件过大（最大 10 MB）',
     wsQuestions: '共 {0} 题',
     wsPoints: '共 {0} 分',
     wsPrint: '🖨 打印',
