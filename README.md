@@ -74,7 +74,7 @@ python -m venv .venv
 | HMMT | 353 real + variants (2011–2025, answers+solutions) | short answer |
 | SMT | 734 real (2011–2023, answers+solutions) | short answer |
 | PUMaC | 1149 real (2019–2025, solutions) | short answer/proof |
-| BMT | 589 real (2011–2025) | short answer |
+| BMT | 578 real (2019–2025, official answers+solutions) | short answer/proof |
 | CMIMC | 458 real (2016–2025, solutions) | short answer |
 | MATHCOUNTS | 95 real (2026 Chapter+State, answers+solutions) | short answer |
 | UKMT | 198 real (JMC/IMC/SMC 2023–2026, answers) | MC |
