@@ -1,6 +1,6 @@
 """MockTest Maker — localhost web app.
 
-Run:  .venv/bin/python app/server.py  (then open http://localhost:8000)
+Run:  .venv/bin/python app/server.py  (then open http://localhost:8020)
 Stdlib only. Serves tests from tests/*.json, generates new tests from bank/<slug>_*.json.
 """
 import hashlib
@@ -30,7 +30,8 @@ USERS_DIR = ROOT / "users"
 USERS_FILE = ROOT / "users.json"
 SESSIONS_FILE = ROOT / "sessions.json"
 SESSION_DAYS = 7
-PORT = 8000
+# Default 8020 (8000 is commonly taken by other local dev servers); override with MOCKTEST_PORT.
+PORT = int(os.environ.get("MOCKTEST_PORT", "8020"))
 
 COMP_META = {  # slug -> (display name, n_q, tlim, category, rounds, family)
     "amc8": ("AMC 8", 25, 40, "Math", None, "AMC"),
@@ -768,6 +769,11 @@ def load_bank(slug, round_name=None):
     if slug not in _bank_cache:
         out = []
         for f in sorted(BANK.glob(f"{slug}_*.json")):
+            # bank/*.v1.json are the same problems migrated to paper-format v1.0
+            # (see scripts/migrate_banks.py). They are parallel copies, not extra
+            # banks: loading both would duplicate every variant.
+            if f.name.endswith(".v1.json"):
+                continue
             try:
                 d = json.loads(f.read_text(encoding="utf-8"))
                 variants = d.get("variants", [])

@@ -1,0 +1,411 @@
+{
+ "id": "amc8_rand_15",
+ "competition": "AMC 8",
+ "category": "Math",
+ "title": "AMC 8 — Random Mock #15 · 2026-11-02 21:19",
+ "instructions": "25 questions · 40 minutes · No calculator. 25 points total.",
+ "time_limit_min": 40,
+ "total_points": 25,
+ "questions": [
+  {
+   "n": 1,
+   "source": "2004 AMC 8 Problem 1",
+   "question": "On a map, a $12$-centimeter length represents $72$ kilometers. How many kilometers does a $17$-centimeter length represent?",
+   "choices": {
+    "A": "6",
+    "B": "102",
+    "C": "204",
+    "D": "864",
+    "E": "1224"
+   },
+   "answer": "B",
+   "solution": "We set up the proportion  $\\frac{12  \\text{cm}}{72  \\text{km}}=\\frac{17 \\text{cm}}{x \\text{km}}$. Thus $x=102 \\Rightarrow \\boxed{\\textbf{(B)}\\ 102}$",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 2,
+   "source": "2018 AMC 8 Problem 2",
+   "question": "What is the value of the product\n\n$$\\left(1+\\frac{1}{1}\\right)\\cdot\\left(1+\\frac{1}{2}\\right)\\cdot\\left(1+\\frac{1}{3}\\right)\\cdot\\left(1+\\frac{1}{4}\\right)\\cdot\\left(1+\\frac{1}{5}\\right)\\cdot\\left(1+\\frac{1}{6}\\right)?$$",
+   "choices": {
+    "A": "$\\frac{7}{6}$",
+    "B": "$\\frac{4}{3}$",
+    "C": "$\\frac{7}{2}$",
+    "D": "7",
+    "E": "8"
+   },
+   "answer": "D",
+   "solution": "By adding up the numbers in each of the $6$ parentheses, we get: \n\n$\\frac{2}{1} \\cdot \\frac{3}{2} \\cdot \\frac{4}{3} \\cdot \\frac{5}{4} \\cdot \\frac{6}{5} \\cdot \\frac{7}{6}$.\n\nUsing telescoping, most of the terms cancel out diagonally. We are left with $\\frac{7}{1}$ which is equivalent to $7$. Thus, the answer would be $\\boxed{\\textbf{(D) }7}$.\n\nAlso, you can also make the fractions $\\frac{7!}{6!}$, which also yields $\\boxed{\\textbf{(D) }7}$",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 3,
+   "source": "2016 AMC 8 Problem 3",
+   "question": "Four students take an exam. Three of their scores are $70, 80,$ and $90$. If the average of their four scores is $70$, then what is the remaining score?",
+   "choices": {
+    "A": "40",
+    "B": "50",
+    "C": "55",
+    "D": "60",
+    "E": "70"
+   },
+   "answer": "A",
+   "solution": "Let $r$ be the remaining student's score.  We know that the average, 70, is equal to $\\frac{70 + 80 + 90 + r}{4}$.  We can use basic algebra to solve for $r$: $$\\frac{70 + 80 + 90 + r}{4} = 70$$ $$\\frac{240 + r}{4} = 70$$ $$240 + r = 280$$ $$r = 40$$ giving us the answer of $\\boxed{\\textbf{(A)}\\ 40}$.\n\nSince $90$ is $20$ more than $70$, and $80$ is $10$ more than $70$, for $70$ to be the average, the other number must be $30$ less than $70$, or  $\\boxed{\\textbf{(A)}\\ 40}$.\n\n== Video Solution\n\nA solution so simple a 12-year-old made it!",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 4,
+   "source": "2012 AMC 8 Problem 4",
+   "question": "Peter's family ordered a 12-slice pizza for dinner. Peter ate one slice and shared another slice equally with his brother Paul. What fraction of the pizza did Peter eat?",
+   "choices": {
+    "A": "~$\\frac{1}{24}$",
+    "B": "~$\\frac{1}{12}$",
+    "C": "~$\\frac{1}{8}$",
+    "D": "~$\\frac{1}{6}$",
+    "E": "~$\\frac{1}{4}$"
+   },
+   "answer": "C",
+   "solution": "Peter ate $1 + \\frac{1}{2} = \\frac{3}{2}$ slices. The pizza has $12$ slices total. Taking the ratio of the amount of slices Peter ate to the amount of slices in the pizza, we find that Peter ate $\\dfrac{\\frac{3}{2}\\text{ slices}}{12\\text{ slices}} = \\boxed{\\textbf{(C)}\\ \\frac{1}{8}}$ of the pizza.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 5,
+   "source": "2010 AMC 8 Problem 5",
+   "question": "Alice needs to replace a light bulb located $10$ centimeters below the ceiling in her kitchen. The ceiling is $2.4$ meters above the floor. Alice is $1.5$ meters tall and can reach $46$ centimeters above the top of her head. Standing on a stool, she can just reach the light bulb. What is the height of the stool, in centimeters?",
+   "choices": {
+    "A": "32",
+    "B": "34",
+    "C": "36",
+    "D": "38",
+    "E": "40"
+   },
+   "answer": "B",
+   "solution": "Convert everything to the same unit. Since the answer is in centimeters, change meters to centimeters by moving the decimal place two places to the right.\n\nThe ceiling is $240$ centimeters above the floor. The combined height of Alice and the light bulb when she reaches for it is $10+150+46=206$ centimeters. That means the stool's height needs to be $240-206=\\boxed{\\textbf{(B)}\\ 34}$",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 6,
+   "source": "1999 AMC 8 Problem 6",
+   "question": "Bo, Coe, Flo, Jo, and Moe have different amounts of money. Neither Jo nor Bo has as much money as Flo. Both Bo and Coe have more than Moe. Jo has more than Moe, but less than Bo. Who has the least amount of money?",
+   "choices": {
+    "A": "$\\text{Bo}$",
+    "B": "$\\text{Coe}$",
+    "C": "$\\text{Flo}$",
+    "D": "$\\text{Jo}$",
+    "E": "$\\text{Moe}$"
+   },
+   "answer": "E",
+   "solution": "Use logic to solve this problem. You don't actually need to use any equations.\n\nNeither Jo nor Bo has as much money as Flo. So Flo clearly does not have the least amount of money. Rule out Flo.\n\nBoth Bo and Coe have more than Moe. Rule out Bo and Coe; they clearly do not have the least amount of money.\n\nJo has more than Moe. Rule out Jo. \n\nThe only person who has not been ruled out is Moe. So $\\boxed{\\text{(E)}}$ is the answer.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 7,
+   "source": "2010 AMC 8 Problem 7",
+   "question": "Using only pennies, nickels, dimes, and quarters, what is the smallest number of coins Freddie would need so he could pay any amount of money less than a dollar?",
+   "choices": {
+    "A": "6",
+    "B": "10",
+    "C": "15",
+    "D": "25",
+    "E": "99"
+   },
+   "answer": "B",
+   "solution": "To make any units digit, you can use 4 pennies and 1 nickel. Using 3 quarters, you can make 75, so you will need 2 more dimes. Therefore, you will need $\\boxed{4 + 1 + 2 + 3 = B(10)}$ coins.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 8,
+   "source": "2012 AMC 8 Problem 8",
+   "question": "A shop advertises everything is \"half price in today's sale.\" In addition, a coupon gives a 20% discount on sale prices. Using the coupon, the price today represents what percentage off the original price?",
+   "choices": {
+    "A": "$\\hspace{.05in}10$",
+    "B": "$\\hspace{.05in}33$",
+    "C": "$\\hspace{.05in}40$",
+    "D": "$\\hspace{.05in}60$",
+    "E": "$\\hspace{.05in}70$"
+   },
+   "answer": "D",
+   "solution": "Let the original price of an item be $x$.\n\nFirst, everything is half-off, so the price is now $\\frac{x}{2} = 0.5x$.\n\nNext, the extra coupon applies $20\\%$ off on the sale price, so the price after this discount will be $100\\% - 20\\% = 80\\%$ of what it was before. (Notice how this is not applied to the original price; if it were, the solution would be applying $50\\% + 20\\% = 70\\%$ off the original price.)\n\n$80\\% \\cdot 0.5 x = \\frac{4}{5} \\cdot 0.5 x = 0.4x$\n\nThe price of the item after all discounts have been applied is $0.4x = 40\\% \\cdot x$. However, we need to find the percentage off the original price, not the current percentage of the original price. We then subtract $40\\% x$ from $100\\% x$ (the original price of the item), to find the answer, $\\boxed{\\textbf{(D)}\\ 60}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 9,
+   "source": "2022 AMC 8 Problem 9",
+   "question": "A cup of boiling water ($212^{\\circ}\\text{F}$) is placed to cool in a room whose temperature remains constant at $68^{\\circ}\\text{F}$. Suppose the difference between the water temperature and the room temperature is halved every $5$ minutes. What is the water temperature, in degrees Fahrenheit, after $15$ minutes?",
+   "choices": {
+    "A": "77",
+    "B": "86",
+    "C": "92",
+    "D": "98",
+    "E": "104"
+   },
+   "answer": "B",
+   "solution": "Initially, the difference between the water temperature and the room temperature is $212-68=144$ degrees Fahrenheit.\n\nAfter $5$ minutes, the difference between the temperatures is $144\\div2=72$ degrees Fahrenheit.\n\nAfter $10$ minutes, the difference between the temperatures is $72\\div2=36$ degrees Fahrenheit.\n\nAfter $15$ minutes, the difference between the temperatures is $36\\div2=18$ degrees Fahrenheit. At this point, the water temperature is $68+18=\\boxed{\\textbf{(B) } 86}$ degrees Fahrenheit.\n\nRemark\n\nAlternatively, we can condense the solution above into the following equation: $$68+(212-68)\\cdot\\left(\\frac12\\right)^{\\tfrac{15}{5}}=86.$$",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 10,
+   "source": "2020 AMC 8 Problem 10",
+   "question": "Zara has a collection of $4$ marbles: an Aggie, a Bumblebee, a Steelie, and a Tiger. She wants to display them in a row on a shelf, but does not want to put the Steelie and the Tiger next to one another. In how many ways can she do this?",
+   "choices": {
+    "A": "6",
+    "B": "8",
+    "C": "12",
+    "D": "18",
+    "E": "24"
+   },
+   "answer": "C",
+   "solution": "Let the Aggie, Bumblebee, Steelie, and Tiger, be referred to by $A,B,S,$ and $T$, respectively. If we ignore the constraint that $S$ and $T$ cannot be next to each other, we get a total of $4!=24$ ways to arrange the 4 marbles. We now simply have to subtract out the number of ways that $S$ and $T$ can be next to each other. If we place $S$ and $T$ next to each other in that order, then there are three places that we can place them, namely in the first two slots, in the second two slots, or in the last two slots (i.e. $ST\\square\\square, \\square ST\\square, \\square\\square ST$). However, we could also have placed $S$ and $T$ in the opposite order (i.e. $TS\\square\\square, \\square TS\\square, \\square\\square TS$). Thus there are 6 ways of placing $S$ and $T$ directly next to each other. Next, notice that for each of these placements, we have two open slots for placing $A$ and $B$. Specifically, we can place $A$ in the first open slot and $B$ in the second open slot or switch their order and place $B$ in the first open slot and $A$ in the second open slot. This gives us a total of $6\\times 2=12$ ways to place $S$ and $T$ next to each other. Subtracting this from the total number of arrangements gives us $24-12=12$ total arrangements $\\implies\\boxed{\\textbf{(C) }12}$.\n\nWe can also solve this problem directly by looking at the number of ways that we can place $S$ and $T$ such that they are not directly next to each other. Observe that there are three ways to place $S$ and $T$ (in that order) into the four slots so they are not next to each other (i.e. $S\\square T\\square, \\square S\\square T, S\\square\\square T$). However, we could also have placed $S$ and $T$ in the opposite order (i.e. $T\\square S\\square, \\square T\\square S, T\\square\\square S$). Thus there are 6 ways of placing $S$ and $T$ so that they are not next to each other. Next, notice that for each of these placements, we have two open slots for placing $A$ and $B$. Specifically, we can place $A$ in the first open slot and $B$ in the second open slot or switch their order and place $B$ in the first open slot and $A$ in the second open slot. This gives us a total of $6\\times 2=12$ ways to place $S$ and $T$ such that they are not next to each other $\\implies\\boxed{\\textbf{(C) }12}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 11,
+   "source": "2006 AMC 8 Problem 11",
+   "question": "How many two-digit numbers have digits whose sum is a perfect square?",
+   "choices": {
+    "A": "13",
+    "B": "16",
+    "C": "17",
+    "D": "18",
+    "E": "19"
+   },
+   "answer": "C",
+   "solution": "There is $1$ integer whose digits sum to $1$: $10$.\n\nThere are $4$ integers whose digits sum to $4$: $13, 22, 31, \\text{and } 40$.\n\nThere are $9$ integers whose digits sum to $9$: $18, 27, 36, 45, 54, 63, 72, 81, \\text{and } 90$.\n\nThere are $3$ integers whose digits sum to $16$: $79, 88, \\text{and } 97$.\n \nTwo digits cannot sum to $25$ or any greater square since the greatest sum of digits of a two-digit number is $9 + 9 = 18$.\n\nThus, the answer is $1 + 4 + 9 + 3 = \\boxed{\\textbf{(C)} 17}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 12,
+   "source": "2008 AMC 8 Problem 12",
+   "question": "A ball is dropped from a height of $3$ meters. On its first bounce it rises to a height of $2$ meters. It keeps falling and bouncing to $\\frac{2}{3}$ of the height it reached in the previous bounce. On which bounce will it not rise to a height of $0.5$ meters?",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "7"
+   },
+   "answer": "C",
+   "solution": "Each bounce is $2/3$ times the height of the previous bounce. The first bounce reaches $2$ meters, the second $4/3$, the third $8/9$, the fourth $16/27$, and the fifth $32/81$. Half of $81$ is $40.5$, so the ball does not reach the required height on bounce $\\boxed{\\textbf{(C)}\\ 5}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 13,
+   "source": "2005 AMC 8 Problem 13",
+   "question": "The area of polygon $ ABCDEF$ is 52 with $ AB=8$, $BC=9$ and $FA=5$. What is $ DE+EF$?",
+   "choices": {
+    "A": "7",
+    "B": "8",
+    "C": "9",
+    "D": "10",
+    "E": "11"
+   },
+   "answer": "C",
+   "solution": "Similar to solution 1, $AF + DE = BC$, so $DE=4$. Split the polygon into two rectangles by extending the $DE$ so it intersects $AB$. Let's say the length of $FE$ is equal to $x$. We can form the equation: $$5x + 9(8-x) = 52$$. We see that $x = 5$, so we can add $5 + 4 = \\boxed{\\textbf{(C)}\\ 9}$.\n - ArjunBhumula",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 14,
+   "source": "2007 AMC 8 Problem 14",
+   "question": "The base of isosceles $\\triangle ABC$ is $24$ and its area is $60$. What is the length of one\nof the congruent sides?",
+   "choices": {
+    "A": "5",
+    "B": "8",
+    "C": "13",
+    "D": "14",
+    "E": "18"
+   },
+   "answer": "C",
+   "solution": "The area of a triangle is shown by $\\frac{1}{2}bh$. We set the base equal to $24$, and the area equal to $60$, and we get the triangle's height, or altitude, to be $5$. In this isosceles triangle, the height bisects the base, so by using the Pythagorean Theorem, $a^2+b^2=c^2$, we can solve for one of the legs of the triangle (it will be the hypotenuse, $c$).\n$a = 12$, $b = 5$,\n$c = 13$.\nThe answer is $\\boxed{\\textbf{(C)}\\ 13}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 15,
+   "source": "2009 AMC 8 Problem 15",
+   "question": "A recipe that makes $5$ servings of hot chocolate requires $2$ squares of chocolate, $\\frac{1}{4}$ cup sugar, $1$ cup water and $4$ cups milk. Jordan has $5$ squares of chocolate, $2$ cups of sugar, lots of water, and $7$ cups of milk. If he maintains the same ratio of ingredients, what is the greatest number of servings of hot chocolate he can make?",
+   "choices": {
+    "A": "$5 \\frac18$",
+    "B": "$6\\frac14$",
+    "C": "$7\\frac12$",
+    "D": "$8 \\frac34$",
+    "E": "$9\\frac78$"
+   },
+   "answer": "D",
+   "solution": "Assuming excesses of the other ingredients, the chocolate can make $\\frac52 \\cdot 5=12.5$ servings, the sugar can make $\\frac{2}{1/4} \\cdot 5 = 40$ servings, the water can make unlimited servings, and the milk can make $\\frac74 \\cdot 5 = 8.75$ servings. Limited by the amount of milk, Jordan can make at most $\\boxed{\\textbf{(D)}\\ 8 \\frac34}$ servings.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 16,
+   "source": "2011 AMC 8 Problem 16",
+   "question": "Let $A$ be the area of the triangle with sides of length $25, 25$, and $30$. Let $B$ be the area of the triangle with sides of length $25, 25,$ and $40$. What is the relationship between $A$ and $B$?",
+   "choices": {
+    "A": "$A = \\dfrac9${16}B",
+    "B": "$A = \\dfrac34B$",
+    "C": "A=B",
+    "D": "$A = \\dfrac43B$",
+    "E": "$A = \\dfrac{16}9B$"
+   },
+   "answer": "C",
+   "solution": "'''25-25-30'''\n\nWe can draw the altitude for the side with length 30. By HL Congruence, the two triangles formed are congruent. Thus the altitude splits the side with length 30 into two segments with length 15. By the Pythagorean Theorem, we have \n$$15^2 + x^2 =25^2$$\n$$x^2 = 25^2 - 15^2$$\n$$x^2 = (25 + 15)(25-15)$$\n$$x^2= 40\\cdot 10$$\n$$x^2= 400$$\n$$x = \\sqrt{400}$$\n$$x= 20$$\n\nThus we have two 15-20-25 right triangles.\n\n'''25-25-40'''\n\nWe can draw the altitude for the side with length 40. By HL Congruence, the two triangles formed are congruent. Thus the altitude splits the side with length 40 into two segments with length 20. From the 25-25-30 case, we know that the other side length is 15, so we have two 15-20-25 right triangles.\nLet the area of a 15-20-25 right triangle be $x$.\n$$a = 2x$$\n$$b = 2x$$\n$$\\boxed{\\textbf{(C) } A = B}$$",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 17,
+   "source": "2001 AMC 8 Problem 17",
+   "question": "For the game show ''Who Wants To Be A Millionaire?'', the dollar values of each question are shown in the following table (where K = 1000).\n\n{rccccccccccccccc}\n$\\text{Question}  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15 $& 13 & 14 & 15 \\\\\n$\\text{Value}  100  200  300  500  1\\text{K}  2\\text{K}  4\\text{K}  8\\text{K}  16\\text{K}  32\\text{K}  64\\text{K}  125\\text{K}  250\\text{K}  500\\text{K}  1000\\text{K}$ & 1000\\text{K}\n\n\nBetween which two questions is the percent increase of the value the smallest?",
+   "choices": {
+    "A": "$\\text{From 1 to 2}$",
+    "B": "$\\text{From 2 to 3}$",
+    "C": "$\\text{From 3 to 4}$",
+    "D": "$\\text{From 11 to 12}$",
+    "E": "$\\text{From 14 to 15}$"
+   },
+   "answer": "B",
+   "solution": "Notice that in two of the increases, the dollar amount doubles. The increases in which this is not true is $ 2 $ to $ 3 $, $ 3 $ to $ 4 $, and $ 11 $ to $ 12 $. We can disregard $ 11 $ to $ 12 $ since that increase is almost $ 2 $ times. The increase from $ 2 $ to $ 3 $ is $ \\frac{300-200}{200}=\\frac{1}{2} $, so it's only multiplied by a factor of $ 1.5 $. The increase from $ 3 $ to $ 4 $ is $ \\frac{500-300}{300}=\\frac{2}{3} $, so it is multiplied by a factor of $ 1.\\bar{6} $. Therefore, the smallest percent increase is $ \\text{From 2 to 3}, \\boxed{\\text{B}} $",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 18,
+   "source": "2013 AMC 8 Problem 18",
+   "question": "Isabella uses one-foot cubical blocks to build a rectangular fort that is $12$ feet long, $10$ feet wide, and $5$ feet high. The floor and the four walls are all one foot thick. How many blocks does the fort contain?",
+   "choices": {
+    "A": "204",
+    "B": "280",
+    "C": "320",
+    "D": "340",
+    "E": "600"
+   },
+   "answer": "B",
+   "solution": "There are $10 \\cdot 12 = 120$ cubes on the base of the box. Then, for each of the 4 layers above the bottom (as since each cube is 1 foot by 1 foot by 1 foot and the box is 5 feet tall, there are 4 feet left), there are $9 + 11 + 9 + 11 = 40$ cubes. Hence, the answer is $120 + 4 \\cdot 40 = \\boxed{\\textbf{(B)}\\ 280}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 19,
+   "source": "2020 AMC 8 Problem 19",
+   "question": "A number is called flippy if its digits alternate between two distinct digits. For example, $2020$ and $37373$ are flippy, but $3883$ and $123123$ are not. How many five-digit flippy numbers are divisible by $15?$",
+   "choices": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "E": "8"
+   },
+   "answer": "B",
+   "solution": "A number is divisible by $15$ precisely if it is divisible by $3$ and $5$. The latter means the last digit must be either $5$ or $0$, and the former means the sum of the digits must be divisible by $3$. If the last digit is $0$, the first digit would be $0$ (because the digits alternate), which is not possible. Hence the last digit must be $5$, and the number is of the form $5\\square 5\\square 5$. If the unknown digit is $x$, we deduce $5+x+5+x+5 \\equiv 0 \\pmod{3} \\Rightarrow 2x \\equiv 0 \\pmod{3}$. We know $2^{-1}$ exists modulo $3$ because 2 is relatively prime to 3, so we conclude that $x$ (i.e. the second and fourth digit of the number) must be a multiple of $3$. It can be $0$, $3$, $6$, or $9$, so there are $\\boxed{\\textbf{(B) }4}$ options: $50505$, $53535$, $56565$, and $59595$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 20,
+   "source": "2007 AMC 8 Problem 20",
+   "question": "Before the district play, the Unicorns had won $45\\%$ of their basketball games. During district play, they won six more games and lost two, to finish the season having won half their games. How many games did the Unicorns play in all?",
+   "choices": {
+    "A": "48",
+    "B": "50",
+    "C": "52",
+    "D": "54",
+    "E": "60"
+   },
+   "answer": "A",
+   "solution": "At the beginning of the problem, the Unicorns had played $y$ games and they had won $x$ of these games. From the information given in the problem, we can say that $\\frac{x}{y}=0.45.$ Next, the Unicorns win 6 more games and lose 2 more, for a total of $6+2=8$ games played during district play. We are told that they end the season having won half of their games, or $0.5$ of their games. We can write another equation: $\\frac{x+6}{y+8}=0.5.$ This gives us a system of equations:\n$\\frac{x}{y}=0.45$ and $\\frac{x+6}{y+8}=0.5.$\nWe first multiply both sides of the first equation by $y$ to get $x=0.45y.$ Then, we multiply both sides of the second equation by $(y+8)$ to get $x+6=0.5(y+8).$ Applying the Distributive Property gives yields $x+6=0.5y+4.$ Now we substitute $0.45y$ for $x$ to get $0.45y+6=0.5y+4.$ Solving gives us $y=40.$ Since the problem asks for the total number of games, we add on the last 8 games to get the solution $\\boxed{\\textbf{(A)}\\ 48}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 21,
+   "source": "2007 AMC 8 Problem 21",
+   "question": "Two cards are dealt from a deck of four red cards labeled $A$, $B$, $C$, $D$ and four green cards labeled $A$, $B$, $C$, $D$. A winning pair is two of the same color or two of the same letter. What is the probability of drawing a winning pair?",
+   "choices": {
+    "A": "$\\frac{2}{7}$",
+    "B": "$\\frac{3}{8}$",
+    "C": "$\\frac{1}{2}$",
+    "D": "$\\frac{4}{7}$",
+    "E": "$\\frac{5}{8}$"
+   },
+   "answer": "D",
+   "solution": "Notice that, no matter which first card you choose, there are exactly $4$ cards that either have the same color or letter as it. Since there are $7$ cards left to choose from, the probability is $\\boxed{\\textbf{(D)}\\frac47}$. \n-theepiccarrot7",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 22,
+   "source": "2004 AMC 8 Problem 22",
+   "question": "At a party there are only single women and married men with their wives. The probability that a randomly selected woman is single is $\\frac25$. What fraction of the people in the room are married men?",
+   "choices": {
+    "A": "$\\frac13$",
+    "B": "$\\frac38$",
+    "C": "$\\frac25$",
+    "D": "$\\frac{5}{12}$",
+    "E": "$\\frac35$"
+   },
+   "answer": "B",
+   "solution": "Assume arbitrarily (and WLOG) there are $5$ women in the room, of which $5 \\cdot \\frac25 =  2$ are single and $5-2=3$ are married. Each married woman came with her husband, so there are $3$ married men in the room as well for a total of $5+3=8$ people. The fraction of the people that are married men is $\\boxed{\\textbf{(B)}\\ \\frac38}$.",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 23,
+   "source": "2000 AMC 8 Problem 23",
+   "question": "There is a list of seven numbers. The average of the first four numbers is $5$, and the average of the last four numbers is $8$. If the average of all seven numbers is $ 6\\frac{4}{7} $, then the number common to both sets of four numbers is",
+   "choices": {
+    "A": "$5\\frac{3}{7}$",
+    "B": "6",
+    "C": "$6\\frac{4}{7}$",
+    "D": "7",
+    "E": "$7\\frac{3}{7}$"
+   },
+   "answer": "B",
+   "solution": "Remember that if a list of $n$ numbers has an average of $k$, then the sum $S$ of all the numbers on the list is $S = nk$.\n\nSo if the average of the first $4$ numbers is $5$, then the first four numbers total $4 \\cdot 5 = 20$.\n\nIf the average of the last $4$ numbers is $8$, then the last four numbers total $4 \\cdot 8 = 32$.\n\nIf the average of all $7$ numbers is $6\\frac{4}{7}$, then the total of all seven numbers is $7 \\cdot 6\\frac{4}{7} = 7\\cdot 6 + 4 =  46$.\n\nIf the first four numbers are $20$, and the last four numbers are $32$, then all \"eight\" numbers are $20 + 32 = 52$.  But that's counting one number twice.  Since the sum of all seven numbers is $46$, then the number that was counted twice is $52 - 46 = 6$, and the answer is $\\boxed{(B) 6}$\n\nAlgebraically, if $a + b + c + d = 20$, and $d + e + f + g = 32$, you can add both equations to get $a + b + c + 2d + e + f + g = 52$.  You know that $a + b + c + d + e + f + g = 46$, so you can subtract that from the last equation to get $d = \\boxed{(B) 6}$, and $d$ is the number that appeared twice.\n\nYay!  :D",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 24,
+   "source": "2026 AMC 8 Problem 24",
+   "question": "The notation $n!$ (read \"n factorial\") is defined as the product of the first $n$ positive integers. (For example, $3!=1 \\cdot 2 \\cdot 3 = 6$). Define the superfactorial of a positive integer, denoted by $n^!$, to be the product of the factorials of the first $n$ integers. (For example, $3^!=1! \\cdot 2! \\cdot 3! = 12$). How many factors of $7$ appear in the prime factorization of $51^!$, the superfactorial of $51$?",
+   "choices": {
+    "A": "147",
+    "B": "150",
+    "C": "156",
+    "D": "168",
+    "E": "171"
+   },
+   "answer": "E",
+   "solution": "If $51^! = 1! \\cdot 2! \\cdot ... \\cdot 51! = (1) (1 \\cdot 2)(1 \\cdot 2 \\cdot 3)(...)(1 \\cdot 2 \\cdot 3 \\cdot ... \\cdot 51)$ is expanded as such, each integer $k \\leq 51$ will appear once in each of the expansions of $\\{k!, ..., 51!\\}$, for a total of $52-k$ appearances.  \n\nTherefore, in this expansion, $7$ appears $45$ times, $14$ appears $38$ times, $21$ appears $31$ times, $28$ appears $24$ times, $35$ appears $17$ times, $42$ appears $10$ times, and $49$ appears $3$ times.  Except for $49$, which contributes $2$ copies of the factor $7$, each of these terms contributes $1$ copy of the factor $7$, for a total of $45 + 38 + 31 + 24 + 17 + 10 + 3 \\cdot 2 = \\boxed{ \\textbf{(E) } 171}$ copies of the factor $7$.\n\n-j314andrews",
+   "type": "multiple_choice",
+   "points": 1
+  },
+  {
+   "n": 25,
+   "source": "2010 AMC 8 Problem 25",
+   "question": "Everyday at school, Jo climbs a flight of $6$ stairs. Jo can take the stairs $1$, $2$, or $3$ at a time. For example, Jo could climb $3$, then $1$, then $2$. In how many ways can Jo climb the stairs?",
+   "choices": {
+    "A": "13",
+    "B": "18",
+    "C": "20",
+    "D": "22",
+    "E": "24"
+   },
+   "answer": "E",
+   "solution": "A dynamics programming approach is quick and easy. The number of ways to climb one stair is $1$. There are $2$ ways to climb two stairs: $1$,$1$ or $2$. For 3 stairs, there are $4$ ways: \n($1$,$1$,$1$)\n($1$,$2$)\n($2$,$1$)\n($3$)\n\nFor four stairs, consider what step they came from to land on the fourth stair. They could have hopped straight from the 1st, done a double from #2, or used a single step from #3. The ways to get to each of these steps are $1+2+4=7$ ways to get to step 4. The pattern can then be extended:\n$4$ steps: $1+2+4=7$ ways.\n$5$ steps: $2+4+7=13$ ways.\n$6$ steps: $4+7+13=24$ ways.\n\nThus, there are $\\boxed{\\textbf{(E) } 24}$ ways to get to step $6.$",
+   "type": "multiple_choice",
+   "points": 1
+  }
+ ]
+}

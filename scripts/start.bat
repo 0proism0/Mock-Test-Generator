@@ -1,14 +1,20 @@
 @echo off
 rem Run MockTest Maker.
 rem
-rem   scripts\start.bat        Python server on http://localhost:8000
+rem   scripts\start.bat        Python server on http://localhost:8020
 rem                            (serves app/web/dist if built, else the legacy UI)
 rem   scripts\start.bat dev    + Vite dev server on http://localhost:5173 (HMR, /api proxied)
+rem
+rem Port: 8020 by default. Override with the MOCKTEST_PORT environment variable.
 setlocal
 for %%I in ("%~dp0..") do set "ROOT=%%~fI"
 set "SERVER=%ROOT%\app\server.py"
 set "WEB=%ROOT%\app\web"
 set "DIST=%WEB%\dist\index.html"
+
+rem --- port: MOCKTEST_PORT > 8020 --------------------------------------------
+set "PORT=8020"
+if defined MOCKTEST_PORT set "PORT=%MOCKTEST_PORT%"
 
 set "DEV="
 if /i "%~1"=="dev"  set "DEV=1"
@@ -47,14 +53,14 @@ if defined DEV (
     exit /b 1
   )
   rem The API is torn down by port when Vite exits, so a server that was
-  rem already running on :8000 is reused and left alone.
+  rem already running on this port is reused and left alone.
   set "API_STARTED="
   set "BUSY="
-  for /f "delims=" %%L in ('netstat -ano ^| findstr /c:":8000" ^| findstr /i "LISTENING"') do set "BUSY=1"
+  for /f "delims=" %%L in ('netstat -ano ^| findstr /c:":%PORT%" ^| findstr /i "LISTENING"') do set "BUSY=1"
   if defined BUSY (
-    echo [dev] port 8000 already in use - reusing the running server.
+    echo [dev] port %PORT% already in use - reusing the running server.
   ) else (
-    echo [dev] Python API on http://localhost:8000 ...
+    echo [dev] Python API on http://localhost:%PORT% ...
     start "MockTest API" /min /d "%ROOT%" "%PYEXE%" %PYARGS% "%SERVER%"
     set "API_STARTED=1"
   )
@@ -62,25 +68,25 @@ if defined DEV (
   call npm run dev
   popd
   if defined API_STARTED (
-    for /f "tokens=5" %%P in ('netstat -ano ^| findstr /c:":8000" ^| findstr /i "LISTENING"') do taskkill /PID %%P /T /F >nul 2>nul
+    for /f "tokens=5" %%P in ('netstat -ano ^| findstr /c:":%PORT%" ^| findstr /i "LISTENING"') do taskkill /PID %%P /T /F >nul 2>nul
   )
   exit /b 0
 )
 
-rem --- normal: one process on :8000 ------------------------------------------
+rem --- normal: one process on the chosen port ---------------------------------
 if not exist "%DIST%" (
   echo [start] app\web\dist not built - serving legacy UI. Run scripts\build.bat for the React app.
 )
 
 set "BUSY="
-for /f "delims=" %%L in ('netstat -ano ^| findstr /c:":8000" ^| findstr /i "LISTENING"') do set "BUSY=1"
+for /f "delims=" %%L in ('netstat -ano ^| findstr /c:":%PORT%" ^| findstr /i "LISTENING"') do set "BUSY=1"
 if defined BUSY (
-  echo [start] port 8000 is already in use - opening the browser instead.
-  start "" http://localhost:8000
+  echo [start] port %PORT% is already in use - opening the browser instead.
+  start "" http://localhost:%PORT%
   exit /b 0
 )
 
-echo [start] http://localhost:8000
+echo [start] http://localhost:%PORT%
 %PYEXE% %PYARGS% "%SERVER%"
 set "RC=%ERRORLEVEL%"
 if not "%RC%"=="0" (
