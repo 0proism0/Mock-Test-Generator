@@ -4,7 +4,7 @@ import { api, type PracticeLevelStats, type PracticeStats } from '../lib/api'
 import { useAuth } from '../lib/auth'
 import { useI18n } from '../lib/i18n'
 
-type Level = 'easy' | 'medium' | 'hard'
+type Level = 'easy' | 'medium' | 'hard' | 'custom'
 
 interface DrQ {
   q: string // may contain $...$ LaTeX
@@ -684,57 +684,150 @@ function genAseq(lv: Level): DrQ {
   return { q: `An arithmetic sequence starts at ${a1} with difference ${d}. Which term number equals ${target}?`, v: n }
 }
 
-const DRILLS: Record<string, { name: string; desc: string; gen: (lv: Level) => DrQ }> = {
-  addsub: { name: 'drAddSub', desc: 'drAddSubDesc', gen: genAddSub },
-  mul2: { name: 'drMul2', desc: 'drMul2Desc', gen: genMul2 },
-  pemdas: { name: 'drPemdas', desc: 'drPemdasDesc', gen: genPemdas },
-  neg: { name: 'drNeg', desc: 'drNegDesc', gen: genNeg },
-  absv: { name: 'drAbs', desc: 'drAbsDesc', gen: genAbs },
-  round: { name: 'drRound', desc: 'drRoundDesc', gen: genRound },
-  base: { name: 'drBase', desc: 'drBaseDesc', gen: genBase },
-  mult: { name: 'drMult', desc: 'drMultDesc', gen: genMult },
-  div: { name: 'drDiv', desc: 'drDivDesc', gen: genDiv },
-  mod: { name: 'drMod', desc: 'drModDesc', gen: genMod },
-  lastdig: { name: 'drLastDig', desc: 'drLastDigDesc', gen: genLastdig },
-  fact: { name: 'drFact', desc: 'drFactDesc', gen: genFact },
-  frac: { name: 'drFrac', desc: 'drFracDesc', gen: genFrac },
-  fdiv: { name: 'drFdiv', desc: 'drFdivDesc', gen: genFdiv },
-  mixed: { name: 'drMixed', desc: 'drMixedDesc', gen: genMixed },
-  dec: { name: 'drDec', desc: 'drDecDesc', gen: genDec },
-  fdp: { name: 'drFdp', desc: 'drFdpDesc', gen: genFdp },
-  pct: { name: 'drPct', desc: 'drPctDesc', gen: genPct },
-  pctchg: { name: 'drPctChg', desc: 'drPctChgDesc', gen: genPctChg },
-  discount: { name: 'drDiscount', desc: 'drDiscountDesc', gen: genDiscount },
-  interest: { name: 'drInterest', desc: 'drInterestDesc', gen: genInterest },
-  ratio: { name: 'drRatio', desc: 'drRatioDesc', gen: genRatio },
-  pow: { name: 'drPow', desc: 'drPowDesc', gen: genPow },
-  cbrt: { name: 'drCbrt', desc: 'drCbrtDesc', gen: genCbrt },
-  nexp: { name: 'drNexp', desc: 'drNexpDesc', gen: genNexp },
-  sci: { name: 'drSci', desc: 'drSciDesc', gen: genSci },
-  log: { name: 'drLog', desc: 'drLogDesc', gen: genLog },
-  eq: { name: 'drEq', desc: 'drEqDesc', gen: genEq },
-  parens: { name: 'drParens', desc: 'drParensDesc', gen: genParens },
-  slope: { name: 'drSlope', desc: 'drSlopeDesc', gen: genSlope },
-  line: { name: 'drLine', desc: 'drLineDesc', gen: genLine },
-  distmid: { name: 'drDistmid', desc: 'drDistmidDesc', gen: genDistmid },
-  system: { name: 'drSystem', desc: 'drSystemDesc', gen: genSystem },
-  quad: { name: 'drQuad', desc: 'drQuadDesc', gen: genQuad },
-  disc: { name: 'drDisc', desc: 'drDiscDesc', gen: genDisc },
-  factor: { name: 'drFactor', desc: 'drFactorDesc', gen: genFactor },
-  feval: { name: 'drFeval', desc: 'drFevalDesc', gen: genFeval },
-  gcdlcm: { name: 'drGcdLcm', desc: 'drGcdLcmDesc', gen: genGcdLcm },
-  pfactor: { name: 'drPfactor', desc: 'drPfactorDesc', gen: genPfactor },
-  perm: { name: 'drPerm', desc: 'drPermDesc', gen: genPerm },
-  comb: { name: 'drComb', desc: 'drCombDesc', gen: genComb },
-  prob: { name: 'drProb', desc: 'drProbDesc', gen: genProb },
-  dice: { name: 'drDice', desc: 'drDiceDesc', gen: genDice },
-  pyth: { name: 'drPyth', desc: 'drPythDesc', gen: genPyth },
-  tri: { name: 'drTri', desc: 'drTriDesc', gen: genTri },
-  circle: { name: 'drCircle', desc: 'drCircleDesc', gen: genCircle },
-  vol: { name: 'drVol', desc: 'drVolDesc', gen: genVol },
-  drt: { name: 'drDrt', desc: 'drDrtDesc', gen: genDrt },
-  avg: { name: 'drAvg', desc: 'drAvgDesc', gen: genAvg },
-  aseq: { name: 'drAseq', desc: 'drAseqDesc', gen: genAseq },
+// custom-range generators: user picks [lo, hi]; semantics are per-drill
+function cAddSub(lo: number, hi: number): DrQ {
+  const a = rnd(lo, hi)
+  const b = rnd(lo, hi)
+  if (Math.random() < 0.5) return { q: `${a} + ${b} = ?`, v: a + b }
+  const [x, y] = a >= b ? [a, b] : [b, a]
+  return { q: `${x} − ${y} = ?`, v: x - y }
+}
+
+function cMult(lo: number, hi: number): DrQ {
+  const a = rnd(lo, hi)
+  const b = rnd(lo, hi)
+  return { q: `${a} × ${b} = ?`, v: a * b }
+}
+
+function cDiv(lo: number, hi: number): DrQ {
+  const d = Math.max(2, rnd(lo, hi))
+  const qq = rnd(lo, hi)
+  return { q: `${d * qq} ÷ ${d} = ?`, v: qq }
+}
+
+function cMod(lo: number, hi: number): DrQ {
+  const d = Math.max(2, rnd(lo, hi))
+  const n = rnd(d + 1, d * 20)
+  return { q: `Remainder when ${n} is divided by ${d} = ?`, v: n % d }
+}
+
+function cPow(lo: number, hi: number): DrQ {
+  const a = rnd(lo, hi)
+  return { q: `${a}² = ?`, v: a * a }
+}
+
+function cNeg(lo: number, hi: number): DrQ {
+  const a = rnd(lo, hi)
+  const b = rnd(lo, hi)
+  return { q: `−${a} + ${b} = ?`, v: b - a }
+}
+
+function cPemdas(lo: number, hi: number): DrQ {
+  const a = rnd(lo, hi)
+  const b = rnd(lo, hi)
+  const c = rnd(2, 9)
+  return { q: `${a} + ${b} × ${c} = ?`, v: a + b * c }
+}
+
+function cAbs(lo: number, hi: number): DrQ {
+  const a = rnd(lo, hi)
+  const b = rnd(lo, hi)
+  return { q: `|${a} − ${b}| = ?`, v: Math.abs(a - b) }
+}
+
+function cAvg(lo: number, hi: number): DrQ {
+  const nums = Array.from({ length: 3 }, () => rnd(lo, hi))
+  return { q: `The average of ${nums.join(', ')} = ?`, v: nums.reduce((x, y) => x + y, 0) / 3 }
+}
+
+function cAseq(lo: number, hi: number): DrQ {
+  const a1 = rnd(lo, hi)
+  const d = rnd(Math.max(1, lo), hi)
+  const n = rnd(5, 15)
+  return { q: `An arithmetic sequence has first term ${a1} and common difference ${d}. Term #${n} = ?`, v: a1 + (n - 1) * d }
+}
+
+function cGcdLcm(lo: number, hi: number): DrQ {
+  const g = Math.max(2, rnd(lo, hi))
+  const a = g * rnd(2, 9)
+  const b = g * rnd(2, 9)
+  return Math.random() < 0.5
+    ? { q: `GCD of ${a} and ${b} = ?`, v: gcd(a, b) }
+    : { q: `LCM of ${a} and ${b} = ?`, v: (a * b) / gcd(a, b) }
+}
+
+const DRILL_CATS = [
+  'drCatArith',
+  'drCatFrac',
+  'drCatPct',
+  'drCatPow',
+  'drCatAlg',
+  'drCatNum',
+  'drCatProb',
+  'drCatGeo',
+  'drCatWord',
+] as const
+
+interface DrillDef {
+  name: string
+  desc: string
+  gen: (lv: Level) => DrQ
+  cat: (typeof DRILL_CATS)[number]
+  custom?: (lo: number, hi: number) => DrQ
+  customDef?: [number, number]
+}
+
+const DRILLS: Record<string, DrillDef> = {
+  addsub: { name: 'drAddSub', desc: 'drAddSubDesc', gen: genAddSub, cat: 'drCatArith', custom: cAddSub, customDef: [2, 50] },
+  mul2: { name: 'drMul2', desc: 'drMul2Desc', gen: genMul2, cat: 'drCatArith', custom: cMult, customDef: [11, 99] },
+  pemdas: { name: 'drPemdas', desc: 'drPemdasDesc', gen: genPemdas, cat: 'drCatArith', custom: cPemdas, customDef: [2, 50] },
+  neg: { name: 'drNeg', desc: 'drNegDesc', gen: genNeg, cat: 'drCatArith', custom: cNeg, customDef: [2, 50] },
+  absv: { name: 'drAbs', desc: 'drAbsDesc', gen: genAbs, cat: 'drCatArith', custom: cAbs, customDef: [2, 60] },
+  round: { name: 'drRound', desc: 'drRoundDesc', gen: genRound, cat: 'drCatArith' },
+  base: { name: 'drBase', desc: 'drBaseDesc', gen: genBase, cat: 'drCatArith' },
+  mult: { name: 'drMult', desc: 'drMultDesc', gen: genMult, cat: 'drCatArith', custom: cMult, customDef: [2, 12] },
+  div: { name: 'drDiv', desc: 'drDivDesc', gen: genDiv, cat: 'drCatArith', custom: cDiv, customDef: [2, 12] },
+  mod: { name: 'drMod', desc: 'drModDesc', gen: genMod, cat: 'drCatArith', custom: cMod, customDef: [3, 12] },
+  lastdig: { name: 'drLastDig', desc: 'drLastDigDesc', gen: genLastdig, cat: 'drCatArith' },
+  fact: { name: 'drFact', desc: 'drFactDesc', gen: genFact, cat: 'drCatArith' },
+  frac: { name: 'drFrac', desc: 'drFracDesc', gen: genFrac, cat: 'drCatFrac' },
+  fdiv: { name: 'drFdiv', desc: 'drFdivDesc', gen: genFdiv, cat: 'drCatFrac' },
+  mixed: { name: 'drMixed', desc: 'drMixedDesc', gen: genMixed, cat: 'drCatFrac' },
+  dec: { name: 'drDec', desc: 'drDecDesc', gen: genDec, cat: 'drCatFrac' },
+  fdp: { name: 'drFdp', desc: 'drFdpDesc', gen: genFdp, cat: 'drCatFrac' },
+  pct: { name: 'drPct', desc: 'drPctDesc', gen: genPct, cat: 'drCatPct' },
+  pctchg: { name: 'drPctChg', desc: 'drPctChgDesc', gen: genPctChg, cat: 'drCatPct' },
+  discount: { name: 'drDiscount', desc: 'drDiscountDesc', gen: genDiscount, cat: 'drCatPct' },
+  interest: { name: 'drInterest', desc: 'drInterestDesc', gen: genInterest, cat: 'drCatPct' },
+  ratio: { name: 'drRatio', desc: 'drRatioDesc', gen: genRatio, cat: 'drCatPct' },
+  pow: { name: 'drPow', desc: 'drPowDesc', gen: genPow, cat: 'drCatPow', custom: cPow, customDef: [11, 99] },
+  cbrt: { name: 'drCbrt', desc: 'drCbrtDesc', gen: genCbrt, cat: 'drCatPow' },
+  nexp: { name: 'drNexp', desc: 'drNexpDesc', gen: genNexp, cat: 'drCatPow' },
+  sci: { name: 'drSci', desc: 'drSciDesc', gen: genSci, cat: 'drCatPow' },
+  log: { name: 'drLog', desc: 'drLogDesc', gen: genLog, cat: 'drCatPow' },
+  eq: { name: 'drEq', desc: 'drEqDesc', gen: genEq, cat: 'drCatAlg' },
+  parens: { name: 'drParens', desc: 'drParensDesc', gen: genParens, cat: 'drCatAlg' },
+  slope: { name: 'drSlope', desc: 'drSlopeDesc', gen: genSlope, cat: 'drCatAlg' },
+  line: { name: 'drLine', desc: 'drLineDesc', gen: genLine, cat: 'drCatAlg' },
+  distmid: { name: 'drDistmid', desc: 'drDistmidDesc', gen: genDistmid, cat: 'drCatAlg' },
+  system: { name: 'drSystem', desc: 'drSystemDesc', gen: genSystem, cat: 'drCatAlg' },
+  quad: { name: 'drQuad', desc: 'drQuadDesc', gen: genQuad, cat: 'drCatAlg' },
+  disc: { name: 'drDisc', desc: 'drDiscDesc', gen: genDisc, cat: 'drCatAlg' },
+  factor: { name: 'drFactor', desc: 'drFactorDesc', gen: genFactor, cat: 'drCatAlg' },
+  feval: { name: 'drFeval', desc: 'drFevalDesc', gen: genFeval, cat: 'drCatAlg' },
+  gcdlcm: { name: 'drGcdLcm', desc: 'drGcdLcmDesc', gen: genGcdLcm, cat: 'drCatNum', custom: cGcdLcm, customDef: [2, 30] },
+  pfactor: { name: 'drPfactor', desc: 'drPfactorDesc', gen: genPfactor, cat: 'drCatNum' },
+  perm: { name: 'drPerm', desc: 'drPermDesc', gen: genPerm, cat: 'drCatProb' },
+  comb: { name: 'drComb', desc: 'drCombDesc', gen: genComb, cat: 'drCatProb' },
+  prob: { name: 'drProb', desc: 'drProbDesc', gen: genProb, cat: 'drCatProb' },
+  dice: { name: 'drDice', desc: 'drDiceDesc', gen: genDice, cat: 'drCatProb' },
+  pyth: { name: 'drPyth', desc: 'drPythDesc', gen: genPyth, cat: 'drCatGeo' },
+  tri: { name: 'drTri', desc: 'drTriDesc', gen: genTri, cat: 'drCatGeo' },
+  circle: { name: 'drCircle', desc: 'drCircleDesc', gen: genCircle, cat: 'drCatGeo' },
+  vol: { name: 'drVol', desc: 'drVolDesc', gen: genVol, cat: 'drCatGeo' },
+  drt: { name: 'drDrt', desc: 'drDrtDesc', gen: genDrt, cat: 'drCatWord' },
+  avg: { name: 'drAvg', desc: 'drAvgDesc', gen: genAvg, cat: 'drCatWord', custom: cAvg, customDef: [5, 100] },
+  aseq: { name: 'drAseq', desc: 'drAseqDesc', gen: genAseq, cat: 'drCatWord', custom: cAseq, customDef: [1, 50] },
 }
 
 function drMatch(given: string, rec: DrQ): boolean {
@@ -766,16 +859,24 @@ function loadLocal(): PracticeStats {
 function Runner({
   drill,
   level,
+  range,
   onDone,
   onExit,
 }: {
   drill: string
   level: Level
+  range?: [number, number]
   onDone: (r: RunResult) => void
   onExit: () => void
 }) {
   const { t } = useI18n()
-  const [qs] = useState<DrQ[]>(() => Array.from({ length: N_Q }, () => DRILLS[drill].gen(level)))
+  const [qs] = useState<DrQ[]>(() =>
+    Array.from({ length: N_Q }, () =>
+      level === 'custom' && range && DRILLS[drill].custom
+        ? DRILLS[drill].custom(range[0], range[1])
+        : DRILLS[drill].gen(level),
+    ),
+  )
   const [i, setI] = useState(0)
   const [correct, setCorrect] = useState(0)
   const [fb, setFb] = useState<{ ok: boolean; ans: string } | null>(null)
@@ -846,7 +947,7 @@ function Runner({
     <section className="card dr-run">
       <div className="dr-meta">
         <span>
-          {t(DRILLS[drill].name)} · {t(level)}
+          {t(DRILLS[drill].name)} · {level === 'custom' && range ? `${range[0]}–${range[1]}` : t(level)}
         </span>
         <span>
           {i + 1} / {N_Q} · ✓ {correct} · {fmtTime(secs)}
@@ -903,8 +1004,12 @@ export function Practice() {
   const { t } = useI18n()
   const { user } = useAuth()
   const [stats, setStats] = useState<PracticeStats | null>(null)
-  const [run, setRun] = useState<{ drill: string; level: Level } | null>(null)
-  const [result, setResult] = useState<(RunResult & { drill: string; level: Level }) | null>(null)
+  const [run, setRun] = useState<{ drill: string; level: Level; range?: [number, number] } | null>(null)
+  const [result, setResult] = useState<(RunResult & { drill: string; level: Level; range?: [number, number] }) | null>(null)
+  const [customKey, setCustomKey] = useState<string | null>(null)
+  const [customLo, setCustomLo] = useState('')
+  const [customHi, setCustomHi] = useState('')
+  const [rangeErr, setRangeErr] = useState(false)
 
   useEffect(() => {
     if (!user) {
@@ -938,14 +1043,37 @@ export function Practice() {
     const next: PracticeStats = { ...cur, [drill]: { ...cur[drill], [level]: rec } }
     setStats(next)
     localStorage.setItem('mt_practice', JSON.stringify(next))
-    if (user) {
+    if (user && level !== 'custom') {
       api
         .practiceSave({ drill, level, pct: r.pct, time_s: r.time_s, correct: r.correct, total: r.total })
         .then((d) => setStats(d.stats))
         .catch(() => {})
     }
-    setResult({ ...r, newBest, rec, drill, level })
+    setResult({ ...r, newBest, rec, drill, level, range: run?.range })
     setRun(null)
+  }
+
+  function startCustom(key: string) {
+    const lo = Math.floor(Number(customLo))
+    const hi = Math.floor(Number(customHi))
+    if (!Number.isFinite(lo) || !Number.isFinite(hi) || lo < 0 || hi <= lo || hi > 1e9) {
+      setRangeErr(true)
+      return
+    }
+    setRangeErr(false)
+    setRun({ drill: key, level: 'custom', range: [lo, hi] })
+  }
+
+  function openCustom(key: string) {
+    setRangeErr(false)
+    if (customKey === key) {
+      setCustomKey(null)
+      return
+    }
+    const def = DRILLS[key].customDef ?? [1, 100]
+    setCustomKey(key)
+    setCustomLo(String(def[0]))
+    setCustomHi(String(def[1]))
   }
 
   if (run) {
@@ -953,6 +1081,7 @@ export function Practice() {
       <Runner
         drill={run.drill}
         level={run.level}
+        range={run.range}
         onExit={() => setRun(null)}
         onDone={(r) => saveStats(run.drill, run.level, r)}
       />
@@ -960,11 +1089,11 @@ export function Practice() {
   }
 
   if (result) {
-    const { drill, level } = result
+    const { drill, level, range } = result
     return (
       <section className="card dr-summary">
         <h3>
-          {t(DRILLS[drill].name)} · {t(level)}
+          {t(DRILLS[drill].name)} · {level === 'custom' && range ? `${range[0]}–${range[1]}` : t(level)}
         </h3>
         <div className="dr-emoji">{result.pct >= 80 ? '🎉' : result.pct >= 50 ? '💪' : '📚'}</div>
         <div className="dr-scoreline">
@@ -980,7 +1109,7 @@ export function Practice() {
         </p>
         {result.newBest && <p className="dr-newbest">{t('drNewBest')}</p>}
         <div className="dr-actions">
-          <button type="button" className="btn" onClick={() => { setResult(null); setRun({ drill, level }) }}>
+          <button type="button" className="btn" onClick={() => { setResult(null); setRun({ drill, level, range }) }}>
             {t('drAgain')}
           </button>
           <button type="button" className="btn ghost" onClick={() => setResult(null)}>
@@ -998,29 +1127,80 @@ export function Practice() {
       {!stats ? (
         <p className="muted">{t('loading')}</p>
       ) : (
-        <div className="gen-grid">
-          {Object.entries(DRILLS).map(([key, d]) => (
-            <div key={key} data-drill={key} className="card compact">
-              <h3>{t(d.name)}</h3>
-              <p className="muted">{t(d.desc)}</p>
-              <div className="dr-levels">
-                {LEVELS.map((lv) => {
-                  const b = stats[key]?.[lv]
-                  let lbl = t(lv)
-                  if (b) {
-                    lbl += ` · ${b.best_pct}%`
-                    if (b.best_time != null) lbl += ` · ${fmtTime(Math.round(b.best_time))}`
-                  }
+        DRILL_CATS.map((cat) => {
+          const keys = Object.keys(DRILLS).filter((k) => DRILLS[k].cat === cat)
+          if (!keys.length) return null
+          return (
+            <section key={cat} className="dr-cat">
+              <h3 className="dr-cat-head">{t(cat)}</h3>
+              <div className="gen-grid">
+                {keys.map((key) => {
+                  const d = DRILLS[key]
                   return (
-                    <button key={lv} type="button" className="btn sm" onClick={() => setRun({ drill: key, level: lv })}>
-                      {lbl}
-                    </button>
+                    <div key={key} data-drill={key} className="card compact">
+                      <h3>{t(d.name)}</h3>
+                      <p className="muted">{t(d.desc)}</p>
+                      <div className="dr-levels">
+                        {LEVELS.map((lv) => {
+                          const b = stats[key]?.[lv]
+                          let lbl = t(lv)
+                          if (b) {
+                            lbl += ` · ${b.best_pct}%`
+                            if (b.best_time != null) lbl += ` · ${fmtTime(Math.round(b.best_time))}`
+                          }
+                          return (
+                            <button key={lv} type="button" className="btn sm" onClick={() => setRun({ drill: key, level: lv })}>
+                              {lbl}
+                            </button>
+                          )
+                        })}
+                        {d.custom && (
+                          <button
+                            type="button"
+                            className={customKey === key ? 'btn sm' : 'btn sm ghost'}
+                            onClick={() => openCustom(key)}
+                          >
+                            {(() => {
+                              const b = stats[key]?.custom
+                              let lbl = t('custom')
+                              if (b) {
+                                lbl += ` · ${b.best_pct}%`
+                                if (b.best_time != null) lbl += ` · ${fmtTime(Math.round(b.best_time))}`
+                              }
+                              return lbl
+                            })()}
+                          </button>
+                        )}
+                      </div>
+                      {customKey === key && d.custom && (
+                        <div className="dr-custom">
+                          <label>{t('drFrom')}</label>
+                          <input
+                            type="number"
+                            value={customLo}
+                            min={0}
+                            onChange={(e) => setCustomLo(e.target.value)}
+                          />
+                          <label>{t('drTo')}</label>
+                          <input
+                            type="number"
+                            value={customHi}
+                            min={0}
+                            onChange={(e) => setCustomHi(e.target.value)}
+                          />
+                          <button type="button" className="btn sm" onClick={() => startCustom(key)}>
+                            {t('drStart')}
+                          </button>
+                          {rangeErr && <span className="status err">{t('drRangeErr')}</span>}
+                        </div>
+                      )}
+                    </div>
                   )
                 })}
               </div>
-            </div>
-          ))}
-        </div>
+            </section>
+          )
+        })
       )}
     </section>
   )

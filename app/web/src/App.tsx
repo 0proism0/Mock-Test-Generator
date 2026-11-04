@@ -4,7 +4,7 @@ import { Layout } from './components/Layout'
 import { RequireAuth } from './components/RequireAuth'
 import { Placeholder } from './routes/Placeholder'
 
-// Routes are lazy-loaded so the heavy KaTeX/Whiteboard/Games code only ships when visited.
+// Routes are lazy-loaded so the heavy KaTeX/Whiteboard code only ships when visited.
 const NewTest = lazy(() => import('./routes/NewTest').then((m) => ({ default: m.NewTest })))
 const Worksheet = lazy(() => import('./routes/Worksheet').then((m) => ({ default: m.Worksheet })))
 const Practice = lazy(() => import('./routes/Practice').then((m) => ({ default: m.Practice })))
@@ -12,7 +12,6 @@ const MyTests = lazy(() => import('./routes/MyTests').then((m) => ({ default: m.
 const TestRunner = lazy(() => import('./routes/TestRunner').then((m) => ({ default: m.TestRunner })))
 const Stats = lazy(() => import('./routes/Stats').then((m) => ({ default: m.Stats })))
 const Whiteboard = lazy(() => import('./routes/Whiteboard').then((m) => ({ default: m.Whiteboard })))
-const Games = lazy(() => import('./routes/Games').then((m) => ({ default: m.Games })))
 const Friends = lazy(() => import('./routes/Friends').then((m) => ({ default: m.Friends })))
 const Pk = lazy(() => import('./routes/Pk').then((m) => ({ default: m.Pk })))
 const Classes = lazy(() => import('./routes/Classes').then((m) => ({ default: m.Classes })))
@@ -28,7 +27,6 @@ export default function App() {
         <Route path="tests" element={<MyTests />} />
         <Route path="stats" element={<Stats />} />
         <Route path="whiteboard" element={<Whiteboard />} />
-        <Route path="games" element={<Games />} />
         <Route
           path="friends"
           element={

@@ -16,6 +16,8 @@ import subprocess
 import tempfile
 import threading
 import time
+import xml.etree.ElementTree as ET
+import zipfile
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -273,7 +275,7 @@ def _doc_visible_to(doc, school_norm):
 WORKSHEETS_DIR = ROOT / "worksheets"
 WS_MAX_BYTES = 10 * 1024 * 1024  # 10 MB raw (pdf/images)
 WS_TEXT_MAX_BYTES = 1024 * 1024  # 1 MB for text files
-WS_EXTS = ("txt", "md", "json", "pdf", "png", "jpg", "jpeg", "webp", "bmp", "tif", "tiff")
+WS_EXTS = ("txt", "md", "json", "docx", "pdf", "png", "jpg", "jpeg", "webp", "bmp", "tif", "tiff")
 WS_TEXT_EXTS = ("txt", "md", "json")
 WS_IMAGE_EXTS = ("png", "jpg", "jpeg", "webp", "bmp", "tif", "tiff")
 WS_Q_RE = re.compile(r"^\s*(?:#{1,6}\s*)?(?:q(?:uestion)?\s*)?(\d{1,3})[.)]\s+", re.I)
@@ -400,6 +402,35 @@ def extract_pdf_text(blob):
     return text
 
 
+def extract_docx_text(blob):
+    """Extract text from a .docx (Office Open XML) using only the stdlib.
+
+    Reads word/document.xml and rebuilds one line per paragraph. Embedded
+    images are IGNORED — scans inside docx get a clear error instead of
+    being sent to any AI/OCR service (this pipeline never uses tokens).
+    """
+    try:
+        zf = zipfile.ZipFile(io.BytesIO(blob))
+        xml = zf.read("word/document.xml")
+    except zipfile.BadZipFile:
+        raise ValueError("could not read .docx — is it a real Word document?")
+    except KeyError:
+        raise ValueError("this .docx has no word/document.xml — unsupported file")
+    W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+    try:
+        root = ET.fromstring(xml)
+    except ET.ParseError as e:
+        raise ValueError(f"could not parse the .docx content: {e}")
+    lines = []
+    for p in root.iter(W + "p"):
+        lines.append("".join(t.text or "" for t in p.iter(W + "t")))
+    text = "\n".join(lines)
+    if not text.strip():
+        raise ValueError("no text found in this .docx (it looks like scanned images) — "
+                         "type the questions as .txt/.md instead; uploads are never sent to an AI")
+    return text
+
+
 def extract_image_text(blob, ext):
     """OCR an image with the Tesseract CLI (no tokens, no extra Python deps).
 
@@ -438,6 +469,8 @@ def generate_worksheet(filename, blob, owner):
             raise ValueError("file must be UTF-8 text")
     elif ext == "pdf":
         text = extract_pdf_text(blob)
+    elif ext == "docx":
+        text = extract_docx_text(blob)
     else:
         text = extract_image_text(blob, ext)
     fallback = re.sub(r"\.([a-z0-9]+)$", "", filename, flags=re.I).replace("_", " ").strip()[:120] or "Worksheet"

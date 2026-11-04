@@ -27,6 +27,49 @@ function fileToBase64(file: File): Promise<string> {
   })
 }
 
+function download(filename: string, content: string, mime = 'text/plain') {
+  const blob = new Blob([content], { type: `${mime};charset=utf-8` })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = filename
+  a.click()
+  URL.revokeObjectURL(url)
+}
+
+function safeName(title: string, ext: string): string {
+  const base = title.replace(/[\\/:*?"<>|]/g, '_').trim().slice(0, 80) || 'worksheet'
+  return `${base}.${ext}`
+}
+
+const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+/** Plain-text version of the worksheet; withKey appends an "Answers:" section. */
+function wsToTxt(ws: WorksheetData, withKey: boolean): string {
+  const out: string[] = [ws.title, '', 'Name: ____________    Date: ____________', '']
+  ws.questions.forEach((q) => {
+    out.push(`${q.n}. ${q.question}`)
+    q.choices.forEach((c, i) => out.push(`${LETTERS[i]}. ${c}`))
+    out.push('')
+  })
+  if (withKey) {
+    const answered = ws.questions.filter((q) => q.answer)
+    if (answered.length) {
+      out.push('Answers:', '')
+      answered.forEach((q) => out.push(`${q.n}. ${q.answer}`))
+    }
+  }
+  return out.join('\n')
+}
+
+function wsToJson(ws: WorksheetData): string {
+  return JSON.stringify(
+    { title: ws.title, questions: ws.questions.map(({ n, question, choices, answer, solution, points }) => ({ n, question, choices, answer, solution, points })) },
+    null,
+    1,
+  )
+}
+
 export function Worksheet() {
   const { t } = useI18n()
   const { user } = useAuth()
@@ -129,6 +172,19 @@ export function Worksheet() {
           <button type="button" className="btn sm" onClick={() => window.print()}>
             {t('wsPrint')}
           </button>
+          <button type="button" className="btn sm ghost" onClick={() => download(safeName(ws.title, 'txt'), wsToTxt(ws, false))}>
+            {t('wsDlQ')}
+          </button>
+          <button
+            type="button"
+            className="btn sm ghost"
+            onClick={() => download(safeName(`${ws.title} - key`, 'txt'), wsToTxt(ws, true))}
+          >
+            {t('wsDlKey')}
+          </button>
+          <button type="button" className="btn sm ghost" onClick={() => download(safeName(ws.title, 'json'), wsToJson(ws), 'application/json')}>
+            {t('wsDlJson')}
+          </button>
           <button type="button" className="btn sm ghost" onClick={() => setShowKey((v) => !v)}>
             {showKey ? t('wsKeyHide') : t('wsKeyShow')}
           </button>
@@ -184,7 +240,7 @@ export function Worksheet() {
           ref={fileRef}
           id="ws-file"
           type="file"
-          accept=".txt,.md,.json,.pdf,.png,.jpg,.jpeg,.webp,.bmp,.tif,.tiff"
+          accept=".txt,.md,.json,.docx,.pdf,.png,.jpg,.jpeg,.webp,.bmp,.tif,.tiff"
           className="ws-file-input"
           onChange={(e) => pickFiles(e.target.files)}
         />
