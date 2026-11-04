@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AutoMath } from '../components/AutoMath'
+import { AlertTriangle, Check, Clock } from '../components/icons'
 import { api } from '../lib/api'
 import { useI18n } from '../lib/i18n'
 
@@ -179,7 +180,7 @@ export function TestRunner() {
   const [answers, setAnswers] = useState<Record<number, string>>({})
   const [submitted, setSubmitted] = useState(false)
   const [result, setResult] = useState<{ score: number; total: number } | null>(null)
-  const [savedNote, setSavedNote] = useState<string | null>(null)
+  const [savedNote, setSavedNote] = useState<{ tone: 'ok' | 'err' | 'wait'; text: string } | null>(null)
   const [revealed, setRevealed] = useState<Set<number>>(new Set())
   const [left, setLeft] = useState(0)
 
@@ -218,7 +219,7 @@ export function TestRunner() {
       if (grade(q, answers[q.n])) score += pts
     }
     setResult({ score, total: totalPoints })
-    setSavedNote(t('saving'))
+    setSavedNote({ tone: 'wait', text: t('saving') })
     const duration_s = Math.round((Date.now() - startedAtRef.current) / 1000)
     api
       .submitResult({
@@ -230,8 +231,8 @@ export function TestRunner() {
         answered: Object.keys(answers).length,
         duration_s,
       })
-      .then((d) => setSavedNote(d.guest ? t('savedGuest') : t('savedOk')))
-      .catch(() => setSavedNote(t('savedFail')))
+      .then((d) => setSavedNote({ tone: 'ok', text: d.guest ? t('savedGuest') : t('savedOk') }))
+      .catch(() => setSavedNote({ tone: 'err', text: t('savedFail') }))
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -315,8 +316,21 @@ export function TestRunner() {
         </div>
         <div style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
           {scoreText && <span className="score">{scoreText}</span>}
-          {savedNote && <span className="saved-note">{savedNote}</span>}
-          <span className={left < 300 && !submitted ? 'timer low' : 'timer'}>⏱ {fmtTime(left)}</span>
+          {savedNote && (
+            <span className={`saved-note ${savedNote.tone}`}>
+              {savedNote.tone === 'ok' ? (
+                <Check size={13} aria-hidden="true" />
+              ) : savedNote.tone === 'err' ? (
+                <AlertTriangle size={13} aria-hidden="true" />
+              ) : (
+                <Clock size={13} aria-hidden="true" />
+              )}
+              {savedNote.text}
+            </span>
+          )}
+          <span className={left < 300 && !submitted ? 'timer low' : 'timer'}>
+            <Clock size={14} aria-hidden="true" /> {fmtTime(left)}
+          </span>
           <button className="btn secondary" type="button" onClick={() => navigate('/tests')}>
             {t('exit')}
           </button>

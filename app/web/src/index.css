@@ -285,6 +285,16 @@ button.btn {
   padding: 9px 18px;
   font-size: 14px;
   cursor: pointer;
+  /* labels may carry a leading/trailing icon: keep icon and text on one row */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* icons sit on the text baseline and never inherit a stray glyph width */
+button.btn svg {
+  flex: none;
 }
 
 button.btn:hover {
@@ -563,6 +573,15 @@ table.stats th {
 .saved-note {
   font-size: 12.5px;
   color: var(--ink-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.saved-note.ok {
+  color: var(--success-border);
+}
+.saved-note.err {
+  color: var(--danger-border);
 }
 
 .qhead {
@@ -1515,6 +1534,11 @@ table.stats th {
   font-size: 13px;
   margin-bottom: 14px;
 }
+.dr-meta > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
 .dr-q {
   font-size: 26px;
   margin: 22px 0;
@@ -1526,10 +1550,16 @@ table.stats th {
   margin-bottom: 8px;
 }
 .dr-ok {
-  color: #2e9e5b;
+  color: var(--success-border);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 .dr-bad {
-  color: #d05555;
+  color: var(--danger-border);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 .dr-input {
   font-size: 22px;
@@ -1548,17 +1578,26 @@ table.stats th {
   text-align: center;
 }
 .dr-emoji {
-  font-size: 52px;
+  display: flex;
+  justify-content: center;
+  color: var(--ink-3);
   margin: 14px 0 4px;
+}
+.dr-emoji.good {
+  color: var(--success-border);
 }
 .dr-scoreline {
   font-size: 22px;
   margin: 4px 0;
 }
 .dr-newbest {
-  color: #c98a1b;
+  color: var(--warn);
   font-weight: 600;
   margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 .dr-actions {
   display: flex;
