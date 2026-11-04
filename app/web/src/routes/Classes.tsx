@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { api, type ClassInfo, type ClassReport } from '../lib/api'
+import { ArrowRight, Check } from '../components/icons'
 import { useAuth } from '../lib/auth'
 import { useI18n } from '../lib/i18n'
 
@@ -62,7 +63,7 @@ export function Classes() {
   async function create() {
     try {
       const d = await api.classCreate(name.trim(), code.trim())
-      setMsg({ ok: true, text: `✓ ${d.code}` })
+      setMsg({ ok: true, text: d.code })
       setName('')
       setCode('')
       setReloadTick((n) => n + 1)
@@ -74,7 +75,7 @@ export function Classes() {
   async function join() {
     try {
       const d = await api.classJoin(joinCode.trim())
-      setMsg({ ok: true, text: `✓ ${d.name} (${d.school})` })
+      setMsg({ ok: true, text: `${d.name} (${d.school})` })
       setJoinCode('')
       setReloadTick((n) => n + 1)
     } catch (e) {
@@ -186,10 +187,14 @@ export function Classes() {
                 onChange={(e) => setJoinCode(e.target.value)}
               />
               <button className="btn" type="button" onClick={() => void join()}>
-                {t('clJoin')} →
+                {t('clJoin')} <ArrowRight size={14} aria-hidden="true" />
               </button>
             </div>
-            {msg && <div className={`auth-msg ${msg.ok ? 'ok' : 'err'}`}>{msg.text}</div>}
+            {msg && (
+              <div className={`auth-msg ${msg.ok ? 'ok' : 'err'}`}>
+                {msg.ok && <Check size={14} aria-hidden="true" />} {msg.text}
+              </div>
+            )}
           </div>
           <h4 style={{ margin: '16px 0 6px' }}>{t('tabClasses')}</h4>
           <div>

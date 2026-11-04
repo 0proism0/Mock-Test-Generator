@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Archive, ArrowRight, FolderOpen, RotateCcw } from '../components/icons'
 import { api, type TestResult, type TestSummary } from '../lib/api'
 import { useI18n } from '../lib/i18n'
 
@@ -37,7 +38,10 @@ export function MyTests() {
 
   return (
     <>
-      <h2 className="section-title">{t('currentTests')}</h2>
+      <h2 className="section-title">
+        <FolderOpen size={16} aria-hidden="true" />
+        {t('currentTests')}
+      </h2>
       <div className="gen-grid">
         {tests.map((tst) => (
           <div key={tst.id} className="card compact test-item" onClick={() => navigate(`/test/${tst.id}`)}>
@@ -48,13 +52,16 @@ export function MyTests() {
               </div>
             </div>
             <button className="btn" type="button">
-              {t('start')}
+              {t('start')} <ArrowRight size={14} aria-hidden="true" />
             </button>
           </div>
         ))}
         {!tests.length && <div className="card compact">{t('noTests')}</div>}
       </div>
-      <h2 className="section-title">{t('pastTests')}</h2>
+      <h2 className="section-title">
+        <Archive size={16} aria-hidden="true" />
+        {t('pastTests')}
+      </h2>
       {!results.length ? (
         <div className="card compact">{t('noAttempts')}</div>
       ) : (
@@ -79,7 +86,7 @@ export function MyTests() {
                   <span className="meta">{t('proof')}</span>
                 )}
                 <button className="btn" type="button" onClick={() => navigate(`/test/${r.test_id}`)}>
-                  {t('retake')}
+                  <RotateCcw size={14} aria-hidden="true" /> {t('retake')}
                 </button>
               </div>
             </div>

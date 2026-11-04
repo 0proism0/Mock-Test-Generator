@@ -42,7 +42,7 @@ function polyStr(coef: number[]): string {
 
 /** Function Chess: the enemy reveals points one by one; fit a function through all of them. */
 export function FunctionChess({ onBack }: { onBack: () => void }) {
-  const { t, tip } = useI18n()
+  const { t } = useI18n()
   const { theme } = useTheme()
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const timerRef = useRef<number | null>(null)
@@ -191,9 +191,9 @@ export function FunctionChess({ onBack }: { onBack: () => void }) {
   return (
     <div className="card">
       <div className="fr-req" style={{ borderTop: 'none' }}>
-        <h3>{tip('gChess')}</h3>
+        <h3>{t('gChess')}</h3>
         <button className="btn sm ghost" type="button" onClick={onBack}>
-          <ArrowLeft size={14} /> {tip('gBack')}
+          <ArrowLeft size={14} /> {t('gBack')}
         </button>
       </div>
       <div style={{ fontSize: 14.5, marginBottom: 8 }}>

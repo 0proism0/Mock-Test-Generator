@@ -1,5 +1,65 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { AutoMath } from '../components/AutoMath'
+import {
+  Activity,
+  ArrowLeft,
+  Asterisk,
+  Atom,
+  BarChart2,
+  Binary,
+  Blocks,
+  BookOpen,
+  Box,
+  Brackets,
+  Calculator,
+  Car,
+  Check,
+  Circle,
+  CircleDot,
+  Clock,
+  Compass,
+  Crosshair,
+  Dice5,
+  Dices,
+  Divide,
+  Dot,
+  Dumbbell,
+  Equal,
+  Flame,
+  FunctionSquare,
+  Grid3x3,
+  Hammer,
+  Hash,
+  Landmark,
+  Layers,
+  LineChart,
+  Link2,
+  ListOrdered,
+  MapPin,
+  Minus,
+  MoveRight,
+  Percent,
+  Plus,
+  Puzzle,
+  Radical,
+  Recycle,
+  Repeat,
+  RotateCcw,
+  Ruler,
+  Scale,
+  Shuffle,
+  Slash,
+  Spline,
+  Superscript,
+  Tag,
+  TrendingUp,
+  Triangle,
+  Trophy,
+  Waves,
+  X,
+  XCircle,
+  type IconComponent,
+} from '../components/icons'
 import { api, type PracticeLevelStats, type PracticeStats } from '../lib/api'
 import { useAuth } from '../lib/auth'
 import { useI18n } from '../lib/i18n'
@@ -684,57 +744,57 @@ function genAseq(lv: Level): DrQ {
   return { q: `An arithmetic sequence starts at ${a1} with difference ${d}. Which term number equals ${target}?`, v: n }
 }
 
-const DRILLS: Record<string, { name: string; desc: string; gen: (lv: Level) => DrQ }> = {
-  addsub: { name: 'drAddSub', desc: 'drAddSubDesc', gen: genAddSub },
-  mul2: { name: 'drMul2', desc: 'drMul2Desc', gen: genMul2 },
-  pemdas: { name: 'drPemdas', desc: 'drPemdasDesc', gen: genPemdas },
-  neg: { name: 'drNeg', desc: 'drNegDesc', gen: genNeg },
-  absv: { name: 'drAbs', desc: 'drAbsDesc', gen: genAbs },
-  round: { name: 'drRound', desc: 'drRoundDesc', gen: genRound },
-  base: { name: 'drBase', desc: 'drBaseDesc', gen: genBase },
-  mult: { name: 'drMult', desc: 'drMultDesc', gen: genMult },
-  div: { name: 'drDiv', desc: 'drDivDesc', gen: genDiv },
-  mod: { name: 'drMod', desc: 'drModDesc', gen: genMod },
-  lastdig: { name: 'drLastDig', desc: 'drLastDigDesc', gen: genLastdig },
-  fact: { name: 'drFact', desc: 'drFactDesc', gen: genFact },
-  frac: { name: 'drFrac', desc: 'drFracDesc', gen: genFrac },
-  fdiv: { name: 'drFdiv', desc: 'drFdivDesc', gen: genFdiv },
-  mixed: { name: 'drMixed', desc: 'drMixedDesc', gen: genMixed },
-  dec: { name: 'drDec', desc: 'drDecDesc', gen: genDec },
-  fdp: { name: 'drFdp', desc: 'drFdpDesc', gen: genFdp },
-  pct: { name: 'drPct', desc: 'drPctDesc', gen: genPct },
-  pctchg: { name: 'drPctChg', desc: 'drPctChgDesc', gen: genPctChg },
-  discount: { name: 'drDiscount', desc: 'drDiscountDesc', gen: genDiscount },
-  interest: { name: 'drInterest', desc: 'drInterestDesc', gen: genInterest },
-  ratio: { name: 'drRatio', desc: 'drRatioDesc', gen: genRatio },
-  pow: { name: 'drPow', desc: 'drPowDesc', gen: genPow },
-  cbrt: { name: 'drCbrt', desc: 'drCbrtDesc', gen: genCbrt },
-  nexp: { name: 'drNexp', desc: 'drNexpDesc', gen: genNexp },
-  sci: { name: 'drSci', desc: 'drSciDesc', gen: genSci },
-  log: { name: 'drLog', desc: 'drLogDesc', gen: genLog },
-  eq: { name: 'drEq', desc: 'drEqDesc', gen: genEq },
-  parens: { name: 'drParens', desc: 'drParensDesc', gen: genParens },
-  slope: { name: 'drSlope', desc: 'drSlopeDesc', gen: genSlope },
-  line: { name: 'drLine', desc: 'drLineDesc', gen: genLine },
-  distmid: { name: 'drDistmid', desc: 'drDistmidDesc', gen: genDistmid },
-  system: { name: 'drSystem', desc: 'drSystemDesc', gen: genSystem },
-  quad: { name: 'drQuad', desc: 'drQuadDesc', gen: genQuad },
-  disc: { name: 'drDisc', desc: 'drDiscDesc', gen: genDisc },
-  factor: { name: 'drFactor', desc: 'drFactorDesc', gen: genFactor },
-  feval: { name: 'drFeval', desc: 'drFevalDesc', gen: genFeval },
-  gcdlcm: { name: 'drGcdLcm', desc: 'drGcdLcmDesc', gen: genGcdLcm },
-  pfactor: { name: 'drPfactor', desc: 'drPfactorDesc', gen: genPfactor },
-  perm: { name: 'drPerm', desc: 'drPermDesc', gen: genPerm },
-  comb: { name: 'drComb', desc: 'drCombDesc', gen: genComb },
-  prob: { name: 'drProb', desc: 'drProbDesc', gen: genProb },
-  dice: { name: 'drDice', desc: 'drDiceDesc', gen: genDice },
-  pyth: { name: 'drPyth', desc: 'drPythDesc', gen: genPyth },
-  tri: { name: 'drTri', desc: 'drTriDesc', gen: genTri },
-  circle: { name: 'drCircle', desc: 'drCircleDesc', gen: genCircle },
-  vol: { name: 'drVol', desc: 'drVolDesc', gen: genVol },
-  drt: { name: 'drDrt', desc: 'drDrtDesc', gen: genDrt },
-  avg: { name: 'drAvg', desc: 'drAvgDesc', gen: genAvg },
-  aseq: { name: 'drAseq', desc: 'drAseqDesc', gen: genAseq },
+const DRILLS: Record<string, { name: string; desc: string; icon: IconComponent; gen: (lv: Level) => DrQ }> = {
+  addsub: { name: 'drAddSub', desc: 'drAddSubDesc', icon: Plus, gen: genAddSub },
+  mul2: { name: 'drMul2', desc: 'drMul2Desc', icon: Asterisk, gen: genMul2 },
+  pemdas: { name: 'drPemdas', desc: 'drPemdasDesc', icon: Calculator, gen: genPemdas },
+  neg: { name: 'drNeg', desc: 'drNegDesc', icon: Minus, gen: genNeg },
+  absv: { name: 'drAbs', desc: 'drAbsDesc', icon: Ruler, gen: genAbs },
+  round: { name: 'drRound', desc: 'drRoundDesc', icon: Crosshair, gen: genRound },
+  base: { name: 'drBase', desc: 'drBaseDesc', icon: Binary, gen: genBase },
+  mult: { name: 'drMult', desc: 'drMultDesc', icon: X, gen: genMult },
+  div: { name: 'drDiv', desc: 'drDivDesc', icon: Divide, gen: genDiv },
+  mod: { name: 'drMod', desc: 'drModDesc', icon: Recycle, gen: genMod },
+  lastdig: { name: 'drLastDig', desc: 'drLastDigDesc', icon: Hash, gen: genLastdig },
+  fact: { name: 'drFact', desc: 'drFactDesc', icon: ListOrdered, gen: genFact },
+  frac: { name: 'drFrac', desc: 'drFracDesc', icon: Slash, gen: genFrac },
+  fdiv: { name: 'drFdiv', desc: 'drFdivDesc', icon: Divide, gen: genFdiv },
+  mixed: { name: 'drMixed', desc: 'drMixedDesc', icon: Layers, gen: genMixed },
+  dec: { name: 'drDec', desc: 'drDecDesc', icon: Dot, gen: genDec },
+  fdp: { name: 'drFdp', desc: 'drFdpDesc', icon: Repeat, gen: genFdp },
+  pct: { name: 'drPct', desc: 'drPctDesc', icon: Percent, gen: genPct },
+  pctchg: { name: 'drPctChg', desc: 'drPctChgDesc', icon: Activity, gen: genPctChg },
+  discount: { name: 'drDiscount', desc: 'drDiscountDesc', icon: Tag, gen: genDiscount },
+  interest: { name: 'drInterest', desc: 'drInterestDesc', icon: Landmark, gen: genInterest },
+  ratio: { name: 'drRatio', desc: 'drRatioDesc', icon: Scale, gen: genRatio },
+  pow: { name: 'drPow', desc: 'drPowDesc', icon: Superscript, gen: genPow },
+  cbrt: { name: 'drCbrt', desc: 'drCbrtDesc', icon: Radical, gen: genCbrt },
+  nexp: { name: 'drNexp', desc: 'drNexpDesc', icon: RotateCcw, gen: genNexp },
+  sci: { name: 'drSci', desc: 'drSciDesc', icon: Atom, gen: genSci },
+  log: { name: 'drLog', desc: 'drLogDesc', icon: LineChart, gen: genLog },
+  eq: { name: 'drEq', desc: 'drEqDesc', icon: Equal, gen: genEq },
+  parens: { name: 'drParens', desc: 'drParensDesc', icon: Brackets, gen: genParens },
+  slope: { name: 'drSlope', desc: 'drSlopeDesc', icon: TrendingUp, gen: genSlope },
+  line: { name: 'drLine', desc: 'drLineDesc', icon: Spline, gen: genLine },
+  distmid: { name: 'drDistmid', desc: 'drDistmidDesc', icon: MapPin, gen: genDistmid },
+  system: { name: 'drSystem', desc: 'drSystemDesc', icon: Blocks, gen: genSystem },
+  quad: { name: 'drQuad', desc: 'drQuadDesc', icon: Waves, gen: genQuad },
+  disc: { name: 'drDisc', desc: 'drDiscDesc', icon: CircleDot, gen: genDisc },
+  factor: { name: 'drFactor', desc: 'drFactorDesc', icon: Puzzle, gen: genFactor },
+  feval: { name: 'drFeval', desc: 'drFevalDesc', icon: FunctionSquare, gen: genFeval },
+  gcdlcm: { name: 'drGcdLcm', desc: 'drGcdLcmDesc', icon: Link2, gen: genGcdLcm },
+  pfactor: { name: 'drPfactor', desc: 'drPfactorDesc', icon: Hammer, gen: genPfactor },
+  perm: { name: 'drPerm', desc: 'drPermDesc', icon: Shuffle, gen: genPerm },
+  comb: { name: 'drComb', desc: 'drCombDesc', icon: Grid3x3, gen: genComb },
+  prob: { name: 'drProb', desc: 'drProbDesc', icon: Dices, gen: genProb },
+  dice: { name: 'drDice', desc: 'drDiceDesc', icon: Dice5, gen: genDice },
+  pyth: { name: 'drPyth', desc: 'drPythDesc', icon: Triangle, gen: genPyth },
+  tri: { name: 'drTri', desc: 'drTriDesc', icon: Compass, gen: genTri },
+  circle: { name: 'drCircle', desc: 'drCircleDesc', icon: Circle, gen: genCircle },
+  vol: { name: 'drVol', desc: 'drVolDesc', icon: Box, gen: genVol },
+  drt: { name: 'drDrt', desc: 'drDrtDesc', icon: Car, gen: genDrt },
+  avg: { name: 'drAvg', desc: 'drAvgDesc', icon: BarChart2, gen: genAvg },
+  aseq: { name: 'drAseq', desc: 'drAseqDesc', icon: MoveRight, gen: genAseq },
 }
 
 function drMatch(given: string, rec: DrQ): boolean {
@@ -842,14 +902,16 @@ function Runner({
 
   const q = qs[i]
   const last = i + 1 >= N_Q
+  const DrillIc = DRILLS[drill].icon
   return (
     <section className="card dr-run">
       <div className="dr-meta">
         <span>
-          {t(DRILLS[drill].name)} · {t(level)}
+          <DrillIc size={14} aria-hidden="true" /> {t(DRILLS[drill].name)} · {t(level)}
         </span>
         <span>
-          {i + 1} / {N_Q} · ✓ {correct} · {fmtTime(secs)}
+          {i + 1} / {N_Q} · <Check size={13} aria-hidden="true" /> {correct} ·{' '}
+          <Clock size={13} aria-hidden="true" /> {fmtTime(secs)}
         </span>
       </div>
       <div className="dr-q">
@@ -858,10 +920,14 @@ function Runner({
       <div className="dr-fb" aria-live="polite">
         {fb &&
           (fb.ok ? (
-            <span className="dr-ok">{t('drCorrect')}</span>
+            <span className="dr-ok">
+              <Check size={14} aria-hidden="true" /> {t('drCorrect')}
+            </span>
           ) : (
             <>
-              <span className="dr-bad">{t('drWrong', fb.ans)}</span>{' '}
+              <span className="dr-bad">
+                <XCircle size={14} aria-hidden="true" /> {t('drWrong', fb.ans)}
+              </span>{' '}
               <button
                 ref={nextRef}
                 type="button"
@@ -961,12 +1027,16 @@ export function Practice() {
 
   if (result) {
     const { drill, level } = result
+    const DrillIc = DRILLS[drill].icon
+    const Mood = result.pct >= 80 ? Trophy : result.pct >= 50 ? Dumbbell : BookOpen
     return (
       <section className="card dr-summary">
         <h3>
-          {t(DRILLS[drill].name)} · {t(level)}
+          <DrillIc size={16} aria-hidden="true" /> {t(DRILLS[drill].name)} · {t(level)}
         </h3>
-        <div className="dr-emoji">{result.pct >= 80 ? '🎉' : result.pct >= 50 ? '💪' : '📚'}</div>
+        <div className={`dr-emoji${result.pct >= 50 ? ' good' : ''}`}>
+          <Mood size={44} aria-hidden="true" />
+        </div>
         <div className="dr-scoreline">
           {t('drScore')}: <b>
             {result.correct}/{result.total}
@@ -974,17 +1044,22 @@ export function Practice() {
           ({result.pct}%)
         </div>
         <p className="meta">
-          {t('drTime')}: {fmtTime(Math.round(result.time_s))} · {t('drBest')}: {result.rec.best_pct}% · ⏱{' '}
-          {result.rec.best_time != null ? fmtTime(Math.round(result.rec.best_time)) : '—'} · {t('drStreak')}{' '}
-          {result.rec.streak}
+          {t('drTime')}: {fmtTime(Math.round(result.time_s))} · {t('drBest')}: {result.rec.best_pct}% ·{' '}
+          <Clock size={13} aria-hidden="true" />{' '}
+          {result.rec.best_time != null ? fmtTime(Math.round(result.rec.best_time)) : '—'} ·{' '}
+          <Flame size={13} aria-hidden="true" /> {result.rec.streak}
         </p>
-        {result.newBest && <p className="dr-newbest">{t('drNewBest')}</p>}
+        {result.newBest && (
+          <p className="dr-newbest">
+            <Trophy size={14} aria-hidden="true" /> {t('drNewBest')}
+          </p>
+        )}
         <div className="dr-actions">
           <button type="button" className="btn" onClick={() => { setResult(null); setRun({ drill, level }) }}>
-            {t('drAgain')}
+            <RotateCcw size={14} aria-hidden="true" /> {t('drAgain')}
           </button>
           <button type="button" className="btn ghost" onClick={() => setResult(null)}>
-            {t('drBack')}
+            <ArrowLeft size={14} aria-hidden="true" /> {t('drBack')}
           </button>
         </div>
       </section>
@@ -999,9 +1074,13 @@ export function Practice() {
         <p className="muted">{t('loading')}</p>
       ) : (
         <div className="gen-grid">
-          {Object.entries(DRILLS).map(([key, d]) => (
+          {Object.entries(DRILLS).map(([key, d]) => {
+            const DIcon = d.icon
+            return (
             <div key={key} data-drill={key} className="card compact">
-              <h3>{t(d.name)}</h3>
+              <h3>
+                <DIcon size={15} aria-hidden="true" /> {t(d.name)}
+              </h3>
               <p className="muted">{t(d.desc)}</p>
               <div className="dr-levels">
                 {LEVELS.map((lv) => {
@@ -1019,7 +1098,8 @@ export function Practice() {
                 })}
               </div>
             </div>
-          ))}
+            )
+          })}
         </div>
       )}
     </section>

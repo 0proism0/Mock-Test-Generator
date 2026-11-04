@@ -1,11 +1,16 @@
 import { useEffect, useRef, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { AutoMath } from '../components/AutoMath'
+import { ArrowRight, EyeOff, FolderOpen, Key, Printer, RotateCcw } from '../components/icons'
 import { api, type Worksheet as WorksheetData, type WorksheetSummary } from '../lib/api'
 import { useAuth } from '../lib/auth'
 import { useI18n } from '../lib/i18n'
 
 const MAX_BYTES = 1024 * 1024 // keep in sync with WS_MAX_BYTES in server.py
+
+function FolderIcon() {
+  return <FolderOpen size={15} aria-hidden="true" />
+}
 
 const EXAMPLE = `1. What is $2x + 3x$ when $x = 4$?
 A. 12
@@ -127,13 +132,21 @@ export function Worksheet() {
       <section className="card">
         <div className="ws-head no-print">
           <button type="button" className="btn sm" onClick={() => window.print()}>
-            {t('wsPrint')}
+            <Printer size={14} aria-hidden="true" /> {t('wsPrint')}
           </button>
           <button type="button" className="btn sm ghost" onClick={() => setShowKey((v) => !v)}>
-            {showKey ? t('wsKeyHide') : t('wsKeyShow')}
+            {showKey ? (
+              <>
+                <EyeOff size={14} aria-hidden="true" /> {t('wsKeyHide')}
+              </>
+            ) : (
+              <>
+                <Key size={14} aria-hidden="true" /> {t('wsKeyShow')}
+              </>
+            )}
           </button>
           <button type="button" className="btn sm ghost" onClick={onNew}>
-            {t('wsNew')}
+            <RotateCcw size={14} aria-hidden="true" /> {t('wsNew')}
           </button>
         </div>
         <h2>{ws.title}</h2>
@@ -196,7 +209,8 @@ export function Worksheet() {
             {file ? `${file.name} · ${Math.round(file.size / 1024)} KB` : t('wsDropHint')}
           </span>
           <button type="button" className="btn" disabled={busy} onClick={() => void onGenerate()}>
-            {busy ? t('loading') : t('wsGenerate')}
+            {busy ? t('loading') : t('wsGenerate')}{' '}
+            {!busy && <ArrowRight size={14} aria-hidden="true" />}
           </button>
         </div>
         {error && <p className="status err">{error}</p>}
@@ -211,7 +225,9 @@ export function Worksheet() {
       </section>
       {user && (
         <section className="card">
-          <h3>{t('wsMine')}</h3>
+          <h3>
+            <FolderIcon /> {t('wsMine')}
+          </h3>
           {!mine ? (
             <p className="muted">{t('loading')}</p>
           ) : mine.length === 0 ? (

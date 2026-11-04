@@ -6,7 +6,7 @@ import { GraphWar } from './games/GraphWar'
 
 /** Legacy "Games" tab: a small game list that swaps to the selected game. */
 export function Games() {
-  const { t, tip } = useI18n()
+  const { t } = useI18n()
   const [view, setView] = useState<'list' | 'fc' | 'gw'>('list')
 
   if (view === 'fc') return <FunctionChess onBack={() => setView('list')} />
@@ -18,7 +18,7 @@ export function Games() {
       <div className="game-list">
         <div className="card compact game-card" onClick={() => setView('fc')}>
           <h3>
-            <Target size={18} /> {tip('gChess')}
+            <Target size={18} /> {t('gChess')}
           </h3>
           <p style={{ color: 'var(--ink-2)', fontSize: 13.5, margin: '6px 0 10px' }}>{t('gChessDesc')}</p>
           <button className="btn sm" type="button">
@@ -27,7 +27,7 @@ export function Games() {
         </div>
         <div className="card compact game-card" onClick={() => setView('gw')}>
           <h3>
-            <TrendingUp size={18} /> {tip('gGraph')}
+            <TrendingUp size={18} /> {t('gGraph')}
           </h3>
           <p style={{ color: 'var(--ink-2)', fontSize: 13.5, margin: '6px 0 10px' }}>{t('gGraphDesc')}</p>
           <button className="btn sm" type="button">

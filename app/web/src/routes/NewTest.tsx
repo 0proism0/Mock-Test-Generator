@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CategoryIcon } from '../components/CategoryIcon'
+import { ArrowLeft, ArrowRight } from '../components/icons'
 import { api, type Bank } from '../lib/api'
 import { useI18n } from '../lib/i18n'
 
@@ -198,7 +199,7 @@ export function NewTest() {
     return (
       <>
         <div className="card compact back" onClick={() => setView({ kind: 'families' })}>
-          {t('backAll')}
+          <ArrowLeft size={14} aria-hidden="true" /> {t('backAll')}
         </div>
         <h2 className="section-title">
           <CategoryIcon category={category} />
@@ -240,7 +241,7 @@ export function NewTest() {
   return (
     <>
       <div className="card compact back" onClick={() => setView({ kind: 'family', family: b.family ?? '' })}>
-        {t('back')} {b.family}
+        <ArrowLeft size={14} aria-hidden="true" /> {t('back')} {b.family}
       </div>
       <section className="card">
         <h2>{b.name}</h2>
@@ -281,7 +282,7 @@ export function NewTest() {
             disabled={busy}
             onClick={() => void onGenerate(b)}
           >
-            {t('generate')}
+            {t('generate')} <ArrowRight size={16} aria-hidden="true" />
           </button>
         </div>
         {genError && (

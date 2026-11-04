@@ -72,7 +72,7 @@ function initGw(msg: string): GwState {
 
 /** Graph War: fire a line through your point #N and the enemy's point #N. */
 export function GraphWar({ onBack }: { onBack: () => void }) {
-  const { t, tip } = useI18n()
+  const { t } = useI18n()
   const { theme } = useTheme()
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const timerRef = useRef<number | null>(null)
@@ -168,7 +168,7 @@ export function GraphWar({ onBack }: { onBack: () => void }) {
         const round = prev.round + 1
         if (round > 5) {
           const you = prev.you
-          const final = (you > ai ? tip('gYouWin') : ai > you ? tip('gAiWin') : t('gRoundTie')) + `  (${you} : ${ai})`
+          const final = (you > ai ? t('gYouWin') : ai > you ? t('gAiWin') : t('gRoundTie')) + `  (${you} : ${ai})`
           return {
             ...prev,
             yours,
@@ -188,9 +188,9 @@ export function GraphWar({ onBack }: { onBack: () => void }) {
   return (
     <div className="card">
       <div className="fr-req" style={{ borderTop: 'none' }}>
-        <h3>{tip('gGraph')}</h3>
+        <h3>{t('gGraph')}</h3>
         <button className="btn sm ghost" type="button" onClick={onBack}>
-          <ArrowLeft size={14} /> {tip('gBack')}
+          <ArrowLeft size={14} /> {t('gBack')}
         </button>
       </div>
       <div style={{ fontSize: 14.5, marginBottom: 8 }}>
@@ -215,7 +215,7 @@ export function GraphWar({ onBack }: { onBack: () => void }) {
           />
           <div style={{ marginTop: 12, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             <button className="btn" type="button" disabled={s.over || s.firing} onClick={fire}>
-              <Flame size={13} /> {tip('gFire')}
+              <Flame size={13} /> {t('gFire')}
             </button>
             <button className="btn sm ghost" type="button" onClick={() => setS((prev) => ({ ...prev, grid: !prev.grid }))}>
               <Grid size={13} /> {t('gGrid')}

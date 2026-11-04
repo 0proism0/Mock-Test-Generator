@@ -44,7 +44,7 @@ const tabs: Tab[] = [
 ]
 
 export function Layout() {
-  const { t, tip, lang, setLang } = useI18n()
+  const { t, lang, setLang } = useI18n()
   const { user, ready, logout } = useAuth()
   const { theme, toggle: toggleTheme } = useTheme()
   const visible = tabs.filter((tab) => !tab.authOnly || user)
@@ -89,7 +89,7 @@ export function Layout() {
             className={({ isActive }) => (isActive ? 'active' : '')}
           >
             {tab.icon}
-            <span>{tip(tab.labelKey)}</span>
+            <span>{t(tab.labelKey)}</span>
           </NavLink>
         ))}
         <div className="lang-toggle">
