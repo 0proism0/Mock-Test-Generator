@@ -1,0 +1,25 @@
+<svg width="950" height="650" viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="475" cy="325" r="187.5" stroke="black" stroke-width="2" fill="none"/>
+  <circle cx="412.5" cy="325" r="250" stroke="black" stroke-width="2" fill="none"/>
+  <circle cx="537.5" cy="325" r="250" stroke="black" stroke-width="2" fill="none"/>
+  <circle cx="475" cy="245" r="37.5" stroke="black" stroke-width="2" fill="none"/>
+  
+  <line x1="412.5" y1="325" x2="176.75" y2="151.75" stroke="black" stroke-width="2" stroke-dasharray="8,4"/>
+  <line x1="537.5" y1="325" x2="773.25" y2="498.25" stroke="black" stroke-width="2" stroke-dasharray="8,4"/>
+  <line x1="412.5" y1="325" x2="537.5" y2="325" stroke="black" stroke-width="2"/>
+  
+  <circle cx="412.5" cy="325" r="3" fill="black"/>
+  <circle cx="537.5" cy="325" r="3" fill="black"/>
+  
+  <text x="475" y="215" font-family="serif" font-size="24" fill="black" text-anchor="middle">C<tspan dy="5" font-size="16">4</tspan></text>
+  <text x="125" y="335" font-family="serif" font-size="24" fill="black" text-anchor="middle">C<tspan dy="5" font-size="16">1</tspan></text>
+  <text x="825" y="335" font-family="serif" font-size="24" fill="black" text-anchor="middle">C<tspan dy="5" font-size="16">2</tspan></text>
+  <text x="475" y="365" font-family="serif" font-size="24" fill="black" text-anchor="middle">
+    <tspan x="475" dy="0">1</tspan>
+    <tspan x="475" dy="12">-</tspan>
+    <tspan x="475" dy="12">2</tspan>
+  </text>
+  <text x="375" y="425" font-family="serif" font-size="24" fill="black" text-anchor="middle">C<tspan dy="5" font-size="16">3</tspan></text>
+  <text x="275" y="185" font-family="serif" font-size="24" fill="black" text-anchor="middle">1</text>
+  <text x="675" y="465" font-family="serif" font-size="24" fill="black" text-anchor="middle">1</text>
+</svg>

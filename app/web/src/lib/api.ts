@@ -25,6 +25,12 @@ export interface Bank {
   tests_remaining?: number
   tests_total?: number
   real?: boolean
+  /** Bank versions this competition can be generated from (1 = classic, 2 = figure bank). */
+  versions?: number[]
+  /** Eligible questions in the figure bank (0 when that bank is not installed). */
+  v2_variants?: number
+  /** How many of those questions carry a figure. */
+  v2_figures?: number
 }
 
 export interface TestSummary {
@@ -239,8 +245,10 @@ export const api = {
   banks: () => request<Bank[]>('/api/banks'),
   tests: () => request<TestSummary[]>('/api/tests'),
   test: (id: string) => request<unknown>(`/api/test/${id}`),
-  generate: (slug: string, round?: string | null) =>
-    request<{ ok: boolean; id: string }>(`/api/generate/${slug}${round ? `/${encodeURIComponent(round)}` : ''}`),
+  generate: (slug: string, round?: string | null, version?: 1 | 2) =>
+    request<{ ok: boolean; id: string; bank_version?: number; fallback?: boolean }>(
+      `/api/generate/${slug}${round ? `/${encodeURIComponent(round)}` : ''}${version === 2 ? '?v=2' : ''}`,
+    ),
   results: () => request<TestResult[]>('/api/results'),
   stats: () => request<unknown>('/api/stats'),
   submitResult: (payload: {

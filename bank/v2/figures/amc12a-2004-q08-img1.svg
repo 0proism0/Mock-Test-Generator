@@ -1,0 +1,19 @@
+<svg width="304" height="522" viewBox="-12 -12 304 522" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="1.3" fill="none">
+    <path d="M 47 458 L 255 458 L 255 146 L 47 458 Z"/>
+    <path d="M 47 42 L 47 458"/>
+    <path d="M 47 42 L 255 458"/>
+    <path d="M 255 146 L 47 458"/>
+  </g>
+  <g font-family="serif" font-size="36" fill="black">
+    <text x="10" y="32">E</text>
+    <text x="10" y="498">A</text>
+    <text x="265" y="498">B</text>
+    <text x="265" y="136">C</text>
+    <text x="152" y="245">D</text>
+    <text x="15" y="262" font-size="32">8</text>
+    <text x="267" y="306" font-size="32">6</text>
+    <text x="142" y="498" font-size="32">4</text>
+  </g>
+</svg>

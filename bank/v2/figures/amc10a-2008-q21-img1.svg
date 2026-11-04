@@ -1,0 +1,24 @@
+<svg width="1320" height="1334" viewBox="-12 -12 1320 1334" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="2" fill="none">
+    <path d="M 27 1290 L 27 280 L 1037 280 L 1037 1290 L 27 1290 Z"/>
+    <line x1="27" y1="280" x2="279" y2="28"/>
+    <line x1="1037" y1="280" x2="1290" y2="28"/>
+    <line x1="1037" y1="1290" x2="1290" y2="1037"/>
+    <line x1="1290" y1="28" x2="1290" y2="1037"/>
+    <line x1="279" y1="28" x2="279" y2="1037" stroke-dasharray="10 7"/>
+    <line x1="27" y1="1290" x2="279" y2="1037" stroke-dasharray="10 7"/>
+    <line x1="279" y1="1037" x2="1290" y2="1037" stroke-dasharray="10 7"/>
+  </g>
+  <g fill="black">
+    <circle cx="27" cy="1290" r="6"/>
+    <circle cx="279" cy="533" r="6"/>
+    <circle cx="1290" cy="28" r="6"/>
+    <circle cx="1037" cy="786" r="6"/>
+  </g>
+  <g font-family="serif" font-size="28" font-style="italic" fill="black">
+    <text x="0" y="1310">A</text>
+    <text x="254" y="530">B</text>
+    <text x="1290" y="22">C</text>
+    <text x="1045" y="803">D</text>
+  </g>
+</svg>

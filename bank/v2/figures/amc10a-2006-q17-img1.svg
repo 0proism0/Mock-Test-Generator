@@ -1,0 +1,52 @@
+<svg width="668" height="470" viewBox="-12 -12 668 470" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="2">
+    <!-- Outer Rectangle -->
+    <line x1="42" y1="40" x2="624" y2="40"/>
+    <line x1="624" y1="40" x2="624" y2="428"/>
+    <line x1="624" y1="428" x2="42" y2="428"/>
+    <line x1="42" y1="428" x2="42" y2="40"/>
+
+    <!-- Diagonals -->
+    <line x1="42" y1="40" x2="624" y2="428"/>
+    <line x1="624" y1="40" x2="42" y2="428"/>
+    <line x1="236" y1="40" x2="624" y2="428"/>
+    <line x1="42" y1="40" x2="428" y2="428"/>
+    <line x1="428" y1="40" x2="236" y2="428"/>
+
+    <!-- Inner Cross -->
+    <line x1="236" y1="40" x2="624" y2="428"/>
+    <line x1="624" y1="40" x2="236" y2="428"/>
+  </g>
+
+  <g fill="black">
+    <circle cx="42" cy="40" r="4.5"/>
+    <circle cx="236" cy="40" r="4.5"/>
+    <circle cx="428" cy="40" r="4.5"/>
+    <circle cx="624" cy="40" r="4.5"/>
+    <circle cx="42" cy="428" r="4.5"/>
+    <circle cx="236" cy="428" r="4.5"/>
+    <circle cx="428" cy="428" r="4.5"/>
+    <circle cx="624" cy="428" r="4.5"/>
+
+    <circle cx="334" cy="136" r="4.5"/>
+    <circle cx="236" cy="234" r="4.5"/>
+    <circle cx="428" cy="234" r="4.5"/>
+    <circle cx="334" cy="330" r="4.5"/>
+  </g>
+
+  <g font-family="serif" font-style="italic" font-size="30" text-anchor="middle" dominant-baseline="middle" fill="black">
+    <text x="42" y="18">A</text>
+    <text x="236" y="18">B</text>
+    <text x="428" y="18">C</text>
+    <text x="624" y="18">D</text>
+    <text x="18" y="446">H</text>
+    <text x="216" y="446">G</text>
+    <text x="448" y="446">F</text>
+    <text x="644" y="446">E</text>
+    <text x="334" y="108">W</text>
+    <text x="206" y="234">Z</text>
+    <text x="458" y="234">X</text>
+    <text x="334" y="356">Y</text>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg width="690" height="353" viewBox="-12 -12 690 353" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect width="100%" height="100%" fill="white"/>
+  <g stroke="grey" stroke-width="2.5" fill="none">
+    <path d="M 130 47 L 654 47"/>
+    <path d="M 145 39 L 130 47 L 145 55"/>
+    <path d="M 639 39 L 654 47 L 639 55"/>
+    <path d="M 95 82 L 95 322"/>
+    <path d="M 87 97 L 95 82 L 103 97"/>
+    <path d="M 87 307 L 95 322 L 103 307"/>
+  </g>
+  <g fill="black" font-family="serif" font-size="30" text-anchor="middle">
+    <text x="392" y="28" fill="grey">22 in.</text>
+    <text x="45" y="215" fill="grey">10 in.</text>
+  </g>
+  <g stroke="black" stroke-width="2" fill="none">
+    <path d="M 130 82 L 130 322"/>
+    <path d="M 130 82 L 370 82"/>
+    <path d="M 130 322 L 370 322"/>
+    <path d="M 370 82 L 659 202"/>
+    <path d="M 370 322 L 659 202"/>
+    <path d="M 370 82 L 370 322" stroke-dasharray="20 10"/>
+  </g>
+  <g fill="black">
+    <circle cx="130" cy="82" r="7"/>
+    <circle cx="130" cy="322" r="7"/>
+    <circle cx="370" cy="82" r="7"/>
+    <circle cx="370" cy="322" r="7"/>
+    <circle cx="659" cy="202" r="7"/>
+  </g>
+</svg>

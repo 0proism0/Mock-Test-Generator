@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AutoMath } from '../components/AutoMath'
 import { api } from '../lib/api'
 import { useI18n } from '../lib/i18n'
@@ -15,6 +15,15 @@ interface Question {
   solution_zh?: string
   type?: string
   points?: number
+  /** Figure-bank questions carry an SVG rendered next to the prompt. */
+  figure?: {
+    src?: string
+    alt?: string
+    width?: number
+    height?: number
+    kind?: string
+    placement?: string
+  }
 }
 
 interface TestData {
@@ -23,6 +32,8 @@ interface TestData {
   competition: string
   instructions: string
   time_limit_min: number
+  /** 1 = classic bank, 2 = figure bank. Absent on legacy papers. */
+  bank_version?: number
   questions: Question[]
 }
 
@@ -101,6 +112,17 @@ function QuestionCard({ q, total, value, submitted, revealed, onPick, onType, on
         </span>
       </div>
       <AutoMath html={questionHtml} className="qtext" />
+      {q.figure?.src && (
+        <figure className="qfig">
+          <img
+            src={q.figure.src}
+            alt={q.figure.alt ?? ''}
+            width={q.figure.width}
+            height={q.figure.height}
+            loading="lazy"
+          />
+        </figure>
+      )}
       {q.type === 'proof' && !showSolution && (
         <button className="btn secondary" type="button" onClick={() => onReveal(q.n)}>
           {t('showSolution')}
@@ -148,6 +170,9 @@ export function TestRunner() {
   const { id = '' } = useParams()
   const { t } = useI18n()
   const navigate = useNavigate()
+  const location = useLocation()
+  // Set by NewTest when the server could not use the figure bank.
+  const fellBack = Boolean((location.state as { fallback?: boolean } | null)?.fallback)
 
   const [test, setTest] = useState<TestData | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
@@ -271,9 +296,19 @@ export function TestRunner() {
 
   return (
     <>
+      {fellBack && (
+        <p className="status" style={{ marginBottom: 12 }}>
+          {t('v2Fallback')}
+        </p>
+      )}
       <div className="sticky-bar">
         <div>
           <div style={{ fontWeight: 700 }}>{test.title}</div>
+          {test.bank_version === 2 && (
+            <div className="muted" style={{ fontSize: 12 }}>
+              {t('bankV2')}
+            </div>
+          )}
           <div className="progress">
             {answeredCount} / {total} {t('answered')}
           </div>

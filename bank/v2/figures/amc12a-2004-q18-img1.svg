@@ -1,0 +1,13 @@
+<svg width="361" height="354" viewBox="-12 -12 361 354" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+<rect x="0" y="0" width="337" height="330" fill="white"/>
+<g stroke="black" stroke-width="2" fill="none">
+<path d="M 44 40 L 293 40 L 293 290 L 44 290 Z"/>
+<path d="M 44 227 L 293 40"/>
+<path d="M 44 290 A 124 124 0 0 1 293 290"/>
+</g>
+<text x="24" y="30" font-family="serif" font-style="italic" font-size="32" text-anchor="end" dominant-baseline="middle">D</text>
+<text x="304" y="24" font-family="serif" font-style="italic" font-size="32" text-anchor="start" dominant-baseline="alphabetic">C</text>
+<text x="304" y="300" font-family="serif" font-style="italic" font-size="32" text-anchor="start" dominant-baseline="hanging">B</text>
+<text x="24" y="295" font-family="serif" font-style="italic" font-size="32" text-anchor="end" dominant-baseline="hanging">A</text>
+<text x="24" y="237" font-family="serif" font-style="italic" font-size="32" text-anchor="end" dominant-baseline="alphabetic">E</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 670 670">
+  <style>
+    circle { fill: none; stroke: black; stroke-width: 2.5; }
+    .dot { fill: black; stroke: none; }
+    line { stroke: black; stroke-width: 2; }
+    text { font-family: serif; font-size: 28px; }
+  </style>
+
+  <!-- Central large circle -->
+  <circle cx="335" cy="335" r="195"/>
+
+  <!-- 12 surrounding circles, radius 65, center distance 260 from (335,335) -->
+  <circle cx="595" cy="335" r="65"/>
+  <circle cx="560.4" cy="465" r="65"/>
+  <circle cx="465" cy="560.4" r="65"/>
+  <circle cx="335" cy="595" r="65"/>
+  <circle cx="205" cy="560.4" r="65"/>
+  <circle cx="109.6" cy="465" r="65"/>
+  <circle cx="75" cy="335" r="65"/>
+  <circle cx="109.6" cy="205" r="65"/>
+  <circle cx="205" cy="109.6" r="65"/>
+  <circle cx="335" cy="75" r="65"/>
+  <circle cx="465" cy="109.6" r="65"/>
+  <circle cx="560.4" cy="205" r="65"/>
+
+  <!-- Center dot -->
+  <circle class="dot" cx="335" cy="335" r="7"/>
+
+  <!-- Right small-circle center dot -->
+  <circle class="dot" cx="595" cy="335" r="7"/>
+
+  <!-- Radius line from center to right edge of big circle -->
+  <line x1="335" y1="335" x2="530" y2="335"/>
+
+  <!-- Unit line in the right small circle -->
+  <line x1="595" y1="335" x2="660" y2="335"/>
+
+  <!-- Labels -->
+  <text x="430" y="320" text-anchor="middle" font-style="italic">r</text>
+  <text x="628" y="318" text-anchor="middle">1</text>
+</svg>

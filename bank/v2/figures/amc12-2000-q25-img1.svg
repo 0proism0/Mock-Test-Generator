@@ -1,0 +1,27 @@
+<svg width="1181" height="1373" viewBox="-12 -12 1181 1373" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="2.5" fill="none">
+    <path d="M 577 3 L 107 412 L 2 878 L 577 1334 L 1049 925 L 1154 458 L 577 3 Z"/>
+    <line x1="577" y1="3" x2="2" y2="878"/>
+    <line x1="577" y1="3" x2="1049" y2="925"/>
+    <line x1="2" y1="878" x2="1049" y2="925"/>
+  </g>
+  <g fill="black">
+    <circle cx="577" cy="3" r="2.5"/>
+    <circle cx="107" cy="412" r="2.5"/>
+    <circle cx="2" cy="878" r="2.5"/>
+    <circle cx="577" cy="1334" r="2.5"/>
+    <circle cx="1049" cy="925" r="2.5"/>
+    <circle cx="1154" cy="458" r="2.5"/>
+  </g>
+  <g fill="none" stroke="black" stroke-width="2" stroke-dasharray="2 8">
+    <path d="M 107 412 L 577 1334"/>
+    <path d="M 1154 458 L 577 1334"/>
+    <path d="M 107 412 L 1154 458"/>
+  </g>
+  <text x="577" y="32" font-family="serif" font-size="24" text-anchor="middle">A</text>
+  <text x="107" y="422" font-family="serif" font-size="24" text-anchor="middle">B</text>
+  <text x="2" y="893" font-family="serif" font-size="24" text-anchor="middle">C</text>
+  <text x="577" y="1349" font-family="serif" font-size="24" text-anchor="middle">D</text>
+  <text x="1049" y="936" font-family="serif" font-size="24" text-anchor="middle">E</text>
+  <text x="1154" y="470" font-family="serif" font-size="24" text-anchor="middle">F</text>
+</svg>

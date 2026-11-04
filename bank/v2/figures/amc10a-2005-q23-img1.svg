@@ -1,0 +1,177 @@
+<svg width="544" height="530" viewBox="-12 -12 544 530" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <defs>
+    <style>
+      .label {
+        font-family: serif;
+        font-style: italic;
+        font-size: 32px;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Main Circle -->
+  <circle cx="272" cy="262" r="230" stroke="black" stroke-width="3" fill="none"/>
+
+  <!-- Points -->
+  <!-- A = (-1, 0) -->
+  <!-- B = (1, 0) -->
+  <!-- C = (-1/3, 0) -->
+  <!-- D = (-0.642857, -0.767742) -->
+  <!-- E = (-(-0.642857), -(-0.767742)) = (0.642857, 0.767742) -->
+
+  <!-- Lines -->
+  <g stroke="black" stroke-width="3" fill="none">
+    <!-- Chord AB -->
+    <line x1="42" y1="262" x2="508" y2="262"/>
+    <!-- Chord AD -->
+    <line x1="42" y1="262" x2="196" y2="40"/>
+    <!-- Chord BD -->
+    <line x1="508" y1="262" x2="196" y2="40"/>
+    <!-- Chord DE -->
+    <line x1="196" y1="40" x2="352" y2="484"/>
+    <!-- Chord CE -->
+    <line x1="196" y1="262" x2="352" y2="484"/>
+    <!-- Vertical line DC -->
+    <line x1="196" y1="40" x2="196" y2="262"/>
+    <!-- Vertical line CE -->
+    <line x1="196" y1="262" x2="196" y2="484"/>
+  </g>
+
+  <!-- Right angle symbol at C -->
+  <path d="M 196 250 L 208 250 L 208 262" stroke="black" stroke-width="3" fill="none"/>
+
+  <!-- Center point O -->
+  <circle cx="272" cy="262" r="3" fill="black"/>
+
+  <!-- Unit circle clip -->
+  <circle cx="272" cy="262" r="230" stroke="black" stroke-width="2" fill="none"/>
+  <circle cx="272" cy="262" r="230" stroke="white" stroke-width="2" fill="none" clip-path="url(#unitclip)"/>
+  <defs>
+    <clipPath id="unitclip">
+      <circle cx="272" cy="262" r="230"/>
+    </clipPath>
+  </defs>
+
+  <!-- Labels -->
+  <text x="20" y="262" class="label">A</text>
+  <text x="518" y="282" class="label">B</text>
+  <text x="176" y="282" class="label">C</text>
+  <text x="186" y="16" class="label">D</text>
+  <text x="360" y="506" class="label">E</text>
+
+  <!-- Right angle label -->
+  <text x="272" y="262" class="label" font-size="24" dominant-baseline="middle" dx="5" dy="5">C</text>
+
+  <!-- Right angle mark -->
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 272 262 L 272 262 L 272 262" stroke="black" stroke-width="2" fill="none"/></svg>

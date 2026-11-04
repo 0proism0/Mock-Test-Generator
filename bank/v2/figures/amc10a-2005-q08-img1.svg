@@ -1,0 +1,19 @@
+<svg width="457" height="450" viewBox="0 0 457 450" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="black" stroke-width="2.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 40 35 L 418 35 L 418 415 L 40 415 Z"/>
+    <path d="M 40 35 L 191 338"/>
+    <path d="M 418 35 L 114 186"/>
+    <path d="M 418 415 L 267 112"/>
+    <path d="M 40 415 L 342 262"/>
+  </g>
+  <g font-family="serif" font-style="italic" font-size="33" fill="black">
+    <text x="10" y="28">A</text>
+    <text x="428" y="28">B</text>
+    <text x="428" y="442">C</text>
+    <text x="5" y="442">D</text>
+    <text x="247" y="102">E</text>
+    <text x="355" y="265">F</text>
+    <text x="188" y="368">G</text>
+    <text x="78" y="206">H</text>
+  </g>
+</svg>

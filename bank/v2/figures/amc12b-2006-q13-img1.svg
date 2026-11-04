@@ -1,0 +1,13 @@
+<svg width="1396" height="838" viewBox="-47 -22 1396 838" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect x="0" y="0" width="1337" height="804" fill="white"/>
+  <g transform="translate(43, 41.5) scale(1.05)">
+    <path d="M 0 692 L 790 692 L 1210 0 L 395 0 Z" stroke="black" stroke-width="2" fill="none"/>
+    <path d="M 395 0 L 395 460 L 790 692 L 790 233 Z" stroke="black" stroke-width="2" fill="none"/>
+    <text x="-35" y="715" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">A</text>
+    <text x="790" y="725" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">B</text>
+    <text x="1230" y="0" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">C</text>
+    <text x="395" y="-10" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">D</text>
+    <text x="390" y="485" font-family="serif" font-style="italic" font-size="32" text-anchor="end">E</text>
+    <text x="795" y="230" font-family="serif" font-style="italic" font-size="32" text-anchor="start">F</text>
+  </g>
+</svg>

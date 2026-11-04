@@ -1,0 +1,60 @@
+<svg width="1361" height="914" viewBox="-12 -12 1361 914" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect x="0" y="0" width="1337" height="890" fill="#E6E6E6" stroke="#888888" stroke-width="1"/>
+  
+  <!-- Column 1 -->
+  <rect x="91" y="90" width="534" height="177" fill="white" stroke="#BBBBBB" stroke-width="1"/>
+  <rect x="91" y="356" width="534" height="177" fill="white" stroke="#BBBBBB" stroke-width="1"/>
+  <rect x="91" y="623" width="534" height="177" fill="white" stroke="#BBBBBB" stroke-width="1"/>
+  
+  <!-- Column 2 -->
+  <rect x="714" y="90" width="534" height="177" fill="white" stroke="#BBBBBB" stroke-width="1"/>
+  <rect x="714" y="356" width="534" height="177" fill="white" stroke="#BBBBBB" stroke-width="1"/>
+  <rect x="714" y="623" width="534" height="177" fill="white" stroke="#BBBBBB" stroke-width="1"/>
+  
+  <!-- Dimension Lines -->
+  <g stroke="black" stroke-width="0.5">
+    <!-- Horizontal Left -->
+    <line x1="91" y1="178.5" x2="1" y2="178.5"/>
+    <path d="M91 178.5 l-8 -3 v6 z" fill="black"/>
+    <path d="M1 178.5 l8 -3 v6 z" fill="black"/>
+    
+    <!-- Horizontal Middle -->
+    <line x1="625" y1="178.5" x2="714" y2="178.5"/>
+    <path d="M625 178.5 l8 -3 v6 z" fill="black"/>
+    <path d="M714 178.5 l-8 -3 v6 z" fill="black"/>
+    
+    <!-- Horizontal Right -->
+    <line x1="1248" y1="178.5" x2="1337" y2="178.5"/>
+    <path d="M1248 178.5 l8 -3 v6 z" fill="black"/>
+    <path d="M1337 178.5 l-8 -3 v6 z" fill="black"/>
+    
+    <!-- Vertical Top Middle -->
+    <line x1="980" y1="268" x2="980" y2="356"/>
+    <path d="M980 268 l-3 8 h6 z" fill="black"/>
+    <path d="M980 356 l-3 -8 h6 z" fill="black"/>
+    
+    <!-- Vertical Middle -->
+    <line x1="980" y1="534" x2="980" y2="623"/>
+    <path d="M980 534 l-3 8 h6 z" fill="black"/>
+    <path d="M980 623 l-3 -8 h6 z" fill="black"/>
+    
+    <!-- Vertical Bottom Middle -->
+    <line x1="980" y1="800" x2="980" y2="890"/>
+    <path d="M980 800 l-3 8 h6 z" fill="black"/>
+    <path d="M980 890 l-3 -8 h6 z" fill="black"/>
+  </g>
+  
+  <!-- Labels -->
+  <g font-family="serif" font-size="24" fill="black" text-anchor="middle">
+    <text x="46" y="205">1</text>
+    <text x="669" y="205">1</text>
+    <text x="1290" y="205">1</text>
+    
+    <text x="965" y="320">1</text>
+    <text x="965" y="587">1</text>
+    <text x="965" y="854">1</text>
+    
+    <text x="109" y="720" text-anchor="middle">2</text>
+    <text x="357" y="790">6</text>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg width="560" height="579" viewBox="-12 -12 560 579" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="2" fill="none">
+    <line x1="43" y1="525" x2="530" y2="525"/>
+    <line x1="43" y1="525" x2="43" y2="38"/>
+    <line x1="530" y1="525" x2="530" y2="38"/>
+    <line x1="43" y1="38" x2="530" y2="38"/>
+    <line x1="43" y1="185" x2="530" y2="525"/>
+    <line x1="189" y1="525" x2="530" y2="185"/>
+    <line x1="530" y1="38" x2="189" y2="525"/>
+    <polyline points="285,350 297,336 311,348"/>
+  </g>
+  <g fill="black">
+    <circle cx="43" cy="525" r="6"/>
+    <circle cx="530" cy="525" r="6"/>
+    <circle cx="43" cy="38" r="6"/>
+    <circle cx="530" cy="38" r="6"/>
+    <circle cx="43" cy="185" r="6"/>
+    <circle cx="189" cy="525" r="6"/>
+    <circle cx="530" cy="185" r="6"/>
+    <circle cx="301" cy="364" r="6"/>
+  </g>
+  <g font-family="serif" font-style="italic" font-size="30" fill="black" text-anchor="middle">
+    <text x="43" y="555">A</text>
+    <text x="530" y="555">B</text>
+    <text x="530" y="25">C</text>
+    <text x="43" y="25">D</text>
+    <text x="20" y="193">P</text>
+    <text x="189" y="555">Q</text>
+    <text x="301" y="400">R</text>
+  </g>
+  <g font-family="serif" font-size="28" fill="black" text-anchor="middle">
+    <text x="185" y="265">7</text>
+    <text x="430" y="435">6</text>
+  </g>
+</svg>

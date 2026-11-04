@@ -1,0 +1,20 @@
+<svg width="570" height="593" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 570 593"><rect width="100%" height="100%" fill="white"/>
+  <rect width="100%" height="100%" fill="white"/>
+  <g transform="translate(1,1)">
+    <rect x="1" y="1" width="568" height="568" fill="#ff8080" stroke="black" stroke-width="1"/>
+    <rect x="65" y="65" width="434" height="434" fill="white" stroke="black" stroke-width="1"/>
+    <rect x="153.5" y="153.5" width="254" height="254" fill="white" stroke="black" stroke-width="1"/>
+    <rect x="205.5" y="205.5" width="150" height="150" fill="white" stroke="black" stroke-width="1"/>
+    <rect x="237.5" y="237.5" width="90" height="90" fill="white" stroke="black" stroke-width="1"/>
+    <rect x="255.5" y="255.5" width="50" height="50" fill="white" stroke="black" stroke-width="1"/>
+    <rect x="265.5" y="265.5" width="20" height="20" fill="white" stroke="black" stroke-width="1"/>
+    <rect x="270.5" y="270.5" width="10" height="10" fill="black" stroke="black" stroke-width="1"/>
+    <rect x="115.5" y="115.5" width="332" height="332" fill="#ff8080" stroke="black" stroke-width="1"/>
+    <rect x="182.5" y="182.5" width="196" height="196" fill="#ff8080" stroke="black" stroke-width="1"/>
+    <rect x="222.5" y="222.5" width="116" height="116" fill="#ff8080" stroke="black" stroke-width="1"/>
+    <rect x="246.5" y="246.5" width="68" height="68" fill="#ff8080" stroke="black" stroke-width="1"/>
+    <rect x="262.5" y="262.5" width="36" height="36" fill="#ff8080" stroke="black" stroke-width="1"/>
+    <rect x="271.5" y="271.5" width="17" height="17" fill="#ff8080" stroke="black" stroke-width="1"/>
+    <rect x="275.5" y="275.5" width="9" height="9" fill="black" stroke="black" stroke-width="1"/>
+  </g>
+</svg>

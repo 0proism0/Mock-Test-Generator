@@ -1,0 +1,103 @@
+<svg width="528" height="591" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 528 591"><rect width="100%" height="100%" fill="white"/>
+  <defs>
+    <radialGradient id="sphereGrad" cx="0.4" cy="0.4" r="0.6">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="252" cy="315" rx="252" ry="45" fill="#4D4D4D"/>
+  <path d="M 2 315 L 156 20 A 100 20 0 0 1 348 20 L 502 315" fill="#808080"/>
+  <path d="M 2 315 L 156 20 A 100 20 0 0 0 348 20 L 502 315" stroke="#000000" stroke-width="2" fill="none"/>
+  <path d="M 156 20 A 100 20 0 0 0 348 20" stroke="#000000" stroke-width="2" fill="none"/>
+  <circle cx="252" cy="168" r="158" fill="url(#sphereGrad)"/>
+  <path d="M 156 20 A 100 20 0 0 0 348 20" stroke="#000000" stroke-width="2" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="7.9" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="15.8" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="23.7" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="31.6" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="39.5" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="47.4" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="55.3" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="63.2" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="71.1" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="79" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="86.9" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="94.8" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="102.7" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="110.6" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="118.5" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="126.4" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="134.3" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="142.2" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="150.1" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="158" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="165.9" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="173.8" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="181.7" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="189.6" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="197.5" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="205.4" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="213.3" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="221.2" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="229.1" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="237" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="244.9" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="252.8" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="260.7" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="268.6" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="276.5" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="284.4" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="292.3" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="300.2" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="308.1" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="316" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="323.9" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="331.8" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="339.7" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="347.6" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="355.5" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="363.4" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="371.3" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="379.2" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="387.1" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="395" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="402.9" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="410.8" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="418.7" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="426.6" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="434.5" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="442.4" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="450.3" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="458.2" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="466.1" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="474" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="481.9" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="489.8" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="497.7" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="505.6" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="513.5" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="521.4" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="529.3" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="537.2" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="545.1" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="553" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="560.9" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="568.8" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="576.7" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="584.6" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="592.5" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="600.4" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="608.3" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="616.2" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="624.1" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="632" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="639.9" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="647.8" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="655.7" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="663.6" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="671.5" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="679.4" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="687.3" fill="none"/>
+  <circle cx="252" cy="168" r="158" stroke="#000000" stroke-width="2" stroke-dasharray="1 15.8" stroke-dashoffset="695.2" fill="none"/></svg>
