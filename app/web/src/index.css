@@ -1588,3 +1588,63 @@ table.stats th {
 .ws-upload {
   align-items: center;
 }
+
+/* -- Bank version picker (classic vs figure bank) ------------------------- */
+.bank-version {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 14px;
+}
+.bank-version-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.bank-version .seg {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card);
+}
+.bank-version .seg-btn {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+  padding: 7px 14px;
+  cursor: pointer;
+}
+.bank-version .seg-btn + .seg-btn {
+  border-left: 1px solid var(--border);
+}
+.bank-version .seg-btn.on {
+  background: var(--accent, #2f6fd0);
+  color: #fff;
+}
+.bank-version .seg-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.bank-version-hint {
+  font-size: 12px;
+}
+
+/* -- Question figures (figure bank) --------------------------------------- */
+.qfig {
+  margin: 14px 0;
+  text-align: center;
+}
+.qfig img {
+  /* Source SVGs are black-on-transparent, so they always sit on a light card
+     to stay legible in dark mode. */
+  max-width: min(100%, 520px);
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+}

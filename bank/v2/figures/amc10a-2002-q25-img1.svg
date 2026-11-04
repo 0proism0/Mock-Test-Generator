@@ -1,0 +1,22 @@
+<svg width="512" height="274" viewBox="-12 -12 512 274" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="3" fill="none">
+    <path d="M 20 225 L 480 225 L 355 47 L 65 47 Z"/>
+  </g>
+  <g fill="black">
+    <circle cx="20" cy="225" r="8"/>
+    <circle cx="480" cy="225" r="8"/>
+    <circle cx="355" cy="47" r="8"/>
+    <circle cx="65" cy="47" r="8"/>
+  </g>
+  <g font-family="serif" font-size="36" text-anchor="middle" dominant-baseline="middle">
+    <text x="20" y="250" font-style="italic">A</text>
+    <text x="480" y="250" font-style="italic">B</text>
+    <text x="355" y="20" font-style="italic">C</text>
+    <text x="65" y="20" font-style="italic">D</text>
+    <text x="250" y="248">52</text>
+    <text x="212" y="20">39</text>
+    <text x="450" y="136">12</text>
+    <text x="20" y="136">5</text>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+<svg width="504" height="297" viewBox="0 0 504 297" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="3" fill="none">
+    <path d="M 143 46 L 46 46"/>
+    <path d="M 46 46 L 46 175"/>
+    <path d="M 46 175 L 450 277"/>
+    <path d="M 143 46 L 450 277"/>
+  </g>
+  <g fill="black">
+    <circle cx="143" cy="46" r="3"/>
+    <circle cx="46" cy="46" r="3"/>
+    <circle cx="46" cy="175" r="3"/>
+    <circle cx="450" cy="277" r="3"/>
+  </g>
+  <g font-family="serif" font-style="italic" font-size="32px" text-anchor="middle">
+    <text x="143" y="32">A</text>
+    <text x="24" y="32">B</text>
+    <text x="24" y="207">C</text>
+    <text x="480" y="290">D</text>
+  </g>
+  <g stroke="black" stroke-width="2" fill="none">
+    <path d="M 70 46 L 70 70 L 46 70"/>
+    <path d="M 63 46 L 70 46 L 70 53"/>
+    <path d="M 63 70 L 70 70 L 70 63"/>
+  </g>
+  <g font-family="serif" font-style="italic" font-size="32px" text-anchor="middle">
+    <text x="143" y="32">A</text>
+    <text x="24" y="32">B</text>
+    <text x="24" y="207">C</text>
+    <text x="480" y="290">D</text>
+  </g>
+  <g stroke="black" stroke-width="2" fill="none">
+    <path d="M 63 46 L 70 46 L 70 53"/>
+    <path d="M 63 70 L 70 70 L 70 63"/>
+  </g>
+  <g font-family="serif" font-style="italic" font-size="32px" text-anchor="middle">
+    <text x="143" y="32">A</text>
+    <text x="24" y="32">B</text>
+    <text x="24" y="207">C</text>
+    <text x="480" y="290">D</text>
+  </g>
+</svg>

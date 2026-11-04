@@ -1,0 +1,21 @@
+<svg width="690" height="436" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 690 436"><rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#c8c8ff" stroke-width="3" d="M 335 132 L 169 203 L 298 277 L 372 277 L 501 203 L 335 132 Z"/>
+    <path fill="#ffaaaa" stroke-width="3" d="M 335 302 L 112 225 L 3 110 L 169 203 L 298 277 L 335 302 Z"/>
+    <path fill="#ffaaaa" stroke-width="3" d="M 335 302 L 335 366 L 112 225 L 207 326 L 335 412 L 335 366 Z"/>
+    <path fill="#ffaaaa" stroke-width="3" d="M 335 302 L 557 225 L 666 110 L 501 203 L 372 277 L 335 302 Z"/>
+    <path fill="#ffaaaa" stroke-width="3" d="M 335 302 L 335 366 L 557 225 L 462 326 L 335 412 L 335 366 Z"/>
+    <path fill="gray" stroke-width="3" d="M 335 257 L 298 277 L 335 302 L 372 277 L 335 257 Z"/>
+    <path fill="none" stroke-width="3" d="M 335 4 L 335 257 M 335 4 L 666 110 M 335 4 L 1 110 M 335 257 L 169 203 M 335 257 L 501 203 M 335 302 L 112 225 M 335 302 L 557 225 M 335 366 L 112 225 M 335 366 L 557 225 M 335 412 L 207 326 M 335 412 L 462 326"/>
+  </g>
+  <text x="335" y="20" font-family="serif" font-size="24" text-anchor="middle">O</text>
+  <text x="3" y="110" font-family="serif" font-size="24" text-anchor="middle" dominant-baseline="middle">A</text>
+  <text x="666" y="110" font-family="serif" font-size="24" text-anchor="middle" dominant-baseline="middle">A'</text>
+  <text x="169" y="203" font-family="serif" font-size="24" text-anchor="middle" dominant-baseline="middle">B</text>
+  <text x="501" y="203" font-family="serif" font-size="24" text-anchor="middle" dominant-baseline="middle">B'</text>
+  <text x="207" y="326" font-family="serif" font-size="24" text-anchor="middle" dominant-baseline="middle">C</text>
+  <text x="462" y="326" font-family="serif" font-size="24" text-anchor="middle" dominant-baseline="middle">C'</text>
+  <text x="335" y="412" font-family="serif" font-size="24" text-anchor="middle" dominant-baseline="middle">D</text>
+  <text x="335" y="257" font-family="serif" font-size="24" text-anchor="middle" dominant-baseline="middle">D'</text>
+  <text x="335" y="20" font-family="serif" font-size="24" text-anchor="middle" dominant-baseline="middle">O'</text>
+</svg>

@@ -351,6 +351,12 @@ const I18N: Record<Lang, Record<string, string>> = {
       '<b>Disclaimer:</b> For <b>AMC 8, AMC 10, AMC 12, AIME, and Math Kangaroo</b>, we use <b>modified questions</b> — real problems with numbers changed and answers recomputed (marked <i>Modified from …</i>). For <b>all other competitions</b>, mock tests use the <b>original official past problems</b> (marked <i>Real problem · …</i>), which their organizers publish free for practice.',
     themeToDark: 'Switch to dark mode',
     themeToLight: 'Switch to light mode',
+    bankVersion: 'Question bank',
+    bankV1: 'Classic',
+    bankV2: 'With figures',
+    v2Figures: '{0} questions have figures',
+    v2Unavailable: 'No figure bank for this competition yet',
+    v2Fallback: 'The figure bank was unavailable — generated from the classic bank instead.',
   },
   zh: {
     tabNew: '🎲 生成新试卷',
@@ -695,6 +701,12 @@ const I18N: Record<Lang, Record<string, string>> = {
       '<b>声明：</b>对于 <b>AMC 8、AMC 10、AMC 12、AIME 和袋鼠数学</b>，我们使用<b>改编题</b> — 修改数字并重算答案的真题（标记为 <i>Modified from …</i>）。对于<b>其他所有竞赛</b>，模拟卷使用<b>官方原始真题</b>（标记为 <i>Real problem · …</i>），这些真题由主办方免费公开发布。',
     themeToDark: '切换到深色模式',
     themeToLight: '切换到浅色模式',
+    bankVersion: '题库版本',
+    bankV1: '经典题库',
+    bankV2: '含图新版',
+    v2Figures: '其中 {0} 道题带配图',
+    v2Unavailable: '该赛事暂无含图题库',
+    v2Fallback: '含图题库不可用，已自动改用经典题库生成。',
   },
 }
 

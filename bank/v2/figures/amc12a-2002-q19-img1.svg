@@ -1,0 +1,80 @@
+<svg width="694" height="634" viewBox="-12 -12 694 634" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect x="0" y="0" width="670" height="610" fill="white"/>
+  <g stroke="black" stroke-width="3" fill="none">
+    <line x1="340" y1="0" x2="340" y2="610"/>
+    <line x1="0" y1="315" x2="650" y2="315"/>
+  </g>
+  <g stroke="black" stroke-width="3" stroke-linecap="round">
+    <line x1="28" y1="300" x2="28" y2="335"/>
+    <line x1="72" y1="300" x2="72" y2="335"/>
+    <line x1="117" y1="300" x2="117" y2="335"/>
+    <line x1="161" y1="300" x2="161" y2="335"/>
+    <line x1="206" y1="300" x2="206" y2="335"/>
+    <line x1="250" y1="300" x2="250" y2="335"/>
+    <line x1="295" y1="300" x2="295" y2="335"/>
+    <line x1="385" y1="300" x2="385" y2="335"/>
+    <line x1="430" y1="300" x2="430" y2="335"/>
+    <line x1="474" y1="300" x2="474" y2="335"/>
+    <line x1="519" y1="300" x2="519" y2="335"/>
+    <line x1="563" y1="300" x2="563" y2="335"/>
+    <line x1="608" y1="300" x2="608" y2="335"/>
+    <line x1="323" y1="48" x2="359" y2="48"/>
+    <line x1="323" y1="93" x2="359" y2="93"/>
+    <line x1="323" y1="137" x2="359" y2="137"/>
+    <line x1="323" y1="182" x2="359" y2="182"/>
+    <line x1="323" y1="226" x2="359" y2="226"/>
+    <line x1="323" y1="271" x2="359" y2="271"/>
+    <line x1="323" y1="361" x2="359" y2="361"/>
+    <line x1="323" y1="406" x2="359" y2="406"/>
+    <line x1="323" y1="450" x2="359" y2="450"/>
+    <line x1="323" y1="495" x2="359" y2="495"/>
+    <line x1="323" y1="540" x2="359" y2="540"/>
+    <line x1="323" y1="584" x2="359" y2="584"/>
+  </g>
+  <g fill="black" font-family="serif" font-size="28" text-anchor="middle">
+    <text x="305" y="58">6</text>
+    <text x="305" y="103">5</text>
+    <text x="305" y="147">4</text>
+    <text x="305" y="192">3</text>
+    <text x="305" y="236">2</text>
+    <text x="305" y="281">1</text>
+    <text x="305" y="371">−1</text>
+    <text x="305" y="416">−2</text>
+    <text x="305" y="460">−3</text>
+    <text x="305" y="505">−4</text>
+    <text x="305" y="550">−5</text>
+    <text x="305" y="594">−6</text>
+    <text x="28" y="371">−7</text>
+    <text x="72" y="371">−6</text>
+    <text x="117" y="371">−5</text>
+    <text x="161" y="371">−4</text>
+    <text x="206" y="371">−3</text>
+    <text x="250" y="371">−2</text>
+    <text x="295" y="371">−1</text>
+    <text x="385" y="371">1</text>
+    <text x="430" y="371">2</text>
+    <text x="474" y="371">3</text>
+    <text x="519" y="371">4</text>
+    <text x="563" y="371">5</text>
+    <text x="608" y="371">6</text>
+  </g>
+  <g fill="black" font-family="serif" font-size="28" text-anchor="middle">
+    <text x="245" y="22" font-style="italic">y</text>
+    <text x="640" y="405" font-style="italic">x</text>
+  </g>
+  <g stroke="black" stroke-width="3" fill="none">
+    <polyline points="25,495 250,48 340,315 385,48 563,584"/>
+  </g>
+  <g fill="black">
+    <circle cx="25" cy="495" r="4.5"/>
+    <circle cx="250" cy="48" r="4.5"/>
+    <circle cx="385" cy="48" r="4.5"/>
+    <circle cx="563" cy="584" r="4.5"/>
+  </g>
+  <g fill="black" font-family="serif" font-size="28" text-anchor="start">
+    <text x="40" y="505">(-7, -4)</text>
+    <text x="153" y="55">(-2, 6)</text>
+    <text x="398" y="55">(1, 6)</text>
+    <text x="578" y="594">(5, -6)</text>
+  </g>
+</svg>

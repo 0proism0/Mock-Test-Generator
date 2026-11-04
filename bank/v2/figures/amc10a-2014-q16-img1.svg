@@ -1,0 +1,40 @@
+<svg width="488" height="881" viewBox="-12 -12 488 881" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect x="0" y="0" width="464" height="857" fill="white"/>
+  <g stroke="black" stroke-width="2" fill="none">
+    <!-- Outer Rectangle ABCD -->
+    <path d="M 40 38 L 424 38 L 424 804 L 40 804 Z"/>
+    <!-- Inner Rectangle GHEG -->
+    <path d="M 40 421 L 424 421"/>
+    <!-- Diagonal BD -->
+    <path d="M 40 38 L 424 804"/>
+    <!-- Diagonal CH -->
+    <path d="M 424 38 L 232 804"/>
+    <!-- Shaded Quadrilateral HF -->
+    <path d="M 232 421 L 168 553 L 232 804 L 296 553 Z"/>
+  </g>
+  <g fill="gray" stroke="none">
+    <polygon points="232,421 168,553 232,804 296,553"/>
+  </g>
+  <g fill="black" stroke="none">
+    <text x="25" y="30" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">A</text>
+    <text x="445" y="30" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">B</text>
+    <text x="445" y="835" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">C</text>
+    <text x="20" y="835" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">D</text>
+    <text x="445" y="410" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">E</text>
+    <text x="232" y="410" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">H</text>
+    <text x="20" y="430" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">G</text>
+    <text x="232" y="835" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">F</text>
+    <g font-size="24" text-anchor="middle">
+      <text x="136" y="830">1</text>
+      <path d="M 130 835 L 142 835" stroke="black" stroke-width="1.5"/>
+      <text x="136" y="855">2</text>
+      <text x="328" y="830">1</text>
+      <path d="M 322 835 L 334 835" stroke="black" stroke-width="1.5"/>
+      <text x="328" y="855">2</text>
+    </g>
+    <g font-size="30" text-anchor="start">
+      <text x="434" y="220">1</text>
+      <text x="434" y="600">1</text>
+    </g>
+  </g>
+</svg>

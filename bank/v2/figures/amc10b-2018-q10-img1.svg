@@ -1,0 +1,52 @@
+<svg width="839" height="629" viewBox="-12 -12 839 629" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="2" fill="none">
+    <!-- Solid Lines -->
+    <line x1="40" y1="570" x2="643" y2="570"/> <!-- AB -->
+    <line x1="643" y1="570" x2="795" y2="417"/> <!-- BC -->
+    <line x1="795" y1="417" x2="795" y2="35"/> <!-- CG -->
+    <line x1="795" y1="35" x2="194" y2="35"/> <!-- GH -->
+    <line x1="194" y1="35" x2="40" y2="188"/> <!-- HE -->
+    <line x1="40" y1="188" x2="40" y2="570"/> <!-- EA -->
+    <line x1="643" y1="570" x2="643" y2="188"/> <!-- FB -->
+    <line x1="795" y1="417" x2="719" y2="111"/> <!-- CM -->
+    <line x1="643" y1="570" x2="719" y2="111"/> <!-- BM -->
+    <line x1="795" y1="35" x2="719" y2="111"/> <!-- GM -->
+    <line x1="194" y1="35" x2="719" y2="111"/> <!-- HM -->
+    <line x1="40" y1="188" x2="643" y2="188"/> <!-- EF -->
+    <line x1="643" y1="188" x2="719" y2="111"/> <!-- FM -->
+    <line x1="40" y1="188" x2="719" y2="111"/> <!-- EM -->
+    <line x1="40" y1="570" x2="719" y2="111"/> <!-- AE -->
+  </g>
+  <g stroke="black" stroke-width="2" fill="none" stroke-dasharray="15, 10">
+    <line x1="194" y1="417" x2="795" y2="417"/> <!-- DC -->
+    <line x1="194" y1="417" x2="40" y2="570"/> <!-- DA -->
+    <line x1="194" y1="417" x2="194" y2="35"/> <!-- DDH -->
+    <line x1="194" y1="417" x2="795" y2="417"/> <!-- DC (re-dashed) -->
+    <line x1="194" y1="35" x2="795" y2="417"/> <!-- HC -->
+  </g>
+  <g fill="black">
+    <circle cx="40" cy="570" r="4.5"/> <!-- A -->
+    <circle cx="643" cy="570" r="4.5"/> <!-- B -->
+    <circle cx="795" cy="417" r="4.5"/> <!-- C -->
+    <circle cx="194" cy="417" r="4.5"/> <!-- D -->
+    <circle cx="40" cy="188" r="4.5"/> <!-- E -->
+    <circle cx="643" cy="188" r="4.5"/> <!-- F -->
+    <circle cx="795" cy="35" r="4.5"/> <!-- G -->
+    <circle cx="194" cy="35" r="4.5"/> <!-- H -->
+    <circle cx="719" cy="111" r="4.5"/> <!-- M -->
+  </g>
+  <g font-family="serif" font-size="30" fill="black" text-anchor="middle">
+    <text x="20" y="600">A</text>
+    <text x="665" y="600">B</text>
+    <text x="815" y="430">C</text>
+    <text x="170" y="430">D</text>
+    <text x="20" y="198">E</text>
+    <text x="625" y="220">F</text>
+    <text x="815" y="30">G</text>
+    <text x="170" y="28">H</text>
+    <text x="719" y="101">M</text>
+    <text x="342" y="605">3</text>
+    <text x="735" y="525">1</text>
+    <text x="815" y="240">2</text>
+  </g>
+</svg>

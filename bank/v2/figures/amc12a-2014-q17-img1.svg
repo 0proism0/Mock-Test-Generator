@@ -1,0 +1,25 @@
+<svg width="311" height="509" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 311 509"><rect width="100%" height="100%" fill="white"/>
+<rect width="100%" height="100%" fill="white"/>
+<g stroke="black" stroke-width="3" fill="none">
+<path d="M 46 44 L 296 38 L 296 492 L 46 498 Z"/>
+<path d="M 46 44 L 4 12 L 250 3 L 296 38"/>
+<path d="M 4 12 L 4 464 L 46 498"/>
+<path d="M 296 38 L 296 492"/>
+<path d="M 4 464 L 250 482 L 296 492"/>
+<path d="M 250 482 L 292 504"/>
+</g>
+<g fill="#888888" stroke="#444444" stroke-width="0.5">
+<circle cx="148.5" cy="252" r="125"/>
+<circle cx="75" cy="85" r="65"/>
+<circle cx="222" cy="85" r="65"/>
+<circle cx="75" cy="420" r="65"/>
+<circle cx="222" cy="420" r="65"/>
+</g>
+<circle cx="148.5" cy="252" r="125" fill="url(#grad1)" stroke="none"/>
+<defs>
+<radialGradient id="grad1" cx="0.5" cy="0.5" r="0.7" fx="0.4" fy="0.4">
+<stop offset="0%" stop-color="#AAAAAA"/>
+<stop offset="100%" stop-color="#666666"/>
+</radialGradient>
+</defs>
+</svg>

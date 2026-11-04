@@ -1,6 +1,6 @@
 #!/usr/bin/env pwsh
 # Auto-rebuild the React front-end on every change (vite build --watch -> app/web/dist).
-# Leave it running while you edit app/web, then refresh http://localhost:8000.
+# Leave it running while you edit app/web, then refresh http://localhost:8020.
 #
 # Usage:  pwsh scripts/watch.ps1
 $ErrorActionPreference = "Stop"

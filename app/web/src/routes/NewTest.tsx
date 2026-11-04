@@ -21,6 +21,65 @@ type View =
   | { kind: 'family'; family: string }
   | { kind: 'detail'; slug: string; round: string | null }
 
+/** 1 = classic bank, 2 = figure bank (bank/v2). Persisted so the choice sticks. */
+type BankVersion = 1 | 2
+
+const VERSION_KEY = 'mt_bank_version'
+
+function readStoredVersion(): BankVersion {
+  try {
+    return localStorage.getItem(VERSION_KEY) === '2' ? 2 : 1
+  } catch {
+    return 1
+  }
+}
+
+/** Bank-version switch. v2 is disabled when that competition has no figure bank. */
+function VersionPicker({
+  value,
+  onChange,
+  bank,
+}: {
+  value: BankVersion
+  onChange: (v: BankVersion) => void
+  bank?: Bank
+}) {
+  const { t } = useI18n()
+  // Global picker (no bank yet): both choices stay selectable as a preference.
+  // On a competition page the figure option is disabled when that bank is missing.
+  const hasV2 = bank ? (bank.versions ?? [1]).includes(2) : true
+  return (
+    <div className="bank-version">
+      <span className="bank-version-label">{t('bankVersion')}</span>
+      <div className="seg">
+        <button
+          type="button"
+          className={`seg-btn${value === 1 ? ' on' : ''}`}
+          onClick={() => onChange(1)}
+        >
+          {t('bankV1')}
+        </button>
+        <button
+          type="button"
+          className={`seg-btn${value === 2 ? ' on' : ''}`}
+          disabled={!hasV2}
+          title={hasV2 ? undefined : t('v2Unavailable')}
+          onClick={() => {
+            if (hasV2) onChange(2)
+          }}
+        >
+          {t('bankV2')}
+        </button>
+      </div>
+      {bank ? (
+        <span className="muted bank-version-hint">
+          {hasV2 && bank.v2_figures ? t('v2Figures', bank.v2_figures) : t('v2Unavailable')}
+        </span>
+      ) : null}
+    </div>
+  )
+}
+
 /** Legacy "New Test" tab: category → family → competition picker, then generate. */
 export function NewTest() {
   const { t } = useI18n()
@@ -30,6 +89,16 @@ export function NewTest() {
   const [genError, setGenError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
   const [view, setView] = useState<View>({ kind: 'families' })
+  const [version, setVersion] = useState<BankVersion>(readStoredVersion)
+
+  function pickVersion(v: BankVersion) {
+    setVersion(v)
+    try {
+      localStorage.setItem(VERSION_KEY, String(v))
+    } catch {
+      /* storage unavailable (private mode) — the choice just won't persist */
+    }
+  }
 
   useEffect(() => {
     api
@@ -53,8 +122,12 @@ export function NewTest() {
     setBusy(true)
     setGenError(null)
     try {
-      const r = await api.generate(b.slug, b.round)
-      navigate(`/test/${r.id}`)
+      // Ask for the figure bank only when this competition actually has one;
+      // the server falls back to the classic bank if the request fails anyway.
+      const want: BankVersion = version === 2 && (b.versions ?? [1]).includes(2) ? 2 : 1
+      const r = await api.generate(b.slug, b.round, want)
+      // Tell the runner when the server had to fall back to the classic bank.
+      navigate(`/test/${r.id}`, { state: r.fallback ? { fallback: true } : undefined })
     } catch (e) {
       setGenError(e instanceof Error ? e.message : String(e))
     } finally {
@@ -81,6 +154,7 @@ export function NewTest() {
     const categories = CATEGORY_ORDER.filter((c) => families[c])
     return (
       <>
+        <VersionPicker value={version} onChange={pickVersion} />
         {categories.map((category) => (
           <section key={category}>
             <h2 className="section-title">
@@ -198,6 +272,7 @@ export function NewTest() {
             </tr>
           </tbody>
         </table>
+        <VersionPicker value={version} onChange={pickVersion} bank={b} />
         <div style={{ marginTop: 18 }}>
           <button
             className="btn"

@@ -1,0 +1,14 @@
+<svg width="430" height="504" viewBox="0 0 430 504" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="black" stroke-width="2" fill="none">
+    <path d="M 125 212.5 L 125 50 L 305 50 L 4.38 321.39 L 125 455 L 425.62 183.61 L 305 50"/>
+    <path d="M 125 455 L 305 455 L 305 292.5"/>
+    <path d="M 305 50 L 125 455"/>
+    <path d="M 125 212.5 L 125 455 M 305 292.5 L 305 50" stroke-dasharray="7 5"/>
+  </g>
+  <circle cx="125" cy="455" r="3" fill="black"/>
+  <circle cx="305" cy="50" r="3" fill="black"/>
+  <circle cx="125" cy="50" r="3" fill="black"/>
+  <text font-family="serif" font-size="24" fill="black" text-anchor="middle" x="100" y="488">C</text>
+  <text font-family="serif" font-size="24" fill="black" text-anchor="middle" x="328" y="32">A</text>
+  <text font-family="serif" font-size="24" fill="black" text-anchor="middle" x="102" y="32">B</text>
+</svg>

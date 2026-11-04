@@ -1,0 +1,55 @@
+<svg width="1067" height="114" viewBox="-12 -12 1067 114" xmlns="http://www.w3.org/2000/svg" style="background-color: white;"><rect width="100%" height="100%" fill="white"/>
+  <defs>
+    <style>
+      .box { fill: none; stroke: black; stroke-width: 2; }
+      .label { font-family: serif; font-size: 32px; text-anchor: middle; dominant-baseline: middle; fill: black; }
+      .point { fill: black; }
+    </style>
+  </defs>
+
+  <!-- Boxes -->
+  <rect x="10" y="10" width="45" height="80" class="box"/>
+  <rect x="85" y="10" width="55" height="80" class="box"/>
+  <rect x="168" y="10" width="55" height="80" class="box"/>
+  <rect x="250" y="10" width="55" height="80" class="box"/>
+  <rect x="332" y="10" width="55" height="80" class="box"/>
+  <rect x="414" y="10" width="55" height="80" class="box"/>
+  <rect x="496" y="10" width="55" height="80" class="box"/>
+  <rect x="578" y="10" width="55" height="80" class="box"/>
+  <rect x="660" y="10" width="55" height="80" class="box"/>
+  <rect x="742" y="10" width="55" height="80" class="box"/>
+  <rect x="824" y="10" width="55" height="80" class="box"/>
+  <rect x="906" y="10" width="55" height="80" class="box"/>
+  <rect x="988" y="10" width="55" height="80" class="box"/>
+
+  <!-- Labels -->
+  <text x="32" y="40" class="label">7</text>
+  <text x="112" y="40" class="label">11</text>
+  <text x="195" y="40" class="label">8</text>
+  <text x="277" y="40" class="label">6</text>
+  <text x="359" y="40" class="label">4</text>
+  <text x="441" y="40" class="label">5</text>
+  <text x="523" y="40" class="label">9</text>
+  <text x="605" y="40" class="label">12</text>
+  <text x="687" y="40" class="label">1</text>
+  <text x="769" y="40" class="label">13</text>
+  <text x="851" y="40" class="label">10</text>
+  <text x="933" y="40" class="label">2</text>
+  <text x="1015" y="40" class="label">3</text>
+
+  <!-- Points (Circles) -->
+  <circle cx="32" cy="40" r="3" class="point"/>
+  <circle cx="112" cy="40" r="3" class="point"/>
+  <circle cx="195" cy="40" r="3" class="point"/>
+  <circle cx="277" cy="40" r="3" class="point"/>
+  <circle cx="359" cy="40" r="3" class="point"/>
+  <circle cx="441" cy="40" r="3" class="point"/>
+  <circle cx="523" cy="40" r="3" class="point"/>
+  <circle cx="605" cy="40" r="3" class="point"/>
+  <circle cx="687" cy="40" r="3" class="point"/>
+  <circle cx="769" cy="40" r="3" class="point"/>
+  <circle cx="851" cy="40" r="3" class="point"/>
+  <circle cx="933" cy="40" r="3" class="point"/>
+  <circle cx="1015" cy="40" r="3" class="point"/>
+
+</svg>

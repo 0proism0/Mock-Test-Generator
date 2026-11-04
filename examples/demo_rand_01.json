@@ -1,0 +1,110 @@
+{
+  "format_version": "1.0",
+  "paper_version": 2,
+  "id": "demo_rand_01",
+  "title": "示例卷 — 图位三态演示 · v2",
+  "competition": "Demo",
+  "category": "Math",
+  "instructions": "3 questions · 20 minutes · No calculator. 6 points total.",
+  "time_limit_min": 20,
+  "total_points": 6,
+  "calculator_allowed": false,
+  "locale": "zh",
+  "created_at": "2026-11-02T20:10:00+08:00",
+  "updated_at": "2026-11-02T20:24:00+08:00",
+  "generator": {
+    "name": "mocktest-maker",
+    "version": "0.9.0",
+    "seed": 20261102,
+    "banks": ["bank/demo_A.json"]
+  },
+  "version_history": [
+    { "version": 1, "at": "2026-11-02T20:10:00+08:00", "by": "generator", "note": "initial generation" },
+    { "version": 2, "at": "2026-11-02T20:24:00+08:00", "by": "teacher:xiang", "note": "补第 2 题配图；第 3 题图待补" }
+  ],
+  "sections": [
+    { "id": "S1", "title": "第 1 部分 · 选择与填空", "instructions": null, "points": 6 }
+  ],
+  "questions": [
+    {
+      "n": 1,
+      "qid": "q01",
+      "section": "S1",
+      "type": "multiple_choice",
+      "source": "示例 · 虚构题目（非真题）",
+      "question": "若 $x + \\frac{1}{x} = 3$，则 $x^2 + \\frac{1}{x^2}$ 等于多少？",
+      "question_zh": null,
+      "choices": { "A": "5", "B": "7", "C": "9", "D": "11", "E": "13" },
+      "answer": "B",
+      "solution": "两边平方得 $x^2 + 2 + \\frac{1}{x^2} = 9$，故 $x^2 + \\frac{1}{x^2} = 7$。",
+      "solution_zh": null,
+      "points": 1,
+      "grading": { "mode": "choice" },
+      "figure": null,
+      "subject": "algebra",
+      "difficulty": "easy"
+    },
+    {
+      "n": 2,
+      "qid": "q02",
+      "section": "S1",
+      "type": "integer_answer",
+      "source": "示例 · 虚构题目（非真题）",
+      "question": "直角三角形 $ABC$ 中 $\\angle C = 90^\\circ$，两直角边长为 3 和 4，求其内切圆半径（结果补足三位，如 007）。",
+      "question_zh": null,
+      "choices": null,
+      "answer": "001",
+      "solution": "斜边为 5，内切圆半径 $r = \\frac{3 + 4 - 5}{2} = 1$。",
+      "solution_zh": null,
+      "points": 2,
+      "grading": { "mode": "exact" },
+      "figure": {
+        "kind": "svg",
+        "state": "ready",
+        "placement": "prompt",
+        "inline": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 180\" width=\"240\" height=\"180\" role=\"img\" aria-label=\"直角三角形 ABC 与内切圆\"><polygon points=\"20,160 220,160 20,40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"140\" r=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"140\" r=\"1.8\" fill=\"currentColor\"/><text x=\"8\" y=\"176\" font-size=\"13\" fill=\"currentColor\">A</text><text x=\"222\" y=\"176\" font-size=\"13\" fill=\"currentColor\">B</text><text x=\"8\" y=\"34\" font-size=\"13\" fill=\"currentColor\">C</text></svg>",
+        "mime": "image/svg+xml",
+        "width": 240,
+        "height": 180,
+        "viewBox": "0 0 240 180",
+        "alt": "直角三角形 ABC，直角在 A，斜边 AB 上画有内切圆",
+        "caption": "图 1",
+        "credit": "示例作图"
+      },
+      "subject": "geometry",
+      "difficulty": "medium"
+    },
+    {
+      "n": 3,
+      "qid": "q03",
+      "section": "S1",
+      "type": "integer_answer",
+      "source": "示例 · 虚构题目（非真题）",
+      "question": "如图，圆 $O$ 内切于正方形 $ABCD$，边长为 2。阴影部分为正方形去掉圆，求阴影面积（取 $\\pi \\approx 3.14$，四舍五入到整数）。",
+      "question_zh": null,
+      "choices": null,
+      "answer": "001",
+      "solution": "正方形面积 4，内切圆半径 1、面积 $\\pi \\approx 3.14$，阴影面积 $4 - 3.14 = 0.86$，取整为 1。",
+      "solution_zh": null,
+      "points": 3,
+      "grading": { "mode": "exact" },
+      "figure": {
+        "kind": "svg",
+        "state": "placeholder",
+        "placement": "prompt",
+        "width": 200,
+        "height": 200,
+        "alt": "正方形 ABCD 内切一圆 O，四角为阴影区域",
+        "caption": "图 2",
+        "source_code": {
+          "lang": "asy",
+          "text": "size(4cm); draw(unitsquare); draw(circle((0.5,0.5), 0.5));"
+        }
+      },
+      "subject": "geometry",
+      "difficulty": "medium"
+    }
+  ],
+  "content_hash": "sha256:73ad4b3238bea99432c88894a4fe22eb19ab0ec2cedb53c7c90d4963c3213bb3",
+  "notes": "演示文件：第 1 题 figure=null（明确无图），第 2 题内联 SVG 就位（ready），第 3 题占位待补（placeholder）。"
+}
