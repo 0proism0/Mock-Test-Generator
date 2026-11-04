@@ -24,22 +24,24 @@ category → chapter into `school_docs/` (indexed by `school_docs.json`), and st
 school can browse, preview, and download them.
 
 ```bash
-python app/server.py    # then open http://localhost:8000
+python app/server.py    # then open http://localhost:8020
 ```
 
 Full React UI (needs Node 20+):
 
 ```bash
-pwsh scripts/build.ps1     # or: sh scripts/build.sh   (cd app/web && npm ci && npm run build)
-python app/server.py       # http://localhost:8000 now serves the React app
+pwsh scripts/build.ps1     # or: scripts\build.bat / sh scripts/build.sh  (npm ci && npm run build)
+python app/server.py       # http://localhost:8020 now serves the React app
 ```
 
 Development:
 
 ```bash
-pwsh scripts/start.ps1 -Dev   # Python API on :8000 + Vite dev server (HMR) on :5173
-pwsh scripts/watch.ps1        # or: rebuild app/web/dist on every change
+pwsh scripts/start.ps1 -Dev   # or: scripts\start.bat dev  - API on :8020 + Vite (HMR) on :5173
+pwsh scripts/watch.ps1        # or: scripts\watch.bat  - rebuild app/web/dist on every change
 ```
+
+Port defaults to **8020** (8000 is often taken by another local dev server); set `MOCKTEST_PORT` to override it.
 
 Or, if you prefer a venv:
 
@@ -57,10 +59,15 @@ python -m venv .venv
 - `app/` — stdlib Python server (`server.py`) + static assets
 - `app/web/` — React + TypeScript front-end (Vite); build output `app/web/dist` is served by `server.py`
 - `app/static/index.html` — legacy vanilla-JS UI (fallback when `app/web/dist` isn't built)
-- `scripts/` — build/start/watch helpers (`.ps1` + `.sh`)
+- `scripts/` — build/start/watch helpers (`.ps1` + `.bat` + `.sh`)
 - `scraper/` — collection pipelines (AoPS wiki via browser, official PDFs/TeX/HTML)
 - `raw/` — raw downloads (wikitext, PDFs, TeX)
 - `data/` — clean per-competition JSON of AMC/AIME 真题
+- `docs/paper-format.md` — paper JSON format v1.0 (format/paper version numbers, figure slots for geometry)
+- `schema/` — JSON Schema for the paper format (`paper-1.0.schema.json`)
+- `examples/` — format example (`demo_rand_01.json`: no figure / inline SVG / reserved placeholder)
+- `scripts/validate_paper.py` — validate papers, upgrade legacy papers to v1.0, recompute `content_hash`
+- `scripts/migrate_banks.py` — migrate `bank/*.json` to `bank/*.v1.json` (adds `qid`, normalizes `type`, turns `has_diagram` into `figure` slots)
 
 ## Current banks (19 competitions, ~7,500 problems)
 

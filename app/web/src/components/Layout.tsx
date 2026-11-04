@@ -2,6 +2,7 @@ import { Suspense, type ReactNode } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { useAuth } from '../lib/auth'
 import { useI18n } from '../lib/i18n'
+import { useTheme } from '../lib/theme'
 import { RouteFallback } from './RouteFallback'
 import {
   BarChart2,
@@ -10,8 +11,10 @@ import {
   FileText,
   LogIn,
   LogOut,
+  Moon,
   PlusSquare,
   School,
+  Sun,
   Swords,
   Target,
   Users,
@@ -39,9 +42,11 @@ const tabs: Tab[] = [
 ]
 
 export function Layout() {
-  const { t, tip, lang, setLang } = useI18n()
+  const { t, lang, setLang } = useI18n()
   const { user, ready, logout } = useAuth()
+  const { theme, toggle: toggleTheme } = useTheme()
   const visible = tabs.filter((tab) => !tab.authOnly || user)
+  const themeLabel = t(theme === 'dark' ? 'themeToLight' : 'themeToDark')
 
   return (
     <>
@@ -82,7 +87,7 @@ export function Layout() {
             className={({ isActive }) => (isActive ? 'active' : '')}
           >
             {tab.icon}
-            <span>{tip(tab.labelKey)}</span>
+            <span>{t(tab.labelKey)}</span>
           </NavLink>
         ))}
         <div className="lang-toggle">
@@ -93,6 +98,15 @@ export function Layout() {
             中文
           </span>
         </div>
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={toggleTheme}
+          title={themeLabel}
+          aria-label={themeLabel}
+        >
+          {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+        </button>
       </nav>
       <main className="container">
         <Suspense fallback={<RouteFallback />}>

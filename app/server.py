@@ -1,6 +1,6 @@
 """MockTest Maker — localhost web app.
 
-Run:  .venv/bin/python app/server.py  (then open http://localhost:8000)
+Run:  .venv/bin/python app/server.py  (then open http://localhost:8020)
 Stdlib only. Serves tests from tests/*.json, generates new tests from bank/<slug>_*.json.
 """
 import hashlib
@@ -29,6 +29,12 @@ from latex_wrap import wrap_bare_math
 ROOT = Path(__file__).resolve().parent.parent
 TESTS = ROOT / "tests"
 BANK = ROOT / "bank"
+# Version 2 banks: one JSON per competition slug, questions may carry figures.
+# They sit beside the classic banks so both versions stay selectable; a missing
+# file simply means "this competition has no figure bank yet".
+BANK_V2 = BANK / "v2"
+BANK_V2_FIGURES = BANK_V2 / "figures"
+BANK_VERSIONS = (1, 2)
 STATIC = ROOT / "app" / "static"
 WEB_DIST = ROOT / "app" / "web" / "dist"  # built React app (see app/web); legacy STATIC is the fallback
 RESULTS = ROOT / "results.jsonl"
@@ -36,7 +42,8 @@ USERS_DIR = ROOT / "users"
 USERS_FILE = ROOT / "users.json"
 SESSIONS_FILE = ROOT / "sessions.json"
 SESSION_DAYS = 7
-PORT = 8000
+# Default 8020 (8000 is commonly taken by other local dev servers); override with MOCKTEST_PORT.
+PORT = int(os.environ.get("MOCKTEST_PORT", "8020"))
 
 COMP_META = {  # slug -> (display name, n_q, tlim, category, rounds, family)
     "amc8": ("AMC 8", 25, 40, "Math", None, "AMC"),
@@ -846,10 +853,22 @@ def wrap_variant(v):
     return v
 
 
-_bank_cache = {}  # slug -> wrapped, eligible variants (banks are static at runtime)
+_bank_cache = {}  # (slug, version) -> wrapped, eligible variants (banks are static at runtime)
 
 
-def load_bank(slug, round_name=None):
+def bank_files(slug, version=1):
+    """Files backing one bank version; empty when that version is not installed.
+
+    Version 1 is the classic layout (bank/<slug>_<set>.json). Version 2 is the
+    figure-carrying import (bank/v2/<slug>.json, see scripts/import_papers.py).
+    """
+    if version == 2:
+        f = BANK_V2 / f"{slug}.json"
+        return [f] if f.exists() else []
+    return [f for f in sorted(BANK.glob(f"{slug}_*.json")) if not f.name.endswith(".v1.json")]
+
+
+def load_bank(slug, round_name=None, version=1):
     """All eligible variants for a slug (optionally restricted to a round).
 
     Excludes variants without a solution. Proof problems are excluded unless
@@ -857,9 +876,13 @@ def load_bank(slug, round_name=None):
     Results are cached: latex wrapping every variant on every request is far
     too slow (list_banks hits this for all competitions at once).
     """
-    if slug not in _bank_cache:
+    key = (slug, version)
+    if key not in _bank_cache:
         out = []
-        for f in sorted(BANK.glob(f"{slug}_*.json")):
+        for f in bank_files(slug, version):
+            # bank/*.v1.json are the same problems migrated to paper-format v1.0
+            # (see scripts/migrate_banks.py). They are parallel copies, not extra
+            # banks: loading both would duplicate every variant.
             try:
                 d = json.loads(f.read_text(encoding="utf-8"))
                 variants = d.get("variants", [])
@@ -873,11 +896,19 @@ def load_bank(slug, round_name=None):
                     out.extend(wrap_variant(v) for v in vs if is_eligible(v, allow_proof=allow_proof))
             except Exception:
                 continue
-        _bank_cache[slug] = out
-    variants = _bank_cache[slug]
+        _bank_cache[key] = out
+    variants = _bank_cache[key]
     if round_name:
         variants = [v for v in variants if round_of(slug, v.get("source")) == round_name]
     return variants
+
+
+def _with_versions(card, v2_variants):
+    """Attach figure-bank availability to a generator card."""
+    card["versions"] = [1, 2] if v2_variants else [1]
+    card["v2_variants"] = len(v2_variants)
+    card["v2_figures"] = sum(1 for v in v2_variants if v.get("figure"))
+    return card
 
 
 def list_banks(user=None):
@@ -890,23 +921,25 @@ def list_banks(user=None):
     out = []
     for slug, meta in COMP_META.items():
         name, n_q, tlim, category, rounds, family = meta
+        v2_all = load_bank(slug, version=2)
         if rounds:
             for rname, (rn_q, rn_tlim) in rounds.items():
                 rv = load_bank(slug, round_name=rname)
                 if not rv:
                     continue
+                v2_rv = [v for v in v2_all if round_of(slug, v.get("source")) == rname]
                 pos_src = {}
                 for v in rv:
                     pos_src.setdefault(v["position"], set()).add(v.get("source"))
                 ready = len(pos_src) >= rn_q
                 min_unused = min((len(s - used) for s in pos_src.values()), default=0)
-                out.append({
+                out.append(_with_versions({
                     "slug": slug, "round": rname, "name": f"{name} — {rname}",
                     "category": category, "family": family, "n_questions": rn_q, "time_limit_min": rn_tlim,
                     "ready": ready, "total_variants": len(rv),
                     "positions_covered": len(pos_src), "tests_remaining": min_unused,
                     "real": slug.startswith("bpho"),
-                })
+                }, v2_rv))
         else:
             rv = load_bank(slug)
             pos_src = {}
@@ -916,23 +949,25 @@ def list_banks(user=None):
             counts = [len(s) for p, s in pos_src.items() if p <= n_q]
             min_src = min(counts, default=0)
             counts_unused = [len(s - used) for p, s in pos_src.items() if p <= n_q]
-            out.append({
+            out.append(_with_versions({
                 "slug": slug, "round": None, "name": name, "category": category, "family": family,
                 "n_questions": n_q, "time_limit_min": tlim, "ready": ready,
                 "total_variants": len(rv), "positions_covered": len(pos_src),
                 "tests_remaining": min(counts_unused, default=0), "tests_total": min_src,
                 "real": slug.startswith("bpho"),
-            })
+            }, v2_all))
     # Only expose competitions/rounds that can actually be generated right now.
     return [b for b in out if b["ready"]]
 
 
-def generate_test(slug, round_name=None, user=None):
+def generate_test(slug, round_name=None, user=None, version=1):
     """Assemble a new mock: one eligible variant per position, never reusing a source
     that appeared in any previously generated test.
 
+    ``version`` picks the bank: 1 = classic, 2 = figure bank (bank/v2/<slug>.json).
     Returns None if any required position has no eligible variant (proof problems
-    and problems without a solution are excluded).
+    and problems without a solution are excluded), which is what lets the HTTP
+    layer fall back from version 2 to version 1.
     """
     name, n_q, tlim, category, rounds, family = COMP_META[slug]
     if rounds:
@@ -944,7 +979,7 @@ def generate_test(slug, round_name=None, user=None):
         display = name
     used = used_sources(user)
     by_pos, by_pos_unused = {}, {}
-    for v in load_bank(slug):
+    for v in load_bank(slug, version=version):
         if rounds and round_of(slug, v.get("source")) != round_name:
             continue
         by_pos.setdefault(v["position"], {})[v["source"]] = v
@@ -953,6 +988,16 @@ def generate_test(slug, round_name=None, user=None):
     # All positions 1..n_q must have at least one eligible variant.
     if set(range(1, n_q + 1)) - set(by_pos.keys()):
         return None
+    # A test drawn from the figure bank must show at least one figure, otherwise
+    # the "with figures" choice looks broken for that draw.
+    forced_pos = None
+    if version == 2:
+        fig_positions = [
+            pos for pos in range(1, n_q + 1)
+            if any(v.get("figure") for v in by_pos.get(pos, {}).values())
+        ]
+        if fig_positions:
+            forced_pos = random.choice(fig_positions)
     questions = []
     reused = 0
     total_points = 0
@@ -962,14 +1007,31 @@ def generate_test(slug, round_name=None, user=None):
         if not pool:
             reused += 1
             pool = by_pos[pos]
-        v = random.choice(list(pool.values()))
+        v = None
+        if pos == forced_pos:
+            fig_pool = {s: x for s, x in pool.items() if x.get("figure")}
+            if not fig_pool:
+                fig_pool = {s: x for s, x in by_pos[pos].items() if x.get("figure")}
+            if fig_pool:
+                v = random.choice(list(fig_pool.values()))
+        if v is None:
+            v = random.choice(list(pool.values()))
         pts = v.get("points") or points_for(slug, round_name, pos)
         total_points += pts
+        figure = v.get("figure")
+        if figure:
+            # Stored tests must be self-contained: turn the bank-relative path into
+            # a URL the browser can fetch from /figures/...
+            figure = dict(figure)
+            src = figure.get("src")
+            if src and not src.startswith("/"):
+                figure["src"] = "/" + src
         questions.append({
             "n": pos, "source": v["source"], "question": v["question"],
             "choices": v.get("choices"), "answer": v["answer"], "solution": v.get("solution"),
             "type": v.get("type", "integer_answer" if slug == "aime" else "multiple_choice"),
             "points": pts,
+            "figure": figure,
         })
     integer = slug in ("aime", "mathcounts")
     calc = " · Calculator allowed" if slug.startswith("bpho") else " · No calculator"
@@ -983,6 +1045,7 @@ def generate_test(slug, round_name=None, user=None):
         "id": f"{slug}_rand_{n_existing + 1:02d}",
         "competition": display,
         "category": category,
+        "bank_version": version,
         "title": f"{display} — Random Mock #{n_existing + 1} · {gen_time}",
         "instructions": f"{n_q} questions · {tlim} minutes{calc}. " + instr_extra,
         "time_limit_min": tlim,
@@ -1063,6 +1126,22 @@ class Handler(BaseHTTPRequestHandler):
             ctype += "; charset=utf-8"
         self._send(f.read_bytes(), ctype)
 
+    def _serve_figure(self, path):
+        """Serve SVGs referenced by figure-bank questions (bank/v2/figures)."""
+        from urllib.parse import unquote
+        rel = unquote(path[len("/figures/"):])
+        root = BANK_V2_FIGURES.resolve()
+        target = (BANK_V2_FIGURES / rel).resolve()
+        try:
+            target.relative_to(root)
+        except ValueError:
+            self._send('{"error": "bad path"}', code=400)
+            return
+        if target.is_file():
+            self._send_file(target)
+        else:
+            self._send('{"error": "figure not found"}', code=404)
+
     def _serve_web(self, path):
         """Serve the built React app from app/web/dist; unknown paths fall back to its index.html (SPA routing)."""
         index = WEB_DIST / "index.html"
@@ -1112,11 +1191,29 @@ class Handler(BaseHTTPRequestHandler):
             self._send(json.dumps(list_tests(user)))
         elif path == "/api/banks":
             self._send(json.dumps(list_banks(user)))
+        elif path.startswith("/figures/"):
+            self._serve_figure(path)
         elif m := re.match(r"^/api/generate/([a-z0-9_]+)(?:/(.+))?$", path):
-            from urllib.parse import unquote
-            test = generate_test(m.group(1), unquote(m.group(2)) if m.group(2) else None, user)
+            from urllib.parse import unquote, parse_qs
+            slug = m.group(1)
+            rnd = unquote(m.group(2)) if m.group(2) else None
+            query = parse_qs(self.path.partition("?")[2])
+            try:
+                wanted = int((query.get("v") or ["1"])[0])
+            except ValueError:
+                wanted = 1
+            wanted = 2 if wanted == 2 else 1
+            used_version, fell_back = wanted, False
+            test = generate_test(slug, rnd, user, version=wanted)
+            if not test and wanted == 2:
+                # The figure bank is optional: if it is missing or incomplete for
+                # this competition, serve a classic test instead of failing.
+                test = generate_test(slug, rnd, user, version=1)
+                used_version, fell_back = 1, True
             if test:
-                self._send(json.dumps({"ok": True, "id": test["id"]}))
+                self._send(json.dumps({"ok": True, "id": test["id"],
+                                       "bank_version": used_version,
+                                       "fallback": fell_back}))
             else:
                 self._send('{"error": "bank incomplete for this competition"}', code=400)
         elif path == "/api/announcements":

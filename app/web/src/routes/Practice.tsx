@@ -1,5 +1,65 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { AutoMath } from '../components/AutoMath'
+import {
+  Activity,
+  ArrowLeft,
+  Asterisk,
+  Atom,
+  BarChart2,
+  Binary,
+  Blocks,
+  BookOpen,
+  Box,
+  Brackets,
+  Calculator,
+  Car,
+  Check,
+  Circle,
+  CircleDot,
+  Clock,
+  Compass,
+  Crosshair,
+  Dice5,
+  Dices,
+  Divide,
+  Dot,
+  Dumbbell,
+  Equal,
+  Flame,
+  FunctionSquare,
+  Grid3x3,
+  Hammer,
+  Hash,
+  Landmark,
+  Layers,
+  LineChart,
+  Link2,
+  ListOrdered,
+  MapPin,
+  Minus,
+  MoveRight,
+  Percent,
+  Plus,
+  Puzzle,
+  Radical,
+  Recycle,
+  Repeat,
+  RotateCcw,
+  Ruler,
+  Scale,
+  Shuffle,
+  Slash,
+  Spline,
+  Superscript,
+  Tag,
+  TrendingUp,
+  Triangle,
+  Trophy,
+  Waves,
+  X,
+  XCircle,
+  type IconComponent,
+} from '../components/icons'
 import { api, type PracticeLevelStats, type PracticeStats } from '../lib/api'
 import { useAuth } from '../lib/auth'
 import { useI18n } from '../lib/i18n'
@@ -771,6 +831,7 @@ const DRILL_CATS = [
 interface DrillDef {
   name: string
   desc: string
+  icon: IconComponent
   gen: (lv: Level) => DrQ
   cat: (typeof DRILL_CATS)[number]
   custom?: (lo: number, hi: number) => DrQ
@@ -778,56 +839,56 @@ interface DrillDef {
 }
 
 const DRILLS: Record<string, DrillDef> = {
-  addsub: { name: 'drAddSub', desc: 'drAddSubDesc', gen: genAddSub, cat: 'drCatArith', custom: cAddSub, customDef: [2, 50] },
-  mul2: { name: 'drMul2', desc: 'drMul2Desc', gen: genMul2, cat: 'drCatArith', custom: cMult, customDef: [11, 99] },
-  pemdas: { name: 'drPemdas', desc: 'drPemdasDesc', gen: genPemdas, cat: 'drCatArith', custom: cPemdas, customDef: [2, 50] },
-  neg: { name: 'drNeg', desc: 'drNegDesc', gen: genNeg, cat: 'drCatArith', custom: cNeg, customDef: [2, 50] },
-  absv: { name: 'drAbs', desc: 'drAbsDesc', gen: genAbs, cat: 'drCatArith', custom: cAbs, customDef: [2, 60] },
-  round: { name: 'drRound', desc: 'drRoundDesc', gen: genRound, cat: 'drCatArith' },
-  base: { name: 'drBase', desc: 'drBaseDesc', gen: genBase, cat: 'drCatArith' },
-  mult: { name: 'drMult', desc: 'drMultDesc', gen: genMult, cat: 'drCatArith', custom: cMult, customDef: [2, 12] },
-  div: { name: 'drDiv', desc: 'drDivDesc', gen: genDiv, cat: 'drCatArith', custom: cDiv, customDef: [2, 12] },
-  mod: { name: 'drMod', desc: 'drModDesc', gen: genMod, cat: 'drCatArith', custom: cMod, customDef: [3, 12] },
-  lastdig: { name: 'drLastDig', desc: 'drLastDigDesc', gen: genLastdig, cat: 'drCatArith' },
-  fact: { name: 'drFact', desc: 'drFactDesc', gen: genFact, cat: 'drCatArith' },
-  frac: { name: 'drFrac', desc: 'drFracDesc', gen: genFrac, cat: 'drCatFrac' },
-  fdiv: { name: 'drFdiv', desc: 'drFdivDesc', gen: genFdiv, cat: 'drCatFrac' },
-  mixed: { name: 'drMixed', desc: 'drMixedDesc', gen: genMixed, cat: 'drCatFrac' },
-  dec: { name: 'drDec', desc: 'drDecDesc', gen: genDec, cat: 'drCatFrac' },
-  fdp: { name: 'drFdp', desc: 'drFdpDesc', gen: genFdp, cat: 'drCatFrac' },
-  pct: { name: 'drPct', desc: 'drPctDesc', gen: genPct, cat: 'drCatPct' },
-  pctchg: { name: 'drPctChg', desc: 'drPctChgDesc', gen: genPctChg, cat: 'drCatPct' },
-  discount: { name: 'drDiscount', desc: 'drDiscountDesc', gen: genDiscount, cat: 'drCatPct' },
-  interest: { name: 'drInterest', desc: 'drInterestDesc', gen: genInterest, cat: 'drCatPct' },
-  ratio: { name: 'drRatio', desc: 'drRatioDesc', gen: genRatio, cat: 'drCatPct' },
-  pow: { name: 'drPow', desc: 'drPowDesc', gen: genPow, cat: 'drCatPow', custom: cPow, customDef: [11, 99] },
-  cbrt: { name: 'drCbrt', desc: 'drCbrtDesc', gen: genCbrt, cat: 'drCatPow' },
-  nexp: { name: 'drNexp', desc: 'drNexpDesc', gen: genNexp, cat: 'drCatPow' },
-  sci: { name: 'drSci', desc: 'drSciDesc', gen: genSci, cat: 'drCatPow' },
-  log: { name: 'drLog', desc: 'drLogDesc', gen: genLog, cat: 'drCatPow' },
-  eq: { name: 'drEq', desc: 'drEqDesc', gen: genEq, cat: 'drCatAlg' },
-  parens: { name: 'drParens', desc: 'drParensDesc', gen: genParens, cat: 'drCatAlg' },
-  slope: { name: 'drSlope', desc: 'drSlopeDesc', gen: genSlope, cat: 'drCatAlg' },
-  line: { name: 'drLine', desc: 'drLineDesc', gen: genLine, cat: 'drCatAlg' },
-  distmid: { name: 'drDistmid', desc: 'drDistmidDesc', gen: genDistmid, cat: 'drCatAlg' },
-  system: { name: 'drSystem', desc: 'drSystemDesc', gen: genSystem, cat: 'drCatAlg' },
-  quad: { name: 'drQuad', desc: 'drQuadDesc', gen: genQuad, cat: 'drCatAlg' },
-  disc: { name: 'drDisc', desc: 'drDiscDesc', gen: genDisc, cat: 'drCatAlg' },
-  factor: { name: 'drFactor', desc: 'drFactorDesc', gen: genFactor, cat: 'drCatAlg' },
-  feval: { name: 'drFeval', desc: 'drFevalDesc', gen: genFeval, cat: 'drCatAlg' },
-  gcdlcm: { name: 'drGcdLcm', desc: 'drGcdLcmDesc', gen: genGcdLcm, cat: 'drCatNum', custom: cGcdLcm, customDef: [2, 30] },
-  pfactor: { name: 'drPfactor', desc: 'drPfactorDesc', gen: genPfactor, cat: 'drCatNum' },
-  perm: { name: 'drPerm', desc: 'drPermDesc', gen: genPerm, cat: 'drCatProb' },
-  comb: { name: 'drComb', desc: 'drCombDesc', gen: genComb, cat: 'drCatProb' },
-  prob: { name: 'drProb', desc: 'drProbDesc', gen: genProb, cat: 'drCatProb' },
-  dice: { name: 'drDice', desc: 'drDiceDesc', gen: genDice, cat: 'drCatProb' },
-  pyth: { name: 'drPyth', desc: 'drPythDesc', gen: genPyth, cat: 'drCatGeo' },
-  tri: { name: 'drTri', desc: 'drTriDesc', gen: genTri, cat: 'drCatGeo' },
-  circle: { name: 'drCircle', desc: 'drCircleDesc', gen: genCircle, cat: 'drCatGeo' },
-  vol: { name: 'drVol', desc: 'drVolDesc', gen: genVol, cat: 'drCatGeo' },
-  drt: { name: 'drDrt', desc: 'drDrtDesc', gen: genDrt, cat: 'drCatWord' },
-  avg: { name: 'drAvg', desc: 'drAvgDesc', gen: genAvg, cat: 'drCatWord', custom: cAvg, customDef: [5, 100] },
-  aseq: { name: 'drAseq', desc: 'drAseqDesc', gen: genAseq, cat: 'drCatWord', custom: cAseq, customDef: [1, 50] },
+  addsub: { name: 'drAddSub', desc: 'drAddSubDesc', icon: Plus, gen: genAddSub, cat: 'drCatArith', custom: cAddSub, customDef: [2, 50] },
+  mul2: { name: 'drMul2', desc: 'drMul2Desc', icon: Asterisk, gen: genMul2, cat: 'drCatArith', custom: cMult, customDef: [11, 99] },
+  pemdas: { name: 'drPemdas', desc: 'drPemdasDesc', icon: Calculator, gen: genPemdas, cat: 'drCatArith', custom: cPemdas, customDef: [2, 50] },
+  neg: { name: 'drNeg', desc: 'drNegDesc', icon: Minus, gen: genNeg, cat: 'drCatArith', custom: cNeg, customDef: [2, 50] },
+  absv: { name: 'drAbs', desc: 'drAbsDesc', icon: Ruler, gen: genAbs, cat: 'drCatArith', custom: cAbs, customDef: [2, 60] },
+  round: { name: 'drRound', desc: 'drRoundDesc', icon: Crosshair, gen: genRound, cat: 'drCatArith' },
+  base: { name: 'drBase', desc: 'drBaseDesc', icon: Binary, gen: genBase, cat: 'drCatArith' },
+  mult: { name: 'drMult', desc: 'drMultDesc', icon: X, gen: genMult, cat: 'drCatArith', custom: cMult, customDef: [2, 12] },
+  div: { name: 'drDiv', desc: 'drDivDesc', icon: Divide, gen: genDiv, cat: 'drCatArith', custom: cDiv, customDef: [2, 12] },
+  mod: { name: 'drMod', desc: 'drModDesc', icon: Recycle, gen: genMod, cat: 'drCatArith', custom: cMod, customDef: [3, 12] },
+  lastdig: { name: 'drLastDig', desc: 'drLastDigDesc', icon: Hash, gen: genLastdig, cat: 'drCatArith' },
+  fact: { name: 'drFact', desc: 'drFactDesc', icon: ListOrdered, gen: genFact, cat: 'drCatArith' },
+  frac: { name: 'drFrac', desc: 'drFracDesc', icon: Slash, gen: genFrac, cat: 'drCatFrac' },
+  fdiv: { name: 'drFdiv', desc: 'drFdivDesc', icon: Divide, gen: genFdiv, cat: 'drCatFrac' },
+  mixed: { name: 'drMixed', desc: 'drMixedDesc', icon: Layers, gen: genMixed, cat: 'drCatFrac' },
+  dec: { name: 'drDec', desc: 'drDecDesc', icon: Dot, gen: genDec, cat: 'drCatFrac' },
+  fdp: { name: 'drFdp', desc: 'drFdpDesc', icon: Repeat, gen: genFdp, cat: 'drCatFrac' },
+  pct: { name: 'drPct', desc: 'drPctDesc', icon: Percent, gen: genPct, cat: 'drCatPct' },
+  pctchg: { name: 'drPctChg', desc: 'drPctChgDesc', icon: Activity, gen: genPctChg, cat: 'drCatPct' },
+  discount: { name: 'drDiscount', desc: 'drDiscountDesc', icon: Tag, gen: genDiscount, cat: 'drCatPct' },
+  interest: { name: 'drInterest', desc: 'drInterestDesc', icon: Landmark, gen: genInterest, cat: 'drCatPct' },
+  ratio: { name: 'drRatio', desc: 'drRatioDesc', icon: Scale, gen: genRatio, cat: 'drCatPct' },
+  pow: { name: 'drPow', desc: 'drPowDesc', icon: Superscript, gen: genPow, cat: 'drCatPow', custom: cPow, customDef: [11, 99] },
+  cbrt: { name: 'drCbrt', desc: 'drCbrtDesc', icon: Radical, gen: genCbrt, cat: 'drCatPow' },
+  nexp: { name: 'drNexp', desc: 'drNexpDesc', icon: RotateCcw, gen: genNexp, cat: 'drCatPow' },
+  sci: { name: 'drSci', desc: 'drSciDesc', icon: Atom, gen: genSci, cat: 'drCatPow' },
+  log: { name: 'drLog', desc: 'drLogDesc', icon: LineChart, gen: genLog, cat: 'drCatPow' },
+  eq: { name: 'drEq', desc: 'drEqDesc', icon: Equal, gen: genEq, cat: 'drCatAlg' },
+  parens: { name: 'drParens', desc: 'drParensDesc', icon: Brackets, gen: genParens, cat: 'drCatAlg' },
+  slope: { name: 'drSlope', desc: 'drSlopeDesc', icon: TrendingUp, gen: genSlope, cat: 'drCatAlg' },
+  line: { name: 'drLine', desc: 'drLineDesc', icon: Spline, gen: genLine, cat: 'drCatAlg' },
+  distmid: { name: 'drDistmid', desc: 'drDistmidDesc', icon: MapPin, gen: genDistmid, cat: 'drCatAlg' },
+  system: { name: 'drSystem', desc: 'drSystemDesc', icon: Blocks, gen: genSystem, cat: 'drCatAlg' },
+  quad: { name: 'drQuad', desc: 'drQuadDesc', icon: Waves, gen: genQuad, cat: 'drCatAlg' },
+  disc: { name: 'drDisc', desc: 'drDiscDesc', icon: CircleDot, gen: genDisc, cat: 'drCatAlg' },
+  factor: { name: 'drFactor', desc: 'drFactorDesc', icon: Puzzle, gen: genFactor, cat: 'drCatAlg' },
+  feval: { name: 'drFeval', desc: 'drFevalDesc', icon: FunctionSquare, gen: genFeval, cat: 'drCatAlg' },
+  gcdlcm: { name: 'drGcdLcm', desc: 'drGcdLcmDesc', icon: Link2, gen: genGcdLcm, cat: 'drCatNum', custom: cGcdLcm, customDef: [2, 30] },
+  pfactor: { name: 'drPfactor', desc: 'drPfactorDesc', icon: Hammer, gen: genPfactor, cat: 'drCatNum' },
+  perm: { name: 'drPerm', desc: 'drPermDesc', icon: Shuffle, gen: genPerm, cat: 'drCatProb' },
+  comb: { name: 'drComb', desc: 'drCombDesc', icon: Grid3x3, gen: genComb, cat: 'drCatProb' },
+  prob: { name: 'drProb', desc: 'drProbDesc', icon: Dices, gen: genProb, cat: 'drCatProb' },
+  dice: { name: 'drDice', desc: 'drDiceDesc', icon: Dice5, gen: genDice, cat: 'drCatProb' },
+  pyth: { name: 'drPyth', desc: 'drPythDesc', icon: Triangle, gen: genPyth, cat: 'drCatGeo' },
+  tri: { name: 'drTri', desc: 'drTriDesc', icon: Compass, gen: genTri, cat: 'drCatGeo' },
+  circle: { name: 'drCircle', desc: 'drCircleDesc', icon: Circle, gen: genCircle, cat: 'drCatGeo' },
+  vol: { name: 'drVol', desc: 'drVolDesc', icon: Box, gen: genVol, cat: 'drCatGeo' },
+  drt: { name: 'drDrt', desc: 'drDrtDesc', icon: Car, gen: genDrt, cat: 'drCatWord' },
+  avg: { name: 'drAvg', desc: 'drAvgDesc', icon: BarChart2, gen: genAvg, cat: 'drCatWord', custom: cAvg, customDef: [5, 100] },
+  aseq: { name: 'drAseq', desc: 'drAseqDesc', icon: MoveRight, gen: genAseq, cat: 'drCatWord', custom: cAseq, customDef: [1, 50] },
 }
 
 function drMatch(given: string, rec: DrQ): boolean {
@@ -943,14 +1004,16 @@ function Runner({
 
   const q = qs[i]
   const last = i + 1 >= N_Q
+  const DrillIc = DRILLS[drill].icon
   return (
     <section className="card dr-run">
       <div className="dr-meta">
         <span>
-          {t(DRILLS[drill].name)} · {level === 'custom' && range ? `${range[0]}–${range[1]}` : t(level)}
+          <DrillIc size={14} aria-hidden="true" /> {t(DRILLS[drill].name)} · {level === 'custom' && range ? `${range[0]}–${range[1]}` : t(level)}
         </span>
         <span>
-          {i + 1} / {N_Q} · ✓ {correct} · {fmtTime(secs)}
+          {i + 1} / {N_Q} · <Check size={13} aria-hidden="true" /> {correct} ·{' '}
+          <Clock size={13} aria-hidden="true" /> {fmtTime(secs)}
         </span>
       </div>
       <div className="dr-q">
@@ -959,10 +1022,14 @@ function Runner({
       <div className="dr-fb" aria-live="polite">
         {fb &&
           (fb.ok ? (
-            <span className="dr-ok">{t('drCorrect')}</span>
+            <span className="dr-ok">
+              <Check size={14} aria-hidden="true" /> {t('drCorrect')}
+            </span>
           ) : (
             <>
-              <span className="dr-bad">{t('drWrong', fb.ans)}</span>{' '}
+              <span className="dr-bad">
+                <XCircle size={14} aria-hidden="true" /> {t('drWrong', fb.ans)}
+              </span>{' '}
               <button
                 ref={nextRef}
                 type="button"
@@ -1090,12 +1157,16 @@ export function Practice() {
 
   if (result) {
     const { drill, level, range } = result
+    const DrillIc = DRILLS[drill].icon
+    const Mood = result.pct >= 80 ? Trophy : result.pct >= 50 ? Dumbbell : BookOpen
     return (
       <section className="card dr-summary">
         <h3>
-          {t(DRILLS[drill].name)} · {level === 'custom' && range ? `${range[0]}–${range[1]}` : t(level)}
+          <DrillIc size={16} aria-hidden="true" /> {t(DRILLS[drill].name)} · {level === 'custom' && range ? `${range[0]}–${range[1]}` : t(level)}
         </h3>
-        <div className="dr-emoji">{result.pct >= 80 ? '🎉' : result.pct >= 50 ? '💪' : '📚'}</div>
+        <div className={`dr-emoji${result.pct >= 50 ? ' good' : ''}`}>
+          <Mood size={44} aria-hidden="true" />
+        </div>
         <div className="dr-scoreline">
           {t('drScore')}: <b>
             {result.correct}/{result.total}
@@ -1103,17 +1174,22 @@ export function Practice() {
           ({result.pct}%)
         </div>
         <p className="meta">
-          {t('drTime')}: {fmtTime(Math.round(result.time_s))} · {t('drBest')}: {result.rec.best_pct}% · ⏱{' '}
-          {result.rec.best_time != null ? fmtTime(Math.round(result.rec.best_time)) : '—'} · {t('drStreak')}{' '}
-          {result.rec.streak}
+          {t('drTime')}: {fmtTime(Math.round(result.time_s))} · {t('drBest')}: {result.rec.best_pct}% ·{' '}
+          <Clock size={13} aria-hidden="true" />{' '}
+          {result.rec.best_time != null ? fmtTime(Math.round(result.rec.best_time)) : '—'} ·{' '}
+          <Flame size={13} aria-hidden="true" /> {result.rec.streak}
         </p>
-        {result.newBest && <p className="dr-newbest">{t('drNewBest')}</p>}
+        {result.newBest && (
+          <p className="dr-newbest">
+            <Trophy size={14} aria-hidden="true" /> {t('drNewBest')}
+          </p>
+        )}
         <div className="dr-actions">
           <button type="button" className="btn" onClick={() => { setResult(null); setRun({ drill, level, range }) }}>
-            {t('drAgain')}
+            <RotateCcw size={14} aria-hidden="true" /> {t('drAgain')}
           </button>
           <button type="button" className="btn ghost" onClick={() => setResult(null)}>
-            {t('drBack')}
+            <ArrowLeft size={14} aria-hidden="true" /> {t('drBack')}
           </button>
         </div>
       </section>
@@ -1136,9 +1212,12 @@ export function Practice() {
               <div className="gen-grid">
                 {keys.map((key) => {
                   const d = DRILLS[key]
+                  const DIcon = d.icon
                   return (
                     <div key={key} data-drill={key} className="card compact">
-                      <h3>{t(d.name)}</h3>
+                      <h3>
+                        <DIcon size={15} aria-hidden="true" /> {t(d.name)}
+                      </h3>
                       <p className="muted">{t(d.desc)}</p>
                       <div className="dr-levels">
                         {LEVELS.map((lv) => {

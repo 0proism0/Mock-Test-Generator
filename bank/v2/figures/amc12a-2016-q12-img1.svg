@@ -1,0 +1,24 @@
+<svg width="481" height="528" viewBox="-12 -12 481 528" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect x="0" y="0" width="457" height="504" fill="white"/>
+  <g stroke="black" stroke-width="3" fill="none">
+    <path d="M 42 460 L 405 460 L 300 45 Z"/>
+    <path d="M 42 460 L 360 282"/>
+    <path d="M 405 460 L 162 270"/>
+  </g>
+  <g fill="black">
+    <circle cx="300" cy="45" r="2.5"/>
+    <circle cx="405" cy="460" r="2.5"/>
+    <circle cx="42" cy="460" r="2.5"/>
+    <circle cx="360" cy="282" r="2.5"/>
+    <circle cx="162" cy="270" r="2.5"/>
+    <circle cx="252" cy="340" r="2.5"/>
+  </g>
+  <g font-family="Times New Roman, serif" font-size="36" font-style="italic" fill="black" text-anchor="middle">
+    <text x="20" y="498">A</text>
+    <text x="430" y="498">B</text>
+    <text x="298" y="30">C</text>
+    <text x="385" y="275">D</text>
+    <text x="140" y="260">E</text>
+    <text x="255" y="325">F</text>
+  </g>
+</svg>

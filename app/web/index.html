@@ -5,6 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MockTest Maker</title>
+    <script>
+      // Pre-paint theme so the first frame is already dark/light (no flash).
+      // Keep in sync with app/web/src/lib/theme.ts — this runs before any bundle loads.
+      ;(function () {
+        try {
+          var pref = localStorage.getItem('mt_theme')
+          var theme =
+            pref === 'light' || pref === 'dark'
+              ? pref
+              : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          document.documentElement.dataset.theme = theme
+          document.documentElement.style.colorScheme = theme
+        } catch (e) {
+          /* storage blocked — the app's ThemeProvider will sort it out */
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,0 +1,18 @@
+<svg width="617" height="670" viewBox="0 0 617 670" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 87.43 529.21 L 555.88 403.69 L 212.95 60.76 Z" stroke="#888888" stroke-width="2" fill="none"/>
+  <path d="M 252.27 609.25 L 542.71 220.79 L 61.11 163.70 Z" stroke="#888888" stroke-width="2" fill="none"/>
+  <path d="M 87.43 529.21 L 252.27 609.25 L 555.88 403.69 L 542.71 220.79 L 212.95 60.76 L 61.11 163.70 Z" stroke="black" stroke-width="2" fill="none"/>
+  <circle cx="285.42" cy="331.22" r="3" fill="black"/>
+  <circle cx="87.43" cy="529.21" r="3" fill="black"/>
+  <circle cx="555.88" cy="403.69" r="3" fill="black"/>
+  <circle cx="212.95" cy="60.76" r="3" fill="black"/>
+  <circle cx="252.27" cy="609.25" r="3" fill="black"/>
+  <circle cx="542.71" cy="220.79" r="3" fill="black"/>
+  <circle cx="61.11" cy="163.70" r="3" fill="black"/>
+  <text font-family="serif" font-size="24" fill="black" text-anchor="middle" font-style="italic" x="71.8" y="552.8">A</text>
+  <text font-family="serif" font-size="24" fill="black" text-anchor="middle" font-style="italic" x="575.2" y="416.9">B</text>
+  <text font-family="serif" font-size="24" fill="black" text-anchor="middle" font-style="italic" x="207.8" y="49.5">C</text>
+  <text font-family="serif" font-size="24" fill="black" text-anchor="middle" font-style="italic" x="249.7" y="639.1">D</text>
+  <text font-family="serif" font-size="24" fill="black" text-anchor="middle" font-style="italic" x="561.1" y="220.9">E</text>
+  <text font-family="serif" font-size="24" fill="black" text-anchor="middle" font-style="italic" x="45.1" y="159.5">F</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg width="670" height="350" viewBox="-12 -12 670 350" xmlns="http://www.w3.org/2000/svg" style="background-color: white;"><rect width="100%" height="100%" fill="white"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="black"/>
+    </marker>
+  </defs>
+
+  <!-- Main Polygon Shape -->
+  <path d="M 3,3 L 593,3 L 593,70 L 667,70 L 667,337 L 65,337 L 65,270 L 3,270 Z" fill="none" stroke="black" stroke-width="2"/>
+
+  <!-- Dashed Lines -->
+  <!-- Line 1: Top-Left to Bottom-Right -->
+  <line x1="20" y1="20" x2="645" y2="320" stroke="black" stroke-width="2" stroke-dasharray="12,8" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  
+  <!-- Line 2: Top-Right to Bottom-Left -->
+  <line x1="575" y1="75" x2="90" y2="265" stroke="black" stroke-width="2" stroke-dasharray="12,8" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+  <!-- Labels -->
+  <text x="225" y="100" font-family="serif" font-size="32" fill="black">8</text>
+  <text x="575" y="50" font-family="serif" font-size="32" fill="black" text-anchor="middle">1</text>
+  <text x="635" y="110" font-family="serif" font-size="32" fill="black" text-anchor="middle">1</text>
+  
+  <!-- Complex Label: 4√2 -->
+  <g transform="translate(200, 260)">
+    <text x="0" y="0" font-family="serif" font-size="32" fill="black">4</text>
+    <!-- Sqrt Symbol -->
+    <path d="M 25,-12 L 32,5 L 49,-28 L 70,-28" fill="none" stroke="black" stroke-width="2"/>
+    <text x="50" y="0" font-family="serif" font-size="32" fill="black">2</text>
+  </g>
+</svg>

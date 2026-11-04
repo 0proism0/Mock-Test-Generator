@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Check, Clock, Flag, Swords } from '../components/icons'
+import { Check, Clock, Flag, Swords, Trophy } from '../components/icons'
 import { api, type Bank, type Friend, type PkDuel, type PkGame, type PkRace } from '../lib/api'
 import { useAuth } from '../lib/auth'
 import { useI18n } from '../lib/i18n'
@@ -15,7 +15,7 @@ function fmtDur(s: number | null | undefined): string {
 
 /** Legacy "PK" tab: 1v1 duels + multiplayer races, polling active games every 5s. */
 export function Pk() {
-  const { t, tip } = useI18n()
+  const { t } = useI18n()
   const { user } = useAuth()
   const navigate = useNavigate()
 
@@ -157,7 +157,9 @@ export function Pk() {
     if (g.status === 'done') {
       const w =
         g.winner === 'me' ? (
-          <span className="pk-won">{t('pkWon')}</span>
+          <span className="pk-won">
+            <Trophy size={14} aria-hidden="true" /> {t('pkWon')}
+          </span>
         ) : g.winner === 'them' ? (
           <span className="pk-lost">{t('pkLost')}</span>
         ) : (
@@ -206,7 +208,7 @@ export function Pk() {
     } else if (g.status === 'active') {
       const meDone = standings.find((s) => s.user === user && s.done)
       btn = meDone ? (
-        <Check size={16} color="#237a23" />
+        <Check size={16} style={{ color: 'var(--success)' }} />
       ) : (
         <button className="btn sm" type="button" onClick={() => navigate(`/test/${g.test_id}`)}>
           {t('pkTakeTest')}
@@ -230,7 +232,7 @@ export function Pk() {
           </span>
           <span>{btn}</span>
         </div>
-        <div style={{ fontSize: 13, color: '#666', margin: '4px 0' }}>
+        <div style={{ fontSize: 13, color: 'var(--ink-2)', margin: '4px 0' }}>
           {t('pkJoined')}: {g.accepted.length}/{g.players.length} — {g.accepted.join(', ')}
           {g.invited.length ? (
             <>
@@ -312,11 +314,11 @@ export function Pk() {
       <div className="pk-mode-tabs">
         <div className={`pk-mode-tab${mode === 'duel' ? ' on' : ''}`} onClick={() => setMode('duel')}>
           <Swords size={15} />
-          {tip('pkModeDuel')}
+          {t('pkModeDuel')}
         </div>
         <div className={`pk-mode-tab${mode === 'race' ? ' on' : ''}`} onClick={() => setMode('race')}>
           <Flag size={15} />
-          {tip('pkModeRace')}
+          {t('pkModeRace')}
         </div>
       </div>
 
@@ -344,14 +346,14 @@ export function Pk() {
             ))}
           </select>
           <button className="btn" type="button" disabled={!friends.length} onClick={() => void challenge()}>
-            {t('pkSend')}
+            <Swords size={14} aria-hidden="true" /> {t('pkSend')}
           </button>
         </div>
       )}
 
       {mode === 'race' && (
         <>
-          <div style={{ fontSize: 13, color: '#666', marginBottom: 4 }}>{t('pkPickFriends')}</div>
+          <div style={{ fontSize: 13, color: 'var(--ink-2)', marginBottom: 4 }}>{t('pkPickFriends')}</div>
           <div className="race-friends">
             {friends.length ? (
               friends.map((f) => (

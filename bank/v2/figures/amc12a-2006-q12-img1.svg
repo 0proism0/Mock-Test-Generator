@@ -1,0 +1,34 @@
+<svg width="321" height="688" viewBox="-12 -12 321 688" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect x="0" y="0" width="297" height="664" fill="white"/>
+  <g stroke="black" stroke-width="2" fill="none">
+    <circle cx="114" cy="111" r="105"/>
+    <circle cx="114" cy="111" r="103"/>
+    <circle cx="114" cy="311" r="105"/>
+    <circle cx="114" cy="311" r="103"/>
+    <circle cx="114" cy="531" r="32"/>
+    <circle cx="114" cy="531" r="28"/>
+    <circle cx="114" cy="581" r="24"/>
+    <circle cx="114" cy="581" r="20"/>
+    <circle cx="114" cy="621" r="18"/>
+    <circle cx="114" cy="621" r="14"/>
+    <circle cx="114" cy="646" r="14"/>
+    <circle cx="114" cy="646" r="10"/>
+    <line x1="245" y1="2" x2="245" y2="219"/>
+    <line x1="245" y1="629" x2="245" y2="662"/>
+  </g>
+  <g fill="black" stroke="none">
+    <circle cx="114" cy="443" r="1.5"/>
+    <circle cx="114" cy="456" r="1.5"/>
+    <circle cx="114" cy="469" r="1.5"/>
+    <circle cx="114" cy="557" r="1.5"/>
+    <circle cx="114" cy="567" r="1.5"/>
+    <circle cx="114" cy="597" r="1.5"/>
+    <circle cx="114" cy="607" r="1.5"/>
+    <circle cx="114" cy="632" r="1.5"/>
+    <circle cx="114" cy="642" r="1.5"/>
+  </g>
+  <g font-family="serif" font-size="32" fill="black" stroke="none">
+    <text x="255" y="122">20</text>
+    <text x="255" y="659">3</text>
+  </g>
+</svg>

@@ -3,7 +3,6 @@ import {
   I18nContext,
   readStoredLang,
   storeLang,
-  stripLeadingEmoji,
   translate,
   type I18nValue,
   type Lang,
@@ -22,8 +21,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const t = useCallback((key: string, ...args: (string | number)[]) => translate(lang, key, ...args), [lang])
-  const tip = useCallback((key: string) => stripLeadingEmoji(t(key)), [t])
 
-  const value = useMemo<I18nValue>(() => ({ lang, setLang, t, tip }), [lang, setLang, t, tip])
+  const value = useMemo<I18nValue>(() => ({ lang, setLang, t }), [lang, setLang, t])
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>
 }

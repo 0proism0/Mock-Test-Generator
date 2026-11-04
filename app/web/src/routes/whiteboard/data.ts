@@ -1,4 +1,26 @@
-export const WB_COLORS: string[] = ['#1c1e21', '#e03131', '#2f9e44', '#2b6cb0', '#e8890c', '#9c36b5'];
+/**
+ * The default "black" pen. This literal hex is what gets persisted in localStorage for
+ * every ink stroke, so it must never change — it is treated as *theme ink* and resolved
+ * to the live `--ink` token only while painting (see wbPaintColor).
+ */
+export const WB_INK = '#1c1e21'
+
+/** Read a theme token at draw time: a <canvas> can't resolve `var(--x)` itself. */
+export function cssVar(name: string, fallback: string): string {
+  const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim()
+  return v || fallback
+}
+
+/**
+ * Stored stroke colour → the colour to actually paint. Ink strokes keep `#1c1e21` on disk
+ * and follow the theme on screen, so saved drawings stay readable in both modes and
+ * switching back to light is lossless.
+ */
+export function wbPaintColor(stored: string): string {
+  return stored === WB_INK ? cssVar('--ink', WB_INK) : stored
+}
+
+export const WB_COLORS: string[] = [WB_INK, '#e03131', '#2f9e44', '#2b6cb0', '#e8890c', '#9c36b5'];
 
 export interface WbCategory {
   id: string

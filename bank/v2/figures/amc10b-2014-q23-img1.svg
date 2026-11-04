@@ -1,0 +1,40 @@
+<svg width="504" height="377" viewBox="0 0 504 377" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for the sphere -->
+    <radialGradient id="sphereGrad" cx="65%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="15%" stop-color="#cccccc"/>
+      <stop offset="40%" stop-color="#666666"/>
+      <stop offset="80%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+
+    <!-- Gradients for the cone to simulate lighting and depth -->
+    <linearGradient id="coneBackGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4d4d4d"/>
+      <stop offset="100%" stop-color="#999999"/>
+    </linearGradient>
+    
+    <linearGradient id="coneFrontGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b3b3b3"/>
+      <stop offset="100%" stop-color="#e6e6e6"/>
+    </linearGradient>
+
+    <linearGradient id="baseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f2f2f2"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Cone Back Surface -->
+  <path d="M 150,10 L 10,330 A 242,45 0 0,1 494,330 L 354,10 Z" fill="url(#coneBackGrad)" stroke="none"/>
+
+  <!-- Base Ellipse -->
+  <ellipse cx="252" cy="330" rx="242" ry="45" fill="url(#baseGrad)" stroke="none"/>
+
+  <!-- Sphere -->
+  <circle cx="252" cy="175" r="155" fill="url(#sphereGrad)" stroke="none"/>
+
+  <!-- Cone Front Surface (Semi-transparent) -->
+  <path d="M 150,10 L 10,330 A 242,45 0 0,0 494,330 L 354,10 Z" fill="url(#coneFrontGrad)" opacity="0.4" stroke="none"/>
+</svg>

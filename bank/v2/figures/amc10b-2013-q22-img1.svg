@@ -1,0 +1,35 @@
+<svg width="504" height="518" viewBox="-12 -12 504 518" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="3" fill="none">
+    <path d="M 168 46 L 336 46"/>
+    <path d="M 336 46 L 456 166"/>
+    <path d="M 456 166 L 456 336"/>
+    <path d="M 456 336 L 336 456"/>
+    <path d="M 336 456 L 168 456"/>
+    <path d="M 168 456 L 48 336"/>
+    <path d="M 48 336 L 48 166"/>
+    <path d="M 48 166 L 168 46"/>
+  </g>
+  <g fill="black">
+    <circle cx="168" cy="46" r="8"/>
+    <circle cx="336" cy="46" r="8"/>
+    <circle cx="456" cy="166" r="8"/>
+    <circle cx="456" cy="336" r="8"/>
+    <circle cx="336" cy="456" r="8"/>
+    <circle cx="168" cy="456" r="8"/>
+    <circle cx="48" cy="336" r="8"/>
+    <circle cx="48" cy="166" r="8"/>
+    <circle cx="252" cy="250" r="8"/>
+  </g>
+  <g font-family="serif" font-size="36" fill="black">
+    <text x="168" y="32" text-anchor="middle">A</text>
+    <text x="336" y="32" text-anchor="start">B</text>
+    <text x="466" y="166" text-anchor="start">C</text>
+    <text x="466" y="356" text-anchor="start">D</text>
+    <text x="336" y="494" text-anchor="start">E</text>
+    <text x="168" y="494" text-anchor="end">F</text>
+    <text x="32" y="356" text-anchor="end">G</text>
+    <text x="32" y="166" text-anchor="end">H</text>
+    <text x="262" y="285" text-anchor="start">J</text>
+  </g>
+</svg>

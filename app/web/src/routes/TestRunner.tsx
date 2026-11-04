@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AutoMath } from '../components/AutoMath'
+import { AlertTriangle, Check, Clock } from '../components/icons'
 import { api } from '../lib/api'
 import { useI18n } from '../lib/i18n'
 
@@ -15,6 +16,15 @@ interface Question {
   solution_zh?: string
   type?: string
   points?: number
+  /** Figure-bank questions carry an SVG rendered next to the prompt. */
+  figure?: {
+    src?: string
+    alt?: string
+    width?: number
+    height?: number
+    kind?: string
+    placement?: string
+  }
 }
 
 interface TestData {
@@ -23,6 +33,8 @@ interface TestData {
   competition: string
   instructions: string
   time_limit_min: number
+  /** 1 = classic bank, 2 = figure bank. Absent on legacy papers. */
+  bank_version?: number
   questions: Question[]
 }
 
@@ -101,6 +113,17 @@ function QuestionCard({ q, total, value, submitted, revealed, onPick, onType, on
         </span>
       </div>
       <AutoMath html={questionHtml} className="qtext" />
+      {q.figure?.src && (
+        <figure className="qfig">
+          <img
+            src={q.figure.src}
+            alt={q.figure.alt ?? ''}
+            width={q.figure.width}
+            height={q.figure.height}
+            loading="lazy"
+          />
+        </figure>
+      )}
       {q.type === 'proof' && !showSolution && (
         <button className="btn secondary" type="button" onClick={() => onReveal(q.n)}>
           {t('showSolution')}
@@ -148,13 +171,16 @@ export function TestRunner() {
   const { id = '' } = useParams()
   const { t } = useI18n()
   const navigate = useNavigate()
+  const location = useLocation()
+  // Set by NewTest when the server could not use the figure bank.
+  const fellBack = Boolean((location.state as { fallback?: boolean } | null)?.fallback)
 
   const [test, setTest] = useState<TestData | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
   const [answers, setAnswers] = useState<Record<number, string>>({})
   const [submitted, setSubmitted] = useState(false)
   const [result, setResult] = useState<{ score: number; total: number } | null>(null)
-  const [savedNote, setSavedNote] = useState<string | null>(null)
+  const [savedNote, setSavedNote] = useState<{ tone: 'ok' | 'err' | 'wait'; text: string } | null>(null)
   const [revealed, setRevealed] = useState<Set<number>>(new Set())
   const [left, setLeft] = useState(0)
 
@@ -193,7 +219,7 @@ export function TestRunner() {
       if (grade(q, answers[q.n])) score += pts
     }
     setResult({ score, total: totalPoints })
-    setSavedNote(t('saving'))
+    setSavedNote({ tone: 'wait', text: t('saving') })
     const duration_s = Math.round((Date.now() - startedAtRef.current) / 1000)
     api
       .submitResult({
@@ -205,8 +231,8 @@ export function TestRunner() {
         answered: Object.keys(answers).length,
         duration_s,
       })
-      .then((d) => setSavedNote(d.guest ? t('savedGuest') : t('savedOk')))
-      .catch(() => setSavedNote(t('savedFail')))
+      .then((d) => setSavedNote({ tone: 'ok', text: d.guest ? t('savedGuest') : t('savedOk') }))
+      .catch(() => setSavedNote({ tone: 'err', text: t('savedFail') }))
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -271,17 +297,40 @@ export function TestRunner() {
 
   return (
     <>
+      {fellBack && (
+        <p className="status" style={{ marginBottom: 12 }}>
+          {t('v2Fallback')}
+        </p>
+      )}
       <div className="sticky-bar">
         <div>
           <div style={{ fontWeight: 700 }}>{test.title}</div>
+          {test.bank_version === 2 && (
+            <div className="muted" style={{ fontSize: 12 }}>
+              {t('bankV2')}
+            </div>
+          )}
           <div className="progress">
             {answeredCount} / {total} {t('answered')}
           </div>
         </div>
         <div style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
           {scoreText && <span className="score">{scoreText}</span>}
-          {savedNote && <span className="saved-note">{savedNote}</span>}
-          <span className={left < 300 && !submitted ? 'timer low' : 'timer'}>⏱ {fmtTime(left)}</span>
+          {savedNote && (
+            <span className={`saved-note ${savedNote.tone}`}>
+              {savedNote.tone === 'ok' ? (
+                <Check size={13} aria-hidden="true" />
+              ) : savedNote.tone === 'err' ? (
+                <AlertTriangle size={13} aria-hidden="true" />
+              ) : (
+                <Clock size={13} aria-hidden="true" />
+              )}
+              {savedNote.text}
+            </span>
+          )}
+          <span className={left < 300 && !submitted ? 'timer low' : 'timer'}>
+            <Clock size={14} aria-hidden="true" /> {fmtTime(left)}
+          </span>
           <button className="btn secondary" type="button" onClick={() => navigate('/tests')}>
             {t('exit')}
           </button>
@@ -290,7 +339,7 @@ export function TestRunner() {
           </button>
         </div>
       </div>
-      <div className="card" style={{ fontSize: 13.5, color: '#555' }}>
+      <div className="card" style={{ fontSize: 13.5, color: 'var(--ink-2)' }}>
         {test.instructions}
       </div>
       {test.questions.map((q) => (

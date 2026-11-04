@@ -1,0 +1,88 @@
+<svg width="625" height="894" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 625 894" style="background-color: white;"><rect width="100%" height="100%" fill="white"/>
+  <defs>
+    <style>
+      .label { font-family: serif; font-size: 24px; fill: black; }
+      .sub { font-size: 16px; baseline-shift: sub; }
+      .circle { fill: none; stroke: black; stroke-width: 3; }
+      .dot { fill: black; stroke: none; }
+    </style>
+  </defs>
+
+  <!-- Main Circles -->
+  <circle cx="315" cy="175" r="175" class="circle"/>
+  <circle cx="500" cy="355" r="85" class="circle"/>
+  <circle cx="265" cy="605" r="265" class="circle"/>
+
+  <!-- Labels -->
+  <text x="315" y="175" class="label" text-anchor="middle" dy=".3em">A</text>
+  <text x="500" y="355" class="label" text-anchor="middle" dy=".3em">B</text>
+  <text x="265" y="605" class="label" text-anchor="middle" dy=".3em">C</text>
+
+  <!-- Dots on the inner circle -->
+  <!-- Calculated positions based on the 45-degree sector between B and C -->
+  <!-- Center of inner circle is (500, 355) -->
+  <!-- Radius approx 85 -->
+  <!-- Angle -22.5 degrees (top-right of the sector) -->
+  <circle cx="416.5" cy="340.5" r="1.5" class="dot"/>
+  <circle cx="410.5" cy="364.5" r="1.5" class="dot"/>
+  <circle cx="424.5" cy="388.5" r="1.5" class="dot"/>
+  <circle cx="444.5" cy="409.5" r="1.5" class="dot"/>
+  <circle cx="469.5" cy="424.5" r="1.5" class="dot"/>
+  <circle cx="495.5" cy="434.5" r="1.5" class="dot"/>
+  <circle cx="522.5" cy="438.5" r="1.5" class="dot"/>
+  <circle cx="548.5" cy="432.5" r="1.5" class="dot"/>
+  <circle cx="569.5" cy="419.5" r="1.5" class="dot"/>
+  <circle cx="585.5" cy="400.5" r="1.5" class="dot"/>
+  <circle cx="595.5" cy="375.5" r="1.5" class="dot"/>
+  <circle cx="599.5" cy="349.5" r="1.5" class="dot"/>
+  <circle cx="595.5" cy="323.5" r="1.5" class="dot"/>
+  <circle cx="585.5" cy="300.5" r="1.5" class="dot"/>
+  <circle cx="569.5" cy="281.5" r="1.5" class="dot"/>
+  <circle cx="548.5" cy="268.5" r="1.5" class="dot"/>
+  <circle cx="522.5" cy="262.5" r="1.5" class="dot"/>
+  <circle cx="495.5" cy="266.5" r="1.5" class="dot"/>
+  <circle cx="469.5" cy="276.5" r="1.5" class="dot"/>
+  <circle cx="444.5" cy="291.5" r="1.5" class="dot"/>
+  <circle cx="424.5" cy="312.5" r="1.5" class="dot"/>
+  <circle cx="410.5" cy="336.5" r="1.5" class="dot"/>
+  <circle cx="416.5" cy="340.5" r="1.5" class="dot"/> <!-- Center dot -->
+
+  <!-- Dots on the outer circle -->
+  <!-- Center (265, 605), Radius 265 -->
+  <!-- Angle -22.5 degrees -->
+  <circle cx="416.5" cy="590.5" r="1.5" class="dot"/>
+  <circle cx="410.5" cy="614.5" r="1.5" class="dot"/>
+  <circle cx="424.5" cy="638.5" r="1.5" class="dot"/>
+  <circle cx="444.5" cy="659.5" r="1.5" class="dot"/>
+  <circle cx="469.5" cy="674.5" r="1.5" class="dot"/>
+  <circle cx="495.5" cy="684.5" r="1.5" class="dot"/>
+  <circle cx="522.5" cy="688.5" r="1.5" class="dot"/>
+  <circle cx="548.5" cy="682.5" r="1.5" class="dot"/>
+  <circle cx="569.5" cy="669.5" r="1.5" class="dot"/>
+  <circle cx="585.5" cy="650.5" r="1.5" class="dot"/>
+  <circle cx="595.5" cy="625.5" r="1.5" class="dot"/>
+  <circle cx="599.5" cy="599.5" r="1.5" class="dot"/>
+  <circle cx="595.5" cy="573.5" r="1.5" class="dot"/>
+  <circle cx="585.5" cy="550.5" r="1.5" class="dot"/>
+  <circle cx="569.5" cy="531.5" r="1.5" class="dot"/>
+  <circle cx="548.5" cy="518.5" r="1.5" class="dot"/>
+  <circle cx="522.5" cy="512.5" r="1.5" class="dot"/>
+  <circle cx="495.5" cy="516.5" r="1.5" class="dot"/>
+  <circle cx="469.5" cy="526.5" r="1.5" class="dot"/>
+  <circle cx="444.5" cy="541.5" r="1.5" class="dot"/>
+  <circle cx="424.5" cy="562.5" r="1.5" class="dot"/>
+  <circle cx="410.5" cy="586.5" r="1.5" class="dot"/>
+  <circle cx="416.5" cy="590.5" r="1.5" class="dot"/> <!-- Center dot -->
+
+  <!-- Labels for the circles -->
+  <text x="315" y="355" class="label" text-anchor="middle">O</text>
+  <text x="500" y="445" class="label" text-anchor="middle">D</text>
+  <text x="265" y="755" class="label" text-anchor="middle">E</text>
+
+  <!-- Connecting Lines -->
+  <!-- Line from A to C -->
+  <line x1="315" y1="175" x2="500" y2="355" stroke="black" stroke-width="3"/>
+  <!-- Line from B to C -->
+  <line x1="500" y1="355" x2="265" y2="605" stroke="black" stroke-width="3"/>
+
+</svg>

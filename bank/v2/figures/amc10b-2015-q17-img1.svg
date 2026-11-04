@@ -1,0 +1,13 @@
+<svg width="492" height="422" viewBox="-12 -12 492 422" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="2" fill="none">
+    <path d="M 30 141 L 30 347 L 300 403 L 300 197 L 30 141 M 300 403 L 468 266 L 468 59 L 300 197 M 30 141 L 200 4 L 468 59"/>
+    <line x1="200" y1="4" x2="200" y2="211" stroke-dasharray="15, 10"/>
+    <line x1="200" y1="211" x2="30" y2="347" stroke-dasharray="15, 10"/>
+    <line x1="200" y1="211" x2="468" y2="266" stroke-dasharray="15, 10"/>
+  </g>
+  <g font-family="serif" font-size="36" text-anchor="middle" dominant-baseline="middle">
+    <text x="10" y="243">3</text>
+    <text x="165" y="398">4</text>
+    <text x="400" y="355">5</text>
+  </g>
+</svg>

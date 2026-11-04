@@ -1,0 +1,24 @@
+<svg width="528" height="528" viewBox="-12 -12 528 528" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="100%" height="100%" fill="white"/>
+  <defs>
+    <path id="star" d="M 185 2 L 252 41 L 319 2 L 357 69 L 433 69 L 433 146 L 500 185 L 461 252 L 500 319 L 433 357 L 433 433 L 357 433 L 319 499 L 252 461 L 185 499 L 147 433 L 70 433 L 70 357 L 3 319 L 42 252 L 3 185 L 70 146 L 70 69 L 147 69 L 185 2 Z"/>
+    <path id="inner-star" d="M 252 126 L 281 146 L 310 126 L 310 165 L 339 185 L 310 205 L 310 244 L 281 264 L 252 244 L 252 205 L 223 225 L 223 185 L 252 165 Z"/>
+  </defs>
+  <rect x="0" y="0" width="504" height="504" fill="white"/>
+  <use xlink:href="#star" stroke="black" stroke-width="3" fill="none"/>
+  <use xlink:href="#inner-star" stroke="black" stroke-width="3" fill="none"/>
+  <circle cx="252" cy="252" r="7" fill="black"/>
+  <g stroke="gray" stroke-width="1" stroke-dasharray="6 6" fill="none">
+    <path d="M 147 69 L 42 252"/>
+    <path d="M 357 69 L 461 252"/>
+    <path d="M 433 146 L 310 310"/>
+    <path d="M 433 357 L 310 244"/>
+    <path d="M 357 433 L 252 461"/>
+    <path d="M 147 433 L 223 264"/>
+    <path d="M 70 357 L 252 461"/>
+    <path d="M 70 146 L 252 41"/>
+    <path d="M 433 146 L 252 41"/>
+    <path d="M 433 357 L 252 41"/>
+    <path d="M 357 69 L 252 41"/>
+    <path d="M 147 69 L 252 41"/>
+  </g>
+</svg>

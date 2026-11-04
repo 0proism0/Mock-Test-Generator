@@ -1,0 +1,32 @@
+<svg width="457" height="466" viewBox="-12 -12 457 466" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <g stroke="black" stroke-width="3" fill="none">
+    <path d="M 40 35 L 418 35 L 418 415 L 40 415 Z"/>
+    <path d="M 40 35 L 418 415"/>
+    <path d="M 418 35 L 40 415"/>
+    <path d="M 40 35 L 114 186"/>
+    <path d="M 418 35 L 267 112"/>
+    <path d="M 267 112 L 191 338"/>
+    <path d="M 191 338 L 342 262"/>
+    <path d="M 342 262 L 418 415"/>
+  </g>
+  <g fill="black">
+    <circle cx="40" cy="35" r="3"/>
+    <circle cx="418" cy="35" r="3"/>
+    <circle cx="418" cy="415" r="3"/>
+    <circle cx="40" cy="415" r="3"/>
+    <circle cx="114" cy="186" r="3"/>
+    <circle cx="267" cy="112" r="3"/>
+    <circle cx="191" cy="338" r="3"/>
+    <circle cx="342" cy="262" r="3"/>
+  </g>
+  <g font-family="serif" font-style="italic" font-size="30" fill="black">
+    <text x="10" y="28">A</text>
+    <text x="428" y="28">B</text>
+    <text x="428" y="442">C</text>
+    <text x="5" y="442">D</text>
+    <text x="247" y="102">E</text>
+    <text x="355" y="265">F</text>
+    <text x="188" y="368">G</text>
+    <text x="78" y="206">H</text>
+  </g>
+</svg>

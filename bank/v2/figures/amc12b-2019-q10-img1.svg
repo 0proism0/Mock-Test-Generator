@@ -1,0 +1,28 @@
+<svg width="614" height="401" viewBox="-12 -12 614 401" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect x="0" y="0" width="590" height="377" fill="white"/>
+  <g stroke="black" stroke-width="2" fill="none">
+    <path d="M 46 21 L 548 21"/>
+    <path d="M 46 183 L 548 183"/>
+    <path d="M 46 345 L 548 345"/>
+    <path d="M 46 21 L 46 345"/>
+    <path d="M 214 21 L 214 345"/>
+    <path d="M 380 21 L 380 345"/>
+    <path d="M 548 21 L 548 345"/>
+  </g>
+  <g fill="black">
+    <circle cx="46" cy="21" r="4.5"/>
+    <circle cx="214" cy="21" r="4.5"/>
+    <circle cx="380" cy="21" r="4.5"/>
+    <circle cx="548" cy="21" r="4.5"/>
+    <circle cx="46" cy="183" r="4.5"/>
+    <circle cx="214" cy="183" r="4.5"/>
+    <circle cx="380" cy="183" r="4.5"/>
+    <circle cx="548" cy="183" r="4.5"/>
+    <circle cx="46" cy="345" r="4.5"/>
+    <circle cx="214" cy="345" r="4.5"/>
+    <circle cx="380" cy="345" r="4.5"/>
+    <circle cx="548" cy="345" r="4.5"/>
+  </g>
+  <text x="21" y="21" font-family="serif" font-size="32" text-anchor="middle" dominant-baseline="middle">A</text>
+  <text x="574" y="345" font-family="serif" font-size="32" text-anchor="middle" dominant-baseline="middle">L</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg width="504" height="297" viewBox="0 0 504 297" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <path d="M 44 44 L 454 248" stroke="black" stroke-width="3" fill="none"/>
+  <path d="M 180 248 L 316 112" stroke="black" stroke-width="3" fill="none"/>
+  <circle cx="44" cy="44" r="7" fill="black"/>
+  <circle cx="112" cy="44" r="7" fill="black"/>
+  <circle cx="180" cy="44" r="7" fill="black"/>
+  <circle cx="248" cy="44" r="7" fill="black"/>
+  <circle cx="316" cy="44" r="7" fill="black"/>
+  <circle cx="384" cy="44" r="7" fill="black"/>
+  <circle cx="454" cy="44" r="7" fill="black"/>
+  <circle cx="44" cy="112" r="7" fill="black"/>
+  <circle cx="112" cy="112" r="7" fill="black"/>
+  <circle cx="180" cy="112" r="7" fill="black"/>
+  <circle cx="248" cy="112" r="7" fill="black"/>
+  <circle cx="316" cy="112" r="7" fill="black"/>
+  <circle cx="384" cy="112" r="7" fill="black"/>
+  <circle cx="454" cy="112" r="7" fill="black"/>
+  <circle cx="44" cy="180" r="7" fill="black"/>
+  <circle cx="112" cy="180" r="7" fill="black"/>
+  <circle cx="180" cy="180" r="7" fill="black"/>
+  <circle cx="248" cy="180" r="7" fill="black"/>
+  <circle cx="316" cy="180" r="7" fill="black"/>
+  <circle cx="384" cy="180" r="7" fill="black"/>
+  <circle cx="454" cy="180" r="7" fill="black"/>
+  <circle cx="44" cy="248" r="7" fill="black"/>
+  <circle cx="112" cy="248" r="7" fill="black"/>
+  <circle cx="180" cy="248" r="7" fill="black"/>
+  <circle cx="248" cy="248" r="7" fill="black"/>
+  <circle cx="316" cy="248" r="7" fill="black"/>
+  <circle cx="384" cy="248" r="7" fill="black"/>
+  <circle cx="454" cy="248" r="7" fill="black"/>
+  <circle cx="270" cy="158" r="7" fill="black"/>
+  <text x="20" y="30" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">A</text>
+  <text x="480" y="285" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">B</text>
+  <text x="345" y="100" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">C</text>
+  <text x="180" y="285" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">D</text>
+  <text x="270" y="145" font-family="serif" font-style="italic" font-size="32" text-anchor="middle">E</text>
+</svg>

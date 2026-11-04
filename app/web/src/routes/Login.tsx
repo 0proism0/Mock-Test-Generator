@@ -50,7 +50,7 @@ export function Login() {
   return (
     <div className="card auth-box">
       <h2 style={{ textAlign: 'center', marginBottom: 8 }}>MockTest Maker</h2>
-      <p style={{ textAlign: 'center', color: '#666', fontSize: 14 }}>{t('authRequired')}</p>
+      <p style={{ textAlign: 'center', color: 'var(--ink-2)', fontSize: 14 }}>{t('authRequired')}</p>
       <div className="auth-tabs">
         <div className={mode === 'login' ? 'auth-tab active' : 'auth-tab'} onClick={() => setMode('login')}>
           {t('login')}

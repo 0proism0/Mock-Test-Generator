@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424 337">
+  <rect x="1" y="1" width="422" height="335" fill="none" stroke="black" stroke-width="2"/>
+  
+  <!-- Vertical lines -->
+  <path d="M85,1 L85,336" stroke="black" stroke-width="2"/>
+  <path d="M169,1 L169,336" stroke="black" stroke-width="2"/>
+  <path d="M254,1 L254,336" stroke="black" stroke-width="2"/>
+  <path d="M338,1 L338,336" stroke="black" stroke-width="2"/>
+  
+  <!-- Horizontal lines -->
+  <path d="M1,84 L423,84" stroke="black" stroke-width="2"/>
+  <path d="M1,168 L423,168" stroke="black" stroke-width="2"/>
+  <path d="M1,252 L423,252" stroke="black" stroke-width="2"/>
+  
+  <!-- Filled cells -->
+  <rect x="85" y="1" width="84" height="83" fill="#b3b3b3"/>
+  <rect x="169" y="168" width="85" height="84" fill="#b3b3b3"/>
+  <rect x="338" y="252" width="85" height="84" fill="#b3b3b3"/>
+</svg>

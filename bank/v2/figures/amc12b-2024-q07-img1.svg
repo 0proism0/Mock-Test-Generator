@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="504" height="264" viewBox="0 0 504 264">
+<path d="M 54 20 L 54 218 L 450 218 L 450 20 Z" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M 54 20 L 153 218 L 450 69.5 Z" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M 147.95 208.1 L 157.95 203.15 L 162.9 213.05" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<circle cx="54" cy="20" r="4" fill="black"/>
+<circle cx="54" cy="218" r="4" fill="black"/>
+<circle cx="450" cy="218" r="4" fill="black"/>
+<circle cx="450" cy="20" r="4" fill="black"/>
+<circle cx="153" cy="218" r="4" fill="black"/>
+<circle cx="450" cy="69.5" r="4" fill="black"/>
+<text x="20" y="20" font-family="serif" font-size="26" font-style="italic" text-anchor="middle" dominant-baseline="central">W</text>
+<text x="20" y="218" font-family="serif" font-size="26" font-style="italic" text-anchor="middle" dominant-baseline="central">X</text>
+<text x="480" y="20" font-family="serif" font-size="26" font-style="italic" text-anchor="middle" dominant-baseline="central">Z</text>
+<text x="480" y="218" font-family="serif" font-size="26" font-style="italic" text-anchor="middle" dominant-baseline="central">Y</text>
+<text x="480" y="69.5" font-family="serif" font-size="26" font-style="italic" text-anchor="middle" dominant-baseline="central">A</text>
+<text x="153" y="247" font-family="serif" font-size="26" font-style="italic" text-anchor="middle" dominant-baseline="central">M</text>
+</svg>

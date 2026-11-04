@@ -1,0 +1,20 @@
+<svg width="430" height="306" viewBox="-12 -12 430 306" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+  <rect width="100%" height="100%" fill="white"/>
+  <g font-family="serif" font-size="34" text-anchor="middle" dominant-baseline="middle" fill="black">
+    <text x="210" y="18">1</text>
+    <text x="160" y="84">1</text>
+    <text x="260" y="84">1</text>
+    <text x="110" y="150">1</text>
+    <text x="210" y="150">3</text>
+    <text x="310" y="150">1</text>
+    <text x="65" y="216">1</text>
+    <text x="160" y="216">5</text>
+    <text x="260" y="216">5</text>
+    <text x="355" y="216">1</text>
+    <text x="15" y="282">1</text>
+    <text x="115" y="282">7</text>
+    <text x="210" y="282">11</text>
+    <text x="310" y="282">7</text>
+    <text x="405" y="282">1</text>
+  </g>
+</svg>
