@@ -289,11 +289,11 @@ WS_TEXT_MAX_BYTES = 1024 * 1024  # 1 MB for text files
 WS_EXTS = ("txt", "md", "json", "docx", "pdf", "png", "jpg", "jpeg", "webp", "bmp", "tif", "tiff")
 WS_TEXT_EXTS = ("txt", "md", "json")
 WS_IMAGE_EXTS = ("png", "jpg", "jpeg", "webp", "bmp", "tif", "tiff")
-WS_Q_RE = re.compile(r"^\s*(?:#{1,6}\s*)?(?:q(?:uestion)?\s*)?(\d{1,3})[.)]\s+", re.I)
-WS_CHOICE_RE = re.compile(r"^\s*([A-E])[.)]\s+")
-WS_ANS_SECTION_RE = re.compile(r"^\s*#*\s*(?:answers?|answer key|keys?)\s*:?\s*$", re.I)
-WS_ANS_ENTRY_RE = re.compile(r"^\s*(\d{1,3})[.)]\s+(.+)$")
-WS_INLINE_ANS_RE = re.compile(r"^\s*\**\s*answer\s*:\s*\**\s*(.+?)\s*$", re.I)
+WS_Q_RE = re.compile(r"^\s*(?:#{1,6}\s*)?(?:q(?:uestion)?\s*)?(?:第\s*)?(\d{1,3})(?:\s*题)?\s*[、.)）:：]\s*", re.I)
+WS_CHOICE_RE = re.compile(r"^\s*([A-Ea-e])[.)．]\s+")
+WS_ANS_SECTION_RE = re.compile(r"^\s*#*\s*(?:answers?|answer key|keys?|答案|参考答案|解答)\s*[:：]?\s*$", re.I)
+WS_ANS_ENTRY_RE = re.compile(r"^\s*(\d{1,3})[.)．\、]\s+(.+)$")
+WS_INLINE_ANS_RE = re.compile(r"^\s*\**\s*(?:answer|答案)\s*[:：]\s*\**\s*(.+?)\s*$", re.I)
 
 
 def parse_worksheet_text(text, fallback_title):
@@ -334,7 +334,7 @@ def parse_worksheet_text(text, fallback_title):
             continue
         m_c = WS_CHOICE_RE.match(line)
         if section != "answers" and order and m_c:
-            questions[order[-1]]["choices"][m_c.group(1)] = line[m_c.end():].strip()
+            questions[order[-1]]["choices"][m_c.group(1).upper()] = line[m_c.end():].strip()
             continue
         if section != "answers" and order:
             questions[order[-1]]["lines"].append(line)
@@ -1210,10 +1210,28 @@ def build_similar_test(user, items):
         version = tdata.get("bank_version", 1)
         try:
             bank = load_bank(slug, version=version)
-            siblings = [v for v in bank
-                        if v.get("position") == n and v.get("source") != orig.get("source")]
-            if siblings:
+            siblings = [v for v in bank if v.get("source") != orig.get("source")]
+            pick = None
+            # 1) same topic (classifier tag), nearest position — that's what "similar" means
+            orig_tag = (orig.get("classification") or {}).get("primary")
+            if not orig_tag:
+                # older tests lack embedded tags — recover from the bank by source
+                orig_v = next((v for v in bank if v.get("source") == orig.get("source")), None)
+                orig_tag = ((orig_v or {}).get("classification") or {}).get("primary")
+            if orig_tag:
+                same_topic = [v for v in siblings
+                              if (v.get("classification") or {}).get("primary") == orig_tag]
+                if same_topic:
+                    same_topic.sort(key=lambda v: abs(int(v.get("position", n)) - n))
+                    pick = random.choice(same_topic[:3])
+            # 2) fallback: same position, different source (classic difficulty-ramp match)
+            if pick is None:
+                same_pos = [v for v in siblings if v.get("position") == n]
+                if same_pos:
+                    pick = random.choice(same_pos)
+            if pick is None and siblings:
                 pick = random.choice(siblings)
+            if pick:
                 figure = pick.get("figure")
                 if figure:
                     figure = dict(figure)
@@ -1228,6 +1246,9 @@ def build_similar_test(user, items):
                     "points": orig.get("points", 1),
                     "figure": figure,
                 }
+                for key in ("classification", "difficulty"):
+                    if pick.get(key):
+                        q[key] = pick[key]
         except Exception:
             pass  # keep the original question if the bank can't be read
         if q["source"] in sources:

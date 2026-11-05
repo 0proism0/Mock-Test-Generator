@@ -17,6 +17,7 @@ import {
   Sun,
   Swords,
   Target,
+  TrendingUp,
   Users,
   XCircle,
 } from './icons'
@@ -37,6 +38,7 @@ const tabs: Tab[] = [
   { to: '/tests', labelKey: 'tabTests', icon: <FileText size={18} /> },
   { to: '/stats', labelKey: 'tabStats', icon: <BarChart2 size={18} /> },
   { to: '/mistakes', labelKey: 'tabMistakes', icon: <XCircle size={18} />, authOnly: true },
+  { to: '/analysis', labelKey: 'tabReport', icon: <TrendingUp size={18} />, authOnly: true },
   { to: '/whiteboard', labelKey: 'tabWhiteboard', icon: <Edit3 size={18} /> },
   { to: '/friends', labelKey: 'tabFriends', icon: <Users size={18} />, authOnly: true },
   { to: '/pk', labelKey: 'tabPK', icon: <Swords size={18} />, authOnly: true },
