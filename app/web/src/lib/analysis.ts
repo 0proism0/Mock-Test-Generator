@@ -11,6 +11,13 @@ export interface AnQuestion {
   solution?: string
   type?: string
   points?: number
+  /** Bank-embedded classifier output (see classifier/ + taxonomy/amc-v1.json). */
+  classification?: {
+    primary?: string
+    tags?: { id: string; weight?: number }[]
+    note?: string
+  }
+  difficulty?: { level?: number; band?: string }
 }
 
 export interface AnTest {
@@ -41,7 +48,35 @@ export interface MissedItem {
   answer: string
   kp: string
   note: string
+  diff?: number
   question: string
+}
+
+/** Resolve a question's knowledge point: teacher classification wins, then the
+ * bank-embedded classifier tag (labelled via the taxonomy). */
+export type KpResolver = (testId: string, n: number) => { kp: string; note: string; diff?: number }
+
+export function makeKpResolver(
+  tests: Record<string, AnTest>,
+  classes: Record<string, ClassMap>,
+  tax: { nodes: Record<string, { en: string; zh: string }> } | null,
+  lang: string,
+): KpResolver {
+  return (testId, n) => {
+    const cls = classes[testId]?.[String(n)]
+    const q = tests[testId]?.questions.find((x) => x.n === n)
+    let kp = cls?.kp ?? ''
+    let note = cls?.note ?? ''
+    let diff = cls?.diff
+    const primary = q?.classification?.primary
+    if (!kp && primary && tax?.nodes[primary]) {
+      const node = tax.nodes[primary]
+      kp = (lang === 'zh' ? node.zh : node.en) || node.en
+      if (!note && q?.classification?.note) note = q.classification.note
+    }
+    if (diff == null && q?.difficulty?.level) diff = q.difficulty.level
+    return { kp: kp || '—', note, diff }
+  }
 }
 
 // ---------- data loading (with per-session cache) ----------
@@ -152,16 +187,14 @@ export function attemptStats(result: TestResult, test: AnTest | undefined, cls: 
 /** Knowledge-point accuracy aggregated over every result that has details. */
 export function abilityProfile(
   results: TestResult[],
-  classes: Record<string, ClassMap>,
+  resolve: KpResolver,
 ): { kp: string; ok: number; total: number; pct: number }[] {
   const agg = new Map<string, { ok: number; total: number }>()
   for (const r of results) {
     if (!r.details?.length) continue
-    const cls = classes[r.test_id]
-    if (!cls) continue
     for (const d of r.details) {
-      const kp = cls[String(d.n)]?.kp
-      if (!kp) continue
+      const { kp } = resolve(r.test_id, d.n)
+      if (!kp || kp === '—') continue
       const a = agg.get(kp) ?? { ok: 0, total: 0 }
       a.total++
       if (d.ok) a.ok++
@@ -177,7 +210,7 @@ export function abilityProfile(
 export function collectMissed(
   results: TestResult[],
   tests: Record<string, AnTest>,
-  classes: Record<string, ClassMap>,
+  resolve: KpResolver,
 ): MissedItem[] {
   const out: MissedItem[] = []
   for (const r of [...results].reverse()) {
@@ -186,6 +219,7 @@ export function collectMissed(
     for (const d of r.details) {
       if (d.ok) continue
       const q = byN.get(d.n)
+      const { kp, note, diff } = resolve(r.test_id, d.n)
       out.push({
         test_id: r.test_id,
         test_title: r.title,
@@ -193,8 +227,9 @@ export function collectMissed(
         n: d.n,
         given: d.given,
         answer: q?.answer ?? '?',
-        kp: classes[r.test_id]?.[String(d.n)]?.kp ?? '—',
-        note: classes[r.test_id]?.[String(d.n)]?.note ?? '',
+        kp,
+        note,
+        diff,
         question: q?.question ?? '',
       })
     }

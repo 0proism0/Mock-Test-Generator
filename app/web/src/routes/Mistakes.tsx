@@ -2,20 +2,29 @@ import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AutoMath } from '../components/AutoMath'
 import { Crosshair } from '../components/icons'
-import { abilityProfile, collectMissed, loadAnalysisData, type ClassMap, type AnTest } from '../lib/analysis'
-import { api, type TestResult } from '../lib/api'
+import {
+  abilityProfile,
+  collectMissed,
+  loadAnalysisData,
+  makeKpResolver,
+  type ClassMap,
+  type AnTest,
+} from '../lib/analysis'
+import { api, type Taxonomy, type TestResult } from '../lib/api'
 import { useI18n } from '../lib/i18n'
 
 export function Mistakes() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
   const navigate = useNavigate()
   const [results, setResults] = useState<TestResult[] | null>(null)
   const [tests, setTests] = useState<Record<string, AnTest>>({})
   const [classes, setClasses] = useState<Record<string, ClassMap>>({})
+  const [tax, setTax] = useState<Taxonomy | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
 
   useEffect(() => {
+    api.taxonomy().then(setTax).catch(() => {})
     api
       .results()
       .then(async (rs) => {
@@ -27,13 +36,18 @@ export function Mistakes() {
       .catch(() => setResults([]))
   }, [])
 
+  const resolve = useMemo(
+    () => makeKpResolver(tests, classes, tax, lang),
+    [tests, classes, tax, lang],
+  )
+
   const missed = useMemo(
-    () => (results ? collectMissed(results, tests, classes) : []),
-    [results, tests, classes],
+    () => (results ? collectMissed(results, tests, resolve) : []),
+    [results, tests, resolve],
   )
   const profile = useMemo(
-    () => (results ? abilityProfile(results, classes) : []),
-    [results, tests, classes],
+    () => (results ? abilityProfile(results, resolve) : []),
+    [results, resolve],
   )
   const weakness = profile.filter((p) => p.pct < 60)
   const strengths = profile.filter((p) => p.pct >= 80 && p.total >= 2)
@@ -122,6 +136,7 @@ export function Mistakes() {
                     {m.test_title} · #{m.n}
                   </span>
                   <span className="ms-kp">{m.kp}</span>
+                  {m.diff != null && <span className="ms-badge">{t('difficulty')} {m.diff}</span>}
                   <span className="meta">
                     {t('anMyAns')}: <b>{m.given || t('anUnanswered')}</b> → {String(m.answer)}
                   </span>

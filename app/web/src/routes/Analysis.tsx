@@ -8,22 +8,24 @@ import {
   loadAnalysisData,
   loadClassMap,
   loadTest,
+  makeKpResolver,
   type AttemptStats,
   type ClassMap,
   type AnTest,
 } from '../lib/analysis'
-import { api, type Me, type TestResult } from '../lib/api'
+import { api, type Me, type Taxonomy, type TestResult } from '../lib/api'
 import { useI18n } from '../lib/i18n'
 
 type SelKey = string // `${test_id}|${submitted_at}`
 
 export function Analysis() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
   const [params] = useSearchParams()
   const [me, setMe] = useState<Me | null>(null)
   const [results, setResults] = useState<TestResult[] | null>(null)
   const [tests, setTests] = useState<Record<string, AnTest>>({})
   const [classes, setClasses] = useState<Record<string, ClassMap>>({})
+  const [tax, setTax] = useState<Taxonomy | null>(null)
   const [selected, setSelected] = useState<SelKey[]>([])
   const [clsTest, setClsTest] = useState<string | null>(null) // test being classified
   const [clsList, setClsList] = useState<{ id: string; title: string }[]>([])
@@ -41,6 +43,7 @@ export function Analysis() {
           .catch(() => {})
       }
     }).catch(() => {})
+    api.taxonomy().then(setTax).catch(() => {})
     api
       .results()
       .then(async (rs) => {
@@ -74,9 +77,14 @@ export function Analysis() {
     [selected, withDetails, tests, classes],
   )
 
+  const resolve = useMemo(
+    () => makeKpResolver(tests, classes, tax, lang),
+    [tests, classes, tax, lang],
+  )
+
   const profile = useMemo(
-    () => (results ? abilityProfile(results, classes) : []),
-    [results, tests, classes],
+    () => (results ? abilityProfile(results, resolve) : []),
+    [results, resolve],
   )
   const strengths = profile.filter((p) => p.pct >= 80 && p.total >= 2)
   const weakness = profile.filter((p) => p.pct < 60)
@@ -231,17 +239,20 @@ export function Analysis() {
                     </tr>
                   </thead>
                   <tbody>
-                    {p.missed.map(({ detail, q, cls }) => (
-                      <tr key={detail.n}>
-                        <td>{detail.n}</td>
-                        <td>{cls?.kp ?? '—'}</td>
-                        <td>{detail.given || t('anUnanswered')}</td>
-                        <td>
-                          <AutoMath html={String(q?.answer ?? '')} />
-                        </td>
-                        <td>{cls?.note ?? ''}</td>
-                      </tr>
-                    ))}
+                    {p.missed.map(({ detail, q }) => {
+                      const info = resolve(p.result.test_id, detail.n)
+                      return (
+                        <tr key={detail.n}>
+                          <td>{detail.n}</td>
+                          <td>{info.kp}</td>
+                          <td>{detail.given || t('anUnanswered')}</td>
+                          <td>
+                            <AutoMath html={String(q?.answer ?? '')} />
+                          </td>
+                          <td>{info.note}</td>
+                        </tr>
+                      )
+                    })}
                   </tbody>
                 </table>
               )}
