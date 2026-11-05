@@ -11,6 +11,7 @@ const Practice = lazy(() => import('./routes/Practice').then((m) => ({ default: 
 const MyTests = lazy(() => import('./routes/MyTests').then((m) => ({ default: m.MyTests })))
 const TestRunner = lazy(() => import('./routes/TestRunner').then((m) => ({ default: m.TestRunner })))
 const Stats = lazy(() => import('./routes/Stats').then((m) => ({ default: m.Stats })))
+const Bank = lazy(() => import('./routes/Bank').then((m) => ({ default: m.Bank })))
 const Whiteboard = lazy(() => import('./routes/Whiteboard').then((m) => ({ default: m.Whiteboard })))
 const Games = lazy(() => import('./routes/Games').then((m) => ({ default: m.Games })))
 const Friends = lazy(() => import('./routes/Friends').then((m) => ({ default: m.Friends })))
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="practice" element={<Practice />} />
         <Route path="tests" element={<MyTests />} />
         <Route path="stats" element={<Stats />} />
+        <Route path="questions" element={<Bank />} />
         <Route path="whiteboard" element={<Whiteboard />} />
         <Route path="games" element={<Games />} />
         <Route
