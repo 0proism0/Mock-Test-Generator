@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
-"""Validate (and upgrade) MockTest Maker paper JSON against format v1.0.
+"""Validate (and upgrade) MockTest Maker paper JSON against format v1.1.
 
     python scripts/validate_paper.py examples/demo_rand_01.json
     python scripts/validate_paper.py users/test/tests/*.json --legacy-ok
     python scripts/validate_paper.py users/test/tests/amc8_rand_01.json --upgrade
     python scripts/validate_paper.py examples/demo_rand_01.json --hash
+    python scripts/validate_paper.py examples/demo_rand_01.json --coverage
 
 Standard library only, same policy as app/server.py.
 Exit code: 0 = clean (warnings allowed), 1 = errors, 2 = unreadable input.
 
-The schema lives in schema/paper-1.0.schema.json; this script re-implements the
-rules JSON Schema cannot express (cross references, asset existence, answer vs
-choices consistency) so it works without a jsonschema dependency.
+The schema lives in schema/paper-1.1.schema.json (schema/paper-1.0.schema.json
+is frozen for reference); this script re-implements the rules JSON Schema cannot
+express (cross references, asset existence, answer vs choices consistency,
+topic ids vs the taxonomy file) so it works without a jsonschema dependency.
 
 All console output is ASCII on purpose: the project is run from GBK cmd.exe
 windows where non-ASCII diagnostics turn into mojibake.
@@ -27,19 +29,21 @@ from datetime import datetime, timezone
 from pathlib import Path
 from xml.etree import ElementTree
 
-FORMAT_VERSION = "1.0"
+FORMAT_VERSION = "1.1"
 FORMAT_RE = re.compile(r"^1\.\d+$")
+# Files written by older tools keep validating: 1.1 is a superset of 1.0.
+SUPPORTED_FORMATS = ("1.0", "1.1")
 
 TOP_KEYS = {
     "format_version", "paper_version", "id", "title", "competition", "category",
     "instructions", "time_limit_min", "total_points", "calculator_allowed",
     "locale", "created_at", "updated_at", "generator", "version_history",
-    "sections", "questions", "content_hash", "notes",
+    "sections", "taxonomy", "questions", "content_hash", "notes",
 }
 QUESTION_KEYS = {
     "n", "qid", "section", "type", "source", "question", "question_zh", "choices",
     "answer", "solution", "solution_zh", "points", "grading", "figure", "subject",
-    "difficulty",
+    "difficulty", "classification",
 }
 FIGURE_KEYS = {
     "kind", "state", "placement", "src", "inline", "mime", "sha256", "width",
@@ -50,6 +54,49 @@ FIGURE_KINDS = {"svg", "image"}
 FIGURE_STATES = {"ready", "placeholder"}
 PLACEMENTS = {"prompt", "solution", "both"}
 
+# --- v1.1: per-question classification ------------------------------------
+CLASSIFICATION_KEYS = {
+    "state", "taxonomy", "primary", "tags", "source", "confidence", "reviewed",
+    "at", "note",
+}
+TAG_KEYS = {"id", "weight", "note"}
+CLASSIFICATION_STATES = {"pending", "done"}
+CLASSIFICATION_SOURCES = {"human", "rule", "model", "import"}
+TOPIC_ID_RE = re.compile(r"^[a-z][a-z0-9_]*(\.[a-z][a-z0-9_]*)*$")
+TAXONOMY_ID_RE = re.compile(r"^[a-z][a-z0-9_-]{1,31}$")
+
+# Annotation, not content: re-tagging must not churn cached hashes or force a
+# paper_version bump. Excluded from content_hash along with x-* extensions.
+HASH_EXCLUDED_KEYS = {"classification", "difficulty"}
+
+# difficulty is an estimate, not authored content: recalibrating it (prior, model
+# re-rating, Elo updates from real answers) must not invalidate content_hash or force
+# a paper_version bump. The v1.1 difficulty object therefore stays out of the hash.
+LEGACY_DIFFICULTY = {"easy", "medium", "hard"}
+# Difficulty scale "amc20": 1-20 where 20 = the average AMC 12 problem 25; AIME and
+# olympiad problems legitimately go above 20. Band is derived, never authored by hand.
+DIFFICULTY_SCORE_MAX = 60
+DIFFICULTY_LEVEL_MAX = 60
+DIFFICULTY_EASY_MAX = 9        # <= AMC 8 last problem
+DIFFICULTY_MEDIUM_MAX = 17     # <= AMC 10 last problem; AMC 12 #25 is 20
+DIFFICULTY_SCALES = {"amc20", "legacy5"}
+
+
+def band_of_level(level: int) -> str:
+    if level <= DIFFICULTY_EASY_MAX:
+        return "easy"
+    if level <= DIFFICULTY_MEDIUM_MAX:
+        return "medium"
+    return "hard"
+
+
+DIFFICULTY_KEYS = {"level", "scale", "band", "score", "method", "confidence",
+                   "components", "evidence", "reviewed", "at"}
+DIFFICULTY_METHODS = {"prior", "llm_rubric", "elo", "irt", "human", "hybrid"}
+DIFFICULTY_COMPONENT_KEYS = {"method", "score", "weight", "confidence", "reason"}
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 # Same heuristic the bank builders use for has_diagram. Used when upgrading a
 # legacy paper so geometry problems get a reserved figure slot.
 DIAGRAM_HINT = re.compile(r"\bdiagram\b|\bfigure\b|\bshown\b|如图|图中", re.IGNORECASE)
@@ -59,6 +106,7 @@ class Problems:
     def __init__(self, path: Path) -> None:
         self.path = path
         self.items: list[tuple[str, str, str]] = []
+        self.taxonomy_unverified = False
 
     def error(self, code: str, msg: str) -> None:
         self.items.append(("error", code, msg))
@@ -75,14 +123,31 @@ class Problems:
         return sum(1 for lvl, _, _ in self.items if lvl == "warn")
 
 
+def _hash_payload(questions: list) -> list:
+    """Strip annotation-only keys (classification, x-*) before hashing."""
+    out = []
+    for q in questions:
+        if isinstance(q, dict):
+            q = {
+                k: v for k, v in q.items()
+                if k not in HASH_EXCLUDED_KEYS and not k.startswith("x-")
+            }
+        out.append(q)
+    return out
+
+
 def content_hash(questions: list) -> str:
     """sha256 over the canonical JSON of the questions array.
 
     Canonical = UTF-8, keys sorted, no spaces, ensure_ascii=False. Assets are
     covered through their inline/src/sha256 fields, so swapping a file changes
     the hash as long as the asset's sha256 is maintained.
+
+    Since v1.1 classification and x-* are excluded: re-tagging a question is an
+    annotation change, not a content change. Papers without those keys hash the
+    same as under v1.0.
     """
-    blob = json.dumps(questions, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    blob = json.dumps(_hash_payload(questions), ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return "sha256:" + hashlib.sha256(blob.encode("utf-8")).hexdigest()
 
 
@@ -175,7 +240,297 @@ def _check_figure(fig, p: Problems, paper_dir: Path, where: str) -> None:
             p.warn("figure-mime", f"{where}: kind=image but mime={mime!r}")
 
 
-def _check_question(q, idx: int, p: Problems, paper_dir: Path, section_ids: set[str]) -> None:
+class Taxonomy:
+    """A loaded topic vocabulary (taxonomy/<id>.json)."""
+
+    def __init__(self, tax_id: str, version: str, nodes: dict[str, str | None]) -> None:
+        self.id = tax_id
+        self.version = version
+        self.nodes = nodes                    # node id -> parent id (None for roots)
+        self.children: dict[str, list[str]] = {}
+        for nid, parent in nodes.items():
+            self.children.setdefault(parent or "", []).append(nid)
+
+    def has(self, node_id: str) -> bool:
+        return node_id in self.nodes
+
+    def is_leaf(self, node_id: str) -> bool:
+        return not self.children.get(node_id)
+
+
+_TAXONOMY_CACHE: dict[str, Taxonomy | None] = {}
+
+
+def _parse_taxonomy(data, path: Path, p: Problems) -> Taxonomy | None:
+    if not isinstance(data, dict):
+        p.error("taxonomy-type", f"{path}: taxonomy root must be an object")
+        return None
+    nodes: dict[str, str | None] = {}
+
+    def walk(items, parent: str | None) -> None:
+        if not isinstance(items, list):
+            p.error("taxonomy-nodes", f"{path}: nodes must be an array")
+            return
+        for node in items:
+            if not isinstance(node, dict):
+                p.error("taxonomy-node", f"{path}: each node must be an object")
+                continue
+            nid = node.get("id")
+            if not isinstance(nid, str) or not TOPIC_ID_RE.fullmatch(nid):
+                p.error("taxonomy-node-id", f"{path}: bad node id {nid!r}")
+                continue
+            if nid in nodes:
+                p.error("taxonomy-node-dup", f"{path}: duplicate node id {nid!r}")
+                continue
+            if parent and not nid.startswith(parent + "."):
+                p.error("taxonomy-node-parent", f"{path}: node {nid!r} must sit under {parent!r} (id prefix)")
+            nodes[nid] = parent
+            walk(node.get("children") or [], nid)
+
+    walk(data.get("roots") or [], None)
+    if not nodes:
+        p.error("taxonomy-empty", f"{path}: taxonomy declares no nodes")
+        return None
+    tax_id = data.get("id")
+    if isinstance(tax_id, str) and not TAXONOMY_ID_RE.fullmatch(tax_id):
+        p.error("taxonomy-id", f"{path}: taxonomy id {tax_id!r} must match {TAXONOMY_ID_RE.pattern}")
+    return Taxonomy(tax_id if isinstance(tax_id, str) else path.stem, str(data.get("version") or ""), nodes)
+
+
+def load_taxonomy(ref, paper_dir: Path, p: Problems) -> Taxonomy | None:
+    """Load the taxonomy a paper points at. None means ids cannot be verified."""
+    if not isinstance(ref, dict):
+        return None
+    tax_id = ref.get("id")
+    if not isinstance(tax_id, str) or not tax_id:
+        return None
+    candidates: list[Path] = []
+    uri = ref.get("uri")
+    if isinstance(uri, str) and uri.strip():
+        candidates.append(paper_dir / uri)
+    candidates.append(paper_dir / "taxonomy" / f"{tax_id}.json")
+    candidates.append(REPO_ROOT / "taxonomy" / f"{tax_id}.json")
+    for cand in candidates:
+        try:
+            key = str(cand.resolve())
+        except OSError:
+            continue
+        if key in _TAXONOMY_CACHE:
+            cached = _TAXONOMY_CACHE[key]
+            if cached is not None:
+                return cached
+            continue
+        if not cand.is_file():
+            _TAXONOMY_CACHE[key] = None
+            continue
+        try:
+            data = json.loads(cand.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            p.warn("taxonomy-load", f"cannot read taxonomy {cand}: {exc}")
+            _TAXONOMY_CACHE[key] = None
+            return None
+        tax = _parse_taxonomy(data, cand, p)
+        _TAXONOMY_CACHE[key] = tax
+        return tax
+    p.warn(
+        "taxonomy-missing",
+        f"taxonomy {tax_id!r} not found (looked next to the paper and in {REPO_ROOT / 'taxonomy'}); "
+        f"topic ids were not verified",
+    )
+    return None
+
+
+def _check_classification(cls, p: Problems, where: str, default_tax_id: str | None,
+                          taxonomy: Taxonomy | None) -> None:
+    """Validate one question's classification block (v1.1)."""
+    if cls is None:
+        return
+    if not isinstance(cls, dict):
+        p.error("classification-type", f"{where}: classification must be an object or null")
+        return
+    _unknown_keys(cls, CLASSIFICATION_KEYS, p, f"{where}.classification")
+
+    state = cls.get("state")
+    if state not in CLASSIFICATION_STATES:
+        p.error("classification-state", f"{where}: classification.state must be one of {sorted(CLASSIFICATION_STATES)}, got {state!r}")
+
+    if "taxonomy" in cls and not isinstance(cls["taxonomy"], str):
+        p.error("classification-taxonomy", f"{where}: classification.taxonomy must be a string")
+    tax_id = cls.get("taxonomy") or default_tax_id
+
+    tags = cls.get("tags")
+    primary = cls.get("primary")
+    tag_ids: list[str] = []
+
+    if state == "done":
+        if not isinstance(tags, list) or not tags:
+            p.error("classification-tags", f"{where}: state=done needs a non-empty tags array")
+            tags = []
+        for i, tag in enumerate(tags):
+            if not isinstance(tag, dict):
+                p.error("classification-tag", f"{where}: tags[{i}] must be an object")
+                continue
+            _unknown_keys(tag, TAG_KEYS, p, f"{where}.classification.tags[{i}]")
+            tid = tag.get("id")
+            if not isinstance(tid, str) or not TOPIC_ID_RE.fullmatch(tid):
+                p.error("classification-tag-id", f"{where}: tags[{i}].id={tid!r} is not a dotted topic id")
+                continue
+            if tid in tag_ids:
+                p.error("classification-tag-dup", f"{where}: topic {tid!r} is listed twice")
+            tag_ids.append(tid)
+            if "weight" in tag and not (_is_num(tag["weight"]) and 0 < tag["weight"] <= 1):
+                p.error("classification-weight", f"{where}: tags[{i}].weight must be in (0, 1], got {tag['weight']!r}")
+        if not isinstance(primary, str) or not TOPIC_ID_RE.fullmatch(primary):
+            p.error("classification-primary", f"{where}: state=done needs primary as a dotted topic id, got {primary!r}")
+        elif tag_ids and primary not in tag_ids:
+            p.error("classification-primary", f"{where}: primary={primary!r} is not among tags {sorted(tag_ids)}")
+        elif len(tag_ids) > 1 and not any(
+            isinstance(t, dict) and t.get("weight", 1) == 1 for t in tags
+        ):
+            p.warn("classification-weight", f"{where}: several topics but none carries weight 1, primary is ambiguous")
+        if cls.get("source") in ("model", "rule") and "confidence" not in cls:
+            p.warn("classification-confidence", f"{where}: machine-labelled without confidence, sampling review cannot triage")
+    elif state == "pending":
+        if tags or primary:
+            p.error("classification-pending", f"{where}: state=pending must not carry tags/primary (nothing decided yet)")
+
+    if "source" in cls and cls["source"] not in CLASSIFICATION_SOURCES:
+        p.error("classification-source", f"{where}: source must be one of {sorted(CLASSIFICATION_SOURCES)}, got {cls['source']!r}")
+    if "confidence" in cls and not (_is_num(cls["confidence"]) and 0 <= cls["confidence"] <= 1):
+        p.error("classification-confidence", f"{where}: confidence must be a number in [0, 1]")
+    if "reviewed" in cls and not isinstance(cls["reviewed"], bool):
+        p.error("classification-reviewed", f"{where}: reviewed must be a boolean")
+
+    probe = list(tag_ids)
+    if isinstance(primary, str) and primary not in probe:
+        probe.append(primary)
+    if taxonomy is not None:
+        for tid in probe:
+            if not taxonomy.has(tid):
+                p.error("classification-topic", f"{where}: topic {tid!r} is not in taxonomy {taxonomy.id!r}")
+        if isinstance(primary, str) and taxonomy.has(primary) and "." not in primary:
+            p.warn("classification-branch",
+                   f"{where}: primary={primary!r} is a level-1 domain, file the question under a "
+                   f"topic or tag inside it")
+        if tax_id and tax_id != taxonomy.id:
+            p.warn("classification-taxonomy", f"{where}: taxonomy={tax_id!r} but loaded {taxonomy.id!r}")
+    elif probe and not p.taxonomy_unverified:
+        p.taxonomy_unverified = True
+        p.warn("classification-unverified", f"{where}: topic ids were not verified against any taxonomy file")
+
+
+def _check_difficulty(value, p: Problems, where: str) -> None:
+    """Validate a v1.1 difficulty object (legacy easy/medium/hard strings still pass)."""
+    if value is None:
+        return
+    if isinstance(value, str):
+        if value not in LEGACY_DIFFICULTY:
+            p.error("difficulty-legacy", f"{where}.difficulty: {value!r} must be one of {sorted(LEGACY_DIFFICULTY)}")
+        return
+    if not isinstance(value, dict):
+        p.error("difficulty-type", f"{where}.difficulty: must be \"easy|medium|hard\" or an object")
+        return
+
+    _unknown_keys(value, DIFFICULTY_KEYS, p, f"{where}.difficulty")
+
+    level = value.get("level")
+    if not _is_int(level) or not 1 <= level <= DIFFICULTY_LEVEL_MAX:
+        p.error("difficulty-level",
+                f"{where}.difficulty: level must be an integer 1-{DIFFICULTY_LEVEL_MAX}, got {level!r}")
+        level = None
+
+    scale = value.get("scale")
+    if scale is not None and scale not in DIFFICULTY_SCALES:
+        p.error("difficulty-scale", f"{where}.difficulty: scale={scale!r} must be one of {sorted(DIFFICULTY_SCALES)}")
+
+    band = value.get("band")
+    if band is not None:
+        if band not in LEGACY_DIFFICULTY:
+            p.error("difficulty-band", f"{where}.difficulty: band={band!r} must be one of {sorted(LEGACY_DIFFICULTY)}")
+        elif level is not None and scale != "legacy5" and band != band_of_level(level):
+            p.warn("difficulty-band",
+                   f"{where}.difficulty: band={band} disagrees with level={level} "
+                   f"(expected {band_of_level(level)})")
+
+    score = value.get("score")
+    if score is not None:
+        if not _is_num(score) or not 1 <= score <= DIFFICULTY_SCORE_MAX:
+            p.error("difficulty-score",
+                    f"{where}.difficulty: score must be a number 1-{DIFFICULTY_SCORE_MAX}, got {score!r}")
+            score = None
+        elif level is not None and scale != "legacy5" and score_level(score) != level:
+            p.warn("difficulty-score",
+                   f"{where}.difficulty: score={score} implies level {score_level(score)}, but level={level}")
+
+    method = value.get("method")
+    if method is not None and method not in DIFFICULTY_METHODS:
+        p.error("difficulty-method", f"{where}.difficulty: method={method!r} must be one of {sorted(DIFFICULTY_METHODS)}")
+
+    conf = value.get("confidence")
+    if conf is not None and (not _is_num(conf) or not 0 <= conf <= 1):
+        p.error("difficulty-confidence", f"{where}.difficulty: confidence must be 0-1, got {conf!r}")
+
+    comps = value.get("components")
+    if comps is not None:
+        if not isinstance(comps, list):
+            p.error("difficulty-components", f"{where}.difficulty: components must be an array")
+        elif len(comps) > 6:
+            p.error("difficulty-components", f"{where}.difficulty: at most 6 components, got {len(comps)}")
+        else:
+            total_w = 0.0
+            weighted = 0.0
+            for i, c in enumerate(comps):
+                cw = f"{where}.difficulty.components[{i}]"
+                if not isinstance(c, dict):
+                    p.error("difficulty-component", f"{cw}: must be an object")
+                    continue
+                _unknown_keys(c, DIFFICULTY_COMPONENT_KEYS, p, cw)
+                if c.get("method") not in DIFFICULTY_METHODS - {"hybrid"}:
+                    p.error("difficulty-component", f"{cw}: method must be one of {sorted(DIFFICULTY_METHODS - {'hybrid'})}")
+                cs = c.get("score")
+                # component scores live on the same 1-60 range as the fused score
+                if not _is_num(cs) or not 1 <= cs <= DIFFICULTY_SCORE_MAX:
+                    p.error("difficulty-component",
+                            f"{cw}: score must be a number 1-{DIFFICULTY_SCORE_MAX}, got {cs!r}")
+                    continue
+                cwt = c.get("weight", 1.0)
+                if not _is_num(cwt) or not 0 <= cwt <= 1:
+                    p.error("difficulty-component", f"{cw}: weight must be 0-1, got {cwt!r}")
+                    continue
+                total_w += float(cwt)
+                weighted += float(cs) * float(cwt)
+            if total_w > 0 and score is not None:
+                fused = weighted / total_w
+                if abs(fused - float(score)) > 0.15:
+                    p.warn("difficulty-weights",
+                           f"{where}.difficulty: components fuse to {fused:.2f} but score={score} (check weights)")
+
+    evidence = value.get("evidence")
+    if evidence is not None:
+        if not isinstance(evidence, dict):
+            p.error("difficulty-evidence", f"{where}.difficulty: evidence must be an object")
+        else:
+            _unknown_keys(evidence, {"attempts"}, p, f"{where}.difficulty.evidence")
+            attempts = evidence.get("attempts")
+            if attempts is not None and (not _is_int(attempts) or attempts < 0):
+                p.error("difficulty-evidence", f"{where}.difficulty: evidence.attempts must be an integer >= 0")
+
+    reviewed = value.get("reviewed")
+    if reviewed is not None and not isinstance(reviewed, bool):
+        p.error("difficulty-reviewed", f"{where}.difficulty: reviewed must be a boolean")
+
+    at = value.get("at")
+    if at is not None and (not isinstance(at, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", at)):
+        p.error("difficulty-at", f"{where}.difficulty: at must be an ISO date YYYY-MM-DD")
+
+
+def score_level(score: float) -> int:
+    """Same scale as classifier/difficulty/prior.py:to_level (1-20+, open above 20)."""
+    return int(min(DIFFICULTY_SCORE_MAX, max(1.0, round(float(score)))))
+
+
+def _check_question(q, idx: int, p: Problems, paper_dir: Path, section_ids: set[str],
+                    default_tax_id: str | None = None, taxonomy: Taxonomy | None = None) -> None:
     where = f"questions[{idx}]"
     if not isinstance(q, dict):
         p.error("question-type", f"{where}: must be an object")
@@ -230,6 +585,8 @@ def _check_question(q, idx: int, p: Problems, paper_dir: Path, section_ids: set[
         p.warn("answer-proof", f"{where}: proof questions usually have no answer, but answer={answer!r}")
 
     _check_figure(q.get("figure"), p, paper_dir, where)
+    _check_classification(q.get("classification"), p, where, default_tax_id, taxonomy)
+    _check_difficulty(q.get("difficulty"), p, where)
 
 
 def validate(doc, path: Path, legacy_ok: bool = False) -> Problems:
@@ -248,7 +605,7 @@ def validate(doc, path: Path, legacy_ok: bool = False) -> Problems:
     fv = doc.get("format_version")
     if not isinstance(fv, str) or not FORMAT_RE.fullmatch(fv):
         p.error("format-version", f"format_version={fv!r} does not match {FORMAT_RE.pattern}")
-    elif fv != FORMAT_VERSION:
+    elif fv not in SUPPORTED_FORMATS:
         p.warn("format-version", f"format_version={fv}, this validator targets {FORMAT_VERSION}")
 
     _unknown_keys(doc, TOP_KEYS, p, "root")
@@ -292,6 +649,19 @@ def validate(doc, path: Path, legacy_ok: bool = False) -> Problems:
                 else:
                     section_ids.add(sid)
 
+    tax_ref = doc.get("taxonomy")
+    default_tax_id: str | None = None
+    taxonomy: Taxonomy | None = None
+    if tax_ref is not None:
+        if not isinstance(tax_ref, dict):
+            p.error("taxonomy-type", "root: taxonomy must be an object")
+        else:
+            if not isinstance(tax_ref.get("id"), str):
+                p.error("taxonomy-id", "root: taxonomy.id is required")
+            else:
+                default_tax_id = tax_ref["id"]
+            taxonomy = load_taxonomy(tax_ref, path.parent, p)
+
     questions = doc.get("questions")
     if not isinstance(questions, list) or not questions:
         p.error("questions", "questions must be a non-empty array")
@@ -300,7 +670,7 @@ def validate(doc, path: Path, legacy_ok: bool = False) -> Problems:
     seen_qid: set[str] = set()
     seen_n: set[int] = set()
     for i, q in enumerate(questions):
-        _check_question(q, i, p, path.parent, section_ids)
+        _check_question(q, i, p, path.parent, section_ids, default_tax_id, taxonomy)
         if isinstance(q, dict):
             if _is_int(q.get("n")):
                 if q["n"] in seen_n:
@@ -334,8 +704,9 @@ def validate(doc, path: Path, legacy_ok: bool = False) -> Problems:
     return p
 
 
-def upgrade(doc: dict, path: Path, guess_figures: bool = True) -> tuple[dict, list[str]]:
-    """Legacy (no version fields) -> v1.0. Returns (new document, notes)."""
+def upgrade(doc: dict, path: Path, guess_figures: bool = True,
+            mark_pending: bool = False) -> tuple[dict, list[str]]:
+    """Legacy (no version fields) -> v1.1. Returns (new document, notes)."""
     notes: list[str] = []
     now = datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
     questions = []
@@ -361,6 +732,8 @@ def upgrade(doc: dict, path: Path, guess_figures: bool = True) -> tuple[dict, li
             notes.append(f"q{n}: prompt mentions diagram/figure -> reserved a placeholder slot")
         else:
             new["figure"] = None
+        if mark_pending:
+            new["classification"] = {"state": "pending"}
         questions.append(new)
 
     out = {
@@ -383,6 +756,69 @@ def upgrade(doc: dict, path: Path, guess_figures: bool = True) -> tuple[dict, li
     return out, notes
 
 
+def _root_of(taxonomy: "Taxonomy", node_id: str) -> str:
+    """Walk up the parent chain to the level-1 domain."""
+    cur = node_id
+    seen = set()
+    while cur not in seen:
+        seen.add(cur)
+        parent = taxonomy.nodes.get(cur)
+        if not parent:
+            return cur
+        cur = parent
+    return cur
+
+
+def _taxonomy_shape(taxonomy: "Taxonomy") -> str:
+    by_level: dict[int, int] = {}
+    for nid in taxonomy.nodes:
+        level = nid.count(".") + 1
+        by_level[level] = by_level.get(level, 0) + 1
+    parts = " ".join(f"L{lv}={n}" for lv, n in sorted(by_level.items()))
+    return f"{taxonomy.id} v{taxonomy.version} ({parts})"
+
+
+def report_coverage(doc, taxonomy: "Taxonomy | None" = None) -> None:
+    """Print how much of a paper is classified (v1.1)."""
+    qs = [q for q in doc.get("questions") or [] if isinstance(q, dict)]
+    done, pending, reviewed = [], 0, 0
+    primaries: dict[str, int] = {}
+    for q in qs:
+        cls = q.get("classification")
+        if not isinstance(cls, dict):
+            continue
+        if cls.get("state") == "done":
+            done.append(cls)
+            if cls.get("reviewed"):
+                reviewed += 1
+            tid = cls.get("primary")
+            if isinstance(tid, str):
+                primaries[tid] = primaries.get(tid, 0) + 1
+        elif cls.get("state") == "pending":
+            pending += 1
+    total = len(qs)
+    untouched = total - len(done) - pending
+    print(f"  coverage: {len(done)}/{total} classified, {pending} pending, "
+          f"{untouched} not considered, {reviewed} reviewed")
+    if taxonomy is not None:
+        print(f"  taxonomy: {_taxonomy_shape(taxonomy)}")
+    shown = sorted(primaries.items(), key=lambda kv: (-kv[1], kv[0]))
+    if taxonomy is not None:
+        domains: dict[str, int] = {}
+        for tid, count in primaries.items():
+            if taxonomy.has(tid):
+                top = _root_of(taxonomy, tid)
+                domains[top] = domains.get(top, 0) + count
+        if domains:
+            print("  by domain:")
+            for top, count in sorted(domains.items(), key=lambda kv: (-kv[1], kv[0])):
+                print(f"    {count:5d}  {top}")
+    if shown:
+        print("  top primary topics:")
+        for tid, count in shown[:8]:
+            print(f"    {count:5d}  {tid}")
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Validate / upgrade MockTest paper JSON (format v1.0)")
     ap.add_argument("files", nargs="+", type=Path)
@@ -390,6 +826,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--upgrade", action="store_true", help="convert a legacy paper to v1.0, written as <name>.v1.json")
     ap.add_argument("--no-guess-figures", action="store_true", help="do not reserve figure slots from prompt keywords")
     ap.add_argument("--hash", action="store_true", help="print the recomputed content_hash")
+    ap.add_argument("--coverage", action="store_true", help="report classification coverage")
+    ap.add_argument("--mark-pending", action="store_true",
+                    help="with --upgrade: seed classification={state:pending} on every question")
     ap.add_argument("--quiet", action="store_true", help="errors only")
     args = ap.parse_args(argv)
 
@@ -410,7 +849,8 @@ def main(argv: list[str] | None = None) -> int:
             if "format_version" in doc:
                 print(f"{path}: already v{doc.get('format_version')}, skipped")
                 continue
-            new, notes = upgrade(doc, path, guess_figures=not args.no_guess_figures)
+            new, notes = upgrade(doc, path, guess_figures=not args.no_guess_figures,
+                                 mark_pending=args.mark_pending)
             out = path.with_suffix(".v1.json")
             out.write_text(json.dumps(new, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             print(f"{path}: upgraded -> {out.name}")
@@ -426,6 +866,9 @@ def main(argv: list[str] | None = None) -> int:
                     continue
                 print(f"  {'ERROR' if level == 'error' else 'WARN '} [{code}] {msg}")
         print(f"  -> {'OK' if not p.errors else 'FAILED'} ({p.errors} error, {p.warnings} warn)")
+        if args.coverage:
+            tax = load_taxonomy(doc.get("taxonomy"), path.parent, Problems(path))
+            report_coverage(doc, tax)
         if p.errors:
             rc = max(rc, 1)
     return rc

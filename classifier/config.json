@@ -1,0 +1,22 @@
+{
+  "endpoint": "http://192.168.2.103:20300/v1",
+  "model": "qwen3.8-27b",
+  "params": {
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "max_tokens": 3200,
+    "reasoning_effort": "low"
+  },
+  "paths": {
+    "taxonomy": "taxonomy/amc-v1.json",
+    "bank": "bank",
+    "bank_v2": "bank/v2",
+    "out": "classifier/out"
+  },
+  "run": {
+    "concurrency": 4,
+    "retries": 4,
+    "timeout_s": 180,
+    "flush_every": 25
+  }
+}

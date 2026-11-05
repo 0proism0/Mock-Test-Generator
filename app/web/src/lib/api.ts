@@ -229,6 +229,21 @@ async function request<T>(path: string, opts: RequestOptions = {}): Promise<T> {
 
 const post = <T>(path: string, body?: unknown) => request<T>(path, { method: 'POST', body })
 
+export interface TaxonomyNode {
+  en: string
+  zh: string
+  /** Depth in the taxonomy tree: 1 = domain, 2 = topic, 3 = tag. */
+  level: number
+}
+
+/** Label map for the topic taxonomy; questions reference these ids. */
+export interface Taxonomy {
+  id: string
+  version?: string
+  name?: { en?: string; zh?: string }
+  nodes: Record<string, TaxonomyNode>
+}
+
 export const api = {
   // identity
   me: () => request<Me>('/api/me'),
@@ -243,6 +258,7 @@ export const api = {
 
   // banks / tests / results
   banks: () => request<Bank[]>('/api/banks'),
+  taxonomy: () => request<Taxonomy>('/api/taxonomy'),
   tests: () => request<TestSummary[]>('/api/tests'),
   test: (id: string) => request<unknown>(`/api/test/${id}`),
   generate: (slug: string, round?: string | null, version?: 1 | 2) =>
