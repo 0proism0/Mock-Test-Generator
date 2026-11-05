@@ -1,0 +1,3818 @@
+{
+  "id": "amc-v1",
+  "version": "1.0",
+  "name": {
+    "en": "AMC Topic Taxonomy (AMC 8/10/12)",
+    "zh": "AMC 考点分类体系"
+  },
+  "description": "Three-level taxonomy for AMC 8/10/12 style problems: domain (level 1) -> topic (level 2) -> tag (level 3). Drafted by the repo owner, not an official MAA standard.",
+  "id_pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)*$",
+  "updated_at": "2026-11-04",
+  "levels": {
+    "1": "domain - the mutually exclusive big bucket used for share-of-paper statistics",
+    "2": "topic - the primary knowledge point a question is filed under",
+    "3": "tag - fine-grained reusable problem type, freely multi-selectable"
+  },
+  "conventions": {
+    "primary": "level-2 topic when it is decisive, otherwise the single most specific level-3 tag; never a level-1 domain",
+    "multi_label": true,
+    "methods_axis": "root 'methods' holds cross-topic techniques; it is a method tag axis, not a knowledge domain, and may be combined with any knowledge domain",
+    "synonyms": "one canonical id per concept; alternative names live in the node's 'aliases' array, never as extra ids",
+    "granularity": "level-3 tags must be reusable across years; do not invent a tag per question",
+    "difficulty": "kept as a separate field on the question (easy/medium/hard), never baked into the taxonomy"
+  },
+  "counts": {
+    "domains": 8,
+    "topics": 86,
+    "tags": 339
+  },
+  "roots": [
+    {
+      "id": "number_theory",
+      "level": 1,
+      "kind": "topic",
+      "label": {
+        "en": "Number Theory",
+        "zh": "数论"
+      },
+      "children": [
+        {
+          "id": "number_theory.divisibility",
+          "level": 2,
+          "label": {
+            "en": "Divisibility & Factors",
+            "zh": "整除与因数"
+          },
+          "children": [
+            {
+              "id": "number_theory.divisibility.divisibility_test",
+              "level": 3,
+              "label": {
+                "en": "Divisibility Tests",
+                "zh": "整除判定"
+              }
+            },
+            {
+              "id": "number_theory.divisibility.multiples_factors",
+              "level": 3,
+              "label": {
+                "en": "Multiples & Factors",
+                "zh": "因数与倍数"
+              }
+            },
+            {
+              "id": "number_theory.divisibility.prime_factorization",
+              "level": 3,
+              "label": {
+                "en": "Prime Factorization",
+                "zh": "质因数分解"
+              }
+            },
+            {
+              "id": "number_theory.divisibility.factor_count",
+              "level": 3,
+              "label": {
+                "en": "Number of Divisors",
+                "zh": "因数个数"
+              }
+            },
+            {
+              "id": "number_theory.divisibility.factor_sum",
+              "level": 3,
+              "label": {
+                "en": "Sum of Divisors",
+                "zh": "因数和"
+              }
+            }
+          ]
+        },
+        {
+          "id": "number_theory.gcd_lcm",
+          "level": 2,
+          "label": {
+            "en": "GCD & LCM",
+            "zh": "最大公因数与最小公倍数"
+          },
+          "children": [
+            {
+              "id": "number_theory.gcd_lcm.gcd_lcm_compute",
+              "level": 3,
+              "label": {
+                "en": "GCD / LCM Computation",
+                "zh": "GCD/LCM"
+              }
+            },
+            {
+              "id": "number_theory.gcd_lcm.coprime",
+              "level": 3,
+              "label": {
+                "en": "Coprimality",
+                "zh": "互质"
+              }
+            },
+            {
+              "id": "number_theory.gcd_lcm.euclidean_algorithm",
+              "level": 3,
+              "label": {
+                "en": "Euclidean Algorithm",
+                "zh": "辗转相除法"
+              }
+            },
+            {
+              "id": "number_theory.gcd_lcm.integer_grouping",
+              "level": 3,
+              "label": {
+                "en": "Integer Grouping",
+                "zh": "整数配组"
+              }
+            }
+          ]
+        },
+        {
+          "id": "number_theory.remainders",
+          "level": 2,
+          "label": {
+            "en": "Remainders & Congruence",
+            "zh": "余数与同余"
+          },
+          "children": [
+            {
+              "id": "number_theory.remainders.remainder_cycles",
+              "level": 3,
+              "label": {
+                "en": "Remainder Cycles",
+                "zh": "余数周期"
+              }
+            },
+            {
+              "id": "number_theory.remainders.modular_arithmetic",
+              "level": 3,
+              "label": {
+                "en": "Modular Arithmetic",
+                "zh": "模运算"
+              }
+            },
+            {
+              "id": "number_theory.remainders.congruence_equations",
+              "level": 3,
+              "label": {
+                "en": "Congruence Equations",
+                "zh": "同余方程"
+              }
+            },
+            {
+              "id": "number_theory.remainders.negative_remainders",
+              "level": 3,
+              "label": {
+                "en": "Negative Remainders",
+                "zh": "负余数"
+              }
+            },
+            {
+              "id": "number_theory.remainders.crt",
+              "level": 3,
+              "label": {
+                "en": "Chinese Remainder Theorem",
+                "zh": "中国剩余定理"
+              }
+            }
+          ]
+        },
+        {
+          "id": "number_theory.parity",
+          "level": 2,
+          "label": {
+            "en": "Parity & Integer Properties",
+            "zh": "奇偶性与整数性质"
+          },
+          "children": [
+            {
+              "id": "number_theory.parity.parity_analysis",
+              "level": 3,
+              "label": {
+                "en": "Parity Analysis",
+                "zh": "奇偶分析"
+              }
+            },
+            {
+              "id": "number_theory.parity.consecutive_integers",
+              "level": 3,
+              "label": {
+                "en": "Consecutive Integers",
+                "zh": "连续整数"
+              }
+            },
+            {
+              "id": "number_theory.parity.integer_partitioning",
+              "level": 3,
+              "label": {
+                "en": "Integer Partitioning",
+                "zh": "整数分组"
+              }
+            },
+            {
+              "id": "number_theory.parity.invariants",
+              "level": 3,
+              "label": {
+                "en": "Invariants",
+                "zh": "不变量"
+              }
+            }
+          ],
+          "aliases": [
+            "odd/even"
+          ]
+        },
+        {
+          "id": "number_theory.primes",
+          "level": 2,
+          "label": {
+            "en": "Primes & Composites",
+            "zh": "质数与合数"
+          },
+          "children": [
+            {
+              "id": "number_theory.primes.primality_test",
+              "level": 3,
+              "label": {
+                "en": "Primality Testing",
+                "zh": "质数判定"
+              }
+            },
+            {
+              "id": "number_theory.primes.prime_distribution",
+              "level": 3,
+              "label": {
+                "en": "Prime Distribution",
+                "zh": "质数分布"
+              }
+            },
+            {
+              "id": "number_theory.primes.small_primes",
+              "level": 3,
+              "label": {
+                "en": "Small-Primes Casework",
+                "zh": "小质数分类讨论"
+              }
+            }
+          ],
+          "aliases": [
+            "prime"
+          ]
+        },
+        {
+          "id": "number_theory.diophantine",
+          "level": 2,
+          "label": {
+            "en": "Integer Equations",
+            "zh": "整数方程"
+          },
+          "children": [
+            {
+              "id": "number_theory.diophantine.diophantine_equations",
+              "level": 3,
+              "label": {
+                "en": "Diophantine Equations",
+                "zh": "不定方程"
+              }
+            },
+            {
+              "id": "number_theory.diophantine.nonnegative_solutions",
+              "level": 3,
+              "label": {
+                "en": "Nonnegative Integer Solutions",
+                "zh": "非负整数解"
+              }
+            },
+            {
+              "id": "number_theory.diophantine.factoring_for_solutions",
+              "level": 3,
+              "label": {
+                "en": "Factoring for Integer Solutions",
+                "zh": "因数分解求整数解"
+              }
+            }
+          ],
+          "aliases": [
+            "diophantine"
+          ]
+        },
+        {
+          "id": "number_theory.bases",
+          "level": 2,
+          "label": {
+            "en": "Numeral Bases & Digits",
+            "zh": "进位制与数字"
+          },
+          "children": [
+            {
+              "id": "number_theory.bases.binary",
+              "level": 3,
+              "label": {
+                "en": "Binary",
+                "zh": "二进制"
+              }
+            },
+            {
+              "id": "number_theory.bases.base_conversion",
+              "level": 3,
+              "label": {
+                "en": "Other Base Conversion",
+                "zh": "其他进制转换"
+              }
+            },
+            {
+              "id": "number_theory.bases.digit_sum",
+              "level": 3,
+              "label": {
+                "en": "Digit Sum",
+                "zh": "数位和"
+              }
+            },
+            {
+              "id": "number_theory.bases.digit_reversal",
+              "level": 3,
+              "label": {
+                "en": "Digit Reversal",
+                "zh": "数字反转"
+              }
+            },
+            {
+              "id": "number_theory.bases.cyclic_numbers",
+              "level": 3,
+              "label": {
+                "en": "Cyclic Numbers",
+                "zh": "循环数"
+              }
+            }
+          ],
+          "aliases": [
+            "base",
+            "digits"
+          ]
+        },
+        {
+          "id": "number_theory.squares",
+          "level": 2,
+          "label": {
+            "en": "Perfect Squares & Powers",
+            "zh": "完全平方与完全幂"
+          },
+          "children": [
+            {
+              "id": "number_theory.squares.perfect_square_test",
+              "level": 3,
+              "label": {
+                "en": "Perfect-Square Testing",
+                "zh": "平方数判定"
+              }
+            },
+            {
+              "id": "number_theory.squares.difference_of_squares",
+              "level": 3,
+              "label": {
+                "en": "Difference of Squares",
+                "zh": "平方差"
+              }
+            },
+            {
+              "id": "number_theory.squares.square_endings",
+              "level": 3,
+              "label": {
+                "en": "Last Digits of Squares",
+                "zh": "平方数尾数"
+              }
+            },
+            {
+              "id": "number_theory.squares.exponent_divisibility",
+              "level": 3,
+              "label": {
+                "en": "Exponent Divisibility",
+                "zh": "指数整除"
+              }
+            }
+          ],
+          "aliases": [
+            "power"
+          ]
+        },
+        {
+          "id": "number_theory.factorial",
+          "level": 2,
+          "label": {
+            "en": "Factorials & Trailing Zeros",
+            "zh": "阶乘与末尾零"
+          },
+          "children": [
+            {
+              "id": "number_theory.factorial.factorial_divisibility",
+              "level": 3,
+              "label": {
+                "en": "Factorial Divisibility",
+                "zh": "阶乘整除"
+              }
+            },
+            {
+              "id": "number_theory.factorial.trailing_zeros",
+              "level": 3,
+              "label": {
+                "en": "Trailing Zeros",
+                "zh": "末尾零个数"
+              }
+            },
+            {
+              "id": "number_theory.factorial.factorial_prime_exponents",
+              "level": 3,
+              "label": {
+                "en": "Prime Exponents in Factorials",
+                "zh": "阶乘中的质因数指数"
+              }
+            }
+          ]
+        },
+        {
+          "id": "number_theory.floor",
+          "level": 2,
+          "label": {
+            "en": "Integer Part & Floor",
+            "zh": "整数取整"
+          },
+          "children": [
+            {
+              "id": "number_theory.floor.floor_function",
+              "level": 3,
+              "label": {
+                "en": "Floor Function",
+                "zh": "取整函数"
+              }
+            },
+            {
+              "id": "number_theory.floor.fractional_part",
+              "level": 3,
+              "label": {
+                "en": "Fractional Part",
+                "zh": "分数部分"
+              }
+            },
+            {
+              "id": "number_theory.floor.floor_ceiling",
+              "level": 3,
+              "label": {
+                "en": "Floor & Ceiling",
+                "zh": "地板与天花板函数"
+              }
+            },
+            {
+              "id": "number_theory.floor.nested_floor",
+              "level": 3,
+              "label": {
+                "en": "Nested Floors",
+                "zh": "取整嵌套"
+              }
+            }
+          ],
+          "aliases": [
+            "floor",
+            "gauss",
+            "下取整"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algebra",
+      "level": 1,
+      "kind": "topic",
+      "label": {
+        "en": "Algebra & Functions",
+        "zh": "代数与函数"
+      },
+      "children": [
+        {
+          "id": "algebra.identities",
+          "level": 2,
+          "label": {
+            "en": "Algebraic Manipulation",
+            "zh": "代数式恒等变形"
+          },
+          "children": [
+            {
+              "id": "algebra.identities.completing_square",
+              "level": 3,
+              "label": {
+                "en": "Completing the Square",
+                "zh": "配方"
+              }
+            },
+            {
+              "id": "algebra.identities.factoring",
+              "level": 3,
+              "label": {
+                "en": "Factoring",
+                "zh": "因数分解"
+              }
+            },
+            {
+              "id": "algebra.identities.difference_of_squares_alg",
+              "level": 3,
+              "label": {
+                "en": "Difference of Squares",
+                "zh": "平方差"
+              }
+            },
+            {
+              "id": "algebra.identities.cubes_sum_difference",
+              "level": 3,
+              "label": {
+                "en": "Sum/Difference of Cubes",
+                "zh": "立方和差"
+              }
+            },
+            {
+              "id": "algebra.identities.symmetric_forms",
+              "level": 3,
+              "label": {
+                "en": "Symmetric Expressions",
+                "zh": "对称式"
+              }
+            }
+          ],
+          "aliases": [
+            "identity"
+          ]
+        },
+        {
+          "id": "algebra.equations",
+          "level": 2,
+          "label": {
+            "en": "Equations & Systems",
+            "zh": "方程与方程组"
+          },
+          "children": [
+            {
+              "id": "algebra.equations.linear_quadratic",
+              "level": 3,
+              "label": {
+                "en": "Linear / Quadratic Equations",
+                "zh": "一元一次/二次"
+              }
+            },
+            {
+              "id": "algebra.equations.vieta",
+              "level": 3,
+              "label": {
+                "en": "Vieta's Formulas",
+                "zh": "韦达定理"
+              }
+            },
+            {
+              "id": "algebra.equations.roots_and_coefficients",
+              "level": 3,
+              "label": {
+                "en": "Roots & Coefficients",
+                "zh": "根与系数"
+              }
+            },
+            {
+              "id": "algebra.equations.symmetric_systems",
+              "level": 3,
+              "label": {
+                "en": "Symmetric Systems",
+                "zh": "对称方程组"
+              }
+            }
+          ]
+        },
+        {
+          "id": "algebra.inequalities",
+          "level": 2,
+          "label": {
+            "en": "Inequalities & Extrema",
+            "zh": "不等式与最值"
+          },
+          "children": [
+            {
+              "id": "algebra.inequalities.am_gm",
+              "level": 3,
+              "label": {
+                "en": "AM-GM",
+                "zh": "AM-GM"
+              }
+            },
+            {
+              "id": "algebra.inequalities.cauchy",
+              "level": 3,
+              "label": {
+                "en": "Cauchy-Schwarz",
+                "zh": "柯西不等式"
+              }
+            },
+            {
+              "id": "algebra.inequalities.squares_nonnegative",
+              "level": 3,
+              "label": {
+                "en": "Squares Nonnegative",
+                "zh": "平方非负"
+              }
+            },
+            {
+              "id": "algebra.inequalities.boundary_extrema",
+              "level": 3,
+              "label": {
+                "en": "Boundary Extrema",
+                "zh": "边界最值"
+              }
+            }
+          ]
+        },
+        {
+          "id": "algebra.functions",
+          "level": 2,
+          "label": {
+            "en": "Functions & Graphs",
+            "zh": "函数与图像"
+          },
+          "children": [
+            {
+              "id": "algebra.functions.linear_quadratic_graphs",
+              "level": 3,
+              "label": {
+                "en": "Linear / Quadratic Graphs",
+                "zh": "一次/二次函数"
+              }
+            },
+            {
+              "id": "algebra.functions.absolute_value_function",
+              "level": 3,
+              "label": {
+                "en": "Absolute Value Function",
+                "zh": "绝对值函数"
+              }
+            },
+            {
+              "id": "algebra.functions.piecewise_functions",
+              "level": 3,
+              "label": {
+                "en": "Piecewise Functions",
+                "zh": "分段函数"
+              }
+            },
+            {
+              "id": "algebra.functions.function_intersections",
+              "level": 3,
+              "label": {
+                "en": "Function Intersections",
+                "zh": "函数交点"
+              }
+            }
+          ]
+        },
+        {
+          "id": "algebra.sequences",
+          "level": 2,
+          "label": {
+            "en": "Sequences & Series",
+            "zh": "数列与级数"
+          },
+          "children": [
+            {
+              "id": "algebra.sequences.arithmetic_sequence",
+              "level": 3,
+              "label": {
+                "en": "Arithmetic Sequences",
+                "zh": "等差数列"
+              }
+            },
+            {
+              "id": "algebra.sequences.geometric_sequence",
+              "level": 3,
+              "label": {
+                "en": "Geometric Sequences",
+                "zh": "等比数列"
+              }
+            },
+            {
+              "id": "algebra.sequences.telescoping",
+              "level": 3,
+              "label": {
+                "en": "Telescoping Sums",
+                "zh": "裂项求和"
+              }
+            },
+            {
+              "id": "algebra.sequences.cyclic_sequences",
+              "level": 3,
+              "label": {
+                "en": "Cyclic Sequences",
+                "zh": "循环数列"
+              }
+            },
+            {
+              "id": "algebra.sequences.recurrence_sequences",
+              "level": 3,
+              "label": {
+                "en": "Recurrence Sequences",
+                "zh": "递推数列"
+              }
+            }
+          ],
+          "aliases": [
+            "series"
+          ]
+        },
+        {
+          "id": "algebra.exponents",
+          "level": 2,
+          "label": {
+            "en": "Exponents & Radicals",
+            "zh": "指数与根式"
+          },
+          "children": [
+            {
+              "id": "algebra.exponents.exponent_rules",
+              "level": 3,
+              "label": {
+                "en": "Exponent Rules",
+                "zh": "指数规律"
+              }
+            },
+            {
+              "id": "algebra.exponents.radical_simplification",
+              "level": 3,
+              "label": {
+                "en": "Radical Simplification",
+                "zh": "根式化简"
+              }
+            },
+            {
+              "id": "algebra.exponents.rationalizing",
+              "level": 3,
+              "label": {
+                "en": "Rationalizing Denominators",
+                "zh": "分母有理化"
+              }
+            },
+            {
+              "id": "algebra.exponents.exponential_equations",
+              "level": 3,
+              "label": {
+                "en": "Exponential Equations",
+                "zh": "指数方程"
+              }
+            }
+          ],
+          "aliases": [
+            "radical",
+            "roots"
+          ]
+        },
+        {
+          "id": "algebra.polynomials",
+          "level": 2,
+          "label": {
+            "en": "Polynomials",
+            "zh": "多项式"
+          },
+          "children": [
+            {
+              "id": "algebra.polynomials.remainder_theorem",
+              "level": 3,
+              "label": {
+                "en": "Polynomial Remainder Theorem",
+                "zh": "多项式余数"
+              }
+            },
+            {
+              "id": "algebra.polynomials.factor_theorem",
+              "level": 3,
+              "label": {
+                "en": "Factor Theorem",
+                "zh": "因式定理"
+              }
+            },
+            {
+              "id": "algebra.polynomials.polynomial_evaluation",
+              "level": 3,
+              "label": {
+                "en": "Substitution & Evaluation",
+                "zh": "代入求值"
+              }
+            },
+            {
+              "id": "algebra.polynomials.coefficient_matching",
+              "level": 3,
+              "label": {
+                "en": "Coefficient Matching",
+                "zh": "系数比较"
+              }
+            }
+          ]
+        },
+        {
+          "id": "algebra.absolute_value",
+          "level": 2,
+          "label": {
+            "en": "Absolute Value & Casework",
+            "zh": "绝对值与分段"
+          },
+          "children": [
+            {
+              "id": "algebra.absolute_value.absolute_value_equations",
+              "level": 3,
+              "label": {
+                "en": "Absolute Value Equations",
+                "zh": "绝对值方程"
+              }
+            },
+            {
+              "id": "algebra.absolute_value.distance_model",
+              "level": 3,
+              "label": {
+                "en": "Distance Model",
+                "zh": "距离模型"
+              }
+            },
+            {
+              "id": "algebra.absolute_value.case_splitting",
+              "level": 3,
+              "label": {
+                "en": "Case Splitting",
+                "zh": "分段讨论"
+              }
+            }
+          ]
+        },
+        {
+          "id": "algebra.substitution",
+          "level": 2,
+          "label": {
+            "en": "Substitution & Symmetry",
+            "zh": "代换与对称"
+          },
+          "children": [
+            {
+              "id": "algebra.substitution.whole_substitution",
+              "level": 3,
+              "label": {
+                "en": "Whole-Expression Substitution",
+                "zh": "整体代换"
+              }
+            },
+            {
+              "id": "algebra.substitution.reciprocal_substitution",
+              "level": 3,
+              "label": {
+                "en": "Reciprocal Substitution",
+                "zh": "倒数代换"
+              }
+            },
+            {
+              "id": "algebra.substitution.symmetric_polynomials",
+              "level": 3,
+              "label": {
+                "en": "Symmetric Polynomials",
+                "zh": "对称多项式"
+              }
+            },
+            {
+              "id": "algebra.substitution.degree_reduction",
+              "level": 3,
+              "label": {
+                "en": "Degree Reduction",
+                "zh": "降次"
+              }
+            }
+          ]
+        },
+        {
+          "id": "algebra.algebra_applications",
+          "level": 2,
+          "label": {
+            "en": "Applied Algebra",
+            "zh": "代数应用问题"
+          },
+          "children": [
+            {
+              "id": "algebra.algebra_applications.age_problems",
+              "level": 3,
+              "label": {
+                "en": "Age Problems",
+                "zh": "年龄问题"
+              }
+            },
+            {
+              "id": "algebra.algebra_applications.proportional_allocation",
+              "level": 3,
+              "label": {
+                "en": "Proportional Allocation",
+                "zh": "比例分配"
+              }
+            },
+            {
+              "id": "algebra.algebra_applications.mixture_algebra",
+              "level": 3,
+              "label": {
+                "en": "Mixture Problems",
+                "zh": "浓度混合"
+              }
+            },
+            {
+              "id": "algebra.algebra_applications.profit_problems",
+              "level": 3,
+              "label": {
+                "en": "Profit Problems",
+                "zh": "利润问题"
+              }
+            }
+          ]
+        },
+        {
+          "id": "algebra.complex_numbers",
+          "level": 2,
+          "label": {
+            "en": "Complex Numbers",
+            "zh": "复数基础"
+          },
+          "children": [
+            {
+              "id": "algebra.complex_numbers.imaginary_unit",
+              "level": 3,
+              "label": {
+                "en": "Imaginary Unit",
+                "zh": "虚数单位"
+              }
+            },
+            {
+              "id": "algebra.complex_numbers.complex_operations",
+              "level": 3,
+              "label": {
+                "en": "Complex Arithmetic",
+                "zh": "复数运算"
+              }
+            },
+            {
+              "id": "algebra.complex_numbers.complex_plane_distance",
+              "level": 3,
+              "label": {
+                "en": "Distance in the Complex Plane",
+                "zh": "复平面距离"
+              }
+            }
+          ],
+          "aliases": [
+            "complex"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plane_geometry",
+      "level": 1,
+      "kind": "topic",
+      "label": {
+        "en": "Plane Geometry",
+        "zh": "平面几何"
+      },
+      "children": [
+        {
+          "id": "plane_geometry.triangle_basics",
+          "level": 2,
+          "label": {
+            "en": "Triangle Basics",
+            "zh": "三角形基本性质"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.triangle_basics.angle_chasing",
+              "level": 3,
+              "label": {
+                "en": "Angle Chasing",
+                "zh": "角度追踪"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_basics.exterior_angle",
+              "level": 3,
+              "label": {
+                "en": "Exterior Angle Theorem",
+                "zh": "外角定理"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_basics.triangle_inequality",
+              "level": 3,
+              "label": {
+                "en": "Triangle Inequality",
+                "zh": "三角形不等式"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_basics.isosceles_equilateral",
+              "level": 3,
+              "label": {
+                "en": "Isosceles & Equilateral",
+                "zh": "等腰与等边三角形"
+              }
+            }
+          ]
+        },
+        {
+          "id": "plane_geometry.right_triangles",
+          "level": 2,
+          "label": {
+            "en": "Right Triangles",
+            "zh": "直角三角形"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.right_triangles.pythagorean_theorem",
+              "level": 3,
+              "label": {
+                "en": "Pythagorean Theorem",
+                "zh": "勾股定理"
+              }
+            },
+            {
+              "id": "plane_geometry.right_triangles.special_right_triangles",
+              "level": 3,
+              "label": {
+                "en": "Special Right Triangles",
+                "zh": "特殊直角三角形"
+              }
+            },
+            {
+              "id": "plane_geometry.right_triangles.median_to_hypotenuse",
+              "level": 3,
+              "label": {
+                "en": "Median to the Hypotenuse",
+                "zh": "斜边中线"
+              }
+            },
+            {
+              "id": "plane_geometry.right_triangles.right_triangle_incircle",
+              "level": 3,
+              "label": {
+                "en": "Incircle of a Right Triangle",
+                "zh": "直角三角形内切圆"
+              }
+            }
+          ],
+          "aliases": [
+            "pythagoras",
+            "勾股"
+          ]
+        },
+        {
+          "id": "plane_geometry.triangle_centers",
+          "level": 2,
+          "label": {
+            "en": "Triangle Centers & Cevians",
+            "zh": "三角形特殊点线"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.triangle_centers.incenter",
+              "level": 3,
+              "label": {
+                "en": "Incenter",
+                "zh": "内心"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_centers.circumcenter",
+              "level": 3,
+              "label": {
+                "en": "Circumcenter",
+                "zh": "外心"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_centers.centroid",
+              "level": 3,
+              "label": {
+                "en": "Centroid",
+                "zh": "重心"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_centers.orthocenter",
+              "level": 3,
+              "label": {
+                "en": "Orthocenter",
+                "zh": "垂心"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_centers.angle_bisector",
+              "level": 3,
+              "label": {
+                "en": "Angle Bisector",
+                "zh": "角平分线"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_centers.median",
+              "level": 3,
+              "label": {
+                "en": "Median",
+                "zh": "中线"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_centers.altitude",
+              "level": 3,
+              "label": {
+                "en": "Altitude",
+                "zh": "高线"
+              }
+            }
+          ]
+        },
+        {
+          "id": "plane_geometry.similarity",
+          "level": 2,
+          "label": {
+            "en": "Similarity & Congruence",
+            "zh": "相似与全等"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.similarity.similar_triangles",
+              "level": 3,
+              "label": {
+                "en": "AA / SAS / SSS Similarity",
+                "zh": "AA/SAS/SSS相似"
+              }
+            },
+            {
+              "id": "plane_geometry.similarity.congruent_triangles",
+              "level": 3,
+              "label": {
+                "en": "Congruence",
+                "zh": "全等"
+              }
+            },
+            {
+              "id": "plane_geometry.similarity.proportional_segments",
+              "level": 3,
+              "label": {
+                "en": "Proportional Segments",
+                "zh": "比例线段"
+              }
+            },
+            {
+              "id": "plane_geometry.similarity.parallel_line_ratios",
+              "level": 3,
+              "label": {
+                "en": "Parallel Lines & Ratios",
+                "zh": "平行线截比"
+              }
+            }
+          ],
+          "aliases": [
+            "congruent"
+          ]
+        },
+        {
+          "id": "plane_geometry.triangle_area",
+          "level": 2,
+          "label": {
+            "en": "Triangle Area",
+            "zh": "三角形面积"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.triangle_area.equal_altitude_ratio",
+              "level": 3,
+              "label": {
+                "en": "Equal Altitude Area Ratio",
+                "zh": "等高面积比"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_area.equal_base_ratio",
+              "level": 3,
+              "label": {
+                "en": "Equal Base Area Ratio",
+                "zh": "共底面积比"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_area.heron",
+              "level": 3,
+              "label": {
+                "en": "Heron's Formula",
+                "zh": "海伦公式"
+              }
+            },
+            {
+              "id": "plane_geometry.triangle_area.area_cut_and_paste",
+              "level": 3,
+              "label": {
+                "en": "Area Cut & Paste",
+                "zh": "面积割补"
+              }
+            }
+          ]
+        },
+        {
+          "id": "plane_geometry.circles_and_angles",
+          "level": 2,
+          "label": {
+            "en": "Circles & Inscribed Angles",
+            "zh": "圆与圆周角"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.circles_and_angles.inscribed_angle",
+              "level": 3,
+              "label": {
+                "en": "Inscribed Angle",
+                "zh": "圆周角"
+              }
+            },
+            {
+              "id": "plane_geometry.circles_and_angles.central_angle",
+              "level": 3,
+              "label": {
+                "en": "Central Angle",
+                "zh": "圆心角"
+              }
+            },
+            {
+              "id": "plane_geometry.circles_and_angles.tangent_chord_angle",
+              "level": 3,
+              "label": {
+                "en": "Tangent-Chord Angle",
+                "zh": "弦切角"
+              }
+            },
+            {
+              "id": "plane_geometry.circles_and_angles.tangent_lengths",
+              "level": 3,
+              "label": {
+                "en": "Tangent Lengths",
+                "zh": "切线长"
+              }
+            },
+            {
+              "id": "plane_geometry.circles_and_angles.chord_lengths",
+              "level": 3,
+              "label": {
+                "en": "Chord Lengths",
+                "zh": "弦长"
+              }
+            }
+          ],
+          "aliases": [
+            "circle"
+          ]
+        },
+        {
+          "id": "plane_geometry.circle_metrics",
+          "level": 2,
+          "label": {
+            "en": "Circle Metric Relations",
+            "zh": "圆的度量关系"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.circle_metrics.intersecting_chords",
+              "level": 3,
+              "label": {
+                "en": "Intersecting Chords",
+                "zh": "相交弦定理"
+              }
+            },
+            {
+              "id": "plane_geometry.circle_metrics.secant_theorem",
+              "level": 3,
+              "label": {
+                "en": "Secant Theorem",
+                "zh": "割线定理"
+              }
+            },
+            {
+              "id": "plane_geometry.circle_metrics.tangent_secant",
+              "level": 3,
+              "label": {
+                "en": "Tangent-Secant Theorem",
+                "zh": "切割线定理"
+              }
+            },
+            {
+              "id": "plane_geometry.circle_metrics.power_of_a_point",
+              "level": 3,
+              "label": {
+                "en": "Power of a Point",
+                "zh": "圆幂"
+              }
+            }
+          ]
+        },
+        {
+          "id": "plane_geometry.incircle_circumcircle",
+          "level": 2,
+          "label": {
+            "en": "Incircles & Circumcircles",
+            "zh": "内切圆与外接圆"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.incircle_circumcircle.incircle_radius",
+              "level": 3,
+              "label": {
+                "en": "Inradius",
+                "zh": "内切圆半径"
+              }
+            },
+            {
+              "id": "plane_geometry.incircle_circumcircle.circumradius",
+              "level": 3,
+              "label": {
+                "en": "Circumradius",
+                "zh": "外接圆半径"
+              }
+            },
+            {
+              "id": "plane_geometry.incircle_circumcircle.tangent_segment_lengths",
+              "level": 3,
+              "label": {
+                "en": "Tangent Segment Lengths",
+                "zh": "切点长度"
+              }
+            },
+            {
+              "id": "plane_geometry.incircle_circumcircle.incenter_circumcenter_relation",
+              "level": 3,
+              "label": {
+                "en": "Incenter-Circumcenter Relation",
+                "zh": "内外心关系"
+              }
+            }
+          ]
+        },
+        {
+          "id": "plane_geometry.quadrilaterals",
+          "level": 2,
+          "label": {
+            "en": "Quadrilaterals & Polygons",
+            "zh": "四边形与多边形"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.quadrilaterals.parallelogram",
+              "level": 3,
+              "label": {
+                "en": "Parallelogram",
+                "zh": "平行四边形"
+              }
+            },
+            {
+              "id": "plane_geometry.quadrilaterals.trapezoid",
+              "level": 3,
+              "label": {
+                "en": "Trapezoid",
+                "zh": "梯形"
+              }
+            },
+            {
+              "id": "plane_geometry.quadrilaterals.rhombus",
+              "level": 3,
+              "label": {
+                "en": "Rhombus",
+                "zh": "菱形"
+              }
+            },
+            {
+              "id": "plane_geometry.quadrilaterals.regular_polygon",
+              "level": 3,
+              "label": {
+                "en": "Regular Polygon",
+                "zh": "正多边形"
+              }
+            },
+            {
+              "id": "plane_geometry.quadrilaterals.angle_sums",
+              "level": 3,
+              "label": {
+                "en": "Interior/Exterior Angle Sums",
+                "zh": "内外角和"
+              }
+            }
+          ],
+          "aliases": [
+            "polygon"
+          ]
+        },
+        {
+          "id": "plane_geometry.coordinate_geometry",
+          "level": 2,
+          "label": {
+            "en": "Coordinate Geometry",
+            "zh": "坐标几何"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.coordinate_geometry.distance_formula",
+              "level": 3,
+              "label": {
+                "en": "Distance Formula",
+                "zh": "两点距离"
+              }
+            },
+            {
+              "id": "plane_geometry.coordinate_geometry.midpoint_formula",
+              "level": 3,
+              "label": {
+                "en": "Midpoint Formula",
+                "zh": "中点公式"
+              }
+            },
+            {
+              "id": "plane_geometry.coordinate_geometry.slope",
+              "level": 3,
+              "label": {
+                "en": "Slope",
+                "zh": "斜率"
+              }
+            },
+            {
+              "id": "plane_geometry.coordinate_geometry.line_equations",
+              "level": 3,
+              "label": {
+                "en": "Line Equations",
+                "zh": "直线方程"
+              }
+            },
+            {
+              "id": "plane_geometry.coordinate_geometry.shoelace_area",
+              "level": 3,
+              "label": {
+                "en": "Area by Coordinates",
+                "zh": "面积坐标法"
+              }
+            }
+          ],
+          "aliases": [
+            "analytic geometry"
+          ]
+        },
+        {
+          "id": "plane_geometry.transformations",
+          "level": 2,
+          "label": {
+            "en": "Geometric Transformations",
+            "zh": "几何变换"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.transformations.translation",
+              "level": 3,
+              "label": {
+                "en": "Translation",
+                "zh": "平移"
+              }
+            },
+            {
+              "id": "plane_geometry.transformations.rotation",
+              "level": 3,
+              "label": {
+                "en": "Rotation",
+                "zh": "旋转"
+              }
+            },
+            {
+              "id": "plane_geometry.transformations.reflection",
+              "level": 3,
+              "label": {
+                "en": "Reflection",
+                "zh": "轴对称"
+              }
+            },
+            {
+              "id": "plane_geometry.transformations.point_symmetry",
+              "level": 3,
+              "label": {
+                "en": "Central Symmetry",
+                "zh": "中心对称"
+              }
+            },
+            {
+              "id": "plane_geometry.transformations.homothety",
+              "level": 3,
+              "label": {
+                "en": "Homothety / Dilation",
+                "zh": "位似"
+              }
+            },
+            {
+              "id": "plane_geometry.transformations.folding",
+              "level": 3,
+              "label": {
+                "en": "Folding",
+                "zh": "折叠"
+              }
+            }
+          ]
+        },
+        {
+          "id": "plane_geometry.locus_extrema",
+          "level": 2,
+          "label": {
+            "en": "Loci & Geometric Extrema",
+            "zh": "几何轨迹与最值"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.locus_extrema.shortest_path",
+              "level": 3,
+              "label": {
+                "en": "Shortest Path",
+                "zh": "最短路径"
+              }
+            },
+            {
+              "id": "plane_geometry.locus_extrema.reflection_method",
+              "level": 3,
+              "label": {
+                "en": "Reflection Method",
+                "zh": "反射法"
+              }
+            },
+            {
+              "id": "plane_geometry.locus_extrema.moving_point_locus",
+              "level": 3,
+              "label": {
+                "en": "Moving-Point Locus",
+                "zh": "动点轨迹"
+              }
+            },
+            {
+              "id": "plane_geometry.locus_extrema.minimum_distance",
+              "level": 3,
+              "label": {
+                "en": "Minimum Distance",
+                "zh": "最小距离"
+              }
+            }
+          ]
+        },
+        {
+          "id": "plane_geometry.trigonometry",
+          "level": 2,
+          "label": {
+            "en": "Trigonometry",
+            "zh": "三角比与三角函数"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.trigonometry.sine_cosine_tangent",
+              "level": 3,
+              "label": {
+                "en": "sin / cos / tan",
+                "zh": "sin/cos/tan"
+              }
+            },
+            {
+              "id": "plane_geometry.trigonometry.special_angles",
+              "level": 3,
+              "label": {
+                "en": "Special Angles",
+                "zh": "特殊角"
+              }
+            },
+            {
+              "id": "plane_geometry.trigonometry.law_of_sines",
+              "level": 3,
+              "label": {
+                "en": "Law of Sines",
+                "zh": "正弦定理"
+              }
+            },
+            {
+              "id": "plane_geometry.trigonometry.law_of_cosines",
+              "level": 3,
+              "label": {
+                "en": "Law of Cosines",
+                "zh": "余弦定理"
+              }
+            }
+          ]
+        },
+        {
+          "id": "plane_geometry.geometric_counting",
+          "level": 2,
+          "label": {
+            "en": "Geometric Counting",
+            "zh": "几何组合问题"
+          },
+          "children": [
+            {
+              "id": "plane_geometry.geometric_counting.counting_shapes",
+              "level": 3,
+              "label": {
+                "en": "Counting Figures",
+                "zh": "几何计数"
+              }
+            },
+            {
+              "id": "plane_geometry.geometric_counting.grid_area",
+              "level": 3,
+              "label": {
+                "en": "Grid Area",
+                "zh": "网格面积"
+              }
+            },
+            {
+              "id": "plane_geometry.geometric_counting.pick_theorem",
+              "level": 3,
+              "label": {
+                "en": "Pick's Theorem",
+                "zh": "Pick定理"
+              }
+            },
+            {
+              "id": "plane_geometry.geometric_counting.plane_covering",
+              "level": 3,
+              "label": {
+                "en": "Plane Covering",
+                "zh": "平面覆盖"
+              }
+            }
+          ]
+        }
+      ],
+      "aliases": [
+        "geometry"
+      ]
+    },
+    {
+      "id": "solid_geometry",
+      "level": 1,
+      "kind": "topic",
+      "label": {
+        "en": "Solid Geometry",
+        "zh": "立体几何与空间"
+      },
+      "children": [
+        {
+          "id": "solid_geometry.solid_volume",
+          "level": 2,
+          "label": {
+            "en": "Volumes of Solids",
+            "zh": "常见立体体积"
+          },
+          "children": [
+            {
+              "id": "solid_geometry.solid_volume.cuboid",
+              "level": 3,
+              "label": {
+                "en": "Rectangular Box",
+                "zh": "长方体"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_volume.cube",
+              "level": 3,
+              "label": {
+                "en": "Cube",
+                "zh": "正方体"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_volume.prism",
+              "level": 3,
+              "label": {
+                "en": "Prism",
+                "zh": "棱柱"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_volume.pyramid",
+              "level": 3,
+              "label": {
+                "en": "Pyramid",
+                "zh": "棱锥"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_volume.cylinder",
+              "level": 3,
+              "label": {
+                "en": "Cylinder",
+                "zh": "圆柱"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_volume.cone",
+              "level": 3,
+              "label": {
+                "en": "Cone",
+                "zh": "圆锥"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_volume.sphere",
+              "level": 3,
+              "label": {
+                "en": "Sphere",
+                "zh": "球"
+              }
+            }
+          ]
+        },
+        {
+          "id": "solid_geometry.solid_surface_area",
+          "level": 2,
+          "label": {
+            "en": "Surface Areas",
+            "zh": "立体表面积"
+          },
+          "children": [
+            {
+              "id": "solid_geometry.solid_surface_area.surface_area",
+              "level": 3,
+              "label": {
+                "en": "Surface Area",
+                "zh": "表面积"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_surface_area.drilled_holes",
+              "level": 3,
+              "label": {
+                "en": "Drilled Holes",
+                "zh": "挖孔"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_surface_area.joined_solids",
+              "level": 3,
+              "label": {
+                "en": "Joined Solids",
+                "zh": "拼接"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_surface_area.nets",
+              "level": 3,
+              "label": {
+                "en": "Nets",
+                "zh": "展开图"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_surface_area.painted_area",
+              "level": 3,
+              "label": {
+                "en": "Painted Area",
+                "zh": "涂色面积"
+              }
+            }
+          ]
+        },
+        {
+          "id": "solid_geometry.cross_sections",
+          "level": 2,
+          "label": {
+            "en": "Cross Sections",
+            "zh": "立体截面"
+          },
+          "children": [
+            {
+              "id": "solid_geometry.cross_sections.cube_cross_section",
+              "level": 3,
+              "label": {
+                "en": "Cube Cross Sections",
+                "zh": "立方体截面"
+              }
+            },
+            {
+              "id": "solid_geometry.cross_sections.prism_cross_section",
+              "level": 3,
+              "label": {
+                "en": "Cutting a Prism",
+                "zh": "平面截棱柱"
+              }
+            },
+            {
+              "id": "solid_geometry.cross_sections.section_shape",
+              "level": 3,
+              "label": {
+                "en": "Shape of a Section",
+                "zh": "截面形状"
+              }
+            },
+            {
+              "id": "solid_geometry.cross_sections.section_area",
+              "level": 3,
+              "label": {
+                "en": "Area of a Section",
+                "zh": "截面面积"
+              }
+            }
+          ],
+          "aliases": [
+            "section"
+          ]
+        },
+        {
+          "id": "solid_geometry.space_distance",
+          "level": 2,
+          "label": {
+            "en": "Distances in Space",
+            "zh": "空间距离"
+          },
+          "children": [
+            {
+              "id": "solid_geometry.space_distance.space_diagonal",
+              "level": 3,
+              "label": {
+                "en": "Space Diagonal",
+                "zh": "空间对角线"
+              }
+            },
+            {
+              "id": "solid_geometry.space_distance.space_pythagorean",
+              "level": 3,
+              "label": {
+                "en": "3D Pythagorean Theorem",
+                "zh": "空间勾股"
+              }
+            },
+            {
+              "id": "solid_geometry.space_distance.surface_shortest_path",
+              "level": 3,
+              "label": {
+                "en": "Shortest Path on a Surface",
+                "zh": "最短表面路径"
+              }
+            }
+          ]
+        },
+        {
+          "id": "solid_geometry.solid_cut_and_paste",
+          "level": 2,
+          "label": {
+            "en": "Cutting & Rearranging Solids",
+            "zh": "立体拼接与切割"
+          },
+          "children": [
+            {
+              "id": "solid_geometry.solid_cut_and_paste.volume_conservation",
+              "level": 3,
+              "label": {
+                "en": "Volume Conservation",
+                "zh": "体积守恒"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_cut_and_paste.cut_and_rearrange",
+              "level": 3,
+              "label": {
+                "en": "Cut & Rearrange",
+                "zh": "切割重组"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_cut_and_paste.container_water",
+              "level": 3,
+              "label": {
+                "en": "Water in Containers",
+                "zh": "容器装水"
+              }
+            },
+            {
+              "id": "solid_geometry.solid_cut_and_paste.displacement",
+              "level": 3,
+              "label": {
+                "en": "Displacement Volume",
+                "zh": "排水体积"
+              }
+            }
+          ]
+        },
+        {
+          "id": "solid_geometry.projections",
+          "level": 2,
+          "label": {
+            "en": "Projections & Three Views",
+            "zh": "投影与三视图"
+          },
+          "children": [
+            {
+              "id": "solid_geometry.projections.front_view",
+              "level": 3,
+              "label": {
+                "en": "Front View",
+                "zh": "正视图"
+              }
+            },
+            {
+              "id": "solid_geometry.projections.top_view",
+              "level": 3,
+              "label": {
+                "en": "Top View",
+                "zh": "俯视图"
+              }
+            },
+            {
+              "id": "solid_geometry.projections.side_view",
+              "level": 3,
+              "label": {
+                "en": "Side View",
+                "zh": "侧视图"
+              }
+            },
+            {
+              "id": "solid_geometry.projections.projected_area",
+              "level": 3,
+              "label": {
+                "en": "Projected Area",
+                "zh": "投影面积"
+              }
+            }
+          ]
+        },
+        {
+          "id": "solid_geometry.space_counting",
+          "level": 2,
+          "label": {
+            "en": "Counting in Space",
+            "zh": "空间计数"
+          },
+          "children": [
+            {
+              "id": "solid_geometry.space_counting.stacked_cubes",
+              "level": 3,
+              "label": {
+                "en": "Stacked Unit Cubes",
+                "zh": "堆叠小方块"
+              }
+            },
+            {
+              "id": "solid_geometry.space_counting.visible_faces",
+              "level": 3,
+              "label": {
+                "en": "Visible Faces",
+                "zh": "可见面"
+              }
+            },
+            {
+              "id": "solid_geometry.space_counting.painted_cube",
+              "level": 3,
+              "label": {
+                "en": "Painted Cube",
+                "zh": "涂色立方体"
+              }
+            },
+            {
+              "id": "solid_geometry.space_counting.hidden_cubes",
+              "level": 3,
+              "label": {
+                "en": "Hidden Cubes",
+                "zh": "隐藏方块"
+              }
+            }
+          ]
+        }
+      ],
+      "aliases": [
+        "space geometry"
+      ]
+    },
+    {
+      "id": "combinatorics",
+      "level": 1,
+      "kind": "topic",
+      "label": {
+        "en": "Combinatorics & Counting",
+        "zh": "组合数学与计数"
+      },
+      "children": [
+        {
+          "id": "combinatorics.counting_principles",
+          "level": 2,
+          "label": {
+            "en": "Basic Counting Principles",
+            "zh": "基础计数原理"
+          },
+          "children": [
+            {
+              "id": "combinatorics.counting_principles.addition_principle",
+              "level": 3,
+              "label": {
+                "en": "Addition Principle",
+                "zh": "加法原理"
+              }
+            },
+            {
+              "id": "combinatorics.counting_principles.multiplication_principle",
+              "level": 3,
+              "label": {
+                "en": "Multiplication Principle",
+                "zh": "乘法原理"
+              }
+            },
+            {
+              "id": "combinatorics.counting_principles.counting_by_cases",
+              "level": 3,
+              "label": {
+                "en": "Counting by Cases",
+                "zh": "分类计数"
+              }
+            },
+            {
+              "id": "combinatorics.counting_principles.counting_by_steps",
+              "level": 3,
+              "label": {
+                "en": "Counting by Steps",
+                "zh": "分步计数"
+              }
+            }
+          ]
+        },
+        {
+          "id": "combinatorics.permutations_combinations",
+          "level": 2,
+          "label": {
+            "en": "Permutations & Combinations",
+            "zh": "排列与组合"
+          },
+          "children": [
+            {
+              "id": "combinatorics.permutations_combinations.permutations",
+              "level": 3,
+              "label": {
+                "en": "Permutations",
+                "zh": "全排列"
+              }
+            },
+            {
+              "id": "combinatorics.permutations_combinations.combinations",
+              "level": 3,
+              "label": {
+                "en": "Combinations",
+                "zh": "组合数"
+              }
+            },
+            {
+              "id": "combinatorics.permutations_combinations.permutations_with_repetition",
+              "level": 3,
+              "label": {
+                "en": "Permutations with Repetition",
+                "zh": "重复排列"
+              }
+            },
+            {
+              "id": "combinatorics.permutations_combinations.adjacency_restrictions",
+              "level": 3,
+              "label": {
+                "en": "Adjacent / Non-adjacent",
+                "zh": "相邻与不相邻"
+              }
+            }
+          ]
+        },
+        {
+          "id": "combinatorics.inclusion_exclusion",
+          "level": 2,
+          "label": {
+            "en": "Inclusion-Exclusion",
+            "zh": "容斥原理"
+          },
+          "children": [
+            {
+              "id": "combinatorics.inclusion_exclusion.two_set_ie",
+              "level": 3,
+              "label": {
+                "en": "Two-Set Inclusion-Exclusion",
+                "zh": "二集合容斥"
+              }
+            },
+            {
+              "id": "combinatorics.inclusion_exclusion.three_set_ie",
+              "level": 3,
+              "label": {
+                "en": "Three-Set Inclusion-Exclusion",
+                "zh": "三集合容斥"
+              }
+            },
+            {
+              "id": "combinatorics.inclusion_exclusion.multi_condition_ie",
+              "level": 3,
+              "label": {
+                "en": "Excluding Multiple Conditions",
+                "zh": "多重条件排除"
+              }
+            }
+          ],
+          "aliases": [
+            "PIE",
+            "容斥"
+          ]
+        },
+        {
+          "id": "combinatorics.lattice_paths",
+          "level": 2,
+          "label": {
+            "en": "Lattice Paths",
+            "zh": "格路计数"
+          },
+          "children": [
+            {
+              "id": "combinatorics.lattice_paths.shortest_lattice_paths",
+              "level": 3,
+              "label": {
+                "en": "Shortest Lattice Paths",
+                "zh": "最短格路"
+              }
+            },
+            {
+              "id": "combinatorics.lattice_paths.paths_through_points",
+              "level": 3,
+              "label": {
+                "en": "Paths Through a Point",
+                "zh": "指定经过点"
+              }
+            },
+            {
+              "id": "combinatorics.lattice_paths.paths_avoiding_points",
+              "level": 3,
+              "label": {
+                "en": "Paths Avoiding Points",
+                "zh": "禁止经过点"
+              }
+            },
+            {
+              "id": "combinatorics.lattice_paths.lattice_paths_with_ie",
+              "level": 3,
+              "label": {
+                "en": "Lattice Paths + Inclusion-Exclusion",
+                "zh": "格路计数+容斥"
+              }
+            }
+          ],
+          "aliases": [
+            "grid path",
+            "网格路径计数"
+          ]
+        },
+        {
+          "id": "combinatorics.complement_counting",
+          "level": 2,
+          "label": {
+            "en": "Casework & Complements",
+            "zh": "分类讨论与补集"
+          },
+          "children": [
+            {
+              "id": "combinatorics.complement_counting.complement_principle",
+              "level": 3,
+              "label": {
+                "en": "Count the Complement",
+                "zh": "正难则反"
+              }
+            },
+            {
+              "id": "combinatorics.complement_counting.complement_sets",
+              "level": 3,
+              "label": {
+                "en": "Complement Counting",
+                "zh": "补集计数"
+              }
+            },
+            {
+              "id": "combinatorics.complement_counting.symmetric_cases",
+              "level": 3,
+              "label": {
+                "en": "Symmetric Casework",
+                "zh": "对称分类"
+              }
+            }
+          ]
+        },
+        {
+          "id": "combinatorics.stars_and_bars",
+          "level": 2,
+          "label": {
+            "en": "Stars & Bars / Distribution",
+            "zh": "隔板法与分配"
+          },
+          "children": [
+            {
+              "id": "combinatorics.stars_and_bars.stars_and_bars",
+              "level": 3,
+              "label": {
+                "en": "Stars and Bars",
+                "zh": "插板法"
+              }
+            },
+            {
+              "id": "combinatorics.stars_and_bars.balls_in_boxes",
+              "level": 3,
+              "label": {
+                "en": "Balls in Boxes",
+                "zh": "球盒模型"
+              }
+            },
+            {
+              "id": "combinatorics.stars_and_bars.nonnegative_integer_solutions",
+              "level": 3,
+              "label": {
+                "en": "Integer Solutions",
+                "zh": "整数解"
+              }
+            },
+            {
+              "id": "combinatorics.stars_and_bars.restricted_distribution",
+              "level": 3,
+              "label": {
+                "en": "Restricted Distribution",
+                "zh": "有限制分配"
+              }
+            }
+          ],
+          "aliases": [
+            "插板"
+          ]
+        },
+        {
+          "id": "combinatorics.pigeonhole",
+          "level": 2,
+          "label": {
+            "en": "Pigeonhole Principle",
+            "zh": "抽屉原理"
+          },
+          "children": [
+            {
+              "id": "combinatorics.pigeonhole.pigeonhole_basic",
+              "level": 3,
+              "label": {
+                "en": "Pigeonhole Principle",
+                "zh": "鸽巢原理"
+              }
+            },
+            {
+              "id": "combinatorics.pigeonhole.extremal_distribution",
+              "level": 3,
+              "label": {
+                "en": "Extremal Distribution",
+                "zh": "极端分配"
+              }
+            },
+            {
+              "id": "combinatorics.pigeonhole.at_least_one",
+              "level": 3,
+              "label": {
+                "en": "At Least One Exists",
+                "zh": "至少存在"
+              }
+            }
+          ],
+          "aliases": [
+            "鸽巢"
+          ]
+        },
+        {
+          "id": "combinatorics.recursive_counting",
+          "level": 2,
+          "label": {
+            "en": "Recursive Counting",
+            "zh": "递推计数"
+          },
+          "children": [
+            {
+              "id": "combinatorics.recursive_counting.staircase_paths",
+              "level": 3,
+              "label": {
+                "en": "Staircase Walks",
+                "zh": "楼梯走法"
+              }
+            },
+            {
+              "id": "combinatorics.recursive_counting.tiling",
+              "level": 3,
+              "label": {
+                "en": "Tiling",
+                "zh": "铺砖问题"
+              }
+            },
+            {
+              "id": "combinatorics.recursive_counting.fibonacci_type",
+              "level": 3,
+              "label": {
+                "en": "Fibonacci-Type Recursion",
+                "zh": "斐波那契型递推"
+              }
+            }
+          ]
+        },
+        {
+          "id": "combinatorics.circular_restricted_permutations",
+          "level": 2,
+          "label": {
+            "en": "Circular & Restricted Arrangements",
+            "zh": "圆排列与限制排列"
+          },
+          "children": [
+            {
+              "id": "combinatorics.circular_restricted_permutations.circular_permutations",
+              "level": 3,
+              "label": {
+                "en": "Circular Permutations",
+                "zh": "环形排列"
+              }
+            },
+            {
+              "id": "combinatorics.circular_restricted_permutations.coloring_arrangements",
+              "level": 3,
+              "label": {
+                "en": "Coloring",
+                "zh": "染色"
+              }
+            },
+            {
+              "id": "combinatorics.circular_restricted_permutations.fixed_positions",
+              "level": 3,
+              "label": {
+                "en": "Fixed Positions",
+                "zh": "固定位置"
+              }
+            },
+            {
+              "id": "combinatorics.circular_restricted_permutations.derangements",
+              "level": 3,
+              "label": {
+                "en": "Derangements",
+                "zh": "错排"
+              }
+            }
+          ]
+        },
+        {
+          "id": "combinatorics.graph_theory",
+          "level": 2,
+          "label": {
+            "en": "Graph Theory",
+            "zh": "图论与网络"
+          },
+          "children": [
+            {
+              "id": "combinatorics.graph_theory.handshake_lemma",
+              "level": 3,
+              "label": {
+                "en": "Handshake Lemma",
+                "zh": "握手定理"
+              }
+            },
+            {
+              "id": "combinatorics.graph_theory.graph_paths",
+              "level": 3,
+              "label": {
+                "en": "Paths in Graphs",
+                "zh": "图的路径"
+              }
+            },
+            {
+              "id": "combinatorics.graph_theory.trees",
+              "level": 3,
+              "label": {
+                "en": "Trees",
+                "zh": "树"
+              }
+            },
+            {
+              "id": "combinatorics.graph_theory.connectivity",
+              "level": 3,
+              "label": {
+                "en": "Connectivity",
+                "zh": "连通性"
+              }
+            },
+            {
+              "id": "combinatorics.graph_theory.euler_paths",
+              "level": 3,
+              "label": {
+                "en": "Eulerian Paths",
+                "zh": "欧拉路径"
+              }
+            }
+          ]
+        },
+        {
+          "id": "combinatorics.constructive_counting",
+          "level": 2,
+          "label": {
+            "en": "Constructive Counting",
+            "zh": "组合构造"
+          },
+          "children": [
+            {
+              "id": "combinatorics.constructive_counting.pairing",
+              "level": 3,
+              "label": {
+                "en": "Pairing",
+                "zh": "配对法"
+              }
+            },
+            {
+              "id": "combinatorics.constructive_counting.double_counting",
+              "level": 3,
+              "label": {
+                "en": "Double Counting",
+                "zh": "双计数"
+              }
+            },
+            {
+              "id": "combinatorics.constructive_counting.construction_counting",
+              "level": 3,
+              "label": {
+                "en": "Counting by Construction",
+                "zh": "构造计数"
+              }
+            },
+            {
+              "id": "combinatorics.constructive_counting.parity_coloring",
+              "level": 3,
+              "label": {
+                "en": "Parity / Coloring Arguments",
+                "zh": "奇偶染色"
+              }
+            }
+          ],
+          "aliases": [
+            "double counting"
+          ]
+        },
+        {
+          "id": "combinatorics.games_and_operations",
+          "level": 2,
+          "label": {
+            "en": "Games & Operations",
+            "zh": "博弈与操作"
+          },
+          "children": [
+            {
+              "id": "combinatorics.games_and_operations.taking_turns",
+              "level": 3,
+              "label": {
+                "en": "Take-Away Games",
+                "zh": "轮流取物"
+              }
+            },
+            {
+              "id": "combinatorics.games_and_operations.winning_strategy",
+              "level": 3,
+              "label": {
+                "en": "Winning Strategies",
+                "zh": "必胜策略"
+              }
+            },
+            {
+              "id": "combinatorics.games_and_operations.invariants_in_games",
+              "level": 3,
+              "label": {
+                "en": "Invariants",
+                "zh": "不变量"
+              }
+            },
+            {
+              "id": "combinatorics.games_and_operations.monovariants",
+              "level": 3,
+              "label": {
+                "en": "Monovariants",
+                "zh": "单调量"
+              }
+            }
+          ],
+          "aliases": [
+            "game theory"
+          ]
+        }
+      ],
+      "aliases": [
+        "counting"
+      ]
+    },
+    {
+      "id": "probability",
+      "level": 1,
+      "kind": "topic",
+      "label": {
+        "en": "Probability & Statistics",
+        "zh": "概率与统计"
+      },
+      "children": [
+        {
+          "id": "probability.classical_probability",
+          "level": 2,
+          "label": {
+            "en": "Classical Probability",
+            "zh": "古典概率"
+          },
+          "children": [
+            {
+              "id": "probability.classical_probability.sample_space",
+              "level": 3,
+              "label": {
+                "en": "Equally Likely Sample Space",
+                "zh": "等可能样本空间"
+              }
+            },
+            {
+              "id": "probability.classical_probability.favorable_outcomes",
+              "level": 3,
+              "label": {
+                "en": "Counting Favorable Outcomes",
+                "zh": "有利事件计数"
+              }
+            },
+            {
+              "id": "probability.classical_probability.dice_probability",
+              "level": 3,
+              "label": {
+                "en": "Dice",
+                "zh": "掷骰子"
+              }
+            },
+            {
+              "id": "probability.classical_probability.drawing_balls",
+              "level": 3,
+              "label": {
+                "en": "Drawing Balls",
+                "zh": "抽球"
+              }
+            }
+          ]
+        },
+        {
+          "id": "probability.geometric_probability",
+          "level": 2,
+          "label": {
+            "en": "Geometric Probability",
+            "zh": "几何概型"
+          },
+          "children": [
+            {
+              "id": "probability.geometric_probability.random_point",
+              "level": 3,
+              "label": {
+                "en": "Random Points",
+                "zh": "随机点"
+              }
+            },
+            {
+              "id": "probability.geometric_probability.length_probability",
+              "level": 3,
+              "label": {
+                "en": "Length Probability",
+                "zh": "长度概率"
+              }
+            },
+            {
+              "id": "probability.geometric_probability.area_probability",
+              "level": 3,
+              "label": {
+                "en": "Area Probability",
+                "zh": "面积概率"
+              }
+            },
+            {
+              "id": "probability.geometric_probability.region_ratios",
+              "level": 3,
+              "label": {
+                "en": "Region Ratios",
+                "zh": "区域比例"
+              }
+            }
+          ]
+        },
+        {
+          "id": "probability.conditional_probability",
+          "level": 2,
+          "label": {
+            "en": "Conditional Probability",
+            "zh": "条件概率"
+          },
+          "children": [
+            {
+              "id": "probability.conditional_probability.conditional_sample_space",
+              "level": 3,
+              "label": {
+                "en": "Conditional Sample Space",
+                "zh": "条件样本空间"
+              }
+            },
+            {
+              "id": "probability.conditional_probability.without_replacement",
+              "level": 3,
+              "label": {
+                "en": "Without Replacement",
+                "zh": "不放回抽样"
+              }
+            },
+            {
+              "id": "probability.conditional_probability.bayes_basics",
+              "level": 3,
+              "label": {
+                "en": "Bayes Basics",
+                "zh": "贝叶斯基础"
+              }
+            }
+          ]
+        },
+        {
+          "id": "probability.independence",
+          "level": 2,
+          "label": {
+            "en": "Independence & Repeated Trials",
+            "zh": "独立与重复试验"
+          },
+          "children": [
+            {
+              "id": "probability.independence.independent_events",
+              "level": 3,
+              "label": {
+                "en": "Independent Events",
+                "zh": "独立事件"
+              }
+            },
+            {
+              "id": "probability.independence.at_least_once_probability",
+              "level": 3,
+              "label": {
+                "en": "At Least Once",
+                "zh": "至少一次"
+              }
+            },
+            {
+              "id": "probability.independence.consecutive_success",
+              "level": 3,
+              "label": {
+                "en": "Consecutive Success",
+                "zh": "连续成功"
+              }
+            },
+            {
+              "id": "probability.independence.binomial_basics",
+              "level": 3,
+              "label": {
+                "en": "Binomial Basics",
+                "zh": "二项分布基础"
+              }
+            }
+          ]
+        },
+        {
+          "id": "probability.probability_inclusion_exclusion",
+          "level": 2,
+          "label": {
+            "en": "Probability Inclusion-Exclusion",
+            "zh": "概率容斥"
+          },
+          "children": [
+            {
+              "id": "probability.probability_inclusion_exclusion.union_of_events",
+              "level": 3,
+              "label": {
+                "en": "Union of Events",
+                "zh": "事件并集"
+              }
+            },
+            {
+              "id": "probability.probability_inclusion_exclusion.intersection_of_events",
+              "level": 3,
+              "label": {
+                "en": "Intersection of Events",
+                "zh": "交集"
+              }
+            },
+            {
+              "id": "probability.probability_inclusion_exclusion.complement_event",
+              "level": 3,
+              "label": {
+                "en": "Complement Event",
+                "zh": "对立事件"
+              }
+            },
+            {
+              "id": "probability.probability_inclusion_exclusion.at_least_one_event",
+              "level": 3,
+              "label": {
+                "en": "At Least One Occurs",
+                "zh": "至少一个"
+              }
+            }
+          ]
+        },
+        {
+          "id": "probability.random_walks",
+          "level": 2,
+          "label": {
+            "en": "Random Walks",
+            "zh": "随机游走"
+          },
+          "children": [
+            {
+              "id": "probability.random_walks.one_dimensional_walk",
+              "level": 3,
+              "label": {
+                "en": "1-D Random Walk",
+                "zh": "一维随机游走"
+              }
+            },
+            {
+              "id": "probability.random_walks.absorbing_boundaries",
+              "level": 3,
+              "label": {
+                "en": "Absorbing Boundaries",
+                "zh": "吸收边界"
+              }
+            },
+            {
+              "id": "probability.random_walks.position_recurrence",
+              "level": 3,
+              "label": {
+                "en": "Recurrence on Position",
+                "zh": "位置递推"
+              }
+            },
+            {
+              "id": "probability.random_walks.state_transitions",
+              "level": 3,
+              "label": {
+                "en": "State Transitions",
+                "zh": "状态转移"
+              }
+            }
+          ]
+        },
+        {
+          "id": "probability.expected_value",
+          "level": 2,
+          "label": {
+            "en": "Expected Value",
+            "zh": "期望值"
+          },
+          "children": [
+            {
+              "id": "probability.expected_value.linearity_of_expectation",
+              "level": 3,
+              "label": {
+                "en": "Linearity of Expectation",
+                "zh": "期望线性性"
+              }
+            },
+            {
+              "id": "probability.expected_value.average_payoff",
+              "level": 3,
+              "label": {
+                "en": "Average Payoff",
+                "zh": "平均收益"
+              }
+            },
+            {
+              "id": "probability.expected_value.expected_steps",
+              "level": 3,
+              "label": {
+                "en": "Expected Steps",
+                "zh": "期望步数"
+              }
+            },
+            {
+              "id": "probability.expected_value.recursive_expectation",
+              "level": 3,
+              "label": {
+                "en": "Recursive Expectation",
+                "zh": "递推期望"
+              }
+            }
+          ],
+          "aliases": [
+            "expectation"
+          ]
+        },
+        {
+          "id": "probability.statistics",
+          "level": 2,
+          "label": {
+            "en": "Statistics",
+            "zh": "统计量"
+          },
+          "children": [
+            {
+              "id": "probability.statistics.mean",
+              "level": 3,
+              "label": {
+                "en": "Mean",
+                "zh": "平均数"
+              }
+            },
+            {
+              "id": "probability.statistics.median",
+              "level": 3,
+              "label": {
+                "en": "Median",
+                "zh": "中位数"
+              }
+            },
+            {
+              "id": "probability.statistics.mode",
+              "level": 3,
+              "label": {
+                "en": "Mode",
+                "zh": "众数"
+              }
+            },
+            {
+              "id": "probability.statistics.range",
+              "level": 3,
+              "label": {
+                "en": "Range",
+                "zh": "极差"
+              }
+            },
+            {
+              "id": "probability.statistics.weighted_mean",
+              "level": 3,
+              "label": {
+                "en": "Weighted Mean",
+                "zh": "加权平均"
+              }
+            }
+          ]
+        },
+        {
+          "id": "probability.data_interpretation",
+          "level": 2,
+          "label": {
+            "en": "Data Interpretation",
+            "zh": "数据解释"
+          },
+          "children": [
+            {
+              "id": "probability.data_interpretation.frequency_tables",
+              "level": 3,
+              "label": {
+                "en": "Frequency Tables",
+                "zh": "频数表"
+              }
+            },
+            {
+              "id": "probability.data_interpretation.histograms",
+              "level": 3,
+              "label": {
+                "en": "Histograms",
+                "zh": "直方图"
+              }
+            },
+            {
+              "id": "probability.data_interpretation.charts",
+              "level": 3,
+              "label": {
+                "en": "Statistical Charts",
+                "zh": "统计图"
+              }
+            },
+            {
+              "id": "probability.data_interpretation.data_comparison",
+              "level": 3,
+              "label": {
+                "en": "Comparing Data Sets",
+                "zh": "数据对比"
+              }
+            }
+          ]
+        },
+        {
+          "id": "probability.strategic_probability",
+          "level": 2,
+          "label": {
+            "en": "Strategic Probability",
+            "zh": "策略概率"
+          },
+          "children": [
+            {
+              "id": "probability.strategic_probability.optimal_choice",
+              "level": 3,
+              "label": {
+                "en": "Optimal Choice",
+                "zh": "最优选择"
+              }
+            },
+            {
+              "id": "probability.strategic_probability.probability_games",
+              "level": 3,
+              "label": {
+                "en": "Probability Games",
+                "zh": "概率博弈"
+              }
+            },
+            {
+              "id": "probability.strategic_probability.state_classification",
+              "level": 3,
+              "label": {
+                "en": "State Classification",
+                "zh": "状态分类"
+              }
+            }
+          ]
+        }
+      ],
+      "aliases": [
+        "stats"
+      ]
+    },
+    {
+      "id": "word_problems",
+      "level": 1,
+      "kind": "topic",
+      "label": {
+        "en": "Word Problems & Modeling",
+        "zh": "应用题与数学建模"
+      },
+      "children": [
+        {
+          "id": "word_problems.travel_problems",
+          "level": 2,
+          "label": {
+            "en": "Travel Problems",
+            "zh": "行程问题"
+          },
+          "children": [
+            {
+              "id": "word_problems.travel_problems.meet_and_overtake",
+              "level": 3,
+              "label": {
+                "en": "Meeting & Overtaking",
+                "zh": "相遇追及"
+              }
+            },
+            {
+              "id": "word_problems.travel_problems.circular_track",
+              "level": 3,
+              "label": {
+                "en": "Circular Tracks",
+                "zh": "环形跑道"
+              }
+            },
+            {
+              "id": "word_problems.travel_problems.clock_chasing",
+              "level": 3,
+              "label": {
+                "en": "Clock Chasing",
+                "zh": "钟表追及"
+              }
+            },
+            {
+              "id": "word_problems.travel_problems.round_trips",
+              "level": 3,
+              "label": {
+                "en": "Round Trips",
+                "zh": "往返运动"
+              }
+            }
+          ],
+          "aliases": [
+            "motion"
+          ]
+        },
+        {
+          "id": "word_problems.relative_speed",
+          "level": 2,
+          "label": {
+            "en": "Speed & Relative Motion",
+            "zh": "速度与相对运动"
+          },
+          "children": [
+            {
+              "id": "word_problems.relative_speed.upstream_downstream",
+              "level": 3,
+              "label": {
+                "en": "Upstream / Downstream",
+                "zh": "顺逆水"
+              }
+            },
+            {
+              "id": "word_problems.relative_speed.speed_composition",
+              "level": 3,
+              "label": {
+                "en": "Adding Speeds",
+                "zh": "速度叠加"
+              }
+            },
+            {
+              "id": "word_problems.relative_speed.average_speed",
+              "level": 3,
+              "label": {
+                "en": "Average Speed",
+                "zh": "平均速度"
+              }
+            },
+            {
+              "id": "word_problems.relative_speed.multi_stage_trips",
+              "level": 3,
+              "label": {
+                "en": "Multi-Stage Trips",
+                "zh": "多阶段行程"
+              }
+            }
+          ]
+        },
+        {
+          "id": "word_problems.work_rate",
+          "level": 2,
+          "label": {
+            "en": "Work & Rates",
+            "zh": "工程与效率"
+          },
+          "children": [
+            {
+              "id": "word_problems.work_rate.cooperative_work",
+              "level": 3,
+              "label": {
+                "en": "Working Together",
+                "zh": "合作效率"
+              }
+            },
+            {
+              "id": "word_problems.work_rate.total_work",
+              "level": 3,
+              "label": {
+                "en": "Total Work",
+                "zh": "工作总量"
+              }
+            },
+            {
+              "id": "word_problems.work_rate.pool_filling",
+              "level": 3,
+              "label": {
+                "en": "Filling & Draining",
+                "zh": "水池注排水"
+              }
+            }
+          ]
+        },
+        {
+          "id": "word_problems.ratio_percent",
+          "level": 2,
+          "label": {
+            "en": "Ratios & Percents",
+            "zh": "比例与百分数"
+          },
+          "children": [
+            {
+              "id": "word_problems.ratio_percent.ratio_allocation",
+              "level": 3,
+              "label": {
+                "en": "Ratio Allocation",
+                "zh": "比例分配"
+              }
+            },
+            {
+              "id": "word_problems.ratio_percent.percent_change",
+              "level": 3,
+              "label": {
+                "en": "Percent Change",
+                "zh": "百分比变化"
+              }
+            },
+            {
+              "id": "word_problems.ratio_percent.compound_change",
+              "level": 3,
+              "label": {
+                "en": "Repeated Percent Change",
+                "zh": "连续涨跌"
+              }
+            },
+            {
+              "id": "word_problems.ratio_percent.discounts",
+              "level": 3,
+              "label": {
+                "en": "Discounts",
+                "zh": "折扣"
+              }
+            }
+          ],
+          "aliases": [
+            "percent"
+          ]
+        },
+        {
+          "id": "word_problems.concentration",
+          "level": 2,
+          "label": {
+            "en": "Concentration & Mixtures",
+            "zh": "浓度与混合"
+          },
+          "children": [
+            {
+              "id": "word_problems.concentration.solution_concentration",
+              "level": 3,
+              "label": {
+                "en": "Solution Concentration",
+                "zh": "溶液浓度"
+              }
+            },
+            {
+              "id": "word_problems.concentration.mixture_ratios",
+              "level": 3,
+              "label": {
+                "en": "Mixture Ratios",
+                "zh": "混合比例"
+              }
+            },
+            {
+              "id": "word_problems.concentration.repeated_dilution",
+              "level": 3,
+              "label": {
+                "en": "Repeated Dilution",
+                "zh": "重复稀释"
+              }
+            }
+          ],
+          "aliases": [
+            "mixture"
+          ]
+        },
+        {
+          "id": "word_problems.economics",
+          "level": 2,
+          "label": {
+            "en": "Financial Applications",
+            "zh": "经济应用"
+          },
+          "children": [
+            {
+              "id": "word_problems.economics.profit_and_cost",
+              "level": 3,
+              "label": {
+                "en": "Profit & Cost",
+                "zh": "利润与成本"
+              }
+            },
+            {
+              "id": "word_problems.economics.interest",
+              "level": 3,
+              "label": {
+                "en": "Interest",
+                "zh": "利息"
+              }
+            },
+            {
+              "id": "word_problems.economics.tax",
+              "level": 3,
+              "label": {
+                "en": "Tax",
+                "zh": "税率"
+              }
+            },
+            {
+              "id": "word_problems.economics.pricing",
+              "level": 3,
+              "label": {
+                "en": "Pricing",
+                "zh": "定价"
+              }
+            }
+          ]
+        },
+        {
+          "id": "word_problems.calendar_time",
+          "level": 2,
+          "label": {
+            "en": "Time & Calendars",
+            "zh": "时间与日历"
+          },
+          "children": [
+            {
+              "id": "word_problems.calendar_time.weekday_cycles",
+              "level": 3,
+              "label": {
+                "en": "Weekday Cycles",
+                "zh": "星期周期"
+              }
+            },
+            {
+              "id": "word_problems.calendar_time.date_counting",
+              "level": 3,
+              "label": {
+                "en": "Date Counting",
+                "zh": "日期推算"
+              }
+            },
+            {
+              "id": "word_problems.calendar_time.clock_angles",
+              "level": 3,
+              "label": {
+                "en": "Clock Hand Angles",
+                "zh": "钟面夹角"
+              }
+            },
+            {
+              "id": "word_problems.calendar_time.cycle_coincidence",
+              "level": 3,
+              "label": {
+                "en": "Cycle Coincidence",
+                "zh": "周期重合"
+              }
+            }
+          ],
+          "aliases": [
+            "calendar"
+          ]
+        },
+        {
+          "id": "word_problems.logic_reasoning",
+          "level": 2,
+          "label": {
+            "en": "Logic Reasoning",
+            "zh": "逻辑推理"
+          },
+          "children": [
+            {
+              "id": "word_problems.logic_reasoning.truth_tellers",
+              "level": 3,
+              "label": {
+                "en": "Truth-Tellers & Liars",
+                "zh": "真假话"
+              }
+            },
+            {
+              "id": "word_problems.logic_reasoning.conditional_reasoning",
+              "level": 3,
+              "label": {
+                "en": "Conditional Reasoning",
+                "zh": "条件推理"
+              }
+            },
+            {
+              "id": "word_problems.logic_reasoning.ordering_information",
+              "level": 3,
+              "label": {
+                "en": "Ordering from Clues",
+                "zh": "排序"
+              }
+            },
+            {
+              "id": "word_problems.logic_reasoning.limited_information",
+              "level": 3,
+              "label": {
+                "en": "Reasoning from Limited Data",
+                "zh": "有限信息推理"
+              }
+            }
+          ],
+          "aliases": [
+            "logic"
+          ]
+        },
+        {
+          "id": "word_problems.cycles_and_states",
+          "level": 2,
+          "label": {
+            "en": "Cycles & State Simulation",
+            "zh": "周期与状态模拟"
+          },
+          "children": [
+            {
+              "id": "word_problems.cycles_and_states.light_switches",
+              "level": 3,
+              "label": {
+                "en": "Light Switches",
+                "zh": "灯开关"
+              }
+            },
+            {
+              "id": "word_problems.cycles_and_states.rotation_cycles",
+              "level": 3,
+              "label": {
+                "en": "Rotation Cycles",
+                "zh": "轮转"
+              }
+            },
+            {
+              "id": "word_problems.cycles_and_states.cyclic_processes",
+              "level": 3,
+              "label": {
+                "en": "Cyclic Processes",
+                "zh": "循环过程"
+              }
+            },
+            {
+              "id": "word_problems.cycles_and_states.finite_state_machines",
+              "level": 3,
+              "label": {
+                "en": "Finite State Transitions",
+                "zh": "有限状态转换"
+              }
+            }
+          ]
+        },
+        {
+          "id": "word_problems.optimization_applied",
+          "level": 2,
+          "label": {
+            "en": "Optimization",
+            "zh": "优化与极值应用"
+          },
+          "children": [
+            {
+              "id": "word_problems.optimization_applied.maximum_return",
+              "level": 3,
+              "label": {
+                "en": "Maximizing Return",
+                "zh": "最大收益"
+              }
+            },
+            {
+              "id": "word_problems.optimization_applied.minimum_steps",
+              "level": 3,
+              "label": {
+                "en": "Minimum Steps",
+                "zh": "最少次数"
+              }
+            },
+            {
+              "id": "word_problems.optimization_applied.optimal_allocation",
+              "level": 3,
+              "label": {
+                "en": "Optimal Allocation",
+                "zh": "最优分配"
+              }
+            }
+          ]
+        }
+      ],
+      "aliases": [
+        "applied"
+      ]
+    },
+    {
+      "id": "methods",
+      "level": 1,
+      "kind": "method",
+      "label": {
+        "en": "Cross-Topic Techniques",
+        "zh": "跨板块方法与综合技巧"
+      },
+      "children": [
+        {
+          "id": "methods.case_analysis",
+          "level": 2,
+          "label": {
+            "en": "Case Analysis",
+            "zh": "分类讨论"
+          },
+          "children": [
+            {
+              "id": "methods.case_analysis.parity_cases",
+              "level": 3,
+              "label": {
+                "en": "Splitting by Parity",
+                "zh": "按奇偶分类"
+              }
+            },
+            {
+              "id": "methods.case_analysis.position_cases",
+              "level": 3,
+              "label": {
+                "en": "Splitting by Position",
+                "zh": "按位置分类"
+              }
+            },
+            {
+              "id": "methods.case_analysis.boundary_cases",
+              "level": 3,
+              "label": {
+                "en": "Splitting by Boundary",
+                "zh": "按边界分类"
+              }
+            }
+          ],
+          "aliases": [
+            "casework"
+          ]
+        },
+        {
+          "id": "methods.extremal_principle",
+          "level": 2,
+          "label": {
+            "en": "Extremal Principle",
+            "zh": "极端原理"
+          },
+          "children": [
+            {
+              "id": "methods.extremal_principle.extreme_element",
+              "level": 3,
+              "label": {
+                "en": "Extreme Element",
+                "zh": "最值元素"
+              }
+            },
+            {
+              "id": "methods.extremal_principle.extreme_case",
+              "level": 3,
+              "label": {
+                "en": "Extreme Cases",
+                "zh": "极端情形"
+              }
+            },
+            {
+              "id": "methods.extremal_principle.extremal_construction",
+              "level": 3,
+              "label": {
+                "en": "Extremal Construction",
+                "zh": "极值构造"
+              }
+            }
+          ],
+          "aliases": [
+            "extremal"
+          ]
+        },
+        {
+          "id": "methods.invariants_monovariants",
+          "level": 2,
+          "label": {
+            "en": "Invariants & Monovariants",
+            "zh": "不变量与单调量"
+          },
+          "children": [
+            {
+              "id": "methods.invariants_monovariants.parity_invariant",
+              "level": 3,
+              "label": {
+                "en": "Parity Invariant",
+                "zh": "奇偶不变量"
+              }
+            },
+            {
+              "id": "methods.invariants_monovariants.modular_invariant",
+              "level": 3,
+              "label": {
+                "en": "Modular Invariant",
+                "zh": "模不变量"
+              }
+            },
+            {
+              "id": "methods.invariants_monovariants.coloring_invariant",
+              "level": 3,
+              "label": {
+                "en": "Coloring Invariant",
+                "zh": "染色不变量"
+              }
+            },
+            {
+              "id": "methods.invariants_monovariants.process_termination",
+              "level": 3,
+              "label": {
+                "en": "Termination of a Process",
+                "zh": "操作终止"
+              }
+            }
+          ]
+        },
+        {
+          "id": "methods.symmetry",
+          "level": 2,
+          "label": {
+            "en": "Symmetry",
+            "zh": "对称性"
+          },
+          "children": [
+            {
+              "id": "methods.symmetry.geometric_symmetry",
+              "level": 3,
+              "label": {
+                "en": "Geometric Symmetry",
+                "zh": "几何对称"
+              }
+            },
+            {
+              "id": "methods.symmetry.permutation_symmetry",
+              "level": 3,
+              "label": {
+                "en": "Permutation Symmetry",
+                "zh": "排列对称"
+              }
+            },
+            {
+              "id": "methods.symmetry.probabilistic_symmetry",
+              "level": 3,
+              "label": {
+                "en": "Probabilistic Symmetry",
+                "zh": "概率对称"
+              }
+            },
+            {
+              "id": "methods.symmetry.variable_symmetry",
+              "level": 3,
+              "label": {
+                "en": "Variable Symmetry",
+                "zh": "变量对称"
+              }
+            }
+          ]
+        },
+        {
+          "id": "methods.backward_reasoning",
+          "level": 2,
+          "label": {
+            "en": "Working Backwards",
+            "zh": "逆向思维"
+          },
+          "children": [
+            {
+              "id": "methods.backward_reasoning.backward_steps",
+              "level": 3,
+              "label": {
+                "en": "Backward Steps",
+                "zh": "倒推"
+              }
+            },
+            {
+              "id": "methods.backward_reasoning.reverse_construction",
+              "level": 3,
+              "label": {
+                "en": "Reverse Construction",
+                "zh": "逆向构造"
+              }
+            },
+            {
+              "id": "methods.backward_reasoning.reverse_probability",
+              "level": 3,
+              "label": {
+                "en": "Reverse Probability",
+                "zh": "逆向概率"
+              }
+            }
+          ],
+          "aliases": [
+            "倒推"
+          ]
+        },
+        {
+          "id": "methods.recursion_dp",
+          "level": 2,
+          "label": {
+            "en": "Recursion & DP",
+            "zh": "递推与动态规划"
+          },
+          "children": [
+            {
+              "id": "methods.recursion_dp.state_definition",
+              "level": 3,
+              "label": {
+                "en": "Defining the State",
+                "zh": "状态定义"
+              }
+            },
+            {
+              "id": "methods.recursion_dp.transition_equations",
+              "level": 3,
+              "label": {
+                "en": "Transition Equations",
+                "zh": "转移方程"
+              }
+            },
+            {
+              "id": "methods.recursion_dp.boundary_conditions",
+              "level": 3,
+              "label": {
+                "en": "Boundary Conditions",
+                "zh": "边界条件"
+              }
+            },
+            {
+              "id": "methods.recursion_dp.memoization",
+              "level": 3,
+              "label": {
+                "en": "Memoization",
+                "zh": "记忆化"
+              }
+            }
+          ],
+          "aliases": [
+            "dynamic programming",
+            "DP"
+          ]
+        },
+        {
+          "id": "methods.construction",
+          "level": 2,
+          "label": {
+            "en": "Construction",
+            "zh": "构造法"
+          },
+          "children": [
+            {
+              "id": "methods.construction.construct_counterexample",
+              "level": 3,
+              "label": {
+                "en": "Constructing Counterexamples",
+                "zh": "构造反例"
+              }
+            },
+            {
+              "id": "methods.construction.construct_existence",
+              "level": 3,
+              "label": {
+                "en": "Constructing Existence",
+                "zh": "构造存在性"
+              }
+            },
+            {
+              "id": "methods.construction.special_configuration",
+              "level": 3,
+              "label": {
+                "en": "Special Configurations",
+                "zh": "特殊构型"
+              }
+            }
+          ]
+        },
+        {
+          "id": "methods.contradiction",
+          "level": 2,
+          "label": {
+            "en": "Proof by Contradiction",
+            "zh": "反证法"
+          },
+          "children": [
+            {
+              "id": "methods.contradiction.contradiction_argument",
+              "level": 3,
+              "label": {
+                "en": "Contradiction Argument",
+                "zh": "矛盾证明"
+              }
+            },
+            {
+              "id": "methods.contradiction.impossibility",
+              "level": 3,
+              "label": {
+                "en": "Impossibility",
+                "zh": "不可能性"
+              }
+            },
+            {
+              "id": "methods.contradiction.divisibility_contradiction",
+              "level": 3,
+              "label": {
+                "en": "Divisibility Contradiction",
+                "zh": "整除反证"
+              }
+            }
+          ]
+        },
+        {
+          "id": "methods.algebra_geometry_duality",
+          "level": 2,
+          "label": {
+            "en": "Algebra-Geometry Translation",
+            "zh": "代数几何互化"
+          },
+          "children": [
+            {
+              "id": "methods.algebra_geometry_duality.coordinatization",
+              "level": 3,
+              "label": {
+                "en": "Coordinatizing",
+                "zh": "坐标化"
+              }
+            },
+            {
+              "id": "methods.algebra_geometry_duality.area_method",
+              "level": 3,
+              "label": {
+                "en": "Area Method",
+                "zh": "面积法"
+              }
+            },
+            {
+              "id": "methods.algebra_geometry_duality.algebra_geometry_extrema",
+              "level": 3,
+              "label": {
+                "en": "Algebraic vs Geometric Extrema",
+                "zh": "代数最值与几何最值"
+              }
+            }
+          ]
+        },
+        {
+          "id": "methods.enumeration_patterns",
+          "level": 2,
+          "label": {
+            "en": "Enumeration & Pattern Recognition",
+            "zh": "枚举与模式识别"
+          },
+          "children": [
+            {
+              "id": "methods.enumeration_patterns.ordered_enumeration",
+              "level": 3,
+              "label": {
+                "en": "Ordered Enumeration",
+                "zh": "有序枚举"
+              }
+            },
+            {
+              "id": "methods.enumeration_patterns.small_case_testing",
+              "level": 3,
+              "label": {
+                "en": "Testing Small Cases",
+                "zh": "小规模试验"
+              }
+            },
+            {
+              "id": "methods.enumeration_patterns.pattern_induction",
+              "level": 3,
+              "label": {
+                "en": "Spotting Patterns",
+                "zh": "规律归纳"
+              }
+            }
+          ]
+        },
+        {
+          "id": "methods.double_counting_reorder",
+          "level": 2,
+          "label": {
+            "en": "Double Counting & Reordering",
+            "zh": "双计数与换序"
+          },
+          "children": [
+            {
+              "id": "methods.double_counting_reorder.two_way_counting",
+              "level": 3,
+              "label": {
+                "en": "Two Ways to Count",
+                "zh": "两种计数方式"
+              }
+            },
+            {
+              "id": "methods.double_counting_reorder.sum_reordering",
+              "level": 3,
+              "label": {
+                "en": "Reordering Sums",
+                "zh": "求和换序"
+              }
+            },
+            {
+              "id": "methods.double_counting_reorder.equivalence_relations",
+              "level": 3,
+              "label": {
+                "en": "Equivalence Relations",
+                "zh": "等价关系"
+              }
+            }
+          ]
+        },
+        {
+          "id": "methods.reduction",
+          "level": 2,
+          "label": {
+            "en": "Reduction & Transformation",
+            "zh": "降维与转化"
+          },
+          "children": [
+            {
+              "id": "methods.reduction.simplification",
+              "level": 3,
+              "label": {
+                "en": "Simplifying the Problem",
+                "zh": "复杂问题简化"
+              }
+            },
+            {
+              "id": "methods.reduction.complement_transformation",
+              "level": 3,
+              "label": {
+                "en": "Complement Transformation",
+                "zh": "补集转化"
+              }
+            },
+            {
+              "id": "methods.reduction.model_conversion",
+              "level": 3,
+              "label": {
+                "en": "Mapping to a Known Model",
+                "zh": "转化为熟悉模型"
+              }
+            }
+          ]
+        }
+      ],
+      "aliases": [
+        "techniques",
+        "方法"
+      ]
+    }
+  ],
+  "legacy_subject_map": {
+    "mathematics": "number_theory",
+    "physics": null
+  }
+}

@@ -29,6 +29,10 @@ BANK = ROOT / "bank"
 BANK_V2 = BANK / "v2"
 BANK_V2_FIGURES = BANK_V2 / "figures"
 BANK_VERSIONS = (1, 2)
+# Topic taxonomy (paper format v1.1): questions carry classification tags that
+# point at taxonomy/<id>.json. The UI only needs id -> label.
+TAXONOMY_DIR = ROOT / "taxonomy"
+DEFAULT_TAXONOMY = "amc-v1"
 STATIC = ROOT / "app" / "static"
 WEB_DIST = ROOT / "app" / "web" / "dist"  # built React app (see app/web); legacy STATIC is the fallback
 RESULTS = ROOT / "results.jsonl"
@@ -764,6 +768,49 @@ def wrap_variant(v):
 _bank_cache = {}  # (slug, version) -> wrapped, eligible variants (banks are static at runtime)
 
 
+_taxonomy_cache = {}
+
+
+def load_taxonomy(tax_id=None):
+    """Flatten taxonomy/<id>.json into the small label map the UI needs.
+
+    Nodes are nested (domain -> topic -> tag); the client wants a flat
+    {id: {en, zh, level}} map so it can label a question without walking.
+    """
+    tax_id = tax_id or DEFAULT_TAXONOMY
+    if tax_id in _taxonomy_cache:
+        return _taxonomy_cache[tax_id]
+    path = TAXONOMY_DIR / f"{tax_id}.json"
+    if not path.exists():
+        return None
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    nodes = {}
+
+    def walk(items, depth):
+        for item in items or []:
+            node_id = item.get("id")
+            if not node_id:
+                continue
+            label = item.get("label") or {}
+            nodes[node_id] = {
+                "en": label.get("en") or node_id,
+                "zh": label.get("zh") or label.get("en") or node_id,
+                "level": depth,
+            }
+            walk(item.get("children"), depth + 1)
+
+    walk(doc.get("roots"), 1)
+    out = {
+        "id": doc.get("id", tax_id),
+        "version": doc.get("version"),
+        "name": doc.get("name"),
+        "levels": doc.get("levels"),
+        "nodes": nodes,
+    }
+    _taxonomy_cache[tax_id] = out
+    return out
+
+
 def bank_files(slug, version=1):
     """Files backing one bank version; empty when that version is not installed.
 
@@ -934,13 +981,20 @@ def generate_test(slug, round_name=None, user=None, version=1):
             src = figure.get("src")
             if src and not src.startswith("/"):
                 figure["src"] = "/" + src
-        questions.append({
+        q = {
             "n": pos, "source": v["source"], "question": v["question"],
             "choices": v.get("choices"), "answer": v["answer"], "solution": v.get("solution"),
             "type": v.get("type", "integer_answer" if slug == "aime" else "multiple_choice"),
             "points": pts,
             "figure": figure,
-        })
+        }
+        # Topic classification and difficulty travel with the question: they are
+        # annotations on the bank (see scripts/apply_classification.py), so a
+        # generated paper stays filterable/analysable without re-guessing.
+        for key in ("classification", "difficulty"):
+            if v.get(key):
+                q[key] = v[key]
+        questions.append(q)
     integer = slug in ("aime", "mathcounts")
     calc = " · Calculator allowed" if slug.startswith("bpho") else " · No calculator"
     tests_dir = _tests_dir(user)
@@ -1099,6 +1153,14 @@ class Handler(BaseHTTPRequestHandler):
             self._send(json.dumps(list_tests(user)))
         elif path == "/api/banks":
             self._send(json.dumps(list_banks(user)))
+        elif path == "/api/taxonomy":
+            from urllib.parse import parse_qs
+            wanted = (parse_qs(self.path.partition("?")[2]).get("id") or [None])[0]
+            tax_doc = load_taxonomy(wanted)
+            if tax_doc is None:
+                self._send('{"error": "taxonomy not found"}', code=404)
+            else:
+                self._send(json.dumps(tax_doc))
         elif path.startswith("/figures/"):
             self._serve_figure(path)
         elif m := re.match(r"^/api/generate/([a-z0-9_]+)(?:/(.+))?$", path):

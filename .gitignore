@@ -31,3 +31,10 @@ log
 *.log
 .vscode/
 Mock-Test-Generator/
+
+# agent screenshots - never commit, only the folder's README survives
+screenshots/*
+!screenshots/README.md
+
+# classifier run output - regenerable, never commit
+classifier/out/
