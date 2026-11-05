@@ -1,10 +1,15 @@
 {
-  "format_version": "1.0",
+  "format_version": "1.1",
   "paper_version": 2,
   "id": "demo_rand_01",
   "title": "示例卷 — 图位三态演示 · v2",
   "competition": "Demo",
   "category": "Math",
+  "taxonomy": {
+    "id": "amc-v1",
+    "version": "1.0",
+    "name": "AMC Topic Taxonomy (AMC 8/10/12)"
+  },
   "instructions": "3 questions · 20 minutes · No calculator. 6 points total.",
   "time_limit_min": 20,
   "total_points": 6,
@@ -16,14 +21,31 @@
     "name": "mocktest-maker",
     "version": "0.9.0",
     "seed": 20261102,
-    "banks": ["bank/demo_A.json"]
+    "banks": [
+      "bank/demo_A.json"
+    ]
   },
   "version_history": [
-    { "version": 1, "at": "2026-11-02T20:10:00+08:00", "by": "generator", "note": "initial generation" },
-    { "version": 2, "at": "2026-11-02T20:24:00+08:00", "by": "teacher:xiang", "note": "补第 2 题配图；第 3 题图待补" }
+    {
+      "version": 1,
+      "at": "2026-11-02T20:10:00+08:00",
+      "by": "generator",
+      "note": "initial generation"
+    },
+    {
+      "version": 2,
+      "at": "2026-11-02T20:24:00+08:00",
+      "by": "teacher:xiang",
+      "note": "补第 2 题配图；第 3 题图待补"
+    }
   ],
   "sections": [
-    { "id": "S1", "title": "第 1 部分 · 选择与填空", "instructions": null, "points": 6 }
+    {
+      "id": "S1",
+      "title": "第 1 部分 · 选择与填空",
+      "instructions": null,
+      "points": 6
+    }
   ],
   "questions": [
     {
@@ -34,15 +56,42 @@
       "source": "示例 · 虚构题目（非真题）",
       "question": "若 $x + \\frac{1}{x} = 3$，则 $x^2 + \\frac{1}{x^2}$ 等于多少？",
       "question_zh": null,
-      "choices": { "A": "5", "B": "7", "C": "9", "D": "11", "E": "13" },
+      "choices": {
+        "A": "5",
+        "B": "7",
+        "C": "9",
+        "D": "11",
+        "E": "13"
+      },
       "answer": "B",
       "solution": "两边平方得 $x^2 + 2 + \\frac{1}{x^2} = 9$，故 $x^2 + \\frac{1}{x^2} = 7$。",
       "solution_zh": null,
       "points": 1,
-      "grading": { "mode": "choice" },
+      "grading": {
+        "mode": "choice"
+      },
       "figure": null,
       "subject": "algebra",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "classification": {
+        "state": "done",
+        "primary": "algebra.substitution",
+        "tags": [
+          {
+            "id": "algebra.substitution",
+            "weight": 1
+          },
+          {
+            "id": "algebra.identities.difference_of_squares_alg",
+            "weight": 0.4,
+            "note": "x^2 + 1/x^2 from (x + 1/x)^2"
+          }
+        ],
+        "source": "model",
+        "confidence": 0.93,
+        "reviewed": false,
+        "at": "2026-11-04T22:20:00+08:00"
+      }
     },
     {
       "n": 2,
@@ -57,7 +106,9 @@
       "solution": "斜边为 5，内切圆半径 $r = \\frac{3 + 4 - 5}{2} = 1$。",
       "solution_zh": null,
       "points": 2,
-      "grading": { "mode": "exact" },
+      "grading": {
+        "mode": "exact"
+      },
       "figure": {
         "kind": "svg",
         "state": "ready",
@@ -72,7 +123,31 @@
         "credit": "示例作图"
       },
       "subject": "geometry",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "classification": {
+        "state": "done",
+        "primary": "plane_geometry.right_triangles",
+        "tags": [
+          {
+            "id": "plane_geometry.right_triangles",
+            "weight": 1
+          },
+          {
+            "id": "plane_geometry.incircle_circumcircle.incircle_radius",
+            "weight": 0.5,
+            "note": "r = (a + b - c) / 2"
+          },
+          {
+            "id": "plane_geometry.triangle_area",
+            "weight": 0.3,
+            "note": "area split by the incenter"
+          }
+        ],
+        "source": "human",
+        "confidence": 1,
+        "reviewed": true,
+        "at": "2026-11-04T22:22:00+08:00"
+      }
     },
     {
       "n": 3,
@@ -87,7 +162,9 @@
       "solution": "正方形面积 4，内切圆半径 1、面积 $\\pi \\approx 3.14$，阴影面积 $4 - 3.14 = 0.86$，取整为 1。",
       "solution_zh": null,
       "points": 3,
-      "grading": { "mode": "exact" },
+      "grading": {
+        "mode": "exact"
+      },
       "figure": {
         "kind": "svg",
         "state": "placeholder",
@@ -102,9 +179,12 @@
         }
       },
       "subject": "geometry",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "classification": {
+        "state": "pending"
+      }
     }
   ],
-  "content_hash": "sha256:73ad4b3238bea99432c88894a4fe22eb19ab0ec2cedb53c7c90d4963c3213bb3",
-  "notes": "演示文件：第 1 题 figure=null（明确无图），第 2 题内联 SVG 就位（ready），第 3 题占位待补（placeholder）。"
+  "notes": "演示文件。figure：第 1 题 null（明确无图），第 2 题内联 SVG 就位（ready），第 3 题占位待补（placeholder）。classification：第 1 题二级考点 + 三级标签，模型标注未复核；第 2 题人工标注已复核；第 3 题待分类（pending）。分类属于标注，不进 content_hash、不需要升 paper_version。",
+  "content_hash": "sha256:3ce4c908017bdc60aed92b93dbc34929132af2669d498368588c17a6e64ebfc2"
 }

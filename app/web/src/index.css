@@ -637,6 +637,24 @@ table.stats th {
   color: var(--danger);
 }
 
+.badge.topic {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 22ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background: var(--tint-bg);
+  color: var(--primary-text);
+  border: 1px solid var(--tint-border);
+}
+
+.badge.topic svg {
+  flex: none;
+}
+
+
 .qtext {
   margin: 10px 0 12px;
   font-size: 15.5px;

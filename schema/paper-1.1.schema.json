@@ -1,0 +1,878 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mocktest-maker.local/schema/paper-1.1.schema.json",
+  "title": "MockTest Maker — 试卷格式 v1.1",
+  "description": "MockTest Maker 的试卷（mock paper）交换格式。format_version 描述结构版本，paper_version 描述这一份试卷的内容版本。v1.1 在 v1.0 之上只增字段：顶层 taxonomy（分类法声明）与题目级 classification（知识点分类）。v1.0 文件无需改动即可通过 v1.1 校验。",
+  "type": "object",
+  "required": [
+    "format_version",
+    "paper_version",
+    "id",
+    "title",
+    "questions"
+  ],
+  "properties": {
+    "format_version": {
+      "description": "格式版本号：结构版本，与内容无关。1.x 内向后兼容（只增字段），破坏性改动升 2.0。",
+      "type": "string",
+      "pattern": "^1\\.[0-9]+$"
+    },
+    "paper_version": {
+      "description": "试卷版本号：这一份试卷的内容版本，从 1 开始，内容每改一次 +1。",
+      "type": "integer",
+      "minimum": 1
+    },
+    "id": {
+      "description": "试卷稳定标识，同时是文件名主干：<slug>_rand_<NN> 或自定义。",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "competition": {
+      "description": "赛事显示名，如 \"AMC 8\"、\"AIME\"。",
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "instructions": {
+      "description": "卷首说明（题量、时长、能否用计算器等）。",
+      "type": "string"
+    },
+    "time_limit_min": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "total_points": {
+      "type": "number",
+      "minimum": 0
+    },
+    "calculator_allowed": {
+      "type": "boolean"
+    },
+    "locale": {
+      "description": "主语言；决定 question/solution 还是 question_zh/solution_zh 优先。",
+      "enum": [
+        "en",
+        "zh"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "generator": {
+      "$ref": "#/$defs/generator"
+    },
+    "version_history": {
+      "description": "版本流水，按版本号递增。最后一条应与 paper_version 一致。",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/versionEntry"
+      }
+    },
+    "sections": {
+      "description": "可选分卷/分节元数据（如 BPhO Section 1/2）。题目用 section 字段挂到这里的 id 上。",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/section"
+      }
+    },
+    "taxonomy": {
+      "description": "【v1.1】本文件题目分类所用的分类法声明。题目里的 classification 默认引用这里的 id；省略则每道题各自声明。",
+      "$ref": "#/$defs/taxonomyRef"
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    },
+    "content_hash": {
+      "description": "可选内容指纹：sha256(questions 的规范化 JSON)。v1.1 起 classification 与 x-* 字段不参与哈希（分类是标注，不是内容）。算法见 docs/paper-format.md。",
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "patternProperties": {
+    "^x-": {
+      "description": "扩展字段保留前缀：任何实现都可以加 x-* 而不破坏校验。"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "difficultyComponent": {
+      "type": "object",
+      "description": "One piece of evidence behind the fused difficulty score.",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "score"
+      ],
+      "properties": {
+        "method": {
+          "enum": [
+            "prior",
+            "llm_rubric",
+            "elo",
+            "irt",
+            "human"
+          ]
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "difficulty": {
+      "type": "object",
+      "description": "Difficulty with provenance. `level` is the canonical scale (\"amc20\"): 1..20 where 20 is the average AMC 12 problem 25; AIME and olympiad problems go above 20. `score` keeps the continuous value behind it; `components` records every estimate and its weight so the number can be recomputed or audited after any recalibration.",
+      "additionalProperties": false,
+      "required": [
+        "level"
+      ],
+      "properties": {
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60,
+          "description": "1 easiest .. 20 = average AMC 12 problem 25 .. 60 (IMO #6 class). The only field selection and statistics should read."
+        },
+        "scale": {
+          "enum": [
+            "amc20",
+            "legacy5"
+          ],
+          "description": "Which ladder `level` is written on. Omitted means amc20. legacy5 marks the retired 1-5 ratings."
+        },
+        "band": {
+          "enum": [
+            "easy",
+            "medium",
+            "hard"
+          ],
+          "description": "Derived from level on the amc20 scale: <=9 easy, 10-17 medium, >=18 hard. Ignored when scale is legacy5."
+        },
+        "score": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 60,
+          "description": "Continuous score behind level, on the same amc20 scale."
+        },
+        "method": {
+          "enum": [
+            "prior",
+            "llm_rubric",
+            "elo",
+            "irt",
+            "human",
+            "hybrid"
+          ],
+          "description": "Which evidence produced the current value."
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "components": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "$ref": "#/$defs/difficultyComponent"
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "attempts": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Real answer records behind this rating."
+            }
+          }
+        },
+        "reviewed": {
+          "type": "boolean",
+          "description": "A human confirmed or edited this rating."
+        },
+        "at": {
+          "type": "string",
+          "description": "ISO date the rating was computed."
+        }
+      }
+    },
+    "generator": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "seed": {
+          "description": "组卷随机种子，用于复现同一份卷子。",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "banks": {
+          "description": "抽题来源文件（相对仓库根）。",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "versionEntry": {
+      "type": "object",
+      "required": [
+        "version",
+        "at"
+      ],
+      "properties": {
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "by": {
+          "description": "generator / 用户名 / 工具名。",
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "section": {
+      "type": "object",
+      "required": [
+        "id",
+        "title"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,16}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "instructions": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "points": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "figure": {
+      "description": "题目配图槽位。state=placeholder 表示位置已留、图待补（几何题最常见）。",
+      "type": "object",
+      "required": [
+        "kind",
+        "state",
+        "placement",
+        "alt"
+      ],
+      "properties": {
+        "kind": {
+          "description": "渲染类型：矢量走 svg，位图走 image。",
+          "enum": [
+            "svg",
+            "image"
+          ]
+        },
+        "state": {
+          "description": "ready=图已就位；placeholder=占位待补。",
+          "enum": [
+            "ready",
+            "placeholder"
+          ]
+        },
+        "placement": {
+          "description": "图挂在哪里：题干 / 解答 / 两处。",
+          "enum": [
+            "prompt",
+            "solution",
+            "both"
+          ]
+        },
+        "src": {
+          "description": "外部资源路径，相对本试卷文件所在目录，如 figures/q03.svg。与 inline 二选一。",
+          "type": "string",
+          "minLength": 1
+        },
+        "inline": {
+          "description": "内联 SVG/图片（data URI 或 <svg> 源码），用于单文件自包含导出。与 src 二选一。",
+          "type": "string",
+          "minLength": 1
+        },
+        "mime": {
+          "type": "string"
+        },
+        "sha256": {
+          "description": "src 所指文件的 sha256（小写 hex），用于校验资源没被改坏。",
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "width": {
+          "description": "显示宽度（px @96dpi），placeholder 时即预留框宽。",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "height": {
+          "description": "显示高度（px @96dpi），placeholder 时即预留框高。",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "viewBox": {
+          "type": "string",
+          "pattern": "^-?[0-9.]+( -?[0-9.]+){3}$"
+        },
+        "alt": {
+          "description": "图的文字描述。必填：既是无障碍文本，也是占位期“该画什么”的说明。",
+          "type": "string",
+          "minLength": 1
+        },
+        "caption": {
+          "description": "图注，如 \"图 1\"。",
+          "type": "string"
+        },
+        "credit": {
+          "description": "图源/版权说明。",
+          "type": "string"
+        },
+        "source_code": {
+          "description": "可选：原始作图源码（Asymptote / TikZ），保留以便重绘。",
+          "type": "object",
+          "required": [
+            "lang",
+            "text"
+          ],
+          "properties": {
+            "lang": {
+              "enum": [
+                "asy",
+                "tikz"
+              ]
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "ready"
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "description": "图就位时必须给出资源（src 与 inline 恰好一个），并给出显示尺寸。",
+            "required": [
+              "width",
+              "height"
+            ],
+            "oneOf": [
+              {
+                "required": [
+                  "src"
+                ]
+              },
+              {
+                "required": [
+                  "inline"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "placeholder"
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "description": "占位时不能带资源，但必须给出预留尺寸和 alt。",
+            "required": [
+              "width",
+              "height"
+            ],
+            "not": {
+              "anyOf": [
+                {
+                  "required": [
+                    "src"
+                  ]
+                },
+                {
+                  "required": [
+                    "inline"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "grading": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "exact",
+            "numeric_tolerance",
+            "choice",
+            "manual"
+          ]
+        },
+        "tolerance": {
+          "description": "numeric_tolerance 的相对容差，0.02 = ±2%。",
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "taxonomyRef": {
+      "description": "【v1.1】分类法声明。id 指向 taxonomy/<id>.json，version 是该分类法的版本；题目只引 id，不在试卷里复制词表。",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]{1,31}$"
+        },
+        "version": {
+          "description": "分类法版本，如 \"1.0\"。词表增删节点时升版。",
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "uri": {
+          "description": "分类法文件位置，相对本试卷所在目录。省略时按仓库根 taxonomy/<id>.json 查找。",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "topicTag": {
+      "description": "【v1.1】一个知识点标签。id 是分类法里的点分路径，父节点自动汇总子节点。",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)*$"
+        },
+        "weight": {
+          "description": "该知识点在这道题里的分量，(0,1]。省略视为 1。一般 primary 为 1，次要知识点给它一个较小的数。",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "note": {
+          "description": "为什么判到这一类（人工/模型判读依据），便于复核。",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "classification": {
+      "description": "【v1.1】题目知识点分类。三态与 figure 一致：字段省略/null = 还没考虑过；state=pending = 已排进待分类队列；state=done = 已给出分类。",
+      "type": "object",
+      "required": [
+        "state"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "pending",
+            "done"
+          ]
+        },
+        "taxonomy": {
+          "description": "分类法 id；省略时用顶层 taxonomy.id。",
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]{1,31}$"
+        },
+        "primary": {
+          "description": "主知识点，必须是 tags 里的某个 id，建议取叶节点。题库/试卷按它做筛选与统计。",
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)*$"
+        },
+        "tags": {
+          "description": "全部命中的知识点。允许跨主题多标签；重复 id 不允许。",
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "$ref": "#/$defs/topicTag"
+          }
+        },
+        "source": {
+          "description": "这条分类是怎么来的：human 人工、rule 规则脚本、model 模型判定、import 外部导入。",
+          "enum": [
+            "human",
+            "rule",
+            "model",
+            "import"
+          ]
+        },
+        "confidence": {
+          "description": "分类置信度；模型/规则产出的必填，人工的可以省略。",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "reviewed": {
+          "description": "是否经过人工复核。批量分类后按它挑低置信度样本抽检。",
+          "type": "boolean"
+        },
+        "at": {
+          "description": "这次分类的时间。",
+          "type": "string",
+          "format": "date-time"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "done"
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "description": "分类完成必须有 primary 和至少一个 tag。",
+            "required": [
+              "primary",
+              "tags"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "pending"
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "description": "待分类只占位，不得带 primary/tags，否则「待分类」与「已分类」会互相矛盾。",
+            "not": {
+              "anyOf": [
+                {
+                  "required": [
+                    "primary"
+                  ]
+                },
+                {
+                  "required": [
+                    "tags"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "n",
+        "type",
+        "question",
+        "points"
+      ],
+      "properties": {
+        "n": {
+          "description": "卷面题号，从 1 连续递增。",
+          "type": "integer",
+          "minimum": 1
+        },
+        "qid": {
+          "description": "稳定题目标识。作答记录、错题本、版本 diff 都靠它，不要随题号变动。",
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,32}$"
+        },
+        "section": {
+          "description": "所属 section id（见顶层 sections）。",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "multiple_choice",
+            "integer_answer",
+            "numeric",
+            "proof"
+          ]
+        },
+        "source": {
+          "description": "出处，如 \"2012 AIME II Problem 1\"。",
+          "type": "string"
+        },
+        "question": {
+          "description": "题干，LaTeX 用 $...$ / $$...$$。",
+          "type": "string",
+          "minLength": 1
+        },
+        "question_zh": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "choices": {
+          "description": "选项表 letter -> 文本；multiple_choice 必填。",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "minProperties": 2,
+              "propertyNames": {
+                "pattern": "^[A-H]$"
+              },
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        "answer": {
+          "description": "标准答案。选择题为选项字母；integer_answer 为整数串（AIME 约定零填充 3 位，如 \"028\"；BMT/Mathcounts 可为多位数或负数）；numeric 为十进制数，单位放 grading.unit。",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "solution": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "solution_zh": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "points": {
+          "type": "number",
+          "minimum": 0
+        },
+        "grading": {
+          "$ref": "#/$defs/grading"
+        },
+        "figure": {
+          "description": "配图槽位。null / 缺省 = 明确无图。",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/figure"
+            }
+          ]
+        },
+        "classification": {
+          "description": "【v1.1】知识点分类槽位。null / 缺省 = 还没考虑过；state=pending = 待分类；state=done = 已分类。",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/classification"
+            }
+          ]
+        },
+        "subject": {
+          "description": "历史字段，粗粒度学科（如 algebra / geometry / Physics）。新代码请读 classification；本字段仅作兼容保留。",
+          "type": "string"
+        },
+        "difficulty": {
+          "description": "How hard the question is. Either the legacy shorthand (easy / medium / hard), or the v1.1 difficulty object with a 1-5 level plus the evidence that produced it. New writers should emit the object.",
+          "oneOf": [
+            {
+              "enum": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "description": "legacy shorthand (format 1.0)"
+            },
+            {
+              "$ref": "#/$defs/difficulty"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "multiple_choice"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "choices",
+              "answer"
+            ],
+            "properties": {
+              "choices": {
+                "type": "object",
+                "minProperties": 2
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "integer_answer"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "answer"
+            ],
+            "properties": {
+              "answer": {
+                "type": "string",
+                "pattern": "^-?[0-9]{1,15}$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "numeric"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "answer"
+            ],
+            "properties": {
+              "answer": {
+                "type": "string",
+                "pattern": "^-?[0-9]+(\\.[0-9]+)?$"
+              }
+            }
+          }
+        }
+      ],
+      "patternProperties": {
+        "^x-": {}
+      },
+      "additionalProperties": false
+    }
+  }
+}

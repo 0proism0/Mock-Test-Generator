@@ -63,11 +63,14 @@ python -m venv .venv
 - `scraper/` — collection pipelines (AoPS wiki via browser, official PDFs/TeX/HTML)
 - `raw/` — raw downloads (wikitext, PDFs, TeX)
 - `data/` — clean per-competition JSON of AMC/AIME 真题
-- `docs/paper-format.md` — paper JSON format v1.0 (format/paper version numbers, figure slots for geometry)
-- `schema/` — JSON Schema for the paper format (`paper-1.0.schema.json`)
-- `examples/` — format example (`demo_rand_01.json`: no figure / inline SVG / reserved placeholder)
-- `scripts/validate_paper.py` — validate papers, upgrade legacy papers to v1.0, recompute `content_hash`
+- `docs/paper-format.md` — paper JSON format v1.1 (format/paper version numbers, figure slots for geometry, per-question classification)
+- `schema/` — JSON Schema for the paper format (`paper-1.1.schema.json`; `paper-1.0.schema.json` frozen)
+- `classifier/` — offline LLM classifier that fills `classification` + `difficulty`
+- `taxonomy/` — AMC topic taxonomy (`amc-v1.json`, 8 domains / 86 topics / 339 tags) referenced by each question's `classification`
+- `examples/` — format example (`demo_rand_01.json`: three `figure` states + three `classification` states)
+- `scripts/validate_paper.py` — validate papers, upgrade legacy papers to v1.1, recompute `content_hash`, report classification coverage
 - `scripts/migrate_banks.py` — migrate `bank/*.json` to `bank/*.v1.json` (adds `qid`, normalizes `type`, turns `has_diagram` into `figure` slots)
+- `scripts/apply_classification.py` — write classifier output back into `bank/v2/*.json` (stamps `classification` + `difficulty`, `--check` verifies, `--with-issues` copies the defect report into `x-issue`)
 
 ## Current banks (19 competitions, ~7,500 problems)
 
