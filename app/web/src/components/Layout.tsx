@@ -18,6 +18,7 @@ import {
   Swords,
   Target,
   Users,
+  XCircle,
 } from './icons'
 
 interface Tab {
@@ -35,6 +36,7 @@ const tabs: Tab[] = [
   { to: '/practice', labelKey: 'tabPractice', icon: <Target size={18} /> },
   { to: '/tests', labelKey: 'tabTests', icon: <FileText size={18} /> },
   { to: '/stats', labelKey: 'tabStats', icon: <BarChart2 size={18} /> },
+  { to: '/mistakes', labelKey: 'tabMistakes', icon: <XCircle size={18} />, authOnly: true },
   { to: '/whiteboard', labelKey: 'tabWhiteboard', icon: <Edit3 size={18} /> },
   { to: '/friends', labelKey: 'tabFriends', icon: <Users size={18} />, authOnly: true },
   { to: '/pk', labelKey: 'tabPK', icon: <Swords size={18} />, authOnly: true },

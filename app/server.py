@@ -794,6 +794,67 @@ def _practice_file(user):
     return base / "practice.json"
 
 
+def _clean_details(details):
+    """Sanitize the per-question result detail array: [{n, given, ok}]."""
+    if not isinstance(details, list):
+        return []
+    out = []
+    for d in details[:200]:
+        if not isinstance(d, dict):
+            continue
+        try:
+            out.append({
+                "n": int(d.get("n")),
+                "given": str(d.get("given", ""))[:100],
+                "ok": bool(d.get("ok")),
+            })
+        except (TypeError, ValueError):
+            continue
+    return out
+
+
+def _classification_file(test_id):
+    """Per-test question classification, written by teachers (kp/diff/note per question n)."""
+    safe = re.sub(r"[^A-Za-z0-9_-]", "", str(test_id))[:80]
+    return TESTS / f"{safe}.cls.json"
+
+
+def _load_classification(test_id):
+    try:
+        return json.loads(_classification_file(test_id).read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _clean_classification(items):
+    """Sanitize {n: {kp, diff, note}} from the teacher editor."""
+    out = {}
+    if not isinstance(items, dict):
+        return out
+    for k, v in items.items():
+        if not isinstance(v, dict):
+            continue
+        try:
+            n = int(k)
+        except (TypeError, ValueError):
+            continue
+        entry = {}
+        kp = str(v.get("kp", "")).strip()[:80]
+        note = str(v.get("note", "")).strip()[:300]
+        if kp:
+            entry["kp"] = kp
+        if note:
+            entry["note"] = note
+        try:
+            diff = int(v.get("diff"))
+            if 1 <= diff <= 5:
+                entry["diff"] = diff
+        except (TypeError, ValueError):
+            pass
+        out[str(n)] = entry
+    return out
+
+
 def list_tests(user=None):
     out = []
     tests_dir = _tests_dir(user)
@@ -1059,6 +1120,88 @@ def generate_test(slug, round_name=None, user=None, version=1):
     return test
 
 
+def build_similar_test(user, items):
+    """Build a practice test from the same banks, at the positions the student got wrong.
+
+    Each item is {test_id, n}. The original test is looked up (user dir then global),
+    the bank slug is recovered from the test id (`<slug>_rand_...`), and for every
+    requested position one sibling variant (same position, different source) is drawn.
+    Falls back to the original question itself when the bank has no sibling.
+    """
+    questions = []
+    total_points = 0
+    sources = set()
+    for item in items:
+        tid = re.sub(r"[^A-Za-z0-9_-]", "", str(item.get("test_id", "")))[:80]
+        n = int(item.get("n"))
+        f = None
+        tdir = _tests_dir(user)
+        if (tdir / f"{tid}.json").exists():
+            f = tdir / f"{tid}.json"
+        elif (TESTS / f"{tid}.json").exists():
+            f = TESTS / f"{tid}.json"
+        if not f:
+            continue
+        try:
+            tdata = json.loads(f.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        orig = next((q for q in tdata.get("questions", []) if q.get("n") == n), None)
+        if not orig:
+            continue
+        slug = tid.split("_rand_")[0]
+        if slug not in COMP_META:
+            continue
+        q = dict(orig)
+        version = tdata.get("bank_version", 1)
+        try:
+            bank = load_bank(slug, version=version)
+            siblings = [v for v in bank
+                        if v.get("position") == n and v.get("source") != orig.get("source")]
+            if siblings:
+                pick = random.choice(siblings)
+                figure = pick.get("figure")
+                if figure:
+                    figure = dict(figure)
+                    src = figure.get("src")
+                    if src and not src.startswith("/"):
+                        figure["src"] = "/" + src
+                q = {
+                    "n": n, "source": pick["source"], "question": pick["question"],
+                    "choices": pick.get("choices"), "answer": pick["answer"],
+                    "solution": pick.get("solution"),
+                    "type": pick.get("type", orig.get("type", "multiple_choice")),
+                    "points": orig.get("points", 1),
+                    "figure": figure,
+                }
+        except Exception:
+            pass  # keep the original question if the bank can't be read
+        if q["source"] in sources:
+            continue
+        sources.add(q["source"])
+        total_points += q.get("points", 1)
+        questions.append(q)
+    if not questions:
+        raise ValueError("no questions could be matched to a bank — similar practice unavailable")
+    questions.sort(key=lambda q: q["n"])
+    n_q = len(questions)
+    tlim = max(5, min(75, 3 * n_q))
+    gen_time = time.strftime("%Y-%m-%d %H:%M")
+    test = {
+        "id": f"similar_{secrets.token_hex(4)}",
+        "competition": "Similar Practice",
+        "category": "Math",
+        "title": f"Similar Practice — {n_q} questions · {gen_time}",
+        "instructions": f"{n_q} questions · {tlim} minutes. Same positions as your missed questions, fresh variants.",
+        "time_limit_min": tlim,
+        "total_points": total_points,
+        "questions": questions,
+    }
+    (_tests_dir(user) / f"{test['id']}.json").write_text(
+        json.dumps(test, ensure_ascii=False, indent=1), encoding="utf-8")
+    return test
+
+
 def read_results(user=None):
     rfile = _results_file(user)
     if not rfile.exists():
@@ -1166,7 +1309,15 @@ class Handler(BaseHTTPRequestHandler):
             return f
         # fallback to global tests for backward compatibility
         f = TESTS / f"{test_id}.json"
-        return f if f.exists() else None
+        if f.exists():
+            return f
+        # teachers may open any student's test (e.g. to classify its questions)
+        u = _read_users().get(user) or {}
+        if u.get("role") == "teacher":
+            safe = re.sub(r"[^A-Za-z0-9_-]", "", str(test_id))[:80]
+            for d in USERS_DIR.glob(f"*/tests/{safe}.json"):
+                return d
+        return None
 
     def do_GET(self):
         path = self.path.split("?")[0]
@@ -1418,6 +1569,9 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(f.read_bytes())
             else:
                 self._send('{"error": "not found"}', code=404)
+        elif m := re.match(r"^/api/test/([a-z0-9_]+)/classify$", path):
+            tid = m.group(1)
+            self._send(json.dumps({"items": _load_classification(tid)}, ensure_ascii=False))
         elif path == "/api/worksheets":
             out = []
             if user and WORKSHEETS_DIR.exists():
@@ -1493,6 +1647,30 @@ class Handler(BaseHTTPRequestHandler):
             if sid:
                 _delete_session(sid)
             self._send(json.dumps({"ok": True}), cookies=[self._cookie("session_id", clear=True)])
+        elif m := re.match(r"^/api/test/([a-z0-9_]+)/classify$", path):
+            u = _read_users().get(user) or {}
+            if u.get("role", "student") != "teacher":
+                self._send('{"error": "teachers only"}', code=403)
+                return
+            data = self._read_body()
+            items = _clean_classification(data.get("items"))
+            _classification_file(m.group(1)).write_text(
+                json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
+            self._send('{"ok": true}')
+        elif path == "/api/practice_similar":
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+                return
+            data = self._read_body()
+            items = data.get("items")
+            if not isinstance(items, list) or not items:
+                self._send('{"error": "no items"}', code=400)
+                return
+            try:
+                ws = build_similar_test(user, items[:25])
+                self._send(json.dumps({"ok": True, "id": ws["id"]}))
+            except ValueError as e:
+                self._send(json.dumps({"error": str(e)}), code=400)
         elif path == "/api/result":
             if not user:
                 # guests can take tests but results aren't persisted
@@ -1509,6 +1687,7 @@ class Handler(BaseHTTPRequestHandler):
                     "total": data.get("total"),
                     "answered": data.get("answered", 0),
                     "duration_s": data.get("duration_s"),
+                    "details": _clean_details(data.get("details")),
                     "submitted_at": time.strftime("%Y-%m-%d %H:%M:%S"),
                     "user": user,
                 }

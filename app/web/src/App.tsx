@@ -11,6 +11,8 @@ const Practice = lazy(() => import('./routes/Practice').then((m) => ({ default: 
 const MyTests = lazy(() => import('./routes/MyTests').then((m) => ({ default: m.MyTests })))
 const TestRunner = lazy(() => import('./routes/TestRunner').then((m) => ({ default: m.TestRunner })))
 const Stats = lazy(() => import('./routes/Stats').then((m) => ({ default: m.Stats })))
+const Analysis = lazy(() => import('./routes/Analysis').then((m) => ({ default: m.Analysis })))
+const Mistakes = lazy(() => import('./routes/Mistakes').then((m) => ({ default: m.Mistakes })))
 const Whiteboard = lazy(() => import('./routes/Whiteboard').then((m) => ({ default: m.Whiteboard })))
 const Friends = lazy(() => import('./routes/Friends').then((m) => ({ default: m.Friends })))
 const Pk = lazy(() => import('./routes/Pk').then((m) => ({ default: m.Pk })))
@@ -26,7 +28,16 @@ export default function App() {
         <Route path="practice" element={<Practice />} />
         <Route path="tests" element={<MyTests />} />
         <Route path="stats" element={<Stats />} />
+        <Route path="analysis" element={<Analysis />} />
         <Route path="whiteboard" element={<Whiteboard />} />
+        <Route
+          path="mistakes"
+          element={
+            <RequireAuth>
+              <Mistakes />
+            </RequireAuth>
+          }
+        />
         <Route
           path="friends"
           element={

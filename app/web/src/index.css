@@ -1505,6 +1505,135 @@ table.stats th {
   gap: 8px;
   flex-wrap: wrap;
 }
+
+/* ---------- analysis report + mistakes ---------- */
+.an-page .card {
+  margin-bottom: 16px;
+}
+
+.an-report h4 {
+  margin: 14px 0 8px;
+  border-bottom: 1.5px solid var(--border);
+  padding-bottom: 4px;
+}
+
+.an-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.an-table th,
+.an-table td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.an-table th {
+  background: var(--surface-2);
+}
+
+.an-picks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.an-pick {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  max-width: 340px;
+}
+
+.an-pick.on {
+  border-color: var(--primary);
+  background: var(--surface-sel);
+}
+
+.an-kp-list {
+  margin-top: 6px;
+}
+
+.an-kp-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0;
+}
+
+.an-kp-name {
+  min-width: 140px;
+}
+
+.an-cls-table input,
+.an-cls-table select {
+  width: 100%;
+  font-size: 14px;
+  padding: 5px 8px;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.an-cls-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.ms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ms-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.ms-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.ms-badge {
+  font-size: 13px;
+  background: var(--surface-2);
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.ms-kp {
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.ms-q {
+  max-height: 90px;
+  overflow: auto;
+}
+
+.ms-note {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--ink-2);
+}
 .dr-run {
   max-width: 560px;
   margin: 0 auto;

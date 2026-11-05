@@ -81,6 +81,12 @@ export interface Announcement {
   body?: string
 }
 
+export interface ResultDetail {
+  n: number
+  given: string
+  ok: boolean
+}
+
 export interface TestResult {
   test_id: string
   title: string
@@ -89,6 +95,7 @@ export interface TestResult {
   total: number
   answered: number
   duration_s?: number
+  details?: ResultDetail[]
   submitted_at: string
   user: string
 }
@@ -259,7 +266,19 @@ export const api = {
     total: number
     answered: number
     duration_s: number
+    details?: ResultDetail[]
   }) => post<{ ok: boolean; guest?: boolean }>('/api/result', payload),
+
+  // question classification (teacher-authored: knowledge point, difficulty, key note)
+  classify: (testId: string) => request<{ items: Record<string, { kp?: string; diff?: number; note?: string }> }>(
+    `/api/test/${testId}/classify`,
+  ),
+  classifySave: (testId: string, items: Record<string, { kp?: string; diff?: number; note?: string }>) =>
+    post<{ ok: boolean }>(`/api/test/${testId}/classify`, { items }),
+
+  // build a practice test from the same banks at the positions you got wrong
+  practiceSimilar: (items: { test_id: string; n: number }[]) =>
+    post<{ ok: boolean; id: string }>('/api/practice_similar', { items }),
   announcements: () => request<{ announcements: Announcement[] }>('/api/announcements'),
 
   // friends / chat

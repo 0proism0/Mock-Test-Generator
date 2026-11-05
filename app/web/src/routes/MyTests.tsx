@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Archive, ArrowRight, FolderOpen, RotateCcw } from '../components/icons'
+import { Archive, ArrowRight, BarChart2, FolderOpen, RotateCcw } from '../components/icons'
 import { api, type TestResult, type TestSummary } from '../lib/api'
 import { useI18n } from '../lib/i18n'
 
@@ -87,6 +87,15 @@ export function MyTests() {
                 )}
                 <button className="btn" type="button" onClick={() => navigate(`/test/${r.test_id}`)}>
                   <RotateCcw size={14} aria-hidden="true" /> {t('retake')}
+                </button>
+                <button
+                  className="btn ghost"
+                  type="button"
+                  onClick={() =>
+                    navigate(`/analysis?test=${encodeURIComponent(r.test_id)}&at=${encodeURIComponent(r.submitted_at)}`)
+                  }
+                >
+                  <BarChart2 size={14} aria-hidden="true" /> {t('anTitle')}
                 </button>
               </div>
             </div>

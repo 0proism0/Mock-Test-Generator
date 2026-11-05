@@ -213,10 +213,13 @@ export function TestRunner() {
     setSubmitted(true)
     let score = 0
     let totalPoints = 0
+    const details: { n: number; given: string; ok: boolean }[] = []
     for (const q of test.questions) {
       const pts = q.points || 1
       totalPoints += pts
-      if (grade(q, answers[q.n])) score += pts
+      const ok = grade(q, answers[q.n])
+      if (ok) score += pts
+      details.push({ n: q.n, given: (answers[q.n] ?? '').trim(), ok })
     }
     setResult({ score, total: totalPoints })
     setSavedNote({ tone: 'wait', text: t('saving') })
@@ -230,6 +233,7 @@ export function TestRunner() {
         total: totalPoints,
         answered: Object.keys(answers).length,
         duration_s,
+        details,
       })
       .then((d) => setSavedNote({ tone: 'ok', text: d.guest ? t('savedGuest') : t('savedOk') }))
       .catch(() => setSavedNote({ tone: 'err', text: t('savedFail') }))
