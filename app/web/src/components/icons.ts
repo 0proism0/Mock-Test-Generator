@@ -56,6 +56,7 @@ export {
   Printer,
   Repeat,
   RotateCcw,
+  Search,
   Shuffle,
   Slash,
   Tag,

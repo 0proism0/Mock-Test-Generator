@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AutoMath } from '../components/AutoMath'
+import { ReportIssue } from '../components/ReportIssue'
 import { AlertTriangle, Check, Clock, Tag } from '../components/icons'
 import { api } from '../lib/api'
 import type { Taxonomy } from '../lib/api'
@@ -183,6 +184,7 @@ function QuestionCard({
           <span className="badge">
             {q.type === 'proof' || q.type === 'numeric' ? t('realProblem') : t('modifiedFrom')} {q.source}
           </span>
+          <ReportIssue compact target={{ qid: q.source ? `${q.source}#${q.n}` : `problem-${q.n}`, source: q.source }} />
         </span>
       </div>
       <AutoMath html={questionHtml} className="qtext" />
