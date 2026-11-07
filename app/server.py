@@ -1393,6 +1393,15 @@ def generate_test(slug, round_name=None, user=None, version=1):
     return test
 
 
+def _diff_level(q):
+    """Extract the numeric difficulty level (partner's amc20 1-20 scale) from a question/variant."""
+    d = (q or {}).get("difficulty") or {}
+    try:
+        return float(d.get("level"))
+    except (TypeError, ValueError):
+        return None
+
+
 def build_similar_test(user, items):
     """Build a practice test from the same banks, at the positions the student got wrong.
 
@@ -1431,17 +1440,24 @@ def build_similar_test(user, items):
             bank = load_bank(slug, version=version)
             siblings = [v for v in bank if v.get("source") != orig.get("source")]
             pick = None
-            # 1) same topic (classifier tag), nearest position — that's what "similar" means
+            # 1) same topic (classifier tag) AND closest difficulty level — the
+            #    partner's amc20 scale makes 'similar' precise, not just 'same chapter'
             orig_tag = (orig.get("classification") or {}).get("primary")
-            if not orig_tag:
-                # older tests lack embedded tags — recover from the bank by source
+            orig_level = _diff_level(orig)
+            if orig_level is None:
+                # older tests lack embedded fields — recover from the bank by source
                 orig_v = next((v for v in bank if v.get("source") == orig.get("source")), None)
-                orig_tag = ((orig_v or {}).get("classification") or {}).get("primary")
+                orig_tag = orig_tag or ((orig_v or {}).get("classification") or {}).get("primary")
+                orig_level = _diff_level(orig_v)
             if orig_tag:
                 same_topic = [v for v in siblings
                               if (v.get("classification") or {}).get("primary") == orig_tag]
                 if same_topic:
-                    same_topic.sort(key=lambda v: abs(int(v.get("position", n)) - n))
+                    def _key(v):
+                        lv = _diff_level(v)
+                        dl = abs(lv - orig_level) if (lv is not None and orig_level is not None) else 999
+                        return (dl, abs(int(v.get("position", n)) - n))
+                    same_topic.sort(key=_key)
                     pick = random.choice(same_topic[:3])
             # 2) fallback: same position, different source (classic difficulty-ramp match)
             if pick is None:
