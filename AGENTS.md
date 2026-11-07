@@ -155,7 +155,9 @@ GET  /api/reports   (own problem reports)
 GET  /api/generate/<slug>[/<round>]?v=<1|2>   GET /api/test/<id>   GET /figures/<file>
 GET  /api/practice  /api/classes  /api/class/<code>/reports  /api/schools  /api/school/docs
 GET  /api/pk  /api/pk/invites  /api/pk/<gid>  /api/chat/<user>  /api/worksheets
+GET  /api/test/<id>/classify   (per-question teacher classification)
 POST /api/register /api/login /api/logout /api/result /api/practice /api/report
+POST /api/practice_similar   (wrong questions -> same-topic variant test)
 POST /api/friends/(request|accept|decline|remove)  /api/chat/<user>
 POST /api/class/create /api/class/join  /api/pk/(challenge|respond|start)
 POST /api/school/join /api/school/leave /api/school/docs/upload  /api/worksheet/generate
@@ -168,8 +170,9 @@ POST /api/school/join /api/school/leave /api/school/docs/upload  /api/worksheet/
 ```
 main.tsx / App.tsx            路由与全局 provider（Auth → I18n → Theme）
 routes/                       每个页面一个文件（Bank, MyTests, NewTest, TestRunner, Practice,
-                              Worksheet, Classes, Friends, Pk, Games, Stats, Whiteboard, Login…）
-routes/games/, routes/whiteboard/   游戏与白板的纯逻辑（engine.ts / data.ts / keys.ts）
+                              Worksheet, Classes, Friends, Pk, Stats, Whiteboard, Login,
+                              Analysis 模考分析报告, Mistakes 错题+同类题练习…）
+routes/whiteboard/            白板的纯逻辑（data.ts / keys.ts）
 components/Layout.tsx         侧栏 + 顶栏；components/icons.ts 是全站图标唯一来源
 lib/api.ts                    唯一的 API 客户端，视图不要自己 fetch()
 lib/i18n.ts                   en + zh 全部文案（一个对象里两份）；lib/i18n-provider.tsx 提供 t()
@@ -262,8 +265,13 @@ screenshots/
 - **v2 已回写，v1 没做**：`bank/v2/*.json` 的 2632 题已带 `classification` + `difficulty`
   （`scripts/apply_classification.py`，`--check` 可复验）；`bank/*.json`（v1，9272 题中的主体）
   仍未标注 —— 用户已决定 v1 弃用，不再跑。下一步：人工抽检 + 组卷时按考点/难度筛。
-- **逐题作答没采集**：`/api/result` 只存整卷聚合，没有逐题对错，所以 Elo / IRT 难度
-  （`classifier/SCHEMES.md` 方案 C/D）暂时算不了；要跑起来得先让前端上报 `items[]`。
+- **逐题作答已采集**（2026-11 起）：`/api/result` 接收 `details[]`（`{n, given, ok}`），
+  前端 TestRunner 在交卷时上报。基于它的功能：`/analysis` 模考分析报告
+  （成绩总览 / 分段得分 / 失分明细 / 能力画像 / 提分空间，见 `lib/analysis.ts`），
+  `/mistakes` 错题本 + `POST /api/practice_similar`（按 classifier 考点找同主题变式组卷）。
+  考点解析优先级：教师手标（`/api/test/<id>/classify`，存 `tests/<id>.cls.json`）
+  > bank 内嵌 `classification.primary` 经 `/api/taxonomy` 翻译。Elo / IRT（方案 C/D）
+  的数据前提已满足，算法本身还没写。
 - `scraper/` 断链：`download_manager.py` / `ingest_server.py` 写 `raw/aops_wiki/<slug>.jsonl`，
   但所有 `build_*_banks.py` 只读 `raw/wikitext_problems.jsonl`，新抓的赛事进不了 bank。
 - `requirements.txt` 与实际不符（列了未使用的 Flask，缺 curl_cffi / pdfplumber / pypdf / playwright / pyyaml）。
