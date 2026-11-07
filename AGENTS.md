@@ -123,6 +123,23 @@ python scripts/validate_paper.py <paper> --upgrade --mark-pending     # 升级�
   它只搬运这两个字段、绝不改题干；`--check` 判断题库是否落后于 `classifier/out/*_v2.jsonl`。
   `generate_test` 会把这两个字段原样带进生成的试卷。
 
+### 4.4 题库浏览（`/questions`）
+
+- 后端 `GET /api/questions`：把 `bank/*.json`（v1）与 `bank/v2/*.json` 建成一个平铺索引
+  （`build_qindex()`，按文件 mtime 缓存，11898 行约 0.3s），支持 `q`（全文，含题干/来源/选项/答案/解析）、
+  `comp`、`v`（1/2）、`domain`、`topic`（含子节点前缀）、`level_min`/`level_max`、`type`、
+  `figure`、`classified`、`sort`（default/level_asc/level_desc/position）、`limit`（≤200）/`offset`。
+  返回 `{total, items, counts:{all, competition, domain, level, type}}`，facets 跟随当前搜索词。
+- 前端 `routes/Bank.tsx`（侧栏 Bank）：搜索框 250ms 防抖 + 7 个筛选下拉 + 2 个复选 + 分页（25/页），
+  卡片显示难度徽章、考点徽章（经 `/api/taxonomy` 翻译）、题型/库/配图/分值，展开看选项、答案、解析、其余标签。
+- v1 题库没有 `classification`/`difficulty`，所以那些卡上只有题型与来源；`--classified` 勾选可只看已标注的 v2 题。
+- 每张卡右下角有 **Report a problem**（`components/ReportIssue.tsx`，做题页也挂了同一个控件）：
+  选原因（`wrong_statement` / `wrong_answer` / `wrong_solution` / `broken_latex` / `missing_figure` /
+  `duplicate_choices` / `not_a_problem` / `other`）+ 可选备注，`POST /api/report` 追加一行到
+  `reports.jsonl`（**gitignored**，含 qid/来源/题干前 400 字，方便离线核对）。
+  登录用户可用 `GET /api/reports?mine=1` 回看自己的上报；原因码必须与 `server.py` 的
+  `REPORT_REASONS` 和 `ReportIssue.tsx` 的 `REASONS` 三处同步。
+
 ## 5. 后端结构（`app/server.py`，约 1800 行）
 
 顺序：常量（`COMP_META` 竞赛元数据、`ROUND_PATTERNS`、`DEFAULT_POINTS`）→ 认证 → 在线状态 →
@@ -133,11 +150,12 @@ friends/chat → PK → 班级 → 学校文档 → worksheet 解析 → 题目�
 主要路由：
 
 ```
-GET  /api/me /api/tests /api/banks /api/taxonomy /api/results /api/stats /api/announcements /api/friends
+GET  /api/me /api/tests /api/banks /api/taxonomy /api/questions /api/results /api/stats /api/announcements /api/friends
+GET  /api/reports   (own problem reports)
 GET  /api/generate/<slug>[/<round>]?v=<1|2>   GET /api/test/<id>   GET /figures/<file>
 GET  /api/practice  /api/classes  /api/class/<code>/reports  /api/schools  /api/school/docs
 GET  /api/pk  /api/pk/invites  /api/pk/<gid>  /api/chat/<user>  /api/worksheets
-POST /api/register /api/login /api/logout /api/result /api/practice
+POST /api/register /api/login /api/logout /api/result /api/practice /api/report
 POST /api/friends/(request|accept|decline|remove)  /api/chat/<user>
 POST /api/class/create /api/class/join  /api/pk/(challenge|respond|start)
 POST /api/school/join /api/school/leave /api/school/docs/upload  /api/worksheet/generate
@@ -149,7 +167,7 @@ POST /api/school/join /api/school/leave /api/school/docs/upload  /api/worksheet/
 
 ```
 main.tsx / App.tsx            路由与全局 provider（Auth → I18n → Theme）
-routes/                       每个页面一个文件（MyTests, NewTest, TestRunner, Practice,
+routes/                       每个页面一个文件（Bank, MyTests, NewTest, TestRunner, Practice,
                               Worksheet, Classes, Friends, Pk, Games, Stats, Whiteboard, Login…）
 routes/games/, routes/whiteboard/   游戏与白板的纯逻辑（engine.ts / data.ts / keys.ts）
 components/Layout.tsx         侧栏 + 顶栏；components/icons.ts 是全站图标唯一来源

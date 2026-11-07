@@ -42,6 +42,13 @@ DEFAULT_TAXONOMY = "amc-v1"
 STATIC = ROOT / "app" / "static"
 WEB_DIST = ROOT / "app" / "web" / "dist"  # built React app (see app/web); legacy STATIC is the fallback
 RESULTS = ROOT / "results.jsonl"
+# User-filed "this question is broken" reports: append-only JSONL, gitignored.
+REPORTS_FILE = ROOT / "reports.jsonl"
+REPORT_REASONS = (
+    "wrong_statement", "wrong_answer", "wrong_solution", "broken_latex",
+    "missing_figure", "duplicate_choices", "not_a_problem", "other",
+)
+REPORT_NOTE_MAX = 600
 USERS_DIR = ROOT / "users"
 USERS_FILE = ROOT / "users.json"
 SESSIONS_FILE = ROOT / "sessions.json"
@@ -1068,6 +1075,218 @@ def list_banks(user=None):
     return [b for b in out if b["ready"]]
 
 
+# --------------------------------------------------------------- question bank browser
+#
+# The generator only ever looks at *eligible* variants (see load_bank), but the
+# bank browser is an exploration tool: it must show every question on disk,
+# including the ones a test would skip (no solution, proofs, unclassified).
+
+_qindex_cache = {"stamp": None, "rows": []}
+
+
+def _slug_of(stem):
+    """Competition slug for a bank file stem (longest COMP_META key that prefixes it)."""
+    best = None
+    for key in COMP_META:
+        if stem == key or stem.startswith(key + "_"):
+            if best is None or len(key) > len(best):
+                best = key
+    return best or stem.rsplit("_", 1)[0]
+
+
+def _comp_label(slug):
+    meta = COMP_META.get(slug)
+    return meta[0] if meta else slug
+
+
+def _bank_index_files():
+    """(slug, version, path) for every bank file on disk: classic + figure bank."""
+    files = []
+    for f in sorted(BANK.glob("*.json")):
+        if f.name.endswith(".v1.json"):
+            continue  # parallel copies of the same problems (see load_bank)
+        files.append((_slug_of(f.stem), 1, f))
+    for f in sorted(BANK_V2.glob("*.json")):
+        files.append((_slug_of(f.stem), 2, f))
+    return files
+
+
+def _choices_list(raw):
+    """Bank v1 stores choices as a list, bank v2 as an {A: text} object."""
+    if isinstance(raw, dict):
+        return [f"{k}. {v}" for k, v in raw.items()]
+    if isinstance(raw, list):
+        return [c if isinstance(c, str) else json.dumps(c) for c in raw]
+    return []
+
+
+def _figure_url(figure):
+    """Bank-relative figure path -> the /figures/... URL the browser can fetch."""
+    if not isinstance(figure, dict):
+        return figure or None
+    out = dict(figure)
+    src = out.get("src")
+    if isinstance(src, str) and src and not src.startswith("/"):
+        out["src"] = "/" + src.lstrip("./")
+    return out
+
+
+def build_qindex():
+    """Flat index of every question in every bank file, cached until files change."""
+    files = _bank_index_files()
+    stamp = tuple()
+    try:
+        stamp = tuple((str(p), p.stat().st_mtime_ns, p.stat().st_size) for _, _, p in files)
+    except OSError:
+        stamp = None  # a file vanished mid-scan; rebuild next time
+    if stamp is not None and _qindex_cache["stamp"] == stamp:
+        return _qindex_cache["rows"]
+    rows = []
+    for slug, version, path in files:
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        comp = _comp_label(slug) or doc.get("competition") or slug
+        set_name = doc.get("set") or ""
+        for v in doc.get("variants") or []:
+            text = v.get("question") or ""
+            cls = v.get("classification") or {}
+            diff = v.get("difficulty") or {}
+            primary = cls.get("primary")
+            primary = primary if isinstance(primary, str) else None
+            level = diff.get("level")
+            level = level if isinstance(level, int) else None
+            tags = [t.get("id") for t in (cls.get("tags") or [])
+                    if isinstance(t, dict) and isinstance(t.get("id"), str)]
+            qid = v.get("qid") or "q" + hashlib.sha1(
+                f"{v.get('source', '')}\0{text}".encode("utf-8")).hexdigest()[:12]
+            rows.append({
+                "id": f"{slug}:{version}:{qid}",
+                "qid": qid,
+                "bank": path.stem,
+                "slug": slug,
+                "version": version,
+                "competition": comp,
+                "set": set_name,
+                "position": v.get("position"),
+                "source": v.get("source") or "",
+                "type": v.get("type") or "",
+                "points": v.get("points"),
+                "question": text,
+                "question_zh": v.get("question_zh") or "",
+                "choices": _choices_list(v.get("choices")),
+                "answer": v.get("answer") if isinstance(v.get("answer"), str) else "",
+                "solution": v.get("solution") or "",
+                "solution_zh": v.get("solution_zh") or "",
+                "primary": primary,
+                "domain": primary.split(".")[0] if primary else None,
+                "tags": tags,
+                "level": level,
+                "band": diff.get("band") if isinstance(diff.get("band"), str) else None,
+                "has_figure": bool(v.get("figure")),
+                "figure": _figure_url(v.get("figure")),
+                "has_solution": bool(v.get("solution")),
+            })
+    _qindex_cache["stamp"] = stamp
+    _qindex_cache["rows"] = rows
+    return rows
+
+
+def _as_int(value, default=None):
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
+_hay_cache = {}
+
+
+def _qindex_haystack(r):
+    """Lowercased text blob for one row (cached: searching 12k questions repeatedly)."""
+    hay = _hay_cache.get(r["id"])
+    if hay is None:
+        hay = " ".join((
+            r["question"], r["question_zh"], r["source"],
+            " ".join(r["choices"]), r["answer"], r["solution"],
+        )).lower()
+        _hay_cache[r["id"]] = hay
+    return hay
+
+
+def search_questions(query=None, comps=None, version=None, domain=None, topic=None,
+                     level_min=None, level_max=None, qtype=None, figure=None,
+                     classified=None, sort="default", limit=30, offset=0):
+    """Filter the whole bank. Returns a page plus facet counts for the UI."""
+    rows = build_qindex()
+    needle = (query or "").strip().lower()
+
+    def matches(r):
+        if needle and needle not in _qindex_haystack(r):
+            return False
+        if comps and r["slug"] not in comps:
+            return False
+        if version and r["version"] != version:
+            return False
+        if domain and r["domain"] != domain:
+            return False
+        if topic:
+            ids = [r["primary"]] + r["tags"] if r["primary"] else r["tags"]
+            if not any(i and (i == topic or i.startswith(topic + ".")) for i in ids):
+                return False
+        if level_min is not None and (r["level"] is None or r["level"] < level_min):
+            return False
+        if level_max is not None and (r["level"] is None or r["level"] > level_max):
+            return False
+        if qtype and r["type"] != qtype:
+            return False
+        if figure is not None and r["has_figure"] != figure:
+            return False
+        if classified is not None and bool(r["primary"]) != classified:
+            return False
+        return True
+
+    hits = [r for r in rows if matches(r)]
+    if sort == "level_asc":
+        hits.sort(key=lambda r: (r["level"] is None, r["level"] or 0, r["slug"], r["position"] or 0))
+    elif sort == "level_desc":
+        hits.sort(key=lambda r: (r["level"] is None, -(r["level"] or 0), r["slug"], r["position"] or 0))
+    elif sort == "position":
+        hits.sort(key=lambda r: (r["slug"], r["position"] or 0, r["source"]))
+    else:  # default: grouped by competition, then original paper order
+        hits.sort(key=lambda r: (r["slug"], r["version"], r["position"] or 0, r["source"]))
+
+    limit = max(1, min(200, limit or 30))
+    offset = max(0, offset or 0)
+    page = hits[offset:offset + limit]
+
+    comp_facet, domain_facet, level_facet, type_facet = {}, {}, {}, {}
+    for r in rows:
+        if needle and needle not in _qindex_haystack(r):
+            continue
+        comp_facet[r["slug"]] = comp_facet.get(r["slug"], 0) + 1
+        type_facet[r["type"] or "unknown"] = type_facet.get(r["type"] or "unknown", 0) + 1
+        if r["domain"]:
+            domain_facet[r["domain"]] = domain_facet.get(r["domain"], 0) + 1
+        if r["level"] is not None:
+            level_facet[str(r["level"])] = level_facet.get(str(r["level"]), 0) + 1
+    return {
+        "total": len(hits),
+        "limit": limit,
+        "offset": offset,
+        "counts": {
+            "all": len(rows),
+            "competition": dict(sorted(comp_facet.items(), key=lambda kv: -kv[1])),
+            "competition_labels": {k: _comp_label(k) for k in comp_facet},
+            "domain": dict(sorted(domain_facet.items(), key=lambda kv: -kv[1])),
+            "level": dict(sorted(level_facet.items(), key=lambda kv: int(kv[0]))),
+            "type": dict(sorted(type_facet.items(), key=lambda kv: -kv[1])),
+        },
+        "items": page,
+    }
+
+
 def generate_test(slug, round_name=None, user=None, version=1):
     """Assemble a new mock: one eligible variant per position, never reusing a source
     that appeared in any previously generated test.
@@ -1317,6 +1536,37 @@ def compute_stats(user=None):
     }
 
 
+def read_reports(limit=200, user=None):
+    """Newest-first slice of reports.jsonl, optionally only one user's."""
+    if not REPORTS_FILE.exists():
+        return []
+    rows = []
+    try:
+        with REPORTS_FILE.open("r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    rec = json.loads(line)
+                except ValueError:
+                    continue  # a half-written line from a crash: skip, never explode
+                if user is not None and rec.get("user") != user:
+                    continue
+                rows.append(rec)
+    except OSError:
+        return []
+    rows.reverse()
+    return rows[:limit]
+
+
+def append_report(rec):
+    REPORTS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with _store_lock:
+        with REPORTS_FILE.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+
 class Handler(BaseHTTPRequestHandler):
     def _read_body(self):
         n = int(self.headers.get("Content-Length", 0))
@@ -1425,6 +1675,32 @@ class Handler(BaseHTTPRequestHandler):
                 self._send('{"error": "taxonomy not found"}', code=404)
             else:
                 self._send(json.dumps(tax_doc))
+        elif path == "/api/questions":
+            # Bank browser: search + filter over every question on disk.
+            from urllib.parse import parse_qs
+            qs = parse_qs(self.path.partition("?")[2])
+            one = lambda k: (qs.get(k) or [None])[0]  # noqa: E731
+            def flag(name):
+                raw = one(name)
+                if raw is None or raw == "":
+                    return None
+                return raw not in ("0", "false", "no")
+            page = search_questions(
+                query=one("q"),
+                comps=[c for c in (qs.get("comp") or []) if c] or None,
+                version=_as_int(one("v")),
+                domain=one("domain"),
+                topic=one("topic"),
+                level_min=_as_int(one("level_min")),
+                level_max=_as_int(one("level_max")),
+                qtype=one("type"),
+                figure=flag("figure"),
+                classified=flag("classified"),
+                sort=one("sort") or "default",
+                limit=_as_int(one("limit"), 30) or 30,
+                offset=_as_int(one("offset"), 0) or 0,
+            )
+            self._send(json.dumps(page, ensure_ascii=False), "application/json; charset=utf-8")
         elif path.startswith("/figures/"):
             self._serve_figure(path)
         elif m := re.match(r"^/api/generate/([a-z0-9_]+)(?:/(.+))?$", path):
@@ -1450,6 +1726,18 @@ class Handler(BaseHTTPRequestHandler):
                                        "fallback": fell_back}))
             else:
                 self._send('{"error": "bank incomplete for this competition"}', code=400)
+        elif path == "/api/reports":
+            # Problem reports filed from the bank browser / test runner.
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                from urllib.parse import parse_qs
+                qs = parse_qs(self.path.partition("?")[2])
+                limit = _as_int((qs.get("limit") or ["50"])[0], 50) or 50
+                limit = max(1, min(200, limit))
+                rows = read_reports(limit=limit, user=user)
+                self._send(json.dumps({"reports": rows, "count": len(rows)}, ensure_ascii=False),
+                           "application/json; charset=utf-8")
         elif path == "/api/announcements":
             if not user:
                 self._send('{"error": "login required"}', code=401)
@@ -1754,6 +2042,42 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(json.dumps({"ok": True, "id": ws["id"]}))
             except ValueError as e:
                 self._send(json.dumps({"error": str(e)}), code=400)
+        elif path == "/api/report":
+            # "This question is broken": one JSONL row per report, guests allowed.
+            try:
+                data = self._read_body()
+            except Exception:
+                self._send('{"error": "bad json"}', code=400)
+                return
+            qid = str(data.get("qid") or "").strip()
+            reason = str(data.get("reason") or "").strip()
+            if not qid:
+                self._send('{"error": "qid required"}', code=400)
+                return
+            if reason not in REPORT_REASONS:
+                self._send('{"error": "unknown reason"}', code=400)
+                return
+            rec = {
+                "id": "rep" + time.strftime("%Y%m%d%H%M%S") + "-" + secrets.token_hex(3),
+                "qid": qid[:200],
+                "reason": reason,
+                "note": str(data.get("note") or "").strip()[:REPORT_NOTE_MAX],
+                "bank": str(data.get("bank") or "")[:80],
+                "version": _as_int(data.get("version")),
+                "source": str(data.get("source") or "")[:200],
+                "competition": str(data.get("competition") or "")[:60],
+                # keep a snippet so triage works without the banks at hand
+                "question": str(data.get("question") or "")[:400],
+                "user": user,
+                "created_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+                "status": "open",
+            }
+            try:
+                append_report(rec)
+            except OSError as exc:
+                self._send(json.dumps({"error": "could not save report: %s" % exc}), code=500)
+                return
+            self._send(json.dumps({"ok": True, "id": rec["id"]}))
         elif path == "/api/result":
             if not user:
                 # guests can take tests but results aren't persisted
