@@ -22,6 +22,7 @@ seen, probed, and evaded-by-curl in a safe local setup.
 import hashlib
 import hmac
 import json
+import os
 import secrets
 import threading
 import time
@@ -33,6 +34,11 @@ LOG_FILE = ROOT / "botguard.log"
 BAN_SECONDS = 300           # temporary graded ban
 LOGIN_WINDOW = 300.0        # brute-force memory
 LOGIN_MAX_FAILS = 5
+
+# Master switch. The human check was built as a practice lab (see
+# docs/anti-crawler.md); it is OFF by default so daily use has no friction.
+# Restart the server with MOCKTEST_BOTGUARD=1 to turn the challenge back on.
+ENABLED = os.environ.get("MOCKTEST_BOTGUARD", "") == "1"
 
 # --- secret (persists across restarts so cookies survive; gitignored) ----------
 
@@ -124,6 +130,10 @@ _bans_lock = threading.Lock()
 
 
 def ban(fingerprint, reason, path=""):
+    if not ENABLED:
+        log({"event": "honeypot_hit_ignored_disabled", "reason": reason, "path": path,
+             "fp": fingerprint})
+        return
     until = time.time() + BAN_SECONDS
     with _bans_lock:
         _bans[fingerprint] = until

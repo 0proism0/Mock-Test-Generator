@@ -1,5 +1,10 @@
 # Anti-crawler defense practice — the 5-layer model on MockTest (localhost)
 
+> **Status: off by default.** The human check was built as a practice lab and
+> is disabled for daily use — `_bot_gate()` returns immediately unless the
+> server starts with `MOCKTEST_BOTGUARD=1` (`MOCKTEST_BOTGUARD=1 python
+> app/server.py`). Honeypots keep logging (without banning) either way.
+
 This project doubles as a hands-on lab for the classic bot-defense stack.
 The **attacker side** is `scraper/shsid_crawler.py` (a working Moodle
 crawler); the **defender side** is `app/botguard.py` + guards in

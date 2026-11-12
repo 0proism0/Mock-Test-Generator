@@ -1699,8 +1699,12 @@ class Handler(BaseHTTPRequestHandler):
         Order: graded ban check -> per-fingerprint rate limit (tighter for
         self-declared scripts in the UA) -> proof-of-human cookie (missing
         => 303 to the JS challenge for browsers, 403 JSON for fetch/curl).
-        Returns True only when the request may proceed.
+        Returns True only when the request may proceed. Disabled unless the
+        server runs with MOCKTEST_BOTGUARD=1 (the human check is a practice
+        lab — see docs/anti-crawler.md — and is off for daily use).
         """
+        if not botguard.ENABLED:
+            return True
         f = self._bot_fp()
         ua = self.headers.get("User-Agent") or ""
         if botguard.is_banned(f):
@@ -2173,7 +2177,7 @@ class Handler(BaseHTTPRequestHandler):
             data = self._read_body()
             username = (data.get("username") or "").strip().lower()
             password = data.get("password") or ""
-            if botguard.login_needs_challenge(self._bot_fp(), username):
+            if botguard.ENABLED and botguard.login_needs_challenge(self._bot_fp(), username):
                 f = self._bot_fp()
                 cookie = _parse_cookies(self.headers.get("Cookie")).get("bg_t")
                 if not (cookie and botguard.check_token(cookie, f)):

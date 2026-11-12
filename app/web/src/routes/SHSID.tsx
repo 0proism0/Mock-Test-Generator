@@ -46,10 +46,6 @@ export function SHSID() {
         ) : (
           <p className="muted">
             {data.courses.length} {t('shsidCourses')} · {totalFiles} {t('shsidFiles')}
-            {/* L4 honeypot: invisible to humans, irresistible to parsers */}
-            <a href="/honeypot" className="shsid-trap" tabIndex={-1} aria-hidden="true">
-              .
-            </a>
           </p>
         )}
       </section>
