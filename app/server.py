@@ -25,6 +25,7 @@ sys_path = str(Path(__file__).resolve().parent)
 if sys_path not in os.sys.path:
     os.sys.path.insert(0, sys_path)
 from latex_wrap import wrap_bare_math
+import botguard
 
 ROOT = Path(__file__).resolve().parent.parent
 TESTS = ROOT / "tests"
@@ -1688,6 +1689,42 @@ class Handler(BaseHTTPRequestHandler):
     def _user(self):
         return current_user(self.headers.get("Cookie"))
 
+    def _bot_fp(self):
+        """L5: multi-factor fingerprint — IP + User-Agent hash, not IP alone."""
+        return botguard.fp(self.client_address[0], self.headers.get("User-Agent"))
+
+    def _bot_gate(self, path):
+        """L2-L5 gate for sensitive endpoints (the crawled papers).
+
+        Order: graded ban check -> per-fingerprint rate limit (tighter for
+        self-declared scripts in the UA) -> proof-of-human cookie (missing
+        => 303 to the JS challenge for browsers, 403 JSON for fetch/curl).
+        Returns True only when the request may proceed.
+        """
+        f = self._bot_fp()
+        ua = self.headers.get("User-Agent") or ""
+        if botguard.is_banned(f):
+            botguard.log({"event": "blocked", "reason": "banned", "path": path, "fp": f})
+            self._send('{"error": "banned by bot guard"}', code=403)
+            return False
+        scriptish = bool(re.search(r"python-requests|curl/|wget/|scrapy|httpclient", ua, re.I))
+        if not botguard.rate_limit(f, max_hits=4 if scriptish else 30, window=10.0):
+            botguard.log({"event": "blocked", "reason": "rate_limit", "path": path, "fp": f})
+            self._send('{"error": "slow down (rate limit)"}', code=429)
+            return False
+        cookie = _parse_cookies(self.headers.get("Cookie")).get("bg_t")
+        if not (cookie and botguard.check_token(cookie, f)):
+            botguard.log({"event": "challenge_served", "path": path, "fp": f, "ua": ua[:80]})
+            if "text/html" in (self.headers.get("Accept") or ""):
+                self.send_response(303)
+                self.send_header("Location", f"/challenge?next={path}")
+                self.send_header("Content-Length", "0")
+                self.end_headers()
+            else:
+                self._send('{"error": "human check required", "challenge": "/challenge"}', code=403)
+            return False
+        return True
+
     def do_HEAD(self):  # noqa: N802
         """HEAD support for file endpoints (link checkers, fetch probes)."""
         from urllib.parse import urlparse, unquote
@@ -1698,9 +1735,7 @@ class Handler(BaseHTTPRequestHandler):
             self.send_response(401)
             self.end_headers()
             return
-        if not m:
-            self.send_response(404)
-            self.end_headers()
+        if not m or not self._bot_gate(path):
             return
         p = _shsid_file_path("raw/shsid/" + unquote(m.group(1)))
         if not p:
@@ -2036,12 +2071,32 @@ class Handler(BaseHTTPRequestHandler):
             if not user:
                 self._send('{"error": "login required"}', code=401)
             else:
+                botguard.log({"event": "api", "path": "/api/shsid", "fp": self._bot_fp(),
+                              "ua": (self.headers.get("User-Agent") or "")[:80]})
                 self._send(json.dumps(_shsid_index(), ensure_ascii=False))
+        elif path == "/robots.txt":
+            # L4 honeypot rules: well-behaved crawlers stay away; anything that
+            # hits the listed paths anyway outs itself and gets graded-banned.
+            self._send("User-agent: *\nDisallow: /honeypot\nDisallow: /api/trap\n",
+                       "text/plain; charset=utf-8")
+        elif path == "/challenge":
+            from urllib.parse import parse_qs
+            nonce = (parse_qs(self.path.partition("?")[2]).get("nonce") or [""])[0]
+            if not botguard.redeem_nonce(nonce):
+                nonce = botguard.issue_nonce()
+            html = botguard.CHALLENGE_HTML.replace("__NONCE__", nonce)
+            self._send(html.encode(), "text/html; charset=utf-8")
+        elif path == "/honeypot" or path == "/api/trap":
+            # L4: touched the invisible trap — grade-ban this fingerprint
+            botguard.ban(self._bot_fp(), "honeypot", path)
+            self._send('{"error": "not found"}', code=404)
         elif m := re.match(r"^/shsid-files/(.+)$", path):
             if not user:
                 self._send('{"error": "login required"}', code=401)
                 return
             from urllib.parse import unquote
+            if not self._bot_gate(path):
+                return
             p = _shsid_file_path("raw/shsid/" + unquote(m.group(1)))
             if not p:
                 self._send('{"error": "not found"}', code=404)
@@ -2118,11 +2173,27 @@ class Handler(BaseHTTPRequestHandler):
             data = self._read_body()
             username = (data.get("username") or "").strip().lower()
             password = data.get("password") or ""
+            if botguard.login_needs_challenge(self._bot_fp(), username):
+                f = self._bot_fp()
+                cookie = _parse_cookies(self.headers.get("Cookie")).get("bg_t")
+                if not (cookie and botguard.check_token(cookie, f)):
+                    botguard.log({"event": "blocked", "reason": "login_bruteforce",
+                                  "user": username, "fp": f})
+                    self._send(json.dumps({"error": "too many failures — human check required",
+                                           "challenge": "/challenge?next=/login"}), code=429)
+                    return
             users = _read_users()
             u = users.get(username)
             if not u or not _verify_password(password, u["salt"], u["key"]):
-                self._send(json.dumps({"error": "invalid username or password"}), code=401)
+                # L4/L5: remember brute-forcing fingerprints; once hot, they
+                # must also pass the human challenge before trying again
+                hot = botguard.note_login_fail(self._bot_fp(), username)
+                botguard.log({"event": "login_fail", "user": username,
+                              "fp": self._bot_fp(), "hot": hot})
+                self._send(json.dumps({"error": "invalid username or password",
+                                       "challenge": hot or None}), code=401)
                 return
+            botguard.clear_login_fails(self._bot_fp(), username)
             sid = _make_session(username)
             self._send(json.dumps({"ok": True, "user": username}), cookies=[self._cookie("session_id", sid, SESSION_DAYS * 86400)])
         elif path == "/api/logout":
@@ -2155,6 +2226,29 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(json.dumps({"ok": True, "id": ws["id"]}))
             except ValueError as e:
                 self._send(json.dumps({"error": str(e)}), code=400)
+        elif path == "/api/challenge/verify":
+            data = self._read_body()
+            f = self._bot_fp()
+            ok_nonce = botguard.redeem_nonce(str(data.get("nonce", "")))
+            try:
+                moves = int(data.get("moves") or 0)
+                dwell = float(data.get("dwell") or 0)
+                var = float(data.get("variance") or 0)
+            except (TypeError, ValueError):
+                moves, dwell, var = 0, 0.0, 0.0
+            human = (ok_nonce and moves >= botguard.MIN_MOVES
+                     and dwell >= botguard.MIN_DWELL and var > botguard.MIN_VARIANCE)
+            botguard.log({"event": "challenge", "fp": f, "ok": human,
+                          "moves": moves, "dwell": round(dwell, 2), "var": round(var, 4)})
+            if not human:
+                self._send('{"error": "not enough human entropy — keep moving the mouse"}', code=403)
+                return
+            from urllib.parse import parse_qs
+            nxt = (parse_qs(self.path.partition("?")[2]).get("next") or ["/"])[0]
+            if not nxt.startswith("/"):
+                nxt = "/"
+            self._send(json.dumps({"ok": True, "next": nxt}),
+                       cookies=[self._cookie("bg_t", botguard.make_token(f, botguard.issue_nonce()))])
         elif path == "/api/report":
             # "This question is broken": one JSONL row per report, guests allowed.
             try:

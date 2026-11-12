@@ -1772,6 +1772,12 @@ table.stats th {
   border-bottom: 1px dashed var(--border);
   font-size: 14px;
 }
+
+/* L4 honeypot: rendered for parsers, never displayed to humans */
+.shsid-trap {
+  display: none !important;
+  visibility: hidden;
+}
 .dr-run {
   max-width: 560px;
   margin: 0 auto;

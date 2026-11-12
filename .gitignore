@@ -41,3 +41,5 @@ screenshots/*
 classifier/out/
 shsid_credentials
 raw/shsid/
+botguard.secret
+botguard.log
