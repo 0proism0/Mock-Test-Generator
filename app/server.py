@@ -1688,6 +1688,34 @@ class Handler(BaseHTTPRequestHandler):
     def _user(self):
         return current_user(self.headers.get("Cookie"))
 
+    def do_HEAD(self):  # noqa: N802
+        """HEAD support for file endpoints (link checkers, fetch probes)."""
+        from urllib.parse import urlparse, unquote
+        user = self._user()
+        path = urlparse(self.path).path
+        m = re.match(r"^/shsid-files/(.+)$", path)
+        if not user:
+            self.send_response(401)
+            self.end_headers()
+            return
+        if not m:
+            self.send_response(404)
+            self.end_headers()
+            return
+        p = _shsid_file_path("raw/shsid/" + unquote(m.group(1)))
+        if not p:
+            self.send_response(404)
+            self.end_headers()
+            return
+        mime = mimetypes.guess_type(str(p))[0] or "application/octet-stream"
+        inline = mime == "application/pdf" or mime.startswith("image/")
+        self.send_response(200)
+        self.send_header("Content-Type", mime)
+        self.send_header("Content-Length", str(p.stat().st_size))
+        disp = "inline" if inline else "attachment"
+        self.send_header("Content-Disposition", f'{disp}; filename="{p.name}"')
+        self.end_headers()
+
     def _test_file(self, test_id, user):
         tests_dir = _tests_dir(user)
         f = tests_dir / f"{test_id}.json"

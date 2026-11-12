@@ -27,7 +27,7 @@ if pgrep -f "shsid_crawler.py.*--watch" >/dev/null 2>&1; then
     exit 0
 fi
 
-nohup .venv/bin/python scraper/shsid_crawler.py \
+nohup .venv/bin/python -u scraper/shsid_crawler.py \
     --download --watch --interval "$INTERVAL" \
     >> raw/shsid/crawler.log 2>&1 &
 echo "crawler started (pid $!), log: raw/shsid/crawler.log, every ${INTERVAL} min"

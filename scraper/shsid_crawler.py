@@ -89,19 +89,37 @@ class SHSIDCrawler:
         return True
 
     def get_all_courses(self):
-        """Return {course_id: course_name} for the logged-in user."""
+        """Return {course_id: course_name} for the logged-in user.
+
+        The /my/ page lists enrolled courses inside a JS nav tree
+        (<a title="G8MaH" href=".../course/view.php?id=10">), which the
+        original soup selectors missed — so scan anchors with a regex first.
+        """
         if not self.logged_in:
             return self.get_public_courses()
         resp = self.session.get(f"{BASE_URL}/my/", timeout=TIMEOUT)
         resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "html.parser")
         courses = {}
+        for m in re.finditer(
+                r'<a\b[^>]*?href="[^"]*?/course/view\.php\?id=(\d+)"[^>]*?>(.*?)</a>',
+                resp.text, re.S | re.I):
+            cid, inner = m.group(1), m.group(2)
+            name = re.sub(r"<[^>]+>", "", inner).strip()
+            if not name:
+                tm = re.search(r'title="([^"]+)"', m.group(0))
+                name = (tm.group(1) or "").strip() if tm else ""
+            if cid and name:
+                courses.setdefault(cid, name)
+        if courses:
+            return courses
+        # legacy page layouts: coursebox tiles / content region
+        soup = BeautifulSoup(resp.text, "html.parser")
 
         def _extract(tag):
             href = tag.get("href", "")
             m = re.search(r"/course/view\.php\?id=(\d+)", href)
             if m and tag.get_text(strip=True):
-                courses[m.group(1)] = tag.get_text(strip=True)
+                courses.setdefault(m.group(1), tag.get_text(strip=True))
 
         for a in soup.select('li[data-key="mycourses"] a[href]'):
             _extract(a)
@@ -113,6 +131,8 @@ class SHSIDCrawler:
         if region:
             for a in region.find_all("a", href=True):
                 _extract(a)
+        return courses
+
     def get_public_courses(self):
         """Anonymous course catalog: parse /course/index.php plus every linked
         category page for view.php?id= links (works without any login)."""
@@ -145,14 +165,17 @@ class SHSIDCrawler:
     def _parse_activity(act):
         classes = act.get("class", [])
         modtype = next((c.replace("modtype_", "") for c in classes if c.startswith("modtype_")), None)
+        a = None
         title_span = act.find("span", class_="instancename")
         if title_span:
             a = title_span.find("a")
             title = a.get_text(strip=True) if a else title_span.get_text(strip=True)
-            url = urljoin(BASE_URL, a["href"]) if a and a.get("href") else None
         else:
             title = act.get("data-title", "").strip()
-            url = act.get("data-url")
+        if a is None:
+            # Moodle 4.x tiles format: one stretched link on the whole item
+            a = act.find("a", class_="aalink") or act.find("a", href=re.compile(r"/mod/"))
+        url = urljoin(BASE_URL, a["href"]) if a is not None and a.get("href") else act.get("data-url")
         return {
             "modtype": modtype,
             "cmid": act.get("data-cmid"),
@@ -233,9 +256,76 @@ class SHSIDCrawler:
                     f.write(chunk)
         return dest
 
+    def download_resource(self, url, dest_dir: Path):
+        """Download a Moodle 'resource' activity (/mod/resource/view.php?id=N).
+
+        Follows to the real file; filename comes from Content-Disposition, the
+        final URL path, or the forcedownload link on the intermediate page.
+        Returns the dest Path, or None when no file could be resolved.
+        """
+        from urllib.parse import unquote, urlparse
+        r = self.session.get(url, timeout=60, allow_redirects=True)
+        r.raise_for_status()
+        name = _cd_filename(r.headers.get("Content-Disposition", ""))
+        if not name:
+            base = unquote(urlparse(r.url).path.rsplit("/", 1)[-1])
+            if "." in base:
+                name = _safe(base)
+        if not name and "text/html" in r.headers.get("Content-Type", ""):
+            soup = BeautifulSoup(r.text, "html.parser")
+            a = (soup.find("a", href=re.compile(r"forcedownload=1"))
+                 or soup.find("a", href=re.compile(r"/pluginfile\.php/")))
+            if a:
+                return self.download_resource(urljoin(BASE_URL, a["href"]), dest_dir)
+            return None
+        if name.endswith(".php"):
+            # landed on an intermediate Moodle page (viewer/embed) — dig out
+            # the real file link instead of saving HTML as 'view.php'
+            soup = BeautifulSoup(r.text, "html.parser")
+            node = (soup.find("a", href=re.compile(r"forcedownload=1"))
+                    or soup.find("a", href=re.compile(r"/pluginfile\.php/"))
+                    or soup.find("embed", src=re.compile(r"/pluginfile\.php/"))
+                    or soup.find("iframe", src=re.compile(r"/pluginfile\.php/")))
+            target = None
+            if node is not None:
+                target = node.get("href") or node.get("src")
+            if target:
+                return self.download_resource(urljoin(BASE_URL, target), dest_dir)
+            return None
+        if not name:
+            return None
+        dest_dir.mkdir(parents=True, exist_ok=True)
+        dest = dest_dir / name
+        with dest.open("wb") as f:
+            f.write(r.content)
+        return dest
+
 
 def _safe(name):
-    return re.sub(r"[^\w\-. ()\[\]+&]+", "_", str(name)).strip()[:120] or "file"
+    name = re.sub(r"[^\w\-. ()\[\]+&]+", "_", str(name)).strip()[:120]
+    return name or "file"
+
+
+def _cd_filename(cd):
+    """Decode a Content-Disposition header into a safe filename.
+
+    Handles filename*=UTF-8''<pct-encoded> and plain filename="..."; repairs
+    UTF-8 bytes that servers send raw (requests exposes headers as latin-1).
+    """
+    from urllib.parse import unquote
+    m = re.search(r"filename\*\s*=\s*(?:UTF-8'')?\"?([^\";]+)", cd, re.I)
+    if m:
+        raw = unquote(m.group(1).strip().strip('"'))
+    else:
+        m = re.search(r"filename\s*=\s*\"?([^\";]+)", cd, re.I)
+        if not m:
+            return ""
+        raw = m.group(1).strip().strip('"')
+    try:
+        raw = raw.encode("latin-1").decode("utf-8")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        pass
+    return _safe(raw)
 
 
 def crawl(username, password, course_ids, do_download, force=False):
@@ -255,6 +345,20 @@ def crawl(username, password, course_ids, do_download, force=False):
         print(f"found {len(ids)} course(s)")
 
     index = {"courses": []}
+    # previous cycle's files, for incremental skips: (course, section, act) -> [rels]
+    prev = {}
+    pidx = OUT_DIR / "index.json"
+    if pidx.exists() and not force:
+        try:
+            for pc in json.loads(pidx.read_text(encoding="utf-8")).get("courses", []):
+                for ps in pc.get("sections", []):
+                    for pa in ps.get("activities", []):
+                        key = (pc.get("course_title"), ps.get("section_title"),
+                               pa.get("url") or pa.get("title"))
+                        prev[key] = [r for r in pa.get("downloaded", [])
+                                     if (ROOT / r).exists() and (ROOT / r).stat().st_size > 0]
+        except Exception:
+            prev = {}
     for cid in ids:
         print(f"crawling course {cid} ...")
         data = c.get_course_contents(cid)
@@ -266,37 +370,83 @@ def crawl(username, password, course_ids, do_download, force=False):
             course_dir = OUT_DIR / _safe(data["course_title"])
             for sec in data["sections"]:
                 for act in sec.get("activities", []):
-                    urls = []
                     if act.get("modtype") == "folder" and act.get("url"):
                         try:
-                            urls = c.scrape_folder(act["url"])
+                            files = c.scrape_folder(act["url"])
                         except Exception as exc:
                             print(f"  ! folder {act.get('title')}: {exc}")
+                            files = []
+                        for f in files:
+                            name = _safe(f["name"])
+                            if not name.lower().endswith(FILE_EXTS):
+                                name += ".bin"
+                            dest = course_dir / _safe(sec["section_title"]) / name
+                            rel = str(dest.relative_to(ROOT))
+                            # incremental: keep finished downloads across cycles
+                            if not force and dest.exists() and dest.stat().st_size > 0:
+                                act.setdefault("downloaded", []).append(rel)
+                                n_files += 1
+                                continue
+                            try:
+                                c.download(f["url"], dest)
+                                act.setdefault("downloaded", []).append(rel)
+                                n_files += 1
+                            except Exception as exc:
+                                print(f"  ! download {name}: {exc}")
                     elif act.get("url") and urlparse(act["url"]).path.lower().endswith(FILE_EXTS):
-                        urls = [{"name": act.get("title") or "file", "url": act["url"]}]
-                    for f in urls:
-                        name = _safe(f["name"])
+                        name = _safe(act.get("title") or "file")
                         if not name.lower().endswith(FILE_EXTS):
                             name += ".bin"
                         dest = course_dir / _safe(sec["section_title"]) / name
                         rel = str(dest.relative_to(ROOT))
-                        # incremental: keep finished downloads across cycles
                         if not force and dest.exists() and dest.stat().st_size > 0:
                             act.setdefault("downloaded", []).append(rel)
                             n_files += 1
                             continue
                         try:
-                            c.download(f["url"], dest)
+                            c.download(act["url"], dest)
                             act.setdefault("downloaded", []).append(rel)
                             n_files += 1
                         except Exception as exc:
                             print(f"  ! download {name}: {exc}")
+                    elif act.get("modtype") in ("resource", "file") and act.get("url"):
+                        key = (data["course_title"], sec["section_title"], act.get("url") or act.get("title"))
+                        if prev.get(key):
+                            act.setdefault("downloaded", []).extend(prev[key])
+                            n_files += len(prev[key])
+                            continue
+                        try:
+                            dest = c.download_resource(act["url"], course_dir / _safe(sec["section_title"]))
+                            if dest is not None:
+                                act.setdefault("downloaded", []).append(str(dest.relative_to(ROOT)))
+                                n_files += 1
+                        except Exception as exc:
+                            print(f"  ! resource {act.get('title')}: {exc}")
         print(f"  ok: {data['course_title']} ({len(data['sections'])} sections, {n_files} files)")
         index["courses"].append(data)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     (OUT_DIR / "index.json").write_text(
         json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
+    # garbage-collect: drop crawled files no longer referenced by the index
+    # (e.g. renamed downloads from earlier cycles)
+    keep = set()
+    for course in index.get("courses", []):
+        for sec in course.get("sections", []):
+            for act in sec.get("activities", []):
+                for rel in act.get("downloaded", []):
+                    p = (ROOT / rel).resolve()
+                    try:
+                        keep.add(str(p.relative_to(OUT_DIR.resolve())))
+                    except ValueError:
+                        pass
+    for f in OUT_DIR.rglob("*"):
+        if f.is_file() and f.name not in ("index.json", "crawler.log"):
+            if str(f.relative_to(OUT_DIR)) not in keep:
+                try:
+                    f.unlink()
+                except OSError:
+                    pass
     print(f"wrote {OUT_DIR / 'index.json'}")
 
 
