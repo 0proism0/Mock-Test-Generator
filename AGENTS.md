@@ -51,7 +51,7 @@ curl http://127.0.0.1:8020/api/banks     # 后端活着吗（200 且返回 ~25 �
 | `taxonomy/amc-v1.json` | AMC 考点分类体系：8 板块 / 86 考点 / 339 题型标签（共 433 节点），`classification` 只引它的 id，不复制词表 |
 | `classifier/` | 题库自动分类 + 难度评级（本地大模型），见 `classifier/README.md`、`classifier/SCHEMES.md` |
 | `scripts/` | 构建、启动、校验、迁移、导入脚本（每个都有 `.ps1/.bat/.sh` 三套或单份 Python） |
-| `scraper/` | 抓题流水线（AoPS wiki、官方 PDF），当前与实际 bank 之间有断链，见 §12 |
+| `scraper/` | 抓题流水线（AoPS wiki、官方 PDF），当前与实际 bank 之间有断链，见 §12。`shsid_crawler.py` 可用：从 OpenSHSID 移植的 SHSID LinkedClassroom(Moodle) 爬虫，抓取课程/章节/文件到 `raw/shsid/`（需学生账号，凭据走 `--username/--password` 或 `SHSID_USER`/`SHSID_PASS` 环境变量） |
 | `competitions.yaml` | 竞赛注册表（分类、来源适配器、状态） |
 | `screenshots/` | **放截图的地方**，见 §11 |
 
