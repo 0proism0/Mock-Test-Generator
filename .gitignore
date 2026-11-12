@@ -39,3 +39,5 @@ screenshots/*
 
 # classifier run output - regenerable, never commit
 classifier/out/
+shsid_credentials
+raw/shsid/

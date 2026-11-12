@@ -214,7 +214,7 @@ def _safe(name):
     return re.sub(r"[^\w\-. ()\[\]+&]+", "_", str(name)).strip()[:120] or "file"
 
 
-def crawl(username, password, course_ids, do_download):
+def crawl(username, password, course_ids, do_download, force=False):
     c = SHSIDCrawler()
     print("logging in...")
     c.login(username, password)
@@ -249,9 +249,15 @@ def crawl(username, password, course_ids, do_download):
                         if not name.lower().endswith(FILE_EXTS):
                             name += ".bin"
                         dest = course_dir / _safe(sec["section_title"]) / name
+                        rel = str(dest.relative_to(ROOT))
+                        # incremental: keep finished downloads across cycles
+                        if not force and dest.exists() and dest.stat().st_size > 0:
+                            act.setdefault("downloaded", []).append(rel)
+                            n_files += 1
+                            continue
                         try:
                             c.download(f["url"], dest)
-                            act.setdefault("downloaded", []).append(str(dest.relative_to(ROOT)))
+                            act.setdefault("downloaded", []).append(rel)
                             n_files += 1
                         except Exception as exc:
                             print(f"  ! download {name}: {exc}")
@@ -270,10 +276,25 @@ def main(argv=None):
     ap.add_argument("--password", "-p", default=os.environ.get("SHSID_PASS", ""))
     ap.add_argument("--course-ids", nargs="*", type=int, metavar="ID", default=None)
     ap.add_argument("--download", action="store_true", help="also download files (PDFs etc.)")
+    ap.add_argument("--force", action="store_true", help="re-download files that already exist")
+    ap.add_argument("--watch", action="store_true",
+                    help="keep running: re-crawl everything every --interval minutes")
+    ap.add_argument("--interval", type=int, default=30, help="minutes between watch cycles")
     args = ap.parse_args(argv)
     if not args.username or not args.password:
         ap.error("credentials required: --username/--password or SHSID_USER/SHSID_PASS")
-    crawl(args.username, args.password, args.course_ids, args.download)
+    if args.watch:
+        print(f"watch mode: crawling every {args.interval} min, Ctrl+C to stop")
+        while True:
+            try:
+                crawl(args.username, args.password, args.course_ids, args.download, args.force)
+            except KeyboardInterrupt:
+                raise
+            except Exception as exc:
+                print(f"cycle failed: {exc}")
+            print(f"sleeping {args.interval} min ...")
+            time.sleep(max(1, args.interval) * 60)
+    crawl(args.username, args.password, args.course_ids, args.download, args.force)
     return 0
 
 
