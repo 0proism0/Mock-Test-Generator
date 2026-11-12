@@ -1529,6 +1529,103 @@ table.stats th {
   margin-bottom: 16px;
 }
 
+/* the report renders as a paper document (like the teacher's sample),
+   independent of the app's light/dark theme */
+.an-paper {
+  background: #f7f4ec;
+  color: #22332b;
+  border-radius: 6px;
+  padding: 30px 36px;
+  font-family: Georgia, 'Times New Roman', 'Songti SC', 'SimSun', serif;
+  margin-bottom: 16px;
+}
+
+.an-doc-title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.an-doc-sub {
+  text-align: center;
+  color: #5c6f64;
+  font-size: 14px;
+  margin: 6px 0 18px;
+}
+
+.an-paper .an-report {
+  margin-bottom: 18px;
+}
+
+.an-paper .an-report h4 {
+  margin: 16px 0 8px;
+  border-bottom: 2px solid #315c4b;
+  padding-bottom: 4px;
+  color: #22332b;
+  font-size: 17px;
+}
+
+.an-paper .an-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: #fffef9;
+}
+
+.an-paper .an-table th,
+.an-paper .an-table td {
+  border: 1px solid #b8c6bd;
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.an-paper .an-table th {
+  background: #315c4b;
+  color: #f2f5f1;
+  font-weight: 600;
+}
+
+.an-paper .an-pct {
+  color: #5c6f64;
+  font-size: 12.5px;
+}
+
+.an-paper .an-refs {
+  color: #7a6c3a;
+  font-size: 12.5px;
+}
+
+.an-paper .an-note {
+  color: #5c6f64;
+}
+
+.an-paper .an-weak {
+  margin: 6px 0;
+  padding-left: 22px;
+}
+
+.an-paper .an-weak li {
+  margin: 4px 0;
+}
+
+.an-paper .an-advice {
+  margin: 6px 0;
+  padding-left: 20px;
+}
+
+.an-paper .an-advice li {
+  margin: 5px 0;
+}
+
+@media print {
+  .an-paper {
+    background: #fff;
+    padding: 0;
+  }
+}
+
 .an-report h4 {
   margin: 14px 0 8px;
   border-bottom: 1.5px solid var(--border);

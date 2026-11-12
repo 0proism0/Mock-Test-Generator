@@ -153,10 +153,16 @@ export function Analysis() {
       </section>
 
       {picked.length > 0 && (
-        <>
+        <div className="an-paper">
+          {/* document header — like the sample report */}
+          <div className="an-doc-title">{t('anDocTitle', me?.user ?? '', picked[0].result.competition)}</div>
+          <div className="an-doc-sub">
+            {t('anDocSub', picked.map((p) => p.result.title).join(' & '), new Date().toLocaleDateString())}
+          </div>
+
           {/* 一、成绩总览 */}
-          <section className="card an-report">
-            <h4>1 · {t('anOverview')}</h4>
+          <section className="an-report">
+            <h4>{t('anSecOverview')}</h4>
             <table className="an-table">
               <thead>
                 <tr>
@@ -188,15 +194,15 @@ export function Analysis() {
           </section>
 
           {/* 二、分段得分 */}
-          <section className="card an-report">
-            <h4>2 · {t('anSection')}</h4>
+          <section className="an-report">
+            <h4>{t('anSecBands')}</h4>
             <table className="an-table">
               <thead>
                 <tr>
                   <th>{t('anExam')}</th>
-                  {picked[0].bandScores.map((b) => (
+                  {picked[0].bandScores.map((b, i) => (
                     <th key={b.lo}>
-                      {b.lo}–{b.hi}
+                      {b.lo}–{b.hi} {t(['anBandBasic', 'anBandMid', 'anBandHigh', 'anBandTop'][i])}
                     </th>
                   ))}
                 </tr>
@@ -208,9 +214,7 @@ export function Analysis() {
                     {p.bandScores.map((b) => (
                       <td key={b.lo}>
                         {b.ok}/{b.total}
-                        {b.total > 0 && (
-                          <span className="meta"> ({Math.round((b.ok / b.total) * 100)}%)</span>
-                        )}
+                        {b.total > 0 && <span className="an-pct"> ({Math.round((b.ok / b.total) * 100)}%)</span>}
                       </td>
                     ))}
                   </tr>
@@ -221,12 +225,12 @@ export function Analysis() {
 
           {/* 三、失分明细 */}
           {picked.map((p) => (
-            <section key={p.result.submitted_at} className="card an-report">
+            <section key={p.result.submitted_at} className="an-report">
               <h4>
-                3 · {t('anLost')} — {p.result.title}
+                {t('anSecLost')} — {p.result.title}
               </h4>
               {p.missed.length === 0 ? (
-                <p className="muted">{t('anNoMistakes')}</p>
+                <p className="an-note">{t('anNoMistakes')}</p>
               ) : (
                 <table className="an-table">
                   <thead>
@@ -260,67 +264,81 @@ export function Analysis() {
           ))}
 
           {/* 四、能力画像 */}
-          <section className="card an-report">
-            <h4>4 · {t('anAbility')}</h4>
+          <section className="an-report">
+            <h4>{t('anSecAbility')}</h4>
             {profile.length === 0 ? (
-              <p className="muted">{t('anNoCls')}</p>
+              <p className="an-note">{t('anNoCls')}</p>
             ) : (
               <>
                 {strengths.length > 0 && (
                   <p>
                     <b>{t('anStrengths')}:</b>{' '}
-                    {strengths.map((s) => `${s.kp} (${s.pct}%)`).join(' · ')}
+                    {strengths.map((s) => `${s.kp} ${t('anRefList', s.refs.join(' · '))} ${s.pct}%`).join('；')}
                   </p>
                 )}
                 {weakness.length > 0 && (
-                  <div className="an-kp-list">
-                    <b>{t('anWeakness')}:</b>
-                    {weakness.map((w) => (
-                      <div key={w.kp} className="an-kp-row">
-                        <span className="an-kp-name">{w.kp}</span>
-                        <span className="pct-bar">
-                          <span style={{ width: `${w.pct}%` }} className={w.pct < 40 ? 'low' : ''} />
-                        </span>
-                        <span className="meta">
-                          {w.ok}/{w.total} · {w.pct}%
-                        </span>
-                      </div>
+                  <ol className="an-weak">
+                    {weakness.slice(0, 8).map((w) => (
+                      <li key={w.kp}>
+                        <b>{w.kp}</b> <span className="an-pct">{w.ok}/{w.total} · {w.pct}%</span>{' '}
+                        <span className="an-refs">{w.refs.join(' · ')}</span>
+                      </li>
                     ))}
-                  </div>
+                  </ol>
                 )}
               </>
             )}
           </section>
 
-          {/* 五、提分空间 + 建议 */}
-          {picked.length > 0 && (
-            <section className="card an-report">
-              <h4>5 · {t('anGain')}</h4>
-              <ul>
-                {(() => {
-                  // blanks in the first two bands = cheapest points
-                  let cheapPts = 0
-                  for (const p of picked) {
-                    for (const m of p.missed) {
-                      const band = p.bandScores.findIndex((b) => m.detail.n >= b.lo && m.detail.n <= b.hi)
-                      if (band <= 1 && !m.detail.given) cheapPts += m.q?.points ?? 1
-                    }
-                  }
-                  return cheapPts > 0 ? <li>{t('anGainBlank', String(cheapPts))}</li> : null
-                })()}
-                {weakness.length > 0 && (
-                  <li>{t('anGainWeak', weakness.slice(0, 3).map((w) => w.kp).join('、'))}</li>
-                )}
-              </ul>
-              <h4>6 · {t('anAdvice')}</h4>
-              <ul>
-                <li>{t('anAdvice1')}</li>
-                {weakness.length > 0 && <li>{t('anAdvice2', weakness.slice(0, 2).map((w) => w.kp).join('、'))}</li>}
-                <li>{t('anAdvice3')}</li>
-              </ul>
-            </section>
-          )}
-        </>
+          {/* 五、提分空间测算 */}
+          <section className="an-report">
+            <h4>{t('anSecGain')}</h4>
+            <table className="an-table">
+              <thead>
+                <tr>
+                  <th>{t('anExam')}</th>
+                  <th>{t('anRecoverable', String(Math.ceil(((picked[0].result.details?.length ?? 25)) * 0.6)))}</th>
+                  <th>{t('anScore')}</th>
+                  <th>{t('anRecovered')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {picked.map((p) => {
+                  const nq = p.result.details?.length ?? 0
+                  const cutoff = Math.ceil(nq * 0.6)
+                  const rec = p.missed.filter((m) => m.detail.n <= cutoff)
+                  const gained = rec.reduce((s, m) => s + (m.q?.points ?? 1), 0)
+                  return (
+                    <tr key={p.result.submitted_at}>
+                      <td>{p.result.title}</td>
+                      <td>
+                        {rec.length === 0
+                          ? '—'
+                          : rec.map((m) => `Q${m.detail.n}${m.detail.given ? '' : '*'}`).join(', ') +
+                            ` (+${gained})`}
+                      </td>
+                      <td>{p.result.score}</td>
+                      <td>{p.result.score + gained}</td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+            <ul className="an-advice">
+              {weakness.length > 0 && <li>{t('anGainWeak', weakness.slice(0, 3).map((w) => w.kp).join('、'))}</li>}
+            </ul>
+          </section>
+
+          {/* 六、考前建议 */}
+          <section className="an-report">
+            <h4>{t('anSecAdvice')}</h4>
+            <ul className="an-advice">
+              <li>{t('anAdvice1')}</li>
+              {weakness.length > 0 && <li>{t('anAdvice2', weakness.slice(0, 2).map((w) => w.kp).join('、'))}</li>}
+              <li>{t('anAdvice3')}</li>
+            </ul>
+          </section>
+        </div>
       )}
 
       {/* teacher classification editor */}

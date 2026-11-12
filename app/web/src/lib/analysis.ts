@@ -128,12 +128,13 @@ export async function loadAnalysisData(results: TestResult[]) {
 
 // ---------- aggregation ----------
 
-/** Split positions 1..n into 4 contiguous bands (1-indexed, inclusive). */
+/** Split positions 1..n into the sample report's 4 bands: 40% 基础 / 20% 中档 /
+ * 20% 中高档 / 20% 压轴 (AMC 10's 10/5/5/5 for n=25). */
 export function bands(n: number): [number, number][] {
-  const size = Math.ceil(n / 4)
-  const out: [number, number][] = []
-  for (let lo = 1; lo <= n; lo += size) out.push([lo, Math.min(n, lo + size - 1)])
-  return out
+  const b1 = Math.max(1, Math.round(n * 0.4))
+  const b2 = Math.max(b1, Math.round(n * 0.6))
+  const b3 = Math.max(b2, Math.round(n * 0.8))
+  return [[1, b1], [b1 + 1, b2], [b2 + 1, b3], [b3 + 1, n]]
 }
 
 export interface AttemptStats {
@@ -184,20 +185,27 @@ export function attemptStats(result: TestResult, test: AnTest | undefined, cls: 
   }
 }
 
-/** Knowledge-point accuracy aggregated over every result that has details. */
+/** Knowledge-point accuracy aggregated over every result that has details.
+ * `refs` are sample-style question references (E1-3 = exam 1, question 3). */
 export function abilityProfile(
   results: TestResult[],
   resolve: KpResolver,
-): { kp: string; ok: number; total: number; pct: number }[] {
-  const agg = new Map<string, { ok: number; total: number }>()
+): { kp: string; ok: number; total: number; pct: number; refs: string[] }[] {
+  const examIdx = new Map<string, number>()
+  for (const r of results) {
+    if (r.details?.length && !examIdx.has(r.test_id)) examIdx.set(r.test_id, examIdx.size + 1)
+  }
+  const agg = new Map<string, { ok: number; total: number; refs: string[] }>()
   for (const r of results) {
     if (!r.details?.length) continue
+    const ei = examIdx.get(r.test_id)
     for (const d of r.details) {
       const { kp } = resolve(r.test_id, d.n)
       if (!kp || kp === '—') continue
-      const a = agg.get(kp) ?? { ok: 0, total: 0 }
+      const a = agg.get(kp) ?? { ok: 0, total: 0, refs: [] }
       a.total++
       if (d.ok) a.ok++
+      if (a.refs.length < 6) a.refs.push(`E${ei}-${d.n}`)
       agg.set(kp, a)
     }
   }
