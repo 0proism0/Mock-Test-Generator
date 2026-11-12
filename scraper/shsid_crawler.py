@@ -44,7 +44,10 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "raw" / "shsid"
 
 # Same endpoints as OpenSHSID config.example.json -> crawler
-BASE_URL = "https://www.linkedclassroom.com"
+# linkedclassroom.com 301-redirects to learningcan.com (Moodle); use the
+# canonical host directly. Course CONTENT is login-gated (view.php redirects
+# to the login page); only the course catalog is anonymously visible.
+BASE_URL = "https://www.learningcan.com"
 LOGIN_URL = f"{BASE_URL}/login/index.php"
 USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
               "(KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36")
@@ -87,6 +90,8 @@ class SHSIDCrawler:
 
     def get_all_courses(self):
         """Return {course_id: course_name} for the logged-in user."""
+        if not self.logged_in:
+            return self.get_public_courses()
         resp = self.session.get(f"{BASE_URL}/my/", timeout=TIMEOUT)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
@@ -108,13 +113,32 @@ class SHSIDCrawler:
         if region:
             for a in region.find_all("a", href=True):
                 _extract(a)
-        if not courses:
-            resp2 = self.session.get(f"{BASE_URL}/course/index.php?categoryid=0", timeout=TIMEOUT)
-            soup2 = BeautifulSoup(resp2.text, "html.parser")
-            for box in soup2.find_all("div", class_="coursebox"):
-                a = box.find("a", href=True)
-                if a:
-                    _extract(a)
+    def get_public_courses(self):
+        """Anonymous course catalog: parse /course/index.php plus every linked
+        category page for view.php?id= links (works without any login)."""
+        courses = {}
+        seen = set()
+        urls = [f"{BASE_URL}/course/index.php"]
+        while urls:
+            url = urls.pop()
+            if url in seen:
+                continue
+            seen.add(url)
+            try:
+                resp = self.session.get(url, timeout=TIMEOUT)
+                soup = BeautifulSoup(resp.text, "html.parser")
+            except Exception:
+                continue
+            for a in soup.find_all("a", href=True):
+                m = re.search(r"/course/view\.php\?id=(\d+)", a["href"])
+                if m:
+                    name = a.get_text(strip=True)
+                    if name:
+                        courses.setdefault(m.group(1), name)
+                elif "/course/index.php?categoryid=" in a["href"]:
+                    cat = urljoin(BASE_URL, a["href"])
+                    if cat not in seen:
+                        urls.append(cat)
         return courses
 
     @staticmethod
@@ -216,21 +240,27 @@ def _safe(name):
 
 def crawl(username, password, course_ids, do_download, force=False):
     c = SHSIDCrawler()
-    print("logging in...")
-    c.login(username, password)
-    print("logged in.")
+    if username:
+        print("logging in...")
+        c.login(username, password)
+        print("logged in.")
 
     if course_ids:
         ids = [str(x) for x in course_ids]
+        names = {}
     else:
         courses = c.get_all_courses()
         ids = list(courses.keys())
+        names = courses
         print(f"found {len(ids)} course(s)")
 
     index = {"courses": []}
     for cid in ids:
         print(f"crawling course {cid} ...")
         data = c.get_course_contents(cid)
+        # anonymous hits redirect to the login page and lose the real title
+        if not data["sections"] and names.get(cid):
+            data["course_title"] = names[cid]
         n_files = 0
         if do_download:
             course_dir = OUT_DIR / _safe(data["course_title"])
@@ -282,7 +312,12 @@ def main(argv=None):
     ap.add_argument("--interval", type=int, default=30, help="minutes between watch cycles")
     args = ap.parse_args(argv)
     if not args.username or not args.password:
-        ap.error("credentials required: --username/--password or SHSID_USER/SHSID_PASS")
+        if args.download:
+            ap.error("--download needs credentials: course files are login-gated "
+                     "(--username/--password or SHSID_USER/SHSID_PASS)")
+        print("no credentials: anonymous mode — public course catalog only")
+        crawl("", "", args.course_ids, False, args.force)
+        return 0
     if args.watch:
         print(f"watch mode: crawling every {args.interval} min, Ctrl+C to stop")
         while True:
