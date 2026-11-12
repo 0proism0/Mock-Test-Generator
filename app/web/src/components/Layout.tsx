@@ -5,6 +5,7 @@ import { useI18n } from '../lib/i18n'
 import { useTheme } from '../lib/theme'
 import { RouteFallback } from './RouteFallback'
 import {
+  Archive,
   BarChart2,
   BookOpen,
   Edit3,
@@ -41,6 +42,7 @@ const tabs: Tab[] = [
   { to: '/mistakes', labelKey: 'tabMistakes', icon: <XCircle size={18} />, authOnly: true },
   { to: '/analysis', labelKey: 'tabReport', icon: <TrendingUp size={18} />, authOnly: true },
   { to: '/questions', labelKey: 'tabBank', icon: <Folder size={18} /> },
+  { to: '/shsid', labelKey: 'tabSHSID', icon: <Archive size={18} />, authOnly: true },
   { to: '/whiteboard', labelKey: 'tabWhiteboard', icon: <Edit3 size={18} /> },
   { to: '/friends', labelKey: 'tabFriends', icon: <Users size={18} />, authOnly: true },
   { to: '/pk', labelKey: 'tabPK', icon: <Swords size={18} />, authOnly: true },

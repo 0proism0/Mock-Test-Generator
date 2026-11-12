@@ -40,6 +40,7 @@ BANK_VERSIONS = (1, 2)
 TAXONOMY_DIR = ROOT / "taxonomy"
 DEFAULT_TAXONOMY = "amc-v1"
 STATIC = ROOT / "app" / "static"
+SHSID_DIR = ROOT / "raw" / "shsid"  # crawled by scraper/shsid_crawler.py (OpenSHSID port)
 WEB_DIST = ROOT / "app" / "web" / "dist"  # built React app (see app/web); legacy STATIC is the fallback
 RESULTS = ROOT / "results.jsonl"
 # User-filed "this question is broken" reports: append-only JSONL, gitignored.
@@ -508,6 +509,50 @@ def generate_worksheet(filename, blob, owner):
     (WORKSHEETS_DIR / f"{ws['id']}.json").write_text(
         json.dumps(ws, ensure_ascii=False, indent=1), encoding="utf-8")
     return ws
+
+
+# ---------- SHSID papers (crawled LinkedClassroom files, see scraper/shsid_crawler.py) ----------
+SHSID_FILE_EXTS = ("pdf", "doc", "docx", "ppt", "pptx", "xls", "xlsx", "zip",
+                   "png", "jpg", "jpeg", "txt", "md", "tex")
+
+
+def _shsid_index():
+    """Enriched raw/shsid/index.json: per downloaded file add size and ext.
+    Missing index (crawler never ran) is not an error — the UI shows a hint."""
+    f = SHSID_DIR / "index.json"
+    if not f.exists():
+        return {"courses": []}
+    try:
+        doc = json.loads(f.read_text(encoding="utf-8"))
+    except Exception:
+        return {"courses": []}
+    for course in doc.get("courses", []):
+        for sec in course.get("sections", []):
+            for act in sec.get("activities", []):
+                files = []
+                for rel in act.get("downloaded", []):
+                    p = SHSID_DIR.parent.parent / rel  # rel is raw/shsid/...
+                    if not p.exists():
+                        continue
+                    ext = p.suffix.lstrip(".").lower()
+                    if ext not in SHSID_FILE_EXTS:
+                        continue
+                    files.append({"path": rel, "name": p.name, "ext": ext,
+                                  "size": p.stat().st_size})
+                act["files"] = files
+    return doc
+
+
+def _shsid_file_path(rel):
+    """Resolve a raw/shsid/... path with traversal guard; None when invalid."""
+    if not rel.startswith("raw/shsid/"):
+        return None
+    p = (ROOT / rel).resolve()
+    try:
+        p.relative_to(SHSID_DIR.resolve())
+    except ValueError:
+        return None
+    return p if p.is_file() else None
 
 
 def _pk_game_path(gid):
@@ -1959,6 +2004,30 @@ class Handler(BaseHTTPRequestHandler):
         elif m := re.match(r"^/api/test/([a-z0-9_]+)/classify$", path):
             tid = m.group(1)
             self._send(json.dumps({"items": _load_classification(tid)}, ensure_ascii=False))
+        elif path == "/api/shsid":
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                self._send(json.dumps(_shsid_index(), ensure_ascii=False))
+        elif m := re.match(r"^/shsid-files/(.+)$", path):
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+                return
+            from urllib.parse import unquote
+            p = _shsid_file_path("raw/shsid/" + unquote(m.group(1)))
+            if not p:
+                self._send('{"error": "not found"}', code=404)
+                return
+            data = p.read_bytes()
+            mime = mimetypes.guess_type(str(p))[0] or "application/octet-stream"
+            inline = mime == "application/pdf" or mime.startswith("image/")
+            disp = "inline" if inline else "attachment"
+            self.send_response(200)
+            self.send_header("Content-Type", mime)
+            self.send_header("Content-Length", str(len(data)))
+            self.send_header("Content-Disposition", f'{disp}; filename="{p.name}"')
+            self.end_headers()
+            self.wfile.write(data)
         elif path == "/api/worksheets":
             out = []
             if user and WORKSHEETS_DIR.exists():

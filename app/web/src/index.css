@@ -1749,6 +1749,29 @@ table.stats th {
   font-size: 13px;
   color: var(--ink-2);
 }
+
+/* ---------- SHSID papers ---------- */
+.shsid-sec {
+  margin-top: 10px;
+}
+
+.shsid-sec-head {
+  font-size: 14.5px;
+  margin: 8px 0 4px;
+  color: var(--ink);
+}
+
+.shsid-files {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.shsid-files li {
+  padding: 4px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 14px;
+}
 .dr-run {
   max-width: 560px;
   margin: 0 auto;

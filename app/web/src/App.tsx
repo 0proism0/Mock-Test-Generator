@@ -14,6 +14,7 @@ const Stats = lazy(() => import('./routes/Stats').then((m) => ({ default: m.Stat
 const Analysis = lazy(() => import('./routes/Analysis').then((m) => ({ default: m.Analysis })))
 const Mistakes = lazy(() => import('./routes/Mistakes').then((m) => ({ default: m.Mistakes })))
 const Bank = lazy(() => import('./routes/Bank').then((m) => ({ default: m.Bank })))
+const SHSID = lazy(() => import('./routes/SHSID').then((m) => ({ default: m.SHSID })))
 const Whiteboard = lazy(() => import('./routes/Whiteboard').then((m) => ({ default: m.Whiteboard })))
 const Friends = lazy(() => import('./routes/Friends').then((m) => ({ default: m.Friends })))
 const Pk = lazy(() => import('./routes/Pk').then((m) => ({ default: m.Pk })))
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="stats" element={<Stats />} />
         <Route path="analysis" element={<Analysis />} />
         <Route path="questions" element={<Bank />} />
+        <Route path="shsid" element={<SHSID />} />
         <Route path="whiteboard" element={<Whiteboard />} />
         <Route
           path="mistakes"

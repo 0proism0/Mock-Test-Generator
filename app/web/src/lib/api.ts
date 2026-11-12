@@ -363,6 +363,22 @@ export const api = {
   // banks / tests / results
   banks: () => request<Bank[]>('/api/banks'),
   taxonomy: () => request<Taxonomy>('/api/taxonomy'),
+  shsid: () =>
+    request<{
+      courses: {
+        course_id: string
+        course_title: string
+        sections: {
+          section_title: string
+          activities: {
+            modtype?: string
+            title?: string
+            restricted?: boolean
+            files?: { path: string; name: string; ext: string; size: number }[]
+          }[]
+        }[]
+      }[]
+    }>('/api/shsid'),
   /** Bank browser: search + filter over every question on disk (paged). */
   questions: (query: QuestionQuery = {}) => {
     const params = new URLSearchParams()

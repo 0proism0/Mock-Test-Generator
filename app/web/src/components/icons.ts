@@ -84,6 +84,7 @@ export {
   Dna,
   Dot,
   Dumbbell,
+  Download,
   Equal,
   Flag,
   Flame,
