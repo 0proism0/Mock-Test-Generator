@@ -9,6 +9,8 @@ import { useI18n } from '../lib/i18n'
 
 interface Question {
   n: number
+  /** Bank-side stable id; lets the server record outcomes against the same problem. */
+  qid?: string
   source?: string
   question: string
   question_zh?: string
@@ -307,6 +309,16 @@ export function TestRunner() {
     setResult({ score, total: totalPoints })
     setSavedNote({ tone: 'wait', text: t('saving') })
     const duration_s = Math.round((Date.now() - startedAtRef.current) / 1000)
+    // Per-question outcomes feed the mastery model (topic x difficulty x recency).
+    // Unanswered questions count as wrong: leaving a blank is a miss, not a pass.
+    const items = test.questions.map((q) => ({
+      n: q.n,
+      qid: q.qid,
+      topic: q.classification?.primary ?? undefined,
+      level: q.difficulty?.level,
+      type: q.type,
+      correct: grade(q, answers[q.n]),
+    }))
     api
       .submitResult({
         test_id: test.id,
@@ -316,6 +328,7 @@ export function TestRunner() {
         total: totalPoints,
         answered: Object.keys(answers).length,
         duration_s,
+        items,
       })
       .then((d) => setSavedNote({ tone: 'ok', text: d.guest ? t('savedGuest') : t('savedOk') }))
       .catch(() => setSavedNote({ tone: 'err', text: t('savedFail') }))
