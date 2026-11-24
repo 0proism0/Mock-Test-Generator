@@ -10,6 +10,7 @@ import os
 import random
 import re
 import secrets
+import sys
 import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -19,6 +20,7 @@ sys_path = str(Path(__file__).resolve().parent)
 if sys_path not in os.sys.path:
     os.sys.path.insert(0, sys_path)
 from latex_wrap import wrap_bare_math
+import mastery
 
 ROOT = Path(__file__).resolve().parent.parent
 TESTS = ROOT / "tests"
@@ -293,6 +295,10 @@ WS_ANS_SECTION_RE = re.compile(r"^\s*#*\s*(?:answers?|answer key|keys?)\s*:?\s*$
 WS_ANS_ENTRY_RE = re.compile(r"^\s*(\d{1,3})[.)]\s+(.+)$")
 WS_INLINE_ANS_RE = re.compile(r"^\s*\**\s*answer\s*:\s*\**\s*(.+?)\s*$", re.I)
 
+# ---------- photo -> paper (OCR a photographed worksheet, see app/photo_import.py) ----------
+PHOTOS_DIR = WORKSHEETS_DIR / "photo"  # gitignored together with worksheets/
+PHOTO_MAX_BYTES = 25 * 1024 * 1024  # 25 MB — one phone photo is ~2-6 MB
+
 
 def parse_worksheet_text(text, fallback_title):
     """Parse numbered questions from plain text / markdown.
@@ -416,6 +422,92 @@ def generate_worksheet(filename, blob, owner):
     (WORKSHEETS_DIR / f"{ws['id']}.json").write_text(
         json.dumps(ws, ensure_ascii=False, indent=1), encoding="utf-8")
     return ws
+
+
+def _photo_validate(paper, path):
+    """Run the paper validator; returns (errors, warnings, list of messages)."""
+    try:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import validate_paper
+        problems = validate_paper.validate(paper, path)
+        items = [{"level": lvl, "code": code, "message": msg}
+                 for lvl, code, msg in problems.items]
+        return problems.errors, problems.warnings, items
+    except Exception:
+        return 0, 0, []
+
+
+def photo_ocr_page(filename, blob, owner=""):
+    """Stage 1: OCR the page; keep the image + raw blocks on disk for stage 2."""
+    import photo_import
+
+    if not blob:
+        raise ValueError("empty upload")
+    if len(blob) > PHOTO_MAX_BYTES:
+        raise ValueError("image too large (max 25 MB)")
+    width, height = photo_import.image_size(blob)
+    pid = "ph" + secrets.token_hex(4)
+    started = time.time()
+    raw = photo_import.ocr_image(blob)
+    blocks = photo_import.parse_ocr_text(raw)
+    elapsed = int((time.time() - started) * 1000)
+    PHOTOS_DIR.mkdir(parents=True, exist_ok=True)
+    (PHOTOS_DIR / ("%s.orig" % pid)).write_bytes(blob)
+    meta = {"id": pid, "file": filename, "width": width, "height": height,
+            "owner": owner, "raw": raw, "blocks": blocks, "ms": elapsed}
+    (PHOTOS_DIR / ("%s.ocr.json" % pid)).write_text(
+        json.dumps(meta, ensure_ascii=False), encoding="utf-8")
+    return {"ok": True, "id": pid, "width": width, "height": height,
+            "ms": elapsed, "count": len(blocks), "raw": raw, "blocks": blocks}
+
+
+def _photo_served(paper, pid):
+    """Copy of the paper whose figure srcs point at the serving route."""
+    served = json.loads(json.dumps(paper))
+    for q in served.get("questions", []):
+        fig = q.get("figure")
+        if fig and fig.get("src"):
+            fig["src"] = "/api/photo/figure/%s/%s" % (pid, os.path.basename(fig["src"]))
+    return served
+
+
+def photo_structure_paper(pid, use_llm=True):
+    """Stage 2: turn the saved OCR blocks into a paper v1.1 (figures cropped)."""
+    import photo_import
+
+    meta_path = PHOTOS_DIR / ("%s.ocr.json" % pid)
+    img_path = PHOTOS_DIR / ("%s.orig" % pid)
+    if not meta_path.exists() or not img_path.exists():
+        raise KeyError("unknown photo id: %s" % pid)
+    meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    blob = img_path.read_bytes()
+    started = time.time()
+    paper, files = photo_import.import_blocks(
+        blob, meta["width"], meta["height"], meta["blocks"], paper_id=pid,
+        page_ref=meta.get("file"), figures_dir=pid, use_llm=use_llm)
+    elapsed = int((time.time() - started) * 1000)
+    if files:
+        (PHOTOS_DIR / pid).mkdir(parents=True, exist_ok=True)
+        for name, data in files.items():
+            (PHOTOS_DIR / pid / name).write_bytes(data)
+    paper["x-owner"] = meta.get("owner", "")
+    paper["x-page"] = {"file": meta.get("file"), "width": meta["width"],
+                       "height": meta["height"]}
+    out = PHOTOS_DIR / ("%s.json" % pid)
+    out.write_text(json.dumps(paper, ensure_ascii=False, indent=2), encoding="utf-8")
+    errors, warnings, items = _photo_validate(paper, out)
+    return {"ok": True, "id": pid, "ms": elapsed,
+            "paper": _photo_served(paper, pid),
+            "errors": errors, "warnings": warnings, "problems": items}
+
+
+def import_photo_paper(filename, blob, owner="", use_llm=True):
+    """Photo bytes -> saved paper v1.1 (both stages back to back)."""
+    page = photo_ocr_page(filename, blob, owner=owner)
+    result = photo_structure_paper(page["id"], use_llm=use_llm)
+    result["ocr"] = {"ms": page["ms"], "count": page["count"],
+                     "raw": page["raw"], "blocks": page["blocks"]}
+    return result
 
 
 def _pk_game_path(gid):
@@ -1202,6 +1294,8 @@ def generate_test(slug, round_name=None, user=None, version=1):
                 figure["src"] = "/" + src
         q = {
             "n": pos, "source": v["source"], "question": v["question"],
+            "qid": v.get("qid") or "q" + hashlib.sha1(
+                f"{v['source']}\0{v['question']}".encode("utf-8")).hexdigest()[:12],
             "choices": v.get("choices"), "answer": v["answer"], "solution": v.get("solution"),
             "type": v.get("type", "integer_answer" if slug == "aime" else "multiple_choice"),
             "points": pts,
@@ -1278,6 +1372,37 @@ def compute_stats(user=None):
         "avg_pct": round(sum(r["score"] / r["total"] * 100 for r in graded) / len(graded), 1) if graded else None,
         "per_competition": comps,
     }
+
+
+def _clean_items(raw):
+    """Per-question outcomes sent by the runner -> a compact, bounded list.
+
+    Only the fields the mastery model needs survive, so results.jsonl cannot be
+    inflated (or poisoned) by whatever a client decides to post.
+    """
+    if not isinstance(raw, list):
+        return []
+    out = []
+    for item in raw[:mastery.MAX_ITEMS_PER_ATTEMPT]:
+        if not isinstance(item, dict):
+            continue
+        try:
+            n = int(item.get("n"))
+        except (TypeError, ValueError):
+            continue
+        rec = {"n": n, "correct": bool(item.get("correct"))}
+        for key, cap in (("qid", 80), ("topic", 120), ("type", 32), ("bank", 80)):
+            value = item.get(key)
+            if isinstance(value, str) and value:
+                rec[key] = value[:cap]
+        try:
+            level = int(item.get("level"))
+        except (TypeError, ValueError):
+            level = None
+        if level is not None and 1 <= level <= 60:
+            rec["level"] = level
+        out.append(rec)
+    return out
 
 
 def read_reports(limit=200, user=None):
@@ -1670,6 +1795,17 @@ class Handler(BaseHTTPRequestHandler):
                         self.wfile.write(data)
         elif path == "/api/stats":
             self._send(json.dumps(compute_stats(user)))
+        elif path == "/api/mastery":
+            # Mastery is per-account evidence: no login, no numbers.
+            if not user:
+                self._send('{"error": "login required"}', code=401)
+            else:
+                try:
+                    payload = mastery.summarize(read_results(user), load_taxonomy())
+                except Exception as exc:  # never let a bad row take the page down
+                    self._send(json.dumps({"error": "mastery failed: %s" % exc}), code=500)
+                else:
+                    self._send(json.dumps(payload, ensure_ascii=False))
         elif m := re.match(r"^/api/test/([a-z0-9_]+)$", path):
             f = self._test_file(m.group(1), user)
             if f and f.exists():
@@ -1694,6 +1830,18 @@ class Handler(BaseHTTPRequestHandler):
         elif m := re.match(r"^/api/worksheet/([a-f0-9]{8,16})$", path):
             f = WORKSHEETS_DIR / f"{m.group(1)}.json"
             if f.exists():
+                self._send(f.read_bytes())
+            else:
+                self._send('{"error": "not found"}', code=404)
+        elif m := re.match(r"^/api/photo/figure/(ph[a-f0-9]{8})/([A-Za-z0-9_-]{1,40}\.png)$", path):
+            f = PHOTOS_DIR / m.group(1) / m.group(2)
+            if f.is_file():
+                self._send(f.read_bytes(), "image/png")
+            else:
+                self._send('{"error": "figure not found"}', code=404)
+        elif m := re.match(r"^/api/photo/paper/(ph[a-f0-9]{8})$", path):
+            f = PHOTOS_DIR / ("%s.json" % m.group(1))
+            if f.is_file():
                 self._send(f.read_bytes())
             else:
                 self._send('{"error": "not found"}', code=404)
@@ -1803,6 +1951,7 @@ class Handler(BaseHTTPRequestHandler):
                     "total": data.get("total"),
                     "answered": data.get("answered", 0),
                     "duration_s": data.get("duration_s"),
+                    "items": _clean_items(data.get("items")),
                     "submitted_at": time.strftime("%Y-%m-%d %H:%M:%S"),
                     "user": user,
                 }
@@ -2160,6 +2309,43 @@ class Handler(BaseHTTPRequestHandler):
                 blob = base64.b64decode(data.get("data_b64") or "", validate=True)
                 ws = generate_worksheet(raw_name, blob, user or "")
                 self._send(json.dumps(ws, ensure_ascii=False))
+            except Exception as e:
+                self._send(json.dumps({"error": str(e)}), code=400)
+        elif path == "/api/photo/import":
+            try:
+                import base64
+                data = self._read_body()
+                raw_name = os.path.basename(data.get("filename") or "page.png")[:120]
+                blob = base64.b64decode(data.get("data_b64") or "", validate=True)
+                use_llm = data.get("use_llm", True) is not False
+                self._send(json.dumps(import_photo_paper(raw_name, blob, user or "", use_llm),
+                                      ensure_ascii=False))
+            except Exception as e:
+                self._send(json.dumps({"error": str(e)}), code=400)
+        elif path == "/api/photo/ocr":
+            # Stage 1 only: the browser shows the raw blocks while stage 2 runs.
+            try:
+                import base64
+                data = self._read_body()
+                raw_name = os.path.basename(data.get("filename") or "page.png")[:120]
+                blob = base64.b64decode(data.get("data_b64") or "", validate=True)
+                self._send(json.dumps(photo_ocr_page(raw_name, blob, user or ""),
+                                      ensure_ascii=False))
+            except Exception as e:
+                self._send(json.dumps({"error": str(e)}), code=400)
+        elif path == "/api/photo/structure":
+            # Stage 2: structurer over the blocks saved by /api/photo/ocr.
+            try:
+                data = self._read_body()
+                pid = str(data.get("id") or "")[:20]
+                if not re.fullmatch(r"ph[a-f0-9]{8}", pid):
+                    self._send(json.dumps({"error": "bad photo id"}), code=400)
+                    return
+                use_llm = data.get("use_llm", True) is not False
+                self._send(json.dumps(photo_structure_paper(pid, use_llm),
+                                      ensure_ascii=False))
+            except KeyError as e:
+                self._send(json.dumps({"error": str(e)}), code=404)
             except Exception as e:
                 self._send(json.dumps({"error": str(e)}), code=400)
         elif path == "/api/practice":

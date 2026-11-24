@@ -140,7 +140,71 @@ python scripts/validate_paper.py <paper> --upgrade --mark-pending     # 升级�
   登录用户可用 `GET /api/reports?mine=1` 回看自己的上报；原因码必须与 `server.py` 的
   `REPORT_REASONS` 和 `ReportIssue.tsx` 的 `REASONS` 三处同步。
 
-## 5. 后端结构（`app/server.py`，约 1800 行）
+### 4.5 掌握度与 rating（`/stats`）
+
+- 数据来源：`POST /api/result` 除整卷聚合外，还存**逐题结果** `items[]`
+  （`{n, qid, topic, level, type, correct}`；服务端 `_clean_items()` 只留这几个字段并截断，单卷上限 300 条）。
+  做题页提交时自动带上。**旧试卷没有 items，补不回来** —— 只能靠新做的卷子积累。
+- 计算全在 `app/mastery.py`（纯标准库，`server.py` 直接 import），接口 `GET /api/mastery`（需登录，未登录 401）。
+- 模型三件事：
+  1. **衰减**：每条作答权重 `0.85 ** 跨过的月份数`（按月界算），即每月 1 日全部历史作答 ×0.85，一年后约 0.14。
+  2. **正确率**：Beta(2,2) 收缩 —— `(答对权重 + 2) / (总权重 + 4)`，所以“1 题答对”读作 75% 而不是 100%。
+  3. **rating**：Rasch/logistic，`P(答对) = sigmoid(theta - b)`，`b = (level - 20) / 6`；
+     `theta` 用 N(0,1) 先验做加权 MLE（Newton），再换回 1–60 刻度（`level = 20 + 6θ`）并给 95% 区间；
+     带难度的作答少于 3 条时 `rating: null`。
+- 聚合口径（细 → 粗）：
+  - 细格 = `(考点 topic, 难度桶)`，桶为 1–5 / 6–10 / 11–15 / 16–20 / 21–60；
+  - 考点掌握度 = 其细格按题量加权平均；板块（第一层 domain）掌握度 = 其考点按题量加权平均；
+  - 顶层 `rating` 用全部带难度题的原始作答重算（不经过上面的平均），所以两者不会互相污染。
+- 返回：`{model, totals, rating, domains[{id,en,zh,mastery,accuracy,n,level,band,topics[{...,cells}]}], buckets, weakest}`。
+- 前端 `routes/Stats.tsx`：顶部 rating（**两位小数**）+ band + 区间 + 题数/正确率/套数；主面板左半是
+  难度分段筛选（全部 / 每个桶，按钮上带该桶整体掌握度）+ **第一层 8 个板块的雷达图**（中心显示当前
+  筛选档的整体掌握度），右半是同一筛选下的**精确数值表**（板块 / 掌握度条+% / 正确率 / 题量）；
+  下面按难度 5 条、最薄弱 5 个细格；二级及以下的考点**不在面板上铺开**（数量太多），旧版汇总折叠在底部。
+- 调参都在 `app/mastery.py` 顶部常量：`DECAY`、`PRIOR_WINS/PRIOR_LOSSES`、`BUCKETS`、`ANCHOR`、
+  `LEVELS_PER_LOGIT`、`THETA_PRIOR_SD`、`DOMAIN_PRIOR_SD`、`MIN_RATING_ITEMS`。
+- **造测试数据**（不用真的做卷子）：`python scripts/simulate_practice.py --user test --tests 12 --accuracy 0.55 --months 6`
+  往 `users/<user>/results.jsonl` 追加与 `/api/result` 同构的行（含 `items[]`）。模拟一个 Rasch 学生：
+  `P(对) = sigmoid(θ + 板块偏移 − (level−20)/6)`，θ 按 `--accuracy` 反解，所以**预期正确率就是你给的值**；
+  `--months` 把作答摊到过去 N 个月（检验衰减），`--spread` 制造板块强弱差（让"最薄弱"有东西可看），
+  `--seed` 可复现。`--reset` 只删 `sim_` 开头的行，`--purge` 清空该账号全部结果，
+  `--show` / `--show-only` 直接打印模型读数（不写盘）。
+
+### 4.6 图片转试卷（photo → paper v1.1）
+
+- 两个远程模型（都不在仓库里，env 可覆盖）：
+  - **OCR**：`OCR_BASE_URL`（默认 `http://192.168.2.185:8000/v1`），模型 `unlimited-ocr-2`，上下文 32768。
+    请求形状：`content` 里**图在前**（`image_url` 的 data URI），后面跟一条 `text: "Multi page parsing."`。
+    返回块语法 `<BLOCK><类型>(<LEVELn>)?[x0,y0,x1,y1]<FORK>内容`，类型 `title` / `text` / `image`；
+    **坐标是各轴独立拉伸到 997 的方框**，换算 `像素 = round(coord / 997 * 边长)`（常量 `OCR_CANVAS`）。
+  - **结构化**：`STRUCT_BASE_URL`（默认 `http://192.168.2.198:7863/v1`）+ `STRUCT_API_KEY` + `STRUCT_MODEL=global:hy4flash-free`，
+    把 OCR 块整理成题目 JSON（合并断句、按编号切题、拆选项、读 Answer Key、图块挂到相邻题），**禁止改写题目内容**。
+- 代码：`app/photo_import.py`（纯标准库：OCR 调用、块解析、正则兜底结构化、LLM 结构化、Answer Key 回填、
+  坐标换算、PNG 裁剪——手写 PNG 编解码，8bit 非隔行，与 PIL 像素级一致）；CLI `scripts/photo_to_paper.py`。
+- 用法：`python scripts/photo_to_paper.py page.png --out out/paper.json --check`
+  （`--no-llm` 只用正则、`--dump-blocks` 看 OCR 块、`--no-figures` 不裁图、`--llm-base/--llm-key/--llm-model` 换模型）。
+- 实测：A4 300dpi 15 题页 → prompt ~908 / completion ~1176 / 65 秒，`validate: 0 error 0 warning`；
+  1240×1650 含图页 → 图框 `350x278`、`sha256` 写进 JSON。
+- 限制：只认「编号开头的题」（`1.` / `2)`），多栏、手写、斜拍、跨页未验证；Answer Key 是唯一答案来源
+  （页面上没有 key 就 `answer: null`，校验会报 `choice-answer`）。
+- 网页端：侧栏 **Photo**（`/photo`，`routes/Photo.tsx`）——**分两段调用**，页面右边实时显示模型看到了什么：
+  1. `POST /api/photo/ocr`（body `{filename, data_b64}`）→ 只跑 OCR，返回
+     `{ok, id, width, height, ms, count, raw, blocks:[{page,kind,level,bbox,text}]}`，
+     并把原图存成 `worksheets/photo/<id>.orig`、块存成 `<id>.ocr.json`（**gitignored**）。
+  2. `POST /api/photo/structure`（body `{id, use_llm}`）→ 用已存的块做结构化 + 裁图，返回
+     `{ok, id, ms, paper, errors, warnings, problems}`，落 `<id>.json` + `<id>/*.png`。
+  - 页面右栏三页签：**块**（kind/bbox/文本，OCR 一返回就出现）、**原始输出**（模型原文）、**试卷 JSON**；
+    左栏是图片 + 进度（OCR → 整理）+「用这些块重新整理」按钮（换个 use_llm 重跑不用重新 OCR）。
+  - `POST /api/photo/import` 仍保留（两段连跑，CLI/脚本用），响应额外带 `ocr` 字段。
+  - 图走 `GET /api/photo/figure/<id>/<file>.png`，`GET /api/photo/paper/<id>` 可重新取回。
+  **注意**：存盘 JSON 里 `figure.src` 是相对路径 `<id>/q01.png`（校验器按 paper 所在目录解析），
+  只有 API 响应副本才改写成 `/api/photo/figure/...`。
+- 表格：OCR 会把表格吐成 `<table>xf(x)03254769</table>`（单元格无分隔符），`STRUCT_PROMPT` 要求模型
+  重建成合法 HTML 表格（`<tr><th>` 表头 + `<tr><td>` 数据行），前端 `.ph-stem table` 有边框样式。
+  正则兜底路径不会重建表格，只保留原标签。
+- 一次一张图；多页/整本、人工校对页还没做。
+
+## 5. 后端结构（`app/server.py`，约 2250 行）
 
 顺序：常量（`COMP_META` 竞赛元数据、`ROUND_PATTERNS`、`DEFAULT_POINTS`）→ 认证 → 在线状态 →
 friends/chat → PK → 班级 → 学校文档 → worksheet 解析 → 题目筛选（`is_eligible`、`round_allows_proofs`、
@@ -150,7 +214,7 @@ friends/chat → PK → 班级 → 学校文档 → worksheet 解析 → 题目�
 主要路由：
 
 ```
-GET  /api/me /api/tests /api/banks /api/taxonomy /api/questions /api/results /api/stats /api/announcements /api/friends
+GET  /api/me /api/tests /api/banks /api/taxonomy /api/questions /api/results /api/stats /api/mastery /api/announcements /api/friends
 GET  /api/reports   (own problem reports)
 GET  /api/generate/<slug>[/<round>]?v=<1|2>   GET /api/test/<id>   GET /figures/<file>
 GET  /api/practice  /api/classes  /api/class/<code>/reports  /api/schools  /api/school/docs
@@ -262,8 +326,9 @@ screenshots/
 - **v2 已回写，v1 没做**：`bank/v2/*.json` 的 2632 题已带 `classification` + `difficulty`
   （`scripts/apply_classification.py`，`--check` 可复验）；`bank/*.json`（v1，9272 题中的主体）
   仍未标注 —— 用户已决定 v1 弃用，不再跑。下一步：人工抽检 + 组卷时按考点/难度筛。
-- **逐题作答没采集**：`/api/result` 只存整卷聚合，没有逐题对错，所以 Elo / IRT 难度
-  （`classifier/SCHEMES.md` 方案 C/D）暂时算不了；要跑起来得先让前端上报 `items[]`。
+- **逐题作答已采集**（2026-11 起）：`/api/result` 除整卷聚合外存 `items[]`（见 §4.5），
+  Elo / IRT 难度（`classifier/SCHEMES.md` 方案 C/D）所需的数据已经在积累。
+  但**历史试卷没有 items，补不回来** —— 老账号的掌握度只能从新做的卷子开始算。
 - `scraper/` 断链：`download_manager.py` / `ingest_server.py` 写 `raw/aops_wiki/<slug>.jsonl`，
   但所有 `build_*_banks.py` 只读 `raw/wikitext_problems.jsonl`，新抓的赛事进不了 bank。
 - `requirements.txt` 与实际不符（列了未使用的 Flask，缺 curl_cffi / pdfplumber / pypdf / playwright / pyyaml）。

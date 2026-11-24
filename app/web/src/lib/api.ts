@@ -66,6 +66,76 @@ export interface WorksheetSummary {
   created_at: string
 }
 
+// photo -> paper (see app/photo_import.py on the server)
+export interface PhotoFigure {
+  kind?: string
+  state?: string
+  placement?: string
+  src?: string
+  width?: number
+  height?: number
+  alt?: string
+  sha256?: string
+}
+
+export interface PhotoQuestion {
+  n: number
+  type: string
+  question: string
+  choices?: Record<string, string>
+  answer?: string | null
+  solution?: string
+  points?: number
+  figure?: PhotoFigure
+}
+
+export interface PhotoPaper {
+  format_version: string
+  paper_version: number
+  id: string
+  title: string
+  total_points: number
+  questions: PhotoQuestion[]
+  'x-page'?: { file: string; width: number; height: number }
+}
+
+export interface PhotoProblem {
+  level: string
+  code: string
+  message: string
+}
+
+// One detected block from the OCR model (stage 1).
+export interface PhotoBlock {
+  page: number
+  kind: string
+  level: number | null
+  bbox: [number, number, number, number]
+  text: string
+}
+
+export interface PhotoOcrResult {
+  ok: boolean
+  id: string
+  width: number
+  height: number
+  ms: number
+  count: number
+  raw: string
+  blocks: PhotoBlock[]
+}
+
+export interface PhotoImportResult {
+  ok: boolean
+  id: string
+  ms?: number
+  paper: PhotoPaper
+  errors: number
+  warnings: number
+  problems: PhotoProblem[]
+  ocr?: { ms: number; count: number; raw: string; blocks: PhotoBlock[] }
+}
+
 export interface PracticeLevelStats {
   best_pct: number
   best_time: number | null
@@ -244,6 +314,95 @@ export interface Taxonomy {
   nodes: Record<string, TaxonomyNode>
 }
 
+/** One answered question, as posted with a test result and stored per attempt. */
+export interface MasteryItem {
+  n: number
+  qid?: string
+  /** Taxonomy id of the primary topic, e.g. `plane_geometry.triangles`. */
+  topic?: string
+  /** amc20 difficulty level (1-60). */
+  level?: number
+  type?: string
+  correct: boolean
+}
+
+/** One difficulty bucket inside a topic, e.g. bucket "6-10". */
+export interface MasteryCell {
+  bucket: string
+  mastery: number | null
+  n: number
+  wins: number
+}
+
+export interface MasteryTopic {
+  id: string
+  en: string | null
+  zh: string | null
+  mastery: number | null
+  accuracy: number | null
+  n: number
+  cells: MasteryCell[]
+}
+
+export interface MasteryDomain {
+  id: string
+  en: string | null
+  zh: string | null
+  mastery: number | null
+  accuracy: number | null
+  n: number
+  /** Rasch estimate on the amc20 scale, null while there is too little evidence. */
+  level: number | null
+  band: string | null
+  topics: MasteryTopic[]
+}
+
+export interface MasteryRating {
+  level: number
+  band: string | null
+  theta: number
+  se: number
+  ci: [number, number]
+  n: number
+}
+
+export interface MasteryWeakSpot {
+  domain: string
+  topic: string
+  en: string | null
+  zh: string | null
+  bucket: string
+  mastery: number | null
+  n: number
+}
+
+/** `GET /api/mastery`: decayed accuracy per area/topic/bucket plus one rating. */
+export interface Mastery {
+  model: {
+    name: string
+    scale: string
+    anchor: number
+    levels_per_logit: number
+    decay: number
+    decay_rule: string
+    prior: [number, number]
+    generated_at: string
+  }
+  totals: {
+    attempts: number
+    answered: number
+    correct: number
+    accuracy: number | null
+    decayed_n: number
+    first_at: string | null
+    last_at: string | null
+  }
+  rating: MasteryRating | null
+  domains: MasteryDomain[]
+  buckets: MasteryCell[]
+  weakest: MasteryWeakSpot[]
+}
+
 /** One question as returned by the bank browser (`GET /api/questions`). */
 export interface QuestionRow {
   /** Stable "slug:version:qid" key for React lists. */
@@ -387,6 +546,7 @@ export const api = {
     ),
   results: () => request<TestResult[]>('/api/results'),
   stats: () => request<unknown>('/api/stats'),
+  mastery: () => request<Mastery>('/api/mastery'),
   submitResult: (payload: {
     test_id: string
     title: string
@@ -395,6 +555,8 @@ export const api = {
     total: number
     answered: number
     duration_s: number
+    /** Per-question outcomes; without these the mastery page has nothing to chew on. */
+    items?: MasteryItem[]
   }) => post<{ ok: boolean; guest?: boolean }>('/api/result', payload),
   announcements: () => request<{ announcements: Announcement[] }>('/api/announcements'),
 
@@ -434,6 +596,17 @@ export const api = {
     post<Worksheet>('/api/worksheet/generate', body),
   worksheet: (id: string) => request<Worksheet>(`/api/worksheet/${id}`),
   worksheets: () => request<WorksheetSummary[]>('/api/worksheets'),
+
+  // photo -> paper (OCR a photographed worksheet)
+  photoImport: (body: { filename: string; data_b64: string; use_llm?: boolean }) =>
+    post<PhotoImportResult>('/api/photo/import', body),
+  // stage 1: OCR only, returns the detected blocks so the UI can show them live
+  photoOcr: (body: { filename: string; data_b64: string }) =>
+    post<PhotoOcrResult>('/api/photo/ocr', body),
+  // stage 2: structure the blocks already saved for that photo id
+  photoStructure: (body: { id: string; use_llm?: boolean }) =>
+    post<PhotoImportResult>('/api/photo/structure', body),
+  photoPaper: (id: string) => request<PhotoPaper>(`/api/photo/paper/${id}`),
 
   // practice drills
   practice: () => request<PracticeStats | { guest: true }>('/api/practice'),

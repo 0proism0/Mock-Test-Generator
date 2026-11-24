@@ -7,6 +7,7 @@ import { RouteFallback } from './RouteFallback'
 import {
   BarChart2,
   BookOpen,
+  Camera,
   Edit3,
   FileText,
   Folder,
@@ -34,6 +35,7 @@ interface Tab {
 const tabs: Tab[] = [
   { to: '/', labelKey: 'tabNew', icon: <PlusSquare size={18} />, end: true },
   { to: '/worksheet', labelKey: 'tabWorksheet', icon: <BookOpen size={18} /> },
+  { to: '/photo', labelKey: 'tabPhoto', icon: <Camera size={18} /> },
   { to: '/practice', labelKey: 'tabPractice', icon: <Target size={18} /> },
   { to: '/tests', labelKey: 'tabTests', icon: <FileText size={18} /> },
   { to: '/stats', labelKey: 'tabStats', icon: <BarChart2 size={18} /> },
